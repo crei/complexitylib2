@@ -426,7 +426,16 @@
            "agent": {"value": "worker-inference"}},
           "expires": 1792375054},
          "blocked": false}},
-       "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "9c5f2d94fd2cbc097e1a32975d33680f"},
+          "holder":
+          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+           "agent": {"value": "reviewer-api"}},
+          "expires": 1792375168},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Crypto/Computational/Stretch",
