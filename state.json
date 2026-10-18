@@ -511,7 +511,16 @@
       {"head": {"value": "6b752306cbbf5f680fc9e81b3afe48f268cb4f37"},
        "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "worker-inference"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "d40bcb13ca336f9a5e51f0295724f3b3"},
+          "holder":
+          {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
+           "agent": {"value": "worker-inference"}},
+          "expires": 1792372435},
+         "blocked": false}},
        "api": "unassigned"}}}},
    "paths": ["AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "review-handoff"},
