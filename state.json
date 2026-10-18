@@ -694,7 +694,7 @@
         "holder":
         {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
          "agent": {"value": "worker-opus"}},
-        "expires": 1792377616},
+        "expires": 1792377701},
        "branch": "work/native-exponential-separation/worker-opus",
        "blocked": false,
        "assignee": {"value": "worker-opus"}},
@@ -799,7 +799,7 @@
        "holder":
        {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
         "agent": {"value": "worker-opus"}},
-       "expires": 1792377616},
+       "expires": 1792377701},
       "branch": "work/polynomial-space/worker-opus",
       "blocked": false,
       "assignee": {"value": "worker-opus"}}}},
@@ -863,7 +863,7 @@
     "agent": {"value": "reviewer-correctness"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792377616,
+   "expires": 1792377701,
    "actor":
    {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
     "agent": {"value": "worker-opus"}}},
