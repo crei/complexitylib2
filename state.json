@@ -111,7 +111,16 @@
       "reviews":
       {"correctness":
        {"assigned": {"agent": {"value": "reviewer-correctness"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "aae219d861e8365f7cfe9d30c9b5b122"},
+          "holder":
+          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+           "agent": {"value": "reviewer-api"}},
+          "expires": 1792367373},
+         "blocked": false}}}}}},
    "paths": ["scripts/coordination", "AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "coordinator-guidance"},
    "goal":
