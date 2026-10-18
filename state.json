@@ -538,15 +538,18 @@
           "note":
           "Independent documentation correctness review: no new findings. Read both changed files against exact Protocol.apply and Runtime/Main behavior. Central independent reviews, read-only findings, worker self-review, separate fixes, reopen/assign/start contributor preservation, exact base/head reviews and landing gates match implementation and requested policy. Local links/anchors, fences and diff check pass. No contribution to this documentation delta; no builds or protocol mutations beyond assigned review. Known preexisting CONTRIBUTING line116 note availability wording is explicitly excluded: it needs a live implementation/review claim and will be corrected separately. Later main integration/nit correction not covered. Exact hashes/evidence worker-inference/.lake/codex-validation/review-handoff/correctness-review.json SHA25675fe5351af13216d786c507d6b2bb40f6b1187c48332bbe3f102754710f291d4."}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "33f322955308e5d02339e8ba7439d6fa"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792358189,
+          "snapshot":
+          {"head": {"value": "6b752306cbbf5f680fc9e81b3afe48f268cb4f37"},
+           "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
+          "reviewer":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792372568},
-         "blocked": false}}}}}},
+          "note":
+          "Independent docs API/usability review, no contribution. Clear worker self-review/frozen handoff, central independent reviews and separate integration; read-only reviewers, preserved contributor history and fresh exact-final reviews match protocol. Six project checks/coordination tests/exact snapshot landing requirements unchanged.10 local links/anchors and fences pass, diff/source clean; no Lean build needed. Nonblocking nit CONTRIBUTING:121 say resumes FROM previous branch/history since reassignment creates new assignee branch. Preexisting note sentence live-claim limitation already coordinator-planned for final integration, excluded here. Evidence reviewer-api .lake/codex-validation/review-handoff-api-review/api-review.json. Later merge/wording delta needs review."}}}}}}},
    "paths": ["AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "review-handoff"},
    "goal":
