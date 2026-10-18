@@ -206,6 +206,21 @@
    "goal":
    "Continue the full mass-production development after the coefficient-one milestone: prove the sharp rational coefficient 1/(1-gamma)+o(1), derive the all-positive-length rational exponential-copy theorem using existing padding, and prove the real-rate theorem with the exact source quantifiers. Source algebraic-circuits @3998dc48 and manuscript boolean-mass-production @21d57d75. The accepted plan uses shared CSLib Lupanov and native sorting/routing/lookup, and aims to avoid the redundant block-induction and greedy-routing pipeline; validate the mathematical implications and measure actual helper-inclusive savings. This remains substantial unfinished work, intended for worker-fable to continue with its own subagents after the first milestone lands. Preserve gate cost and explicitness boundaries, executable circuit sharing, semantic/boundary clients, all six checks and independent exact-commit reviews. Read original mass-production journal history for full ownership, source and quality requirements; request shared-scope additions as needed. Inspect status --json for coordinator guidance.",
    "dependencies": [{"value": "mass-production"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Logics",
+    "Complexity/Computability/Complexity/Fagin",
+    "ComplexityTests/Fagin.lean",
+    "ComplexityTests/Fagin",
+    "ComplexityTests/FaginEncoding.lean",
+    "ComplexityTests/FaginNP.lean"],
+   "id": {"value": "fagin-converse"},
+   "goal":
+   "Complete the converse direction of Fagin's theorem after the efficient ESO checker milestone: for isomorphism-invariant finite relational queries, verifier NP implies existential second-order definability in the existing Mathlib/Cslib.Logic.ESO semantics, then combine both directions. This is new mathematical work beyond V1. Reuse the numbered finite structures and native checker from fagin, and the existing verifier machine/Cook-Levin tableau. Make guessed order, tuple-indexed time/tapes, vocabulary and encoding assumptions explicit, with empty/singleton structure cases treated correctly. Avoid a parallel logic or class definition and vacuous tableau hypotheses. Sources Fagin1974 and Immerman1999; V1 dev @add0aca8ee0d71e68969f2cb45cf91554a50f787 supplies only the other direction. Intended for worker-jetski to continue leading with subagents after the first milestone. Preserve source credit, theorem-level tests and all six checks, and obtain independent exact-commit API/correctness reviews. Coordinate shared machine dependencies with nondeterministic-verifiers; verifier NP and NTM equivalence remain distinct endpoints until connected. Inspect status --json for guidance.",
+   "dependencies": [{"value": "fagin"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
