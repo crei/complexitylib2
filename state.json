@@ -96,15 +96,18 @@
           "note":
           "Final independent correctness delta review: no findings. Reused detailed original 4f69d302 approval after byte-identical verification of Verifier and both test modules; Encoding differs only by the corrected encStructure doc reference. Reviewed complete eight-file integration: correct root/test imports, two exact central guards already in FaginNP, accurate roadmap boundary, clean current-main ancestry. Fresh independent MCP checks pass for Encoding and isolated exact central guards. Original four-module diagnostics, five named guards and eleven boundary probes remain applicable. No implementation/integration contribution; no redundant full gates. Exact hashes/evidence: worker-inference/.lake/codex-validation/fagin-review/final-correctness-review.json SHA256 a86f947e084651b4745e00d1c3a6f70e6f0bb7d6be5086e500c880ccd0fb4b59."}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "95ce5242a1883d2fd77b4d60daae717d"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792357488,
+          "snapshot":
+          {"head": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"},
+           "base": {"value": "e872f9f1b5796d5b2681b6ea58d53d9d1d4403d1"}},
+          "reviewer":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792371842},
-         "blocked": false}}}}}},
+          "note":
+          "Independent final API delta review, no contribution to submitted development. Earlier detailed4f69d30 approval/evidence retained. Verified Verifier and both test files byte-identical; Encoding differs by exact requested Logic.encStructure doc correction only. Both original and current-main base are ancestors; roots preserve main, two central guards literal copies from FaginNP, roadmap truthfully records ESO-to-NP and leaves converse tableau outstanding. Guard fragment passes own-cache shell check after MCP unavailable; exact diff/source clean. No findings. Root exact-final six gates reported pass, not repeated. Evidence reviewer-api .lake/codex-validation/fagin-api-review/final-delta-review.json."}}}}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
