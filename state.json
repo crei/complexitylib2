@@ -418,13 +418,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Architect-owned final integration of approved 7a2b730: merge current main, add central guards for the three NP-completeness headlines, update the remaining-work roadmap, and obtain exact final delta approvals. Preserve worker-nova authorship and all existing tests.",
+     {"resume": "work/karp-reductions/worker-nova",
+      "report": "",
       "lease": null,
-      "branch": "work/karp-reductions/worker-nova",
+      "branch": "work/karp-reductions/coordinator",
       "blocked": false,
-      "assignee": {"value": "worker-nova"}}}},
+      "assignee": {"value": "coordinator"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems",
     "Complexity/Computability/Complexity/Reduction.lean",
