@@ -382,7 +382,16 @@
       "reviews":
       {"correctness":
        {"assigned": {"agent": {"value": "reviewer-correctness"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-integration"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "d0e4af0a6e4aa8cd8113620c4dacaf67"},
+          "holder":
+          {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
+           "agent": {"value": "reviewer-integration"}},
+          "expires": 1792375511},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
