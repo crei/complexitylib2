@@ -27,7 +27,16 @@
        "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "worker-inference"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "af43572514ca13b0ee39782039ae9546"},
+          "holder":
+          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+           "agent": {"value": "reviewer-api"}},
+          "expires": 1792370865},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
     "ComplexityTests/MassProduction.lean",
