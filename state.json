@@ -248,7 +248,9 @@
       "snapshot":
       {"head": {"value": "9e8d340c2ba4f9b094364d15da96c11eaeb25630"},
        "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
