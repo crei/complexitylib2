@@ -379,7 +379,7 @@
           "holder":
           {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
            "agent": {"value": "reviewer-sable-cor1"}},
-          "expires": 1792381352},
+          "expires": 1792381449},
          "blocked": false}},
        "api":
        {"finished":
@@ -1181,7 +1181,7 @@
     "agent": {"value": "reviewer-sable-api1"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792381352,
+   "expires": 1792381449,
    "actor":
    {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
     "agent": {"value": "reviewer-sable-cor1"}}},
