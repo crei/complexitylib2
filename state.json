@@ -65,7 +65,7 @@
     {"work":
      {"resume": null,
       "report":
-      "Isolated the 200k seed-bind regression: program_certificate re-adds existing fun_prop rules; Mathlib stores duplicates. Disabling only new named entries still fails. Deduplicating only the three repeated fun_prop entries makes unchanged extraction client pass at 2.33M raw heartbeats (about 2334 maxHeartbeats units). Investigating generic idempotent registration while retaining all nested positive/negative clients.",
+      "Generic repair now passes fresh extraction and all nested-loop clients. Tests retain seven original nested cases and add duplicate-count, priority, distinct-certificate, local-to-global and scoped-to-global checks. Existing extraction client also passes a lower 12000 heartbeat guard. Fast-forwarded own branch to current main 8cfd2b6; preparing matched profiles and full six gates.",
       "lease":
       {"token": {"value": "759d23d81249b1cf77703f27e3831d35"},
        "holder":
