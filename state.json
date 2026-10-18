@@ -241,15 +241,18 @@
        "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "29916e1d8f170844d72feb42abcbb1f8"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792356983,
+          "snapshot":
+          {"head": {"value": "9e8d340c2ba4f9b094364d15da96c11eaeb25630"},
+           "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
+          "reviewer":
           {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
            "agent": {"value": "reviewer-correctness"}},
-          "expires": 1792371272},
-         "blocked": false}},
+          "note":
+          "Independent exact eight-file correctness review; no implementation/proof/submitted-test authorship. Set-choice native bridge, Empty-oracle configuration equality, moved predicates, actual-halting clock, full-support exact witness sampling and uniform finite machine/polynomial bounds checked. MCP combined source/full clients plus four boundary probes clean; five exact modules/client split-compiled warnings-as-errors in isolated cache; seven standard-axiom guards pass. Current-main merge is correct. No semantic findings. Nonblocking nit: Machine/Nondeterministic.lean:25-28 should equate attainable halted endpoints/outputs, not all halted paths with clock-length paths; coordinator will fix in final integration delta. Full six gates author-reported, not repeated; converse remains open. Central documentation/axiom/merge edits need fresh final review."}}},
        "api":
        {"finished":
         {"review":
