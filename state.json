@@ -251,15 +251,18 @@
           "expires": 1792371272},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "4c480c15bce487cb112906faa3dbb42b"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792356888,
+          "snapshot":
+          {"head": {"value": "9e8d340c2ba4f9b094364d15da96c11eaeb25630"},
+           "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
+          "reviewer":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792371240},
-         "blocked": false}}}}}},
+          "note":
+          "Independent API review, no contribution to development. All eight changed files and commit bodies inspected. Existing Set-choice MultiTapeMachine.toNTM, RelSeries and intrinsic PPT clock reused; no duplicate machine model/custom guessing table. General acceptance/time predicates properly placed in machine complexity, verifier NP definitions unchanged. Exact halted-[true] acceptance, all-branch bound versus early stuck paths and separately guaranteed totality are explicit and tested; scope accurately forward-only. Own isolated cache compiled Equivalence and all three new modules, submitted tests+seven axiom guards and independent runtime-X witness-length client (reject empty, accept nonempty, total uniform machine), all clean. General NTM module MCP clean; dependent MCP stale/unavailable so focused shell fallback recorded. Diff/source clean. No findings. Evidence reviewer-api .lake/codex-validation/nondeterministic-verifiers-api-review/api-review.json. Author six gates not repeated. Later main/central Axioms/ROADMAP delta needs review."}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
