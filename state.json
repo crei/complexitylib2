@@ -441,7 +441,8 @@
       {"head": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"},
        "base": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness":
+       {"assigned": {"agent": {"value": "reviewer-correctness"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems",
