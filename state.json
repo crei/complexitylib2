@@ -521,7 +521,7 @@
            "agent": {"value": "worker-inference"}},
           "expires": 1792372435},
          "blocked": false}},
-       "api": "unassigned"}}}},
+       "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths": ["AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "review-handoff"},
    "goal":
