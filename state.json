@@ -616,13 +616,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Both original reviews are complete: correctness approves; API requests two small reuse cleanups. Architect will handle these centrally via local integration agent, preserving worker-nova history and keeping Nova on the oracle continuation.",
+     {"resume": "work/sipser-lautemann/worker-nova",
+      "report": "",
       "lease": null,
-      "branch": "work/sipser-lautemann/worker-nova",
+      "branch": "work/sipser-lautemann/reviewer-correctness",
       "blocked": false,
-      "assignee": {"value": "worker-nova"}}}},
+      "assignee": {"value": "reviewer-correctness"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/BPP.lean",
     "Complexity/Computability/Complexity/Classes/BPP",
