@@ -758,6 +758,20 @@
    "goal":
    "Complete the remaining checked iterating-functions source developments after iteration-fixed-power, source c4cfa198a241b3d2cc3bfa5f744a68a66f49be8b. Planned subsequent independently useful milestones: input-time and batched iteration with shared dictionaries; canonical cycle labels, transient depths, target/reachability/first-hit/visit schedules; sparse-counter centralizer/signed powers/input-time/navigation with charged coordinate changes; composition-closed and affine controller powering; modulus-counter hard powers, distinct-power counting and matching-exponent lower bounds; semantic forest duality, distinguished points, spectrum, phase identities, prime-cycle and universal-map results at exactly the source's proved boundary. Reuse iteration-fixed-power and shared native circuits/math rather than parallel source foundations. State nonuniform/existential, conditional supplied-step/coordinate circuits, unreachable-time fields, absent prime-density/hash construction, and nonformalized SETH/SAT/black-box probabilistic boundaries explicitly. No claim of full port until exact source endpoint inventory is checked. Split scopes and acceptance endpoints before assignment; central bibliography/axioms/ROADMAP integration remains architect-owned.",
    "dependencies": [{"value": "iteration-fixed-power"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Circuit/Iteration.lean",
+    "Complexity/Foundations/Combinatorics/FunctionalGraph.lean",
+    "Complexity/Foundations/Combinatorics/FunctionalGraph",
+    "ComplexityTests/IterationFoundations.lean",
+    "ComplexityTests/IterationFoundations"],
+   "id": {"value": "iteration-foundations"},
+   "goal":
+   "Port the reusable mathematical and signature-generic circuit kernel for the requested iterating-functions development from c4cfa198a241b3d2cc3bfa5f744a68a66f49be8b. Concrete endpoints: finite invariant-set checkpoint packing (H subset S, |H|*L<=|S|, every L-prefix has a repeat or hits H); finite-map transient/cycle structure and exact number of distinct powers maxTransientDepth+cyclePeriod, including empty finite types; and generic native Circuit iteration/unrolling and shared retained-orbit synthesis with exact weighted cost. Sources lean/Proofs/{Checkpoints,FiniteOrbit,OrbitStructure,CycleLabels,NumberOfPowers,Iteration} and only required dependencies. Keep arbitrary universes where source does, actual finite-set invariants, positiveL boundaries, and no Boolean-only encoding in pure results. Audit pinned Mathlib/CSLib first (periodic/minimalPeriod/iterate, finite-set and Synthesis APIs); remove duplications rather than blind source copy. Scope is deliberately outside Boolean/ to let this progress while the sharp mass-production review owns that directory. Do not port Boolean fixed-power builders or counting/lower-bound tails here; those continue in iteration-fixed-power and iterated-functions-extensions. Place generic results naturally, preserve source SamuelSchlesinger2026 and any dependency authors, propose central bibliography source entry. First post a compact dependency/API map, own design/subagents with isolated worktrees/disjoint paths, meaningful zero/empty/invariant-set/generic-signature clients, exact axiom checks, total helper-inclusive proof burden and all6gates. Native circuits only; nonuniform combinatorial existence does not establish efficient preprocessing. Architect owns central integration and independent final reviews. This is a substantial independently useful foundation milestone, not a claim the fixed-power bound or full source port is already complete.",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
