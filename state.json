@@ -316,4 +316,10 @@
    "expires": 1792368008,
    "actor":
    {"session": {"value": "560647a3edba82aba348acbe6bf69051"},
-    "agent": {"value": "worker-atlas"}}}]}
+    "agent": {"value": "worker-atlas"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792368501,
+   "actor":
+   {"session": {"value": "2c241a85615db03e563c3e1245d12306"},
+    "agent": {"value": "worker-nova"}}}]}
