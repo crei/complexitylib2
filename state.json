@@ -60,55 +60,17 @@
    "authors": [{"value": "worker-fable"}]},
   {"resume": null,
    "report":
-   "Milestone 4f69d30277d89c8466bae3806d3b468dea3a2788 is fetched and frozen. Independent API and correctness reviews are assigned to reviewer-api and worker-inference; they will start after their current preliminary mass-production checks. Your central named Axioms/ROADMAP additions are recorded; I will schedule those after mass-production releases the shared paths. Expect current-main merge and fresh submission before landing if main advances. The full converse remains tracked for you next, after this milestone merges.\nWhile waiting, perform a preliminary read-only API review of worker-opus checkpoint 9ed29bb8c1c38f28b365f112b3e4acce27a06934 (true base9bddbe7) on work/nondeterministic-verifiers/worker-opus. Confirm no contribution. Ignore unrelated coordinator-guidance differences; Opus is already fixing parametric Set-choice reuse, machine-level predicate placement, nonzero witness/loop/stuck tests and main ancestry. Focus native reuse, clear machine/NP layering, halt-versus-stuck semantics and truthful NP-to-NTM-only scope. No implementation edits. Preserve your Fagin branch and use source inspection or an isolated review worktree/cache; review-only subagents are allowed with contributor disclosure. Keep preliminary notes locally until I assign the formal Opus API slot: submitted author reports currently cannot be updated with note, so do not reopen your Fagin submission merely to post this review. Formal review reporting will use the Opus review slot once it is submitted.\n\nUSER WORKFLOW UPDATE: workers implement, review their own work and run required checks before submitting a frozen branch. The architect now centralizes independent review, ordinary integration fixes, main merges/conflict resolution and landing in the coordinator thread; local review subagents may assist. Keep contributor/source/validation records and remain available for substantive fixes. No additional cross-worker review assignment or external pre-submission review is required. This supersedes earlier requests to spend waiting time reviewing another worker, and avoids sending branches back merely for mechanical integration updates. Continue your substantial implementation; final exact-source/axiom/nonvacuity safeguards remain. Your earlier advisory to review Opus is withdrawn; preserve any existing notes, and keep your own submitted snapshot frozen. The coordinator will handle its current-main/central-file/doc-nit integration once the shared paths are available.",
+   "Architect-owned integration: merge published main, correct the reviewed encStructure documentation reference, add named headline axiom checks and update the remaining-work roadmap. Preserve the original author and require fresh exact-snapshot independent delta approvals.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Dependency map (v1 source pinned: SamuelSchlesinger/complexitylib dev @add0aca8ee0d71e68969f2cb45cf91554a50f787, Complexitylib/DescriptiveComplexity/SecondOrder/PolynomialTime.lean + Encoding/Certificate; v1 uses its own SOFormula syntax, so only its architecture (validated encoded structures, certificate slicing, fixed-formula induction) ports; logic stays Mathlib FirstOrder + Cslib.Logic.ESO.Sentence). Native deps: Cslib.Logic.ESO.Sentence/Definable/IsoClosed (Logics/SecondOrder/Existential, FirstOrder/Reduction), Cslib.Complexity.NP/IsVerifier (Classes/NP, verifier-based, no NTM), Turing.MultiTapeTM.ComputableTidilyInPolyTime fun_prop calculus (PolyTime/{List,Nat,Pi,BitString}: allConst/mapConst/allWithInput/range/listGetD/bitsGetDWithInput/unary_pow/encoding_length), encodings encPair/encList/encUnary/encBits. Converse will additionally need the verifier machine tableau (CookLevin/Tableau for the local-window shape) expressed as FO over a guessed linear order. PLAN, milestone 1 (new files Complexity/Logics/SecondOrder/Encoding.lean, Complexity/Logics/SecondOrder/PolynomialTime.lean, ComplexityTests/FaginEncoding.lean, ComplexityTests/FaginNP.lean): (a) explicit finite relational vocabulary = relational L with a complete enumeration list of relation symbols fixing table order; (b) encoded structures as EncodedStructure := Nat x List (List Bool) (unary cardinality, one truth table per symbol of length n^arity in finFunctionFinEquiv order) under encPair encUnary (encList encBits); explicit WellFormed predicate, decoded structure on Fin n (total via getD), encode along an explicit numbering M ~ Fin n with decode_encode and iso-invariance so queryLanguage K := {a | WellFormed a and decoded a in K} is independent of numbering for IsoClosed K; empty domain (n=0) included; (c) for a fixed ESO sentence, a Bool evaluator of its matrix on List Nat environments by structural recursion on BoundedFormula (relational: terms are variables), certificates = one block of N^d bits per relation variable where N = encoded length, d = max arity, verifier checks WellFormed and evaluates; realize_iff and IsVerifier; (d) fun_prop poly-time certificate by induction on the fixed formula; headline: ESO.Definable K -> queryLanguage K in NP encStructure. Milestone 2 (converse, new work): tableau sentence for the verifier machine over a guessed linear order with k-tuples as clock/tape indices, small structures (n<=1) by FO case tables, giving NP+IsoClosed -> Definable. Will report when milestone 1 is pushed. Expected central needs: Axioms.lean entries for headline theorems, ROADMAP Fagin bullet update; no bibliography changes (Fagin1974, Immerman1999 present).",
-       "lease":
-       {"token": {"value": "33e1a08eaff87c0a79e57626363a687d"},
-        "holder":
-        {"session": {"value": "4a93d95e627493ab82ddfefba0a046d0"},
-         "agent": {"value": "worker-jetski"}},
-        "expires": 1792371368},
-       "branch": "work/fagin/worker-jetski",
-       "blocked": false,
-       "assignee": {"value": "worker-jetski"}},
-      "summary":
-      "Milestone 1 submitted at 4f69d30 on work/fagin/worker-jetski (merged main 8cfd2b6). RESULT: Complexity/Logics/FirstOrder/Encoding.lean (Cslib.Logic.Vocabulary with explicit Fin count ~ Sigma n, L.Relations n enumeration; EncodedStructure = Nat x List (List Bool) under encStructure = encPair encUnary (encList encBits); tupleIndex via finFunctionFinEquiv; total decode; WellFormed/checkShape; encode along M ~ Fin n; decodeEncodeEquiv; wellFormed_iff (well-formed inputs are exactly encodings of their decoded structures); queryLanguage; mem_queryLanguage_encode for IsoClosed classes; empty domain and nullary symbols covered) and Complexity/Computability/Complexity/Fagin/Verifier.lean (Sentence.Layout with explicit blocks/block embedding/degree bound and polynomial C blocks * X^degree; eval by structural recursion on the fixed BoundedFormula with List Nat environments; eval_eq_true_iff vs BoundedFormula.Realize in the expansion by certificate relations; realize_iff_exists_certificate; isVerifier; poly-time by induction with existing ComputableTidilyInPolyTime combinators, no custom machines; headline Cslib.Logic.ESO.Definable.queryLanguage_mem_NP and Sentence.queryLanguage_mem_NP). TESTS: ComplexityTests/FaginEncoding.lean (graph + nullary vocabularies, well-formed/malformed inputs incl. empty structure, decoding, encode of K2 equals concrete input, colorability membership/non-membership) and ComplexityTests/FaginNP.lean (explicit layout for exists U forall x U x: kernel-evaluated accept/reject/malformed/empty-structure runs with exact certificate length blocks*N^degree, colorable and colorable_simpleGraph in NP, encode of a 3-colorable simple graph in the query language, #print axioms guards for the headline theorems: propext/Classical.choice/Quot.sound only). CHECKS: all six gates pass (scripts/check.sh; note lake test first hit a system-wide open-file-table overflow from concurrent sessions, rerun clean with LEAN_NUM_THREADS=16). SOURCE CREDIT: v1 dev @add0aca8 architecture only; Fagin1974, Immerman1999 cited; no bibliography changes. CONTRIBUTORS: worker-jetski only (no subagents used). LIMITATIONS: the converse (NP + IsoClosed -> Definable) is not claimed, tracked in fagin-converse; relTable/encode are noncomputable (classical decide on RelMap) so encode tests use simp not decide; Layout.ofFinite is noncomputable (Finite.equivFin, iSup) and concrete layouts are supplied explicitly in tests. CENTRAL EDITS NEEDED: (1) ComplexityTests/Axioms.lean add guards for Cslib.Logic.ESO.Definable.queryLanguage_mem_NP and Cslib.Logic.ESO.Sentence.Layout.computableTidilyInPolyTime_verifier (expected [propext, Classical.choice, Quot.sound]); (2) ROADMAP.md Fagin bullet: v2 now has encoded structures (Complexity/Logics/FirstOrder/Encoding.lean) and the ESO-to-NP checker (Complexity/Computability/Complexity/Fagin/Verifier.lean); remaining work is the converse tableau interpretation. Available for fagin-converse next.",
-      "snapshot":
-      {"head": {"value": "4f69d30277d89c8466bae3806d3b468dea3a2788"},
-       "base": {"value": "8cfd2b61632b900a51397751f4d1f485d54d3bcc"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792355933,
-          "snapshot":
-          {"head": {"value": "4f69d30277d89c8466bae3806d3b468dea3a2788"},
-           "base": {"value": "8cfd2b61632b900a51397751f4d1f485d54d3bcc"}},
-          "reviewer":
-          {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
-           "agent": {"value": "worker-inference"}},
-          "note":
-          "Independent correctness review: no implementation/proof/test contribution to this six-file snapshot. Full source/proof/test diff inspected. Both production modules and both submitted test modules independently complete-clean by Lean MCP, including five exact standard-axiom guards. Eleven ignored independent probes pass: permuted multi-relation layout and unused blocks, nullary witnesses on empty domains, zero variables/witness, nested quantifier equality and asymmetric tuple order, arbitrary encoded joint inputs, empty vocabulary. No findings. Checked native NP exact-witness contract and Fagin1974 Theorem 6 forward proof; unary cardinality and fixed-formula scope are explicit. No redundant whole-project gates; existing dependency soundness not re-proved. Later main merge and central Axioms/ROADMAP delta excluded. Exact hashes and evidence: worker-inference/.lake/codex-validation/fagin-review/correctness-review.json SHA256 ada88ba5fd240476e7aa7d5acd322cabc033bac1e005d0cdf6fb60c4e1739b8d."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792356118,
-          "snapshot":
-          {"head": {"value": "4f69d30277d89c8466bae3806d3b468dea3a2788"},
-           "base": {"value": "8cfd2b61632b900a51397751f4d1f485d54d3bcc"}},
-          "reviewer":
-          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
-           "agent": {"value": "reviewer-api"}},
-          "note":
-          "Independent API review, no contribution to submitted development. All six changed files and full commit/source credit read. Native FO/ESO/NP reuse, fixed-formula runtime-data separation, explicit numbering/layout, empty/nullary/malformed inputs, polynomial closure API and scope are suitable. Nonblocking nit Encoding.lean:27 references Vocabulary.encStructure instead of Logic.encStructure. Independently compiled both new modules, both submitted test modules and five axiom guards in isolated cache; separate empty-domain two-nullary/noncontiguous-layout/padding probe passes. MCP clean on Encoding, dependent MCP unavailable so focused shell fallback used. No full gate repeat. Evidence .lake/codex-validation/fagin-api-review/api-review.json in reviewer-api worktree. Exact snapshot only; later main/central integration needs delta review."}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "Architect-owned integration: merge published main, correct the reviewed encStructure documentation reference, add named headline axiom checks and update the remaining-work roadmap. Preserve the original author and require fresh exact-snapshot independent delta approvals.",
+      "lease": null,
+      "branch": "work/fagin/worker-jetski",
+      "blocked": false,
+      "assignee": {"value": "worker-jetski"}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
