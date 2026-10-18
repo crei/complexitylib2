@@ -1,67 +1,45 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "e872f9f1b5796d5b2681b6ea58d53d9d1d4403d1"},
-   "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-  "lease":
-  {"token": {"value": "fd5b578da5ac3a434c611b1c7737a572"},
-   "holder":
-   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-    "agent": {"value": "coordinator"}},
-   "expires": 1792371237},
-  "epic": {"value": "mass-production"}},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
    "Final checkpoint e872f9f1b5796d5b2681b6ea58d53d9d1d4403d1 is now published on your assigned branch. The BitString relocation, current-main merge, central additions and passing six gates are received. Please run ready now on the clean exact head. Include the already reported source/contributor credit, correct helper-inclusive accounting, quantitative scope/P>0 prose qualification, and validation evidence. I will assign the two independent reviewers who already completed your preliminary review; they can check the final delta and actual submitted base/head promptly. They will own final verdicts, and I will run integration checks and publish main.\n\nUSER WORKFLOW UPDATE: workers implement, review their own work and run required checks before submitting a frozen branch. The architect now centralizes independent review, ordinary integration fixes, main merges/conflict resolution and landing in the coordinator thread; local review subagents may assist. Keep contributor/source/validation records and remain available for substantive fixes. No additional cross-worker review assignment or external pre-submission review is required. This supersedes earlier requests to spend waiting time reviewing another worker, and avoids sending branches back merely for mechanical integration updates. Continue your substantial implementation; final exact-source/axiom/nonvacuity safeguards remain.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Final checkpoint for milestone A: e872f9f1b5796d5b2681b6ea58d53d9d1d4403d1 on work/mass-production/worker-fable (fast-forward from published eb785196; includes merge of main da2e439/inference-loops). Evidence on that exact commit: git diff --check origin/main HEAD clean; scripts/check.sh all six gates ok. Delta since eb785196: (8e2a47a) review fixes 1-3, Codex P = 0 docstring clarification, references.bib Uhlig1992/Wegener1987, four Axioms.lean named checks, ROADMAP bullet; (3580ef3) merge of main; (e872f9f) review request 4: pure code API moved to Complexity/Foundations/Data/BitString/Uhlig.lean as Cslib.BitString.Uhlig.{code, first, second, sum_range_code, sum_Ico_code, second_eq_false_of_first, sum_first_code, sum_second_code, sum_first_code_route, sum_second_code_route}, adjacent single-bit sums use ^^, circuit routing stays in MassProduction/Uhlig/Layer.lean, roots regenerated, no wrapper. Contributors: worker-fable sole author. PUBLICATION REQUEST: ordinary push still blocked by the local guardrail; not bypassing. Please publish e872f9f; I will run ready as soon as it is on the remote.",
-       "lease":
-       {"token": {"value": "47a01e232f4ac49b3cdd7820af87875f"},
-        "holder":
-        {"session": {"value": "60a448c1698e33ed0b212fc3f266bb27"},
-         "agent": {"value": "worker-fable"}},
-        "expires": 1792370307},
-       "branch": "work/mass-production/worker-fable",
-       "blocked": false,
-       "assignee": {"value": "worker-fable"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Uhlig's coefficient-one mass-production theorem on native CSLib circuits. Results: Cslib.Circuits.Boolean.MassProduction.eventually_mul_massComplexity_le and eventually_mul_complexity_directProduct_le (for every precision P, eventually P*n*cost <= (P+1)*2^n for all f on n inputs and all k <= 2^depth(n), when IsUhligDepth depth, i.e. forall c, eventually c*depth n*log2 n <= n; k = 0 included; P = 0 trivial), finite theorem mul_complexity_directProduct_le, recursion complexity_directProduct_two_pow_le, layer Uhlig.complexity_directProduct_two_mul_le; Cslib.BitString.Uhlig recovery code; shared Circuit.parallelFamily (replicate = constant family, API/costs/axioms unchanged), complexity_directProduct_mono/_one_le, Synthesis.sum/selected, massComplexity_le_complexity. Single copies from pinned CSLib Lupanov.complexity_le. Checks on e872f9f: git diff --check clean, all six scripts/check.sh gates ok; ComplexityTests/MassProduction/Uhlig.lean has semantic, boundary, depth (n/log2^2 n accepted, n/log2 n rejected) clients and axiom checks; four central Axioms.lean entries, references.bib Uhlig1992/Wegener1987, ROADMAP updated. Source credit: algebraic-circuits @3998dc48 Uhlig*/LupanovSynthesis, manuscript @21d57d75; 18 source modules (5331 lines) replaced by 3 modules (~765 lines) plus ~131 lines of shared additions; proof bodies +390 lines. Reviews: preliminary independent review findings 1-4 and the Codex P = 0 finding resolved. Contributors: worker-fable sole author. Limitations: size bounds only, no certified constructor runtime; overhead gadgets are crude DNFs (polynomial, asymptotically negligible); exponential copy range and sharp 1/(1-gamma) coefficient remain for mass-production-sharp.",
       "snapshot":
       {"head": {"value": "e872f9f1b5796d5b2681b6ea58d53d9d1d4403d1"},
        "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792356674,
-          "snapshot":
-          {"head": {"value": "e872f9f1b5796d5b2681b6ea58d53d9d1d4403d1"},
-           "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-          "reviewer":
-          {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
-           "agent": {"value": "worker-inference"}},
-          "note":
-          "Independent correctness review: no contribution to the 12-file mass-production delta. Reused full eb785196 proof/source audit and reviewed all final changes: clarified worst-case single-copy ceiling and prefix-assignment count, P>0 qualification, pure BitString namespace/XOR move, citations, exact four central axiom guards, roadmap, and main merge. No findings; both earlier wording findings resolved. Final moved code, layer, theorem module and submitted tests independently complete-clean by MCP; 12 boundary probes and all four exact added central guards also clean. Checked arbitrary weighted parallel families, sharing/zero cases, genuine universal base bounds, depth condition, uniform eventual threshold and nonuniform size-vs-runtime distinction. Wegener1987 Theorem10.2.3 and two-copy proof inspected directly; Cambridge bibliography verified. No redundant full gates or full paywalled Uhlig-paper audit. Exact hashes and evidence at worker-inference/.lake/codex-validation/uhlig-review/correctness-review.json SHA256 dbdb2ec02ecb8ad55abbac9188f50fac88d5c01ef7a1cef1b5d1bfcce837e5a6."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792356593,
-          "snapshot":
-          {"head": {"value": "e872f9f1b5796d5b2681b6ea58d53d9d1d4403d1"},
-           "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-          "reviewer":
-          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
-           "agent": {"value": "reviewer-api"}},
-          "note":
-          "Independent final API review; no contribution to submitted development. Thorough eb785196 review retained; all twelve final changed files/delta inspected. Earlier namespace/XOR/whitespace/citation/central guard/roadmap findings resolved. Pure code now Cslib.BitString.Uhlig, circuit routing stays Layer; native weighted-cost/sharing/zero-width contracts preserved. P>0 and worst-case single-copy-ceiling prose accurate; sharp continuation and constructor runtime remain explicitly open. Moved code MCP clean; Layer/dependent MCP unavailable, so own isolated-cache compilation of moved code, Layer, Uhlig and final tests+six guards passes, as does independent weighted/shared/zero-output/nullary probe. Diff check clean. Shared helper accounting131 inserted/27 deleted=104 net; new three modules769 physical lines. No blocking findings. Exact hashes/evidence reviewer-api .lake/codex-validation/mass-production-api-review/final-review.json. Author full six gates not redundantly repeated; coordinator integration validation separate."}}}}}}},
+      "landedBy":
+      {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+       "agent": {"value": "coordinator"}},
+      "landedAt": 1792356843,
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792356674,
+       "snapshot":
+       {"head": {"value": "e872f9f1b5796d5b2681b6ea58d53d9d1d4403d1"},
+        "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
+       "reviewer":
+       {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
+        "agent": {"value": "worker-inference"}},
+       "note":
+       "Independent correctness review: no contribution to the 12-file mass-production delta. Reused full eb785196 proof/source audit and reviewed all final changes: clarified worst-case single-copy ceiling and prefix-assignment count, P>0 qualification, pure BitString namespace/XOR move, citations, exact four central axiom guards, roadmap, and main merge. No findings; both earlier wording findings resolved. Final moved code, layer, theorem module and submitted tests independently complete-clean by MCP; 12 boundary probes and all four exact added central guards also clean. Checked arbitrary weighted parallel families, sharing/zero cases, genuine universal base bounds, depth condition, uniform eventual threshold and nonuniform size-vs-runtime distinction. Wegener1987 Theorem10.2.3 and two-copy proof inspected directly; Cambridge bibliography verified. No redundant full gates or full paywalled Uhlig-paper audit. Exact hashes and evidence at worker-inference/.lake/codex-validation/uhlig-review/correctness-review.json SHA256 dbdb2ec02ecb8ad55abbac9188f50fac88d5c01ef7a1cef1b5d1bfcce837e5a6."},
+      "api":
+      {"verdict": "approve",
+       "time": 1792356593,
+       "snapshot":
+       {"head": {"value": "e872f9f1b5796d5b2681b6ea58d53d9d1d4403d1"},
+        "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
+       "reviewer":
+       {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+        "agent": {"value": "reviewer-api"}},
+       "note":
+       "Independent final API review; no contribution to submitted development. Thorough eb785196 review retained; all twelve final changed files/delta inspected. Earlier namespace/XOR/whitespace/citation/central guard/roadmap findings resolved. Pure code now Cslib.BitString.Uhlig, circuit routing stays Layer; native weighted-cost/sharing/zero-width contracts preserved. P>0 and worst-case single-copy-ceiling prose accurate; sharp continuation and constructor runtime remain explicitly open. Moved code MCP clean; Layer/dependent MCP unavailable, so own isolated-cache compilation of moved code, Layer, Uhlig and final tests+six guards passes, as does independent weighted/shared/zero-output/nullary probe. Diff check clean. Shared helper accounting131 inserted/27 deleted=104 net; new three modules769 physical lines. No blocking findings. Exact hashes/evidence reviewer-api .lake/codex-validation/mass-production-api-review/final-review.json. Author full six gates not redundantly repeated; coordinator integration validation separate."}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
     "ComplexityTests/MassProduction.lean",
