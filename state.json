@@ -1,15 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"},
-   "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
-  "lease":
-  {"token": {"value": "415f38e62ff1c00518f9818c5b9c56d8"},
-   "holder":
-   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-    "agent": {"value": "coordinator"}},
-   "expires": 1792374940},
-  "epic": {"value": "coordination-fetch-isolation"}},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -660,52 +650,41 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report": "",
-       "lease":
-       {"token": {"value": "47c438580c19c454867ac7e9b0752ce2"},
-        "holder":
-        {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
-         "agent": {"value": "reviewer-api"}},
-        "expires": 1792374874},
-       "branch": "work/coordination-fetch-isolation/reviewer-api",
-       "blocked": false,
-       "assignee": {"value": "reviewer-api"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Fix complete at 2d04c3fb53fda964713e95420d500efd32a5cc19 on work/coordination-fetch-isolation/reviewer-api. Add only empty --refmap= plus comment to private fetch; no protocol/lease/push/landing changes. Real local bare-Git/linked-worktree regression with normal remote mapping fails unchanged baseline693d836 at shared tracking refs (32/33), passes fixed suite33/33 including physical tracking lock, both dirty worktrees HEAD/index/FETCH_HEAD/content snapshots, fresh OID, missing refs and temporary cleanup after post-receive failure. Standalone lake build --wfail passes CLI/tests; lake test --wfail passes33/33; Git.lean MCP clean; nested tests use shell fallback due outer-project MCP path. git diff --check clean; new test/helper module103 physical lines, total diff107 inserts/2 deletes. Self-reviewed, sole contributor reviewer-api/OpenAI Codex; no independent approval claimed. Published remote parity verified. Git official --refmap documentation cited in commit. Evidence/logs .lake/codex-validation/coordination-fetch-isolation/implementation-evidence.json in own worktree. Whole-library six gates left to coordinator landing, as scoped. Ready for two independent central reviews.",
       "snapshot":
       {"head": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"},
        "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792360283,
-          "snapshot":
-          {"head": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"},
-           "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
-          "reviewer":
-          {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
-           "agent": {"value": "worker-inference"}},
-          "note":
-          "Independent correctness review by worker-inference; no implementation or test contribution. Full three-file delta inspected. Empty --refmap= preserves the explicit private destination and exact returned remote OID, required/optional errors, no-tags/no-FETCH_HEAD and finally cleanup. Runtime consumes returned OIDs directly; Protocol and Runtime are byte-identical, including exact-main/ancestry/atomic landing safeguards. Git.lean MCP complete-clean. Nested test MCP resolves the wrong outer package, so independent standalone lake build Tests.Fetch --wfail passed 7 jobs, then the unchanged real-Git fetchTests group passed in 2.746s with isolated Git configuration: shared physical tracking lock, dirty linked worktrees, fresh OID, missing refs and post-receive cleanup. Author baseline32/33 and fixed33/33 logs/source hashes independently verified; no library gates rerun. Evidence .worktrees/worker-inference/.lake/codex-validation/coordination-fetch-isolation/correctness-review.json SHA256 6a9ecab20db5f625af50599ee0b1ad63e70d233dd76ee22844edc0195755ab89. No findings."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792360187,
-          "snapshot":
-          {"head": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"},
-           "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
-          "reviewer":
-          {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-           "agent": {"value": "coordinator"}},
-          "note":
-          "Independent API review, no implementation contribution or findings. Complete three-file delta and 103-line helper-inclusive regression inspected. Local Git manpage confirms empty --refmap ignores configured tracking mappings; Runtime consumers use returned OIDs, not incidental tracking refs. One fetch option/comment only; public commands, protocol/lease/review/atomic landing/push authority and failure behavior unchanged. New real-Git linked-worktree test independently built and executed in coordinator cache: PASS, covering fresh OID, real shared tracking lock, both dirty HEAD/index/FETCH_HEAD/content snapshots, absent refs and post-receive cleanup. Diff clean. Author baseline32/33 and final33/33 evidence inspected; baseline not redundantly rerun here. Push-side tracking updates outside scope. Evidence .lake/codex-validation/fetch-isolation-api/review.json; full6+33 gates at land."}}}}}}},
+      "landedBy":
+      {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+       "agent": {"value": "coordinator"}},
+      "landedAt": 1792360547,
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792360283,
+       "snapshot":
+       {"head": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"},
+        "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
+       "reviewer":
+       {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
+        "agent": {"value": "worker-inference"}},
+       "note":
+       "Independent correctness review by worker-inference; no implementation or test contribution. Full three-file delta inspected. Empty --refmap= preserves the explicit private destination and exact returned remote OID, required/optional errors, no-tags/no-FETCH_HEAD and finally cleanup. Runtime consumes returned OIDs directly; Protocol and Runtime are byte-identical, including exact-main/ancestry/atomic landing safeguards. Git.lean MCP complete-clean. Nested test MCP resolves the wrong outer package, so independent standalone lake build Tests.Fetch --wfail passed 7 jobs, then the unchanged real-Git fetchTests group passed in 2.746s with isolated Git configuration: shared physical tracking lock, dirty linked worktrees, fresh OID, missing refs and post-receive cleanup. Author baseline32/33 and fixed33/33 logs/source hashes independently verified; no library gates rerun. Evidence .worktrees/worker-inference/.lake/codex-validation/coordination-fetch-isolation/correctness-review.json SHA256 6a9ecab20db5f625af50599ee0b1ad63e70d233dd76ee22844edc0195755ab89. No findings."},
+      "api":
+      {"verdict": "approve",
+       "time": 1792360187,
+       "snapshot":
+       {"head": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"},
+        "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
+       "reviewer":
+       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+        "agent": {"value": "coordinator"}},
+       "note":
+       "Independent API review, no implementation contribution or findings. Complete three-file delta and 103-line helper-inclusive regression inspected. Local Git manpage confirms empty --refmap ignores configured tracking mappings; Runtime consumers use returned OIDs, not incidental tracking refs. One fetch option/comment only; public commands, protocol/lease/review/atomic landing/push authority and failure behavior unchanged. New real-Git linked-worktree test independently built and executed in coordinator cache: PASS, covering fresh OID, real shared tracking lock, both dirty HEAD/index/FETCH_HEAD/content snapshots, absent refs and post-receive cleanup. Diff clean. Author baseline32/33 and final33/33 evidence inspected; baseline not redundantly rerun here. Push-side tracking updates outside scope. Evidence .lake/codex-validation/fetch-isolation-api/review.json; full6+33 gates at land."}}}},
    "paths":
    ["scripts/coordination/Coordination/Git.lean",
     "scripts/coordination/Tests.lean",
