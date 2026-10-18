@@ -348,55 +348,17 @@
    "authors": [{"value": "worker-fable"}, {"value": "coordinator"}]},
   {"resume": null,
    "report":
-   "Independent API review of exact c4dbe23 APPROVED with no blocking findings; correctness review is in progress. Plan: land on both approvals with central guards and the ROADMAP update, then open a follow-up cleanup epic for worker-jetski covering the API nits (move generic FO combinators, card sentences and tupleIndex lemmas to Logics/FirstOrder, use Mathlib Sentence.cardGe, add [DecidableEq State] to the Semantics section instead of letI in statements, realize_* naming, proof-only import of Finset.Sort, missing References sections, optional hypothesis-free iff form). No action needed from the author now.",
+   "Mechanical integration after two approvals of exact c4dbe23: merge main 94dcd9d and apply three docstring corrections from the reviews (Immerman Theorem 7.8, Tableau module doc bound, maxArity wording); no statement changes; fresh delta reviews follow. Substantive API cleanup is tracked separately for the author.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "CHECKPOINT c25aa71f2f38bbd1a21ce72f4ad16b07ca2b32d5 pushed to work/fagin-converse/worker-jetski (4 files, 1204 lines, all compiled cleanly with --wfail --iofail, zero sorry/axiom). Achieved: (1) Fagin/StrictVerifier.lean: strictVerifier enc p V, IsVerifier.strictVerifier, computableTidilyInPolyTime_strictVerifier (@[fun_prop]), CookLevin.strictVerifier_eq_true_of_tableau_satisfiable (for arbitrary L, T via runFrom_eq_of_halt at max T (t(a,w))), CookLevin.exists_tableau_satisfiable_iff_of_strictVerifier. (2) Logics/SecondOrder/Projection.lean: varLanguage.sumAssoc, ESO.Sentence.project + realize_project, orderLanguage, isStrictLinearOrderSentence + realize_isStrictLinearOrderSentence_iff, Sentence.withLinearOrder, Definable.of_withLinearOrder. (3) Fagin/Small.lean: cardZeroSentence, cardOneSentence, cardGeTwoSentence, truthTableSentence (preserving nullary tables), FO.Definable.inter_card_le_one, ESO.Definable.of_card_ge_two, ESO.Definable.of_withLinearOrder_card_ge_two. (4) Fagin/Power.lean: little-endian tupleIndex_snoc / tupleIndex_eq_of_high_zero / tupleIndex_lt_pow_iff / tupleIndex_lt_iff (colexicographic), v.powerLanguage (powerLt, powerIsElem, powerInTable, powerTableBit), v.powerStructure, v.powerInterpretation, v.powerEquiv, v.realize_onESOSentence_powerInterpretation (pulling back via I.onESOSentence without global FO.Reduces), and master reduction ESO.Definable.of_powerLanguage. NEXT: Fagin/Layout.lean (ESO sentence characterizing u = frame (encStructure a) on Fin B), Fagin/Tableau.lean (ESO sentence on Fin B equivalent to exists L, u.length + L + 1 < B /\\ (tableau tm u L (B-1)).Satisfiable), Fagin/Converse.lean (exponent bound + Definable.of_queryLanguage_mem_NP + definable_iff_queryLanguage_mem_NP), and ComplexityTests/Fagin.lean.",
-       "lease":
-       {"token": {"value": "30f6083398bef075e3012c198c0df45e"},
-        "holder":
-        {"session": {"value": "4a93d95e627493ab82ddfefba0a046d0"},
-         "agent": {"value": "worker-jetski"}},
-        "expires": 1792381689},
-       "branch": "work/fagin-converse/worker-jetski",
-       "blocked": false,
-       "assignee": {"value": "worker-jetski"}},
-      "summary":
-      "Converse of Fagin's theorem and full NP = ESO equivalence complete at c4dbe2373d6a06fe6ca75df9d37c17864afd7d08 (branch work/fagin-converse/worker-jetski, merged with current origin/main). Modules: (1) Complexity/Computability/Complexity/Fagin/StrictVerifier.lean (strictVerifier, IsVerifier.strictVerifier, computableTidilyInPolyTime_strictVerifier, CookLevin.exists_tableau_satisfiable_iff_of_strictVerifier), (2) Complexity/Logics/SecondOrder/Projection.lean (ESO.Sentence.project, realize_project, isStrictLinearOrderSentence, Definable.of_withLinearOrder), (3) Complexity/Computability/Complexity/Fagin/Small.lean (FO.Definable.inter_card_le_one, ESO.Definable.of_card_ge_two, ESO.Definable.of_withLinearOrder_card_ge_two, preserving nullary relations on Fin 0), (4) Complexity/Computability/Complexity/Fagin/Power.lean (tupleIndex base-n arithmetic, v.powerLanguage, v.powerInterpretation, v.powerEquiv, ESO.Definable.of_powerLanguage), (5) Complexity/Computability/Complexity/Fagin/Layout.lean (FO.frameChunkSentence, v.layoutESOSentence, v.realize_layoutESOSentence_iff), (6) Complexity/Computability/Complexity/Fagin/Tableau.lean (FO.tableauESOSentence, v.tableauESOSentence, v.realize_tableauESOSentence_iff), (7) Complexity/Computability/Complexity/Fagin/Converse.lean (v.npPowerSentence, v.realize_npPowerSentence_iff, Cslib.Logic.ESO.Definable.of_queryLanguage_mem_NP, Cslib.Logic.ESO.definable_iff_queryLanguage_mem_NP, Cslib.Logic.Vocabulary.definable_iff_queryLanguage_mem_NP), (8) ComplexityTests/Fagin.lean. Authors: Samuel Schlesinger (new mathematical work beyond v1; cites [Fagin1974], [Immerman1999], [Papadimitriou94]). Central integration notes for coordinator: add #print axioms checks in ComplexityTests/Axioms.lean for Cslib.Logic.ESO.Definable.of_queryLanguage_mem_NP, Cslib.Logic.ESO.definable_iff_queryLanguage_mem_NP, and Cslib.Logic.Vocabulary.definable_iff_queryLanguage_mem_NP, and update ROADMAP.md. All 6 scripts/check.sh gates pass with zero warnings/errors.",
-      "snapshot":
-      {"head": {"value": "c4dbe2373d6a06fe6ca75df9d37c17864afd7d08"},
-       "base": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792367219,
-          "snapshot":
-          {"head": {"value": "c4dbe2373d6a06fe6ca75df9d37c17864afd7d08"},
-           "base": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"}},
-          "reviewer":
-          {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
-           "agent": {"value": "reviewer-sable-cor1"}},
-          "note":
-          "Independent correctness review (reviewer-sable-cor1, no contribution to this epic) of exact base 6abc984 / head c4dbe23. Read in full: Fagin/{StrictVerifier,Small,Power,Layout,Tableau,Converse}.lean, SecondOrder/Projection.lean, ComplexityTests/Fagin.lean, root imports, plus the fixed ESO/encoding/NP/Cook-Levin/tidy-machine definitions they use. Evidence: lake build of the 8 modules --wfail --iofail passes; mk_all --check clean; no sorry/axiom/native_decide/set_option in added lines; my #print axioms of the 3 endpoints and 21 main lemmas = propext/Classical.choice/Quot.sound; 5 probes compile: empty structure, singleton and looped singleton (inter_card_eq_one), nullary symbol at n=0,1,2 and malformed inputs, concrete 2-/3-colorability where the sentence from of_queryLanguage_mem_NP separates the decoded edge from a decoded triangle, exists_pow_bound at a concrete input. Checked: NP is the native verifier NP encStructure; IsoClosed is the only added hypothesis and is necessary; strict-order sentence exact, no order assumed on inputs; little-endian/colex tupleIndex bijection; layout/tableau iffs need B > |frame|+1; exponent bound uniform for all n>=2 (polynomiallyBounded_iff_le is for all n); strictVerifier lemma valid for arbitrary L,T via runFrom_eq_of_halt. No blocking findings. Nits: Immerman citation is Theorem 7.8 not 7.7 (Converse.lean:20,247,278; Projection.lean:24; checked vs author ch7 PDF); Tableau.lean:22 says 0<B but theorem needs |u|+1<B; maxArity wording; add a semantic end-to-end test client. Not re-run: full six gates. Evidence .lake/codex-validation/fagin-converse-correctness/review.json SHA256 b9a41fa42335f64f7851c526f688a8f87245f6ca563623e7b2308fb06c93ea0f"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792366704,
-          "snapshot":
-          {"head": {"value": "c4dbe2373d6a06fe6ca75df9d37c17864afd7d08"},
-           "base": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"}},
-          "reviewer":
-          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
-           "agent": {"value": "reviewer-sable-api1"}},
-          "note":
-          "API review c4dbe23 (base 6abc984); independent, read-only. Inspected all 10 changed files + Existential/Interpretation/Encoding/Reduction/Verifier/NP/CookLevin APIs, pinned cslib (no logic content), Mathlib ModelTheory. Evidence: lake build of 7 library modules + ComplexityTests.Fagin --wfail --iofail OK (0 warnings); mk_all --check, lint-style, checkInitImports OK; ProbeEndpoints.lean (signatures, #print axioms = propext/choice/Quot.sound, client use of of_queryLanguage_mem_NP for graphVocabulary and a zero-symbol vocabulary) and ProbeSimp.lean (all new simp lemmas fire) compile. No blocking findings: template/header/marker/namespaces/tests/bib keys conform; no set_option/sorry/axiom/native_decide. Nits: N1 generic FO combinators (closeAll, rel1/2, ltF.., card*Sentence, truthTableSentence, tupleIndex_* lemmas) sit in Fagin files -> Logics/FirstOrder; N2 cardGeTwoSentence duplicates Mathlib Sentence.cardGe, orderLanguage parallels Language.order (justified, undocumented), realize_iInf_sentence and closeAll relabel redundant; N3 Tableau.lean:724,750,775,809,849 letI Classical.typeDecidableEq in statements -> section [DecidableEq State]; N4 consider splitting Layout/Tableau at generic/vocabulary seams, bundle 12 symbol params, FO.tableauESOSentence is ESO; N5 realize_X vs _iff mixed, FO.encodeOfZero/One not in Vocabulary ns, Definable.card_ge_two unused, Vocabulary.definable_iff_... verbatim duplicate; N6 ## References missing in 4 files, Power doc omits powerInTable, Tableau doc 0<B vs u.length+1<B, Projection Finset.Sort import proof-only. Not run: lake lint/test. Evidence .lake/codex-validation/fagin-converse-api/review.json sha256 59a848f178a47ed18fb76373e6623054517965a49ee46c01ae6f108659c45e22"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "Mechanical integration after two approvals of exact c4dbe23: merge main 94dcd9d and apply three docstring corrections from the reviews (Immerman Theorem 7.8, Tableau module doc bound, maxArity wording); no statement changes; fresh delta reviews follow. Substantive API cleanup is tracked separately for the author.",
+      "lease": null,
+      "branch": "work/fagin-converse/worker-jetski",
+      "blocked": false,
+      "assignee": {"value": "worker-jetski"}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
