@@ -731,7 +731,7 @@
        "holder":
        {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
         "agent": {"value": "integrator-sable-1"}},
-       "expires": 1792381954},
+       "expires": 1792381980},
       "branch": "work/native-exponential-separation/integrator-sable-1",
       "blocked": false,
       "assignee": {"value": "integrator-sable-1"}}}},
@@ -1234,7 +1234,7 @@
     "agent": {"value": "worker-sable-tooling"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792381744,
+   "expires": 1792381980,
    "actor":
    {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
     "agent": {"value": "integrator-sable-1"}}},
