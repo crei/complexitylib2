@@ -110,16 +110,18 @@
        "base": {"value": "9bddbe7ed9643273871b115e7a50d20e7c2f82e0"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report":
-         "Static audit of exact 9bddbe7..8cfd2b6 complete. No findings so far; independently checking revision/report interleavings, scope races, frozen submitted contracts, and unchanged persisted schema.",
-         "lease":
-         {"token": {"value": "c0ad9d0d8924537ee356057b6092228f"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792353139,
+          "snapshot":
+          {"head": {"value": "8cfd2b61632b900a51397751f4d1f485d54d3bcc"},
+           "base": {"value": "9bddbe7ed9643273871b115e7a50d20e7c2f82e0"}},
+          "reviewer":
           {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
            "agent": {"value": "reviewer-correctness"}},
-          "expires": 1792367394},
-         "blocked": false}},
+          "note":
+          "Independent read-only correctness review: no findings. Checked all five changed files, coordinator/session/generation authority, additive scope collision checks, preserved leases/branches/authors/dependencies/reports, immutable submitted/merged contracts, advisory guidance preserving reviews/integration, CLI and documentation consistency. Persisted state declarations are byte-identical to base. Independent MCP probes passed worker-report interleavings, both scope-race orders, frozen submissions and stale-session rejection. Independently ran standalone suite in isolated reviewer worktree: 32/32 passed with --wfail. No implementation edits. Six library gates were run centrally, not rerun here; this is source/test review, not a proof of the distributed protocol."}}},
        "api":
        {"finished":
         {"review":
