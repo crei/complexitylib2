@@ -626,7 +626,7 @@
        "holder":
        {"session": {"value": "2c241a85615db03e563c3e1245d12306"},
         "agent": {"value": "worker-nova"}},
-       "expires": 1792374616},
+       "expires": 1792374792},
       "branch": "work/sipser-lautemann/worker-nova",
       "blocked": false,
       "assignee": {"value": "worker-nova"}}}},
@@ -790,7 +790,7 @@
     "agent": {"value": "worker-atlas"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792374616,
+   "expires": 1792374792,
    "actor":
    {"session": {"value": "2c241a85615db03e563c3e1245d12306"},
     "agent": {"value": "worker-nova"}}},
