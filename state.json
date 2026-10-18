@@ -446,7 +446,9 @@
       "snapshot":
       {"head": {"value": "0c62545a250a0b4d8ca564c73142124cbaef0a1d"},
        "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": {"assigned": {"agent": {"value": "worker-inference"}}},
+       "api": "unassigned"}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Crypto/Computational/Stretch",
