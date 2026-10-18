@@ -51,11 +51,11 @@
   "holder":
   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
    "agent": {"value": "coordinator"}},
-  "expires": 1792366351},
+  "expires": 1792366789},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792366351,
+   "expires": 1792366789,
    "actor":
    {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
     "agent": {"value": "coordinator"}}},
