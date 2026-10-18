@@ -290,19 +290,26 @@
    "report":
    "Architect takes the frozen c1e726d submission for current-main merge, source bibliography, central headline guards and truthful roadmap completion before independent final reviews. Preserve worker-fable and subagent A-D contributions; substantive proof fixes return to the author.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/mass-production-sharp/worker-fable",
-      "report": "",
-      "lease":
-      {"token": {"value": "22afeb1f291ef0f44967794018bb260d"},
-       "holder":
-       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-        "agent": {"value": "coordinator"}},
-       "expires": 1792376739},
-      "branch": "work/mass-production-sharp/coordinator",
-      "blocked": false,
-      "assignee": {"value": "coordinator"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/mass-production-sharp/worker-fable",
+       "report": "",
+       "lease":
+       {"token": {"value": "22afeb1f291ef0f44967794018bb260d"},
+        "holder":
+        {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+         "agent": {"value": "coordinator"}},
+        "expires": 1792376739},
+       "branch": "work/mass-production-sharp/coordinator",
+       "blocked": false,
+       "assignee": {"value": "coordinator"}},
+      "summary":
+      "Complete sharp mass-production mathematical milestone, preserving worker-fable's original c1e726d proof development (source algebraic-circuits3998dc48 and manuscript21d57d75; contributors worker-fable and subagents A-D). Coordinator merged main a5cb582 and added only references.bib GuoKoppartySudan2013 (verified primary author bibliography), 8 central headline axiom guards and the truthful remaining constructor-runtime roadmap. Proof/construction bytes unchanged from original submission. Endpoints: sharpMassProducesThrough and sharpMassProducesAt for rational gamma=num/den with num<den and P>0 (P=0 trivial); exponentialMassProduction all positive lengths; realSharpMassProduction exact real-rate quantifiers. Native weighted gate cost, NOT/AND/OR1 and constants0; not runtime. Information sets, extensions and universal menus remain nonconstructive. Original original accounting: 25 library modules5211physical lines,5testfiles935lines,2315namedproofbodylines147declarations; include central70insert/13delete and existing shared API deltas when evaluating burden. Eight new central guards all [propext, Classical.choice, Quot.sound]. git diff --check and all six scripts/check.sh gates passed after merge and central edits. Independent full API and correctness reviews now requested, not merely an integration-delta audit. New code has not yet landed main.",
+      "snapshot":
+      {"head": {"value": "6ddaa785e2811ff684dde6bc1f8c20fa91ca166d"},
+       "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
     "ComplexityTests/MassProduction.lean",
