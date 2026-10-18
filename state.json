@@ -44,7 +44,7 @@
           "holder":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792370865},
+          "expires": 1792370947},
          "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
@@ -479,7 +479,7 @@
     "agent": {"value": "worker-inference"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792370856,
+   "expires": 1792370947,
    "actor":
    {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
     "agent": {"value": "reviewer-api"}}},
