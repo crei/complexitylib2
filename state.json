@@ -8,7 +8,7 @@
    "holder":
    {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
     "agent": {"value": "coordinator"}},
-   "expires": 1792367589},
+   "expires": 1792367675},
   "epic": {"value": "coordinator-guidance"}},
  "epics":
  [{"resume": null,
@@ -109,7 +109,7 @@
         "holder":
         {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
          "agent": {"value": "coordinator"}},
-        "expires": 1792367401},
+        "expires": 1792367675},
        "branch": "work/coordinator-guidance/coordinator",
        "blocked": false,
        "assignee": {"value": "coordinator"}},
@@ -215,11 +215,11 @@
   "holder":
   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
    "agent": {"value": "coordinator"}},
-  "expires": 1792367401},
+  "expires": 1792367675},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792367401,
+   "expires": 1792367675,
    "actor":
    {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
     "agent": {"value": "coordinator"}}},
