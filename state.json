@@ -382,18 +382,15 @@
        "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
       "reviews":
       {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792360279,
-          "snapshot":
-          {"head": {"value": "7fe25337bb2095b2fdc09cdecbee63f6e20dd3e0"},
-           "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
-          "reviewer":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "1aa65f864bfd4a0f9879cbb38ccc0a45"},
+          "holder":
           {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
            "agent": {"value": "reviewer-correctness"}},
-          "note":
-          "Independent read-only correctness review: no implementation contribution or findings. Verified exact eight-file manifest and unchanged NP/NTM predicates; legal finite choices, both-coin final candidate, stuck rejection, full tape preservation, halt-only exact [true] output, arbitrary padding, uniform native replay certificate and exact polynomial witness. MCP stopped on stale imports; isolated warning-as-error Lean checks passed for all four changed proof modules, 26 submitted examples and 13 standard-axiom guards, plus 12 independent boundary probes. Evidence: reviewer-correctness/.lake/codex-validation/ntm-replay-review/correctness-review.json (SHA256 925ad59a13bd8757ebe645126ffbe8be28bab9dcc2c8aa9c1c25151ba494ecf7). No full gate rerun; final central integration delta remains separate."}}},
+          "expires": 1792374823},
+         "blocked": false}},
        "api":
        {"active":
         {"report": "",
