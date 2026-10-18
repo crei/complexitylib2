@@ -808,15 +808,18 @@
        "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "2575c346f52d57a1609616e4804d2ba9"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792364106,
+          "snapshot":
+          {"head": {"value": "8dd2821d47ff60beb87da04d29908338ee121b40"},
+           "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
+          "reviewer":
           {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
            "agent": {"value": "reviewer-correctness"}},
-          "expires": 1792378451},
-         "blocked": false}},
+          "note":
+          "APPROVE independent correctness review of exact eight-file snapshot. No implementation, proof, or submitted-test contribution. All five source modules and submitted tests independently complete-clean in Lean MCP, plus 12 ignored boundary examples and two proof helpers. Mixed-cycle power count, empty types, prefix-only/infinite-ambient checkpoints, periodic-target restriction, arbitrary weighted costs, unused/nullary/empty-output gates and retained shared orbits checked. No blocking finding. Optional Circuit/Iteration.lean:151 wording: coordinates rather than bits. Exact hashes and evidence: .worktrees/reviewer-correctness/.lake/codex-validation/iteration-foundations-review/correctness-review.json SHA256 99ae5cdd37deb67ab359ab2529f37754c69ab983e740b1751812d6d29e0bd503. Author six gates noted, not redundantly repeated; parent-owned bibliography/central guards and authorized private-helper cleanup remain integration followups."}}},
        "api":
        {"active":
         {"report": "",
