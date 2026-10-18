@@ -58,7 +58,15 @@
    "authors": [{"value": "worker-jetski"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/inference-loops/worker-inference",
+      "blocked": false,
+      "assignee": {"value": "worker-inference"}}}},
    "paths":
    ["Complexity/Tactic",
     "ComplexityTests/PolyTimeTactic.lean",
