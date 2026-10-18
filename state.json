@@ -297,7 +297,23 @@
    "goal":
    "Complete native polynomial-time NP-completeness proofs for the existing ThreeSAT, IndependentSet and Clique problems, using the already proved correctness reductions and CookLevin.SAT_npComplete. Own this substantial development and subagent delegation. First milestone: certify the existing toThreeSAT under binary encCNF, prove ThreeSAT in verifier NP and NPComplete. Then certify SAT.toIndependentSet and Graph.compl, supply clear encoded graph-instance verifiers and prove IndependentSet/Clique NPComplete; do not create duplicate problem definitions. Existing CNF.isPolyTime_to3CNF already certifies clause splitting with mixed original-binary/fresh-unary indices, and unary_pair/unary_to_binary already exist; the missing bridge is efficient relabelling and assembly, not a new clause-splitting machine. Use ordinary functional programs, fun_prop/polytime, native encodings and existing finite/composition/loop certificates, aiming for zero handwritten TMs. Check upstream and UPSTREAM.md before extending APIs. Preserve arbitrary binary variable/vertex labels, duplicates, empty formulas/clauses/graphs, m=0, and oversized binary m without unary expansion proportional to its numeric value. Graph acceptance must match existing semantics on arbitrary lists, including duplicate vertices and edge endpoints outside the declared vertex list. A witness can select distinct declared vertices using a polynomial-size mask or checked list; prove exactly the current cardinality m convention rather than silently changing to another predicate. Share only demonstrated generic reduction-composition or verifier lemmas, with two clients; keep NP itself unchanged because worker-opus owns that interface. Fagin owns Logics/*; import existing CNF correctness/certificates but request any missing logical lemma through the board. Sources: existing module references AroraBarak09 Sections 2.3-2.4 and Karp1972; inspect/pin v1 and credit original authors if porting code. Correct stale SAT module prose which still calls Cook-Levin reduction efficiency open. Include nonvacuous concrete examples, duplicate/malformed-shape boundaries, explicit axiom checks in new tests, all six project gates and independent exact-commit API/correctness reviews. First report a dependency map and independently useful milestone; preserve further endpoints as continuation epics before narrowing any submission. Report all contributing subagents, keep each editing agent in its own worktree with independent caches, push coherent checkpoints, and route central Axioms.lean, bibliography, ROADMAP and additional path requests through the coordinator.",
    "dependencies": [],
-   "authors": [{"value": "worker-nova"}]}],
+   "authors": [{"value": "worker-nova"}]},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Probabilistic",
+    "Complexity/Languages/Probabilistic",
+    "Complexity/Computability/Machines/Turing/MultiTape/Probabilistic",
+    "ComplexityTests/OraclePPT.lean",
+    "ComplexityTests/OracleComposition.lean",
+    "ComplexityTests/OracleComposition",
+    "ComplexityTests/RandomOracle.lean"],
+   "id": {"value": "open-oracle-substitution"},
+   "goal":
+   "Complete OPEN stateful oracle substitution using the compositional IsOraclePPTOn calculus from open-oracle-composition. A certified handler may itself query an arbitrary external stateful oracle. Prove the open analogue of IsOraclePPTOn.run_interpret_preprocess and its parameterized corollary, preserving the full joint distribution of result, private handler state and external oracle state. Reuse existing closed substitution and derive it as a corollary where that simplifies the API, preserving public names. Charge computation, captured input, copying, query construction, bounded reply access and retained storage growth; state the local invariant and additive resource allowance, without assuming arbitrary full replies have bounded length. Include a two-level adaptive handler/cache client, failure boundaries for free unbounded reply copying and repeated state doubling, native finite-configuration correctness, standard-axiom checks, all six project gates and independent exact-commit API/correctness review. Avoid a second program language or machine model and reuse PFunctor.FreeM/OracleComp interpretations. Intended continuation for worker-atlas. Source and scope remain those of open-oracle-composition; preserve the probabilistic APIs used by worker-opus. User-facing goal: clients should write ordinary oracle/data-structure programs and compose reusable operation contracts while the certified backend handles representation and tape details.",
+   "dependencies": [{"value": "open-oracle-composition"}],
+   "authors": []}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
