@@ -584,7 +584,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/sipser-lautemann/worker-nova",
+      "blocked": false,
+      "assignee": {"value": "worker-nova"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/BPP.lean",
     "Complexity/Computability/Complexity/Classes/BPP",
