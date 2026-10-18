@@ -1,6 +1,22 @@
 {"version": 1,
  "integration": null,
- "epics": [],
+ "epics":
+ [{"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Circuit/Boolean",
+    "ComplexityTests/MassProduction.lean",
+    "ComplexityTests/MassProduction",
+    "ComplexityTests/BatchLookup.lean",
+    "ComplexityTests/Sorting.lean",
+    "ComplexityTests/SortingTrace.lean",
+    "ComplexityTests/Broadcast.lean"],
+   "id": {"value": "mass-production"},
+   "goal":
+   "Own the circuit mass-production port as a substantial development, including design, implementation, local subagent delegation, and simplification. Endpoints: the rational exponential-copy range, the sharp real-rate coefficient 1/(1-gamma)+o(1), and coefficient-one mass production for the source subexponential range. Sources: https://github.com/SamuelSchlesinger/algebraic-circuits (Algebraic/MassProduction.lean; BlockInduction.exponentialMassProduction; Nonuniform.realSharpMassProduction; LupanovSynthesis.uhlig_massProduction), and the cited Boolean mass-production manuscript. Pin and record source revisions; consult ROADMAP.md and UPSTREAM.md. Build on native CSLib circuits, existing MassProduction/{Basic,Padding,Synthesis}, sorting, routing, and BatchLookup; replace redundant source scaffolding when the shared APIs make the argument smaller. Preserve exact independent-input, quantifier, floor/rounding, and weighted gate-cost contracts: constants free; NOT/AND/OR cost one. Do not describe nonuniform existence or circuit-size bounds as certified constructor runtime. You may organize and delegate all work within this broad scope; every editing subagent uses its own worktree and disjoint ownership, report all contributors, and do not use authors as final independent reviewers. First report a dependency map and first independently useful theorem milestone, then implement without waiting for routine design approval. Push coherent checkpoints; when an independently useful milestone is reviewable, report it so the coordinator can scope its landing and continuation accurately. Supply semantic and boundary-case clients, theorem axiom checks in your own tests, source credit, full six-check validation, and helper-inclusive proof/elaboration measurements for substantial simplifications. Shared foundations outside scope, central Axioms.lean, bibliography, and roadmap changes are coordinated centrally: report exact needed changes instead of editing them. Do not touch the paused tactic work in the primary checkout. Heartbeat and read the board at least every five minutes; report progress/blockers via note.",
+   "dependencies": [],
+   "authors": []}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
