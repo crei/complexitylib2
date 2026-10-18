@@ -263,7 +263,15 @@
        "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
       "reviews":
       {"correctness":
-       {"assigned": {"agent": {"value": "reviewer-correctness"}}},
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "29916e1d8f170844d72feb42abcbb1f8"},
+          "holder":
+          {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
+           "agent": {"value": "reviewer-correctness"}},
+          "expires": 1792371142},
+         "blocked": false}},
        "api":
        {"active":
         {"report": "",
