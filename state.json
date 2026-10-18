@@ -1010,7 +1010,7 @@
     "agent": {"value": "reviewer-integration"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792379779,
+   "expires": 1792379813,
    "actor":
    {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
     "agent": {"value": "worker-mythos"}}},
