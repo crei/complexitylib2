@@ -97,7 +97,7 @@
            "agent": {"value": "reviewer-correctness"}},
           "expires": 1792369217},
          "blocked": false}},
-       "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
+       "api": {"assigned": {"agent": {"value": "worker-orion"}}}}}}},
    "paths":
    ["Complexity/Tactic",
     "ComplexityTests/PolyTimeTactic.lean",
