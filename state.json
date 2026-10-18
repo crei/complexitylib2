@@ -490,7 +490,7 @@
         "holder":
         {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
          "agent": {"value": "reviewer-correctness"}},
-        "expires": 1792371772},
+        "expires": 1792372377},
        "branch": "work/review-handoff/reviewer-correctness",
        "blocked": false,
        "assignee": {"value": "reviewer-correctness"}},
@@ -602,7 +602,7 @@
     "agent": {"value": "reviewer-api"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792371772,
+   "expires": 1792372377,
    "actor":
    {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
     "agent": {"value": "reviewer-correctness"}}},
