@@ -66,7 +66,12 @@
     {"work":
      {"resume": "work/fagin/worker-jetski",
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "1ded987298efb1bbc41682360452993f"},
+       "holder":
+       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+        "agent": {"value": "coordinator"}},
+       "expires": 1792371529},
       "branch": "work/fagin/coordinator",
       "blocked": false,
       "assignee": {"value": "coordinator"}}}},
@@ -83,7 +88,7 @@
    "goal":
    "First Fagin milestone: encoded finite relational structures, a fixed ESO matrix/certificate checker in the existing Mathlib FirstOrder and Cslib.Logic.ESO.Sentence semantics, and a native polynomial-time certificate proving ESO.Definable K implies queryLanguage K belongs to verifier NP. Follow your reported architecture: explicit finite vocabulary/table numbering, unary cardinality with relation truth tables, WellFormed and decode/encode correspondence, isomorphism/numbering invariance, exact polynomial witness padding and malformed-input rejection. Include empty/singleton domains and nullary relations. Pin/credit V1 dev @add0aca8ee0d71e68969f2cb45cf91554a50f787 for checker architecture; cite Fagin1974 and Immerman1999. V1 syntax is not ported as a parallel logic. Own design and subagent delegation; use separate worktrees and record contributors. Supply graph-coloring or equivalent nonvacuous clients, semantic/efficiency/failure tests, axiom checks in your own tests and all six project gates; obtain independent exact-commit API/correctness reviews. Added test scope covers your planned FaginEncoding.lean and FaginNP.lean. The full NP-to-ESO tableau and iff remain explicitly tracked in fagin-converse, intended for you to continue after this milestone; do not claim the full characterization here. Keep current NP/IsVerifier interfaces stable and coordinate machine needs with worker-opus. Central Axioms/ROADMAP changes are coordinated before submission. Read status --json Epic.report for guidance, heartbeat at least every five minutes, and merge current main at a clean checkpoint. The coordinator now owns mechanical final integration, preserving worker-jetski authorship: current-main merge, the encStructure documentation correction, named central guards and the truthful remaining-work roadmap. Independent reviews must cover the exact final snapshot.",
    "dependencies": [],
-   "authors": [{"value": "worker-jetski"}]},
+   "authors": [{"value": "worker-jetski"}, {"value": "coordinator"}]},
   {"resume": null,
    "report":
    "Independent API review is now assigned to worker-orion. The previously assigned reviewer-api correctly disclosed authorship of the retained three certificate-registration lines and seven nested-loop prototype cases; it must not approve this batch as independent. Contributor record: worker-inference wrote the final generic registry repair/new regression tests/measurements; reviewer-api supplied the earlier retained prototype through the coordinator. reviewer-correctness confirms its earlier involvement was read-only and remains independent. Orion: from your clean registered worktree, start inference-loops api now, review exact base 8cfd2b61632b900a51397751f4d1f485d54d3bcc to head da2e439b523409d192be7a977bdac7aca84064e3, all five files. Inspect ordinary-expression/encoding usability, generic persistent fun_prop registration metadata, imported/local/scoped lifetimes and priorities, retention of distinct certificates, narrowly scoped claims and test burden. Read the full commit body, including the preexisting three-encoding-choice limitation and explicit mapToBitsWithInput h2 htest workaround. Use MCP first and your own independent build cache; author all six gates passed, so independently reproduce decisive cases rather than repeating every gate. Record exact-commit approve or changes via the board, with evidence and limitations. Review only; fixes remain with worker-inference. This gives you concrete work immediately while quantitative-stretch waits for this dependency.",
