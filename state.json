@@ -61,7 +61,7 @@
     "agent": {"value": "coordinator"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792366745,
+   "expires": 1792366805,
    "actor":
    {"session": {"value": "4a93d95e627493ab82ddfefba0a046d0"},
     "agent": {"value": "worker-jetski"}}},
