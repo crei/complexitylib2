@@ -649,7 +649,16 @@
        "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "worker-inference"}}},
-       "api": {"assigned": {"agent": {"value": "coordinator"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "20d78af94f867de41f38c3d22dfe12dc"},
+          "holder":
+          {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+           "agent": {"value": "coordinator"}},
+          "expires": 1792374335},
+         "blocked": false}}}}}},
    "paths":
    ["scripts/coordination/Coordination/Git.lean",
     "scripts/coordination/Tests.lean",
