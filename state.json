@@ -782,7 +782,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "f7b5ebabcb965cd8ca3c1315f452e719"},
+       "holder":
+       {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
+        "agent": {"value": "worker-opus"}},
+       "expires": 1792377312},
       "branch": "work/polynomial-space/worker-opus",
       "blocked": false,
       "assignee": {"value": "worker-opus"}}}},
@@ -800,7 +805,7 @@
    "goal":
    "Establish native polynomial-space classes and the full Savitch consequence NPSPACE = PSPACE, with an actual deterministic polynomial-workspace decider for every native nondeterministic polynomial-space language. Use the pinned CSLib MultiTapeNTM/MultiTapeTM, bounded read-only input head and append-only output, finite binary alphabet/states and native RunsInSpace over every computation prefix; do not import V1 machine/space-class definitions or silently strengthen acceptance to bounded-time/all-branches-halting. State deterministic total decision and nondeterministic accepting-path semantics precisely and show concrete inhabitants. Build a reusable finite encoded configuration view preserving acceptance, summarize or bound output appropriately (acceptance is halted output exactly[true]), and prove the reachable-state/cardinality bound from visited work cells. Implement midpoint reachability as recognizable functional code with an explicit bounded stack; reuse Relation.RelatesWithinSteps two_pow_succ_iff and finite reachability, existing encoding/copy/list/iteration certificates, and the native quantitative calculus. Prove whole-algorithm time/space/output bounds, charging input/configuration storage, enumeration counters, retained stack frames, recursive returns and copies. In polynomial space retaining the input is legitimate; do NOT claim the general O(s(n)^2) Savitch theorem for sublinear s from a construction storing the whole input. Preserve that sharper theorem, logspace composition, NL subsets/complement and TQBF completeness as separately tracked continuations. Public endpoint should be an unconditional equality of genuinely machine-defined polynomial-space classes, not a theorem assuming an unproved simulator certificate or a combinatorial reachability lemma. You may expose intermediate useful native space/configuration APIs but keep the full endpoint in scope. Inspect upstream and existing native Space/Universal/Bound/Compose and relation cores first; source V1 Classes/Containments/Internal/Savitch* is Bolton Bailey2026, Classes/Space SamuelSchlesinger2025; retain authors for any ported material, cite Sipser2013/AroraBarak09. The old V1 proof uses Cobham and different space semantics: port mathematical content, not that backend. First post a dependency map, exact decision/halting/acceptance convention and meaningful resource contract. Subagents allowed in separate worktrees/caches and disjoint scopes; report all contributors. Meaningful loop/stuck/repeated-output/empty-input tests, inference clients, axiom audit, helper-inclusive proof burden and all6gates; architect central reviews/integration.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "worker-opus"}]}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
