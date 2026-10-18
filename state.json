@@ -389,7 +389,7 @@
         "holder":
         {"session": {"value": "2c241a85615db03e563c3e1245d12306"},
          "agent": {"value": "worker-nova"}},
-        "expires": 1792371488},
+        "expires": 1792371567},
        "branch": "work/karp-reductions/worker-nova",
        "blocked": false,
        "assignee": {"value": "worker-nova"}},
@@ -531,7 +531,7 @@
     "agent": {"value": "worker-atlas"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792371488,
+   "expires": 1792371567,
    "actor":
    {"session": {"value": "2c241a85615db03e563c3e1245d12306"},
     "agent": {"value": "worker-nova"}}},
