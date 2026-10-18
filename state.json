@@ -1073,6 +1073,19 @@
    "goal":
    "Continuation of polynomial-space for the same worker: TQBF is PSPACE-complete on the native classes. Define quantified Boolean formulas with a canonical bit encoding and native evaluation, prove TQBF is in PSPACE with an actual deterministic polynomial-workspace decider written as ordinary functional code over the existing machine calculus (recursive evaluation with an explicit bounded stack; charge input retention, stack frames, counters and copies), and prove PSPACE-hardness by a native polynomial-time Karp reduction from any native polynomial-space language, built from the encoded configuration view and midpoint reachability of polynomial-space (Savitch-style quantified formula of polynomial size). Reuse Classes/Space, the configuration encoding, Algorithms/Reachability and the Karp-reduction machinery from karp-reductions; no second formula or machine model; cite Sipser2013 Theorem 8.9 and AroraBarak09 Theorem 4.13; state empty-formula and zero-variable boundaries. First post a dependency map and exact statement forms; milestones: (1) TQBF syntax, evaluation and membership in PSPACE; (2) hardness reduction; (3) completeness corollary and AP = PSPACE left as a tracked follow-up. Tests with concrete formulas, nonvacuity, headline #print axioms guards in the epic test module, six gates, frozen submission per milestone.",
    "dependencies": [{"value": "polynomial-space"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/LogSpace.lean",
+    "Complexity/Computability/Complexity/Classes/LogSpace",
+    "Complexity/Algorithms/Reachability/LogSpace.lean",
+    "ComplexityTests/LogSpace.lean"],
+   "id": {"value": "logspace-nl"},
+   "goal":
+   "Continuation after polynomial-space: native logarithmic space. Define L and NL on the native machines with a read-only input head and workspace measured on the work tapes only (reconcile with UPSTREAM.md #767 DSPACE conventions and the plain/tidy bridges of polytime-plain-bridge), prove logspace composition (closure of logspace computable functions under composition without storing intermediate outputs, by recomputation), NL subset of P via reachability on the encoded configuration graph with a polynomial-time functional reachability algorithm, and the sharper Savitch bound for sublinear space where the input is not retained (configuration encoding of size O(s(n) + log n)); NL = coNL (Immerman-Szelepcsenyi) is milestone 3. Reuse polynomial-space configuration views and Algorithms/Reachability; no new machine model; cite Sipser2013 Chapter 8, AroraBarak09 Chapter 4 and Immerman1988/Szelepcsenyi1988 (propose bibliography entries). First post a dependency map with the exact space-accounting convention and state what the existing RunsInSpace measures; milestones with agreed endpoints; tests, axiom guards in the epic test module, six gates, frozen submissions.",
+   "dependencies": [{"value": "polynomial-space"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
