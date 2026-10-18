@@ -188,7 +188,7 @@
        "holder":
        {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
         "agent": {"value": "worker-opus"}},
-       "expires": 1792369521},
+       "expires": 1792369572},
       "branch": "work/nondeterministic-verifiers/worker-opus",
       "blocked": false,
       "assignee": {"value": "worker-opus"}}}},
@@ -400,7 +400,7 @@
     "agent": {"value": "reviewer-correctness"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792369521,
+   "expires": 1792369572,
    "actor":
    {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
     "agent": {"value": "worker-opus"}}},
