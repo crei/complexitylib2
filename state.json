@@ -321,15 +321,18 @@
           "expires": 1792377012},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "7c1fb5b7fd3d98ee2561906578c1158a"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792362709,
+          "snapshot":
+          {"head": {"value": "6ddaa785e2811ff684dde6bc1f8c20fa91ca166d"},
+           "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
+          "reviewer":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792377030},
-         "blocked": false}}}}}},
+          "note":
+          "Independent full API/source/reuse review of original25librarymods+5tests and final central delta; no production contribution. Routine cleanup: Menu/Counting118 covering proof is existing exists_cover_of_scaled_card_lt corollary p1,q2^m (exact statement probe passes); relocate generic Synthesis.circuit from Scheduler/Basic79 to generic mirrored Circuit/Synthesis for scheduler+iteration clients; co-locate pointBits add/injective/equiv with BitString.Point, generic indexBits shared/private; qualify divided sharp formula P>0 and menu floor+1 formula k>0. No broad privacy churn; List.Perm/prefixOr relocation optional. Native circuit/Program/Synthesis reuse, exact rational/real uniform quantifiers, all-gate size to nonconstant weighted cost, repeated-target output order, noncomputable information-set/menu choices and no constructor runtime claim checked. Own-cache25mods+5testmodules/guards and minimal Sharp/Point imports passed; MCP first raw sources clean, test unavailable then shell. Exact original Lean3998dc48 SharpTheorem/RealTheorem match; manuscript21d57d75 unavailable (coordinator confirmed), no claimed manuscript audit. No mathematical blocker within API scope. Helperinclusive5211library935test physical lines;3436librarycode2315namedproofbody. Full35hashes/evidence .lake/codex-validation/mass-production-sharp-api-review/api-review.json. Separate correctness and later cleanup integration excluded."}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
     "ComplexityTests/MassProduction.lean",
