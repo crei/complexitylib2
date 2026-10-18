@@ -617,7 +617,7 @@
    "authors": []},
   {"resume": null,
    "report":
-   "Both original reviews are complete: correctness approves; API requests two small reuse cleanups. Architect will handle these centrally via local integration agent, preserving worker-nova history and keeping Nova on the oracle continuation.",
+   "Coordinator handoff: cleaned submission800b146d3dc213fa964bd5dde76bb32ecc1cb041 from reviewer-correctness is ready for central integration; original full API/correctness audits preceded cleanup, but final exact reviews remain required. Main now6abc984 includes sharp. Reopen, add ComplexityTests/Axioms.lean and ROADMAP.md scopes, assign/start incoming coordinator in its own worktree, merge latestmain and add nine central guards already checked in submitted tests: compl_mem_BPP, SipserLautemann.exists_shifts_majorityAccepts, exists_seed_not_majorityAccepts, verifier_polyTime, isAlternatingVerifier_verifier, BPP_subset_SigmaP_two, BPP_subset_PiP_two, BPP_subset_SigmaP_two_inter_PiP_two, BPP_subset_PH. Remove Sipser-Lautemann from remaining machine-class gaps. Cleaned code reuses existing bitstring/polytime and pointwise addition APIs; no new TM, exact strict-majority and zero-seed contracts preserved, source Bolton Bailey and Samuel retained. All6 author/integrator gates passed; final merged snapshot needs all6 and fresh two independent reviews. reviewer-correctness contributed cleanup and cannot review this batch; reviewer-api and reviewer-integration only reviewed and remain eligible if those processes remain available. Queue alongside iteration-foundations central cleanup; do not block ongoing remote theorem workers.",
    "phase":
    {"submitted":
     {"submission":
