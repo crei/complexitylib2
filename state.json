@@ -675,15 +675,18 @@
           "expires": 1792374433},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "20d78af94f867de41f38c3d22dfe12dc"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792360187,
+          "snapshot":
+          {"head": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"},
+           "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
+          "reviewer":
           {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
            "agent": {"value": "coordinator"}},
-          "expires": 1792374335},
-         "blocked": false}}}}}},
+          "note":
+          "Independent API review, no implementation contribution or findings. Complete three-file delta and 103-line helper-inclusive regression inspected. Local Git manpage confirms empty --refmap ignores configured tracking mappings; Runtime consumers use returned OIDs, not incidental tracking refs. One fetch option/comment only; public commands, protocol/lease/review/atomic landing/push authority and failure behavior unchanged. New real-Git linked-worktree test independently built and executed in coordinator cache: PASS, covering fresh OID, real shared tracking lock, both dirty HEAD/index/FETCH_HEAD/content snapshots, absent refs and post-receive cleanup. Diff clean. Author baseline32/33 and final33/33 evidence inspected; baseline not redundantly rerun here. Push-side tracking updates outside scope. Evidence .lake/codex-validation/fetch-isolation-api/review.json; full6+33 gates at land."}}}}}}},
    "paths":
    ["scripts/coordination/Coordination/Git.lean",
     "scripts/coordination/Tests.lean",
