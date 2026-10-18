@@ -644,15 +644,18 @@
       "reviews":
       {"correctness": "unassigned",
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "83563eeb44ecca749f3a4211521b6194"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792361652,
+          "snapshot":
+          {"head": {"value": "156fda3d2f3fa04b6a0105c469878e2a1a6e6f7a"},
+           "base": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"}},
+          "reviewer":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792375986},
-         "blocked": false}}}}}},
+          "note":
+          "Independent all6file API review, no production contribution. Small central cleanup required: remove duplicated private listBool_to_bits/bitsMapWithInput and local registration at PH/SipserLautemann402 using existing PolyTime/BitString listToBits/mapToBitsWithInput; full-source removal+import probe passes. Use pointwise + and Equiv.addLeft instead of rebuilt shiftSeed/shiftSeedEquiv at169 under bit-string policy; definitional equality and BooleanRing cancellation probes pass. Correct source-record v1 path to Classes/PH/SipserLautemann (Bolton credit checked), no history rewrite. Actual unconditional matrix certificate, exact T*(2Rm)/2Rm blocks, strict ties, m0, malformed defaults, complement-derived Pi2 and genuine noisy2bit client checked; no new TM. Own-cache3modules and submitted tests10guards pass, arbitrary-encoding/client probes pass; MCP first stale dependencies then focused shell. Diff805insert1delete;492net code lines including helpers/tests,212library named proof-body lines. Exact evidence/hashes .lake/codex-validation/sipser-lautemann-api-review/api-review.json. No mathematical blocker found in API scope; separate correctness and later main/central integration excluded."}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/BPP.lean",
     "Complexity/Computability/Complexity/Classes/BPP",
