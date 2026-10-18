@@ -628,20 +628,27 @@
    "report":
    "Both original reviews are complete: correctness approves; API requests two small reuse cleanups. Architect will handle these centrally via local integration agent, preserving worker-nova history and keeping Nova on the oracle continuation.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/sipser-lautemann/worker-nova",
-      "report":
-      "Merged main a5cb582 while preserving worker-nova 156fda3 history. Implemented both requested API cleanups in the owned PH/SipserLautemann source and tests: shared BitString certificate import replaces private conversions/local rule; pointwise + and Equiv.addLeft replace seed-specific XOR/translation API. Full source and test MCP diagnostics clean. Native matrix definitions and verifier_polyTime proof unchanged. Helper-inclusive delta: -49 physical lines, -39 code lines, -19 named theorem-body lines; no new helper. All six gates running in this isolated cache. Correct V1 source is Complexitylib/Classes/PH/SipserLautemann.lean at add0aca8; Bolton Bailey and Samuel Schlesinger credit retained. I am now a contributor and cannot independently review this batch.",
-      "lease":
-      {"token": {"value": "57757ab42c7deb47b8e1d47ca8404a48"},
-       "holder":
-       {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
-        "agent": {"value": "reviewer-correctness"}},
-       "expires": 1792376979},
-      "branch": "work/sipser-lautemann/reviewer-correctness",
-      "blocked": false,
-      "assignee": {"value": "reviewer-correctness"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/sipser-lautemann/worker-nova",
+       "report":
+       "Merged main a5cb582 while preserving worker-nova 156fda3 history. Implemented both requested API cleanups in the owned PH/SipserLautemann source and tests: shared BitString certificate import replaces private conversions/local rule; pointwise + and Equiv.addLeft replace seed-specific XOR/translation API. Full source and test MCP diagnostics clean. Native matrix definitions and verifier_polyTime proof unchanged. Helper-inclusive delta: -49 physical lines, -39 code lines, -19 named theorem-body lines; no new helper. All six gates running in this isolated cache. Correct V1 source is Complexitylib/Classes/PH/SipserLautemann.lean at add0aca8; Bolton Bailey and Samuel Schlesinger credit retained. I am now a contributor and cannot independently review this batch.",
+       "lease":
+       {"token": {"value": "57757ab42c7deb47b8e1d47ca8404a48"},
+        "holder":
+        {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
+         "agent": {"value": "reviewer-correctness"}},
+        "expires": 1792376979},
+       "branch": "work/sipser-lautemann/reviewer-correctness",
+       "blocked": false,
+       "assignee": {"value": "reviewer-correctness"}},
+      "summary":
+      "Full native BPP enc subset SigmaP 2 enc intersect PiP 2 enc and BPP enc subset PH enc, with the unconditional matrix polytime certificate, now integrates main a5cb582 and both requested API fixes. Head 800b146d3dc213fa964bd5dde76bb32ecc1cb041 preserves worker-nova 156fda3 history. Existing PolyTime.BitString certificates replace the private conversion/map duplicates; pointwise + and Equiv.addLeft replace the seed-specific XOR/translation API. Functional matrix definitions, exact lengths, constants and verifier_polyTime proof are unchanged; 27 retained theorem bodies byte-identical. Delta removes 49 physical /39 code /19 named proof-body lines with no new helper. Full source/tests MCP clean and all six project gates passed in 141.066s; 20 examples, six named test theorems and ten exact axiom guards remain checked. Correct V1 source: Complexitylib/Classes/PH/SipserLautemann.lean and subdirectory at add0aca8ee0d71e68969f2cb45cf91554a50f787; Bolton Bailey and Samuel Schlesinger credit retained. Contributor identities: worker-nova and reviewer-correctness; final independent reviews remain coordinator-owned. Central extra guards/ROADMAP edits intentionally left to coordinator. Evidence in reviewer-correctness/.lake/codex-validation/sipser-lautemann-integration/ (source manifest b805df9022497503885fb089bc9465f32ae19cbe4ac525564b256f6fd23938f1; gates.json, self-review.json, metrics.json, mcp-diagnostics.json).",
+      "snapshot":
+      {"head": {"value": "800b146d3dc213fa964bd5dde76bb32ecc1cb041"},
+       "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/BPP.lean",
     "Complexity/Computability/Complexity/Classes/BPP",
