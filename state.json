@@ -900,7 +900,8 @@
       {"head": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"},
        "base": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness":
+       {"assigned": {"agent": {"value": "reviewer-integration"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths": ["scripts/coordination", "AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "coordinator-handoff"},
