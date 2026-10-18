@@ -1075,4 +1075,10 @@
    "expires": 1792380412,
    "actor":
    {"session": {"value": "6028cd701670813461915b10a3d32c60"},
-    "agent": {"value": "reviewer-sable-api3"}}}]}
+    "agent": {"value": "reviewer-sable-api3"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792380417,
+   "actor":
+   {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
+    "agent": {"value": "reviewer-sable-cor3"}}}]}
