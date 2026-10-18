@@ -906,7 +906,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "a383fd64ef930cfd2f90d19200a9b505"},
+       "holder":
+       {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
+        "agent": {"value": "worker-mythos"}},
+       "expires": 1792380042},
       "branch": "work/polytime-plain-bridge/worker-mythos",
       "blocked": false,
       "assignee": {"value": "worker-mythos"}}}},
@@ -919,7 +924,7 @@
    "goal":
    "Anchor tidy polynomial time and the P/NP classes to cslib main vocabulary, purely additively. Prove ComputableTidilyInPolyTime f encIn encOut iff there exist polynomially bounded t s with ComputableInTimeAndSpaceOfLength f encIn encOut t s, using the existing bridges ComputableInTimeAndSpace.exists_computableTidilyInTimeAndSpace (Combinators/TidyNormalForm) and ComputableTidilyInTimeAndSpace.computableInTimeAndSpace (Plumbing/Tidy/Basic) rather than new machine constructions; then A in P enc iff there exist polynomially bounded t s with DecidableInTimeAndSpace A enc (t of length) (s of length), relying on encBool being definitionally cslib decision encoding, and the NP analogue stating the verifier efficiency through ComputableInTimeAndSpaceOfLength with the same IsVerifier and polynomial certificate length. New module Complexity/PolyTime/Plain.lean marked candidate with cslib-style names and docstrings; iff theorems beside P and NP; ComplexityTests/PolyTimePlain.lean with a concrete nonvacuous client in each direction and exact axiom checks. No existing definition, statement or client changes. First post a compact dependency map naming the exact upstream predicates and the #767/#768 DTIME/DSPACE conventions recorded in UPSTREAM.md, and state which direction of each bridge is lossless about the bounds. Coordinate with polynomial-space (worker-opus): the space-class bridge there should be analogous and consume this time bridge once landed; do not duplicate a private P-to-plain bridge. Self-review, all six gates, frozen submission; report Axioms.lean guards, the UPSTREAM.md #767 reconciliation note and ROADMAP rows for central integration. Contributors: worker-mythos and any subagents in isolated worktrees.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "worker-mythos"}]}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
