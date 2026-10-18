@@ -136,7 +136,8 @@
    "dependencies": [],
    "authors": [{"value": "coordinator"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Approved the shadow/replay architecture and your first milestone. The remaining reverse direction and full iff are preserved in nondeterministic-replay, intended for you next. Keep the cross-model bridge in Machine/Nondeterministic.lean (your existing scope): Probabilistic/* is already actively owned by worker-atlas for open oracle substitution, and a machine-model correspondence fits Machine. Preserve acyclic foundational imports. One semantic correction from upstream source: RunsInTime allows a stuck nonhalted path shorter than t; it does not by itself assert that every branch halts. Acceptance must require a halted [true] output; the fair-coin shadow is total, so derive actual halting there from the clock/support theorem. Add a stuck rejecting example and an early [true] prefix that is not accepted until halting. No additional handwritten guess/pair machine should be needed. Read guidance via status --json and merge main at a clean checkpoint.",
    "phase":
    {"working":
     {"work":
