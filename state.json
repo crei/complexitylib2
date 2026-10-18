@@ -759,55 +759,17 @@
    "authors": [{"value": "reviewer-api"}]},
   {"resume": null,
    "report":
-   "Both independent reviews of exact 7e4cdca now APPROVE (correctness: reviewer-integration; API: reviewer-sable-api2). Central integration by the coordinator next, in queue after iteration-foundations: merge main, move Universal/Decode/Basic.lean to Encodings/Decoder.lean (namespace Turing.MultiTapeTM, candidate) and update the Decode import, move Diagonal.exists_le_mul_two_pow to Foundations/Data/Nat/PolynomialBound/Exponential.lean as Cslib.PolynomiallyBounded.exists_le_mul_two_pow, keep Diagonal.universal_bounds_le in Hierarchy.lean (its runBound dependency lives in vendored Universal/Machine.lean, so Universal/Bound.lean is infeasible) and fix its docstring crossref, rename Diagonal.doubled/encDoubled/doubleT to avoid the vendored doubled name, add three central guards and the ROADMAP note, then fresh exact-delta reviews and land. No author action needed; worker-opus continues polynomial-space.",
+   "Mechanical integration after two approvals of exact 7e4cdca: merge main 94dcd9d, relocate the decoder library to Encodings/Decoder.lean and exists_le_mul_two_pow to PolynomialBound/Exponential.lean, docstring crossref fix, trueDoubled renames, UPSTREAM rows; no statement changes; fresh delta reviews follow.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Publication request: my local lean4 guardrail blocks ordinary git push. Please publish exact commit 7e4cdca (merges main a5cb582; all six checks pass at it) as a new branch: git push origin 7e4cdca:refs/heads/work/native-exponential-separation/worker-opus (object in the shared repository store). I will submit with ready as soon as the remote branch shows it; the user may also push it directly.",
-       "lease":
-       {"token": {"value": "1355dbadfdcfecc929519c2de502627d"},
-        "holder":
-        {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
-         "agent": {"value": "worker-opus"}},
-        "expires": 1792381748},
-       "branch": "work/native-exponential-separation/worker-opus",
-       "blocked": false,
-       "assignee": {"value": "worker-opus"}},
-      "summary":
-      "Separation milestone at 7e4cdca (branch head; merges main a5cb582; published by the user). All six checks pass at this exact commit. HEADLINES (axioms propext, Classical.choice, Quot.sound): Cslib.Complexity.computableTidilyInO_diagonal : ComputableTidilyInO diagonal encBits encBool (fun x => 2^(4*|x|)) (fun x => 2^(2*|x|)) exactly at the requested exponents; Cslib.Complexity.diagonal_not_mem_P : {x | diagonal x = true} not in P encBits; Cslib.Complexity.not_computableInTimeAndSpace_diagonal : no plain (not necessarily tidy) finite binary machine computes diagonal within a polynomial time bound. FILES: (1) Universal/Decode/Basic.lean: frames (framed words of any word; final incomplete frame closed) with a 3-state transducer certificate (linear) and frames_encList; Decoder (total, inverts enc, tidy certificate of fixed degrees) with unary/option/pair (unframe/dropFrame)/list (frames + mapWith)/map (transport). (2) Universal/Decode.lean: signDecoder, symDecoder, keyDecoder, tapeActDecoder, actDecoder, descDecoder; decodeDesc, decodeDesc_eDesc, padded-prefix law decodeDesc_unframe_frame_append, exists_computableTidilyInDegree_decodeDesc (polynomial output on every word, certified runtime, no choice/invFun). (3) Encodings/NatPower.lean: encNat_two_pow (2^n = n zeros then one), ComputableTidilyInDegree.two_pow_length (linear transducer clock). (4) Classes/Hierarchy.lean: diagonal x := Diagonal.verdict (universal (decodeDesc (unframe x), x.map eBit, 2^|x|)) using existing Universal.eBit, simulating the WHOLE x; diagonal_desc (padded self-description gives !answer); not_forall_halted_diagonal (core diagonal argument for any finite machine halting with [diagonal x] within a polynomial bound, padding past the polynomial via eventually_lt_two_pow); the three headlines; helpers in Cslib.Complexity.Diagonal: symbol map by two transducers through a doubled code (one unary symbol needs three output bits), exists_le_mul_two_pow, universal_bounds_le (universal run O(B^5 J^3) time, O(B^2 J) space for sizes at most B and clock J), verdict certificate (quadratic time, linear space), bounds_aux. All charges retained by comp/prod: decoder, symbols, clock, universal run, test. No DTIME/EXP definitions or tight claims. TESTS ComplexityTests/TimeHierarchy.lean: frames on valid/empty/incomplete words; decodeDesc [] = <0,0,[]>, decodeDesc [true] = <0,0,[]>, decodeDesc [false,true,true] = <0,1,[]> (malformed), padded decoding, polynomial decoded size; clock encNat (2^3); diagonal = !b on padded descriptions of concrete machines answering b (nonvacuity both ways, exercising diagonal_desc on real machines); certificate up to a constant; P and plain-machine clients; 7 axiom guards. SOURCES: native Universal interpreter and tidy calculus by Christian Reitwiessner; v1 add0aca8 Classes/Hierarchy and UTM/Diagonal (Samuel Schlesinger) for padded diagonal reasoning only (no code ported); AroraBarak09 Theorem 3.1 (diagonal argument of the time hierarchy theorem). CONTRIBUTORS: worker-opus (Claude Opus 5.5); one read-only Claude subagent preliminary review (no blocking findings; should-fixes applied in 843615d: eBit reuse, Diagonal namespace, plain-machine theorem, Decoder.map/signDecoder renames, simpNF, docs, concrete malformed tests); worker-inference's static preflight (relayed by the coordinator, no code). Not final reviewers. Lean MCP unavailable; validated with lake. CENTRAL/PLACEMENT REQUESTS: ComplexityTests/Axioms.lean named checks for diagonal_not_mem_P, computableTidilyInO_diagonal, not_computableInTimeAndSpace_diagonal; UPSTREAM placement notes: the generic Decoder library and frames (Universal/Decode/Basic.lean) belong in MultiTape/Encodings (e.g. Encodings/Decoder.lean); Diagonal.exists_le_mul_two_pow belongs in Foundations/Data/Nat/PolynomialBound/Exponential.lean as Cslib.PolynomiallyBounded.exists_le_mul_two_pow; Diagonal.universal_bounds_le belongs in Universal/Bound.lean; ROADMAP machine-class milestones may record the executable exponential-time problem outside P as done (class-named hierarchy still open).",
-      "snapshot":
-      {"head": {"value": "7e4cdca713b042183efca1094b5b231f1c946a33"},
-       "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792363425,
-          "snapshot":
-          {"head": {"value": "7e4cdca713b042183efca1094b5b231f1c946a33"},
-           "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
-          "reviewer":
-          {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
-           "agent": {"value": "reviewer-integration"}},
-          "note":
-          "Independent full7file981line correctness audit, no production or retained-test contribution. No mathematical blocker. Total executable Decoder/framing and malformed output degree checked; binary clock including n0; fixed eBit symbol conversion; actual native interpreter on WHOLE padded input; exact halted singleton-true verdict; stable halted run and padded polynomial-vs-exponential contradiction for tidy P and arbitrary plain finite binary machines. Inspected native universal_desc and simulation contracts plus BigO comp/prod and Degree semantics. All preprocessing, copying, storage and verdict costs remain charged; polynomial factor times2^(3n) time and2^n space gives exact InO2^(4n)/2^(2n). No totality assumption on described machine; fixed hypothetical description can usechoice, no efficient arbitrary opaque compiler or tight/class-named hierarchy claim. Own-cache MCP Hierarchy and TimeHierarchy/7guards clean; independent malformed/frame/clock/empty diagonal/exact verdict probes and concrete unhalted emit-true loop all clean. Read pinned v1add0aca8 Hierarchy and relevant Diagonal excerpts plus primary author-hosted AB Theorem3.1 text; native interpreter credit preserved. Minor doc crossref omits Diagonal namespace on universal_bounds_le, to fix with planned relocation. Full6 author report retained, not repeated. Seven hashes and evidence .lake/codex-validation/native-exponential-separation-correctness/correctness-review.json SHA2567f6a61a1fd73dbfddb1fe4f2978eb5b904521d8836cf85adcb440014b6de94ff. Tracked tree clean; API and later central delta remain separate."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792366776,
-          "snapshot":
-          {"head": {"value": "7e4cdca713b042183efca1094b5b231f1c946a33"},
-           "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
-          "reviewer":
-          {"session": {"value": "33380288772710be7744d177c8f66871"},
-           "agent": {"value": "reviewer-sable-api2"}},
-          "note":
-          "Independent API/placement review of exact 7e4cdca (base a5cb582, ancestry verified); no contribution to this epic. Read all 7 files in full plus Encodings/*, Universal/* (vendored crei @7f7c0696 markers), Universal/Bound+Machine, PolynomialBound/*, Degree/Lists calculus, UPSTREAM.md, pinned cslib. Evidence: lake build of the 4 modules + ComplexityTests.TimeHierarchy --wfail --iofail clean (3876 jobs); mk_all --check, lint-style, git diff --check clean; 7 lake env lean probes clean (client shapes of the 3 headlines, Decoder on a new structure encoding via map, frame/decoder/clock boundaries, relocation feasibility). No blocking findings; no duplication against pinned cslib or Complexity/. Placement: (1) Decode/Basic -> Encodings/Decoder.lean: agree (imports only Complexity.Lists+Encodings.Option; precedent Encodings/Length). (2) exists_le_mul_two_pow -> PolynomialBound/Exponential as PolynomiallyBounded.exists_le_mul_two_pow: agree, compiles with that file's imports (probe 4). (3) universal_bounds_le -> Universal/Bound.lean is INFEASIBLE: runBound lives in vendored Universal/Machine.lean:149, which imports Bound (probe 5a); keep Diagonal.universal_bounds_le in Hierarchy (sole client) or add a candidate module beside Machine.lean (e.g. Universal/RunBound.lean, marker 'candidate (addition to crei/tidy-universal Universal/Machine.lean)', UPSTREAM row); do not edit vendored files. Nits: Hierarchy.lean:53 crossref lacks Diagonal.; Diagonal.doubled/encDoubled/doubleT share a name with vendored public Turing.MultiTapeTM.doubled (different map); unframe/dropFrame degree-1 certificates re-derived inline (Decode/Basic:197-200, Hierarchy:372); NatPower marker could name Encodings/Nat.lean as destination; test file named TimeHierarchy. Central: 3 Axioms.lean guards, ROADMAP line 154. Not run: lake test/lint/checkInitImports. Evidence .lake/codex-validation/native-exponential-separation-api/review.json SHA256 20c5d515eaeedd23ddbba343877edadc0c9acc1278c9aef21f0e110e75d77c3d"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "Mechanical integration after two approvals of exact 7e4cdca: merge main 94dcd9d, relocate the decoder library to Encodings/Decoder.lean and exists_le_mul_two_pow to PolynomialBound/Exponential.lean, docstring crossref fix, trueDoubled renames, UPSTREAM rows; no statement changes; fresh delta reviews follow.",
+      "lease": null,
+      "branch": "work/native-exponential-separation/worker-opus",
+      "blocked": false,
+      "assignee": {"value": "worker-opus"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode",
