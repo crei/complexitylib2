@@ -430,19 +430,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "bd0686e30795a9c5bf89e413e53ab8bd"},
-       "holder":
-       {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
-        "agent": {"value": "reviewer-correctness"}},
-       "expires": 1792370897},
-      "branch": "work/review-handoff/reviewer-correctness",
-      "blocked": false,
-      "assignee": {"value": "reviewer-correctness"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "bd0686e30795a9c5bf89e413e53ab8bd"},
+        "holder":
+        {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
+         "agent": {"value": "reviewer-correctness"}},
+        "expires": 1792370897},
+       "branch": "work/review-handoff/reviewer-correctness",
+       "blocked": false,
+       "assignee": {"value": "reviewer-correctness"}},
+      "summary":
+      "AGENTS.md and CONTRIBUTING.md now require worker self-review, central independent API/correctness review, read-only reviewers, and a coordinator reopen/assign/start integration handoff with preserved contributors and fresh exact reviews. Self-review checked Protocol.apply guards; git diff --check, 10 local Markdown links/anchors and code fences pass. Validation/review-cycle/landing-check paragraphs unchanged. Docs only; no protocol or Lean changes. All six landing gates and independent central review remain for coordinator. AI assistance: OpenAI Codex authored and self-reviewed.",
+      "snapshot":
+      {"head": {"value": "6b752306cbbf5f680fc9e81b3afe48f268cb4f37"},
+       "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths": ["AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "review-handoff"},
    "goal":
