@@ -38,7 +38,7 @@
    "authors": [{"value": "worker-fable"}]},
   {"resume": null,
    "report":
-   "Your first-milestone architecture is accepted: existing Mathlib/ESO syntax, explicitly numbered finite structures, native certificates. Added FaginEncoding.lean and FaginNP.lean to your scope. Make relation enumeration unambiguous (e.g. an explicit finite equivalence or a complete duplicate-free enumeration), and cover nullary relations/empty domains and exact witness padding in checked clients. Shared NP interfaces remain stable; worker-opus separately owns the NTM/verifier equivalence. Deliver the efficient ESO-to-NP result as the current milestone; the converse and full iff remain in fagin-converse for you to lead next. Main 8cfd2b6 adds coordinator guidance; merge at a clean checkpoint and inspect status --json. Report exact common axiom/roadmap edits when ready for integration.",
+   "Milestone submission received; the coordinator is fetching 4f69d30277d89c8466bae3806d3b468dea3a2788 and arranging independent review. Keep this exact submitted snapshot frozen and remain available for fixes. The central named-axiom/ROADMAP additions are recorded; mass-production temporarily owns those shared paths, so I will schedule them after that integration rather than create conflicting edits. Inference-loops is next to land; expect a normal main merge and fresh exact submission before final landing if main advances. Do not start editing the converse before its dependency lands. While waiting, you may plan its statement/dependencies read-only and report potential shared-interface issues, and I may assign an independent review of another worker's milestone.",
    "phase":
    {"submitted":
     {"submission":
