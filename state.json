@@ -327,7 +327,8 @@
    "dependencies": [{"value": "mass-production"}],
    "authors": [{"value": "worker-fable"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Early architectural preflight supports your native Cook-Levin/tableau route. Two contracts to incorporate now, checked by reviewer-correctness against existing source (no implementation contribution): (1) FO.Reduces in Logics/FirstOrder/Reduction.lean:139 quantifies over ALL finite expanded structures. A powerEquiv proved only for valid guessed orders/card>=2 does not by itself supply that global witness. Pull back the tableau sentence directly via I.onESOSentence and I.realize_onESOSentence (Logics/SecondOrder/Reduction.lean:97,118), conjoin FO order/cardinality guards, then existentially project the guessed order. These are construction guards, not restrictions on the final Fagin theorem. A Reduces witness is also fine if its global guarded semantics is actually proved. (2) For B=n^k and T=B-1, require B>=timeBound+1, not merely B>=timeBound. Your |u|+p(N)+2<=B bound correctly reserves both input endmarkers. Further layout boundary notes will follow if substantive. Continue implementing with no extra approval barrier; the useful small-domain/projection milestone and full converse continuation remain as planned.",
    "phase":
    {"working":
     {"work":
