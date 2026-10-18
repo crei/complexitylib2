@@ -226,6 +226,23 @@
    "goal":
    "Complete the converse direction of Fagin's theorem after the efficient ESO checker milestone: for isomorphism-invariant finite relational queries, verifier NP implies existential second-order definability in the existing Mathlib/Cslib.Logic.ESO semantics, then combine both directions. This is new mathematical work beyond V1. Reuse the numbered finite structures and native checker from fagin, and the existing verifier machine/Cook-Levin tableau. Make guessed order, tuple-indexed time/tapes, vocabulary and encoding assumptions explicit, with empty/singleton structure cases treated correctly. Avoid a parallel logic or class definition and vacuous tableau hypotheses. Sources Fagin1974 and Immerman1999; V1 dev @add0aca8ee0d71e68969f2cb45cf91554a50f787 supplies only the other direction. Intended for worker-jetski to continue leading with subagents after the first milestone. Preserve source credit, theorem-level tests and all six checks, and obtain independent exact-commit API/correctness reviews. Coordinate shared machine dependencies with nondeterministic-verifiers; verifier NP and NTM equivalence remain distinct endpoints until connected. Inspect status --json for guidance.",
    "dependencies": [{"value": "fagin"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/NP.lean",
+    "Complexity/Computability/Complexity/Classes/NP",
+    "Complexity/Computability/Machines/Turing/MultiTape/Machine",
+    "Complexity/Computability/Machines/Turing/MultiTape/Combinators/Guess.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Combinators/Guess",
+    "Complexity/Computability/Machines/Turing/MultiTape/Encodings/RunPath.lean",
+    "ComplexityTests/NondeterministicVerifiers.lean",
+    "ComplexityTests/NondeterministicVerifiers"],
+   "id": {"value": "nondeterministic-replay"},
+   "goal":
+   "Complete the NTM-to-verifier direction and the full equivalence between existing Cslib.Complexity.NP and polynomial-time nondeterministic multi-tape acceptance, after nondeterministic-verifiers supplies the shadow bridge and guess-and-verify direction. Reuse finite fair-coin replay rather than hand-built tape plumbing. Compile finite branching with explicitly bounded overhead, reject stuck paths, distinguish a halted [true] output from a running prefix, and pad choice certificates to one computable polynomial in encoded input length. Native RunsInTime allows stuck paths shorter than the bound; preserve that semantics. Prove both directions as a public iff, with nonvacuous accepting/rejecting machines, empty-input and padding cases, axiom checks and all six project gates. Preserve the existing verifier NP definition and shared machine model. Sources: AroraBarak09 Theorem 2.6; v1 dev 2ad6cb48 for comparison only unless code is actually ported with credit. Intended continuation for worker-opus. Independent exact-commit API and correctness reviews before landing; coordinate shared bibliography, axiom and roadmap changes.",
+   "dependencies": [{"value": "nondeterministic-verifiers"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
