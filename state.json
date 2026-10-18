@@ -1003,7 +1003,16 @@
        "base": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor4"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "fac637f385490918682641356d157ef2"},
+          "holder":
+          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+           "agent": {"value": "reviewer-sable-api4"}},
+          "expires": 1792381304},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Complexity/PolyTime/Plain.lean",
     "Complexity/Computability/Complexity/Classes/P.lean",
