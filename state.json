@@ -872,15 +872,18 @@
        "base": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "7e37400b75aed0f535a0a08542fe557f"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792367120,
+          "snapshot":
+          {"head": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"},
+           "base": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"}},
+          "reviewer":
           {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
            "agent": {"value": "reviewer-sable-cor3"}},
-          "expires": 1792381420},
-         "blocked": false}},
+          "note":
+          "Correctness review of exact base 5c14e51 / head 94dcd9d by reviewer-sable-cor3 (independent: no contribution to this epic; read-only in own worktree). Scope: FunctionalGraph.lean, FunctionalGraph/{Checkpoints,Cycle,Powers}.lean, Circuit/Iteration.lean, ComplexityTests/{IterationFoundations,Axioms}.lean, Complexity.lean, ComplexityTests.lean, ROADMAP.md, references.bib. Evidence: lake build of the five library modules plus both test modules --wfail --iofail succeeded with no warnings; delta has no sorry/axiom/native_decide/heartbeat overrides; mathematics unchanged since twice-approved 8dd2821 (only Iteration.lean import + private helper deletion + wording and one test comment); deleted private Synthesis.circuit statement identical to the generic Complexity Circuit/Synthesis helper; the four Axioms.lean guards match #print axioms exactly. Statements verified against docstrings: exact repeat iff (transient <= a and cycleLength | b - a), orbit_prefix_injective, depth + cycle <= card, checkpoint packing (H subset S, |H|*L <= |S|, repeat or hit within < 2L; 0 < L necessary), canonical labels, mu + lambda distinct powers incl. empty type, eval_iterate, exact weighted cost t * cost c, size_iterate, Synthesis.orbit at t * c.size. Own probes (all pass): Fin 6 map with transient 2 into a 3-cycle (depths 2/3/1/0, cycle 3, tight card bound, 6 powers, canonical label 2 at time 3) and a two-cycle map (lcm 6, 7 powers, unreachable other cycle); phase semantics lemma; checkpoint packings on explicit invariant/non-invariant sets, L > card, infinite ambient, L = 0; two-op circuit with weights 2/5 (cost 21, sizes 0/6, orbits with projection init); 22 axiom prints clean, cost_program_iterate axiom-free. Nits (non-blocking): phase lacks a characterising lemma f^[phase] (canonicalCycle) = x; test module duplicates the central axiom guards; double blank line Powers.lean:49-50. Limitations: no local clone of iterating-functions c4cfa198 under ~/projects/lean, so source statements not compared; full check.sh not re-run. Evidence: .lake/codex-validation/iteration-foundations-correctness/review.json SHA256 ce00d275ab7ad23c884bbe165bffb397feeba5f5f24f7c1a7268a6b4afc76c5c"}}},
        "api":
        {"finished":
         {"review":
