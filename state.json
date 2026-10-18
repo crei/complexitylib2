@@ -309,7 +309,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "d36dd595a57341e4d7d478726a273165"},
+       "holder":
+       {"session": {"value": "02db36fb726df4b0aeac0e4642d23acd"},
+        "agent": {"value": "worker-orion"}},
+       "expires": 1792370308},
       "branch": "work/quantitative-stretch/worker-orion",
       "blocked": false,
       "assignee": {"value": "worker-orion"}}}},
@@ -325,7 +330,7 @@
    "goal":
    "Certify quantitative PRG stretching as a demanding functional-loop client, keeping seed length, runtime round count, generator time, generator workspace and output size separate. Preserve the exact existing PRGStretch.iterate/stretch output (final seed followed by emitted bits in reverse generation order) and all security statements; do not silently substitute a different output order or weaken the existing unrestricted polyTime_iterate theorem. Under the genuine one-bit length invariant and native quantitative generator certificates, derive a cumulative total-time bound charging initialization, every generator call, copying/framing/control and final output, and a separately justified workspace bound including retained data. Target time O(n+k+sum_i(Tgen(seed_i)+n+1)) for n-bit seeds and k rounds rather than repeatedly copying a growing suffix; explicitly charge any buffer/reversal used to preserve output order. Reuse the typed streamFold_sum phase and existing composition calculus, with no handwritten TM unless a demonstrated missing operation requires one. A useful intermediate representation is forward emitted bits followed by a reversed final seed, then one final reversal, but choose the smallest clear proof after checking the backend. Extend captured/nested loop contracts only where this client needs them, and demonstrate a second client before general-purpose helpers; do not discard cumulative bounds in favor of max-round multiplication. Use ComputableTidilyInTimeAndSpace for true workspace: InO also bounds encoded output size. Keep ordinary functional expressions, equivalent spellings and alternative encodings usable; derive plain polynomial time from stronger certificates where applicable. Include zero rounds, empty seeds, valid concrete generators, length/order equalities, positive and negative inference checks and existing crypto regression clients. Sources: Stretch module, Christian Reitwiessner's quantitative/streaming APIs and cited Barak2016PRG. Measure total helper-inclusive proof burden and elaboration; all six gates and independent exact-commit API/correctness review. Assigned development for worker-orion. While the inference-loops dependency finishes review, inspect the existing APIs and post the precise theorem contracts and dependency map without editing; start implementation through the board as soon as it lands. Own the implementation and delegated subagents. User-facing acceptance: ordinary functional algorithm code should compose reusable operation/loop cost contracts, with target-specific realization and bookkeeping discharged behind the API. Central documentation/axiom edits and any out-of-scope primitives go through the coordinator.",
    "dependencies": [{"value": "inference-loops"}],
-   "authors": []},
+   "authors": [{"value": "worker-orion"}]},
   {"resume": null,
    "report":
    "Your dependency map and two-milestone architecture are accepted. Lead the development and subagent split; keep the reusable reduction lemmas and graph subset verifier justified by the named ThreeSAT/IndependentSet/Clique clients. Preserve binary vertex labels/target size, duplicate vertex semantics, empty graphs and exact witness padding; do not expand binary target m into unary. When ThreeSAT is ready as an independently useful checkpoint, report it and I will record the graph continuation before narrowing submission. The existing root-scope plan still authorizes both milestones now. Keep the user-facing programs ordinary functional definitions with compositional certificates and meaningful invariants. Report missing shared API or scope needs rather than implementing duplicate machine scaffolding.",
