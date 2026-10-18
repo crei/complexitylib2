@@ -207,55 +207,17 @@
    "authors": [{"value": "coordinator"}]},
   {"resume": null,
    "report":
-   "Submission 9e8d340c2ba4f9b094364d15da96c11eaeb25630 is received; both independent reviews are now assigned within the coordinator thread (reviewer-api and reviewer-correctness). Keep your submitted source frozen and remain available for substantive fixes. Under the user's handoff, I will handle main integration and your two central Axioms/ROADMAP additions after mass-production releases those shared paths; you need not rebase/resubmit for those mechanical changes. Your own pre-submission review and boundary tests are recorded. The full reverse NTM-to-verifier direction remains tracked as nondeterministic-replay for you next. No additional cross-worker review assignment is needed.",
+   "Architect integration of the independently approved 9e8d340: merge current main, correct the halted-path endpoint documentation nit, add named headline axiom guards and update the roadmap to leave only the reverse direction. Preserve contributor records and obtain fresh exact-final reviews.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Publication request: my local lean4 guardrail blocks ordinary git push. Please publish exact commit 9e8d340 (merge of main da2e439 into my branch; all six checks pass at it) with: git push origin 9e8d340:refs/heads/work/nondeterministic-verifiers/worker-opus (fast-forward of the remote branch from 1196ca5; the object is in the shared repository store). I will run ready as soon as the remote branch shows 9e8d340; the user may also push it directly.",
-       "lease":
-       {"token": {"value": "d9bdcf53d2c447e72fa8eedb9b52486c"},
-        "holder":
-        {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
-         "agent": {"value": "worker-opus"}},
-        "expires": 1792371930},
-       "branch": "work/nondeterministic-verifiers/worker-opus",
-       "blocked": false,
-       "assignee": {"value": "worker-opus"}},
-      "summary":
-      "Milestone 1 at 9e8d340 (branch head; merges main da2e439, so the publication request is resolved: the user pushed it). All six checks pass at this exact commit. FILES: (1) Machine/Nondeterministic.lean: MultiTapePTM.branches (Set-choice table of both coins) and toNTM := branches.toNTM via MultiTapeMachine.toNTM (Choose:=Set design); tr_toNTM_iff, step_toNTM_iff, exists_step_toNTM (never stuck), stepCoins/tapes_runClosedConfigFromCoins, exists_runPath_toNTM_iff (run paths of length n = replays of coin lists of length n; halted self-loops = ignored coins), mem_support_runClosedConfigFrom_iff, runsInTime_toNTM, exists_computationPath_toNTM_iff. Machine/Equivalence.lean: +Config.eq_iff_tapes_eq. (2) MultiTape/Complexity/Nondeterministic.lean (approved path): MultiTapeNTM.Accepts (some computation path ends halted with output exactly [true]); DecidesInTime (on every enc a: RunsInTime and a in A iff Accepts); DecidableInTime (one machine, Finite State, Bool alphabet); DecidableInPolyTime (PolyBounded in |enc a|); DecidesInTime.mono; RunPath.exists_extend_of_halted, RunsInTime.exists_time_eq, accepts_iff_exists_time_eq, RunPath.exists_extend and ComputationPath.exists_halted_extension (actual halting when no configuration is stuck). Docs state RunsInTime permits shorter stuck paths, which never accept. (3) Classes/NP/GuessVerify.lean (only the verifier bridge in Classes/NP): IsVerifier.exists_decidesInTime: a finite fair-coin machine whose toNTM decides A within explicit c*(|enc a|+1)^d and is never stuck; certificate length exactly p.eval |enc a| (sampleList); decidableInPolyTime_of_mem_NP. Route: IsPPTOn via sampleList + map_with, IsPPTOn.exists_halting_machine, the bridge. NP.lean docstring updated (converse not proved). TESTS ComplexityTests/NondeterministicVerifiers.lean: stuck machine (RunsInTime vacuous, not halted, rejects, DecidesInTime of the empty set); fair coin (accepting and rejecting branches, RunsInTime 1, halted self-loop to time 3, halted extension); looping machine violates every bound; fork with stuck + accepting branch (accepts, not RunsInTime 1, RunsInTime 2); machine emitting [true,true] does not accept; SAT client; univ/empty trivial verifiers on the empty instance; one-bit certificate verifier (p=1 accepts only by guessing [true]) and p=0 (rejects: exact certificate length); pair-encoded instance verifier; #guard_msgs axiom checks for 7 headline results (propext, Classical.choice, Quot.sound only). SOURCES: AroraBarak09 Def 2.5, Thm 2.6 (inclusion of NP in nondeterministic polynomial time); v1 dev 2ad6cb48 compared (own TM model, verifier=>NTIME only), no v1 code ported. CONTRIBUTORS: worker-opus (Claude Opus 5.5); one read-only Claude subagent preliminary review (no blocking findings; its should-fixes applied in 95f546a); not final reviewers. LIMITATIONS: converse NTM=>verifier and the iff are out of scope (nondeterministic-replay continuation). Lean MCP unavailable in my session; validated with lake. CENTRAL REQUESTS: ComplexityTests/Axioms.lean named checks for Cslib.Complexity.decidableInPolyTime_of_mem_NP and Cslib.Complexity.IsVerifier.exists_decidesInTime; ROADMAP Machine-class milestones bullet: replace 'nondeterministic-machine/verifier equivalence' with 'verifiers from polynomial-time nondeterministic machines (NP in nondeterministic polynomial time is proved in Classes/NP/GuessVerify)'.",
-      "snapshot":
-      {"head": {"value": "9e8d340c2ba4f9b094364d15da96c11eaeb25630"},
-       "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792356983,
-          "snapshot":
-          {"head": {"value": "9e8d340c2ba4f9b094364d15da96c11eaeb25630"},
-           "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-          "reviewer":
-          {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
-           "agent": {"value": "reviewer-correctness"}},
-          "note":
-          "Independent exact eight-file correctness review; no implementation/proof/submitted-test authorship. Set-choice native bridge, Empty-oracle configuration equality, moved predicates, actual-halting clock, full-support exact witness sampling and uniform finite machine/polynomial bounds checked. MCP combined source/full clients plus four boundary probes clean; five exact modules/client split-compiled warnings-as-errors in isolated cache; seven standard-axiom guards pass. Current-main merge is correct. No semantic findings. Nonblocking nit: Machine/Nondeterministic.lean:25-28 should equate attainable halted endpoints/outputs, not all halted paths with clock-length paths; coordinator will fix in final integration delta. Full six gates author-reported, not repeated; converse remains open. Central documentation/axiom/merge edits need fresh final review."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792356888,
-          "snapshot":
-          {"head": {"value": "9e8d340c2ba4f9b094364d15da96c11eaeb25630"},
-           "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-          "reviewer":
-          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
-           "agent": {"value": "reviewer-api"}},
-          "note":
-          "Independent API review, no contribution to development. All eight changed files and commit bodies inspected. Existing Set-choice MultiTapeMachine.toNTM, RelSeries and intrinsic PPT clock reused; no duplicate machine model/custom guessing table. General acceptance/time predicates properly placed in machine complexity, verifier NP definitions unchanged. Exact halted-[true] acceptance, all-branch bound versus early stuck paths and separately guaranteed totality are explicit and tested; scope accurately forward-only. Own isolated cache compiled Equivalence and all three new modules, submitted tests+seven axiom guards and independent runtime-X witness-length client (reject empty, accept nonempty, total uniform machine), all clean. General NTM module MCP clean; dependent MCP stale/unavailable so focused shell fallback recorded. Diff/source clean. No findings. Evidence reviewer-api .lake/codex-validation/nondeterministic-verifiers-api-review/api-review.json. Author six gates not repeated. Later main/central Axioms/ROADMAP delta needs review."}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "Architect integration of the independently approved 9e8d340: merge current main, correct the halted-path endpoint documentation nit, add named headline axiom guards and update the roadmap to leave only the reverse direction. Preserve contributor records and obtain fresh exact-final reviews.",
+      "lease": null,
+      "branch": "work/nondeterministic-verifiers/worker-opus",
+      "blocked": false,
+      "assignee": {"value": "worker-opus"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
