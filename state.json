@@ -211,13 +211,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Architect integration of the independently approved 9e8d340: merge current main, correct the halted-path endpoint documentation nit, add named headline axiom guards and update the roadmap to leave only the reverse direction. Preserve contributor records and obtain fresh exact-final reviews.",
+     {"resume": "work/nondeterministic-verifiers/worker-opus",
+      "report": "",
       "lease": null,
-      "branch": "work/nondeterministic-verifiers/worker-opus",
+      "branch": "work/nondeterministic-verifiers/coordinator",
       "blocked": false,
-      "assignee": {"value": "worker-opus"}}}},
+      "assignee": {"value": "coordinator"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
