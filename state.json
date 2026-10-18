@@ -230,15 +230,18 @@
        "base": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "c23211cd7c812b85a12ec9219049e486"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792358092,
+          "snapshot":
+          {"head": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"},
+           "base": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"}},
+          "reviewer":
           {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
            "agent": {"value": "reviewer-correctness"}},
-          "expires": 1792372391},
-         "blocked": false}},
+          "note":
+          "Independent final correctness delta APPROVE; no findings. Reused detailed 9e8d340 review: implementation and tests byte-identical, with only corrected path-versus-endpoint prose. Exact ancestry and current-main merge checked; two central guards exactly match previously checked guards; roadmap leaves NTM-to-verifier converse open. Ten-file manifest and diff check verified; no redundant Lean/gates. Evidence: reviewer-correctness/.lake/codex-validation/ntm-integration/correctness-review.json SHA256 c9478a541e5884132d5214bf86b9ed8b89428754572b5a02752d7121ea6f5b8f."}}},
        "api":
        {"finished":
         {"review":
