@@ -319,7 +319,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "Started. Design: (A) high-rate line-parity code (pure algebra, HighRate/*), (B) punctured lines + universal recovery menus by counting (Line.lean, Menu*), (C) halving scheduler circuit keeping requests in original order (payloads by free wiring; uses local sort/unsort, DuplicateFlags, BatchOr), (D) pipeline: prefix metadata lookup (BatchLookup), scatter/evaluate/gather (Routing), masked XOR decode, Lupanov resources, (E) parameters, sharp rational theorem, ExponentialMassProduction corollary via MassProducesAt.allLengths, real-rate theorem. Shared interfaces committed on work/mass-production-sharp/worker-fable: d95561f (Line.lean: puncturedLine, LineCode, occupiedPoints, IsClean, IsUniversalMenu; PointBits.lean: pointBits/targetBits/lineBits, IsScheduler). Subagents in separate worktrees now own A (HighRate/* + its test) and B (Line.lean additions, Menu* + its test); I own C/D/E and all review/integration. Contributors will be recorded per commit.",
       "lease":
       {"token": {"value": "184af7cace64cc768a7ed44a157478b5"},
        "holder":
