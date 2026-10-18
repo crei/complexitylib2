@@ -90,7 +90,8 @@
       "reviews":
       {"correctness":
        {"active":
-        {"report": "",
+        {"report":
+         "Exact five-file diff read; no correctness finding so far. All five changed files independently pass targeted Lean checks in a separate reviewer COW cache, including the 12000-heartbeat crypto guard. MCP was attempted first but resolved stale primary-checkout imports; fallback evidence records exact source hashes. Checking imported/scoped lifetimes and unwrapped missing-premise failures before final verdict.",
          "lease":
          {"token": {"value": "55e4cf5b4061fd1f69c72e3b1205fe44"},
           "holder":
