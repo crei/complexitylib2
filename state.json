@@ -62,7 +62,16 @@
       {"head": {"value": "4f69d30277d89c8466bae3806d3b468dea3a2788"},
        "base": {"value": "8cfd2b61632b900a51397751f4d1f485d54d3bcc"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "worker-inference"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "2f6e06151dfb08fa051ef6890524112f"},
+          "holder":
+          {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
+           "agent": {"value": "worker-inference"}},
+          "expires": 1792369985},
+         "blocked": false}},
        "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths":
    ["Complexity/Logics",
