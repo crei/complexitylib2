@@ -77,6 +77,15 @@
    "goal":
    "Finish predictable nested-loop polytime/ppt inference from the preserved primary-checkout patch: captured mapToBitsWithInput, bitsFoldlWithInput, and strict-majority certificates, equivalent spellings and alternative encodings. Own the inference design and diagnose the explicit-seed-bind PseudoentropyExtraction regression at the default heartbeat limit; fix search behavior rather than raising client limits or weakening tests. Build on program_certificate and existing theorem APIs; no syntax-specific patches without demonstrated necessity. Preserve positive and negative callback/dimension tests and existing crypto/Cook-Levin/GGM clients. Work in an isolated worktree, preserve the primary dirty patch, use independent caches, use Lean MCP first. Measure proof/elaboration burden including helpers; all six checks plus independent API and correctness review before landing. Push coherent checkpoints and report exact revision, evidence and limitations. Sources and initial diff are the two preserved primary files Complexity/Tactic/PolyTime.lean and ComplexityTests/PolyTimeTactic.lean. Report needs outside assigned paths; do not edit other workers' domains.",
    "dependencies": [],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths": ["scripts/coordination", "AGENTS.md", "CONTRIBUTING.md"],
+   "id": {"value": "coordinator-guidance"},
+   "goal":
+   "Enable the coordinator to send visible guidance and revise an active epic's goal or add file scopes without revoking the worker's existing claim. Preserve session/lease generations, authors, worker reports, dependencies and exact-review safety. Scope additions must remain disjoint from other active work; submitted plans require reopen before revision and merged plans are immutable. Use existing journal state where possible; no schema migration, daemon or scheduler. Add meaningful state-transition and Git/CLI tests and concise workflow documentation, run standalone tests and all six project checks, obtain two independent reviews, and publish through the same board workflow.",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
