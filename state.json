@@ -402,15 +402,18 @@
           "expires": 1792374823},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "634a62878ea3d051ae2bc5e65278d2c1"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792360500,
+          "snapshot":
+          {"head": {"value": "7fe25337bb2095b2fdc09cdecbee63f6e20dd3e0"},
+           "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
+          "reviewer":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792374874},
-         "blocked": false}}}}}},
+          "note":
+          "Independent API review of all eight changed files; no implementation/proof/submitted-test contribution. Native Action/Cfg/PTM and saved-coin replay reused; canonical predicates unchanged; finite fixed-table and exact halted-[true] boundaries documented without an opaque-table compilation claim. Own-cache targeted four-module compile and submitted tests (13 guards) pass, plus arbitrary-symbol/moving-writing/padding/OutputTrack clients. MCP attempted first but dependent imports stale/unavailable. Nonblocking accepted central followups: register existing checker certificate fun_prop (direct/composed arbitrary-encoding probes pass; runtime opaque selector remains rejected), and correct universal-problem test prose. No full six-gate rerun; separate correctness review and later central/main delta excluded. Exact hashes and evidence: .lake/codex-validation/nondeterministic-replay-api-review/api-review.json"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
