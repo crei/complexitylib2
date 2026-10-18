@@ -240,15 +240,18 @@
           "expires": 1792372391},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "0c99d91f1c819091b74df0c40272a461"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792358006,
+          "snapshot":
+          {"head": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"},
+           "base": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"}},
+          "reviewer":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792372372},
-         "blocked": false}}}}}},
+          "note":
+          "Independent final API delta review; no development contribution. Earlier detailed9e8d340 audit/evidence retained. Five source/client files byte-identical; sixth differs by exact doc-only replacement correctly distinguishing halted endpoints from padded path lengths. Original/current-main ancestors verified; roots preserve prior main, two central guards literal copies of submitted tests, roadmap accurately leaves NTM-to-verifier reverse direction. Extracted guard fragment passes own-cache shell after MCP unavailable; diff/source clean. No findings. Root exact-final six gates reported pass, not repeated. Evidence reviewer-api .lake/codex-validation/nondeterministic-verifiers-api-review/final-delta-review.json."}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
