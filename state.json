@@ -24,7 +24,7 @@
        "holder":
        {"session": {"value": "60a448c1698e33ed0b212fc3f266bb27"},
         "agent": {"value": "worker-fable"}},
-       "expires": 1792366972},
+       "expires": 1792367646},
       "branch": "work/mass-production/worker-fable",
       "blocked": false,
       "assignee": {"value": "worker-fable"}}}},
@@ -231,7 +231,7 @@
     "agent": {"value": "worker-jetski"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792366972,
+   "expires": 1792367646,
    "actor":
    {"session": {"value": "60a448c1698e33ed0b212fc3f266bb27"},
     "agent": {"value": "worker-fable"}}},
