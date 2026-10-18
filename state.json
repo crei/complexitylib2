@@ -668,15 +668,18 @@
        "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "e25c41613d07fb8b0b0f044a177185cd"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792360283,
+          "snapshot":
+          {"head": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"},
+           "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
+          "reviewer":
           {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
            "agent": {"value": "worker-inference"}},
-          "expires": 1792374433},
-         "blocked": false}},
+          "note":
+          "Independent correctness review by worker-inference; no implementation or test contribution. Full three-file delta inspected. Empty --refmap= preserves the explicit private destination and exact returned remote OID, required/optional errors, no-tags/no-FETCH_HEAD and finally cleanup. Runtime consumes returned OIDs directly; Protocol and Runtime are byte-identical, including exact-main/ancestry/atomic landing safeguards. Git.lean MCP complete-clean. Nested test MCP resolves the wrong outer package, so independent standalone lake build Tests.Fetch --wfail passed 7 jobs, then the unchanged real-Git fetchTests group passed in 2.746s with isolated Git configuration: shared physical tracking lock, dirty linked worktrees, fresh OID, missing refs and post-receive cleanup. Author baseline32/33 and fixed33/33 logs/source hashes independently verified; no library gates rerun. Evidence .worktrees/worker-inference/.lake/codex-validation/coordination-fetch-isolation/correctness-review.json SHA256 6a9ecab20db5f625af50599ee0b1ad63e70d233dd76ee22844edc0195755ab89. No findings."}}},
        "api":
        {"finished":
         {"review":
