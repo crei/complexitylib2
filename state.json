@@ -80,7 +80,7 @@
           "holder":
           {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
            "agent": {"value": "worker-inference"}},
-          "expires": 1792369985},
+          "expires": 1792370129},
          "blocked": false}},
        "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths":
@@ -110,7 +110,7 @@
         "holder":
         {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
          "agent": {"value": "worker-inference"}},
-        "expires": 1792369945},
+        "expires": 1792370129},
        "branch": "work/inference-loops/worker-inference",
        "blocked": false,
        "assignee": {"value": "worker-inference"}},
@@ -410,7 +410,7 @@
     "agent": {"value": "worker-fable"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792369945,
+   "expires": 1792370129,
    "actor":
    {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
     "agent": {"value": "worker-inference"}}},
