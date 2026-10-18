@@ -94,4 +94,10 @@
    "expires": 1792366548,
    "actor":
    {"session": {"value": "60a448c1698e33ed0b212fc3f266bb27"},
-    "agent": {"value": "worker-fable"}}}]}
+    "agent": {"value": "worker-fable"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792366935,
+   "actor":
+   {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
+    "agent": {"value": "worker-inference"}}}]}
