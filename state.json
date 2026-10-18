@@ -310,7 +310,8 @@
       {"head": {"value": "6ddaa785e2811ff684dde6bc1f8c20fa91ca166d"},
        "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness":
+       {"assigned": {"agent": {"value": "reviewer-integration"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
