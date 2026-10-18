@@ -414,55 +414,17 @@
    "authors": [{"value": "worker-orion"}]},
   {"resume": null,
    "report":
-   "Both independent reviews of 7a2b730 now approve. Architect owns current-main integration, named central theorem guards and ROADMAP edits after NTM landing; your implementation is frozen, no worker merge/review roundtrip required. The next substantial epic sipser-lautemann is recorded for you, dependent on this merge. You may inspect that plan and its existing combinatorial/verifier APIs while waiting, but keep edits within an assigned claimed scope. Central named Axioms entries will cover the three NP-completeness headlines; all 25 specific submitted guards remain in KarpReductions and the global axiom audit covers every declaration, so duplicating all 25 centrally is unnecessary.",
+   "Architect-owned final integration of approved 7a2b730: merge current main, add central guards for the three NP-completeness headlines, update the remaining-work roadmap, and obtain exact final delta approvals. Preserve worker-nova authorship and all existing tests.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Dependency map & milestones (v1 dev @add0aca8ee0d71e68969f2cb45cf91554a50f787 inspected: v1 used raw-word PairSyntax + Tseitin TM for 3SAT and had no IndependentSet/Clique NP-completeness; v2 uses typed problems and fun_prop/polytime, no v1 code ported): Native deps: CookLevin.SAT_npHard/SAT_npComplete, SAT.verifier/isVerifier/computableTidilyInPolyTime_verifier, CNF.isPolyTime_to3CNF, CNF.computableTidilyInPolyTime_relabel, unary_pair, unary_to_binary, zipIdx, idxOfWithInput, bitsGetDWithInput. Shared reduction lemmas in Reduction.lean (3 clients: ThreeSAT, IndependentSet, Clique): PolyTimeReducible.refl/trans, NPHard.trans, coNPHard.trans. Milestone 1 (Reduction.lean, Problems/SAT.lean, Problems/SAT/PolyTime.lean, Problems/ThreeSAT.lean): update stale SAT docstrings; certify splitVarToNat on encSum encNat (encPair encUnary encUnary) -> encNat via bit-prefix shifting (2*n and 2*n+1 in encNat) + unary_to_binary.comp unary_pair + ComputableTidilyInPolyTime.ite on Sum.isRight; certify toThreeSAT under encCNF; define ThreeSAT.verifier (clause width <= 3 && SAT.verifier) with IsVerifier and polytime certificate, proving ThreeSAT in NP encCNF, NPHard encCNF ThreeSAT, and NPComplete encCNF ThreeSAT. Milestone 2 (Problems/IndependentSet.lean, Problems/Clique.lean, ComplexityTests/KarpReductions.lean): define encGraph and encGraphInstance := encPair encGraph encNat; shared Graph.adjBool, Graph.selectVertices (first-occurrence bitmask over G.1.zipIdx so selected list is always Nodup and subset of G.1, handling duplicate vertices and out-of-vertex-list edges), and Graph.verifySubset (checking S.length = m in encNat via unary_to_binary without unary expansion of m) used by 2 clients (IndependentSet and Clique); certify SAT.toIndependentSet via encOccurrence := encPair encUnary (encPair encUnary (encPair encNat encBool)) and Graph.compl; prove IndependentSet and Clique in NP, NPHard, and NPComplete; add nonvacuous concrete/boundary/axiom tests in ComplexityTests/KarpReductions.lean.",
-       "lease":
-       {"token": {"value": "bec7dd1226ea3b4179c3006fd7f1b340"},
-        "holder":
-        {"session": {"value": "2c241a85615db03e563c3e1245d12306"},
-         "agent": {"value": "worker-nova"}},
-        "expires": 1792372619},
-       "branch": "work/karp-reductions/worker-nova",
-       "blocked": false,
-       "assignee": {"value": "worker-nova"}},
-      "summary":
-      "Both milestones complete in commit 7a2b730 on branch work/karp-reductions/worker-nova (base origin/main da2e439b523409d192be7a977bdac7aca84064e3). All 6 scripts/check.sh gates pass. Contributors: worker-nova only. Source credit: inspected v1 dev @add0aca8ee0d71e68969f2cb45cf91554a50f787 (raw-word PairSyntax + Tseitin TM for 3SAT, no IndependentSet/Clique NP-completeness); no v1 code ported, Samuel Schlesinger headers preserved. Results: (1) Reduction.lean: PolyTimeReducible.refl/trans, NPHard.trans, coNPHard.trans; (2) SAT.lean & SAT/PolyTime.lean: updated stale docstrings; (3) ThreeSAT.lean: computableTidilyInPolyTime_splitVarToNat, computableTidilyInPolyTime_toThreeSAT, ThreeSAT.verifier/isVerifier/computableTidilyInPolyTime_verifier/mem_NP, polyTimeReducible_SAT_ThreeSAT, ThreeSAT_npHard, ThreeSAT_npComplete; (4) IndependentSet.lean: encGraph, Graph.adjBool, first-occurrence Graph.selectVertices (Nodup, handles duplicate G.1 entries and out-of-vertex-list edges), shared Graph.verifySubset (binary count comparison via unary_to_binary without unary expansion of m), SAT.encOccurrence, SAT.computableTidilyInPolyTime_toIndependentSet, IndependentSet.verifier/isVerifier/computableTidilyInPolyTime_verifier/mem_NP, polyTimeReducible_SAT_IndependentSet, IndependentSet_npHard, IndependentSet_npComplete; (5) Clique.lean: Graph.computableTidilyInPolyTime_compl, Clique.verifier/isVerifier/computableTidilyInPolyTime_verifier/mem_NP, polyTimeReducible_IndependentSet_Clique, Clique_npHard, Clique_npComplete; (6) ComplexityTests/KarpReductions.lean: concrete/boundary/fun_prop/#print axioms checks. Central integration needed: (a) references.bib: none (AroraBarak09 and Karp1972 already present); (b) ComplexityTests/Axioms.lean: copy the 25 #guard_msgs #print axioms blocks from ComplexityTests/KarpReductions.lean (lines 138-296, all [propext, Classical.choice, Quot.sound]); (c) ROADMAP.md line 154: remove \"efficient `SAT ≤ 3SAT`,\" from Machine-class milestones.",
-      "snapshot":
-      {"head": {"value": "7a2b7303e4085216b30c8c16423da55421bea878"},
-       "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792357572,
-          "snapshot":
-          {"head": {"value": "7a2b7303e4085216b30c8c16423da55421bea878"},
-           "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-          "reviewer":
-          {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
-           "agent": {"value": "reviewer-correctness"}},
-          "note":
-          "Independent correctness APPROVE; no substantive findings. Exact 8-file snapshot verified. Four changed proof modules and 44 submitted examples plus 25 axiom guards pass isolated warning-as-error checks; exact combined sources/tests and 26 independent boundary probes pass MCP. Checked binary target/label costs, first-occurrence duplicates, undeclared endpoints, exact padded witness lengths, empty reductions, uniform callback negative and arbitrary encoding composition. Evidence: reviewer-correctness/.lake/codex-validation/karp-review/correctness-review.json. No production contributions; full gates not repeated."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792357299,
-          "snapshot":
-          {"head": {"value": "7a2b7303e4085216b30c8c16423da55421bea878"},
-           "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-          "reviewer":
-          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
-           "agent": {"value": "reviewer-api"}},
-          "note":
-          "Independent API review; no contribution to submitted development. All eight changed files, full commit and representative pinned v1 sources inspected. Existing CNF splitting/relabel, CookLevin, typed encodings and polytime calculus reused; no custom TM/parallel syntax. Generic reduction rules placed in Reduction; one Graph.verifySubset serves both concrete graph problems. Binary labels/m preserved without unary expansion of m; first-occurrence masks preserve exact set cardinality under duplicates, self-loops/outside endpoints meaningful, exact NP witness-length side condition and padding explicit. Four substantive library files independently compiled, submitted tests+25 guards and10 extra boundary examples all pass in own cache; Reduction MCP clean, dependent MCP stale imports so shell fallback accurately recorded. Diff/source clean. No findings. Evidence reviewer-api .lake/codex-validation/karp-reductions-api-review/api-review.json. Author six gates not repeated; later main/central integration needs delta review."}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "Architect-owned final integration of approved 7a2b730: merge current main, add central guards for the three NP-completeness headlines, update the remaining-work roadmap, and obtain exact final delta approvals. Preserve worker-nova authorship and all existing tests.",
+      "lease": null,
+      "branch": "work/karp-reductions/worker-nova",
+      "blocked": false,
+      "assignee": {"value": "worker-nova"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems",
     "Complexity/Computability/Complexity/Reduction.lean",
