@@ -981,7 +981,7 @@
     "agent": {"value": "worker-karn"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792378091,
+   "expires": 1792378842,
    "actor":
    {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
     "agent": {"value": "reviewer-integration"}}}]}
