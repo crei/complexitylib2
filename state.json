@@ -791,55 +791,17 @@
    "authors": []},
   {"resume": null,
    "report":
-   "Coordinator continuation: prioritize this full API/correctness review because Fable cannot start iteration-fixed-power until these overlapping shared scopes are released. Submitted exact8dd2821 basea5cb5821; reviewer-api and reviewer-correctness assigned independently, Fable sole contributor. After original reviews, coordinator reopens and adds scopes references.bib, ComplexityTests/Axioms.lean, ROADMAP.md if needed; assign/start in own isolated worktree, merge latestmain (sharp6abc984 contains generic Circuit/Synthesis), import that helper and delete the authorized temporary PRIVATE Synthesis.circuit copy. Add source bibliography Schlesinger2026IteratedFunctions exactly as worker report and central guards card_range_iterate, exists_checkpoints, Synthesis.orbit, Circuit.cost_program_iterate. Preserve full mathematical/weighted cost contracts and source credit. Validate all6, normal commit/push/ready, then fresh exact-delta reviews by two noncontributors before land. Once landed assign iteration-fixed-power to worker-fable; current plan retains whole fixed-power40000 bound, encoded/invariant/sqrt/permutation consequences. Read-only design prep is allowed while waiting. Review evidence is in board notes and local reviewer .lake/codex-validation directories; a replacement coordinator may need new review agents, not copied identities. Remote Nova oracle and Orion stretch assignments have no acknowledgment yet; board does not wake processes.",
+   "Central integration by coordinator-sable: merge main, replace the private Synthesis.circuit copy by the generic helper, add bibliography entry, central axiom guards and reviewer wording fixes. The two approvals of exact 8dd2821 are retained as evidence; fresh independent reviews of the final snapshot follow.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "PUBLICATION REQUEST: please publish exact commit 8dd2821d47ff60beb87da04d29908338ee121b40 (parent cff048e) on work/iteration-foundations/worker-fable (base main a5cb582; local guardrail blocks ordinary push, not bypassed). Clean two-commit checkpoint, intended final submission; I will run ready once it is on origin. Contents: Foundations/Combinatorics/FunctionalGraph.lean (Cslib.FunctionalGraph: repeat reduction, first visit < card, absorb map, transientDepth/cycleLength, exact repeat iff, orbit_prefix_injective, depth+cycle<=card, transient reachability; arbitrary universe, Finite only where stated), FunctionalGraph/Checkpoints.lean (exists_checkpoints_on/exists_checkpoints/exists_checkpoints_finite: H subset S, |H|*L<=|S|, invariant S, 0<L), FunctionalGraph/Cycle.lean (cycleSet, canonicalCycle, canonicalTime, phase), FunctionalGraph/Powers.lean (maxTransientDepth, cyclePeriod, iterate_eq_iterate_iff, card_range_iterate = mu+lambda incl. empty types; counting tail excluded), Circuit/Iteration.lean (native Circuit.iterate over any signature: eval = (c.eval I)^[t], exact arbitrary weighted cost and size t*c, Computes.iterate; Synthesis.stages/steps/orbit at t*c.size). Root Complexity.lean/ComplexityTests.lean only via mk_all. DUPLICATE: Synthesis.circuit kept PRIVATE in Iteration.lean as directed; when integration relocates the public helper to generic Circuit/Synthesis.lean, import it there and delete the private copy (identical statement; orbit uses it once). Tests ComplexityTests/IterationFoundations.lean: identity and constant maps (depth 0/1), empty type power count 1, injective powers below mu+lambda, repeat bound, canonical cycle; checkpoints on invariant {0..7} under halving in infinite N, Type 2 states with empty S, L=0 conclusion impossible (0<L needed), finite card/L; native unary successor signature over N: iterate eval 4->7, weighted cost 5*7=35, size 0 and 4, retained orbit from inputs. Exact axiom guards: exists_checkpoints, card_range_iterate, orbit_prefix_injective, exists_iterate_eq_iff_canonicalCycle_eq, Synthesis.orbit all [propext, Classical.choice, Quot.sound]; Circuit.cost_program_iterate no axioms. Evidence: git diff --check clean; scripts/check.sh all six gates passed at 8dd2821; Codex adversarial review approve, no material findings. Burden (scripts/proof_lengths scanner): source targets minus NumberOfPowers counting tail + Reconstruction 3 lemmas + Synthesis 5 decls = 58 proofs/372 body lines, plus v1 Algebraic/Iteration 3/17 = 61/389; port 58 proofs/347 body lines (one >=40: exists_checkpoints_on 56, same as source); physical 920 library + 163 test lines. Credit: source Samuel Schlesinger, iterating-functions @c4cfa198 lean/Proofs/{Checkpoints,FiniteOrbit,OrbitStructure,CycleLabels,NumberOfPowers,Iteration}+Reconstruction/Synthesis parts; Circuit.iterate follows v1 Algebraic/Iteration.lean (Samuel Schlesinger, identical at cited Schlesinger2026Algebraic 2ad6cb48). Contributors: worker-fable only, no subagents. Not ported: Boolean fixed-power builders, exists_hard_power* counting tail, Reconstruction shifted_payload/fixed_power_reconstruction, Boolean Synthesis gadgets. CENTRAL BIB NEEDED (cited key Schlesinger2026IteratedFunctions): @misc{Schlesinger2026IteratedFunctions, author = {Schlesinger, Samuel}, title = {Square-Root Circuit Bounds for Iterated Functions}, year = {2026}, note = {Source of ported Lean proofs, revision c4cfa198a241b3d2cc3bfa5f744a68a66f49be8b}, url = {https://github.com/SamuelSchlesinger/iterating-functions/tree/c4cfa198a241b3d2cc3bfa5f744a68a66f49be8b/lean}}. Suggested central Axioms.lean guards: card_range_iterate, exists_checkpoints, Synthesis.orbit, Circuit.cost_program_iterate.",
-       "lease":
-       {"token": {"value": "848052db5d3098121b5670c0785685ec"},
-        "holder":
-        {"session": {"value": "60a448c1698e33ed0b212fc3f266bb27"},
-         "agent": {"value": "worker-fable"}},
-        "expires": 1792379637},
-       "branch": "work/iteration-foundations/worker-fable",
-       "blocked": false,
-       "assignee": {"value": "worker-fable"}},
-      "summary":
-      "Iteration foundations at exact head 8dd2821d47ff60beb87da04d29908338ee121b40 (base main a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18; two commits cff048e, 8dd2821; published by coordinator, remote parity verified). Endpoints: Cslib.FunctionalGraph finite-map transient/cycle structure (transientDepth, cycleLength, exact repeat iff, orbit_prefix_injective, depth+cycle<=card), checkpoint packing exists_checkpoints_on/exists_checkpoints/exists_checkpoints_finite (H subset S, |H|*L<=|S|, invariant finite S in arbitrary universe, 0<L), cycle labels (cycleSet, canonicalCycle, canonicalTime, phase), exact distinct powers card_range_iterate = maxTransientDepth+cyclePeriod incl. empty types; native Circuit.iterate over any signature with exact eval, arbitrary weighted cost and size, Synthesis.stages/steps/orbit retained orbit at t*c.size. Synthesis.circuit is a PRIVATE copy in Iteration.lean as directed: integration should import the relocated generic Circuit/Synthesis helper and delete it. Tests ComplexityTests/IterationFoundations.lean: zero-step, empty type, empty invariant set in Type 2, invariant subset of infinite N, L=0 necessity, non-Boolean successor signature cost/size/eval/orbit; exact axiom guards (five headline theorems standard three axioms; cost_program_iterate none). Evidence: git diff --check clean, scripts/check.sh six gates passed at exact head, Codex adversarial review approve with no material findings. Burden: source 61 proofs/389 body lines (targets minus counting tail + Reconstruction/Synthesis parts + v1 Algebraic/Iteration) vs port 58/347; 920 library + 163 test physical lines. Credit Samuel Schlesinger iterating-functions @c4cfa198 and v1 Algebraic/Iteration (Schlesinger2026Algebraic); worker-fable sole contributor, no subagents. Central needs: bib entry Schlesinger2026IteratedFunctions (full entry in prior report), suggested Axioms.lean guards card_range_iterate, exists_checkpoints, Synthesis.orbit, Circuit.cost_program_iterate. Not ported: Boolean fixed-power builders, exists_hard_power* counting tail.",
-      "snapshot":
-      {"head": {"value": "8dd2821d47ff60beb87da04d29908338ee121b40"},
-       "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792364106,
-          "snapshot":
-          {"head": {"value": "8dd2821d47ff60beb87da04d29908338ee121b40"},
-           "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
-          "reviewer":
-          {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
-           "agent": {"value": "reviewer-correctness"}},
-          "note":
-          "APPROVE independent correctness review of exact eight-file snapshot. No implementation, proof, or submitted-test contribution. All five source modules and submitted tests independently complete-clean in Lean MCP, plus 12 ignored boundary examples and two proof helpers. Mixed-cycle power count, empty types, prefix-only/infinite-ambient checkpoints, periodic-target restriction, arbitrary weighted costs, unused/nullary/empty-output gates and retained shared orbits checked. No blocking finding. Optional Circuit/Iteration.lean:151 wording: coordinates rather than bits. Exact hashes and evidence: .worktrees/reviewer-correctness/.lake/codex-validation/iteration-foundations-review/correctness-review.json SHA256 99ae5cdd37deb67ab359ab2529f37754c69ab983e740b1751812d6d29e0bd503. Author six gates noted, not redundantly repeated; parent-owned bibliography/central guards and authorized private-helper cleanup remain integration followups."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792364195,
-          "snapshot":
-          {"head": {"value": "8dd2821d47ff60beb87da04d29908338ee121b40"},
-           "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
-          "reviewer":
-          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
-           "agent": {"value": "reviewer-api"}},
-          "note":
-          "Independent API/source review; no contribution. All eight changed files inspected, original c4cfa198 and v1 add0aca8 sources checked. Reuses Mathlib periodic/minimalPeriod and native Circuit/Program/Synthesis; arbitrary signature/carrier/universe and finite invariant subset interfaces coherent. Isolated-cache compilation of all five modules and submitted tests passed warningAsError; independent two-cycle, zero-width arbitrary-carrier and non-invariant checkpoint clients passed. MCP direct source clean; dependent test/probe diagnostics unavailable, shell fallback used. Nonblocking nit tests line64 comment claims equality but checks membership. Authorized temporary private Synthesis.circuit adapter must be removed during central integration; bibliography/central guards remain planned. Mathematical invariants noncomputable, no efficient constructor claim. Library helper-inclusive 920 physical/549 code/347 theorem-body lines across58 theorems. Evidence .lake/codex-validation/iteration-foundations-api-review/review.json; no full six-gate repeat."}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "Central integration by coordinator-sable: merge main, replace the private Synthesis.circuit copy by the generic helper, add bibliography entry, central axiom guards and reviewer wording fixes. The two approvals of exact 8dd2821 are retained as evidence; fresh independent reviews of the final snapshot follow.",
+      "lease": null,
+      "branch": "work/iteration-foundations/worker-fable",
+      "blocked": false,
+      "assignee": {"value": "worker-fable"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
     "Complexity/Foundations/Combinatorics/FunctionalGraph.lean",
