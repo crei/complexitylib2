@@ -683,7 +683,16 @@
            "agent": {"value": "reviewer-sable-cor2"}},
           "note":
           "Correctness review by reviewer-sable-cor2 (independent: no contribution to this epic; exact commit 800b146d, base a5cb5821 ancestor verified). Inspected PH/SipserLautemann.lean, BPP.lean (+complement closure), MajorityVote.lean, FiniteCover/PH definitions, ComplexityTests/SipserLautemann.lean, roots, and v1 source at add0aca8 (~/projects/lean/complexitylib, Authors: Bolton Bailey; credit retained). Built the 4 changed modules with --wfail --iofail: exit 0, no warnings. Independent #print axioms on all headlines and reused lemmas: propext/Classical.choice/Quot.sound only. Statements use the existing verifier-based BPP/SigmaP/PiP/PH with no extra premise. Checked amplification (2*2^m<=3*good matches card_filter_card_filter_le_le), the cover (2^m*8^R<9^R via two_pow_mul_eight_pow_lt (m+7)) and union-bound (shifts m<=2^(m+7)) arithmetic, block lengths [witnessLen m, seedLen m] vs shiftsToList/seedToList, strict-majority tie, p=0 / m=0 boundary, malformed strings (getD false, trailing bits ignored), XOR/Equiv.addLeft shifts, Pi2 via compl_mem_BPP (no second construction), and that verifier_polyTime certifies the very verifier used, via fun_prop. Probes: concrete BPP members (p=0 deciders, one-sided 3-bit verifier) through all headlines; tie at m=2; decide +kernel on malformed certificates. No blocking findings. Nits: trialSeed/verifier docstrings omit the getD-false malformed contract; no Sipser1983 bib key; even-runs parameters differ from v1 (both fine). Central: add 10 Axioms.lean guards, drop ROADMAP.md:156 gap. Not run: full check.sh. Evidence .lake/codex-validation/sipser-lautemann-correctness/review.json sha256 4e4e418022c27526233b4876ebc160c22dbae87a3377bfc5cfd9b811946eee1f"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "4b792c6dd01cf557e1a7f563dbfdd7b2"},
+          "holder":
+          {"session": {"value": "33380288772710be7744d177c8f66871"},
+           "agent": {"value": "reviewer-sable-api2"}},
+          "expires": 1792381431},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/BPP.lean",
     "Complexity/Computability/Complexity/Classes/BPP",
