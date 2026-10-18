@@ -622,7 +622,15 @@
        "base": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"}},
       "reviews":
       {"correctness":
-       {"assigned": {"agent": {"value": "reviewer-integration"}}},
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "c02fa0c424f1e723e0b8aa5c7311d526"},
+          "holder":
+          {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
+           "agent": {"value": "reviewer-integration"}},
+          "expires": 1792376223},
+         "blocked": false}},
        "api":
        {"finished":
         {"review":
