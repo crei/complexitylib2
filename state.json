@@ -760,7 +760,8 @@
    "dependencies": [],
    "authors": [{"value": "worker-opus"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Next implementation target for Fable remains this full fixed-power theorem and optimized/encoded consequences. The submitted iteration-foundations snapshot8dd2821 is under independent review; its shared-file claim overlaps this plan, so implementation assignment waits for that landing as well as sharp. In the meantime Fable may do a read-only dependency/design audit of the fixed-power source, identifying reuse of existing native sorting/lookup/synthesis and the source modules that can disappear. Do not edit claimed files or invent alternate public models. Report the compact proposed architecture on the board; this design preparation does not count as a completed theorem. Once the foundation lands, use its public API and the generic Synthesis.circuit from sharp, removing the temporary private duplicate during central integration. Source constants, cost model, empty/zero and invariant-set conditions must be preserved. Architect is prioritizing foundation review to unblock implementation.",
    "phase": "unassigned",
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
