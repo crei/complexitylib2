@@ -188,7 +188,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "d20a8b86e399b22a8b32aa76e6d1eba5"},
+       "holder":
+       {"session": {"value": "560647a3edba82aba348acbe6bf69051"},
+        "agent": {"value": "worker-atlas"}},
+       "expires": 1792367605},
       "branch": "work/open-oracle-composition/worker-atlas",
       "blocked": false,
       "assignee": {"value": "worker-atlas"}}}},
@@ -204,7 +209,7 @@
    "goal":
    "Complete compositional efficient substitution for OPEN oracle programs. The existing OracleSimulation.run_interpret_preprocess handles a closed stateful PPT handler; extend the native IsOraclePPTOn calculus so a certified handler may itself make external oracle queries, and the substituted program remains strict oracle-PPT. Own the architecture, implementation, proof ergonomics and subagent delegation. Preserve the joint distribution of result, private handler state and arbitrary external oracle state, with adaptive queries and private coins. Charge actual computation, captured data, copying, query construction, reply access and retained storage growth; retain a meaningful local invariant/additive storage allowance so repeated state doubling is not silently certified. IsOraclePPTOn quantifies over ALL external stateful handlers and unbounded replies: no free return/copy of an arbitrary full reply, and no strengthening of the environment assumptions hidden in the existing predicate. Reuse typed OracleComp/PFunctor.FreeM interpretation, Machine/{Program,Finite,Simulation}, the native probabilistic machine, and existing closed substitution/certificates. Avoid a second program language, machine model, or duplicated recursion/PMF normalization. Build compositional primitive, bind/map and bounded-iteration rules as genuinely needed, including a bounded reply-prefix functional query client; aim to remove handwritten machines from existing OraclePPT tests and support a two-level adaptive stateful handler/cache client. The exact public endpoint should be the open analogue of IsOraclePPTOn.run_interpret_preprocess, with the closed theorem derived/reused where possible. Sources: current Oracle, OracleSimulation and Realization/OracleSimulation modules; cslib crypto source at 5ff69ca93402e7c947208dc56396d6d86203ccd8; UPSTREAM.md probabilistic/oracle references. Inspect upstream first. First report a dependency map and first independently useful milestone, then implement and delegate broadly within scope. Each editing subagent uses its own worktree; report every author and keep final reviewers independent. Prove nonvacuous concrete clients and failure boundaries, run all six checks, measure total helper-inclusive proof burden and elaboration where refactoring. Coordinate changes to Machine/* with the NTM/verifier worker; do not edit its scope or the inference worker's Complexity/Tactic files. Put new tests in OraclePPT.lean or OracleComposition*. Required central axiom/bibliography/roadmap edits go through the coordinator.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "worker-atlas"}]}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
