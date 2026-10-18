@@ -408,7 +408,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/review-handoff/reviewer-correctness",
+      "blocked": false,
+      "assignee": {"value": "reviewer-correctness"}}}},
    "paths": ["AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "review-handoff"},
    "goal":
