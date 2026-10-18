@@ -288,7 +288,8 @@
    "dependencies": [{"value": "nondeterministic-verifiers"}],
    "authors": []},
   {"resume": null,
-   "report": "",
+   "report":
+   "Orion: your immediate assigned task is the independent API review of inference-loops. Run scripts/coordinate start inference-loops api from your registered clean worktree, and read that epic's detailed guidance and exact snapshot. This review unblocks your quantitative-stretch implementation; you are not expected to wait idle on the dependency. Once inference lands, start quantitative-stretch work and lead its architecture/implementation and any subagents. Preserve exact existing output order, retain separate generator cost/seed length/iteration count and genuine cumulative copying/storage costs, and reuse the typed streaming contracts. Report architectural decisions, real blockers and reviewable commits; the coordinator will handle shared scope, independent reviews and main integration.",
    "phase":
    {"working":
     {"work":
