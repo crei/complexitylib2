@@ -380,15 +380,18 @@
           "note":
           "APPROVE final integration delta, reusing independent full semantic review of 7fe2533. Exact proof bytes preserved except fun_prop registration on the existing checker certificate; old test bodies preserved. Both new arbitrary-encoding inference clients and both exact central guards passed fresh Lean MCP without diagnostics. Verified 11-file final manifest, ancestry, clean worktree, diff check and fetch-fix parity with final base. ROADMAP and UPSTREAM changes accurately reflect the proved endpoint and generic finite-action placement. No implementation contribution or findings; no repeated broad build. Evidence: reviewer-correctness/.lake/codex-validation/ntm-replay-integration/correctness-review.json SHA256 4bf5d0e78949a019e2f482cc98cd161f1d1d8314416ea3907db85fd879c79edf."}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "d0e4af0a6e4aa8cd8113620c4dacaf67"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792361417,
+          "snapshot":
+          {"head": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"},
+           "base": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"}},
+          "reviewer":
           {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
            "agent": {"value": "reviewer-integration"}},
-          "expires": 1792375739},
-         "blocked": false}}}}}},
+          "note":
+          "Independent API delta review by reviewer-integration; no implementation, proof, retained-test or integration contribution. No findings. Original 693d836→7fe2533 API/correctness records read; all preserved source hashes match, with NP/Nondeterministic byte-identical after removing only the new fun_prop attribute. Inspected all five final integration files and verified merged coordination tooling identical to final base. Own COW packages/build with distinct artifact inodes. Lean MCP succeeded: complete clean final NondeterministicVerifiers diagnostics; exact Axioms guards at lines788-800 clean; ignored minimal-import probe passed direct/composed arbitrary-encoding inference, generic iff use, verbatim two guards, and negative arbitrary runtime machine-selector inference. Fixed finite-table certificate scope, same instance encoding, native halted [true] acceptance and no uniform opaque-NTM compiler claim preserved. Universal-problem prose, roadmap completion, Action.instFinite upstream placement and contributor/AI disclosure correct. Exact HEAD, base/prior ancestry, tracked tree and diff checks clean. No six-gate repeat; coordinator owns landing validation. Evidence .lake/codex-validation/nondeterministic-replay-final-api/api-review.json SHA256 439289a49b735d63827ab6034071a8bccc130b0d5269c53087f785f047e63c0e; probe SHA256 f72c4c0f0a678ebbc16e2d014cf50851601bf9db37aae41d2bb5cb7cc36897f0."}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
