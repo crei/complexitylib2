@@ -64,13 +64,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Architect-owned integration: merge published main, correct the reviewed encStructure documentation reference, add named headline axiom checks and update the remaining-work roadmap. Preserve the original author and require fresh exact-snapshot independent delta approvals.",
+     {"resume": "work/fagin/worker-jetski",
+      "report": "",
       "lease": null,
-      "branch": "work/fagin/worker-jetski",
+      "branch": "work/fagin/coordinator",
       "blocked": false,
-      "assignee": {"value": "worker-jetski"}}}},
+      "assignee": {"value": "coordinator"}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
