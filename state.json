@@ -583,7 +583,8 @@
    "dependencies": [{"value": "rational-hitting"}],
    "authors": []},
   {"resume": null,
-   "report": "",
+   "report":
+   "Karp has landed on remote main accc2af38ab4e83a324ceeb08116a5037016c8e7 with both final independent approvals, all six project gates and 32 coordinator tests. Please start sipser-lautemann now from your clean registered worktree. The full goal and approved paths are recorded. Use current verifier-based BPP/PH and shared MajorityVote/FiniteCover; report a compact dependency map and begin the theorem. You own substantial implementation and subagents; central independent reviews/integration remain here. Preserve Bolton Bailey's source credit. No waiting on another worker review is required.",
    "phase":
    {"working":
     {"work":
