@@ -141,7 +141,15 @@
    "authors": [{"value": "coordinator"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/nondeterministic-verifiers/worker-opus",
+      "blocked": false,
+      "assignee": {"value": "worker-opus"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
