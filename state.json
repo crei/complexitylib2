@@ -515,15 +515,18 @@
        "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "d40bcb13ca336f9a5e51f0295724f3b3"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792358143,
+          "snapshot":
+          {"head": {"value": "6b752306cbbf5f680fc9e81b3afe48f268cb4f37"},
+           "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
+          "reviewer":
           {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
            "agent": {"value": "worker-inference"}},
-          "expires": 1792372435},
-         "blocked": false}},
+          "note":
+          "Independent documentation correctness review: no new findings. Read both changed files against exact Protocol.apply and Runtime/Main behavior. Central independent reviews, read-only findings, worker self-review, separate fixes, reopen/assign/start contributor preservation, exact base/head reviews and landing gates match implementation and requested policy. Local links/anchors, fences and diff check pass. No contribution to this documentation delta; no builds or protocol mutations beyond assigned review. Known preexisting CONTRIBUTING line116 note availability wording is explicitly excluded: it needs a live implementation/review claim and will be corrected separately. Later main integration/nit correction not covered. Exact hashes/evidence worker-inference/.lake/codex-validation/review-handoff/correctness-review.json SHA25675fe5351af13216d786c507d6b2bb40f6b1187c48332bbe3f102754710f291d4."}}},
        "api":
        {"active":
         {"report": "",
