@@ -173,7 +173,15 @@
    "authors": [{"value": "worker-opus"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/open-oracle-composition/worker-atlas",
+      "blocked": false,
+      "assignee": {"value": "worker-atlas"}}}},
    "paths":
    ["Complexity/Computability/Probabilistic",
     "Complexity/Languages/Probabilistic",
