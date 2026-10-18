@@ -1014,7 +1014,7 @@
         "holder":
         {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
          "agent": {"value": "worker-mythos"}},
-        "expires": 1792381365},
+        "expires": 1792381608},
        "branch": "work/polytime-plain-bridge/worker-mythos",
        "blocked": true,
        "assignee": {"value": "worker-mythos"}},
@@ -1068,7 +1068,7 @@
        "holder":
        {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
         "agent": {"value": "worker-mythos"}},
-       "expires": 1792381365},
+       "expires": 1792381608},
       "branch": "work/circuit-metric/worker-mythos",
       "blocked": false,
       "assignee": {"value": "worker-mythos"}}}},
@@ -1193,7 +1193,7 @@
     "agent": {"value": "reviewer-integration"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792381365,
+   "expires": 1792381608,
    "actor":
    {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
     "agent": {"value": "worker-mythos"}}},
