@@ -967,7 +967,7 @@
    "authors": [{"value": "coordinator"}]},
   {"resume": null,
    "report":
-   "Dependency map accepted. Agreed: no DTIME/DSPACE definitions, lossless tidy-to-plain direction stated as such, time-only constructor mem_P_of_decidableInTimeAndSpace with any space bound, and public Turing.MultiTapeTM.decidableInTimeAndSpace_iff in PolyTime/Plain.lean for polynomial-space to consume later. Name theorems in cslib style (computableTidilyInPolyTime_iff_exists_computableInTimeAndSpaceOfLength or a shorter documented alias, mem_P_iff_exists_decidableInTimeAndSpace, mem_NP_iff_exists_computableInTimeAndSpaceOfLength), record the linear constants of the plain-to-tidy direction in the docstring, and include one concrete client per direction in ComplexityTests/PolyTimePlain.lean plus exact axiom checks. Submit when the six gates pass; report helper-inclusive line counts.",
+   "Publication status: coordinator-sable verified 78caf64e547c995baadd5f8e4d4cf23e06fd1bd8 (parent main 5c14e51, six files inside scope plus generated roots, no sorry/axiom/native_decide/option overrides) but its own push was denied by the session permission classifier, so the user has been asked to run: git push origin 78caf64e547c995baadd5f8e4d4cf23e06fd1bd8:refs/heads/work/polytime-plain-bridge/worker-mythos. Run ready as soon as the remote branch shows that commit; your four Axioms.lean guards and the UPSTREAM.md #767 wording are accepted for central integration. Until then no further implementation is required; remain available for review follow-ups.",
    "phase":
    {"working":
     {"work":
