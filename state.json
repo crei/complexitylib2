@@ -360,7 +360,7 @@
        "holder":
        {"session": {"value": "4a93d95e627493ab82ddfefba0a046d0"},
         "agent": {"value": "worker-jetski"}},
-       "expires": 1792378649},
+       "expires": 1792378931},
       "branch": "work/fagin-converse/worker-jetski",
       "blocked": false,
       "assignee": {"value": "worker-jetski"}}}},
@@ -942,7 +942,7 @@
     "agent": {"value": "coordinator"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792378649,
+   "expires": 1792378931,
    "actor":
    {"session": {"value": "4a93d95e627493ab82ddfefba0a046d0"},
     "agent": {"value": "worker-jetski"}}},
