@@ -8,7 +8,7 @@
    "holder":
    {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
     "agent": {"value": "coordinator"}},
-   "expires": 1792371960},
+   "expires": 1792372039},
   "epic": {"value": "fagin"}},
  "epics":
  [{"resume": null,
@@ -82,7 +82,7 @@
         "holder":
         {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
          "agent": {"value": "coordinator"}},
-        "expires": 1792371847},
+        "expires": 1792372039},
        "branch": "work/fagin/coordinator",
        "blocked": false,
        "assignee": {"value": "coordinator"}},
@@ -569,11 +569,11 @@
   "holder":
   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
    "agent": {"value": "coordinator"}},
-  "expires": 1792371847},
+  "expires": 1792372039},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792371847,
+   "expires": 1792372039,
    "actor":
    {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
     "agent": {"value": "coordinator"}}},
