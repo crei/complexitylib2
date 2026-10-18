@@ -62,19 +62,26 @@
    "report":
    "Architect-owned integration: merge published main, correct the reviewed encStructure documentation reference, add named headline axiom checks and update the remaining-work roadmap. Preserve the original author and require fresh exact-snapshot independent delta approvals.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/fagin/worker-jetski",
-      "report": "",
-      "lease":
-      {"token": {"value": "1ded987298efb1bbc41682360452993f"},
-       "holder":
-       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-        "agent": {"value": "coordinator"}},
-       "expires": 1792371529},
-      "branch": "work/fagin/coordinator",
-      "blocked": false,
-      "assignee": {"value": "coordinator"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/fagin/worker-jetski",
+       "report": "",
+       "lease":
+       {"token": {"value": "1ded987298efb1bbc41682360452993f"},
+        "holder":
+        {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+         "agent": {"value": "coordinator"}},
+        "expires": 1792371529},
+       "branch": "work/fagin/coordinator",
+       "blocked": false,
+       "assignee": {"value": "coordinator"}},
+      "summary":
+      "ESO-to-NP on encoded finite relational structures. Original implementation worker-jetski at 4f69d30; coordinator merged published main e872f9f and made only the reviewed encStructure doc correction, two central headline axiom guards and remaining-converse roadmap update. All six scripts/check.sh gates and git diff --check pass on final 03bb7c9. Native Mathlib first-order/ESO semantics, unary domain/cardinality and relation tables, fixed-formula exact polynomial verifier, empty/nullary/malformed boundaries; no custom TM, no converse claimed. Prior independent reviews are recorded on original snapshot; final exact delta reviews required. Source and authorship unchanged; integration assisted by OpenAI Codex.",
+      "snapshot":
+      {"head": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"},
+       "base": {"value": "e872f9f1b5796d5b2681b6ea58d53d9d1d4403d1"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
