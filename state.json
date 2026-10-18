@@ -267,12 +267,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": "work/open-oracle-composition/reviewer-correctness",
+     {"resume": "work/open-oracle-composition/worker-nova",
       "report": "",
       "lease": null,
-      "branch": "work/open-oracle-composition/worker-nova",
+      "branch": "work/open-oracle-composition/worker-sable-oracle",
       "blocked": false,
-      "assignee": {"value": "worker-nova"}}}},
+      "assignee": {"value": "worker-sable-oracle"}}}},
    "paths":
    ["Complexity/Computability/Probabilistic",
     "Complexity/Languages/Probabilistic",
