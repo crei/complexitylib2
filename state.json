@@ -613,7 +613,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "47c438580c19c454867ac7e9b0752ce2"},
+       "holder":
+       {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+        "agent": {"value": "reviewer-api"}},
+       "expires": 1792373851},
       "branch": "work/coordination-fetch-isolation/reviewer-api",
       "blocked": false,
       "assignee": {"value": "reviewer-api"}}}},
@@ -625,7 +630,7 @@
    "goal":
    "Fix observed cross-worktree coordination fetch races without weakening journal authority or landing guards. Repository.fetch already uses a random temporary ref and avoids FETCH_HEAD, but Git still opportunistically updates configured remote-tracking refs: an instruct failed with cannot lock refs/remotes/origin/coordination (is at f5f50e2, expected bc6db5f) while local review worktrees accessed the board. Investigate --refmap= or an equally narrow fetch-isolation change, verify with real local Git fixtures, and preserve caller index, HEAD, FETCH_HEAD, tracking refs, optional missing-ref behavior and temporary-ref cleanup. Add a meaningful regression that fails on the baseline and covers a normal configured remote plus linked worktrees or equivalent shared Git storage. Do not broadly refactor protocol or loosen failures. Report exact reproduction, dependency/reference effects, all coordinator tests and source diff; self-review then frozen submission for two independent central reviews and all six landing gates. Work only in your registered worktree and record contributors.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "reviewer-api"}]}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
