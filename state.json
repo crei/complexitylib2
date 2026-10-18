@@ -647,7 +647,9 @@
       "snapshot":
       {"head": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"},
        "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "coordinator"}}}}}}},
    "paths":
    ["scripts/coordination/Coordination/Git.lean",
     "scripts/coordination/Tests.lean",
