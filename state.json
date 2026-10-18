@@ -1087,7 +1087,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/merge-queue-landing/worker-sable-tooling",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-tooling"}}}},
    "paths": ["scripts/coordination", "CONTRIBUTING.md", "AGENTS.md"],
    "id": {"value": "merge-queue-landing"},
    "goal":
