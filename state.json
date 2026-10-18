@@ -314,7 +314,15 @@
    "authors": [{"value": "worker-atlas"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/mass-production-sharp/worker-fable",
+      "blocked": false,
+      "assignee": {"value": "worker-fable"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
     "ComplexityTests/MassProduction.lean",
