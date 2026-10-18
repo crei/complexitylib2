@@ -1,5 +1,15 @@
 {"version": 1,
- "integration": null,
+ "integration":
+ {"snapshot":
+  {"head": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"},
+   "base": {"value": "e872f9f1b5796d5b2681b6ea58d53d9d1d4403d1"}},
+  "lease":
+  {"token": {"value": "5769ba8a23933cfb03ff0ce524a7cfe4"},
+   "holder":
+   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+    "agent": {"value": "coordinator"}},
+   "expires": 1792371960},
+  "epic": {"value": "fagin"}},
  "epics":
  [{"resume": null,
    "report":
