@@ -209,19 +209,26 @@
    "report":
    "Architect integration of the independently approved 9e8d340: merge current main, correct the halted-path endpoint documentation nit, add named headline axiom guards and update the roadmap to leave only the reverse direction. Preserve contributor records and obtain fresh exact-final reviews.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/nondeterministic-verifiers/worker-opus",
-      "report": "",
-      "lease":
-      {"token": {"value": "7ff63eacc5fd8d6750ce050412dfe8b7"},
-       "holder":
-       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-        "agent": {"value": "coordinator"}},
-       "expires": 1792372106},
-      "branch": "work/nondeterministic-verifiers/coordinator",
-      "blocked": false,
-      "assignee": {"value": "coordinator"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/nondeterministic-verifiers/worker-opus",
+       "report": "",
+       "lease":
+       {"token": {"value": "7ff63eacc5fd8d6750ce050412dfe8b7"},
+        "holder":
+        {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+         "agent": {"value": "coordinator"}},
+        "expires": 1792372106},
+       "branch": "work/nondeterministic-verifiers/coordinator",
+       "blocked": false,
+       "assignee": {"value": "coordinator"}},
+      "summary":
+      "Forward verifier-NP to native nondeterministic polynomial time, retaining actual all-branch halting for the constructed machine. Original implementation 9e8d340 by worker-opus; coordinator merged main03bb7c9 and changed only the reviewed path/endpoint prose, two central guards and remaining-converse roadmap. No formal definition or proof changed. Native Set-choice parametric model and PPT clock compiler reused; stuck paths reject, exact halted-[true] acceptance, uniform finite machine. Original 332-line tests and seven guards retained. All six scripts/check.sh gates and diff check pass. Prior independent correctness/API approvals incorporated; exact final delta review required. Source credit unchanged, integration assisted by OpenAI Codex. Converse tracked nondeterministic-replay.",
+      "snapshot":
+      {"head": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"},
+       "base": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
