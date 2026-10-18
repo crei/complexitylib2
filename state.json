@@ -384,7 +384,7 @@
           "holder":
           {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
            "agent": {"value": "reviewer-integration"}},
-          "expires": 1792375511},
+          "expires": 1792375739},
          "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
@@ -778,7 +778,7 @@
     "agent": {"value": "worker-karn"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792375390,
+   "expires": 1792375739,
    "actor":
    {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
     "agent": {"value": "reviewer-integration"}}}]}
