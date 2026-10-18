@@ -290,20 +290,27 @@
    "report":
    "Full original correctness review approves; API requests routine covering reuse, generic synthesis/point placement and exact divisor prose. Coordinator now applies these limited central fixes, preserving the mathematical contracts and obtaining fresh delta reviews.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/mass-production-sharp/worker-fable",
-      "report":
-      "User-requested long-term canon and amortized ECCC reuse roadmap is separately committed/pushed atfc2c228a7da620e8910dff63f5c44c318cf45170; independent read-only documentation review approves, all35local links/anchors and diffcheck pass. Central source cleanup now implemented locally: single generic Synthesis.circuit moved into mirrored Circuit/Synthesis; pointBits add/injective/equiv colocated and generalized to Add K; pipeline-local indexBits private; covering menu applies shared finite-cover theorem; positive P/k prose and high-rate comment corrected. Original reviewed theorem contracts preserved. MCP Transport closed verified, focused shell checks running before all6. New generic path authorized in epic. Final independent snapshot reviews still required.",
-      "lease":
-      {"token": {"value": "c5e55bc625c1a024a021e4884f1dd6ed"},
-       "holder":
-       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-        "agent": {"value": "coordinator"}},
-       "expires": 1792378033},
-      "branch": "work/mass-production-sharp/coordinator",
-      "blocked": false,
-      "assignee": {"value": "coordinator"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/mass-production-sharp/worker-fable",
+       "report":
+       "User-requested long-term canon and amortized ECCC reuse roadmap is separately committed/pushed atfc2c228a7da620e8910dff63f5c44c318cf45170; independent read-only documentation review approves, all35local links/anchors and diffcheck pass. Central source cleanup now implemented locally: single generic Synthesis.circuit moved into mirrored Circuit/Synthesis; pointBits add/injective/equiv colocated and generalized to Add K; pipeline-local indexBits private; covering menu applies shared finite-cover theorem; positive P/k prose and high-rate comment corrected. Original reviewed theorem contracts preserved. MCP Transport closed verified, focused shell checks running before all6. New generic path authorized in epic. Final independent snapshot reviews still required.",
+       "lease":
+       {"token": {"value": "c5e55bc625c1a024a021e4884f1dd6ed"},
+        "holder":
+        {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+         "agent": {"value": "coordinator"}},
+        "expires": 1792378033},
+       "branch": "work/mass-production-sharp/coordinator",
+       "blocked": false,
+       "assignee": {"value": "coordinator"}},
+      "summary":
+      "Final integration at 6abc9844702e1d73c22e5f1915984a18f3f99d96, base a5cb5821. Original full source/mathematics audits of 6ddaa785 retained; API fixes now complete: Synthesis.circuit moved unchanged to generic Circuit/Synthesis; finite-index and point APIs in BitString, point assumptions weakened to Add; covering menu uses existing scaled finite-cover theorem; positive-divisor prose and example comment corrected. Same exact rational coefficient, exponential-copy and real-rate native Boolean gate-count theorems, nonuniform choices, source/contributor credit and 8 central axiom guards. All six scripts/check.sh gates pass after cleanup; focused source checks clean; clean pushed branch. Helper-inclusive cleanup 122 added/90 removed physical lines including new generic module/header/docs: placement moves do not claim net deletion, duplicate counting proof shortened. Separately committed fc2c228 roadmap covers 18 canon areas, auditable whole-Zoo index milestone and amortized ECCC reuse with shared infrastructure/maintenance counted; independent docs review approved, all35local links checked. New contribution by coordinator limited to integration/cleanup/docs; original Fable and reported source authors/subagents retained. Manuscript21d57d75 unavailable for independent audit; original Lean source statements/proofs inspected, no claim of constructor runtime. Please conduct fresh final API/correctness delta reviews against original audited 6ddaa785 and record exact base/head verdicts.",
+      "snapshot":
+      {"head": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"},
+       "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
     "ComplexityTests/MassProduction.lean",
