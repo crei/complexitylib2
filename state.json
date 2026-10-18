@@ -1105,7 +1105,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "b46d75c9da5afb8216bd26c539ba79de"},
+       "holder":
+       {"session": {"value": "c2a2464e315d85c0a64cfb5108d1ea0e"},
+        "agent": {"value": "worker-sable-tooling"}},
+       "expires": 1792381662},
       "branch": "work/merge-queue-landing/worker-sable-tooling",
       "blocked": false,
       "assignee": {"value": "worker-sable-tooling"}}}},
@@ -1114,7 +1119,7 @@
    "goal":
    "Remove the rebase-and-rereview chain from the coordination protocol while preserving exact-commit review guarantees. Today ready and land both require snapshot.base == current main (Protocol.lean checks at ready and land), so every landing invalidates every other submission. Change: (1) ready accepts a base that is an ancestor of current main (still base != head, pushed exact head). (2) land, when base != main, computes the files changed on main since base and the files changed by the epic between base and head; it refuses with a clear message if the two sets intersect outside the generated roots Complexity.lean and ComplexityTests.lean, or if git merge of head into main is not clean; otherwise it creates a merge commit of the reviewed head onto main in the coordinator worktree (no-ff, message merge: land EPIC with the reviewed base and head), regenerates the roots with lake exe mk_all, runs all six project checks and the coordination tests on the merged tree, and publishes main and the completed board record atomically exactly as today, recording both the reviewed snapshot and the landed merge OID. Reviews stay bound to the exact reviewed base and head; nothing reviewed changes in the merge because the file sets are disjoint, and the gate run validates integration. (3) Keep every existing refusal (withdrawn review, lost lease, dirty worktree, failed check, non-atomic servers); the integration reservation must record the main OID it merged against so a later main move is detected. (4) Tests: protocol tests for the ancestor rule at ready and the disjointness decision at land; runtime tests with a temporary local remote covering landing after main moved on disjoint files, refusal on an overlapping file, refusal on a textual merge conflict, and unchanged behaviour when base == main. (5) Docs: update the land and ready paragraphs in CONTRIBUTING.md (Coordinated agent work) and the AGENTS.md proof-hygiene bullet so that named #print axioms guards for headline theorems live in the epic own test module, while ComplexityTests/Axioms.lean keeps the global audit and its existing guards; say that ROADMAP, UPSTREAM and bibliography updates are batched by the coordinator in docs-only epics. Validate with lake -d scripts/coordination test --wfail, the strict tooling build and scripts/check.sh; self-review, frozen submission, two independent reviews. Source: coordinator-sable design; author credit Samuel Schlesinger; no other epic paths.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "worker-sable-tooling"}]}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
