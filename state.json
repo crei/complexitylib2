@@ -61,7 +61,7 @@
       {"head": {"value": "4f69d30277d89c8466bae3806d3b468dea3a2788"},
        "base": {"value": "8cfd2b61632b900a51397751f4d1f485d54d3bcc"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "worker-inference"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths":
    ["Complexity/Logics",
