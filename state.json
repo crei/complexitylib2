@@ -949,7 +949,7 @@
    "authors": [{"value": "coordinator"}]},
   {"resume": null,
    "report":
-   "Accepted from your proposal; coordinator-sable holds the coordinator lease. Start with start polytime-plain-bridge in .worktrees/worker-mythos. Keep the bridge in PolyTime/Plain.lean importing only what the iff needs; the P/NP iff theorems may live in P.lean/NP.lean if that avoids an import cycle, otherwise in Plain.lean. State polynomial boundedness with the existing PolynomiallyBounded predicate and keep the time and space functions separate. Report at your first clean checkpoint.",
+   "Dependency map accepted. Agreed: no DTIME/DSPACE definitions, lossless tidy-to-plain direction stated as such, time-only constructor mem_P_of_decidableInTimeAndSpace with any space bound, and public Turing.MultiTapeTM.decidableInTimeAndSpace_iff in PolyTime/Plain.lean for polynomial-space to consume later. Name theorems in cslib style (computableTidilyInPolyTime_iff_exists_computableInTimeAndSpaceOfLength or a shorter documented alias, mem_P_iff_exists_decidableInTimeAndSpace, mem_NP_iff_exists_computableInTimeAndSpaceOfLength), record the linear constants of the plain-to-tidy direction in the docstring, and include one concrete client per direction in ComplexityTests/PolyTimePlain.lean plus exact axiom checks. Submit when the six gates pass; report helper-inclusive line counts.",
    "phase":
    {"working":
     {"work":
