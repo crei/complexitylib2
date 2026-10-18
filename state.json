@@ -438,13 +438,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Independent API review requests consolidation of duplicated raw prefix-loop/cleanup and typed post-initialization assembly/cost proofs. Preserve the strengthened quantitative endpoints and old exact contracts; return substantive refactor to original author. Review evidence at reviewer-api/.lake/codex-validation/quantitative-stretch-api-review/api-review.json.",
+     {"resume": "work/quantitative-stretch/worker-orion",
+      "report": "",
       "lease": null,
-      "branch": "work/quantitative-stretch/worker-orion",
+      "branch": "work/quantitative-stretch/worker-sable-stretch",
       "blocked": false,
-      "assignee": {"value": "worker-orion"}}}},
+      "assignee": {"value": "worker-sable-stretch"}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Crypto/Computational/Stretch",
