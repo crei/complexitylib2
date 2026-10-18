@@ -776,7 +776,7 @@
        "holder":
        {"session": {"value": "60a448c1698e33ed0b212fc3f266bb27"},
         "agent": {"value": "worker-fable"}},
-       "expires": 1792376493},
+       "expires": 1792376998},
       "branch": "work/iteration-foundations/worker-fable",
       "blocked": false,
       "assignee": {"value": "worker-fable"}}}},
@@ -812,7 +812,7 @@
     "agent": {"value": "worker-jetski"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792376206,
+   "expires": 1792376998,
    "actor":
    {"session": {"value": "60a448c1698e33ed0b212fc3f266bb27"},
     "agent": {"value": "worker-fable"}}},
