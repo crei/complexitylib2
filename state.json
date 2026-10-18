@@ -795,13 +795,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Central integration by coordinator-sable: merge main, replace the private Synthesis.circuit copy by the generic helper, add bibliography entry, central axiom guards and reviewer wording fixes. The two approvals of exact 8dd2821 are retained as evidence; fresh independent reviews of the final snapshot follow.",
+     {"resume": "work/iteration-foundations/worker-fable",
+      "report": "",
       "lease": null,
-      "branch": "work/iteration-foundations/worker-fable",
+      "branch": "work/iteration-foundations/coordinator-sable",
       "blocked": false,
-      "assignee": {"value": "worker-fable"}}}},
+      "assignee": {"value": "coordinator-sable"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
     "Complexity/Foundations/Combinatorics/FunctionalGraph.lean",
