@@ -427,15 +427,18 @@
           "expires": 1792375054},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "9c5f2d94fd2cbc097e1a32975d33680f"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792360964,
+          "snapshot":
+          {"head": {"value": "0c62545a250a0b4d8ca564c73142124cbaef0a1d"},
+           "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
+          "reviewer":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792375314},
-         "blocked": false}}}}}},
+          "note":
+          "Independent all8file API review; no production contribution. Must factor duplicated raw prefix loop and cleanup proofs (Encodings/StreamFold120,343 vs Combinators/StreamFold216,291) into owning combinator layer, retaining old exact contracts as thin wrappers; both compatibility specializations independently compile. Must also share streamFold_sum/pair_sum post-initialization callback/tape assembly and cost accounting (encoding400,632). Minimal added path Combinators/StreamFold.lean. Preserve cumulative sums, peak workspace, token-tail streaming, callback/copy/count/reversal-buffer costs, old unrestricted iteration and output order. Only one new raw TM reverseInput; rawFrameReader is existing InputReader/appendRead descriptor. Optional stronger alternating-emission order regression independently checked. Own-cache5modules and both submitted tests/guards pass; MCP raw source clean, dependent tests stale then shell fallback. Actual diff1901insertions10deletions, helperinclusive1232library/root+229test code lines net;850library theorem body lines. Exact hashes/evidence .lake/codex-validation/quantitative-stretch-api-review/api-review.json. Separate correctness and later integration excluded."}}}}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Crypto/Computational/Stretch",
