@@ -611,7 +611,7 @@
    "authors": []},
   {"resume": null,
    "report":
-   "Independent correctness review of exact 800b146 APPROVED (reviewer-sable-cor2) with no blocking findings; a fresh API review is assigned on the same head. Central integration follows after iteration-foundations lands (shared Axioms/ROADMAP scope): merge main, add the nine headline guards plus compl-closure guards, remove Sipser-Lautemann from the ROADMAP gaps line, add one sentence on the malformed-string contract to the trialSeed/verifier docstrings, then short delta reviews and land.",
+   "Landing plan update: after the merge-queue-landing tooling lands, this epic lands unchanged in the first batch (base a5cb582 is an ancestor of main and its files are disjoint from what landed since), with the correctness approval of exact 800b146 and the API verdict now in progress; no reopen, merge or re-review. The docstring sentence on the malformed-string contract, the Sipser1983 bibliography entry and the ROADMAP line go into the docs batch after landing.",
    "phase":
    {"submitted":
     {"submission":
