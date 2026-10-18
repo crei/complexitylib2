@@ -443,7 +443,15 @@
        "base": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"}},
       "reviews":
       {"correctness":
-       {"assigned": {"agent": {"value": "reviewer-correctness"}}},
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "46f223e17af1414eb48f8586156091a8"},
+          "holder":
+          {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
+           "agent": {"value": "reviewer-correctness"}},
+          "expires": 1792372843},
+         "blocked": false}},
        "api":
        {"active":
         {"report": "",
