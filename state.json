@@ -929,12 +929,7 @@
    "Implement a deliberate coordinator release for an immediate planned handoff, preserving worker claims, submissions, reviews and journal state while fencing old coordinator authority. Reject release during active integration; clean-worktree CLI preflight; meaningful protocol/runtime tests and exact-commit independent reviews. Document the exact user phrase become the coordinator with unique identity, fresh worktree, live-board/remote-main discovery, existing-claim preservation and recovery after lease expiry. Record current continuation priorities in existing board guidance rather than a duplicate narrative document. Land normally before releasing authority; no forced expiry or copied identity.",
    "dependencies": [],
    "authors": [{"value": "coordinator"}]}],
- "coordinator":
- {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
-  "holder":
-  {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-   "agent": {"value": "coordinator"}},
-  "expires": 1792379170},
+ "coordinator": null,
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
