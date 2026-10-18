@@ -55,7 +55,21 @@
    "goal":
    "Own the descriptive-complexity development toward Fagin's theorem, including architecture, mathematical proof, encoded programs, certificates, and local subagent delegation. Endpoints: an efficient checker proving ESO-definable queries belong to the library's NP, and the converse tableau interpretation giving the precise ESO=NP characterization for isomorphism-invariant queries on finite structures over a fixed finite relational vocabulary. Start from Complexity/Logics/SecondOrder/{Existential,Reduction,Coloring}, the existing Mathlib first-order semantics, native NP/verifier definitions, and Cook-Levin machinery. Source: https://github.com/SamuelSchlesinger/complexitylib branch dev, Complexitylib/DescriptiveComplexity/SecondOrder/PolynomialTime.lean and its dependencies, plus Fagin1974 and Immerman1999 in references.bib. Pin and record source revisions. V1 supplies only ESO-to-NP; the converse is new work, not a completed port. Reuse the current semantics rather than introducing a parallel logic or complexity class. Make vocabulary, structure numbering, input encoding, fixed-formula quantifiers, empty domains, relation arities, malformed inputs, and polynomial witness-length assumptions explicit; do not hide the desired theorem in bundled hypotheses. Obtain native polynomial-time certificates through existing functional program APIs with as few custom TMs as possible; preserve distinctions between verifier NP and any separate nondeterministic-machine equivalence still needed. You may choose designs and delegate within this broad scope; each editing subagent uses a separate worktree and disjoint ownership, record all contributors, and reserve final independent reviews for nonauthors. First report a dependency map and first independently useful milestone (normally the encoded structures and efficient ESO checker), then implement without awaiting routine design approval. Push coherent checkpoints; report independently reviewable milestones so the coordinator can scope their landing and continuation accurately. Include concrete nonvacuous clients such as graph coloring, semantic and malformed-input tests, axiom checks in your own test modules, source credit, and all six project checks. Request coordination for needed changes outside scope, shared certificate APIs, central Axioms.lean, bibliography, and roadmap; do not edit the paused tactic patch. Heartbeat and read the board at least every five minutes; report progress and blockers with note.",
    "dependencies": [],
-   "authors": [{"value": "worker-jetski"}]}],
+   "authors": [{"value": "worker-jetski"}]},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Tactic",
+    "ComplexityTests/PolyTimeTactic.lean",
+    "ComplexityTests/PseudoentropyExtraction.lean",
+    "ComplexityTests/ProgramCertificate.lean",
+    "ComplexityTests/PPT.lean"],
+   "id": {"value": "inference-loops"},
+   "goal":
+   "Finish predictable nested-loop polytime/ppt inference from the preserved primary-checkout patch: captured mapToBitsWithInput, bitsFoldlWithInput, and strict-majority certificates, equivalent spellings and alternative encodings. Own the inference design and diagnose the explicit-seed-bind PseudoentropyExtraction regression at the default heartbeat limit; fix search behavior rather than raising client limits or weakening tests. Build on program_certificate and existing theorem APIs; no syntax-specific patches without demonstrated necessity. Preserve positive and negative callback/dimension tests and existing crypto/Cook-Levin/GGM clients. Work in an isolated worktree, preserve the primary dirty patch, use independent caches, use Lean MCP first. Measure proof/elaboration burden including helpers; all six checks plus independent API and correctness review before landing. Push coherent checkpoints and report exact revision, evidence and limitations. Sources and initial diff are the two preserved primary files Complexity/Tactic/PolyTime.lean and ComplexityTests/PolyTimeTactic.lean. Report needs outside assigned paths; do not edit other workers' domains.",
+   "dependencies": [],
+   "authors": []}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
