@@ -608,7 +608,15 @@
    "authors": [{"value": "worker-nova"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/coordination-fetch-isolation/reviewer-api",
+      "blocked": false,
+      "assignee": {"value": "reviewer-api"}}}},
    "paths":
    ["scripts/coordination/Coordination/Git.lean",
     "scripts/coordination/Tests.lean",
