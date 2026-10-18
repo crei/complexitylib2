@@ -426,7 +426,7 @@
            "agent": {"value": "worker-inference"}},
           "expires": 1792375054},
          "blocked": false}},
-       "api": "unassigned"}}}},
+       "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Crypto/Computational/Stretch",
