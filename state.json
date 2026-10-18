@@ -524,7 +524,16 @@
            "agent": {"value": "worker-inference"}},
           "expires": 1792372435},
          "blocked": false}},
-       "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "33f322955308e5d02339e8ba7439d6fa"},
+          "holder":
+          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+           "agent": {"value": "reviewer-api"}},
+          "expires": 1792372526},
+         "blocked": false}}}}}},
    "paths": ["AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "review-handoff"},
    "goal":
