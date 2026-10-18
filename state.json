@@ -873,15 +873,18 @@
           "expires": 1792380965},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "33e6124eb06fe4b74c909de9954fbdce"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792366849,
+          "snapshot":
+          {"head": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"},
+           "base": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"}},
+          "reviewer":
           {"session": {"value": "6028cd701670813461915b10a3d32c60"},
            "agent": {"value": "reviewer-sable-api3"}},
-          "expires": 1792381167},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api3 (independent; no contribution to this epic) of exact base 5c14e51 / head 94dcd9d, read-only in own worktree. Scope: full diff (Circuit/Iteration.lean, FunctionalGraph.lean + Checkpoints/Cycle/Powers, ComplexityTests/IterationFoundations.lean, Axioms.lean guards, Complexity.lean, ComplexityTests.lean, ROADMAP.md, references.bib) and the generic Synthesis.circuit in Complexity/Computability/Circuit/Synthesis.lean versus the private copy deleted from 8dd2821 (identical binders, type and proof; probe closes the old statement by exact). Synthesis.orbit unchanged except docstring. Evidence: lake build of the 5 modules + IterationFoundations + Axioms --wfail --iofail exit 0, no warnings; mk_all --check clean; probe_api.lean (statement identity, simp lemmas, Type 3 universes, implicit L, axioms of 19 further theorems all within propext/choice/Quot.sound) and probe_boundary.lean (empty S with L=1, L=1 on Fin 4, singleton type one power, absorb at True/False, zero iterations, zero-wire circuit) both pass. Template, namespaces, simp hygiene, docstrings, bib format (matches Schlesinger2026MassProduction; title matches source README; cited source files exist at c4cfa198), guard texts, ROADMAP wording all fine. No duplication in pinned cslib/Mathlib (no preperiod notion there). Nits: absorb_iterate_card_eq_iff has no equality; *_iterate lemmas about g f (f^[t] x) would be *_apply_iterate in Mathlib, minimalPeriod_iterate reads as minimalPeriod f^[n] x; canonicalCycle_periodic -> _mem_periodicPts; Powers.lean:49 double blank; pure-dynamics core is a Mathlib candidate. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/iteration-foundations-api/review.json SHA256 3344131a453b7ee98796e72c87b2e9fa9b993f3cba12b6b817ba610fecc163d0"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
     "Complexity/Foundations/Combinatorics/FunctionalGraph.lean",
