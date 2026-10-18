@@ -360,19 +360,26 @@
    "report":
    "Architect integration after both independent approvals: register the existing checker certificate with fun_prop, add the two reviewed ordinary-expression clients, correct test prose, merge current main, and add the named central guards, roadmap completion and upstream placement note. Original worker proof development remains unchanged.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/nondeterministic-replay/worker-opus",
-      "report": "",
-      "lease":
-      {"token": {"value": "18fd52de114c563310f12a3f16f66cc6"},
-       "holder":
-       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-        "agent": {"value": "coordinator"}},
-       "expires": 1792375087},
-      "branch": "work/nondeterministic-replay/coordinator",
-      "blocked": false,
-      "assignee": {"value": "coordinator"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/nondeterministic-replay/worker-opus",
+       "report": "",
+       "lease":
+       {"token": {"value": "18fd52de114c563310f12a3f16f66cc6"},
+        "holder":
+        {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+         "agent": {"value": "coordinator"}},
+        "expires": 1792375087},
+       "branch": "work/nondeterministic-replay/coordinator",
+       "blocked": false,
+       "assignee": {"value": "coordinator"}},
+      "summary":
+      "Final integration a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18, current-main base2d04c3fb53fda964713e95420d500efd32a5cc19. Original worker-opus proofs unchanged from approved7fe2533. Changes: existing checkChoices certificate registered fun_prop; direct/guarded arbitrary-encoding regression clients; universal-problem test wording; two named central NP/NTM axiom guards; completed reverse-bridge roadmap removal; Action.instFinite upstream placement note. Merge main, git diff --check and all six scripts/check.sh gates pass; branch pushed normally. Contributors: worker-opus original development, coordinator integration, reviewer-api retained inference regression examples. reviewer-api must not final-approve this delta; use reviewer-integration API and reviewer-correctness correctness. Fixed finite table existence only, no efficient arbitrary opaque-NTM compiler claim. Native predicates/output/padding/acceptance semantics unchanged. AI assistance and source credit preserved in commit body.",
+      "snapshot":
+      {"head": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"},
+       "base": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
