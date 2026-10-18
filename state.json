@@ -511,15 +511,18 @@
        "base": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "87fcdadbd2961e36fe0f15ce38dfb386"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792359175,
+          "snapshot":
+          {"head": {"value": "693d8360388d7f854b4a87549f22741a853a9215"},
+           "base": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"}},
+          "reviewer":
           {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
            "agent": {"value": "worker-inference"}},
-          "expires": 1792373513},
-         "blocked": false}},
+          "note":
+          "Independent final docs correctness delta review: no authorship or implementation contribution. Reused full approval of 6b752306; AGENTS is byte-identical and CONTRIBUTING changes only active-claim note eligibility and reassignment resumes FROM prior branch. Both checked against Protocol.apply and Runtime.checkout. Exact clean current-main-based snapshot changes only the two docs; no protocol or Lean changes. Ten local links/anchors and fences plus diff check pass. No findings. No redundant Lean build or tests; coordinator runs six gates and coordination tests at landing. Evidence .lake/codex-validation/review-handoff/final-correctness-review.json SHA256 b91da2938cdc41f0532c9b83116818848567ab54858a02f39e44bc12f36c6db1."}}},
        "api":
        {"finished":
         {"review":
