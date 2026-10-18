@@ -85,7 +85,15 @@
    "authors": [{"value": "worker-inference"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/coordinator-guidance/coordinator",
+      "blocked": false,
+      "assignee": {"value": "coordinator"}}}},
    "paths": ["scripts/coordination", "AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "coordinator-guidance"},
    "goal":
