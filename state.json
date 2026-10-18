@@ -295,7 +295,12 @@
      {"resume": "work/mass-production-sharp/worker-fable",
       "report":
       "Full original correctness review approves; API requests routine covering reuse, generic synthesis/point placement and exact divisor prose. Coordinator now applies these limited central fixes, preserving the mathematical contracts and obtaining fresh delta reviews.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "c5e55bc625c1a024a021e4884f1dd6ed"},
+       "holder":
+       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+        "agent": {"value": "coordinator"}},
+       "expires": 1792377286},
       "branch": "work/mass-production-sharp/coordinator",
       "blocked": false,
       "assignee": {"value": "coordinator"}}}},
