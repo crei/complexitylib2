@@ -312,7 +312,15 @@
        "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
       "reviews":
       {"correctness":
-       {"assigned": {"agent": {"value": "reviewer-integration"}}},
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "6b12bbce664e666cdef43501042ddfa1"},
+          "holder":
+          {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
+           "agent": {"value": "reviewer-integration"}},
+          "expires": 1792378142},
+         "blocked": false}},
        "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
