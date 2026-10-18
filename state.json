@@ -405,6 +405,15 @@
    "goal":
    "Complete OPEN stateful oracle substitution using the compositional IsOraclePPTOn calculus from open-oracle-composition. A certified handler may itself query an arbitrary external stateful oracle. Prove the open analogue of IsOraclePPTOn.run_interpret_preprocess and its parameterized corollary, preserving the full joint distribution of result, private handler state and external oracle state. Reuse existing closed substitution and derive it as a corollary where that simplifies the API, preserving public names. Charge computation, captured input, copying, query construction, bounded reply access and retained storage growth; state the local invariant and additive resource allowance, without assuming arbitrary full replies have bounded length. Include a two-level adaptive handler/cache client, failure boundaries for free unbounded reply copying and repeated state doubling, native finite-configuration correctness, standard-axiom checks, all six project gates and independent exact-commit API/correctness review. Avoid a second program language or machine model and reuse PFunctor.FreeM/OracleComp interpretations. Intended continuation for worker-atlas. Source and scope remain those of open-oracle-composition; preserve the probabilistic APIs used by worker-opus. User-facing goal: clients should write ordinary oracle/data-structure programs and compose reusable operation contracts while the certified backend handles representation and tape details.",
    "dependencies": [{"value": "open-oracle-composition"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths": ["AGENTS.md", "CONTRIBUTING.md"],
+   "id": {"value": "review-handoff"},
+   "goal":
+   "Document the user's streamlined handoff: workers implement, self-review and run checks before a frozen submission; the architect centrally manages independent review, integration/conflict fixes and main landing, using local review subagents when useful. Workers remain available for substantive fixes and own substantial follow-on epics rather than cross-worker review assignments. Use existing reopen/assign/start machinery for coordinator-authored integration changes so all contributors remain tracked; independent reviews and required checks cover the final snapshot. Prefer minimal AGENTS.md and CONTRIBUTING.md changes, remove contradictory author-only integration or external-review requirements, and preserve explicit two-review independence/final-source checks. Do not change the Lean protocol or add process documents. Prepare a coherent docs-only branch, self-review/diff check, report exact changes; coordinator chooses landing order after theorem batches to avoid base churn.",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
