@@ -382,15 +382,18 @@
           "expires": 1792381035},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "9118e08d2c94b1805886535c133d395a"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792366704,
+          "snapshot":
+          {"head": {"value": "c4dbe2373d6a06fe6ca75df9d37c17864afd7d08"},
+           "base": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"}},
+          "reviewer":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792380929},
-         "blocked": false}}}}}},
+          "note":
+          "API review c4dbe23 (base 6abc984); independent, read-only. Inspected all 10 changed files + Existential/Interpretation/Encoding/Reduction/Verifier/NP/CookLevin APIs, pinned cslib (no logic content), Mathlib ModelTheory. Evidence: lake build of 7 library modules + ComplexityTests.Fagin --wfail --iofail OK (0 warnings); mk_all --check, lint-style, checkInitImports OK; ProbeEndpoints.lean (signatures, #print axioms = propext/choice/Quot.sound, client use of of_queryLanguage_mem_NP for graphVocabulary and a zero-symbol vocabulary) and ProbeSimp.lean (all new simp lemmas fire) compile. No blocking findings: template/header/marker/namespaces/tests/bib keys conform; no set_option/sorry/axiom/native_decide. Nits: N1 generic FO combinators (closeAll, rel1/2, ltF.., card*Sentence, truthTableSentence, tupleIndex_* lemmas) sit in Fagin files -> Logics/FirstOrder; N2 cardGeTwoSentence duplicates Mathlib Sentence.cardGe, orderLanguage parallels Language.order (justified, undocumented), realize_iInf_sentence and closeAll relabel redundant; N3 Tableau.lean:724,750,775,809,849 letI Classical.typeDecidableEq in statements -> section [DecidableEq State]; N4 consider splitting Layout/Tableau at generic/vocabulary seams, bundle 12 symbol params, FO.tableauESOSentence is ESO; N5 realize_X vs _iff mixed, FO.encodeOfZero/One not in Vocabulary ns, Definable.card_ge_two unused, Vocabulary.definable_iff_... verbatim duplicate; N6 ## References missing in 4 files, Power doc omits powerInTable, Tableau doc 0<B vs u.length+1<B, Projection Finset.Sort import proof-only. Not run: lake lint/test. Evidence .lake/codex-validation/fagin-converse-api/review.json sha256 59a848f178a47ed18fb76373e6623054517965a49ee46c01ae6f108659c45e22"}}}}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
