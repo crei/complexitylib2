@@ -229,7 +229,8 @@
       {"head": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"},
        "base": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness":
+       {"assigned": {"agent": {"value": "reviewer-correctness"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
