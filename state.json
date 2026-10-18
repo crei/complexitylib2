@@ -288,29 +288,17 @@
    "authors": [{"value": "worker-atlas"}]},
   {"resume": null,
    "report":
-   "Your final checkpoint c1e726d669e78e4f13a5e7fbc45b281a537bf769 is now published on work/mass-production-sharp/worker-fable by ordinary fast-forward; I verified remote parity. Please ready the clean exact branch now with your theorem/validation/source/contributor/burden summary. Full independent reviews are coordinated here; do not self-assign review errands. If main advances before ready, freeze/report that fact and let architect handle mechanical current-main integration instead of chasing it. The optional shared-helper relocations will be assessed during API review; do not scatter scope changes now. New substantial follow-on is the iterating-functions port already requested by the user; I am preparing its bounded scopes, with you retaining responsibility for any substantive sharp-theorem review findings.",
+   "Architect takes the frozen c1e726d submission for current-main merge, source bibliography, central headline guards and truthful roadmap completion before independent final reviews. Preserve worker-fable and subagent A-D contributions; substantive proof fixes return to the author.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "FINAL clean checked commit for mass-production-sharp: c1e726d669e78e4f13a5e7fbc45b281a537bf769 on work/mass-production-sharp/worker-fable (merges current main 2d04c3f; fast-forward from published ba26e77/e0befd5 line). Evidence on that exact commit, clean tree: git diff --check origin/main HEAD clean; scripts/check.sh all six gates ok. Results (unconditional; axioms [propext, Classical.choice, Quot.sound]): MassProduction.sharpMassProducesThrough (num < den: for every P, eventually all f on n inputs and all k <= 2^(floor(num n/den)+1), P (den-num) n massComplexity <= (P+1) den 2^n, i.e. coefficient (1+1/P)/(1-gamma) for P > 0), sharpMassProducesAt (source statement), exponentialMassProduction (ExponentialMassProduction: constant coefficient at every positive length, via existing padding), realSharpMassProduction (source real-rate quantifiers). Components: LineCode/HighRate (subagent A), LineCode/Line+Menu (subagent B), MassProduction/Scheduler (subagent C; 2^19 2^D (s+1) (D + l b + 2)^5 gates), MassProduction/Pipeline (subagent D; overhead <= 1444 (2^p + t q + copies q^l)(...)^4), my SharpParameters/SharpStatement/Sharp/Schedule/Point/LineCode.Basic and all integration; every subagent commit reviewed by me before merging. Self-review: Codex adversarial review of c1e726d vs origin/main: approve, no material findings (checked source quantifiers, floors, positivity, recovery/disjointness, code counts, gate costs, coefficient arithmetic). Measurements: 25 new library modules, 5211 lines (no existing module modified), 935 test lines; proof bodies 2315 lines over 147 declarations (longest: Scheduler good_next 120, exists_complexity_le_of_bounds 116). Source replaced (algebraic-circuits @3998dc48): Nonuniform+HighRate not previously ported 97 modules / 8982 lines; full transitive closure of the three source endpoints minus previously ported modules 171 modules / 39069 lines (includes the block-induction and greedy-routing pipeline avoided by deriving the exponential range as a corollary). Contributors: worker-fable plus its subagents A-D (all Claude); no reviewer edits. CENTRAL NEEDS: (1) references.bib GuoKoppartySudan2013 (cited by LineCode/HighRate.lean; Codex linked the ITCS'13 paper; entry in my previous note, pages/DOI to verify). (2) Axioms.lean named checks: Cslib.Circuits.Boolean.MassProduction.{sharpMassProducesThrough, sharpMassProducesAt, exponentialMassProduction, realSharpMassProduction, exists_isScheduler, complexity_directProduct_le_of_isScheduler}, Cslib.LineCode.HighRate.exists_lineCode, Cslib.LineCode.exists_isUniversalMenu. (3) ROADMAP: the circuit mass production bullet is now complete (exponential range, sharp real-rate coefficient, coefficient-one Uhlig). (4) Optional shared-file moves proposed by subagents: Synthesis.circuit/prefixOr, List.Perm.exists_equiv_ofFn, sorting helpers, pointBits_add/injective -> BitString/Point, Fin.append injectivity, directProductInput_eval_batchOrCircuit -> BatchOr, size_bitonicSortCircuit_le -> Sorting. Ordinary push blocked by local guardrail; please publish c1e726d, then I will run ready.",
-       "lease":
-       {"token": {"value": "184af7cace64cc768a7ed44a157478b5"},
-        "holder":
-        {"session": {"value": "60a448c1698e33ed0b212fc3f266bb27"},
-         "agent": {"value": "worker-fable"}},
-        "expires": 1792376206},
-       "branch": "work/mass-production-sharp/worker-fable",
-       "blocked": false,
-       "assignee": {"value": "worker-fable"}},
-      "summary":
-      "Sharp mass production, complete. Unconditional results (axioms [propext, Classical.choice, Quot.sound]): MassProduction.sharpMassProducesThrough (num < den: for every P, eventually all f on n inputs and all k <= 2^(floor(num n/den)+1) satisfy P (den-num) n massComplexity f k <= (P+1) den 2^n, coefficient (1+1/P)/(1-gamma) for P > 0, P = 0 trivial), sharpMassProducesAt (source statement over rationalCopyBudget, 0 < k), exponentialMassProduction (ExponentialMassProduction with existing padding), realSharpMassProduction (source real-rate quantifiers). massComplexity charges NOT/AND/OR one and constants zero; intermediate bounds use complexity (all gates). Circuit sizes are existence bounds, not constructor runtime. Architecture: Foundations/Combinatorics/LineCode (Basic, Line, Menu*, Field, HighRate*), Foundations/Data/BitString/Point, MassProduction/{Schedule, Scheduler*, Pipeline*, SharpParameters, SharpStatement, Sharp}; tests ComplexityTests/MassProduction/{HighRate, Menu, Scheduler, Pipeline, Sharp}.lean with nonvacuous instances (actual high-rate codes over GaloisField 2 2 and 2 10, concrete universal menus and schedulers, t = 0, repeated targets/prefixes) and axiom checks. Evidence on c1e726d (merges main 2d04c3f): git diff --check clean, scripts/check.sh six gates ok; Codex adversarial review approve, no material findings. Measurements: 25 new library modules (5211 lines; no existing module changed), 935 test lines, proof bodies 2315 lines/147 declarations. Source algebraic-circuits @3998dc48 + manuscript @21d57d75: replaces 97 not-yet-ported Nonuniform/HighRate modules (8982 lines); the full source closure of the three endpoints minus prior ports is 171 modules (39069 lines, including the block-induction pipeline avoided by the corollary route). Contributors: worker-fable and its subagents (high-rate code, lines/menus, scheduler, pipeline), all reviewed and integrated by worker-fable. Central needs: references.bib GuoKoppartySudan2013 (verify pages/DOI), Axioms.lean named checks for the headline theorems, ROADMAP mass-production bullet complete, optional helper moves listed in the board note.",
-      "snapshot":
-      {"head": {"value": "c1e726d669e78e4f13a5e7fbc45b281a537bf769"},
-       "base": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "Architect takes the frozen c1e726d submission for current-main merge, source bibliography, central headline guards and truthful roadmap completion before independent final reviews. Preserve worker-fable and subagent A-D contributions; substantive proof fixes return to the author.",
+      "lease": null,
+      "branch": "work/mass-production-sharp/worker-fable",
+      "blocked": false,
+      "assignee": {"value": "worker-fable"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
     "ComplexityTests/MassProduction.lean",
