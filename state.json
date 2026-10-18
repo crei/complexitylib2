@@ -945,15 +945,18 @@
        "base": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "e078179c061343d2f3b7b2d1dc7340e2"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792367424,
+          "snapshot":
+          {"head": {"value": "78caf64e547c995baadd5f8e4d4cf23e06fd1bd8"},
+           "base": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"}},
+          "reviewer":
           {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
            "agent": {"value": "reviewer-sable-cor4"}},
-          "expires": 1792381727},
-         "blocked": false}},
+          "note":
+          "Correctness review of 78caf64 on 5c14e51 by reviewer-sable-cor4 (independent; no contribution to this epic). Scope: PolyTime/Plain.lean, Classes/P.lean, Classes/NP.lean, ComplexityTests/PolyTimePlain.lean, root imports; read against upstream Deterministic/TapeLemmas/Tidy/Defs/PolynomialBound and vendored Tidy/Basic, TidyNormalForm, Deterministic, TapeLemmas. Evidence: lake build of the 4 modules --wfail --iofail OK, 0 warnings; probes ProbeAllTrue.lean and ProbeNPmpr.lean (lake env lean, exit 0): encBool/OfLength defeq by rfl; Set.univ in P via mem_P_of (space w.length^w.length) and via iff.mpr from the upstream almost-constant machine; allTrue (w.all id) in P via polytime, iff.mp to an upstream decider, roundtrip, and decider recovered tidily; NP .mpr with a constant-true upstream verifier, p=0; empty-set/univ boundary of decidableInTimeAndSpace_iff and indicator_eq_iff; space_linear at k=0,t=0; own #print axioms of the 4 headline theorems and 4 helpers = [propext, Classical.choice, Quot.sound]. Verified: both iff directions use the cited bridges with no strengthening (PolyBounded witnesses are exactly the plain t s; same machine via Tidy/Basic; constants 2t+3(ct+c)+d and d(ct+c+1) match TidyNormalForm; space_linear hypotheses honest via runsInTime_iff_halted); decider/indicator identification proved by indicator_eq_iff; NP keeps p, V, IsVerifier. No sorry/axiom/native_decide/option overrides. Blocking: none. Nits: (1) tests cover NP iff only .mp, no upstream-verifier-to-NP client (test l.72-78); (2) Plain.lean l.127-128 'its bounds are those of the tidy computation' are really the PolyBounded witnesses; (3) indicator_eq_iff l.90 under the 'Time bounds space' section/marker. Not checked: full check.sh, #768 merged claim. Evidence .lake/codex-validation/polytime-plain-bridge-correctness/review.json SHA256 dd530eacf078f9ba1bfe022da36994ca5e5595fadea6a57e45ace80dcdc16e9a"}}},
        "api":
        {"active":
         {"report": "",
