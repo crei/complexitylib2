@@ -1,5 +1,15 @@
 {"version": 1,
- "integration": null,
+ "integration":
+ {"snapshot":
+  {"head": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"},
+   "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
+  "lease":
+  {"token": {"value": "415f38e62ff1c00518f9818c5b9c56d8"},
+   "holder":
+   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+    "agent": {"value": "coordinator"}},
+   "expires": 1792374863},
+  "epic": {"value": "coordination-fetch-isolation"}},
  "epics":
  [{"resume": null,
    "report":
