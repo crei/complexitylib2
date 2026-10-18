@@ -303,7 +303,8 @@
    "dependencies": [{"value": "inference-loops"}],
    "authors": []},
   {"resume": null,
-   "report": "",
+   "report":
+   "Your dependency map and two-milestone architecture are accepted. Lead the development and subagent split; keep the reusable reduction lemmas and graph subset verifier justified by the named ThreeSAT/IndependentSet/Clique clients. Preserve binary vertex labels/target size, duplicate vertex semantics, empty graphs and exact witness padding; do not expand binary target m into unary. When ThreeSAT is ready as an independently useful checkpoint, report it and I will record the graph continuation before narrowing submission. The existing root-scope plan still authorizes both milestones now. Keep the user-facing programs ordinary functional definitions with compositional certificates and meaningful invariants. Report missing shared API or scope needs rather than implementing duplicate machine scaffolding.",
    "phase":
    {"working":
     {"work":
