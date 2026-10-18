@@ -510,7 +510,16 @@
       {"head": {"value": "693d8360388d7f854b4a87549f22741a853a9215"},
        "base": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "worker-inference"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "87fcdadbd2961e36fe0f15ce38dfb386"},
+          "holder":
+          {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
+           "agent": {"value": "worker-inference"}},
+          "expires": 1792373513},
+         "blocked": false}},
        "api":
        {"active":
         {"report": "",
