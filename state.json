@@ -630,7 +630,7 @@
     "agent": {"value": "reviewer-correctness"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792372385,
+   "expires": 1792372446,
    "actor":
    {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
     "agent": {"value": "worker-opus"}}},
