@@ -358,55 +358,17 @@
    "authors": [{"value": "worker-jetski"}]},
   {"resume": null,
    "report":
-   "Received your exact frozen 7fe25337bb2095b2fdc09cdecbee63f6e20dd3e0 submission and author six-gate evidence. The board shows publication/submission succeeded; no further push needed. Central correctness review is assigned and I will own Axioms/ROADMAP/UPSTREAM additions and final main integration. Remain available for substantive findings. I am preparing a substantial next assignment based on the native universal interpreter and machine-class milestones; a short architecture preflight will establish a concrete complete endpoint before assignment. No need for additional worker cross-review or mechanical rebasing.",
+   "Architect integration after both independent approvals: register the existing checker certificate with fun_prop, add the two reviewed ordinary-expression clients, correct test prose, merge current main, and add the named central guards, roadmap completion and upstream placement note. Original worker proof development remains unchanged.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Publication request: my local lean4 guardrail blocks ordinary git push. Please publish exact commit 7fe2533 (merges main 693d836; all six checks pass at it) as a new branch: git push origin 7fe2533:refs/heads/work/nondeterministic-replay/worker-opus (object in the shared repository store). I will submit with ready as soon as the remote branch shows it; the user may also push it directly.",
-       "lease":
-       {"token": {"value": "cfcb813a2fe1158dbaa645a255db2dd9"},
-        "holder":
-        {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
-         "agent": {"value": "worker-opus"}},
-        "expires": 1792374970},
-       "branch": "work/nondeterministic-replay/worker-opus",
-       "blocked": false,
-       "assignee": {"value": "worker-opus"}},
-      "summary":
-      "Converse and full characterization at 7fe2533 (branch head; merges main 693d836; published by the user). All six checks pass at this exact commit. FILES: (1) Machine/ChoiceTable.lean: Finite instance for Turing.Action; MultiTapeNTM.actions (permitted actions in a fixed order, length <= Nat.card(Action)); choiceTable: one fixed finite fair-coin table replaying choices (scan candidates, coin true takes, false skips, last candidate under either coin; a step choosing zero-based index j costs j+1 <= Nat.card coins; every coin list selects permitted actions except at a stuck configuration, which rejects by halting without output; output suppressed and tracked in finite control by ChoiceTable.OutputTrack, emitting true only when the simulated machine halts with output exactly [true], so a running [true] prefix never accepts; a halted table ignores padding). Internals scoped in MultiTapeNTM.ChoiceTable (ScanState, perform, idle, scan, scanCfg/haltCfg/simCfg, Replayable invariant, step lemmas, exists_coins_step/runPath). Public: accepts_of_runClosedCoins_choiceTable (soundness), exists_runClosedCoins_choiceTable (a halted [true] path of t steps encoded within Nat.card*t coins, any padding). Machine/Nondeterministic.lean: +stepCoins_nil/cons/append. MultiTape/Complexity/Nondeterministic.lean: +ComputationPath.exists_snoc (any alphabet). (2) Classes/NP/Nondeterministic.lean: checkChoices (verifier of encoded accepting computations), computableTidilyInPolyTime_checkChoices via @[fun_prop] computableTidilyInPolyTime_runClosedCoins (no hand-built machine, one uniform finite table for all inputs), DecidesInTime.isVerifier (certificates of length exactly C(Nat.card*c)*(X+1)^d evaluated at |enc a|), mem_NP_of_decidableInPolyTime, public mem_NP_iff_decidableInPolyTime [AroraBarak09 Thm 2.6]. Native RunsInTime unchanged (stuck paths may be shorter); verifier NP definition unchanged (docstrings in NP.lean and GuessVerify.lean updated). TESTS (ComplexityTests/NondeterministicVerifiers.lean additions): univ in NP from the fair coin and from the fork (stuck branch beside accepting one), empty set in NP from the stuck machine; the stuck machine rejects every certificate; the encoded rejecting branch of the accepting coin is rejected; halting with [true,true] rejected under every certificate; emitLoop emits [true] while running and no certificate is accepted; padded accepting certificate accepted on the empty instance; explicit certificate length client; 6 new axiom guards (propext, Classical.choice, Quot.sound). SOURCES: AroraBarak09 Theorem 2.6; v1 dev 2ad6cb48 has no computation-path direction (compared only, nothing ported). CONTRIBUTORS: worker-opus (Claude Opus 5.5); one read-only Claude subagent preliminary review (no blocking findings; should-fixes applied in 5d3f01a); not final reviewers. Lean MCP unavailable in my session; validated with lake. CENTRAL REQUESTS: ROADMAP Machine-class milestones: delete the bullet on the reverse direction of nondeterministic-machine/verifier equivalence (now proved: Classes/NP/Nondeterministic, mem_NP_iff_decidableInPolyTime); ComplexityTests/Axioms.lean named checks for Cslib.Complexity.mem_NP_iff_decidableInPolyTime and Cslib.Complexity.mem_NP_of_decidableInPolyTime; UPSTREAM.md placement note: Turing.Action.instFinite (in Machine/ChoiceTable.lean) belongs beside structure Action in cslib MultiTape/Configuration.lean.",
-      "snapshot":
-      {"head": {"value": "7fe25337bb2095b2fdc09cdecbee63f6e20dd3e0"},
-       "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792360513,
-          "snapshot":
-          {"head": {"value": "7fe25337bb2095b2fdc09cdecbee63f6e20dd3e0"},
-           "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
-          "reviewer":
-          {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
-           "agent": {"value": "reviewer-correctness"}},
-          "note":
-          "Independent read-only correctness review: no implementation contribution or findings. Verified exact eight-file manifest and unchanged NP/NTM predicates; legal finite choices, both-coin final candidate, stuck rejection, full tape preservation, halt-only exact [true] output, arbitrary padding, uniform native replay certificate and exact polynomial witness. MCP stopped on stale imports; isolated warning-as-error Lean checks passed for all four changed proof modules, 26 submitted examples and 13 standard-axiom guards, plus 12 independent boundary probes. Evidence: reviewer-correctness/.lake/codex-validation/ntm-replay-review/correctness-review.json (SHA256 1a034cb58961408fb45e9420bc83d29cfab84882729ab59c0e2b46c43563d4a6). This corrects the prior evidence-digest typo only; verdict and reviewed source are unchanged. No full gate rerun; final central integration delta remains separate."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792360500,
-          "snapshot":
-          {"head": {"value": "7fe25337bb2095b2fdc09cdecbee63f6e20dd3e0"},
-           "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
-          "reviewer":
-          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
-           "agent": {"value": "reviewer-api"}},
-          "note":
-          "Independent API review of all eight changed files; no implementation/proof/submitted-test contribution. Native Action/Cfg/PTM and saved-coin replay reused; canonical predicates unchanged; finite fixed-table and exact halted-[true] boundaries documented without an opaque-table compilation claim. Own-cache targeted four-module compile and submitted tests (13 guards) pass, plus arbitrary-symbol/moving-writing/padding/OutputTrack clients. MCP attempted first but dependent imports stale/unavailable. Nonblocking accepted central followups: register existing checker certificate fun_prop (direct/composed arbitrary-encoding probes pass; runtime opaque selector remains rejected), and correct universal-problem test prose. No full six-gate rerun; separate correctness review and later central/main delta excluded. Exact hashes and evidence: .lake/codex-validation/nondeterministic-replay-api-review/api-review.json"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "Architect integration after both independent approvals: register the existing checker certificate with fun_prop, add the two reviewed ordinary-expression clients, correct test prose, merge current main, and add the named central guards, roadmap completion and upstream placement note. Original worker proof development remains unchanged.",
+      "lease": null,
+      "branch": "work/nondeterministic-replay/worker-opus",
+      "blocked": false,
+      "assignee": {"value": "worker-opus"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
