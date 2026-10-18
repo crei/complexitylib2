@@ -362,13 +362,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Architect integration after both independent approvals: register the existing checker certificate with fun_prop, add the two reviewed ordinary-expression clients, correct test prose, merge current main, and add the named central guards, roadmap completion and upstream placement note. Original worker proof development remains unchanged.",
+     {"resume": "work/nondeterministic-replay/worker-opus",
+      "report": "",
       "lease": null,
-      "branch": "work/nondeterministic-replay/worker-opus",
+      "branch": "work/nondeterministic-replay/coordinator",
       "blocked": false,
-      "assignee": {"value": "worker-opus"}}}},
+      "assignee": {"value": "coordinator"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
