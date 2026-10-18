@@ -912,15 +912,18 @@
           "expires": 1792378880},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "deae8b818f2de72bc088bc765d7fe959"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792364551,
+          "snapshot":
+          {"head": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"},
+           "base": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"}},
+          "reviewer":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792378869},
-         "blocked": false}}}}}},
+          "note":
+          "Independent API/design/usability review, no contribution to this batch. All7files read including surrounding authority, heartbeat/join/cancel/reserve, dispatch/clean and CLI locking; all committed hashes match preflight. No findings. Small release command clears only authoritative coordinator lease, requires held unexpired generation and clean worktree, refuses any integration. Old registration or heartbeat cannot restore authority; fresh unique worktree can land preserved exact reviewed submission. Docs explain ambiguous-response inspection, takeover grace, durable guidance and local/thread evidence limits. Protocol MCP clean; Runtime MCP parent-package misrooting, so own isolated-cache lake -d scripts/coordination test --wfail used:35/35 pass including both new handoff groups. diffcheck clean. No full mathematical-library gate repeat. Evidence .lake/codex-validation/coordinator-handoff-api-review/review.json."}}}}}}},
    "paths": ["scripts/coordination", "AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "coordinator-handoff"},
    "goal":
