@@ -110,7 +110,15 @@
        "base": {"value": "9bddbe7ed9643273871b115e7a50d20e7c2f82e0"}},
       "reviews":
       {"correctness":
-       {"assigned": {"agent": {"value": "reviewer-correctness"}}},
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "c0ad9d0d8924537ee356057b6092228f"},
+          "holder":
+          {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
+           "agent": {"value": "reviewer-correctness"}},
+          "expires": 1792367394},
+         "blocked": false}},
        "api":
        {"active":
         {"report": "",
