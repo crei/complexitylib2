@@ -352,13 +352,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Mechanical integration after two approvals of exact c4dbe23: merge main 94dcd9d and apply three docstring corrections from the reviews (Immerman Theorem 7.8, Tableau module doc bound, maxArity wording); no statement changes; fresh delta reviews follow. Substantive API cleanup is tracked separately for the author.",
+     {"resume": "work/fagin-converse/worker-jetski",
+      "report": "",
       "lease": null,
-      "branch": "work/fagin-converse/worker-jetski",
+      "branch": "work/fagin-converse/integrator-sable-2",
       "blocked": false,
-      "assignee": {"value": "worker-jetski"}}}},
+      "assignee": {"value": "integrator-sable-2"}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
