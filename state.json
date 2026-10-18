@@ -834,7 +834,7 @@
     "agent": {"value": "worker-inference"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792375986,
+   "expires": 1792376771,
    "actor":
    {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
     "agent": {"value": "reviewer-api"}}},
