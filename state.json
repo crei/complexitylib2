@@ -692,7 +692,23 @@
    "goal":
    "Fix observed cross-worktree coordination fetch races without weakening journal authority or landing guards. Repository.fetch already uses a random temporary ref and avoids FETCH_HEAD, but Git still opportunistically updates configured remote-tracking refs: an instruct failed with cannot lock refs/remotes/origin/coordination (is at f5f50e2, expected bc6db5f) while local review worktrees accessed the board. Investigate --refmap= or an equally narrow fetch-isolation change, verify with real local Git fixtures, and preserve caller index, HEAD, FETCH_HEAD, tracking refs, optional missing-ref behavior and temporary-ref cleanup. Add a meaningful regression that fails on the baseline and covers a normal configured remote plus linked worktrees or equivalent shared Git storage. Do not broadly refactor protocol or loosen failures. Report exact reproduction, dependency/reference effects, all coordinator tests and source diff; self-review then frozen submission for two independent central reviews and all six landing gates. Work only in your registered worktree and record contributors.",
    "dependencies": [],
-   "authors": [{"value": "reviewer-api"}]}],
+   "authors": [{"value": "reviewer-api"}]},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode",
+    "Complexity/Computability/Machines/Turing/MultiTape/Encodings/NatPower.lean",
+    "Complexity/Computability/Complexity/Classes/Hierarchy.lean",
+    "Complexity/Computability/Complexity/Classes/Hierarchy",
+    "ComplexityTests/TimeHierarchy.lean",
+    "ComplexityTests/TimeHierarchy"],
+   "id": {"value": "native-exponential-separation"},
+   "goal":
+   "Construct a concrete total Boolean decider on raw bit words with a native exponential-time certificate and prove its language is outside P encBits. Target ComputableTidilyInO diagonal encBits encBool (fun x => 2^(4*x.length)) (fun x => 2^(2*x.length)), allowing a justified adjustment of these deliberately loose fixed exponents if actual charged costs require it; the unconditional executable non-P separation is the milestone. Instantiate every algorithm/certificate: total efficient raw-word-to-Universal.Desc decoder, exact padded-prefix law, binary exponential clock, existing universal run, output test/negation and diagonal argument. Do not leave an abstract uninstantiated simulation or clock-constructibility hypothesis. Reuse existing native Universal interpreter, BigO.InO composition and Binary.iterate; no V1 hand-built diagonalizer or single-tape simulation is needed. Decoder must have polynomial encoded output size on malformed words and a certified runtime, not choice/invFun. Decode unframe x and simulate on the WHOLE x; use padded self-input frame(eDesc d)++pad. Use fixed Boolean symbol coding explicitly. Existing encNat(2^n)=replicate n false++[true] makes the clock a small functional certificate, not unary exponential tape. Retain all computation/copying/storage charges. Native Universal/calculus source credit Christian Reitwiessner; V1 add0aca8 Classes/Hierarchy and UTM/Diagonal by Samuel Schlesinger (2025) provide padded diagonal reasoning only; cite AroraBarak09. First report compact dependency map, actual resource bound and any needed scope; own design/subagents in isolated worktrees and record contributors. No new DTIME/EXP class definitions or tight f log f/fixed-tape claims in this milestone: later class-named hierarchy must reconcile UPSTREAM.md #767/#768 and tidy/plain interfaces. Search pinned/current upstream and recorded branch APIs before adding helpers; report upstream overlaps for coordinated integration. Provide malformed/empty/padded decoder examples, valid machine and clock clients, quantitative and nonvacuity checks, headline guards and all six gates; self-review then freeze. Architect owns independent reviews and central guards/docs integration. No dependency on the pending NTM replay submission: work can begin from current main in a separate assigned branch.",
+   "dependencies": [],
+   "authors": []}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
