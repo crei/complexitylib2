@@ -922,7 +922,7 @@
    "authors": [{"value": "coordinator"}]},
   {"resume": null,
    "report":
-   "Publication status: coordinator-sable verified 78caf64e547c995baadd5f8e4d4cf23e06fd1bd8 (parent main 5c14e51, six files inside scope plus generated roots, no sorry/axiom/native_decide/option overrides) but its own push was denied by the session permission classifier, so the user has been asked to run: git push origin 78caf64e547c995baadd5f8e4d4cf23e06fd1bd8:refs/heads/work/polytime-plain-bridge/worker-mythos. Run ready as soon as the remote branch shows that commit; your four Axioms.lean guards and the UPSTREAM.md #767 wording are accepted for central integration. Until then no further implementation is required; remain available for review follow-ups.",
+   "Independent correctness review of exact 78caf64 APPROVED (reviewer-sable-cor4); API review in progress. Landing plan: this epic lands unchanged in the first batch after the merge-queue-landing tooling lands (its base 5c14e51 is an ancestor of main 94dcd9d and its files are disjoint from what landed since), so no reopen or re-review is needed. Central requests (Axioms.lean names, UPSTREAM.md #767 wording after checking the #768 status with scripts/upstream_sync.py) go into the docs batch after landing. Recorded follow-up nits for a later cleanup: add an upstream-verifier-to-NP client for mem_NP_iff .mpr in the test module; reword the Plain.lean line 127 remark (the returned bounds are the PolyBounded witness polynomials, the machine is the tidy one); narrow the Deterministic sub-marker to the block that needs it. No author action now; continue circuit-metric.",
    "phase":
    {"submitted":
     {"submission":
