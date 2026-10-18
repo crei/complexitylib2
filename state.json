@@ -621,7 +621,8 @@
       {"head": {"value": "156fda3d2f3fa04b6a0105c469878e2a1a6e6f7a"},
        "base": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness":
+       {"assigned": {"agent": {"value": "reviewer-integration"}}},
        "api":
        {"finished":
         {"review":
