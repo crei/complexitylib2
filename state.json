@@ -992,7 +992,9 @@
       "snapshot":
       {"head": {"value": "78caf64e547c995baadd5f8e4d4cf23e06fd1bd8"},
        "base": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Complexity/PolyTime/Plain.lean",
     "Complexity/Computability/Complexity/Classes/P.lean",
