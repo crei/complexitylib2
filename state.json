@@ -800,7 +800,15 @@
    "authors": [{"value": "worker-fable"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/polynomial-space/worker-opus",
+      "blocked": false,
+      "assignee": {"value": "worker-opus"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space.lean",
     "Complexity/Computability/Complexity/Classes/Space",
