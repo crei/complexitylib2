@@ -300,7 +300,7 @@
        "holder":
        {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
         "agent": {"value": "coordinator"}},
-       "expires": 1792377286},
+       "expires": 1792377587},
       "branch": "work/mass-production-sharp/coordinator",
       "blocked": false,
       "assignee": {"value": "coordinator"}}}},
@@ -812,11 +812,11 @@
   "holder":
   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
    "agent": {"value": "coordinator"}},
-  "expires": 1792376958},
+  "expires": 1792377587},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792376958,
+   "expires": 1792377587,
    "actor":
    {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
     "agent": {"value": "coordinator"}}},
