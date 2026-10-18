@@ -485,7 +485,20 @@
    "goal":
    "Document the user's streamlined handoff: workers implement, self-review and run checks before a frozen submission; the architect centrally manages independent review, integration/conflict fixes and main landing, using local review subagents when useful. Workers remain available for substantive fixes and own substantial follow-on epics rather than cross-worker review assignments. Use existing reopen/assign/start machinery for coordinator-authored integration changes so all contributors remain tracked; independent reviews and required checks cover the final snapshot. Prefer minimal AGENTS.md and CONTRIBUTING.md changes, remove contradictory author-only integration or external-review requirements, and preserve explicit two-review independence/final-source checks. Do not change the Lean protocol or add process documents. Prepare a coherent docs-only branch, self-review/diff check, report exact changes; coordinator chooses landing order after theorem batches to avoid base churn.",
    "dependencies": [],
-   "authors": [{"value": "reviewer-correctness"}]}],
+   "authors": [{"value": "reviewer-correctness"}]},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Circuit/Rational.lean",
+    "Complexity/Computability/Circuit/Rational",
+    "ComplexityTests/RationalHitting.lean",
+    "ComplexityTests/RationalHitting"],
+   "id": {"value": "rational-hitting"},
+   "goal":
+   "Port the rational-matrix hitting-list development as a substantial native CSLib theorem family. First milestone: the mathematical/executable generator, its exact hitting semantics for noncommutative rational formulas, polynomial dimension and complete output-size bounds, and the derived nonzeroness/admissibility tests. Source V1 dev @add0aca8ee0d71e68969f2cb45cf91554a50f787 Complexitylib/RationalHitting* credits OpenAI source @adc7f1241b42e322a6451854ab7e4b4c146bf78a; retain original Authors lines and source credit, audit exact hypotheses and domain conventions. Full native polynomial-time generation is explicitly tracked in rational-hitting-runtime; do not claim polynomial bit complexity of evaluating formulas from mere functional correctness. Avoid mechanically porting the large TM0/stack compiler: existing functional encodings and native parametric-machine certificates must supply the eventual runtime layer. First report a dependency map, exact public endpoints, opportunities to collapse source internals using Mathlib/CSLib, and scope additions before editing outside assigned paths. Integrate with native circuit/formula signatures/evaluation where suitable, including partial inversion with actual two-sided inverse and positive dimension; do not add parallel basic matrix/formula theories without checking upstream and UPSTREAM.md. Preserve zero variables/size behavior and malformed-input boundaries separately from positive-parameter results. Include nonvacuous executable examples and axiom guards; self-review, all six checks, coherent frozen branch; architect owns independent review/integration. Own design and subagent delegation in separate worktrees and record all contributors. Central bibliography/axiom/roadmap changes remain coordinated. Do not edit active Boolean circuit, Fagin, machine-model, oracle or streaming scopes.",
+   "dependencies": [],
+   "authors": []}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
