@@ -628,7 +628,8 @@
    {"working":
     {"work":
      {"resume": "work/sipser-lautemann/worker-nova",
-      "report": "",
+      "report":
+      "Merged main a5cb582 while preserving worker-nova 156fda3 history. Implemented both requested API cleanups in the owned PH/SipserLautemann source and tests: shared BitString certificate import replaces private conversions/local rule; pointwise + and Equiv.addLeft replace seed-specific XOR/translation API. Full source and test MCP diagnostics clean. Native matrix definitions and verifier_polyTime proof unchanged. Helper-inclusive delta: -49 physical lines, -39 code lines, -19 named theorem-body lines; no new helper. All six gates running in this isolated cache. Correct V1 source is Complexitylib/Classes/PH/SipserLautemann.lean at add0aca8; Bolton Bailey and Samuel Schlesinger credit retained. I am now a contributor and cannot independently review this batch.",
       "lease":
       {"token": {"value": "57757ab42c7deb47b8e1d47ca8404a48"},
        "holder":
