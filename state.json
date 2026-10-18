@@ -619,7 +619,7 @@
           "holder":
           {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
            "agent": {"value": "reviewer-integration"}},
-          "expires": 1792376223},
+          "expires": 1792376314},
          "blocked": false}},
        "api":
        {"finished":
@@ -829,7 +829,7 @@
     "agent": {"value": "worker-karn"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792375739,
+   "expires": 1792376314,
    "actor":
    {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
     "agent": {"value": "reviewer-integration"}}}]}
