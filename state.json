@@ -367,15 +367,18 @@
        "base": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "b64b4b0a8344a49c140000316e198285"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792361403,
+          "snapshot":
+          {"head": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"},
+           "base": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"}},
+          "reviewer":
           {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
            "agent": {"value": "reviewer-correctness"}},
-          "expires": 1792375594},
-         "blocked": false}},
+          "note":
+          "APPROVE final integration delta, reusing independent full semantic review of 7fe2533. Exact proof bytes preserved except fun_prop registration on the existing checker certificate; old test bodies preserved. Both new arbitrary-encoding inference clients and both exact central guards passed fresh Lean MCP without diagnostics. Verified 11-file final manifest, ancestry, clean worktree, diff check and fetch-fix parity with final base. ROADMAP and UPSTREAM changes accurately reflect the proved endpoint and generic finite-action placement. No implementation contribution or findings; no repeated broad build. Evidence: reviewer-correctness/.lake/codex-validation/ntm-replay-integration/correctness-review.json SHA256 4bf5d0e78949a019e2f482cc98cd161f1d1d8314416ea3907db85fd879c79edf."}}},
        "api":
        {"active":
         {"report": "",
