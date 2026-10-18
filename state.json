@@ -499,7 +499,9 @@
       "snapshot":
       {"head": {"value": "6b752306cbbf5f680fc9e81b3afe48f268cb4f37"},
        "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": {"assigned": {"agent": {"value": "worker-inference"}}},
+       "api": "unassigned"}}}},
    "paths": ["AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "review-handoff"},
    "goal":
