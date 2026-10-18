@@ -1,15 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"},
-   "base": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"}},
-  "lease":
-  {"token": {"value": "50ae730e5f45819d7da368d3d14b1a13"},
-   "holder":
-   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-    "agent": {"value": "coordinator"}},
-   "expires": 1792372628},
-  "epic": {"value": "nondeterministic-verifiers"}},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -219,52 +209,41 @@
    "report":
    "Architect integration of the independently approved 9e8d340: merge current main, correct the halted-path endpoint documentation nit, add named headline axiom guards and update the roadmap to leave only the reverse direction. Preserve contributor records and obtain fresh exact-final reviews.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/nondeterministic-verifiers/worker-opus",
-       "report": "",
-       "lease":
-       {"token": {"value": "7ff63eacc5fd8d6750ce050412dfe8b7"},
-        "holder":
-        {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-         "agent": {"value": "coordinator"}},
-        "expires": 1792372628},
-       "branch": "work/nondeterministic-verifiers/coordinator",
-       "blocked": false,
-       "assignee": {"value": "coordinator"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Forward verifier-NP to native nondeterministic polynomial time, retaining actual all-branch halting for the constructed machine. Original implementation 9e8d340 by worker-opus; coordinator merged main03bb7c9 and changed only the reviewed path/endpoint prose, two central guards and remaining-converse roadmap. No formal definition or proof changed. Native Set-choice parametric model and PPT clock compiler reused; stuck paths reject, exact halted-[true] acceptance, uniform finite machine. Original 332-line tests and seven guards retained. All six scripts/check.sh gates and diff check pass. Prior independent correctness/API approvals incorporated; exact final delta review required. Source credit unchanged, integration assisted by OpenAI Codex. Converse tracked nondeterministic-replay.",
       "snapshot":
       {"head": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"},
        "base": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792358092,
-          "snapshot":
-          {"head": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"},
-           "base": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"}},
-          "reviewer":
-          {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
-           "agent": {"value": "reviewer-correctness"}},
-          "note":
-          "Independent final correctness delta APPROVE; no findings. Reused detailed 9e8d340 review: implementation and tests byte-identical, with only corrected path-versus-endpoint prose. Exact ancestry and current-main merge checked; two central guards exactly match previously checked guards; roadmap leaves NTM-to-verifier converse open. Ten-file manifest and diff check verified; no redundant Lean/gates. Evidence: reviewer-correctness/.lake/codex-validation/ntm-integration/correctness-review.json SHA256 c9478a541e5884132d5214bf86b9ed8b89428754572b5a02752d7121ea6f5b8f."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792358006,
-          "snapshot":
-          {"head": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"},
-           "base": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"}},
-          "reviewer":
-          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
-           "agent": {"value": "reviewer-api"}},
-          "note":
-          "Independent final API delta review; no development contribution. Earlier detailed9e8d340 audit/evidence retained. Five source/client files byte-identical; sixth differs by exact doc-only replacement correctly distinguishing halted endpoints from padded path lengths. Original/current-main ancestors verified; roots preserve prior main, two central guards literal copies of submitted tests, roadmap accurately leaves NTM-to-verifier reverse direction. Extracted guard fragment passes own-cache shell after MCP unavailable; diff/source clean. No findings. Root exact-final six gates reported pass, not repeated. Evidence reviewer-api .lake/codex-validation/nondeterministic-verifiers-api-review/final-delta-review.json."}}}}}}},
+      "landedBy":
+      {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+       "agent": {"value": "coordinator"}},
+      "landedAt": 1792358231,
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792358092,
+       "snapshot":
+       {"head": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"},
+        "base": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"}},
+       "reviewer":
+       {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
+        "agent": {"value": "reviewer-correctness"}},
+       "note":
+       "Independent final correctness delta APPROVE; no findings. Reused detailed 9e8d340 review: implementation and tests byte-identical, with only corrected path-versus-endpoint prose. Exact ancestry and current-main merge checked; two central guards exactly match previously checked guards; roadmap leaves NTM-to-verifier converse open. Ten-file manifest and diff check verified; no redundant Lean/gates. Evidence: reviewer-correctness/.lake/codex-validation/ntm-integration/correctness-review.json SHA256 c9478a541e5884132d5214bf86b9ed8b89428754572b5a02752d7121ea6f5b8f."},
+      "api":
+      {"verdict": "approve",
+       "time": 1792358006,
+       "snapshot":
+       {"head": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"},
+        "base": {"value": "03bb7c9875545add8d20fff5dcc4955a6394ccc1"}},
+       "reviewer":
+       {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+        "agent": {"value": "reviewer-api"}},
+       "note":
+       "Independent final API delta review; no development contribution. Earlier detailed9e8d340 audit/evidence retained. Five source/client files byte-identical; sixth differs by exact doc-only replacement correctly distinguishing halted endpoints from padded path lengths. Original/current-main ancestors verified; roots preserve prior main, two central guards literal copies of submitted tests, roadmap accurately leaves NTM-to-verifier reverse direction. Extracted guard fragment passes own-cache shell after MCP unavailable; diff/source clean. No findings. Root exact-final six gates reported pass, not repeated. Evidence reviewer-api .lake/codex-validation/nondeterministic-verifiers-api-review/final-delta-review.json."}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
