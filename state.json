@@ -934,7 +934,7 @@
        "holder":
        {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
         "agent": {"value": "worker-mythos"}},
-       "expires": 1792380042},
+       "expires": 1792380372},
       "branch": "work/polytime-plain-bridge/worker-mythos",
       "blocked": false,
       "assignee": {"value": "worker-mythos"}}}},
@@ -1029,7 +1029,7 @@
     "agent": {"value": "reviewer-integration"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792379963,
+   "expires": 1792380372,
    "actor":
    {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
     "agent": {"value": "worker-mythos"}}},
