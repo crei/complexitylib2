@@ -111,7 +111,8 @@
       "reviews":
       {"correctness":
        {"active":
-        {"report": "",
+        {"report":
+         "Static audit of exact 9bddbe7..8cfd2b6 complete. No findings so far; independently checking revision/report interleavings, scope races, frozen submitted contracts, and unchanged persisted schema.",
          "lease":
          {"token": {"value": "c0ad9d0d8924537ee356057b6092228f"},
           "holder":
