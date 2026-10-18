@@ -63,7 +63,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "759d23d81249b1cf77703f27e3831d35"},
+       "holder":
+       {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
+        "agent": {"value": "worker-inference"}},
+       "expires": 1792366987},
       "branch": "work/inference-loops/worker-inference",
       "blocked": false,
       "assignee": {"value": "worker-inference"}}}},
@@ -77,7 +82,7 @@
    "goal":
    "Finish predictable nested-loop polytime/ppt inference from the preserved primary-checkout patch: captured mapToBitsWithInput, bitsFoldlWithInput, and strict-majority certificates, equivalent spellings and alternative encodings. Own the inference design and diagnose the explicit-seed-bind PseudoentropyExtraction regression at the default heartbeat limit; fix search behavior rather than raising client limits or weakening tests. Build on program_certificate and existing theorem APIs; no syntax-specific patches without demonstrated necessity. Preserve positive and negative callback/dimension tests and existing crypto/Cook-Levin/GGM clients. Work in an isolated worktree, preserve the primary dirty patch, use independent caches, use Lean MCP first. Measure proof/elaboration burden including helpers; all six checks plus independent API and correctness review before landing. Push coherent checkpoints and report exact revision, evidence and limitations. Sources and initial diff are the two preserved primary files Complexity/Tactic/PolyTime.lean and ComplexityTests/PolyTimeTactic.lean. Report needs outside assigned paths; do not edit other workers' domains.",
    "dependencies": [],
-   "authors": []},
+   "authors": [{"value": "worker-inference"}]},
   {"resume": null,
    "report": "",
    "phase": "unassigned",
