@@ -19,4 +19,10 @@
    "expires": 1792366499,
    "actor":
    {"session": {"value": "4a93d95e627493ab82ddfefba0a046d0"},
-    "agent": {"value": "worker-jetski"}}}]}
+    "agent": {"value": "worker-jetski"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792366525,
+   "actor":
+   {"session": {"value": "60a448c1698e33ed0b212fc3f266bb27"},
+    "agent": {"value": "worker-fable"}}}]}
