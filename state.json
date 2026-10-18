@@ -488,7 +488,15 @@
    "authors": [{"value": "reviewer-correctness"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/rational-hitting/worker-karn",
+      "blocked": false,
+      "assignee": {"value": "worker-karn"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
     "Complexity/Computability/Circuit/Rational",
