@@ -389,7 +389,7 @@
           "holder":
           {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
            "agent": {"value": "reviewer-correctness"}},
-          "expires": 1792374219},
+          "expires": 1792374352},
          "blocked": false}},
        "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths":
@@ -707,7 +707,7 @@
     "agent": {"value": "reviewer-api"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792374202,
+   "expires": 1792374352,
    "actor":
    {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
     "agent": {"value": "reviewer-correctness"}}},
