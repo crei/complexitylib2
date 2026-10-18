@@ -784,7 +784,10 @@
       "snapshot":
       {"head": {"value": "8dd2821d47ff60beb87da04d29908338ee121b40"},
        "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness":
+       {"assigned": {"agent": {"value": "reviewer-correctness"}}},
+       "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
     "Complexity/Foundations/Combinatorics/FunctionalGraph.lean",
