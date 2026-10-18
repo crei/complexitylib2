@@ -421,7 +421,7 @@
        "holder":
        {"session": {"value": "02db36fb726df4b0aeac0e4642d23acd"},
         "agent": {"value": "worker-orion"}},
-       "expires": 1792374173},
+       "expires": 1792374323},
       "branch": "work/quantitative-stretch/worker-orion",
       "blocked": false,
       "assignee": {"value": "worker-orion"}}}},
@@ -722,7 +722,7 @@
     "agent": {"value": "worker-nova"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792374173,
+   "expires": 1792374323,
    "actor":
    {"session": {"value": "02db36fb726df4b0aeac0e4642d23acd"},
     "agent": {"value": "worker-orion"}}},
