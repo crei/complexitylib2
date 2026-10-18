@@ -335,7 +335,15 @@
    "authors": [{"value": "worker-fable"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/fagin-converse/worker-jetski",
+      "blocked": false,
+      "assignee": {"value": "worker-jetski"}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
