@@ -410,15 +410,18 @@
           "expires": 1792371492},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "c0d4ee061a253b40ff7eb4fdacc57ffb"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792357299,
+          "snapshot":
+          {"head": {"value": "7a2b7303e4085216b30c8c16423da55421bea878"},
+           "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
+          "reviewer":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792371662},
-         "blocked": false}}}}}},
+          "note":
+          "Independent API review; no contribution to submitted development. All eight changed files, full commit and representative pinned v1 sources inspected. Existing CNF splitting/relabel, CookLevin, typed encodings and polytime calculus reused; no custom TM/parallel syntax. Generic reduction rules placed in Reduction; one Graph.verifySubset serves both concrete graph problems. Binary labels/m preserved without unary expansion of m; first-occurrence masks preserve exact set cardinality under duplicates, self-loops/outside endpoints meaningful, exact NP witness-length side condition and padding explicit. Four substantive library files independently compiled, submitted tests+25 guards and10 extra boundary examples all pass in own cache; Reduction MCP clean, dependent MCP stale imports so shell fallback accurately recorded. Diff/source clean. No findings. Evidence reviewer-api .lake/codex-validation/karp-reductions-api-review/api-review.json. Author six gates not repeated; later main/central integration needs delta review."}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems",
     "Complexity/Computability/Complexity/Reduction.lean",
