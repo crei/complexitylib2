@@ -135,7 +135,24 @@
    "goal":
    "Enable the coordinator to send visible guidance and revise an active epic's goal or add file scopes without revoking the worker's existing claim. Preserve session/lease generations, authors, worker reports, dependencies and exact-review safety. Scope additions must remain disjoint from other active work; submitted plans require reopen before revision and merged plans are immutable. Use existing journal state where possible; no schema migration, daemon or scheduler. Add meaningful state-transition and Git/CLI tests and concise workflow documentation, run standalone tests and all six project checks, obtain two independent reviews, and publish through the same board workflow.",
    "dependencies": [],
-   "authors": [{"value": "coordinator"}]}],
+   "authors": [{"value": "coordinator"}]},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/NP.lean",
+    "Complexity/Computability/Complexity/Classes/NP",
+    "Complexity/Computability/Machines/Turing/MultiTape/Machine",
+    "Complexity/Computability/Machines/Turing/MultiTape/Combinators/Guess.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Combinators/Guess",
+    "Complexity/Computability/Machines/Turing/MultiTape/Encodings/RunPath.lean",
+    "ComplexityTests/NondeterministicVerifiers.lean",
+    "ComplexityTests/NondeterministicVerifiers"],
+   "id": {"value": "nondeterministic-verifiers"},
+   "goal":
+   "Prove the equivalence between the existing verifier-based Cslib.Complexity.NP and polynomial-time nondeterministic multi-tape machines, using the shared parametric machine and native CSLib run-path semantics. Own the proof architecture, implementations and subagent delegation. Public endpoints must cover both guess-and-verify and checking an encoded accepting computation, with polynomial time and certificate-length bounds relative to the actual input encoding; do not assume the desired equivalence or disguise a certificate theorem as a machine theorem. Preserve acceptance, rejection and branch-time quantifiers, fixed-polynomial witness length (pad certificates correctly), empty inputs and finite control/alphabet assumptions. Reuse Machine/{Equivalence,Program,Finite,Simulation}, the tidy interpreter and finite-function certificates; minimize new custom machines and factor repeated run/configuration bookkeeping only with concrete clients. Do not replace the current NP definition. First inspect upstream class work #767/#768 and UPSTREAM.md to avoid a duplicate NTIME/class framework. Textbook source: AroraBarak09, verifier/NTM characterization; use v1's Classes and guess-and-verify construction only after pinning its source and checking model differences. First report a dependency map and independently useful milestone, then proceed with substantial implementation and delegation. Record all contributing subagents and keep each editing agent in a separate worktree. Include concrete machines/verifiers showing hypotheses are satisfiable, semantic and bound regressions, theorem axiom checks in your own tests, all six checks and independent API/correctness review. Changes outside scope, bibliography, central Axioms.lean and roadmap go through the coordinator. This complements the Fagin worker, who currently targets verifier NP and owns Logics; do not edit that scope.",
+   "dependencies": [],
+   "authors": []}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
