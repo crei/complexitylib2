@@ -25,7 +25,9 @@
       "snapshot":
       {"head": {"value": "e872f9f1b5796d5b2681b6ea58d53d9d1d4403d1"},
        "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
     "ComplexityTests/MassProduction.lean",
