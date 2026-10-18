@@ -2,7 +2,8 @@
  "integration": null,
  "epics":
  [{"resume": null,
-   "report": "",
+   "report":
+   "Approved your architectural route and shared Circuit.parallelFamily addition in Replication.lean; scope is now expanded. Native Circuit.pi handles only single-output circuits, so preserve sharing within each multi-output family member and exact arbitrary weighted costs; use existing parallel/wiring operations. If deriving replicate as a constant-family specialization reduces duplicate recursion, preserve its public API and zero-width cases. Numeric-bound induction with native synthesis witnesses is preferable to porting duplicate circuit syntax. First delivery is the Uhlig coefficient-one theorem; mass-production-sharp records the full remaining ambition and is intended for you afterward. Push reviewable checkpoints and report exact central bibliography/axiom additions. Main now includes 8cfd2b6; merge at a clean checkpoint and read status --json for guidance.",
    "phase":
    {"working":
     {"work":
