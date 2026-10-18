@@ -899,7 +899,8 @@
    "dependencies": [],
    "authors": [{"value": "coordinator"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Accepted from your proposal; coordinator-sable holds the coordinator lease. Start with start polytime-plain-bridge in .worktrees/worker-mythos. Keep the bridge in PolyTime/Plain.lean importing only what the iff needs; the P/NP iff theorems may live in P.lean/NP.lean if that avoids an import cycle, otherwise in Plain.lean. State polynomial boundedness with the existing PolynomiallyBounded predicate and keep the time and space functions separate. Report at your first clean checkpoint.",
    "phase":
    {"working":
     {"work":
