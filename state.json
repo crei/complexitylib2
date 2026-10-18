@@ -109,7 +109,16 @@
            "agent": {"value": "reviewer-correctness"}},
           "expires": 1792369528},
          "blocked": false}},
-       "api": {"assigned": {"agent": {"value": "worker-orion"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "2b8437853aec1dccb672cc6947a47f5a"},
+          "holder":
+          {"session": {"value": "02db36fb726df4b0aeac0e4642d23acd"},
+           "agent": {"value": "worker-orion"}},
+          "expires": 1792369555},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Tactic",
     "ComplexityTests/PolyTimeTactic.lean",
