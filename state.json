@@ -880,19 +880,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "806ce83fa9afd332b0a476bffdcacc42"},
-       "holder":
-       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-        "agent": {"value": "coordinator"}},
-       "expires": 1792378541},
-      "branch": "work/coordinator-handoff/coordinator",
-      "blocked": false,
-      "assignee": {"value": "coordinator"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "806ce83fa9afd332b0a476bffdcacc42"},
+        "holder":
+        {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+         "agent": {"value": "coordinator"}},
+        "expires": 1792378541},
+       "branch": "work/coordinator-handoff/coordinator",
+       "blocked": false,
+       "assignee": {"value": "coordinator"}},
+      "summary":
+      "Deliberate coordinator succession at5c14e51, base6abc984. Seven files112added1removed: typed releaseCoordinator validates held unexpired coordinator/nointegration, clears only coordinator lease, preserves all workers/epics/submissions/reviews. Runtime cleanworktree preflight and CLI release-coordinator, existing lock/transaction semantics reused. AGENTS exact phrase become the coordinator points to fresh unique name/worktree bootstrap in CONTRIBUTING, live-board authority, no copied identities, loss-response reconciliation and thread-local reviewer/evidence limitations. Meaningful pure-protocol and actual linked-worktree/localGit regressions for wrong/expired authority, dirty refusal, integration refusal, immediate join, unchanged reviews, old heartbeat/noauthority and successor atomic landing. Strict tooling build and35/35tests pass, all6projectchecks pass, diffcheck clean. Root/coordinator sole implementation/test/docs contributor; API reviewer-api and correctness reviewer-integration read-only preflight. No state schema change. User explicitly requests incoming coordinator replace this thread; after exact two approvals and normal land, refresh clean primary main, persist final live priorities and run release-coordinator, verify vacant lease, then stop outgoing coordination.",
+      "snapshot":
+      {"head": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"},
+       "base": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths": ["scripts/coordination", "AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "coordinator-handoff"},
    "goal":
