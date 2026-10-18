@@ -312,7 +312,16 @@
       "reviews":
       {"correctness":
        {"assigned": {"agent": {"value": "reviewer-integration"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "7c1fb5b7fd3d98ee2561906578c1158a"},
+          "holder":
+          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+           "agent": {"value": "reviewer-api"}},
+          "expires": 1792376784},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
     "ComplexityTests/MassProduction.lean",
