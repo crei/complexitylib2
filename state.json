@@ -609,7 +609,7 @@
         "holder":
         {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
          "agent": {"value": "reviewer-correctness"}},
-        "expires": 1792376979},
+        "expires": 1792378042},
        "branch": "work/sipser-lautemann/reviewer-correctness",
        "blocked": false,
        "assignee": {"value": "reviewer-correctness"}},
@@ -871,7 +871,7 @@
     "agent": {"value": "reviewer-api"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792376979,
+   "expires": 1792378042,
    "actor":
    {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
     "agent": {"value": "reviewer-correctness"}}},
