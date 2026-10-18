@@ -853,7 +853,16 @@
       {"head": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"},
        "base": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor3"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "7e37400b75aed0f535a0a08542fe557f"},
+          "holder":
+          {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
+           "agent": {"value": "reviewer-sable-cor3"}},
+          "expires": 1792380673},
+         "blocked": false}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
