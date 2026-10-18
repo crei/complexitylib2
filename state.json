@@ -431,7 +431,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "bd0686e30795a9c5bf89e413e53ab8bd"},
+       "holder":
+       {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
+        "agent": {"value": "reviewer-correctness"}},
+       "expires": 1792370897},
       "branch": "work/review-handoff/reviewer-correctness",
       "blocked": false,
       "assignee": {"value": "reviewer-correctness"}}}},
@@ -440,7 +445,7 @@
    "goal":
    "Document the user's streamlined handoff: workers implement, self-review and run checks before a frozen submission; the architect centrally manages independent review, integration/conflict fixes and main landing, using local review subagents when useful. Workers remain available for substantive fixes and own substantial follow-on epics rather than cross-worker review assignments. Use existing reopen/assign/start machinery for coordinator-authored integration changes so all contributors remain tracked; independent reviews and required checks cover the final snapshot. Prefer minimal AGENTS.md and CONTRIBUTING.md changes, remove contradictory author-only integration or external-review requirements, and preserve explicit two-review independence/final-source checks. Do not change the Lean protocol or add process documents. Prepare a coherent docs-only branch, self-review/diff check, report exact changes; coordinator chooses landing order after theorem batches to avoid base churn.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "reviewer-correctness"}]}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
