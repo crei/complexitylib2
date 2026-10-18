@@ -382,15 +382,18 @@
        "base": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "c832d1bb190c63195f7f97cc1cf71126"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792367219,
+          "snapshot":
+          {"head": {"value": "c4dbe2373d6a06fe6ca75df9d37c17864afd7d08"},
+           "base": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"}},
+          "reviewer":
           {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
            "agent": {"value": "reviewer-sable-cor1"}},
-          "expires": 1792381449},
-         "blocked": false}},
+          "note":
+          "Independent correctness review (reviewer-sable-cor1, no contribution to this epic) of exact base 6abc984 / head c4dbe23. Read in full: Fagin/{StrictVerifier,Small,Power,Layout,Tableau,Converse}.lean, SecondOrder/Projection.lean, ComplexityTests/Fagin.lean, root imports, plus the fixed ESO/encoding/NP/Cook-Levin/tidy-machine definitions they use. Evidence: lake build of the 8 modules --wfail --iofail passes; mk_all --check clean; no sorry/axiom/native_decide/set_option in added lines; my #print axioms of the 3 endpoints and 21 main lemmas = propext/Classical.choice/Quot.sound; 5 probes compile: empty structure, singleton and looped singleton (inter_card_eq_one), nullary symbol at n=0,1,2 and malformed inputs, concrete 2-/3-colorability where the sentence from of_queryLanguage_mem_NP separates the decoded edge from a decoded triangle, exists_pow_bound at a concrete input. Checked: NP is the native verifier NP encStructure; IsoClosed is the only added hypothesis and is necessary; strict-order sentence exact, no order assumed on inputs; little-endian/colex tupleIndex bijection; layout/tableau iffs need B > |frame|+1; exponent bound uniform for all n>=2 (polynomiallyBounded_iff_le is for all n); strictVerifier lemma valid for arbitrary L,T via runFrom_eq_of_halt. No blocking findings. Nits: Immerman citation is Theorem 7.8 not 7.7 (Converse.lean:20,247,278; Projection.lean:24; checked vs author ch7 PDF); Tableau.lean:22 says 0<B but theorem needs |u|+1<B; maxArity wording; add a semantic end-to-end test client. Not re-run: full six gates. Evidence .lake/codex-validation/fagin-converse-correctness/review.json SHA256 b9a41fa42335f64f7851c526f688a8f87245f6ca563623e7b2308fb06c93ea0f"}}},
        "api":
        {"finished":
         {"review":
