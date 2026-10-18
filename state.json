@@ -761,7 +761,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/iteration-foundations/worker-fable",
+      "blocked": false,
+      "assignee": {"value": "worker-fable"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
     "Complexity/Foundations/Combinatorics/FunctionalGraph.lean",
