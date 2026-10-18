@@ -815,19 +815,26 @@
    "report":
    "Central integration by coordinator-sable: merge main, replace the private Synthesis.circuit copy by the generic helper, add bibliography entry, central axiom guards and reviewer wording fixes. The two approvals of exact 8dd2821 are retained as evidence; fresh independent reviews of the final snapshot follow.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/iteration-foundations/worker-fable",
-      "report": "",
-      "lease":
-      {"token": {"value": "297fab27cdf09a64cd6c67fa360ba08d"},
-       "holder":
-       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-        "agent": {"value": "coordinator-sable"}},
-       "expires": 1792380389},
-      "branch": "work/iteration-foundations/coordinator-sable",
-      "blocked": false,
-      "assignee": {"value": "coordinator-sable"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/iteration-foundations/worker-fable",
+       "report": "",
+       "lease":
+       {"token": {"value": "297fab27cdf09a64cd6c67fa360ba08d"},
+        "holder":
+        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+         "agent": {"value": "coordinator-sable"}},
+        "expires": 1792380389},
+       "branch": "work/iteration-foundations/coordinator-sable",
+       "blocked": false,
+       "assignee": {"value": "coordinator-sable"}},
+      "summary":
+      "Central integration of the twice-approved iteration-foundations snapshot 8dd2821 onto main 5c14e51 at exact head 94dcd9d45d7a8f5f384ac4bd772603470f23a151 (merge commit 6600c67 then integration commit 94dcd9d). Delta beyond the merge: Circuit/Iteration.lean imports Complexity Circuit/Synthesis and deletes the authorized private Synthesis.circuit duplicate (orbit now uses the generic helper with identical statement); orbit docstring says coordinates not bits; one test comment fixed; references.bib adds Schlesinger2026IteratedFunctions (revision c4cfa198); ComplexityTests/Axioms.lean adds exact guards for FunctionalGraph.exists_checkpoints, FunctionalGraph.card_range_iterate, Circuit.cost_program_iterate (no axioms) and Synthesis.orbit; ROADMAP iterated-function bullet records the landed foundations with the fixed-power theorem still open. No public statement, weighted-cost contract or source credit changed. Validation: scripts/check.sh all six gates passed at this tree in an isolated cache. Contributors: worker-fable (implementation, sole author of the mathematics), coordinator-sable (integration only). Fresh independent API and correctness reviews of exact base 5c14e51 / head 94dcd9d45d7a8f5f384ac4bd772603470f23a151 are assigned; the earlier approvals of 8dd2821 by reviewer-api and reviewer-correctness remain in the journal as evidence for the unchanged mathematics.",
+      "snapshot":
+      {"head": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"},
+       "base": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
     "Complexity/Foundations/Combinatorics/FunctionalGraph.lean",
