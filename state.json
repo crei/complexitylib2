@@ -705,7 +705,15 @@
        "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
       "reviews":
       {"correctness":
-       {"assigned": {"agent": {"value": "reviewer-integration"}}},
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "644f345b1b55c0605b096d8ec4c933dc"},
+          "holder":
+          {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
+           "agent": {"value": "reviewer-integration"}},
+          "expires": 1792377637},
+         "blocked": false}},
        "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
