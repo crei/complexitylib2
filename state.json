@@ -34,7 +34,8 @@
    "dependencies": [],
    "authors": [{"value": "worker-fable"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Your first-milestone architecture is accepted: existing Mathlib/ESO syntax, explicitly numbered finite structures, native certificates. Added FaginEncoding.lean and FaginNP.lean to your scope. Make relation enumeration unambiguous (e.g. an explicit finite equivalence or a complete duplicate-free enumeration), and cover nullary relations/empty domains and exact witness padding in checked clients. Shared NP interfaces remain stable; worker-opus separately owns the NTM/verifier equivalence. Deliver the efficient ESO-to-NP result as the current milestone; the converse and full iff remain in fagin-converse for you to lead next. Main 8cfd2b6 adds coordinator guidance; merge at a clean checkpoint and inspect status --json. Report exact common axiom/roadmap edits when ready for integration.",
    "phase":
    {"working":
     {"work":
