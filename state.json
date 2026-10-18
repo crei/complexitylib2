@@ -628,19 +628,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "47c438580c19c454867ac7e9b0752ce2"},
-       "holder":
-       {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
-        "agent": {"value": "reviewer-api"}},
-       "expires": 1792374148},
-      "branch": "work/coordination-fetch-isolation/reviewer-api",
-      "blocked": false,
-      "assignee": {"value": "reviewer-api"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "47c438580c19c454867ac7e9b0752ce2"},
+        "holder":
+        {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+         "agent": {"value": "reviewer-api"}},
+        "expires": 1792374148},
+       "branch": "work/coordination-fetch-isolation/reviewer-api",
+       "blocked": false,
+       "assignee": {"value": "reviewer-api"}},
+      "summary":
+      "Fix complete at 2d04c3fb53fda964713e95420d500efd32a5cc19 on work/coordination-fetch-isolation/reviewer-api. Add only empty --refmap= plus comment to private fetch; no protocol/lease/push/landing changes. Real local bare-Git/linked-worktree regression with normal remote mapping fails unchanged baseline693d836 at shared tracking refs (32/33), passes fixed suite33/33 including physical tracking lock, both dirty worktrees HEAD/index/FETCH_HEAD/content snapshots, fresh OID, missing refs and temporary cleanup after post-receive failure. Standalone lake build --wfail passes CLI/tests; lake test --wfail passes33/33; Git.lean MCP clean; nested tests use shell fallback due outer-project MCP path. git diff --check clean; new test/helper module103 physical lines, total diff107 inserts/2 deletes. Self-reviewed, sole contributor reviewer-api/OpenAI Codex; no independent approval claimed. Published remote parity verified. Git official --refmap documentation cited in commit. Evidence/logs .lake/codex-validation/coordination-fetch-isolation/implementation-evidence.json in own worktree. Whole-library six gates left to coordinator landing, as scoped. Ready for two independent central reviews.",
+      "snapshot":
+      {"head": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"},
+       "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["scripts/coordination/Coordination/Git.lean",
     "scripts/coordination/Tests.lean",
