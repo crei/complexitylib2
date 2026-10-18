@@ -1,15 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"},
-   "base": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"}},
-  "lease":
-  {"token": {"value": "3b298c538cae24c29e596b926b4cfa93"},
-   "holder":
-   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-    "agent": {"value": "coordinator"}},
-   "expires": 1792373024},
-  "epic": {"value": "karp-reductions"}},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -432,52 +422,41 @@
    "report":
    "Architect-owned final integration of approved 7a2b730: merge current main, add central guards for the three NP-completeness headlines, update the remaining-work roadmap, and obtain exact final delta approvals. Preserve worker-nova authorship and all existing tests.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/karp-reductions/worker-nova",
-       "report": "",
-       "lease":
-       {"token": {"value": "7008d446204c772503052056779eb582"},
-        "holder":
-        {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-         "agent": {"value": "coordinator"}},
-        "expires": 1792373024},
-       "branch": "work/karp-reductions/coordinator",
-       "blocked": false,
-       "assignee": {"value": "coordinator"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "All three native NP-completeness results: ThreeSAT, IndependentSet, Clique. Original7a2b730 worker-nova implementation and tests unchanged. Coordinator cleanly merged current mainc5e4365, added exactly three central NP-completeness guards already checked in KarpReductions, and removed the completed SAT≤3SAT roadmap item. All six scripts/check.sh gates and git diff --check pass. Exact binary-label/target-size semantics, duplicate vertices, undeclared endpoints, empty cases, exact padded witnesses and no custom TM preserved. Original independent API/correctness reviews approve; exact final integration delta approvals required. Global axiom audit and all25 detailed test guards retained. Source credit unchanged; integration assisted by OpenAI Codex.",
       "snapshot":
       {"head": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"},
        "base": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792358495,
-          "snapshot":
-          {"head": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"},
-           "base": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"}},
-          "reviewer":
-          {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
-           "agent": {"value": "reviewer-correctness"}},
-          "note":
-          "Independent final correctness delta APPROVE; no findings. All seven implementation/source/test files byte-identical to reviewed 7a2b730. Exact ancestry/current-main merge, single test import, three central NPComplete guards copied from checked tests, and precise completed-roadmap-item removal verified. Reused thorough original MCP/split/boundary evidence; no redundant builds. Evidence reviewer-correctness/.lake/codex-validation/karp-integration/correctness-review.json SHA256 78f8c04122077dd47516455dd9a7a8d24cb3c45c2975dae50484db77532ba9a5."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792358501,
-          "snapshot":
-          {"head": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"},
-           "base": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"}},
-          "reviewer":
-          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
-           "agent": {"value": "reviewer-api"}},
-          "note":
-          "Independent final API delta review; no development contribution. Earlier detailed7a2b730 audit/evidence retained. All seven original source/test files byte-identical; original/main ancestors verified; root test import preserves prior main. Three central NPComplete guards match existing submitted facts/messages after whitespace normalization and extracted guard fragment passes own-cache shell. Roadmap removes only completed SAT-to-ThreeSAT work, preserves unrelated tasks. MCP stale imports explicitly recorded; diff/source clean. No findings. Root exact-final six gates reported pass, not repeated. Evidence reviewer-api .lake/codex-validation/karp-reductions-api-review/final-delta-review.json."}}}}}}},
+      "landedBy":
+      {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+       "agent": {"value": "coordinator"}},
+      "landedAt": 1792358627,
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792358495,
+       "snapshot":
+       {"head": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"},
+        "base": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"}},
+       "reviewer":
+       {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
+        "agent": {"value": "reviewer-correctness"}},
+       "note":
+       "Independent final correctness delta APPROVE; no findings. All seven implementation/source/test files byte-identical to reviewed 7a2b730. Exact ancestry/current-main merge, single test import, three central NPComplete guards copied from checked tests, and precise completed-roadmap-item removal verified. Reused thorough original MCP/split/boundary evidence; no redundant builds. Evidence reviewer-correctness/.lake/codex-validation/karp-integration/correctness-review.json SHA256 78f8c04122077dd47516455dd9a7a8d24cb3c45c2975dae50484db77532ba9a5."},
+      "api":
+      {"verdict": "approve",
+       "time": 1792358501,
+       "snapshot":
+       {"head": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"},
+        "base": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"}},
+       "reviewer":
+       {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+        "agent": {"value": "reviewer-api"}},
+       "note":
+       "Independent final API delta review; no development contribution. Earlier detailed7a2b730 audit/evidence retained. All seven original source/test files byte-identical; original/main ancestors verified; root test import preserves prior main. Three central NPComplete guards match existing submitted facts/messages after whitespace normalization and extracted guard fragment passes own-cache shell. Roadmap removes only completed SAT-to-ThreeSAT work, preserves unrelated tasks. MCP stale imports explicitly recorded; diff/source clean. No findings. Root exact-final six gates reported pass, not repeated. Evidence reviewer-api .lake/codex-validation/karp-reductions-api-review/final-delta-review.json."}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems",
     "Complexity/Computability/Complexity/Reduction.lean",
