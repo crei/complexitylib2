@@ -356,7 +356,7 @@
         "holder":
         {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
          "agent": {"value": "coordinator"}},
-        "expires": 1792375087},
+        "expires": 1792375740},
        "branch": "work/nondeterministic-replay/coordinator",
        "blocked": false,
        "assignee": {"value": "coordinator"}},
@@ -708,11 +708,11 @@
   "holder":
   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
    "agent": {"value": "coordinator"}},
-  "expires": 1792374940},
+  "expires": 1792375740},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792374940,
+   "expires": 1792375740,
    "actor":
    {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
     "agent": {"value": "coordinator"}}},
