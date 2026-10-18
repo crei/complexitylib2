@@ -322,4 +322,10 @@
    "expires": 1792368523,
    "actor":
    {"session": {"value": "2c241a85615db03e563c3e1245d12306"},
-    "agent": {"value": "worker-nova"}}}]}
+    "agent": {"value": "worker-nova"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792368543,
+   "actor":
+   {"session": {"value": "02db36fb726df4b0aeac0e4642d23acd"},
+    "agent": {"value": "worker-orion"}}}]}
