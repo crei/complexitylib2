@@ -275,7 +275,7 @@
        "holder":
        {"session": {"value": "560647a3edba82aba348acbe6bf69051"},
         "agent": {"value": "worker-atlas"}},
-       "expires": 1792372686},
+       "expires": 1792372908},
       "branch": "work/open-oracle-composition/worker-atlas",
       "blocked": false,
       "assignee": {"value": "worker-atlas"}}}},
@@ -659,7 +659,7 @@
     "agent": {"value": "worker-opus"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792372686,
+   "expires": 1792372908,
    "actor":
    {"session": {"value": "560647a3edba82aba348acbe6bf69051"},
     "agent": {"value": "worker-atlas"}}},
