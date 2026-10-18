@@ -319,7 +319,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "184af7cace64cc768a7ed44a157478b5"},
+       "holder":
+       {"session": {"value": "60a448c1698e33ed0b212fc3f266bb27"},
+        "agent": {"value": "worker-fable"}},
+       "expires": 1792371476},
       "branch": "work/mass-production-sharp/worker-fable",
       "blocked": false,
       "assignee": {"value": "worker-fable"}}}},
@@ -336,7 +341,7 @@
    "goal":
    "Continue the full mass-production development after the coefficient-one milestone: prove the sharp rational coefficient 1/(1-gamma)+o(1), derive the all-positive-length rational exponential-copy theorem using existing padding, and prove the real-rate theorem with the exact source quantifiers. Source algebraic-circuits @3998dc48 and manuscript boolean-mass-production @21d57d75. The accepted plan uses shared CSLib Lupanov and native sorting/routing/lookup, and aims to avoid the redundant block-induction and greedy-routing pipeline; validate the mathematical implications and measure actual helper-inclusive savings. This remains substantial unfinished work, intended for worker-fable to continue with its own subagents after the first milestone lands. Preserve gate cost and explicitness boundaries, executable circuit sharing, semantic/boundary clients, all six checks and independent exact-commit reviews. Read original mass-production journal history for full ownership, source and quality requirements; request shared-scope additions as needed. Inspect status --json for coordinator guidance.",
    "dependencies": [{"value": "mass-production"}],
-   "authors": []},
+   "authors": [{"value": "worker-fable"}]},
   {"resume": null,
    "report": "",
    "phase": "unassigned",
