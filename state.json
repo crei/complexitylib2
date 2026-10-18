@@ -3,7 +3,15 @@
  "epics":
  [{"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/mass-production/worker-fable",
+      "blocked": false,
+      "assignee": {"value": "worker-fable"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
     "ComplexityTests/MassProduction.lean",
