@@ -876,7 +876,15 @@
    "authors": [{"value": "worker-opus"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/coordinator-handoff/coordinator",
+      "blocked": false,
+      "assignee": {"value": "coordinator"}}}},
    "paths": ["scripts/coordination", "AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "coordinator-handoff"},
    "goal":
