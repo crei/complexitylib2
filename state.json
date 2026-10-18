@@ -119,7 +119,7 @@
           "holder":
           {"session": {"value": "02db36fb726df4b0aeac0e4642d23acd"},
            "agent": {"value": "worker-orion"}},
-          "expires": 1792369661},
+          "expires": 1792369811},
          "blocked": false}}}}}},
    "paths":
    ["Complexity/Tactic",
@@ -421,7 +421,7 @@
     "agent": {"value": "worker-nova"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792369661,
+   "expires": 1792369811,
    "actor":
    {"session": {"value": "02db36fb726df4b0aeac0e4642d23acd"},
     "agent": {"value": "worker-orion"}}},
