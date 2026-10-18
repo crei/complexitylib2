@@ -1016,7 +1016,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "94a1e55af26bc3a97278c471aaa616dc"},
+       "holder":
+       {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
+        "agent": {"value": "worker-mythos"}},
+       "expires": 1792381205},
       "branch": "work/circuit-metric/worker-mythos",
       "blocked": false,
       "assignee": {"value": "worker-mythos"}}}},
@@ -1028,7 +1033,7 @@
    "goal":
    "Formalize circuit complexity as a translation-invariant metric. BOOLEAN CASE (primary), new Complexity/Computability/Circuit/Boolean/Metric.lean: on BooleanFunction n define the natural-number distance d f g := if f = g then 0 else complexity interpretation (single (f + g)) + 4, with + the pointwise Boolean-ring addition that equals fun x => f x ^^ g x as used in Correction.lean. Prove d f f = 0, d f g = d g f, d f h <= d f g + d g h (from Boolean.complexity_xor_le), d f g = 0 -> f = g, translation invariance d (f + a) (g + a) = d f g, and the 1-Lipschitz statement Nat.dist (complexity (single f)) (complexity (single g)) <= d f g (from dist_complexity_single_le_complexity_xor). Package the same quantity as a Mathlib AddGroupNorm (BooleanFunction n) (real-valued norm, zero at 0, else complexity + 4) and expose the derived NormedAddCommGroup structure as a def, never a global instance on function types; relate its dist to d by a proved equality. State the MCSP remark as a theorem: for f not equal 0, complexity (single f) <= s iff d f 0 <= s + 4, i.e. ball membership. GENERIC CASE (second), Complexity/Computability/Circuit/Metric.lean: for a signature with interpretation on a carrier with an additive group structure, assume circuits computing the two-input addition and the negation with stated gate costs and define the difference distance from the circuit complexity of f - g. First post the exact general statement that is actually true: in general this is a translation-invariant quasi-metric (triangle via the addition gadget, symmetry costs the negation gadget), and it is a genuine AddGroupNorm under an explicit hypothesis such as a zero-cost negation or complexity (-x) = complexity x; show the Boolean case is the specialization (by definitional equality or a proved equality, not a second definition). Reuse Cslib.Circuits complexity and RelativeComplexity; add no new circuit, function or norm model, no new gadgets beyond those already in Boolean/Synthesis. Tests ComplexityTests/CircuitMetric.lean: concrete n = 1 and n = 2 distances (identity, negation, constants) with exact or bounded values, a nonvacuous instance of the generic hypotheses, the Lipschitz and ball statements on examples, and #print axioms checks. Source: the project owner note of 2026-10-18 (Samuel Schlesinger); cite Jukna2012 for the correction inequality; do not cite unpublished drafts. Report a dependency map first, then self-review, all six gates and a frozen submission; central Axioms.lean and ROADMAP edits go through the coordinator.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "worker-mythos"}]}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
