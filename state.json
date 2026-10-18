@@ -456,15 +456,18 @@
           "note":
           "Independent final correctness delta APPROVE; no findings. All seven implementation/source/test files byte-identical to reviewed 7a2b730. Exact ancestry/current-main merge, single test import, three central NPComplete guards copied from checked tests, and precise completed-roadmap-item removal verified. Reused thorough original MCP/split/boundary evidence; no redundant builds. Evidence reviewer-correctness/.lake/codex-validation/karp-integration/correctness-review.json SHA256 78f8c04122077dd47516455dd9a7a8d24cb3c45c2975dae50484db77532ba9a5."}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "55efcc2dfd4b3e4f70fca9faddb7751e"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792358501,
+          "snapshot":
+          {"head": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"},
+           "base": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"}},
+          "reviewer":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792372841},
-         "blocked": false}}}}}},
+          "note":
+          "Independent final API delta review; no development contribution. Earlier detailed7a2b730 audit/evidence retained. All seven original source/test files byte-identical; original/main ancestors verified; root test import preserves prior main. Three central NPComplete guards match existing submitted facts/messages after whitespace normalization and extracted guard fragment passes own-cache shell. Roadmap removes only completed SAT-to-ThreeSAT work, preserves unrelated tasks. MCP stale imports explicitly recorded; diff/source clean. No findings. Root exact-final six gates reported pass, not repeated. Evidence reviewer-api .lake/codex-validation/karp-reductions-api-review/final-delta-review.json."}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems",
     "Complexity/Computability/Complexity/Reduction.lean",
