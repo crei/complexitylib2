@@ -536,7 +536,7 @@
     "agent": {"value": "worker-orion"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792371039,
+   "expires": 1792371284,
    "actor":
    {"session": {"value": "9d337a1ee8541975a1472b2a6af80742"},
     "agent": {"value": "worker-karn"}}}]}
