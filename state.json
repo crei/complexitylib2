@@ -1,15 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "693d8360388d7f854b4a87549f22741a853a9215"},
-   "base": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"}},
-  "lease":
-  {"token": {"value": "9e04bfd4c17ab49454d5c353196af7c4"},
-   "holder":
-   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-    "agent": {"value": "coordinator"}},
-   "expires": 1792373667},
-  "epic": {"value": "review-handoff"}},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -500,52 +490,41 @@
    "report":
    "Architect integrates current main and the two independently reviewed wording corrections: active-claim note availability and resuming from previous branch history. Preserve contributor record and obtain fresh exact final delta reviews.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/review-handoff/reviewer-correctness",
-       "report": "",
-       "lease":
-       {"token": {"value": "bc0737e36cf617197dbb2674dc9ba85b"},
-        "holder":
-        {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
-         "agent": {"value": "coordinator"}},
-        "expires": 1792373667},
-       "branch": "work/review-handoff/coordinator",
-       "blocked": false,
-       "assignee": {"value": "coordinator"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Worker self-review and frozen handoff, architect-owned independent review and integration. Original documentation by reviewer-correctness at 6b752306; coordinator merged main accc2af and made only the two reviewed wording corrections (active note claims; resume FROM prior history). Exact final 693d8360388d7f854b4a87549f22741a853a9215 changes only AGENTS.md/CONTRIBUTING.md relative to main, +28/-13. Protocol/Lean/check requirements unchanged. Final source-to-protocol check, 10 local Markdown links/anchors, code fences and git diff --check pass. Original independent API/correctness approvals retained as evidence; fresh final delta approvals required. Land runs all six project gates and 32 coordinator tests. Contributors reviewer-correctness and coordinator; OpenAI Codex assistance disclosed.",
       "snapshot":
       {"head": {"value": "693d8360388d7f854b4a87549f22741a853a9215"},
        "base": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792359175,
-          "snapshot":
-          {"head": {"value": "693d8360388d7f854b4a87549f22741a853a9215"},
-           "base": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"}},
-          "reviewer":
-          {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
-           "agent": {"value": "worker-inference"}},
-          "note":
-          "Independent final docs correctness delta review: no authorship or implementation contribution. Reused full approval of 6b752306; AGENTS is byte-identical and CONTRIBUTING changes only active-claim note eligibility and reassignment resumes FROM prior branch. Both checked against Protocol.apply and Runtime.checkout. Exact clean current-main-based snapshot changes only the two docs; no protocol or Lean changes. Ten local links/anchors and fences plus diff check pass. No findings. No redundant Lean build or tests; coordinator runs six gates and coordination tests at landing. Evidence .lake/codex-validation/review-handoff/final-correctness-review.json SHA256 b91da2938cdc41f0532c9b83116818848567ab54858a02f39e44bc12f36c6db1."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792359147,
-          "snapshot":
-          {"head": {"value": "693d8360388d7f854b4a87549f22741a853a9215"},
-           "base": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"}},
-          "reviewer":
-          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
-           "agent": {"value": "reviewer-api"}},
-          "note":
-          "Independent final docs API delta review; no authorship. Original6b752306 detailed audit retained. Only AGENTS/CONTRIBUTING differ from main, no protocol/Lean change. AGENTS byte-identical to original, CONTRIBUTING differs by exactly active implementation/review claim note restriction and resumes FROM previous branch. Both original limitations resolved and source contracts checked. Main ancestry/scoped diff clean,10 local links/anchors resolve, fences balanced, source clean. No findings; no Lean build needed. Contributor preservation/read-only central reviews/exact final checks unchanged; coordinator landing all6+32 remains separate. Evidence reviewer-api .lake/codex-validation/review-handoff-api-review/final-delta-review.json."}}}}}}},
+      "landedBy":
+      {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+       "agent": {"value": "coordinator"}},
+      "landedAt": 1792359269,
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792359175,
+       "snapshot":
+       {"head": {"value": "693d8360388d7f854b4a87549f22741a853a9215"},
+        "base": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"}},
+       "reviewer":
+       {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
+        "agent": {"value": "worker-inference"}},
+       "note":
+       "Independent final docs correctness delta review: no authorship or implementation contribution. Reused full approval of 6b752306; AGENTS is byte-identical and CONTRIBUTING changes only active-claim note eligibility and reassignment resumes FROM prior branch. Both checked against Protocol.apply and Runtime.checkout. Exact clean current-main-based snapshot changes only the two docs; no protocol or Lean changes. Ten local links/anchors and fences plus diff check pass. No findings. No redundant Lean build or tests; coordinator runs six gates and coordination tests at landing. Evidence .lake/codex-validation/review-handoff/final-correctness-review.json SHA256 b91da2938cdc41f0532c9b83116818848567ab54858a02f39e44bc12f36c6db1."},
+      "api":
+      {"verdict": "approve",
+       "time": 1792359147,
+       "snapshot":
+       {"head": {"value": "693d8360388d7f854b4a87549f22741a853a9215"},
+        "base": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"}},
+       "reviewer":
+       {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+        "agent": {"value": "reviewer-api"}},
+       "note":
+       "Independent final docs API delta review; no authorship. Original6b752306 detailed audit retained. Only AGENTS/CONTRIBUTING differ from main, no protocol/Lean change. AGENTS byte-identical to original, CONTRIBUTING differs by exactly active implementation/review claim note restriction and resumes FROM previous branch. Both original limitations resolved and source contracts checked. Main ancestry/scoped diff clean,10 local links/anchors resolve, fences balanced, source clean. No findings; no Lean build needed. Contributor preservation/read-only central reviews/exact final checks unchanged; coordinator landing all6+32 remains separate. Evidence reviewer-api .lake/codex-validation/review-handoff-api-review/final-delta-review.json."}}}},
    "paths": ["AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "review-handoff"},
    "goal":
