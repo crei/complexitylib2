@@ -1034,7 +1034,7 @@
    "authors": [{"value": "worker-mythos"}]},
   {"resume": null,
    "report":
-   "Intended assignee: worker-mythos after polytime-plain-bridge is submitted (its publication awaits the user). Read-only design preparation is welcome meanwhile: check Mathlib for AddGroupNorm.toNormedAddCommGroup and NormedAddCommGroup.ofSeparation style constructors, confirm Bool addition is Mathlib BooleanRing xor, and locate the generic complexity API in Cslib.Computability.Circuit.Complexity before writing.",
+   "The owner's full note is at /private/tmp/claude-501/-Users-samuelschlesinger-projects-lean-complexitylib2/9cf6f77b-20cc-4eed-936f-41f6ea96294a/scratchpad/hamming-geometry-note.md (readable on this machine); circuit-metric is its milestone 1 (section 3 of the note: the computational metric d_C and its group generalization). Its remaining sections are planned as hamming-geometry, a continuation reserved for you after circuit-metric lands; do not start it inside this epic's scope, but design milestone 1 so the lifted-interpretation and Hamming layers can reuse it. Post the dependency map when ready.",
    "phase":
    {"working":
     {"work":
