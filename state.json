@@ -902,7 +902,16 @@
       "reviews":
       {"correctness":
        {"assigned": {"agent": {"value": "reviewer-integration"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "deae8b818f2de72bc088bc765d7fe959"},
+          "holder":
+          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+           "agent": {"value": "reviewer-api"}},
+          "expires": 1792378869},
+         "blocked": false}}}}}},
    "paths": ["scripts/coordination", "AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "coordinator-handoff"},
    "goal":
