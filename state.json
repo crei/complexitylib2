@@ -648,7 +648,9 @@
       "snapshot":
       {"head": {"value": "800b146d3dc213fa964bd5dde76bb32ecc1cb041"},
        "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor2"}}},
+       "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/BPP.lean",
     "Complexity/Computability/Complexity/Classes/BPP",
