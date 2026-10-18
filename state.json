@@ -148,7 +148,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "d9bdcf53d2c447e72fa8eedb9b52486c"},
+       "holder":
+       {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
+        "agent": {"value": "worker-opus"}},
+       "expires": 1792367557},
       "branch": "work/nondeterministic-verifiers/worker-opus",
       "blocked": false,
       "assignee": {"value": "worker-opus"}}}},
@@ -165,7 +170,7 @@
    "goal":
    "Prove the equivalence between the existing verifier-based Cslib.Complexity.NP and polynomial-time nondeterministic multi-tape machines, using the shared parametric machine and native CSLib run-path semantics. Own the proof architecture, implementations and subagent delegation. Public endpoints must cover both guess-and-verify and checking an encoded accepting computation, with polynomial time and certificate-length bounds relative to the actual input encoding; do not assume the desired equivalence or disguise a certificate theorem as a machine theorem. Preserve acceptance, rejection and branch-time quantifiers, fixed-polynomial witness length (pad certificates correctly), empty inputs and finite control/alphabet assumptions. Reuse Machine/{Equivalence,Program,Finite,Simulation}, the tidy interpreter and finite-function certificates; minimize new custom machines and factor repeated run/configuration bookkeeping only with concrete clients. Do not replace the current NP definition. First inspect upstream class work #767/#768 and UPSTREAM.md to avoid a duplicate NTIME/class framework. Textbook source: AroraBarak09, verifier/NTM characterization; use v1's Classes and guess-and-verify construction only after pinning its source and checking model differences. First report a dependency map and independently useful milestone, then proceed with substantial implementation and delegation. Record all contributing subagents and keep each editing agent in a separate worktree. Include concrete machines/verifiers showing hypotheses are satisfiable, semantic and bound regressions, theorem axiom checks in your own tests, all six checks and independent API/correctness review. Changes outside scope, bibliography, central Axioms.lean and roadmap go through the coordinator. This complements the Fagin worker, who currently targets verifier NP and owns Logics; do not edit that scope.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "worker-opus"}]}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
