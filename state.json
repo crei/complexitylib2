@@ -292,13 +292,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Architect takes the frozen c1e726d submission for current-main merge, source bibliography, central headline guards and truthful roadmap completion before independent final reviews. Preserve worker-fable and subagent A-D contributions; substantive proof fixes return to the author.",
+     {"resume": "work/mass-production-sharp/worker-fable",
+      "report": "",
       "lease": null,
-      "branch": "work/mass-production-sharp/worker-fable",
+      "branch": "work/mass-production-sharp/coordinator",
       "blocked": false,
-      "assignee": {"value": "worker-fable"}}}},
+      "assignee": {"value": "coordinator"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean",
     "ComplexityTests/MassProduction.lean",
