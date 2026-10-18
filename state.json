@@ -521,15 +521,18 @@
           "expires": 1792373513},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "469317c03f9fd410593a256dc8c1766e"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792359147,
+          "snapshot":
+          {"head": {"value": "693d8360388d7f854b4a87549f22741a853a9215"},
+           "base": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"}},
+          "reviewer":
           {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
            "agent": {"value": "reviewer-api"}},
-          "expires": 1792373506},
-         "blocked": false}}}}}},
+          "note":
+          "Independent final docs API delta review; no authorship. Original6b752306 detailed audit retained. Only AGENTS/CONTRIBUTING differ from main, no protocol/Lean change. AGENTS byte-identical to original, CONTRIBUTING differs by exactly active implementation/review claim note restriction and resumes FROM previous branch. Both original limitations resolved and source contracts checked. Main ancestry/scoped diff clean,10 local links/anchors resolve, fences balanced, source clean. No findings; no Lean build needed. Contributor preservation/read-only central reviews/exact final checks unchanged; coordinator landing all6+32 remains separate. Evidence reviewer-api .lake/codex-validation/review-handoff-api-review/final-delta-review.json."}}}}}}},
    "paths": ["AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "review-handoff"},
    "goal":
