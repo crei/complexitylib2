@@ -1209,7 +1209,7 @@
     "agent": {"value": "integrator-sable-1"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792381749,
+   "expires": 1792381947,
    "actor":
    {"session": {"value": "9427f9bcda5b4272b037bcdec0a08ee2"},
     "agent": {"value": "integrator-sable-2"}}}]}
