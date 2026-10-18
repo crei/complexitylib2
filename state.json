@@ -424,4 +424,10 @@
    "expires": 1792369661,
    "actor":
    {"session": {"value": "02db36fb726df4b0aeac0e4642d23acd"},
-    "agent": {"value": "worker-orion"}}}]}
+    "agent": {"value": "worker-orion"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792369767,
+   "actor":
+   {"session": {"value": "9d337a1ee8541975a1472b2a6af80742"},
+    "agent": {"value": "worker-karn"}}}]}
