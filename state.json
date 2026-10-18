@@ -902,15 +902,18 @@
        "base": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "0c6c774079f44917b7c49f6d3584a5ed"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792364624,
+          "snapshot":
+          {"head": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"},
+           "base": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"}},
+          "reviewer":
           {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
            "agent": {"value": "reviewer-integration"}},
-          "expires": 1792378880},
-         "blocked": false}},
+          "note":
+          "Independent read-only correctness review of all seven changed files plus authorization, heartbeat, join, local lock, Git retry and landing paths. No findings. Release requires live held coordinator generation and absent integration, changes only coordinator lease, preserves work/reviews/history; fresh successor joins immediately and old commands/heartbeats cannot restore authority. MCP Protocol clean; Runtime MCP nested-package resolution failed, so own isolated tooling cache strict CLI build and all 35 tests passed. Four additional ignored reviewer-only real-Git probes passed: release/concurrent active-worker report preserves both updates and claim; delayed old heartbeat preserves successor; delayed old release is fenced; accepted release with lost response reconciles past immediate successor. Clean exact head, no production edits or retained tests. Evidence: .worktrees/reviewer-integration/.lake/codex-validation/coordinator-handoff-correctness/correctness-review.json SHA256 bfb588a8e582838eb7bfeabc9d51eb1bbc78a32bc4e8cdb31a68ab54afde6236. Root/coordinator sole production contributor; reviewer independent."}}},
        "api":
        {"finished":
         {"review":
