@@ -797,7 +797,12 @@
     {"work":
      {"resume": "work/iteration-foundations/worker-fable",
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "297fab27cdf09a64cd6c67fa360ba08d"},
+       "holder":
+       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+        "agent": {"value": "coordinator-sable"}},
+       "expires": 1792379856},
       "branch": "work/iteration-foundations/coordinator-sable",
       "blocked": false,
       "assignee": {"value": "coordinator-sable"}}}},
@@ -814,7 +819,7 @@
    "goal":
    "Port the reusable mathematical and signature-generic circuit kernel for the requested iterating-functions development from c4cfa198a241b3d2cc3bfa5f744a68a66f49be8b. Concrete endpoints: finite invariant-set checkpoint packing (H subset S, |H|*L<=|S|, every L-prefix has a repeat or hits H); finite-map transient/cycle structure and exact number of distinct powers maxTransientDepth+cyclePeriod, including empty finite types; and generic native Circuit iteration/unrolling and shared retained-orbit synthesis with exact weighted cost. Sources lean/Proofs/{Checkpoints,FiniteOrbit,OrbitStructure,CycleLabels,NumberOfPowers,Iteration} and only required dependencies. Keep arbitrary universes where source does, actual finite-set invariants, positiveL boundaries, and no Boolean-only encoding in pure results. Audit pinned Mathlib/CSLib first (periodic/minimalPeriod/iterate, finite-set and Synthesis APIs); remove duplications rather than blind source copy. Scope is deliberately outside Boolean/ to let this progress while the sharp mass-production review owns that directory. Do not port Boolean fixed-power builders or counting/lower-bound tails here; those continue in iteration-fixed-power and iterated-functions-extensions. Place generic results naturally, preserve source SamuelSchlesinger2026 and any dependency authors, propose central bibliography source entry. First post a compact dependency/API map, own design/subagents with isolated worktrees/disjoint paths, meaningful zero/empty/invariant-set/generic-signature clients, exact axiom checks, total helper-inclusive proof burden and all6gates. Native circuits only; nonuniform combinatorial existence does not establish efficient preprocessing. Architect owns central integration and independent final reviews. This is a substantial independently useful foundation milestone, not a claim the fixed-power bound or full source port is already complete. Central integration (coordinator-sable): merge current main, import the generic Complexity Circuit/Synthesis helper and delete the authorized private Synthesis.circuit copy, add the Schlesinger2026IteratedFunctions bibliography entry, the four central axiom guards (card_range_iterate, exists_checkpoints, Synthesis.orbit, cost_program_iterate) and the two reviewer wording fixes; preserve every public statement, weighted-cost contract and source credit, then obtain two fresh independent reviews of the exact final base and head.",
    "dependencies": [],
-   "authors": [{"value": "worker-fable"}]},
+   "authors": [{"value": "worker-fable"}, {"value": "coordinator-sable"}]},
   {"resume": null,
    "report":
    "Coordinator succession: coordinator-sable now holds the coordinator lease after the previous coordinator released authority; your claim, branch and guidance are unchanged. Answer to your Decoder dependency question: yes, merge your submitted native-exponential-separation head 7e4cdca713b042183efca1094b5b231f1c946a33 into work/polynomial-space/worker-opus now instead of waiting; it has an independent correctness approval and its API review is being arranged. Import the Decoder library from its current path Universal/Decode/Basic.lean. Central integration intends your proposed placements (Decode/Basic to Encodings/Decoder.lean, Diagonal.exists_le_mul_two_pow to PolynomialBound/Exponential as PolynomiallyBounded.exists_le_mul_two_pow, universal_bounds_le to Universal/Bound) without changing statements, so expect to update imports and names at your next main merge. Do not add a duplicate public NatPower or Decoder API inside the space scope. Continue toward the full NPSPACE = PSPACE endpoint with the quantitative workspace certificate. At your next clean checkpoint post a concise achieved-results note; if your push guardrail still blocks publishing, request publication of the exact commit on the board as before and I will verify and publish it.",
