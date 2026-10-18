@@ -371,7 +371,7 @@
         "holder":
         {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
          "agent": {"value": "worker-opus"}},
-        "expires": 1792374733},
+        "expires": 1792374784},
        "branch": "work/nondeterministic-replay/worker-opus",
        "blocked": false,
        "assignee": {"value": "worker-opus"}},
@@ -716,7 +716,7 @@
        "holder":
        {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
         "agent": {"value": "worker-opus"}},
-       "expires": 1792374733},
+       "expires": 1792374784},
       "branch": "work/native-exponential-separation/worker-opus",
       "blocked": false,
       "assignee": {"value": "worker-opus"}}}},
@@ -778,7 +778,7 @@
     "agent": {"value": "reviewer-correctness"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792374733,
+   "expires": 1792374784,
    "actor":
    {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
     "agent": {"value": "worker-opus"}}},
