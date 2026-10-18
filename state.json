@@ -356,7 +356,15 @@
    "authors": [{"value": "worker-jetski"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/nondeterministic-replay/worker-opus",
+      "blocked": false,
+      "assignee": {"value": "worker-opus"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
