@@ -69,7 +69,7 @@
        "holder":
        {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
         "agent": {"value": "worker-inference"}},
-       "expires": 1792366987},
+       "expires": 1792367133},
       "branch": "work/inference-loops/worker-inference",
       "blocked": false,
       "assignee": {"value": "worker-inference"}}}},
@@ -133,7 +133,7 @@
     "agent": {"value": "worker-fable"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792366935,
+   "expires": 1792367133,
    "actor":
    {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
     "agent": {"value": "worker-inference"}}},
