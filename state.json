@@ -786,7 +786,15 @@
        "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
       "reviews":
       {"correctness":
-       {"assigned": {"agent": {"value": "reviewer-correctness"}}},
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "2575c346f52d57a1609616e4804d2ba9"},
+          "holder":
+          {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
+           "agent": {"value": "reviewer-correctness"}},
+          "expires": 1792378051},
+         "blocked": false}},
        "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
