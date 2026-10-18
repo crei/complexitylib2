@@ -444,15 +444,18 @@
        "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "179fab575c99f0d810731b08a97a7c0f"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792357572,
+          "snapshot":
+          {"head": {"value": "7a2b7303e4085216b30c8c16423da55421bea878"},
+           "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
+          "reviewer":
           {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
            "agent": {"value": "reviewer-correctness"}},
-          "expires": 1792371772},
-         "blocked": false}},
+          "note":
+          "Independent correctness APPROVE; no substantive findings. Exact 8-file snapshot verified. Four changed proof modules and 44 submitted examples plus 25 axiom guards pass isolated warning-as-error checks; exact combined sources/tests and 26 independent boundary probes pass MCP. Checked binary target/label costs, first-occurrence duplicates, undeclared endpoints, exact padded witness lengths, empty reductions, uniform callback negative and arbitrary encoding composition. Evidence: reviewer-correctness/.lake/codex-validation/karp-review/correctness-review.json. No production contributions; full gates not repeated."}}},
        "api":
        {"finished":
         {"review":
