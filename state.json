@@ -1,5 +1,15 @@
 {"version": 1,
- "integration": null,
+ "integration":
+ {"snapshot":
+  {"head": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"},
+   "base": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"}},
+  "lease":
+  {"token": {"value": "3b298c538cae24c29e596b926b4cfa93"},
+   "holder":
+   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+    "agent": {"value": "coordinator"}},
+   "expires": 1792372935},
+  "epic": {"value": "karp-reductions"}},
  "epics":
  [{"resume": null,
    "report":
