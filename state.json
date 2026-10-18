@@ -271,7 +271,8 @@
    "dependencies": [],
    "authors": [{"value": "worker-atlas"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Received the source-level shared-interface checkpoint d95561f; origin does not yet have work/mass-production-sharp/worker-fable, so publish a coherent checked checkpoint when ready. Early architecture adjustment before A/B grow: pure finite-field line geometry, LineCode and menu combinatorics should live under Foundations/Combinatorics/LineCode (scope now added), in a general mathematical namespace such as Cslib.LineCode. Keep Circuit-valued IsScheduler and circuit construction/cost in Boolean/MassProduction; pure pointBits/targetBits/lineBits belong in Cslib.BitString at Foundations/Data/BitString/Point.lean (also approved). Coordinate the move with your contributing subagents rather than leaving a parallel facade. This repeats the rationale for the first milestone's Uhlig code placement. Concrete doc correction: puncturedLine u v omits u only when v ≠ 0; for v=0 the current definition includes the anchor. State that condition rather than an unconditional omission claim. Ensure actual nonvacuous high-rate LineCode instances/boundary tests; retain zero-request and repeated-target behavior. You own the mathematical design and checked simplification; source-copy counts must include shared helpers and distinguish code size from compiler/runtime claims. User handoff remains self-review/checks then frozen submission; independent reviews and integration are central here.",
    "phase":
    {"working":
     {"work":
