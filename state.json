@@ -205,20 +205,27 @@
    "report":
    "Approved the new machine-level Complexity/Nondeterministic.lean path: place general NTM decision predicates and path extension lemmas there, with Classes/NP reserved for the verifier bridge. Complete your reported review fixes, especially Set-choice reuse, nonzero-certificate instances and stuck/early-output boundary tests. The coordinator will handle integration and branch publication if your local push policy requires assistance; do not disable or bypass your guardrail. Report the exact final clean checked commit, whether it is available in our shared object store, and any missing central axiom/roadmap edits. Continue owning implementation and subagent delegation; no need to wait for additional architectural permission within scope.\nThe independent preliminary correctness reviewer confirmed your checkpoint 9ed29bb forks from 9bddbe7, not current main 8cfd2b6. No concern for the in-progress branch, but merge current main at your next clean checkpoint and before final ready so the submitted diff includes no reversions of coordinator-guidance files. Inference da2e439 is next in the integration queue; incorporate it too after it lands. The reviewer is auditing only the NP/NTM additions at this stage, treating your reported fixes as in progress.\n\nUSER WORKFLOW UPDATE: workers implement, review their own work and run required checks before submitting a frozen branch. The architect now centralizes independent review, ordinary integration fixes, main merges/conflict resolution and landing in the coordinator thread; local review subagents may assist. Keep contributor/source/validation records and remain available for substantive fixes. No additional cross-worker review assignment or external pre-submission review is required. This supersedes earlier requests to spend waiting time reviewing another worker, and avoids sending branches back merely for mechanical integration updates. Continue your substantial implementation; final exact-source/axiom/nonvacuity safeguards remain.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Publication request: my local lean4 guardrail blocks ordinary git push. Please publish exact commit 9e8d340 (merge of main da2e439 into my branch; all six checks pass at it) with: git push origin 9e8d340:refs/heads/work/nondeterministic-verifiers/worker-opus (fast-forward of the remote branch from 1196ca5; the object is in the shared repository store). I will run ready as soon as the remote branch shows 9e8d340; the user may also push it directly.",
-      "lease":
-      {"token": {"value": "d9bdcf53d2c447e72fa8eedb9b52486c"},
-       "holder":
-       {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
-        "agent": {"value": "worker-opus"}},
-       "expires": 1792370760},
-      "branch": "work/nondeterministic-verifiers/worker-opus",
-      "blocked": false,
-      "assignee": {"value": "worker-opus"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Publication request: my local lean4 guardrail blocks ordinary git push. Please publish exact commit 9e8d340 (merge of main da2e439 into my branch; all six checks pass at it) with: git push origin 9e8d340:refs/heads/work/nondeterministic-verifiers/worker-opus (fast-forward of the remote branch from 1196ca5; the object is in the shared repository store). I will run ready as soon as the remote branch shows 9e8d340; the user may also push it directly.",
+       "lease":
+       {"token": {"value": "d9bdcf53d2c447e72fa8eedb9b52486c"},
+        "holder":
+        {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
+         "agent": {"value": "worker-opus"}},
+        "expires": 1792370760},
+       "branch": "work/nondeterministic-verifiers/worker-opus",
+       "blocked": false,
+       "assignee": {"value": "worker-opus"}},
+      "summary":
+      "Milestone 1 at 9e8d340 (branch head; merges main da2e439, so the publication request is resolved: the user pushed it). All six checks pass at this exact commit. FILES: (1) Machine/Nondeterministic.lean: MultiTapePTM.branches (Set-choice table of both coins) and toNTM := branches.toNTM via MultiTapeMachine.toNTM (Choose:=Set design); tr_toNTM_iff, step_toNTM_iff, exists_step_toNTM (never stuck), stepCoins/tapes_runClosedConfigFromCoins, exists_runPath_toNTM_iff (run paths of length n = replays of coin lists of length n; halted self-loops = ignored coins), mem_support_runClosedConfigFrom_iff, runsInTime_toNTM, exists_computationPath_toNTM_iff. Machine/Equivalence.lean: +Config.eq_iff_tapes_eq. (2) MultiTape/Complexity/Nondeterministic.lean (approved path): MultiTapeNTM.Accepts (some computation path ends halted with output exactly [true]); DecidesInTime (on every enc a: RunsInTime and a in A iff Accepts); DecidableInTime (one machine, Finite State, Bool alphabet); DecidableInPolyTime (PolyBounded in |enc a|); DecidesInTime.mono; RunPath.exists_extend_of_halted, RunsInTime.exists_time_eq, accepts_iff_exists_time_eq, RunPath.exists_extend and ComputationPath.exists_halted_extension (actual halting when no configuration is stuck). Docs state RunsInTime permits shorter stuck paths, which never accept. (3) Classes/NP/GuessVerify.lean (only the verifier bridge in Classes/NP): IsVerifier.exists_decidesInTime: a finite fair-coin machine whose toNTM decides A within explicit c*(|enc a|+1)^d and is never stuck; certificate length exactly p.eval |enc a| (sampleList); decidableInPolyTime_of_mem_NP. Route: IsPPTOn via sampleList + map_with, IsPPTOn.exists_halting_machine, the bridge. NP.lean docstring updated (converse not proved). TESTS ComplexityTests/NondeterministicVerifiers.lean: stuck machine (RunsInTime vacuous, not halted, rejects, DecidesInTime of the empty set); fair coin (accepting and rejecting branches, RunsInTime 1, halted self-loop to time 3, halted extension); looping machine violates every bound; fork with stuck + accepting branch (accepts, not RunsInTime 1, RunsInTime 2); machine emitting [true,true] does not accept; SAT client; univ/empty trivial verifiers on the empty instance; one-bit certificate verifier (p=1 accepts only by guessing [true]) and p=0 (rejects: exact certificate length); pair-encoded instance verifier; #guard_msgs axiom checks for 7 headline results (propext, Classical.choice, Quot.sound only). SOURCES: AroraBarak09 Def 2.5, Thm 2.6 (inclusion of NP in nondeterministic polynomial time); v1 dev 2ad6cb48 compared (own TM model, verifier=>NTIME only), no v1 code ported. CONTRIBUTORS: worker-opus (Claude Opus 5.5); one read-only Claude subagent preliminary review (no blocking findings; its should-fixes applied in 95f546a); not final reviewers. LIMITATIONS: converse NTM=>verifier and the iff are out of scope (nondeterministic-replay continuation). Lean MCP unavailable in my session; validated with lake. CENTRAL REQUESTS: ComplexityTests/Axioms.lean named checks for Cslib.Complexity.decidableInPolyTime_of_mem_NP and Cslib.Complexity.IsVerifier.exists_decidesInTime; ROADMAP Machine-class milestones bullet: replace 'nondeterministic-machine/verifier equivalence' with 'verifiers from polynomial-time nondeterministic machines (NP in nondeterministic polynomial time is proved in Classes/NP/GuessVerify)'.",
+      "snapshot":
+      {"head": {"value": "9e8d340c2ba4f9b094364d15da96c11eaeb25630"},
+       "base": {"value": "da2e439b523409d192be7a977bdac7aca84064e3"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP.lean",
     "Complexity/Computability/Complexity/Classes/NP",
