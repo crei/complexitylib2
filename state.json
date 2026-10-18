@@ -750,7 +750,16 @@
            "agent": {"value": "reviewer-integration"}},
           "note":
           "Independent full7file981line correctness audit, no production or retained-test contribution. No mathematical blocker. Total executable Decoder/framing and malformed output degree checked; binary clock including n0; fixed eBit symbol conversion; actual native interpreter on WHOLE padded input; exact halted singleton-true verdict; stable halted run and padded polynomial-vs-exponential contradiction for tidy P and arbitrary plain finite binary machines. Inspected native universal_desc and simulation contracts plus BigO comp/prod and Degree semantics. All preprocessing, copying, storage and verdict costs remain charged; polynomial factor times2^(3n) time and2^n space gives exact InO2^(4n)/2^(2n). No totality assumption on described machine; fixed hypothetical description can usechoice, no efficient arbitrary opaque compiler or tight/class-named hierarchy claim. Own-cache MCP Hierarchy and TimeHierarchy/7guards clean; independent malformed/frame/clock/empty diagonal/exact verdict probes and concrete unhalted emit-true loop all clean. Read pinned v1add0aca8 Hierarchy and relevant Diagonal excerpts plus primary author-hosted AB Theorem3.1 text; native interpreter credit preserved. Minor doc crossref omits Diagonal namespace on universal_bounds_le, to fix with planned relocation. Full6 author report retained, not repeated. Seven hashes and evidence .lake/codex-validation/native-exponential-separation-correctness/correctness-review.json SHA2567f6a61a1fd73dbfddb1fe4f2978eb5b904521d8836cf85adcb440014b6de94ff. Tracked tree clean; API and later central delta remain separate."}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "9498a205343ebaa856a638725fa71c88"},
+          "holder":
+          {"session": {"value": "33380288772710be7744d177c8f66871"},
+           "agent": {"value": "reviewer-sable-api2"}},
+          "expires": 1792380309},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode",
