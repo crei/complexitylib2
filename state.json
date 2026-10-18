@@ -354,7 +354,12 @@
     {"work":
      {"resume": "work/fagin-converse/worker-jetski",
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "88349439a121df3af41a3bae69972340"},
+       "holder":
+       {"session": {"value": "9427f9bcda5b4272b037bcdec0a08ee2"},
+        "agent": {"value": "integrator-sable-2"}},
+       "expires": 1792381983},
       "branch": "work/fagin-converse/integrator-sable-2",
       "blocked": false,
       "assignee": {"value": "integrator-sable-2"}}}},
@@ -369,7 +374,7 @@
    "goal":
    "Complete the converse direction of Fagin's theorem after the efficient ESO checker milestone: for isomorphism-invariant finite relational queries, verifier NP implies existential second-order definability in the existing Mathlib/Cslib.Logic.ESO semantics, then combine both directions. This is new mathematical work beyond V1. Reuse the numbered finite structures and native checker from fagin, and the existing verifier machine/Cook-Levin tableau. Make guessed order, tuple-indexed time/tapes, vocabulary and encoding assumptions explicit, with empty/singleton structure cases treated correctly. Avoid a parallel logic or class definition and vacuous tableau hypotheses. Sources Fagin1974 and Immerman1999; V1 dev @add0aca8ee0d71e68969f2cb45cf91554a50f787 supplies only the other direction. Intended for worker-jetski to continue leading with subagents after the first milestone. Preserve source credit, theorem-level tests and all six checks, and obtain independent exact-commit API/correctness reviews. Coordinate shared machine dependencies with nondeterministic-verifiers; verifier NP and NTM equivalence remain distinct endpoints until connected. Inspect status --json for guidance.",
    "dependencies": [{"value": "fagin"}],
-   "authors": [{"value": "worker-jetski"}]},
+   "authors": [{"value": "worker-jetski"}, {"value": "integrator-sable-2"}]},
   {"resume": null,
    "report":
    "Architect integration after both independent approvals: register the existing checker certificate with fun_prop, add the two reviewed ordinary-expression clients, correct test prose, merge current main, and add the named central guards, roadmap completion and upstream placement note. Original worker proof development remains unchanged.",
