@@ -553,7 +553,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "80eacf7158ccfb95b72cd094a8753bf0"},
+       "holder":
+       {"session": {"value": "2c241a85615db03e563c3e1245d12306"},
+        "agent": {"value": "worker-nova"}},
+       "expires": 1792373330},
       "branch": "work/sipser-lautemann/worker-nova",
       "blocked": false,
       "assignee": {"value": "worker-nova"}}}},
@@ -570,7 +575,7 @@
    "goal":
    "Prove the full native Sipser-Lautemann theorem BPP enc ⊆ SigmaP 2 enc ∩ PiP 2 enc and BPP enc ⊆ PH enc, for the current verifier-based classes, with an actual native polynomial-time matrix certificate rather than a conditional MatrixInP premise. Source V1 dev @add0aca8ee0d71e68969f2cb45cf91554a50f787 Complexitylib/Classes/PH/SipserLautemann* is by Bolton Bailey; retain his credit when porting, cite AroraBarak09 Theorem7.15 and inspect source references. Use the existing verifier V and seed polynomial directly; V1's old NTM/Cobham/choice-simulation machinery is unnecessary for this representation and should not be ported. Reuse Foundations/Combinatorics/MajorityVote.lean (card_filter_card_filter_le_le), FiniteCover.lean (exists_cover_of_scaled_card_lt), native bitstring/list operations and fun_prop/polytime certificates; avoid duplicate Chernoff/covering arguments. Construct majority amplification, explicit polynomial-length shift witnesses and universal seeds, and a functional shifted-seed matrix whose exact quantifier-block lengths match IsAlternatingVerifier. Preserve arbitrary input encoding, zero-length input/seed, malformed or short matrix strings, majority tie convention, completeness/soundness cardinalities and actual runtime. Complement closure should derive Pi2 without a second duplicated construction. Own design and subagents in isolated worktrees; first report a dependency map and compact meaningful theorem endpoint, request scope changes before editing other workers' files. Supply nonvacuous examples, failure boundaries, headline axiom checks and six gates; self-review then frozen branch for central independent review and integration. No custom TM expected; any genuinely missing primitive must be justified. Central Axioms/ROADMAP/bibliography edits remain coordinated.",
    "dependencies": [{"value": "karp-reductions"}],
-   "authors": []}],
+   "authors": [{"value": "worker-nova"}]}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
