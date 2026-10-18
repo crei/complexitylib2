@@ -372,7 +372,16 @@
        "base": {"value": "6abc9844702e1d73c22e5f1915984a18f3f99d96"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor1"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api1"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "9118e08d2c94b1805886535c133d395a"},
+          "holder":
+          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
+           "agent": {"value": "reviewer-sable-api1"}},
+          "expires": 1792380368},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
