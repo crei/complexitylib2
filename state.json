@@ -8,7 +8,7 @@
    "holder":
    {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
     "agent": {"value": "coordinator"}},
-   "expires": 1792372935},
+   "expires": 1792373024},
   "epic": {"value": "karp-reductions"}},
  "epics":
  [{"resume": null,
@@ -442,7 +442,7 @@
         "holder":
         {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
          "agent": {"value": "coordinator"}},
-        "expires": 1792372684},
+        "expires": 1792373024},
        "branch": "work/karp-reductions/coordinator",
        "blocked": false,
        "assignee": {"value": "coordinator"}},
@@ -624,11 +624,11 @@
   "holder":
   {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
    "agent": {"value": "coordinator"}},
-  "expires": 1792372628},
+  "expires": 1792373024},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792372628,
+   "expires": 1792373024,
    "actor":
    {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
     "agent": {"value": "coordinator"}}},
