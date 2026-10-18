@@ -839,7 +839,16 @@
            "agent": {"value": "reviewer-correctness"}},
           "expires": 1792378232},
          "blocked": false}},
-       "api": {"assigned": {"agent": {"value": "reviewer-api"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "bea44e8db615daecb0e17b5fcb8bea65"},
+          "holder":
+          {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
+           "agent": {"value": "reviewer-api"}},
+          "expires": 1792378369},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
     "Complexity/Foundations/Combinatorics/FunctionalGraph.lean",
