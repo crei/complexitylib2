@@ -443,15 +443,18 @@
        "base": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "46f223e17af1414eb48f8586156091a8"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792358495,
+          "snapshot":
+          {"head": {"value": "accc2af38ab4e83a324ceeb08116a5037016c8e7"},
+           "base": {"value": "c5e4365076f88db2c4f08b0568b0644bef8d3b7d"}},
+          "reviewer":
           {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
            "agent": {"value": "reviewer-correctness"}},
-          "expires": 1792372843},
-         "blocked": false}},
+          "note":
+          "Independent final correctness delta APPROVE; no findings. All seven implementation/source/test files byte-identical to reviewed 7a2b730. Exact ancestry/current-main merge, single test import, three central NPComplete guards copied from checked tests, and precise completed-roadmap-item removal verified. Reused thorough original MCP/split/boundary evidence; no redundant builds. Evidence reviewer-correctness/.lake/codex-validation/karp-integration/correctness-review.json SHA256 78f8c04122077dd47516455dd9a7a8d24cb3c45c2975dae50484db77532ba9a5."}}},
        "api":
        {"active":
         {"report": "",
