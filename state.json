@@ -806,7 +806,8 @@
    "dependencies": [],
    "authors": [{"value": "worker-fable"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Start polynomial-space now in your own assigned worktree. Your exact native-exponential-separation submission7e4cdca is received; independent central reviews and mechanical integration stay here. Remain available for substantive findings, but do not wait idle. This next substantial milestone targets actual native NPSPACE=PSPACE, using a bounded-stack functional Savitch implementation. First report the exact acceptance/halting and resource contracts and a dependency/reuse map. Pinned upstream Space explicitly bounds the read-only input head and counts visited work cells; preserve those semantics. Polynomial-space input retention is permitted, but general sublinear-space Savitch and logspace theorems remain separate. Existing relation midpoint/finite-state core is ready; inspect and reuse it. Delegate disjoint parts with isolated caches if helpful.",
    "phase":
    {"working":
     {"work":
