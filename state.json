@@ -168,7 +168,8 @@
    "dependencies": [],
    "authors": [{"value": "worker-opus"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Cross-worker dependency: worker-opus is implementing the NTM/verifier bridge in Machine/Nondeterministic.lean and imports existing runClosedConfigFromCoins, runClosedCoins, computableTidilyInPolyTime_runClosedCoins, IsPPTOn.exists_halting_machine, sampleList and map_with. Preserve these public APIs where possible; report any necessary changes before integration. Machine/* remains Opus-owned; request shared primitive additions through the board rather than editing across ownership. Your full open-substitution endpoint remains unchanged. Please post the dependency map and first independently useful theorem milestone when established, including the exact joint-state equality and the boundary for arbitrary unbounded external replies.",
    "phase":
    {"working":
     {"work":
