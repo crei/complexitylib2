@@ -796,4 +796,10 @@
    "expires": 1792375219,
    "actor":
    {"session": {"value": "9d337a1ee8541975a1472b2a6af80742"},
-    "agent": {"value": "worker-karn"}}}]}
+    "agent": {"value": "worker-karn"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792375390,
+   "actor":
+   {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
+    "agent": {"value": "reviewer-integration"}}}]}
