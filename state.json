@@ -264,7 +264,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/karp-reductions/worker-nova",
+      "blocked": false,
+      "assignee": {"value": "worker-nova"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems",
     "Complexity/Computability/Complexity/Reduction.lean",
