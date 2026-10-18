@@ -34,7 +34,7 @@
           "holder":
           {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
            "agent": {"value": "worker-inference"}},
-          "expires": 1792370871},
+          "expires": 1792370967},
          "blocked": false}},
        "api":
        {"active":
@@ -473,7 +473,7 @@
     "agent": {"value": "worker-fable"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792370129,
+   "expires": 1792370967,
    "actor":
    {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
     "agent": {"value": "worker-inference"}}},
