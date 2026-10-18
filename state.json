@@ -1007,4 +1007,10 @@
    "expires": 1792378842,
    "actor":
    {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
-    "agent": {"value": "reviewer-integration"}}}]}
+    "agent": {"value": "reviewer-integration"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792379177,
+   "actor":
+   {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
+    "agent": {"value": "worker-mythos"}}}]}
