@@ -492,13 +492,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Architect integrates current main and the two independently reviewed wording corrections: active-claim note availability and resuming from previous branch history. Preserve contributor record and obtain fresh exact final delta reviews.",
+     {"resume": "work/review-handoff/reviewer-correctness",
+      "report": "",
       "lease": null,
-      "branch": "work/review-handoff/reviewer-correctness",
+      "branch": "work/review-handoff/coordinator",
       "blocked": false,
-      "assignee": {"value": "reviewer-correctness"}}}},
+      "assignee": {"value": "coordinator"}}}},
    "paths": ["AGENTS.md", "CONTRIBUTING.md"],
    "id": {"value": "review-handoff"},
    "goal":
