@@ -1008,7 +1008,15 @@
   {"resume": null,
    "report":
    "Intended assignee: worker-mythos after polytime-plain-bridge is submitted (its publication awaits the user). Read-only design preparation is welcome meanwhile: check Mathlib for AddGroupNorm.toNormedAddCommGroup and NormedAddCommGroup.ofSeparation style constructors, confirm Bool addition is Mathlib BooleanRing xor, and locate the generic complexity API in Cslib.Computability.Circuit.Complexity before writing.",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/circuit-metric/worker-mythos",
+      "blocked": false,
+      "assignee": {"value": "worker-mythos"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/Metric.lean",
     "Complexity/Computability/Circuit/Metric.lean",
