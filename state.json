@@ -90,7 +90,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "37b61f429c4db91a8cb37a6c76436e56"},
+       "holder":
+       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
+        "agent": {"value": "coordinator"}},
+       "expires": 1792367003},
       "branch": "work/coordinator-guidance/coordinator",
       "blocked": false,
       "assignee": {"value": "coordinator"}}}},
@@ -99,7 +104,7 @@
    "goal":
    "Enable the coordinator to send visible guidance and revise an active epic's goal or add file scopes without revoking the worker's existing claim. Preserve session/lease generations, authors, worker reports, dependencies and exact-review safety. Scope additions must remain disjoint from other active work; submitted plans require reopen before revision and merged plans are immutable. Use existing journal state where possible; no schema migration, daemon or scheduler. Add meaningful state-transition and Git/CLI tests and concise workflow documentation, run standalone tests and all six project checks, obtain two independent reviews, and publish through the same board workflow.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "coordinator"}]}],
  "coordinator":
  {"token": {"value": "a9e1a0d14ac25f86050dae456f52ad65"},
   "holder":
