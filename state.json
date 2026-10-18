@@ -781,15 +781,18 @@
           "note":
           "Independent full7file981line correctness audit, no production or retained-test contribution. No mathematical blocker. Total executable Decoder/framing and malformed output degree checked; binary clock including n0; fixed eBit symbol conversion; actual native interpreter on WHOLE padded input; exact halted singleton-true verdict; stable halted run and padded polynomial-vs-exponential contradiction for tidy P and arbitrary plain finite binary machines. Inspected native universal_desc and simulation contracts plus BigO comp/prod and Degree semantics. All preprocessing, copying, storage and verdict costs remain charged; polynomial factor times2^(3n) time and2^n space gives exact InO2^(4n)/2^(2n). No totality assumption on described machine; fixed hypothetical description can usechoice, no efficient arbitrary opaque compiler or tight/class-named hierarchy claim. Own-cache MCP Hierarchy and TimeHierarchy/7guards clean; independent malformed/frame/clock/empty diagonal/exact verdict probes and concrete unhalted emit-true loop all clean. Read pinned v1add0aca8 Hierarchy and relevant Diagonal excerpts plus primary author-hosted AB Theorem3.1 text; native interpreter credit preserved. Minor doc crossref omits Diagonal namespace on universal_bounds_le, to fix with planned relocation. Full6 author report retained, not repeated. Seven hashes and evidence .lake/codex-validation/native-exponential-separation-correctness/correctness-review.json SHA2567f6a61a1fd73dbfddb1fe4f2978eb5b904521d8836cf85adcb440014b6de94ff. Tracked tree clean; API and later central delta remain separate."}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "9498a205343ebaa856a638725fa71c88"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792366776,
+          "snapshot":
+          {"head": {"value": "7e4cdca713b042183efca1094b5b231f1c946a33"},
+           "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
+          "reviewer":
           {"session": {"value": "33380288772710be7744d177c8f66871"},
            "agent": {"value": "reviewer-sable-api2"}},
-          "expires": 1792381172},
-         "blocked": false}}}}}},
+          "note":
+          "Independent API/placement review of exact 7e4cdca (base a5cb582, ancestry verified); no contribution to this epic. Read all 7 files in full plus Encodings/*, Universal/* (vendored crei @7f7c0696 markers), Universal/Bound+Machine, PolynomialBound/*, Degree/Lists calculus, UPSTREAM.md, pinned cslib. Evidence: lake build of the 4 modules + ComplexityTests.TimeHierarchy --wfail --iofail clean (3876 jobs); mk_all --check, lint-style, git diff --check clean; 7 lake env lean probes clean (client shapes of the 3 headlines, Decoder on a new structure encoding via map, frame/decoder/clock boundaries, relocation feasibility). No blocking findings; no duplication against pinned cslib or Complexity/. Placement: (1) Decode/Basic -> Encodings/Decoder.lean: agree (imports only Complexity.Lists+Encodings.Option; precedent Encodings/Length). (2) exists_le_mul_two_pow -> PolynomialBound/Exponential as PolynomiallyBounded.exists_le_mul_two_pow: agree, compiles with that file's imports (probe 4). (3) universal_bounds_le -> Universal/Bound.lean is INFEASIBLE: runBound lives in vendored Universal/Machine.lean:149, which imports Bound (probe 5a); keep Diagonal.universal_bounds_le in Hierarchy (sole client) or add a candidate module beside Machine.lean (e.g. Universal/RunBound.lean, marker 'candidate (addition to crei/tidy-universal Universal/Machine.lean)', UPSTREAM row); do not edit vendored files. Nits: Hierarchy.lean:53 crossref lacks Diagonal.; Diagonal.doubled/encDoubled/doubleT share a name with vendored public Turing.MultiTapeTM.doubled (different map); unframe/dropFrame degree-1 certificates re-derived inline (Decode/Basic:197-200, Hierarchy:372); NatPower marker could name Encodings/Nat.lean as destination; test file named TimeHierarchy. Central: 3 Axioms.lean guards, ROADMAP line 154. Not run: lake test/lint/checkInitImports. Evidence .lake/codex-validation/native-exponential-separation-api/review.json SHA256 20c5d515eaeedd23ddbba343877edadc0c9acc1278c9aef21f0e110e75d77c3d"}}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode",
