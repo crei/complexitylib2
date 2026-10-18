@@ -726,7 +726,12 @@
     {"work":
      {"resume": "work/native-exponential-separation/worker-opus",
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "e1d5474d32ad67c843686c62d601934c"},
+       "holder":
+       {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
+        "agent": {"value": "integrator-sable-1"}},
+       "expires": 1792381954},
       "branch": "work/native-exponential-separation/integrator-sable-1",
       "blocked": false,
       "assignee": {"value": "integrator-sable-1"}}}},
@@ -745,7 +750,7 @@
    "goal":
    "Construct a concrete total Boolean decider on raw bit words with a native exponential-time certificate and prove its language is outside P encBits (see the original goal in the journal: ComputableTidilyInO diagonal encBits encBool 2^(4n) 2^(2n), total decoder with padded-prefix law, binary exponential clock, universal run, diagonal argument; no DTIME/EXP definitions). Integration addendum: the generic decoder library lives at Encodings/Decoder.lean, exists_le_mul_two_pow at PolynomiallyBounded.exists_le_mul_two_pow in PolynomialBound/Exponential.lean, universal_bounds_le stays in Hierarchy.lean, UPSTREAM.md records the placements; headline axiom guards remain in ComplexityTests/TimeHierarchy.lean.",
    "dependencies": [],
-   "authors": [{"value": "worker-opus"}]},
+   "authors": [{"value": "worker-opus"}, {"value": "integrator-sable-1"}]},
   {"resume": null,
    "report":
    "iteration-foundations landed on main 94dcd9d (both fresh approvals). You now own this implementation: start iteration-fixed-power in your worktree from current main and use the landed public API (Cslib.FunctionalGraph.*, Circuit.iterate, Synthesis.orbit, the generic Synthesis.circuit from Circuit/Synthesis.lean). Post the dependency map and the chosen native namespaces first, then implement the full fixed-power theorem with the source constant 40000 and its consequences as the goal states; keep headline #print axioms guards in your own test module ComplexityTests/Iteration.lean (central guard files are no longer per-epic scope). Reviewer nits recorded on iteration-foundations for an optional later cleanup: absorb_iterate_card_eq_iff naming, _apply_iterate naming convention versus Mathlib, a phase characterisation lemma; do not spend time on them now.",
