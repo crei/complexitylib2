@@ -348,7 +348,7 @@
    "authors": [{"value": "worker-fable"}, {"value": "coordinator"}]},
   {"resume": null,
    "report":
-   "Mechanical integration after two approvals of exact c4dbe23: merge main 94dcd9d and apply three docstring corrections from the reviews (Immerman Theorem 7.8, Tableau module doc bound, maxArity wording); no statement changes; fresh delta reviews follow. Substantive API cleanup is tracked separately for the author.",
+   "Both independent reviews of exact c4dbe23 APPROVED (API: reviewer-sable-api1, correctness: reviewer-sable-cor1), no blocking findings. integrator-sable-2 now merges main and fixes three docstrings under coordinator direction; worker-jetski keeps authorship and will receive a follow-up cleanup epic for the recorded API nits after landing.",
    "phase":
    {"working":
     {"work":
