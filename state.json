@@ -900,7 +900,15 @@
    "authors": [{"value": "coordinator"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/polytime-plain-bridge/worker-mythos",
+      "blocked": false,
+      "assignee": {"value": "worker-mythos"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Complexity/PolyTime/Plain.lean",
     "Complexity/Computability/Complexity/Classes/P.lean",
