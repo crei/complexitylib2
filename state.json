@@ -412,7 +412,16 @@
       {"head": {"value": "0c62545a250a0b4d8ca564c73142124cbaef0a1d"},
        "base": {"value": "693d8360388d7f854b4a87549f22741a853a9215"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "worker-inference"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "c2961763afce395e1e6b7fb655f6e407"},
+          "holder":
+          {"session": {"value": "2b30326f9d07dc05f75a3532527974b3"},
+           "agent": {"value": "worker-inference"}},
+          "expires": 1792375054},
+         "blocked": false}},
        "api": "unassigned"}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
