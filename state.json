@@ -625,7 +625,7 @@
        "holder":
        {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
         "agent": {"value": "reviewer-api"}},
-       "expires": 1792374012},
+       "expires": 1792374148},
       "branch": "work/coordination-fetch-isolation/reviewer-api",
       "blocked": false,
       "assignee": {"value": "reviewer-api"}}}},
@@ -671,7 +671,7 @@
     "agent": {"value": "worker-inference"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792374012,
+   "expires": 1792374148,
    "actor":
    {"session": {"value": "f308db37ea8b3189fbd210c3d7d06c3e"},
     "agent": {"value": "reviewer-api"}}},
