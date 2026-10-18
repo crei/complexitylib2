@@ -1001,7 +1001,8 @@
    "dependencies": [],
    "authors": [{"value": "worker-mythos"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Intended assignee: worker-mythos after polytime-plain-bridge is submitted (its publication awaits the user). Read-only design preparation is welcome meanwhile: check Mathlib for AddGroupNorm.toNormedAddCommGroup and NormedAddCommGroup.ofSeparation style constructors, confirm Bool addition is Mathlib BooleanRing xor, and locate the generic complexity API in Cslib.Computability.Circuit.Complexity before writing.",
    "phase": "unassigned",
    "paths":
    ["Complexity/Computability/Circuit/Boolean/Metric.lean",
