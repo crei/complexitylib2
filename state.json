@@ -763,13 +763,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Mechanical integration after two approvals of exact 7e4cdca: merge main 94dcd9d, relocate the decoder library to Encodings/Decoder.lean and exists_le_mul_two_pow to PolynomialBound/Exponential.lean, docstring crossref fix, trueDoubled renames, UPSTREAM rows; no statement changes; fresh delta reviews follow.",
+     {"resume": "work/native-exponential-separation/worker-opus",
+      "report": "",
       "lease": null,
-      "branch": "work/native-exponential-separation/worker-opus",
+      "branch": "work/native-exponential-separation/integrator-sable-1",
       "blocked": false,
-      "assignee": {"value": "worker-opus"}}}},
+      "assignee": {"value": "integrator-sable-1"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode",
