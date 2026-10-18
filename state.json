@@ -617,15 +617,18 @@
        "base": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "c02fa0c424f1e723e0b8aa5c7311d526"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792362070,
+          "snapshot":
+          {"head": {"value": "156fda3d2f3fa04b6a0105c469878e2a1a6e6f7a"},
+           "base": {"value": "2d04c3fb53fda964713e95420d500efd32a5cc19"}},
+          "reviewer":
           {"session": {"value": "0d12b53f8147cb56fdfeafff72c0857f"},
            "agent": {"value": "reviewer-integration"}},
-          "expires": 1792376314},
-         "blocked": false}},
+          "note":
+          "Independent full six-file correctness review by reviewer-integration; no implementation, proof, retained-test or integration contribution. No mathematical findings. Checked R=6m+48, t=2R and both strict bounds 2^m*8^R<9^R and t*8^R<9^R; translation-cardinality cover and soundness union bound; strict-majority ties and m=0; row-major codecs and exact existential W=t*(t*m) / universal L=t*m lengths; total malformed-word defaults; complement-derived Pi2 and existing native BPP/PH meanings. Matrix uses ordinary bounded functional loops and an actual native polytime certificate from hV, including encoding/length/runtime costs. Main module and full submitted tests including ten axiom guards are complete-clean in Lean MCP. Six independent ignored minimal-import clients pass: arbitrary-encoding quantified endpoint/native certification, all-dimension combined-codec roundtrip, zero-dimensional codecs and nonzero shift/trial offsets. Own independent COW cache, exact HEAD/base ancestry, clean tracked tree, source hashes and diff verified. Primary author/publisher indexed text supports counting method and published Theorem7.15; full Lautemann PDF not inspected. API-requested cleanup and source-record correction remain separate; future integration needs fresh delta review. No six-gate repeat. Evidence .lake/codex-validation/sipser-lautemann-correctness/correctness-review.json SHA256 d28fb74d582cdc9d5492d983c7bc207fc70b1347713aed9c273f42e82668464d; probe SHA256 1ed659ba1262194d876045ff32daae177a5f265b106928ed92723af65a3d4cad."}}},
        "api":
        {"finished":
         {"review":
