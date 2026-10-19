@@ -2140,7 +2140,16 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor5"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api5"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "332de1bd028e415cb1569993f7503785"},
+          "holder":
+          {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
+           "agent": {"value": "reviewer-sable-api5"}},
+          "expires": 1792404800},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Foundations/Data/BitString/Affine.lean",
     "Complexity/Foundations/Data/BitString/AffineDisperser.lean",
