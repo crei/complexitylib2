@@ -848,7 +848,9 @@
       "snapshot":
       {"head": {"value": "d722dfa81615ac554d4d328538577f2fc0da6e60"},
        "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
     "Complexity/Computability/Circuit/Boolean/Iteration.lean",
