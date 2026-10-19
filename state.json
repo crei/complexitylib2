@@ -2738,7 +2738,16 @@
       {"head": {"value": "6b954f709393d2324dc1dfe0a44ab7b84a2877a6"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "cc4f4f083a1641ab99951b9e45a32091"},
+          "holder":
+          {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
+           "agent": {"value": "reviewer-sable-cor6"}},
+          "expires": 1792403125},
+         "blocked": false}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api6"}}}}}}},
    "paths": ["ROADMAP.md", "README.md", "UPSTREAM.md"],
    "id": {"value": "docs-roadmap-refresh"},
