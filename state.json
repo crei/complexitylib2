@@ -1959,7 +1959,7 @@
       {"head": {"value": "48291a11dcb757bb1c02a8984f35191d0da5883b"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor3"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
