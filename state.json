@@ -2425,7 +2425,12 @@
      {"resume": null,
       "report":
       "API review (reviewer-sable-api1) requested changes: D <= C1*bs, D <= C*bs and D <= bs^3 are credited to Nisan; the survey credits Beals-Buhrman-Cleve-Mosca-de Wolf 2001. Correctness approved.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "50f5fa2bf802ea9ae16ef320585b1464"},
+       "holder":
+       {"session": {"value": "9c907dcb85cc8554c9a1842ad08941a1"},
+        "agent": {"value": "worker-sable-query"}},
+       "expires": 1792403930},
       "branch": "work/query-complexity/worker-sable-query",
       "blocked": false,
       "assignee": {"value": "worker-sable-query"}}}},
