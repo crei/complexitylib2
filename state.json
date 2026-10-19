@@ -1522,7 +1522,16 @@
       {"head": {"value": "92aeab0e755f407e092b7cd28d3242117e0e1d5a"},
        "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor4"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "8f7d3c91b27f2a165ed663a198e6410a"},
+          "holder":
+          {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
+           "agent": {"value": "reviewer-sable-cor4"}},
+          "expires": 1792391563},
+         "blocked": false}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/SubsetSum.lean",
