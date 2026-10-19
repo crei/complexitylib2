@@ -2593,7 +2593,7 @@
     {"work":
      {"resume": null,
       "report":
-      "Scope request 2 (non-blocking): the class proofs (BPP = U BPTIME(n^k), ZPP = RP n coRP, PP/RP counting) share count-vs-probability lemmas: uniformList_map_apply (Pr[f(U_n) = b] = #{r | f (ofFn r) = b} / 2^n, generalizing uniformList_acceptCount) and uniformList_drop (the suffix of a uniform word is uniform, beside uniformList_take). Their homes are Complexity/Computability/Complexity/Classes/SharpP/Probability.lean and Complexity/Probability/BitString.lean (both unheld). May I add these two paths? Until then I keep them private in my files.",
+      "Blocked: M1 is complete locally at 1c42e73c (branch work/resource-class-spine/worker-sable-hier, merged with current main). Gates: build ok, mk_all ok, test FAILS only on two deprecation warnings outside my paths: ComplexityTests/TimeHierarchy.lean:103 and ComplexityTests/Relativization.lean:91 use diagonal_not_mem_P, now a deprecated alias of diagonal_notMem_P (the requested rename). Fix is s/diagonal_not_mem_P/diagonal_notMem_P/ on those two lines. Please add both test files to my paths (relativization-2 is frozen/submitted), or apply the two-line edit centrally; then I re-run gates and submit.",
       "lease":
       {"token": {"value": "f2bc825304723cc80a042b30f59cd335"},
        "holder":
@@ -2601,7 +2601,7 @@
         "agent": {"value": "worker-sable-hier"}},
        "expires": 1792405550},
       "branch": "work/resource-class-spine/worker-sable-hier",
-      "blocked": false,
+      "blocked": true,
       "assignee": {"value": "worker-sable-hier"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Time.lean",
