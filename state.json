@@ -1970,20 +1970,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Started on work/hamming-geometry-2/worker-sable-hamming from main 342f284. Dependency map. M3 (Foundations/BooleanAnalysis/HammingFourier.lean): reuse fourierCoeff, fourierCoeff_sub, expect_sq_eq_sum_fourierCoeff_sq (Parseval), hammingDist_div_eq_expect (Data/Hamming), signVal, noiseOp, noiseOp_sub, noiseOp_one, fourierCoeff_noiseOp, fourierCoeff_injective, Mathlib EuclideanSpace.dist_eq / MetricSpace.induced. Deliver: hammingDist_div_eq_sum_fourierCoeff_sub_sq (d_H/2^n = (1/4) sum_S (F^(S) - G^(S))^2); noiseDist rho f g := E[(T_rho F - T_rho G)^2]/4 with noiseDist_eq_sum (rho^(2|S|) weights), noiseDist_one (= relative Hamming distance), monotonicity in |rho| (noise contracts the Hamming distance), noiseEmbedding into EuclideanSpace R (Finset iota) with sqrt noiseDist = dist, triangle inequality, separation for rho != 0, and noiseMetricSpace as a def (no instance). M4 (Circuit/Approximation/Hamming.lean): reuse Scheme, programExceptions, program_correct, failures, card_failures_le_cost, Program.cost_eq_sum/cost_le_mul, complexity/exists_computes_size_eq_complexity. Deliver: hammingDist target-to-decoded output <= C.program.cost errorCost when correctness implies equality; lower-bound principle eps <= delta * complexity; weighted union bound sum_{failures} mu <= sum over gates of per-op weight bounds (via programExceptions induction), weighted lower bound; prose that this reformulates the approximation method, limitations stated without citation. M5 (Circuit/Continuity.lean): complexityModulus I n m r : N (Finset.sup over pairs with hammingDist <= r of Nat.dist of complexities; Fintype U, IsComplete), le/iff/mono/zero/attained API; De Morgan restatements from SparseSynthesis.dist_complexity_single_le / dist_complexity_le (m <= 2p outputs) and the matching lower bound 2^p <= 16 omega from exists_hammingDist_eq_le_dist_complexity. SCOPE QUESTION: the De Morgan restatement imports SparseSynthesis; may I add Complexity/Computability/Circuit/Boolean/Continuity.lean for it so the generic Continuity.lean stays basis-free? Otherwise I put it in a Boolean section of Continuity.lean.",
-      "lease":
-      {"token": {"value": "0309702c7f0a5ad7ab2a1faff320c62f"},
-       "holder":
-       {"session": {"value": "79c04d2e099c5b1c2a7c8053cf47acf5"},
-        "agent": {"value": "worker-sable-hamming"}},
-       "expires": 1792406342},
-      "branch": "work/hamming-geometry-2/worker-sable-hamming",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-hamming"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Started on work/hamming-geometry-2/worker-sable-hamming from main 342f284. Dependency map. M3 (Foundations/BooleanAnalysis/HammingFourier.lean): reuse fourierCoeff, fourierCoeff_sub, expect_sq_eq_sum_fourierCoeff_sq (Parseval), hammingDist_div_eq_expect (Data/Hamming), signVal, noiseOp, noiseOp_sub, noiseOp_one, fourierCoeff_noiseOp, fourierCoeff_injective, Mathlib EuclideanSpace.dist_eq / MetricSpace.induced. Deliver: hammingDist_div_eq_sum_fourierCoeff_sub_sq (d_H/2^n = (1/4) sum_S (F^(S) - G^(S))^2); noiseDist rho f g := E[(T_rho F - T_rho G)^2]/4 with noiseDist_eq_sum (rho^(2|S|) weights), noiseDist_one (= relative Hamming distance), monotonicity in |rho| (noise contracts the Hamming distance), noiseEmbedding into EuclideanSpace R (Finset iota) with sqrt noiseDist = dist, triangle inequality, separation for rho != 0, and noiseMetricSpace as a def (no instance). M4 (Circuit/Approximation/Hamming.lean): reuse Scheme, programExceptions, program_correct, failures, card_failures_le_cost, Program.cost_eq_sum/cost_le_mul, complexity/exists_computes_size_eq_complexity. Deliver: hammingDist target-to-decoded output <= C.program.cost errorCost when correctness implies equality; lower-bound principle eps <= delta * complexity; weighted union bound sum_{failures} mu <= sum over gates of per-op weight bounds (via programExceptions induction), weighted lower bound; prose that this reformulates the approximation method, limitations stated without citation. M5 (Circuit/Continuity.lean): complexityModulus I n m r : N (Finset.sup over pairs with hammingDist <= r of Nat.dist of complexities; Fintype U, IsComplete), le/iff/mono/zero/attained API; De Morgan restatements from SparseSynthesis.dist_complexity_single_le / dist_complexity_le (m <= 2p outputs) and the matching lower bound 2^p <= 16 omega from exists_hammingDist_eq_le_dist_complexity. SCOPE QUESTION: the De Morgan restatement imports SparseSynthesis; may I add Complexity/Computability/Circuit/Boolean/Continuity.lean for it so the generic Continuity.lean stays basis-free? Otherwise I put it in a Boolean section of Continuity.lean.",
+       "lease":
+       {"token": {"value": "0309702c7f0a5ad7ab2a1faff320c62f"},
+        "holder":
+        {"session": {"value": "79c04d2e099c5b1c2a7c8053cf47acf5"},
+         "agent": {"value": "worker-sable-hamming"}},
+        "expires": 1792406342},
+       "branch": "work/hamming-geometry-2/worker-sable-hamming",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-hamming"}},
+      "summary":
+      "M3-M5 at 8ebbd286 (base main e93fa0ea). M3 HammingFourier: hammingDist_div_eq_sum_fourierCoeff_sub_sq: d_H(f,g)/2^n = 1/4 * sum_S (F^(S) - G^(S))^2 (F = signVal o f); noiseDist rho f g := E(T_rho F - T_rho G)^2/4 with noiseDist_eq_sum (rho^(2|S|)), _eq_noiseStability, noiseDist_one (= d_H/2^n), noiseDist_mono (|rho|<=|sigma|), noiseDist_le_hammingDist_div (|rho|<=1), dist_noiseEmbedding (EuclideanSpace dist = sqrt noiseDist), sqrt_noiseDist_triangle, noiseDist_eq_zero_iff (rho != 0), noiseMetricSpace (abbrev). M4 Approximation/Hamming: Scheme.hammingDist_le_sum_errorCost (relation -> eq: d_H(target, decoded) <= sum_k errorCost (lines k).op); le_mul_complexity, _of_le_hammingDist (eps <= delta * C(f)); sum_failures_le (weighted union bound, mu >= 0), le_mul_complexity_of_le_sum_failures. Prose: reformulates the classical method, known limitations apply, no Pich citation. M5 Continuity: complexityModulus I n m r : N (Fintype U, IsComplete), le_iff/attained/mono/zero/add_le (subadditive)/le_mul; Boolean.complexityModulus_one_le ((1+eps)2^p), complexityModulus_le (m<=2p, (3+eps)2^p), two_pow_le_sixteen_mul_complexityModulus (p>=4). Checks: run-gates, all six ok. Tests + axiom guards in ComplexityTests/CircuitHamming/{Parseval,Approximation,Continuity}. Sources: O'Donnell, Jukna Ch. 9, Chashkin2024; no new bib. Contributors: worker-sable-hamming only. Limitations: De Morgan restatement in generic Continuity.lean (imports SparseSynthesis); M4 tests use toy schemes.",
+      "snapshot":
+      {"head": {"value": "8ebbd2862a60625725dd51674d7a394e60f87b59"},
+       "base": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Continuity.lean",
     "Complexity/Computability/Circuit/Approximation/Hamming.lean",
