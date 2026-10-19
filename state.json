@@ -1464,15 +1464,18 @@
        "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "8f7d3c91b27f2a165ed663a198e6410a"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792378717,
+          "snapshot":
+          {"head": {"value": "92aeab0e755f407e092b7cd28d3242117e0e1d5a"},
+           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+          "reviewer":
           {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
            "agent": {"value": "reviewer-sable-cor4"}},
-          "expires": 1792393060},
-         "blocked": false}},
+          "note":
+          "Correctness review of 92aeab0 on d42eefc by reviewer-sable-cor4 (independent; not an author; resumed after coordinator restart, claim intact). Scope: SubsetSum(+Digits, Mask), Partition, Knapsack, IntegerProgramming, PolyTime/Nat/Binary, tests. Build 7 modules + test --wfail --iofail OK, 0 warnings; no sorry/axiom/native_decide/option overrides. Definitions standard (sub-multisets with multiplicity; ZeroOneIP shares one 0-1 assignment across equations). Digit reduction is Sipser 7.56 in base 8: columns <= 2 and <= 5 so no carries (sum_sum_pow_eq_iff correct), wide clauses -> ([],1), toSubsetSum_mem_iff both ways, numbers < 8^(n+m), positions unary-bounded by the binary encCNF size. Partition reduction correct for all t incl. t > sum; Knapsack/ZeroOneIP reductions correct. Binary certificates are on encNat (two_pow from unary exponent). Docstrings claim binary-encoding hardness only, not strong. Probe (exit 0): sat and unsat 3CNF outputs equal an independent Python reference, membership/non-membership by kernel brute force; Partition at t > sum (generic + concrete), t=0, unreachable t; 2^200-size instances; jointly infeasible ZeroOneIP system; 4 NPComplete axioms clean. Blocking: none. Nits: Axioms.lean/ROADMAP/GareyJohnson1979 pending central integration. Not run: check.sh. Evidence .lake/codex-validation/np-complete-numbers-correctness/review.json SHA256 48c192fc81a1f2dd9a80f871bf6b7181f7faf183213e2dfe387fa2109dbac26f"}}},
        "api":
        {"finished":
         {"review":
