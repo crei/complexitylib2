@@ -974,7 +974,16 @@
       {"head": {"value": "976400b8ca9601e1f476041f12aa857b95f2c49a"},
        "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor2"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "d2ff89dec8524b5fcb87c3169912a950"},
+          "holder":
+          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
+           "agent": {"value": "reviewer-sable-cor2"}},
+          "expires": 1792385847},
+         "blocked": false}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space.lean",
