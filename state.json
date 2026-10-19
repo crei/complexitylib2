@@ -1669,20 +1669,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Milestone 1 complete and committed at b4b5569 (base f489429 = current main): main merged, six gates pass at b4b5569, headlines guarded in ComplexityTests/Relativization.lean. Push of work/relativization/worker-sable-relativ was denied (auto-mode classifier refused LEAN4_GUARDRAILS_BYPASS; plain push blocked by the lean4 guardrail hook). Needs the user to run: git push origin work/relativization/worker-sable-relativ. After that, ready can be run with the summary in .lake/summary.txt of the worktree. Milestone 2 (oracle A with P^A = NP^A via TQBF/PSPACE once tqbf-pspace-complete lands) not started; record as continuation.",
-      "lease":
-      {"token": {"value": "14d74384ffee6557dd9d79143283fe43"},
-       "holder":
-       {"session": {"value": "b1cbc8b7223d2f96ea57cc362686fe08"},
-        "agent": {"value": "worker-sable-relativ"}},
-       "expires": 1792399606},
-      "branch": "work/relativization/worker-sable-relativ",
-      "blocked": true,
-      "assignee": {"value": "worker-sable-relativ"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Milestone 1 complete and committed at b4b5569 (base f489429 = current main): main merged, six gates pass at b4b5569, headlines guarded in ComplexityTests/Relativization.lean. Push of work/relativization/worker-sable-relativ was denied (auto-mode classifier refused LEAN4_GUARDRAILS_BYPASS; plain push blocked by the lean4 guardrail hook). Needs the user to run: git push origin work/relativization/worker-sable-relativ. After that, ready can be run with the summary in .lake/summary.txt of the worktree. Milestone 2 (oracle A with P^A = NP^A via TQBF/PSPACE once tqbf-pspace-complete lands) not started; record as continuation.",
+       "lease":
+       {"token": {"value": "14d74384ffee6557dd9d79143283fe43"},
+        "holder":
+        {"session": {"value": "b1cbc8b7223d2f96ea57cc362686fe08"},
+         "agent": {"value": "worker-sable-relativ"}},
+        "expires": 1792399606},
+       "branch": "work/relativization/worker-sable-relativ",
+       "blocked": true,
+       "assignee": {"value": "worker-sable-relativ"}},
+      "summary":
+      "Milestone 1: P^A, NP^A on the native model and BGS's oracle B with P^B ⊊ NP^B. ComputableInPolyTimeWithOracle A f enc enc' (@[fun_prop]): a FreeM word-query program computes f against languageOracle A, certified by IsOraclePPTOn (one finite machine, one polynomial clock, all stateful handlers; queries cost instructions). PWithOracle/NPWithOracle A enc: P/NP with that substitution. Proved: P_subset_PWithOracle, NP_subset_NPWithOracle, mem_PWithOracle_self, PWithOracle_subset_NPWithOracle : PWithOracle A enc ⊆ NPWithOracle A enc, PolyTimeReducible.mem_PWithOracle/.mem_NPWithOracle, exists_oracle_diagonal, exists_unaryLanguage_notMem_PWithOracle : ∃ B, unaryLanguage B ∉ PWithOracle B encBits, unaryLanguage_mem_NPWithOracle, exists_PWithOracle_ssubset_NPWithOracle : ∃ B, PWithOracle B encBits ⊂ NPWithOracle B encBits. Checks: six gates pass; axiom guards and non-vacuity tests in ComplexityTests/Relativization.lean. Source: AroraBarak09 Thm 3.7, BakerGillSolovay1975. Contributors: worker-sable-relativ (AI: Claude). Limits: closure under reductions of the problem only; A ≤p B ⇒ P^A ⊆ P^B needs open-oracle-substitution. Continuation (milestone 2): oracle A with P^A = NP^A via TQBF/PSPACE once tqbf-pspace-complete lands. Bib: @article{BakerGillSolovay1975, author={Baker, Theodore and Gill, John and Solovay, Robert}, title={Relativizations of the {$\\mathcal{P} =? \\mathcal{NP}$} Question}, journal={SIAM Journal on Computing}, volume={4}, number={4}, pages={431--442}, year={1975}, doi={10.1137/0204037}}",
+      "snapshot":
+      {"head": {"value": "b4b556921d48d533f0019c15959883b167cdc1a4"},
+       "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Oracle.lean",
     "Complexity/Computability/Complexity/Classes/Oracle",
