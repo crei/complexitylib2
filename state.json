@@ -2810,55 +2810,18 @@
    "dependencies": [],
    "authors": [{"value": "worker-sable-stretch"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "API review (reviewer-sable-api7) requested changes: move Cslib.MCSP NP membership to MCSP/NP.lean (path mirrors namespace); replace the private copy of TSP's listGetD_binary with one public lemma. Correctness approved.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "M1 progress: Circuit/Boolean/Encoding (codes, decoding, encCircuit), EvaluationTime (evalCode + polytime certs), CVP in P, CircuitSAT NP-complete (SAT reduction) all compile. Next: fixed-width circuit certificates (Encoding/Certificate.lean) and MCSP in NP. Path request (non-blocking): add Complexity/Computability/MCSP/NP.lean for MCSP in NP (else I will place it under Circuit/Boolean/Encoding/). Later for M2: PH collapse lemma (Sigma2=Pi2 -> PH=Sigma2) would best live in Classes/PH/Collapse.lean; currently I plan to keep it in Classes/PH/KarpLipton.lean.",
-       "lease":
-       {"token": {"value": "864bb1ee6b5fd7169a30e137e35e435d"},
-        "holder":
-        {"session": {"value": "842267643c344d7a79017588bcfc8a39"},
-         "agent": {"value": "worker-sable-numbers"}},
-        "expires": 1792406321},
-       "branch": "work/circuits-karp-lipton/worker-sable-numbers",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-numbers"}},
-      "summary":
-      "M1 (circuits as data) at e10d94f. Proved: Circuit.ofCode_code: ofCode n m c.code = some c; Circuit.isSome_ofCode_iff (decodable codes = IsCodeFrom + m outputs); Program.evalCode_code: evalCode I d (ofFn x) p.code = ofFn x ++ ofFn (p.eval I x); Boolean.computableTidilyInPolyTime_evalCode/_evalOutput; CircuitValue_mem_P: CircuitValue ∈ P encCircuitValue; CircuitSAT.mem_NP; SAT.polyTimeReducible_CircuitSAT: PolyTimeReducible encCNF (encCircuit 1) SAT CircuitSAT; CircuitSAT_npComplete: NPComplete (encCircuit 1) CircuitSAT; readCertificate_certificate_append + polytime reading (fixed-length circuit certificates); MCSP.mem_NP: MCSP ∈ NP MCSP.encInstance. Encodings: encCircuit m = inputs unary, gates (op unary, wires binary), outputs; CVP adds input bits; MCSP = table bits + binary threshold, certificates capped at 2^n(2n+3)+1 gates. Checks: run-gates six gates ok; 15 axiom guards. Source: new code (AroraBarak09 §6.1, KabanetsCai2000), no v1 port. Contributors: worker-sable-numbers. Limitations: generic σ simp lemmas don't fire on Boolean gate lists; listGetD_binary duplicated privately from TSP; MCSP∈NP sits at Circuit/Boolean/Encoding/MCSP.lean (MCSP/NP.lean not in paths). Continuation: M2 self-reduction (drafted) + Karp-Lipton/PH collapse; M3 Kannan, Meyer. Bib: @article{Ladner1975, author = {Ladner, Richard E.}, title = {The Circuit Value Problem is Log Space Complete for {P}}, journal = {{SIGACT} News}, volume = {7}, number = {1}, pages = {18--20}, year = {1975}, doi = {10.1145/990518.990519}}",
-      "snapshot":
-      {"head": {"value": "e10d94f4bca690c2e32b741ad287bbdb50f46784"},
-       "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792393313,
-          "snapshot":
-          {"head": {"value": "e10d94f4bca690c2e32b741ad287bbdb50f46784"},
-           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-          "reviewer":
-          {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
-           "agent": {"value": "reviewer-sable-cor7"}},
-          "note":
-          "Independent correctness review (reviewer-sable-cor7, no contribution) of exact e10d94f over 4274652; HEAD and ancestry verified. Built 6 touched modules + ComplexityTests.KarpLipton under nice with --wfail --iofail (exit 0) and re-elaborated each file from source. Diff has no sorry/native_decide/set_option/axiom; #print axioms of 18 headlines within propext/Classical.choice/Quot.sound. Verified: ofCode_code; isSome_ofCode_iff matches a direct decision on 11 codes (self/forward reference, arity, spurious const arg, output at n+size, output count, n=0); evalCode_code plus exhaustive maj3 agreement; CVP in P under encPair (encCircuit 1) encBits; CircuitSAT single-output, SAT reduction checked by kernel evaluation of the decoded circuit (unsat, tautology, 64-input exhaustive vs first-occurrence assignment), hardness via CookLevin.SAT_npHard. MCSP: pre-existing definition, binary threshold; cap min s (2^n(2n+3)+1) justified by proved complexity_le_two_pow_mul_add_one (via le_min), certificates <= 40(L+1)^4, content O(T^2 log^2 T); probes at threshold 10^30, AND/XOR/OR, budget rejection, out-of-range output, n=0 yes/no. No blocking findings. Follow-ups: add Ladner1975 bib entry (worker entry verified on Crossref); MCSP file placement is API/continuation. Not checked: fun_prop calculus soundness, six gates, API. Evidence .lake/codex-validation/circuits-karp-lipton-correctness/review.json SHA256 808518c270da1a3c36f435502537ad9359d590f0dac732536eda0834df99661e."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "changes",
-          "time": 1792392789,
-          "snapshot":
-          {"head": {"value": "e10d94f4bca690c2e32b741ad287bbdb50f46784"},
-           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-          "reviewer":
-          {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
-           "agent": {"value": "reviewer-sable-api7"}},
-          "note":
-          "Independent API review (reviewer-sable-api7, no contribution) of exact e10d94f on base 4274652 (ancestry ok). BLOCKING: B1 Encoding/MCSP.lean:54 declares Cslib.MCSP (encInstance, verifier, mem_NP...) under Circuit/Boolean/Encoding/, breaking path/namespace rule 1; move to Computability/MCSP/NP.lean (path grant), fix Complexity.lean/test import, point MCSP/Basic docstring at it. B2 EvaluationTime.lean:151 private listGetD_binary is a byte-identical copy of TSP.lean:132; hoist one public lemma into the PolyTime layer used by both (path grant). OK: template, encodings stated accurately, no machines (fun_prop/foldl/finite_cases only), no dup vs cslib Circuit/Program/Wire, Circuit/Evaluation, PPoly, MachineSimulation; 15 axiom guards; boundary tests. Nits: generic codes/evalCode sit under Circuit/Boolean (split to Circuit/Code); NP/Witness landed after base, not duplicated, but CircuitSAT/MCSP.isVerifier hand-roll padding -> IsVerifier.of_padding; CircuitValue_mem_P -> CircuitValue.mem_P; SAT.isCodeFrom_flatMap public generic name; Wire.finEquiv -> equivFin; MCSP.binaryValue_reverse_ofFn belongs in BitString; Ladner1975 missing from references.bib. Built 6 modules + ComplexityTests.KarpLipton --wfail --iofail ok; probe ok; merge-tree with main clean. Not run: six gates. Evidence .lake/codex-validation/circuits-karp-lipton-api/review.json SHA256 daa376529110e6ad8c85e9c9130fe10b7caea72a02a4054edbfe24278d34353e"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "API review (reviewer-sable-api7) requested changes: move Cslib.MCSP NP membership to MCSP/NP.lean (path mirrors namespace); replace the private copy of TSP's listGetD_binary with one public lemma. Correctness approved.",
+      "lease": null,
+      "branch": "work/circuits-karp-lipton/worker-sable-numbers",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-numbers"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/Encoding.lean",
     "Complexity/Computability/Circuit/Boolean/Encoding",
