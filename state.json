@@ -739,7 +739,9 @@
       "snapshot":
       {"head": {"value": "4de95cdc57bdd489c7bc60aeb3c209ebeb2ffb06"},
        "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode",
