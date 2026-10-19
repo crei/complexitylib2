@@ -3243,15 +3243,18 @@
           "note":
           "Correctness, reviewer-sable-cor1 (independent; did not contribute). Scope: 15 references.bib entries at f8c3d3cc on 4274652a. Evidence: all 13 DOIs fetched from api.crossref.org; authors, title, venue, volume, issue, pages and year match for each, ignoring case and diacritics. ErdosLovasz1975 matches zbMATH Zbl 0315.05117 and MitzenmacherUpfal2017 (2nd ed., CUP 2017) matches Zbl 1368.60002; DBLP blocked automated access. All 15 keys are cited by the five submitted branches at their recorded heads; every citation key in those branches resolves at head; no duplicates. Blocking: none. Nits: Turing1936 Crossref issued 1937 (parts appeared Nov-Dec 1936; 1936 is conventional); MehlhornSchmidt1982 omits the \"(Extended Abstract)\" title suffix; LovaszSaks1988 IEEE title reads \"mobius/communications\" (entry uses the standard form); ErdosLovasz1975 omits editors and Vol. II. Out of scope: probability-toolkit LocalLemma.lean:68-69 splits the MoserTardos2010 reference link across a line. Evidence: .lake/codex-validation/docs-bibliography-2-correctness/review.json sha256 d1b2c3ed5a9efdba38cb046149a9b0320690f5aeb2188b9bf7b7f970d8672683"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "d02a8b4907fa79c18e956d196e5396ae"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792391200,
+          "snapshot":
+          {"head": {"value": "f8c3d3cc04f65411b03ea5bb5ba908288d3efc58"},
+           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+          "reviewer":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792405327},
-         "blocked": false}}}}}},
+          "note":
+          "API, reviewer-sable-api1 (independent; did not contribute). Scope: f8c3d3cc on 4274652a touches only references.bib (+161 lines, 15 appended entries; docbuild/docs/references.bib is a symlink to it). check_docs.py --config-only passes. The duplicate-key guard passes at head and rejects an injected case-variant duplicate. Style matches the file dominant aligned form: = at column 12, aligned continuation lines, field order as in recent entries, series FOCS/STOC as in FOCS2016, Erdos accent as in ErdosRado1960, NN:1--NN:15 article pages as in existing entries. Proper nouns are braced (Entscheidungsproblem, Boolean, Lovasz, Latin, Las Vegas, VLSI, Mobius). Entry types fit each source. bibtex with plain.bst on all 15 keys gives no warnings and 15 items. Blocking: none. Nits: Huang2019 could brace {Sensitivity Conjecture} to keep the published capitals; MitzenmacherUpfal2017 edition={2} renders as \"2 edition\" under plain.bst (the file already mixes {2} and {3rd}). Evidence: .lake/codex-validation/docs-bibliography-2-api/review.json sha256 d246d495bedaf805e2f91c405c3241e5ed0eb820bbca61eb09086e74cc4b5cf3"}}}}}}},
    "paths": ["references.bib"],
    "id": {"value": "docs-bibliography-2"},
    "goal":
