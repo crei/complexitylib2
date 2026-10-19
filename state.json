@@ -1473,7 +1473,9 @@
       "snapshot":
       {"head": {"value": "94febccdd66679be8a2a30e4d0637099fbeb0d57"},
        "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/LogSpace.lean",
     "Complexity/Computability/Complexity/Classes/LogSpace",
