@@ -617,20 +617,27 @@
    "report":
    "Next for worker-sable-oracle once open-oracle-composition lands (both reviews approved 3eb6238). First, small follow-ups from its reviews inside this same scope: make the restated IterateWhile tape-helper block in Probabilistic/IterateWhile.lean module-private (it duplicates crei module-private helpers and must not become a second public API), add References sections to Probabilistic/QueryTake.lean and Languages/Probabilistic/Oracle/Support.lean (cite the tidy/TransformsTapes source), and add a short-output failure boundary refuted through IsOraclePPTOn.query_bounds (request charges) to ComplexityTests/OracleComposition.lean. Then the substitution theorem and the two-level cache client as the goal states.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Checkpoint: follow-ups done (private IterateWhile helpers, References in QueryTake/Support, request-length boundary via query_bounds). Open interpreter OpenOracleSimulation.{step, step_eq_run_interpret, isOraclePPTOn_step, isOraclePPTOn_run} and headline IsOraclePPTOn.run_interpret_preprocess_open + IsOraclePPT.run_interpret_preprocess_open compile (stacking lemma ProbOracleComp.run_interpret_run_interpret). Next: IsOraclePPTOn.memoize contract (hit makes no call), two-level cache client, substitution failure boundaries, tests.",
-      "lease":
-      {"token": {"value": "8ca12df677751a6e711a8ee22b85c925"},
-       "holder":
-       {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
-        "agent": {"value": "worker-sable-oracle"}},
-       "expires": 1792401095},
-      "branch": "work/open-oracle-substitution/worker-sable-oracle",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-oracle"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Checkpoint: follow-ups done (private IterateWhile helpers, References in QueryTake/Support, request-length boundary via query_bounds). Open interpreter OpenOracleSimulation.{step, step_eq_run_interpret, isOraclePPTOn_step, isOraclePPTOn_run} and headline IsOraclePPTOn.run_interpret_preprocess_open + IsOraclePPT.run_interpret_preprocess_open compile (stacking lemma ProbOracleComp.run_interpret_run_interpret). Next: IsOraclePPTOn.memoize contract (hit makes no call), two-level cache client, substitution failure boundaries, tests.",
+       "lease":
+       {"token": {"value": "8ca12df677751a6e711a8ee22b85c925"},
+        "holder":
+        {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
+         "agent": {"value": "worker-sable-oracle"}},
+        "expires": 1792401095},
+       "branch": "work/open-oracle-substitution/worker-sable-oracle",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-oracle"}},
+      "summary":
+      "Head 5e88dee base main ec48c1a. Milestone 1. IsOraclePPTOn.run_interpret_preprocess_open: program IsOraclePPTOn; handler a q s : WordOracleComp External (List Bool × State) IsOraclePPTOn on (caller,(op,request),state); invariant over ProbOracleComp.support, computable additive allowance on replies and state growth ⊢ IsOraclePPTOn input (encPair output stateEncoding) of the substituted program (handler lift ∘ sample ∘ unifFin); joint law of result, handler and external state, no external reply bound. IsOraclePPT.run_interpret_preprocess_open. Closed run_interpret_preprocess and OracleSimulation.isPPTOn_step/run now corollaries (External := Empty; IsOraclePPTOn.isPPTOn, sample_run_interpret, runOracle_eq_sample_runClosed), statements unchanged. Core OpenOracleSimulation.{step, step_eq_run_interpret, isOraclePPTOn_step, isOraclePPTOn_run}, ProbOracleComp.run_interpret_run_interpret; IsOraclePPTOn.memoize (fun_prop, hit makes no call). Follow-ups: private IterateWhile helpers, References, request-length boundary. TESTS: two-level cache client certified, exact counting-oracle law (2 calls, cached reply); full-reply copy and state doubling refuted; axiom guards. CHECKS: six gates pass. BURDEN +126 proof lines. CREDIT crypto 5ff69ca; crei tidy. CONTRIBUTORS worker-sable-oracle. CENTRAL: Axioms guards; UPSTREAM note on IterateWhile copy. No bib. CONTINUATION: derive reply bound from handler length; relativization.",
+      "snapshot":
+      {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
+       "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Probabilistic",
     "Complexity/Languages/Probabilistic",
