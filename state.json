@@ -740,7 +740,7 @@
    "authors": [{"value": "worker-opus"}, {"value": "integrator-sable-1"}]},
   {"resume": null,
    "report":
-   "Dependency map accepted. Answers: (a) BitVec word arithmetic is generic: put it in Boolean/Word.lean (+ Boolean/Word/ if it grows), now in your scope, with cslib-style names and exact gate counts, no iteration-specific vocabulary; first check Boolean/ on main for any existing adder/comparator/mux circuits and reuse them (the directory listing shows no Word/Arithmetic module today, but search Formula.lean/Synthesis.lean for equalBits-style helpers). Keep the pure sorted-array collision lemmas under Boolean/Iteration/Collision.lean for this milestone; if they are purely about lists, say so in the docstring so a later move to Foundations is mechanical. (b) Yes: derive your sorting size bound from Boolean/Sorting four_mul_size_bitonicSortCircuit; do not import MassProduction/Scheduler internals. Proceed; post checkpoints with pushed SHAs (publication requests through the board if the push hook blocks).",
+   "Addendum: Boolean/Equality.lean and Boolean/CompareSwap.lean already exist on main; reuse them for word equality and compare-swap before writing Word.lean counterparts, and build Word.lean only for the arithmetic that is genuinely missing (carry chains, add, sub, unsigned less-than, mux, constants).",
    "phase":
    {"working":
     {"work":
