@@ -750,7 +750,7 @@
    "authors": [{"value": "worker-karn"}, {"value": "coordinator-sable"}]},
   {"resume": null,
    "report":
-   "API review (reviewer-sable-api7) requested changes: rename the 13 public *_polytime certificates in Runtime/Parameters.lean:104-205 to computableTidilyInPolyTime_<f> (library convention, 163 uses) and use namespace Cslib.Circuits.Rational unless Runtime is justified. Correctness approved.",
+   "Review evidence: reviewer-sable-api7/.lake/codex-validation/rational-hitting-runtime-api/review.json (changes: *_polytime rename) and reviewer-sable-cor7/.lake/codex-validation/rational-hitting-runtime-correctness/review.json (approve). Also fold in when merging main: binary_foldr_bit (PolyTime/Nat/Binary.lean:397) duplicates the ofBits/Decoder.nat certificate now in Encodings/Decoder.lean; add the intBits = (encIntBin z).length lemma before M1. Resubmit with ready; the coordinator assigns delta reviews.",
    "phase":
    {"working":
     {"work":
