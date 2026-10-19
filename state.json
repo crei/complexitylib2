@@ -2582,15 +2582,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "48b9603da699158a3313a8c7103e9f71"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792389775,
+          "snapshot":
+          {"head": {"value": "d0299eace631cd0e7fc0f4bc69103989ef7cf3a2"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
            "agent": {"value": "reviewer-sable-cor4"}},
-          "expires": 1792404132},
-         "blocked": false}},
+          "note":
+          "Correctness review by reviewer-sable-cor4 (independent; contributor worker-sable-stretch) of exact head d0299eac over base 0d8ef4bf. No statement weakened. Evidence: structural signature dump (binder-name-free, level-normalised types + def value hashes) of the closure of 17 touched + 38 direct-importer modules at base and head, compared with a rename map: all 13 renamed/moved decls identical after renaming; unchanged names have identical types except 2 harmless; only NPSPACE, cnfDecoder, Decoder.unary values changed. Probes: base statements restated verbatim and closed by head decls (tableau_satisfiable_iff, exists_eval_tableau_iff, polyBounded_log, L_subset_NL, PSPACE_subset_NPSPACE, mem_P, Ladner.P_eq_NP_of_SAT_mem_P, SAT_notMem_P, parityOn_symmDiff); NPSPACE = base body by rfl; decoder data rfl. Build of 62 targets (touched, direct importers, Consolidation and related tests) under nice --wfail --iofail: success. Headlines SAT_npComplete, TQBF_pspaceComplete, NL_subset_P, NPSPACE_eq_PSPACE, exists_NP_not_P_not_NPComplete and 24 new/moved decls: axioms within propext/Classical.choice/Quot.sound; no sorry/native_decide/axiom/set_option added. Nonblocking: Correctness.lean:288 implicit binder order changed (same prop); Nat/Log.lean:55 instPowNat vs Monoid.npow (defeq, base form closes); Ladner.lean:106 general lemma not beside SAT_npComplete (pending P_subset_NP); Ladner.* renamed without aliases (API). Not checked: six gates, Axioms.lean audit, indirect importers (grep only). Evidence: .lake/codex-validation/machine-classes-consolidation-correctness/review.json sha256 343a6b9641eb9776a4e17b40847ab7a94dc199ac3d741e427a2a65977837b260"}}},
        "api":
        {"finished":
         {"review":
