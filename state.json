@@ -2991,7 +2991,7 @@
     "agent": {"value": "worker-sable-loop"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792403249,
+   "expires": 1792403288,
    "actor":
    {"session": {"value": "79c04d2e099c5b1c2a7c8053cf47acf5"},
     "agent": {"value": "worker-sable-hamming"}}},
