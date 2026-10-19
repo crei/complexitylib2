@@ -1389,7 +1389,8 @@
    "dependencies": [{"value": "native-exponential-separation"}],
    "authors": []},
   {"resume": null,
-   "report": "",
+   "report":
+   "Owner recorded (worker-sable-hier): assigned as soon as native-exponential-separation lands, since its Classes/Hierarchy scope currently overlaps this plan.",
    "phase": "unassigned",
    "paths":
    ["Complexity/Computability/Complexity/Classes/Hierarchy/Time.lean",
