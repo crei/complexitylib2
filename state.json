@@ -1430,7 +1430,7 @@
        "holder":
        {"session": {"value": "1c9857ba8b9709bb8b7bbe793f95b513"},
         "agent": {"value": "worker-sable-logspace"}},
-       "expires": 1792390032},
+       "expires": 1792390496},
       "branch": "work/logspace-nl/worker-sable-logspace",
       "blocked": false,
       "assignee": {"value": "worker-sable-logspace"}}}},
@@ -2064,7 +2064,7 @@
     "agent": {"value": "worker-sable-tqbf"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792390032,
+   "expires": 1792390496,
    "actor":
    {"session": {"value": "1c9857ba8b9709bb8b7bbe793f95b513"},
     "agent": {"value": "worker-sable-logspace"}}},
