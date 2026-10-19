@@ -777,15 +777,18 @@
        "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "066d209a702d31554cb5726e81357b2a"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792372858,
+          "snapshot":
+          {"head": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"},
+           "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
+          "reviewer":
           {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
            "agent": {"value": "reviewer-sable-cor2"}},
-          "expires": 1792387196},
-         "blocked": false}},
+          "note":
+          "Delta correctness review by reviewer-sable-cor2 (independent; no contribution). Builds on my approval of 4de95cd (evidence sha256 2dc4975b3ef1bf8617925b4d61b60188ad782afcba5c77a8992e23bbe3df6181, which relied on the recorded full audit of 7e4cdca). This delta: 764e3b8 is a merge with parents 4de95cd and 26253c9 (= base = current main, ancestry verified); git diff-tree --cc shows no hunks (clean merge); git diff 4de95cd 764e3b8 over the nine epic paths is empty and main 94dcd9d..26253c9 touches none of them; the whole 4de95cd..764e3b8 patch outside the generated roots is byte-identical to main own 94dcd9d..26253c9 patch, and the root changes are exactly main 12 added imports; scripts/ equal current main. Rebuilt Classes.Hierarchy and ComplexityTests.TimeHierarchy with --wfail --iofail: clean (3878 jobs). #print axioms on computableTidilyInO_diagonal, diagonal_not_mem_P, not_computableInTimeAndSpace_diagonal: propext/Classical.choice/Quot.sound only; statements unchanged. No findings. Not run: full check.sh. Evidence .lake/codex-validation/native-exponential-separation-correctness/review.json sha256 0dd2e0898c31b954cdb50ab52bba439a6b461905c7c52a5e5ecb8c62433c5830"}}},
        "api":
        {"active":
         {"report": "",
