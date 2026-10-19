@@ -683,7 +683,12 @@
      {"resume": "work/rational-hitting/worker-karn",
       "report":
       "Main moved on references.bib (np-complete-numbers landed GareyJohnson-era entries). Coordinator merges main mechanically (bibliography union only); fresh delta reviews of the merge, then land.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "935e718e953dd7bcf7151753192bdfc3"},
+       "holder":
+       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+        "agent": {"value": "coordinator-sable"}},
+       "expires": 1792393625},
       "branch": "work/rational-hitting/coordinator-sable",
       "blocked": false,
       "assignee": {"value": "coordinator-sable"}}}},
