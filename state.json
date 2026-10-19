@@ -1331,7 +1331,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "791beb8e91346bcfbf88b3534d144528"},
+       "holder":
+       {"session": {"value": "15d3a3e432be6927c6de5db959e3458a"},
+        "agent": {"value": "worker-sable-graphs"}},
+       "expires": 1792386211},
       "branch": "work/np-complete-graphs/worker-sable-graphs",
       "blocked": false,
       "assignee": {"value": "worker-sable-graphs"}}}},
@@ -1348,7 +1353,7 @@
    "goal":
    "The textbook NP-complete graph problems on the existing Graph encoding and Karp-reduction machinery (Problems/IndependentSet.lean, Clique.lean, ThreeSAT.lean, Reduction.lean). Endpoints, each with membership in NP via a polynomial-time verifier, a polynomial-time Karp reduction, NPHard and NPComplete: (1) VertexCover from IndependentSet (complement of the vertex set, k |-> |V| - k); (2) graph 3-coloring (ThreeColoring) from ThreeSAT with the standard palette/variable/clause gadget [Sipser2013 Thm 7.? / AroraBarak09], and k-coloring for k >= 3 if cheap; (3) directed Hamiltonian path and Hamiltonian cycle from ThreeSAT (Sipser2013 Theorem 7.46 construction), then undirected Hamiltonian path/cycle from the directed versions; (4) TSP decision from undirected Hamiltonian cycle. Reuse Graph, encGraph, adjBool, selectVertices, verifySubset and the existing SimpleGraph semantics (Mathlib SimpleGraph.Coloring, Walk.IsHamiltonian, IsHamiltonianCycle where they fit; do not add a parallel graph model). Exact semantics: vertices are the declared vertex list, duplicate and out-of-range edges handled as in IndependentSet; empty graphs and k = 0 boundaries stated. Tests with concrete small graphs in and out of each language, gadget sanity checks, and #print axioms guards for every NPComplete theorem in the epic's own test module. Cite Karp1972, Sipser2013, AroraBarak09, GareyJohnson1979 if present (propose a bibliography entry otherwise). Six gates; self-review; frozen submission; one milestone per two problems is fine if the Hamiltonian gadget is large.",
    "dependencies": [],
-   "authors": []},
+   "authors": [{"value": "worker-sable-graphs"}]},
   {"resume": null,
    "report": "",
    "phase":
