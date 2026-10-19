@@ -1613,7 +1613,9 @@
       "snapshot":
       {"head": {"value": "784cb3afda77036d16f624185735d15fd09145b3"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Ladner.lean",
     "Complexity/Computability/Complexity/Classes/Ladner",
