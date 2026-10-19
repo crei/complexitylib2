@@ -1453,7 +1453,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "4199522ac26f9b86383356f4f5e4198a"},
+       "holder":
+       {"session": {"value": "96c57dfb40db0a4654e519b0c7249d36"},
+        "agent": {"value": "worker-sable-ip"}},
+       "expires": 1792386693},
       "branch": "work/interactive-proofs/worker-sable-ip",
       "blocked": false,
       "assignee": {"value": "worker-sable-ip"}}}},
@@ -1466,7 +1471,7 @@
    "goal":
    "A first look at interactive proofs on the native probabilistic machinery. Define private-coin interactive proof systems: an efficient verifier given as a native probabilistic program (reuse the existing OracleComp / IsOraclePPT / BPP machinery in the probabilistic modules; model the prover as an arbitrary, unbounded, stateful message function, i.e. an oracle the verifier queries; do not edit the probabilistic directories owned by open-oracle-composition and post a note if a missing primitive is needed), polynomially many rounds, completeness and soundness thresholds, and the class IP. Prove: (1) NP inside IP and BPP inside IP; (2) graph non-isomorphism in IP via the classic two-message private-coin protocol on the existing Graph encoding (Problems/IndependentSet.lean), with completeness 1 and soundness 1/2 per round, and amplification by parallel or sequential repetition to the class thresholds; define GraphIsomorphism and GraphNonIsomorphism as problems with GI in NP. Milestone 2 (tracked): IP inside PSPACE using polynomial-space once landed; IP = PSPACE is out of scope. Tests with concrete small graphs, the honest prover, a cheating prover's acceptance bound; axiom guards in the epic test module. Cite AroraBarak09 Chapter 8 and GoldwasserMicaliRackoff / GoldreichMicaliWigderson1991 (propose bibliography entries). Six gates; frozen submission.",
    "dependencies": [],
-   "authors": []},
+   "authors": [{"value": "worker-sable-ip"}]},
   {"resume": null,
    "report": "",
    "phase":
