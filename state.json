@@ -2263,6 +2263,25 @@
    "goal":
    "Milestone 2 of interactive-proofs: IP is contained in PSPACE on the native classes, via the optimal-prover game value computed by a polynomial-space recursion over message histories (Classes/Space; reuse the IP definitions of interactive-proofs and the polynomial-space machinery). State the exact model assumptions (private coins, polynomially many rounds, message lengths). IP = PSPACE is out of scope (tracked). Tests, axiom guards, six gates, frozen submission.",
    "dependencies": [{"value": "interactive-proofs"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Probability/Chernoff.lean",
+    "Complexity/Probability/KWiseIndependent.lean",
+    "Complexity/Probability/KWiseIndependent",
+    "Complexity/Probability/LocalLemma.lean",
+    "Complexity/Probability/Divergence.lean",
+    "Complexity/Probability/Shearer.lean",
+    "Complexity/Probability/MinEntropy.lean",
+    "Complexity/Probability/BoundedDifferences.lean",
+    "ComplexityTests/ProbabilityToolkit.lean",
+    "ComplexityTests/ProbabilityToolkit"],
+   "id": {"value": "probability-toolkit"},
+   "goal":
+   "Coverage epic 1 (citation canon): complete the probability toolkit papers cite in preliminaries, reusing Complexity/Probability (Concentration, Product, Entropy, PairwiseIndependent*, UniversalHash) and Mathlib (Probability.Moments.SubGaussian, InformationTheory.KullbackLeibler) without duplication. Endpoints: (1) multiplicative Chernoff upper and lower tails Pr[X >= (1+delta) mu] <= exp(-delta^2 mu/(2+delta)) for independent [0,1]-valued variables under the library product PMF, plus a counting form on bit strings; (2) k-wise independence IsKWiseIndependent with the k-th moment tail bound and the degree-(k-1) polynomial construction over a finite field; (3) Lovasz Local Lemma, symmetric and asymmetric, on finite product spaces; (4) finite-PMF entropy bridged to Mathlib KL divergence, then Gibbs, Pinsker, subadditivity, Han and Shearer; (5) min-entropy and (k, eps)-sources with the flat-source decomposition; (6) McDiarmid (bounded differences) from Mathlib Azuma-Hoeffding. Milestones may split (1)-(3) and (4)-(6). Tests with concrete instances, named axiom guards, six gates, frozen submissions; cite AlonSpencer, MitzenmacherUpfal or Vadhan as appropriate (propose entries).",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
