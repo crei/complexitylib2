@@ -2065,7 +2065,16 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor7"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api7"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "c79b2331da0bd0e5d8c1345d29036f37"},
+          "holder":
+          {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
+           "agent": {"value": "reviewer-sable-api7"}},
+          "expires": 1792404051},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP/Witness.lean",
     "Complexity/Computability/Complexity/Problems/SAT.lean",
