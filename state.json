@@ -2138,20 +2138,27 @@
    "report":
    "API review (reviewer-sable-api5) requested changes: Operations.lean is 1553 lines with 88-207-line validity proofs; split into semi-circuit-level WellFormed lemmas plus Valid.of_map obligations and per-family files; break up step_of_bottleneck, step_fixInput and step_of_sharedSecondChild in MinimalAnd.lean. Correctness approved.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/b2-lower-bound/coordinator-sable",
-      "report":
-      "API review (reviewer-sable-api5) requested changes: Operations.lean is 1553 lines with 88-207-line validity proofs; split into semi-circuit-level WellFormed lemmas plus Valid.of_map obligations and per-family files; break up step_of_bottleneck, step_fixInput and step_of_sharedSecondChild in MinimalAnd.lean. Correctness approved.",
-      "lease":
-      {"token": {"value": "1fee5ee575b37c462ef0cf115352d0e8"},
-       "holder":
-       {"session": {"value": "abc254b86ea9eef6d4f1c5836328aaff"},
-        "agent": {"value": "worker-sable-b2"}},
-       "expires": 1792407585},
-      "branch": "work/b2-lower-bound/worker-sable-b2",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-b2"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/b2-lower-bound/coordinator-sable",
+       "report":
+       "API review (reviewer-sable-api5) requested changes: Operations.lean is 1553 lines with 88-207-line validity proofs; split into semi-circuit-level WellFormed lemmas plus Valid.of_map obligations and per-family files; break up step_of_bottleneck, step_fixInput and step_of_sharedSecondChild in MinimalAnd.lean. Correctness approved.",
+       "lease":
+       {"token": {"value": "1fee5ee575b37c462ef0cf115352d0e8"},
+        "holder":
+        {"session": {"value": "abc254b86ea9eef6d4f1c5836328aaff"},
+         "agent": {"value": "worker-sable-b2"}},
+        "expires": 1792407585},
+       "branch": "work/b2-lower-bound/worker-sable-b2",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-b2"}},
+      "summary":
+      "Mishra-Santhanam (ECCC TR26-260) Thm 4.1, sorry-free, statement unchanged: Cslib.Circuits.Boolean.AffineDisperser.seven_mul_le_two_mul_size_add (hf : IsAffineDisperser f d) (C : Circuit (fullSignature 2 Bool) n 1) (hC : C.Computes fullInterpretation (single f)) : 7*n ≤ 2*C.size + 14*d. Lemma 4.2 State.Valid.exists_step; Prop 2.2 exists_affine_embedding; Lemma 2.3 out_not_affine; non-vacuity exists_isAffineDisperser. API refactor: semi-circuit ops with WellFormed.<op> + LiftsTo in SemiCircuit/{Simplification,Reparameterisation,Rewiring,OfCircuit}; state validity via Valid.of_transport/of_liftsTo; files ≤699 lines, decls ≤73 (was 1553/207). Checks: six gates (run-gates), axiom guards. Credit: [MishraSanthanam2026], [LiYang2022], [FindGolovnevHirschKulikov2016]. Contributors: coordinator-sable, worker-sable-b2. Limitations: no AffineSubspace bridge (stated informal); B2 op lemmas still in SemiCircuit ns; no concrete-state Reduction test. Bib (new): @inproceedings{LiYang2022, author={Li, Jiatu and Yang, Tianqi}, title={{3.1n - o(n)} Circuit Lower Bounds for Explicit Functions}, booktitle={STOC '22}, pages={1180--1193}, year={2022}, doi={10.1145/3519935.3519976}}",
+      "snapshot":
+      {"head": {"value": "0d0ac5aa6f48569b318d78b2e9121848ae94f7cd"},
+       "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Foundations/Data/BitString/Affine.lean",
     "Complexity/Foundations/Data/BitString/AffineDisperser.lean",
