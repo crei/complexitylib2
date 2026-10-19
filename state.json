@@ -2076,15 +2076,18 @@
           "expires": 1792399582},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "b0f27b210149ff208e5f98a5032acfb8"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792385284,
+          "snapshot":
+          {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
+           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+          "reviewer":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792399671},
-         "blocked": false}}}}}},
+          "note":
+          "API review of 99abd78 (independent, read-only). Scope: only scripts/check_docs.py changes (+10). Style matches the script: imports in order, require/ValueError path, f-string message, read_text, at most 100 columns. CI: check_config() calls it, so both docs.yml steps (--config-only and the full check) and the README commands run it. docs.yml is workflow_dispatch-only, which predates this change. Tests: I copied the head checker into git-archive trees. main 9b1b683, head, base, and docs-bibliography 2bf2b21 pass (rc=0). docs-bibliography 881b9c0 fails (rc=1): \"Duplicate bibliography keys: cutland1980, katzlindell2020\", which is the real padded-vs-plain regression. In place on head it passes, also under LC_ALL=C. Synthetic cases, 11/11 as expected: exact duplicate, padded vs plain, case differs, padded+case+entry type, space after the type, key on the next line and two groups (sorted) are all caught; distinct keys and @string pass. The regex counts as many keys as there are entry openers on all four real bibs. Ran with python3 -I -B; no __pycache__ left. No blocking findings. Nits: line 52 reports lowercased keys, which a case-sensitive grep will not find, so printing the spellings as written would be clearer; the regex skips an indented @ and @type( entries (neither occurs); keys.count is quadratic (harmless). Evidence: .lake/codex-validation/docs-check-bibkeys-api/review.json sha256 b92ba7c898ace1acc9a527f0a93e7127e2d361ef46e1f3950d0da2a7586274f6"}}}}}}},
    "paths": ["scripts/check_docs.py"],
    "id": {"value": "docs-check-bibkeys"},
    "goal":
