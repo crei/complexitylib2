@@ -265,20 +265,27 @@
    "report":
    "Reassigned by coordinator-sable to local worker worker-sable-oracle (worker-nova never acknowledged; worker-atlas stopped at the user request). Resume from the published checkpoint 21af39d55df2cd9169930d661a0dab233d275883 on work/open-oracle-composition/worker-atlas, retain worker-atlas as contributor, merge current main at a clean checkpoint, and follow the accepted milestone endpoint and all guidance already recorded above. First post a compact checked dependency map and the remaining functional-certificate endpoints; then deliver the client-facing IsOraclePPTOn normalization and compositional rules with the functional query client replacing the handwritten readHead table. Report checkpoints through the board.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/open-oracle-composition/worker-nova",
-      "report":
-      "PUBLICATION REQUEST: 3eb6238592bd11415db970f1e3756c3b8eeb4e2d on work/open-oracle-composition/worker-sable-oracle (merge of current main 764e3b8 into 21ba29a; clean auto-merge of generated roots). scripts/check.sh at this SHA: all six gates ok. Push blocked by the local lean4 guardrail; not bypassed. Will run ready once it is on origin.",
-      "lease":
-      {"token": {"value": "a320c179b5bafcaa2cb3683d7072e0ae"},
-       "holder":
-       {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
-        "agent": {"value": "worker-sable-oracle"}},
-       "expires": 1792388003},
-      "branch": "work/open-oracle-composition/worker-sable-oracle",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-oracle"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/open-oracle-composition/worker-nova",
+       "report":
+       "PUBLICATION REQUEST: 3eb6238592bd11415db970f1e3756c3b8eeb4e2d on work/open-oracle-composition/worker-sable-oracle (merge of current main 764e3b8 into 21ba29a; clean auto-merge of generated roots). scripts/check.sh at this SHA: all six gates ok. Push blocked by the local lean4 guardrail; not bypassed. Will run ready once it is on origin.",
+       "lease":
+       {"token": {"value": "a320c179b5bafcaa2cb3683d7072e0ae"},
+        "holder":
+        {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
+         "agent": {"value": "worker-sable-oracle"}},
+        "expires": 1792388003},
+       "branch": "work/open-oracle-composition/worker-sable-oracle",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-oracle"}},
+      "summary":
+      "Head 3eb6238 (base main 764e3b8). ENDPOINTS: normalization isOraclePPTOn_iff_isTidyOraclePPTOn / IsOraclePPTOn.isTidyOraclePPTOn: every strict witness has a clean halting realization (blank tapes, empty query buffers, robust to stale answers, input head restored) with the exact joint result/external-state law and the same adaptive query sequence; proof via finiteRunFrom_take_runOracle (replies truncated to the charged clock, no reply-length assumption) and IsTidyOraclePPTOn.finiteStep/.runOracle. Clean calculus IsTidyOraclePPTOn (Oracle/Tidy, Oracle/Iteration): query_take, uniform_bool, pair, bind, bind_with, map, map_with, preprocess, cond, ite, finite_cases (only selected branch runs), iterate_spec, iterateWith_spec, iterateWith_of_bounded_growth with final invariants over ProbOracleComp.support. Client rules (Oracle/Composition, fun_prop): IsOraclePPTOn.{query_take, bind, bind_with, pair, keep_input, map, map_with, preprocess, cond, ite, finite_cases, iterate_spec, iterateWith_spec, iterateWith_of_bounded_growth, iterate_of_bounded_growth}, IsPPTOn.isOraclePPTOn (closed lifting via MultiTapePTM.ofClosed/runOracle_ofClosed). Machine loop: Probabilistic/Loop repeatUntilBlank + RunsWords.repeatUntilBlank, Probabilistic/IterateWhile ComputesTidily.iterateWhile (time (r+1)(t+10L+23)+8L+17). TESTS: OraclePPT readHead table removed; requestHead := List.take 1 <$> query ((),[]) certified by fun_prop; OracleComposition: fun_prop-certified adaptive two-query branch client, stateful counter tests (unselected branch makes no call), closed sample feeding a query, one-bit-growth adaptive loop, failure boundaries (exponential reply prefix and state doubling not oracle PPT, polynomial prefix is), axiom guards (propext, Classical.choice, Quot.sound). Closed PPT and worker-opus APIs unchanged. VALIDATION: scripts/check.sh at 3eb6238 all six gates ok. BURDEN (scripts/proof_lengths.py vs main, helper-inclusive proof bodies): +2211 total = worker-atlas base 1372 (QueryBounds 71, QueryTake 522, Tidy 779) + worker-sable-loop 375 (Loop 223, IterateWhile 152) + worker-sable-oracle 464 (Oracle/Tidy 115, Iteration 133, Normalization 119, Composition 28, Support 28, ofClosed 41); client requestHead certificate went from handwritten table + 13-line law + two congr proofs to unfold/fun_prop (2 lines) and a one-line parameterized certificate. SOURCES/CREDIT: closed interpreter, composition and adaptive rules of the cslib crypto branch 5ff69ca; crei tidy calculus, IterateWhile and RepeatUntilBlank (Christian Reitwiessner) ported to probabilistic oracle machines. CONTRIBUTORS: worker-atlas, worker-sable-loop (subagent), worker-sable-oracle. CENTRAL: add Axioms.lean named checks for isOraclePPTOn_iff_isTidyOraclePPTOn, IsOraclePPTOn.bind, IsOraclePPTOn.iterate_spec, IsOraclePPTOn.query_take, IsPPTOn.isOraclePPTOn, Turing.MultiTapePTM.ComputesTidily.iterateWhile; ROADMAP entry; no new bib keys. FOLLOW-UPS: open-oracle-substitution (stateful handler substitution, two-level cache); public tape helpers in vendored Combinators/IterateWhile would remove about 70 restated lines; loop could move to generic Machine/ (worker-opus scope); clocks are coarse polynomials.",
+      "snapshot":
+      {"head": {"value": "3eb6238592bd11415db970f1e3756c3b8eeb4e2d"},
+       "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Probabilistic",
     "Complexity/Languages/Probabilistic",
