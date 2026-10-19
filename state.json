@@ -1,41 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
-   "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-  "main": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"},
-  "lease":
-  {"token": {"value": "f2dbdc1f1100d6b12ff924c61c65bcb1"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792405927},
-  "epic": {"value": "np-witness-builder"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
-     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-    "epic": {"value": "np-witness-builder"}},
-   {"snapshot":
-    {"head": {"value": "ec271bcb5ddcddd0085ae9ec76f37a569c6f15cf"},
-     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-    "epic": {"value": "query-complexity"}},
-   {"snapshot":
-    {"head": {"value": "8a05720a1f07660e4d0e27e808dedbbc16322c3b"},
-     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-    "epic": {"value": "probability-toolkit"}},
-   {"snapshot":
-    {"head": {"value": "619bc0b59c3217fe8e9cb7ea1ddf1697444ede60"},
-     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-    "epic": {"value": "undecidability"}},
-   {"snapshot":
-    {"head": {"value": "d57c472c16dfef7cb8c3c8dc06deb1318fa25cf0"},
-     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-    "epic": {"value": "communication-complexity"}},
-   {"snapshot":
-    {"head": {"value": "2397f41ec42c3ee4710e6776f1f1e1a9b49ac54a"},
-     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-    "epic": {"value": "natural-proofs"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -1699,53 +1663,42 @@
    "report":
    "API review (reviewer-sable-api3) requested changes: Universal.length_applyTapes (Hardwire.lean:261) duplicates Universal.length_applyTapes_eq and collides with a vendored private name; space_le_space_of_halted (Basic.lean:91) follows from existing lemmas. Correctness approved with docstring follow-ups.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "API review (reviewer-sable-api3) requested changes: Universal.length_applyTapes (Hardwire.lean:261) duplicates Universal.length_applyTapes_eq and collides with a vendored private name; space_le_space_of_halted (Basic.lean:91) follows from existing lemmas. Correctness approved with docstring follow-ups.",
-       "lease":
-       {"token": {"value": "ba3520aa1adfe5e19471b4f8f18f663f"},
-        "holder":
-        {"session": {"value": "7781632cd73663d87f4e864c19b303a8"},
-         "agent": {"value": "worker-sable-undecid"}},
-        "expires": 1792404311},
-       "branch": "work/undecidability/worker-sable-undecid",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-undecid"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "API-review fixes, base 0d8ef4bf head 619bc0b5 (merges current main). B1: deleted Universal.length_applyTapes (uses length_applyTapes_eq) and space_le_space_of_halted (Computes.exists_computesInTimeAndSpace now uses runsInSpace_of_halted hu le_rfl). N1: helper names moved under Universal.Redirect (runs, virtual tapes, redirect, rewind, bitSyms, eBit_false/true, read_blank, applyTapes lemmas), Universal.Hardwire (writeEntries, copyEntries, SMN helpers), Universal.Dispatch (outAct, dstate); length_step_workTapes renamed length_workTapes_step. N3 left (PolyTime/Option.lean outside paths). N4: Computable.lean names the five notions with .isComputable. N7: three simp calls made simp only. N8: behaviour→behavior (behavior, exists_behavior_eq, not_isDecidable_of_behavior; prose too). Correctness docs: exists_behavior_eq stated as the two-way case of Kleene's recursion theorem; Halting.lean Mathlib comparison reworded (halting_problem fixes the input, rice/rice₂); not_forall_halted_diagonal qualified by its module. New corollary: not_isDecidable_halts (x) : ¬IsDecidable {w | (decodeDesc w).Halts (x.map eBit)} encBits, via rice; test + axiom guard. Checks: run-gates six gates ok at 619bc0b5. Contributors: worker-sable-undecid. Bib still needed: Turing1936, Rice1953 (entries in previous summary).",
       "snapshot":
       {"head": {"value": "619bc0b59c3217fe8e9cb7ea1ddf1697444ede60"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390942,
-          "snapshot":
-          {"head": {"value": "619bc0b59c3217fe8e9cb7ea1ddf1697444ede60"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
-           "agent": {"value": "reviewer-sable-cor3"}},
-          "note":
-          "Delta correctness review (reviewer-sable-cor3, independent) of aed5f718..619bc0b5; merge touches no Halting file. Build: nice -n 10 lake build of the 8 Halting modules and ComplexityTests.Halting with --wfail --iofail, exit 0, 3768 jobs. Statements: script delta/stmt_diff.py finds 243 declaration headers identical apart from the renames (behaviour->behavior, length_workTapes_step, computableTidilyInPolyTime_redirect). Only the two requested lemmas were removed. The additions are not_isDecidable_halts plus private helpers, and 50 decls moved namespace. All 22 elaborated #check outputs from the previous probe log reappear verbatim. Docstrings are accurate: the two-way case of Kleene (fixed point of e -> d (f e) with f Bool-valued); the Mathlib comparison (halting_problem fixes n; rice2 matches not_isDecidable_of_behavior); not_forall_halted_diagonal is in Classes.Hierarchy:175. not_isDecidable_halts is correct and non-vacuous. Its set is rfl-equal to the slice (w,x) of haltingProblem, and on descriptions membership is iff tm.Halts x. Every x has a member and a non-member, and IsDecidable univ holds. The pair halting result is re-derived from it by w -> (w,[]). Axioms: 25 #print axioms give only propext, Classical.choice and Quot.sound. Nit: the fixed-point form is closer to Sipser Thm 6.8 (unverified) than to Thm 6.3. Not run: gates, lint. Evidence: .lake/codex-validation/undecidability-correctness/review.json sha256 ce5a7e5bca1914d20e60c1dd93290d753af34e38f0e599de602b07d1faab748f"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390928,
-          "snapshot":
-          {"head": {"value": "619bc0b59c3217fe8e9cb7ea1ddf1697444ede60"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
-           "agent": {"value": "reviewer-sable-api3"}},
-          "note":
-          "Delta API review (reviewer-sable-api3, independent) of aed5f718..619bc0b5; merge 619bc0b5 touches no Halting file. B1 fixed: Universal.length_applyTapes and space_le_space_of_halted deleted, callers use length_applyTapes_eq and runsInSpace_of_halted. N1 fixed: helpers moved into Universal.Redirect, Universal.Hardwire and Universal.Dispatch; Universal root keeps only hardwire, dispatch, Desc.*, find?_desc, SCfg.key_eq_key_toCfg and the SMN field lemmas (196 public decls listed in delta/decls.tsv). length_step_workTapes renamed Redirect.length_workTapes_step. N4 docstring lists the five notions, each with .isComputable. N7: Rice.lean:256,260 and Hardwire.lean:776 are now simp only, and no non-terminal bare simp remains. behaviour renamed behavior (0 grep hits); Mathlib analogy reworded, rice2 cited. No new duplication: not_isDecidable_halts, Hardwire.computableTidilyInPolyTime_redirect and Redirect.read_blank have no counterpart in Complexity/, cslib or Mathlib Computability, and the loop/halt descs are private. All 86 docstring names resolve; git diff --check ok. Nits: Redirect.read_blank and eBit_false/true are global simp lemmas on vendored defs, kept in a feature namespace. N2, N3, N5, N6 and N9 carry over (nonblocking or central). Build: one build at this SHA, run in reviewer-sable-cor3, exit 0. Not run: gates, lint. Evidence: .lake/codex-validation/undecidability-api/review.json sha256 f4db2b5bc7bf866fc1abdaea8bd445f6facb211d921e5fedbb373294c3992d9c"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792391530,
+      "landed": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792390942,
+       "snapshot":
+       {"head": {"value": "619bc0b59c3217fe8e9cb7ea1ddf1697444ede60"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
+        "agent": {"value": "reviewer-sable-cor3"}},
+       "note":
+       "Delta correctness review (reviewer-sable-cor3, independent) of aed5f718..619bc0b5; merge touches no Halting file. Build: nice -n 10 lake build of the 8 Halting modules and ComplexityTests.Halting with --wfail --iofail, exit 0, 3768 jobs. Statements: script delta/stmt_diff.py finds 243 declaration headers identical apart from the renames (behaviour->behavior, length_workTapes_step, computableTidilyInPolyTime_redirect). Only the two requested lemmas were removed. The additions are not_isDecidable_halts plus private helpers, and 50 decls moved namespace. All 22 elaborated #check outputs from the previous probe log reappear verbatim. Docstrings are accurate: the two-way case of Kleene (fixed point of e -> d (f e) with f Bool-valued); the Mathlib comparison (halting_problem fixes n; rice2 matches not_isDecidable_of_behavior); not_forall_halted_diagonal is in Classes.Hierarchy:175. not_isDecidable_halts is correct and non-vacuous. Its set is rfl-equal to the slice (w,x) of haltingProblem, and on descriptions membership is iff tm.Halts x. Every x has a member and a non-member, and IsDecidable univ holds. The pair halting result is re-derived from it by w -> (w,[]). Axioms: 25 #print axioms give only propext, Classical.choice and Quot.sound. Nit: the fixed-point form is closer to Sipser Thm 6.8 (unverified) than to Thm 6.3. Not run: gates, lint. Evidence: .lake/codex-validation/undecidability-correctness/review.json sha256 ce5a7e5bca1914d20e60c1dd93290d753af34e38f0e599de602b07d1faab748f"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792390928,
+       "snapshot":
+       {"head": {"value": "619bc0b59c3217fe8e9cb7ea1ddf1697444ede60"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+        "agent": {"value": "reviewer-sable-api3"}},
+       "note":
+       "Delta API review (reviewer-sable-api3, independent) of aed5f718..619bc0b5; merge 619bc0b5 touches no Halting file. B1 fixed: Universal.length_applyTapes and space_le_space_of_halted deleted, callers use length_applyTapes_eq and runsInSpace_of_halted. N1 fixed: helpers moved into Universal.Redirect, Universal.Hardwire and Universal.Dispatch; Universal root keeps only hardwire, dispatch, Desc.*, find?_desc, SCfg.key_eq_key_toCfg and the SMN field lemmas (196 public decls listed in delta/decls.tsv). length_step_workTapes renamed Redirect.length_workTapes_step. N4 docstring lists the five notions, each with .isComputable. N7: Rice.lean:256,260 and Hardwire.lean:776 are now simp only, and no non-terminal bare simp remains. behaviour renamed behavior (0 grep hits); Mathlib analogy reworded, rice2 cited. No new duplication: not_isDecidable_halts, Hardwire.computableTidilyInPolyTime_redirect and Redirect.read_blank have no counterpart in Complexity/, cslib or Mathlib Computability, and the loop/halt descs are private. All 86 docstring names resolve; git diff --check ok. Nits: Redirect.read_blank and eBit_false/true are global simp lemmas on vendored defs, kept in a feature namespace. N2, N3, N5, N6 and N9 carry over (nonblocking or central). Build: one build at this SHA, run in reviewer-sable-cor3, exit 0. Not run: gates, lint. Evidence: .lake/codex-validation/undecidability-api/review.json sha256 f4db2b5bc7bf866fc1abdaea8bd445f6facb211d921e5fedbb373294c3992d9c"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Halting.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Halting",
@@ -2138,53 +2091,42 @@
    "report":
    "API review (reviewer-sable-api7) requested changes: rename or derive the new public selectMask (Witness.lean:199), which nearly duplicates maskSelect (Problems/SubsetSum/Mask.lean:47); move IsVerifier.of_padding/guard into Classes/NP.lean so SAT.lean need not import Witness. Correctness approved.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "API review (reviewer-sable-api7) requested changes: rename or derive the new public selectMask (Witness.lean:199), which nearly duplicates maskSelect (Problems/SubsetSum/Mask.lean:47); move IsVerifier.of_padding/guard into Classes/NP.lean so SAT.lean need not import Witness. Correctness approved.",
-       "lease":
-       {"token": {"value": "536f08b32deef266c7b7d11de5c13a0c"},
-        "holder":
-        {"session": {"value": "9b318203e8a9985d589db0583a2bb7af"},
-         "agent": {"value": "worker-sable-npbuilder"}},
-        "expires": 1792403953},
-       "branch": "work/np-witness-builder/worker-sable-npbuilder",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-npbuilder"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Head f1c1d30 base main 0d8ef4b. API-review revision (correctness approved at 0d58b55). (1) Witness.lean selectMask renamed selectDistinct (with mem_/nodup_/toFinset_..._map_append/computableTidilyInPolyTime_ and Graph.selectVertices_eq_selectDistinct); docstrings cross-reference SubsetSum/Mask.lean maskSelect both ways (sets vs sub-multisets). (2) IsVerifier.of_padding and IsVerifier.guard moved verbatim into Classes/NP.lean (statements unchanged, module doc Main results + pointer to NP/Witness); SAT.lean and ThreeSAT.lean no longer import Witness, restoring the SAT / SAT.PolyTime split. (3) of_padding summary now says it accepts certificates of exactly the prescribed length only for members. Reduction.lean cross-ref skipped (not in paths). Headline unchanged: mem_NP_of_witness, witnessVerifier_eq_true_iff, mem_NP_of_subsetWitness, PolyTimeReducible.mem_NP; migrated SAT, ThreeSAT, Clique, IndependentSet public statements unchanged. CHECKS: six gates pass via run-gates at head. CONTRIBUTORS worker-sable-npbuilder (both sessions). No bib. CONTINUATION as before: migrate VertexCover, Coloring, Hamiltonian, TSP, GraphIsomorphism (after natDecoder moves to Decoder.lean), number problems via maskSelect + of_padding, Fagin; mem_NPWithOracle could reuse of_padding; Reduction.lean doc cross-ref to PolyTimeReducible.mem_NP.",
       "snapshot":
       {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390056,
-          "snapshot":
-          {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
-           "agent": {"value": "reviewer-sable-cor7"}},
-          "note":
-          "Delta review 0d58b554..f1c1d302 by reviewer-sable-cor7 (independent, read-only; prior head approved). Scripted cross-file statement comparison (delta/compare_delta.py, 9 files): 0d58b554->head modulo selectMask->selectDistinct 125/125 identical, 0 removed/changed; of_padding and guard same statements, moved Witness.lean->NP.lean (block byte-identical, equal section variables); base->head only the previously reviewed verifySubset binder move and anonymous instance relocation. DeltaProbe.lean restates the old statements verbatim with old binders and closes them with the head declarations; selectDistinct body equals reviewed body by rfl; maskSelect/selectDistinct docstring contrast checked by decide. 28 #print axioms (all Witness/NP padding theorems, SAT/ThreeSAT isVerifier, mem_NP and NPComplete of SAT, 3SAT, IndependentSet, Clique) within propext, Classical.choice, Quot.sound. No sorry/native_decide/axiom/set_option. Build: 32 targets (touched modules, all direct importers, ComplexityTests.NPWitness), nice -n 10, --wfail --iofail, rc=0, 0 warnings. Earlier paraphrase nit resolved (NP.lean:53-55). Not checked: six gates, remote branches. Evidence .lake/codex-validation/np-witness-builder-correctness/review.json sha256 3844b6dd50486d5fa1967ec58db153c2b076e499792a56ae4139224aabf15afa"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390042,
-          "snapshot":
-          {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
-           "agent": {"value": "reviewer-sable-api7"}},
-          "note":
-          "Delta review 0d58b554..f1c1d302 by reviewer-sable-api7 (independent, read-only). Blocking finding resolved: selectMask and its 4 lemmas renamed to selectDistinct (no selectMask left in tree); docstrings cross-reference accurately both ways (Witness.lean:168-172 vs maskSelect multisets; SubsetSum/Mask.lean:45-47). Should-fix resolved: IsVerifier.of_padding/guard moved to Classes/NP.lean:105-133, 22-line block byte-identical to old Witness.lean:90-111 with equal section variables; NP module doc and Main results updated, Witness Main results trimmed. SAT.lean and ThreeSAT.lean drop the Witness import; local closures back to base (SAT 67->48, ThreeSAT 98->96). Delta adds no new declarations or duplication. Build (one run, correctness worktree, same SHA): 32 targets = touched modules + all direct importers + ComplexityTests.NPWitness, nice -n 10, --wfail --iofail, rc=0, 0 warnings. Nit: Witness.lean:81 section variable V now unused. Followups: Oracle/Closure.lean:152 and PCP/NP.lean:163 inline padding predate the epic. Not checked: six gates, lint. Evidence .lake/codex-validation/np-witness-builder-api/review.json sha256 66b0c8768edf131e657ca81f34acfd639018f4c1428c3d2b0154b8a381aa45af"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792391530,
+      "landed": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792390056,
+       "snapshot":
+       {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
+        "agent": {"value": "reviewer-sable-cor7"}},
+       "note":
+       "Delta review 0d58b554..f1c1d302 by reviewer-sable-cor7 (independent, read-only; prior head approved). Scripted cross-file statement comparison (delta/compare_delta.py, 9 files): 0d58b554->head modulo selectMask->selectDistinct 125/125 identical, 0 removed/changed; of_padding and guard same statements, moved Witness.lean->NP.lean (block byte-identical, equal section variables); base->head only the previously reviewed verifySubset binder move and anonymous instance relocation. DeltaProbe.lean restates the old statements verbatim with old binders and closes them with the head declarations; selectDistinct body equals reviewed body by rfl; maskSelect/selectDistinct docstring contrast checked by decide. 28 #print axioms (all Witness/NP padding theorems, SAT/ThreeSAT isVerifier, mem_NP and NPComplete of SAT, 3SAT, IndependentSet, Clique) within propext, Classical.choice, Quot.sound. No sorry/native_decide/axiom/set_option. Build: 32 targets (touched modules, all direct importers, ComplexityTests.NPWitness), nice -n 10, --wfail --iofail, rc=0, 0 warnings. Earlier paraphrase nit resolved (NP.lean:53-55). Not checked: six gates, remote branches. Evidence .lake/codex-validation/np-witness-builder-correctness/review.json sha256 3844b6dd50486d5fa1967ec58db153c2b076e499792a56ae4139224aabf15afa"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792390042,
+       "snapshot":
+       {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
+        "agent": {"value": "reviewer-sable-api7"}},
+       "note":
+       "Delta review 0d58b554..f1c1d302 by reviewer-sable-api7 (independent, read-only). Blocking finding resolved: selectMask and its 4 lemmas renamed to selectDistinct (no selectMask left in tree); docstrings cross-reference accurately both ways (Witness.lean:168-172 vs maskSelect multisets; SubsetSum/Mask.lean:45-47). Should-fix resolved: IsVerifier.of_padding/guard moved to Classes/NP.lean:105-133, 22-line block byte-identical to old Witness.lean:90-111 with equal section variables; NP module doc and Main results updated, Witness Main results trimmed. SAT.lean and ThreeSAT.lean drop the Witness import; local closures back to base (SAT 67->48, ThreeSAT 98->96). Delta adds no new declarations or duplication. Build (one run, correctness worktree, same SHA): 32 targets = touched modules + all direct importers + ComplexityTests.NPWitness, nice -n 10, --wfail --iofail, rc=0, 0 warnings. Nit: Witness.lean:81 section variable V now unused. Followups: Oracle/Closure.lean:152 and PCP/NP.lean:163 inline padding predate the epic. Not checked: six gates, lint. Evidence .lake/codex-validation/np-witness-builder-api/review.json sha256 66b0c8768edf131e657ca81f34acfd639018f4c1428c3d2b0154b8a381aa45af"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP/Witness.lean",
     "Complexity/Computability/Complexity/Problems/SAT.lean",
@@ -2491,53 +2433,42 @@
    "report":
    "API review (reviewer-sable-api2) requested changes: reuse ProbabilityTheory.indepSet_pi_of_dependsOn and Mathlib DependsOn in LocalLemma; prove the k-wise(2) <-> pairwise converse; drop or derive the bit-string counting forms that are weaker than the existing Hoeffding bound. Correctness approved.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "API review (reviewer-sable-api2) requested changes: reuse ProbabilityTheory.indepSet_pi_of_dependsOn and Mathlib DependsOn in LocalLemma; prove the k-wise(2) <-> pairwise converse; drop or derive the bit-string counting forms that are weaker than the existing Hoeffding bound. Correctness approved.",
-       "lease":
-       {"token": {"value": "ebb2536a384958166f7f3cf6a62d5f77"},
-        "holder":
-        {"session": {"value": "0d4e04fa36522a13475c8af7f7944f7d"},
-         "agent": {"value": "worker-sable-prob"}},
-        "expires": 1792404498},
-       "branch": "work/probability-toolkit/worker-sable-prob",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-prob"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "M1 (Chernoff, k-wise, LLL), API fixes applied. PMF.pi, [0,1] scores, mean:=sum_i sum_a (p i a).toReal*score i a: pi_sum_ge_one_add_mul_le_exp_log: mean<=mu, 0<=d -> Pr[(1+d)mu<=X]<=exp(mu(d-(1+d)log(1+d))); pi_sum_ge_one_add_mul: <=exp(-(d^2 mu/(2+d))); _of_le_one: <=exp(-(d^2 mu/3)); pi_sum_le_one_sub_mul: mu<=mean -> Pr[X<=(1-d)mu]<=exp(-(d^2 mu/2)); pi_sum_abs_sub_mean_ge_mul. Counting-form endpoint already covered by BitString.card_filter_le_card_filter_sub_half_le (Hoeffding); the weaker bit-string forms were dropped. IsKWiseIndependentHash k h (#T<=k, documented vs exactly-k); isKWiseIndependentHash_two_iff: 2-wise <-> pairwise and Nonempty; expect_prod; isKWiseIndependentHash_of_surjective; expect_sum_pow_le; dens_filter_le_abs_sum_sub_expect: (2m)-wise -> Pr[|sum_S(g-Eg)|>=a]<=(m^2#S/a^2)^m; isKWiseIndependentHash_polynomialHash. LLL: prod_one_sub_le_measureReal_iInter_compl (lopsided), pow_le_/measureReal_iInter_compl_pos, and with DependsOn: PMF.toOuterMeasure_pi_inter_eq_mul (from indepSet_pi_of_dependsOn), PMF.prod_one_sub_le_pi_iInter_compl, PMF.pi_iInter_compl_pos. Checks: run-gates all six ok at 8a05720a. Source: original, reusing Mathlib. Contributors: worker-sable-prob. Limits: k-wise constant m^2; LLL nonconstructive. Continuation: M2 (Divergence/Pinsker/Shearer, MinEntropy, McDiarmid). Bib: board note.",
       "snapshot":
       {"head": {"value": "8a05720a1f07660e4d0e27e808dedbbc16322c3b"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390834,
-          "snapshot":
-          {"head": {"value": "8a05720a1f07660e4d0e27e808dedbbc16322c3b"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
-           "agent": {"value": "reviewer-sable-cor2"}},
-          "note":
-          "Delta correctness review fc182c17..8a05720a by reviewer-sable-cor2 (independent; author worker-sable-prob). Build of Chernoff, KWiseIndependent(.Polynomial), LocalLemma, ComplexityTests.ProbabilityToolkit under nice --wfail --iofail: OK, 0 warnings. Retained statements unchanged apart from renames (old Chernoff statements copied verbatim are proved by the renamed constants); dropped only the two Hoeffding-dominated BitString corollaries. Probes: old one-directional determinacy <-> DependsOn (both directions); old fc182c17 signatures of toOuterMeasure_pi_inter_eq_mul (Finset S T), prod_one_sub_le_pi_iInter_compl and pi_iInter_compl_pos proved from the new ones, so the DependsOn hypotheses are equivalent (Set vs Finset is cosmetic, V finite). New iff isKWiseIndependentHash_two_iff checked: Nonempty conjunct necessary (X = iota = Empty counterexample), forward on polynomialHash 2, backward on affineHash then expect_prod. LLL with DependsOn on overlapping 3-clauses over 5 coins: asymmetric and symmetric d=1 fire. #print axioms of 16 changed/headline decls and wrappers = [propext, Classical.choice, Quot.sound]; no sorry/native_decide/set_option/axiom added. Nit: test guards omit toOuterMeasure_pi_inter_eq_mul and isPairwiseIndependentHash (clean). Not checked: API, six gates, bib. Evidence .lake/codex-validation/probability-toolkit-correctness/review.json sha256 cfa3920beed1e290fb5094a0d14a5e29c48c53130dcea1fa1fe10fa2b4743daa"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390819,
-          "snapshot":
-          {"head": {"value": "8a05720a1f07660e4d0e27e808dedbbc16322c3b"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "33380288772710be7744d177c8f66871"},
-           "agent": {"value": "reviewer-sable-api2"}},
-          "note":
-          "Delta API review fc182c17..8a05720a by reviewer-sable-api2 (independent; author worker-sable-prob). Build of Chernoff, KWiseIndependent(.Polynomial), LocalLemma, ComplexityTests.ProbabilityToolkit under nice --wfail --iofail: OK, 0 warnings. B1 resolved: toOuterMeasure_pi_inter_eq_mul takes S T : Set V with Mathlib DependsOn and is derived from indepSet_pi_of_dependsOn + toMeasure_pi; LLL hA are DependsOn; SecondMoment imported proof-only. B2 resolved: isKWiseIndependentHash_two_iff (KWiseIndependent.lean:182), used on affineHash in tests. B3 resolved: BitString counting forms and Weight import dropped, Chernoff docstring points to card_filter_le_card_filter_sub_half_le. Renames done (pi_sum_ge_one_add_mul_le_exp_log, pi_sum_abs_sub_mean_ge_mul), no stale references. Axiom guards added for 6 decls. No new duplication (grep of Complexity, cslib, Mathlib); all 30 docstring names resolve (probe). Nits: guards still omit toOuterMeasure_pi_inter_eq_mul and IsKWiseIndependentHash.isPairwiseIndependentHash (clean; global audit covers). Central: references.bib lacks MitzenmacherUpfal2017, Vadhan2012, BellareRompel1994, ErdosLovasz1975, ErdosSpencer1991, MoserTardos2010; confirm endpoint (1) re-scope to Hoeffding. Not checked: six gates, lint, rendered docs. Evidence .lake/codex-validation/probability-toolkit-api/review.json sha256 0249b9b2b76f89e509cf48c1646a25ee320d60f117a3d423d3f89048bcbfb879"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792391530,
+      "landed": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792390834,
+       "snapshot":
+       {"head": {"value": "8a05720a1f07660e4d0e27e808dedbbc16322c3b"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
+        "agent": {"value": "reviewer-sable-cor2"}},
+       "note":
+       "Delta correctness review fc182c17..8a05720a by reviewer-sable-cor2 (independent; author worker-sable-prob). Build of Chernoff, KWiseIndependent(.Polynomial), LocalLemma, ComplexityTests.ProbabilityToolkit under nice --wfail --iofail: OK, 0 warnings. Retained statements unchanged apart from renames (old Chernoff statements copied verbatim are proved by the renamed constants); dropped only the two Hoeffding-dominated BitString corollaries. Probes: old one-directional determinacy <-> DependsOn (both directions); old fc182c17 signatures of toOuterMeasure_pi_inter_eq_mul (Finset S T), prod_one_sub_le_pi_iInter_compl and pi_iInter_compl_pos proved from the new ones, so the DependsOn hypotheses are equivalent (Set vs Finset is cosmetic, V finite). New iff isKWiseIndependentHash_two_iff checked: Nonempty conjunct necessary (X = iota = Empty counterexample), forward on polynomialHash 2, backward on affineHash then expect_prod. LLL with DependsOn on overlapping 3-clauses over 5 coins: asymmetric and symmetric d=1 fire. #print axioms of 16 changed/headline decls and wrappers = [propext, Classical.choice, Quot.sound]; no sorry/native_decide/set_option/axiom added. Nit: test guards omit toOuterMeasure_pi_inter_eq_mul and isPairwiseIndependentHash (clean). Not checked: API, six gates, bib. Evidence .lake/codex-validation/probability-toolkit-correctness/review.json sha256 cfa3920beed1e290fb5094a0d14a5e29c48c53130dcea1fa1fe10fa2b4743daa"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792390819,
+       "snapshot":
+       {"head": {"value": "8a05720a1f07660e4d0e27e808dedbbc16322c3b"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "33380288772710be7744d177c8f66871"},
+        "agent": {"value": "reviewer-sable-api2"}},
+       "note":
+       "Delta API review fc182c17..8a05720a by reviewer-sable-api2 (independent; author worker-sable-prob). Build of Chernoff, KWiseIndependent(.Polynomial), LocalLemma, ComplexityTests.ProbabilityToolkit under nice --wfail --iofail: OK, 0 warnings. B1 resolved: toOuterMeasure_pi_inter_eq_mul takes S T : Set V with Mathlib DependsOn and is derived from indepSet_pi_of_dependsOn + toMeasure_pi; LLL hA are DependsOn; SecondMoment imported proof-only. B2 resolved: isKWiseIndependentHash_two_iff (KWiseIndependent.lean:182), used on affineHash in tests. B3 resolved: BitString counting forms and Weight import dropped, Chernoff docstring points to card_filter_le_card_filter_sub_half_le. Renames done (pi_sum_ge_one_add_mul_le_exp_log, pi_sum_abs_sub_mean_ge_mul), no stale references. Axiom guards added for 6 decls. No new duplication (grep of Complexity, cslib, Mathlib); all 30 docstring names resolve (probe). Nits: guards still omit toOuterMeasure_pi_inter_eq_mul and IsKWiseIndependentHash.isPairwiseIndependentHash (clean; global audit covers). Central: references.bib lacks MitzenmacherUpfal2017, Vadhan2012, BellareRompel1994, ErdosLovasz1975, ErdosSpencer1991, MoserTardos2010; confirm endpoint (1) re-scope to Hoeffding. Not checked: six gates, lint, rendered docs. Evidence .lake/codex-validation/probability-toolkit-api/review.json sha256 0249b9b2b76f89e509cf48c1646a25ee320d60f117a3d423d3f89048bcbfb879"}}}},
    "paths":
    ["Complexity/Probability/Chernoff.lean",
     "Complexity/Probability/KWiseIndependent.lean",
@@ -2585,53 +2516,42 @@
    "report":
    "API review (reviewer-sable-api1) requested changes: D <= C1*bs, D <= C*bs and D <= bs^3 are credited to Nisan; the survey credits Beals-Buhrman-Cleve-Mosca-de Wolf 2001. Correctness approved.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "API review (reviewer-sable-api1) requested changes: D <= C1*bs, D <= C*bs and D <= bs^3 are credited to Nisan; the survey credits Beals-Buhrman-Cleve-Mosca-de Wolf 2001. Correctness approved.",
-       "lease":
-       {"token": {"value": "50f5fa2bf802ea9ae16ef320585b1464"},
-        "holder":
-        {"session": {"value": "9c907dcb85cc8554c9a1842ad08941a1"},
-         "agent": {"value": "worker-sable-query"}},
-        "expires": 1792404524},
-       "branch": "work/query-complexity/worker-sable-query",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-query"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "M1 revision after API review (correctness approved). Fixes: D ≤ bs₀·C₁, D ≤ C·bs, D ≤ bs³ now credited to Beals–Buhrman–Cleve–Mosca–de Wolf [BealsBuhrmanCleveMoscaDeWolf2001] (BdW Thm 11, Cor 1); only C ≤ s·bs to Nisan. Renamed mem_lowDegree_iff_fourierCoeff_eq_zero, totalDegree_le_iff_fourierCoeff_eq_zero, degree_threshold_one_right. Hypercube imports Mathlib.Analysis.Real.Sqrt. Huang credit: theorem and signed matrix from Huang2019 (who uses interlacing; here a dimension count); reduction Gotsman–Linial 1992; Mathlib Archive/Sensitivity.lean (S = univ, not importable) noted. Test now proves deg(MAJ₃) = 3 > s(MAJ₃) = 2. Headlines otherwise unchanged (degree_le_sensitivity_sq : deg f ≤ s f ^ 2, induced subgraph theorem, C ≤ s·bs, D ≤ bs₀·C₁, D ≤ C·bs, D ≤ bs³, deg ≤ D). Checks: run-gates all six ok. Source: original formalization. Contributors: worker-sable-query only. Placement follow-ups left to coordinator. M2 continuation unchanged. Bib (new): @article{BealsBuhrmanCleveMoscaDeWolf2001, author = {Beals, Robert and Buhrman, Harry and Cleve, Richard and Mosca, Michele and de Wolf, Ronald}, title = {Quantum lower bounds by polynomials}, journal = {Journal of the ACM}, volume = {48}, number = {4}, pages = {778--797}, year = {2001}}; plus NisanSzegedy1994, Huang2019, GotsmanLinial1992 (earlier note).",
       "snapshot":
       {"head": {"value": "ec271bcb5ddcddd0085ae9ec76f37a569c6f15cf"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390867,
-          "snapshot":
-          {"head": {"value": "ec271bcb5ddcddd0085ae9ec76f37a569c6f15cf"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
-           "agent": {"value": "reviewer-sable-cor1"}},
-          "note":
-          "Correctness delta review a411ecce..ec271bcb (reviewer-sable-cor1, independent; sole contributor worker-sable-query; prior verdict approve). Scripted statement diff (delta/stmt_diff.py: comment-stripped declaration headers plus namespace/variable/open context, rename map applied): Degree 25/25, Relations 17/17, Huang 3/3 identical modulo the 3 renames; Hypercube 12/12 identical, only the Sqrt import changed. A self-test without the rename map flags exactly the 3 renamed theorems. Test: deg(MAJ3) = 3 and s(MAJ3) = 2 hold (my own probe: majority 3 = pairwise OR of ANDs by decide, Fourier coefficient -1/2 on univ, s < deg <= s^2), and the old names are unknown constants. #print axioms of 19 headlines incl. renamed: [propext, Classical.choice, Quot.sound]. Diff has no sorry/native_decide/axiom/set_option. Build of 4 modules + ComplexityTests.QueryComplexity.Measures --wfail --iofail: exit 0, 0 warnings. Blocking: none. Nit (API scope): Measures.lean:108 still credits D<=bs0*C1 to Nisan. Not checked: full six gates. Evidence .lake/codex-validation/query-complexity-correctness/review.json sha256 78538b8372f66f1bab2f363aee1d9dcbf906784aacde422f8b1a458ac07bad42"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390847,
-          "snapshot":
-          {"head": {"value": "ec271bcb5ddcddd0085ae9ec76f37a569c6f15cf"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
-           "agent": {"value": "reviewer-sable-api1"}},
-          "note":
-          "API delta review a411ecce..ec271bcb (reviewer-sable-api1, independent; sole contributor worker-sable-query). Prior blocker resolved: Relations.lean:18 credits only C<=s*bs to Nisan; :26-28, :270-273, :310, :318-319 cite BealsBuhrmanCleveMoscaDeWolf2001 for D<=bs0*C1, D<=C*bs, D<=bs^3 (BdW Thm 11 / Cor 1 checked against survey text). Renames done (mem_lowDegree_iff_fourierCoeff_eq_zero, totalDegree_le_iff_fourierCoeff_eq_zero, degree_threshold_one_right), no old-name residue. Hypercube.lean:11 uses Mathlib.Analysis.Real.Sqrt. Huang credit accurate (Hypercube.lean:24-27, Huang.lean:17-20; Mathlib has no interlacing; Archive S=univ not importable). No new duplication (only a private test lemma). Build of 4 modules + test --wfail --iofail: exit 0, 0 warnings. REQUIRED CENTRAL FIX (non-blocking, one line): ComplexityTests/QueryComplexity/Measures.lean:108 still says \"Nisan's bounds\" for D<=bs0*C1, and :11 \"Nisan's relations\". Nits: Knuth/Archive could be credited for the dimension-count route; bib entries BealsBuhrmanCleveMoscaDeWolf2001, NisanSzegedy1994, Huang2019, GotsmanLinial1992 missing from references.bib; prior central items (comp_piecewise duplicate of private Certificate lemma, placement) remain. Not checked: full six gates. Evidence .lake/codex-validation/query-complexity-api/review.json sha256 8ed40be924d632cc942c03a6bb27ec69d4c5eb63470d29073d9391af8fde7715"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792391530,
+      "landed": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792390867,
+       "snapshot":
+       {"head": {"value": "ec271bcb5ddcddd0085ae9ec76f37a569c6f15cf"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
+        "agent": {"value": "reviewer-sable-cor1"}},
+       "note":
+       "Correctness delta review a411ecce..ec271bcb (reviewer-sable-cor1, independent; sole contributor worker-sable-query; prior verdict approve). Scripted statement diff (delta/stmt_diff.py: comment-stripped declaration headers plus namespace/variable/open context, rename map applied): Degree 25/25, Relations 17/17, Huang 3/3 identical modulo the 3 renames; Hypercube 12/12 identical, only the Sqrt import changed. A self-test without the rename map flags exactly the 3 renamed theorems. Test: deg(MAJ3) = 3 and s(MAJ3) = 2 hold (my own probe: majority 3 = pairwise OR of ANDs by decide, Fourier coefficient -1/2 on univ, s < deg <= s^2), and the old names are unknown constants. #print axioms of 19 headlines incl. renamed: [propext, Classical.choice, Quot.sound]. Diff has no sorry/native_decide/axiom/set_option. Build of 4 modules + ComplexityTests.QueryComplexity.Measures --wfail --iofail: exit 0, 0 warnings. Blocking: none. Nit (API scope): Measures.lean:108 still credits D<=bs0*C1 to Nisan. Not checked: full six gates. Evidence .lake/codex-validation/query-complexity-correctness/review.json sha256 78538b8372f66f1bab2f363aee1d9dcbf906784aacde422f8b1a458ac07bad42"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792390847,
+       "snapshot":
+       {"head": {"value": "ec271bcb5ddcddd0085ae9ec76f37a569c6f15cf"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
+        "agent": {"value": "reviewer-sable-api1"}},
+       "note":
+       "API delta review a411ecce..ec271bcb (reviewer-sable-api1, independent; sole contributor worker-sable-query). Prior blocker resolved: Relations.lean:18 credits only C<=s*bs to Nisan; :26-28, :270-273, :310, :318-319 cite BealsBuhrmanCleveMoscaDeWolf2001 for D<=bs0*C1, D<=C*bs, D<=bs^3 (BdW Thm 11 / Cor 1 checked against survey text). Renames done (mem_lowDegree_iff_fourierCoeff_eq_zero, totalDegree_le_iff_fourierCoeff_eq_zero, degree_threshold_one_right), no old-name residue. Hypercube.lean:11 uses Mathlib.Analysis.Real.Sqrt. Huang credit accurate (Hypercube.lean:24-27, Huang.lean:17-20; Mathlib has no interlacing; Archive S=univ not importable). No new duplication (only a private test lemma). Build of 4 modules + test --wfail --iofail: exit 0, 0 warnings. REQUIRED CENTRAL FIX (non-blocking, one line): ComplexityTests/QueryComplexity/Measures.lean:108 still says \"Nisan's bounds\" for D<=bs0*C1, and :11 \"Nisan's relations\". Nits: Knuth/Archive could be credited for the dimension-count route; bib entries BealsBuhrmanCleveMoscaDeWolf2001, NisanSzegedy1994, Huang2019, GotsmanLinial1992 missing from references.bib; prior central items (comp_piecewise duplicate of private Certificate lemma, placement) remain. Not checked: full six gates. Evidence .lake/codex-validation/query-complexity-api/review.json sha256 8ed40be924d632cc942c03a6bb27ec69d4c5eb63470d29073d9391af8fde7715"}}}},
    "paths":
    ["Complexity/Computability/QueryComplexity/Degree.lean",
     "Complexity/Computability/QueryComplexity/ApproximateDegree.lean",
@@ -2697,52 +2617,42 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report": "",
-       "lease":
-       {"token": {"value": "47afa9bc3dccaabe05432a9940c18ce4"},
-        "holder":
-        {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
-         "agent": {"value": "worker-sable-ladner"}},
-        "expires": 1792404490},
-       "branch": "work/natural-proofs/worker-sable-ladner",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-ladner"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "M1 Circuit/Boolean/NaturalProof.lean + tests. Defs: truthTableTest, truthTableLanguage, IsLarge (∃c ∀ᶠn, 2^2^n ≤ 2^(cn)|C n|), IsNatural Γ (large subproperty, truth tables ∈ Γ), IsUseful Λ (∀L∈Λ ∀ᶠn, L.slice n ∉ C n), IsCircuitTest t, truthTableGenerator F (cslib PRG.Generator). Results: advantage_truthTableGenerator_truthTableTest (F avoids C → advantage = |C|/2^2^n); not_secure_truthTableGenerator (test C ≤ t gates, C avoids SIZE s, members ≤ s, ε < |C|/2^2^n → ¬Secure (IsCircuitTest t) ε); not_isUseful_PPoly_of_isNatural (poly-size F, ∀c ∀ᶠn Secure (IsCircuitTest 2^(cn)) 2^(-cn), IsNatural PPoly C → ¬IsUseful PPoly C); isUseful_PPoly_iff; IsNatural.PPoly_of_P; isLarge/isUseful_PPoly_setOf_lt_complexity (2^n/(5n)); truthTableLanguage_setOf_lt_complexity_notMem_PPoly. Checks: six gates via run-gates, all ok. Source: RR97 Sec. 4. Contributors: worker-sable-ladner only. Limits: hypothesis is an exponentially secure keyed family; continuation: nonuniform GGM bound (GGM/Circuit.lean; landed GGM is uniform PPT) to get it from 2^(k^ε)-secure PRGs; Håstad/Smolensky naturalness. Bib: @article{RazborovRudich1997, author={Razborov, Alexander A. and Rudich, Steven}, title={Natural Proofs}, journal={Journal of Computer and System Sciences}, volume={55}, number={1}, pages={24--35}, year={1997}, doi={10.1006/jcss.1997.1494}}",
       "snapshot":
       {"head": {"value": "2397f41ec42c3ee4710e6776f1f1e1a9b49ac54a"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390992,
-          "snapshot":
-          {"head": {"value": "2397f41ec42c3ee4710e6776f1f1e1a9b49ac54a"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
-           "agent": {"value": "reviewer-sable-cor4"}},
-          "note":
-          "Correctness review by reviewer-sable-cor4 (independent; author worker-sable-ladner only) of exact HEAD 2397f41e over base 0d8ef4bf. Scope: Circuit/Boolean/NaturalProof.lean, ComplexityTests/NaturalProofs.lean, Complexity.lean, ComplexityTests.lean. Build of touched module + test module with nice --wfail --iofail: ok, no warnings. Definitions match RR97: IsLarge = exists c eventually 2^-cn density; IsNatural = large subproperty with truth-table language in Gamma; IsUseful eventual, and isUseful_PPoly_iff gives RR per-n superpolynomial form. advantage = |C|/2^2^n exactly; not_secure hypotheses (t bounds the test, strict eps < density) correct. Barrier hypothesis forall c eventually Secure(2^cn, 2^-cn) has right quantifier order and follows from GGM over a 2^(k^eps)-hard PRG with k=n^d. Probes (lake env lean exit 0): identity family satisfies hsecure for all c,n (not contradictory); constant family violates it via a 0-gate bit test (has teeth); empty not large; univ not useful; not_secure instance at n>=16. 2^n/(5n) largeness/usefulness verified; language = GapMCSP.no. Axioms of 11 headlines: propext, Classical.choice, Quot.sound; no sorry/native_decide/set_option. Blocking: none. Follow-ups: barrier only needs usefulness at infinitely many n (stronger i.o. statement possible); nonuniform GGM derivation; optionally add hsecure non-vacuity probes to tests. Not checked: six gates, API style, landed deps. Evidence: .lake/codex-validation/natural-proofs-correctness/review.json sha256 37ab156287bbc30394d8fcdb03281cdf9c6f7e8d95e1fa405a1e3c6e0f77611f"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390911,
-          "snapshot":
-          {"head": {"value": "2397f41ec42c3ee4710e6776f1f1e1a9b49ac54a"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
-           "agent": {"value": "reviewer-sable-api4"}},
-          "note":
-          "API review (reviewer-sable-api4, independent, no contribution) of 2397f41e over 0d8ef4bf: NaturalProof.lean + tests. Build of touched module and test module with --wfail --iofail OK; probe confirms clean headline signatures and that hard-function truth tables are exactly GapMCSP.no (simp). Reuse good: MCSP.truthTable, PPoly/SIZE, Language.slice, cslib PRG.Generator.Secure with caller-supplied IsCircuitTest (idiomatic; truth-table generator = PRF read at all inputs, docstrings say so). Barrier stated citably; nonuniform hypothesis and missing GGM circuit analysis disclosed honestly. 8 axiom guards cover headlines. No blocking findings. Follow-ups: add RazborovRudich1997 to references.bib (central); move generic Generator.toReal_*Experiment_pure out of NW/Sampling (import at :14); move hard-function count (:351) to MCSP/Shannon; GapMCSP.no bridge + not_isNatural corollary for KC (:402); test comment :67-69 says not natural, theorem gives not constructive; name the repeated security hypothesis (:325,:407); Key variable shadowing (:262/:313). Not checked: six gates, deep correctness. Evidence .lake/codex-validation/natural-proofs-api/review.json sha256 3b09634956ae93c9a3c200393b2e33476b82845becb8b501b7465be86637c475"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792391530,
+      "landed": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792390992,
+       "snapshot":
+       {"head": {"value": "2397f41ec42c3ee4710e6776f1f1e1a9b49ac54a"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
+        "agent": {"value": "reviewer-sable-cor4"}},
+       "note":
+       "Correctness review by reviewer-sable-cor4 (independent; author worker-sable-ladner only) of exact HEAD 2397f41e over base 0d8ef4bf. Scope: Circuit/Boolean/NaturalProof.lean, ComplexityTests/NaturalProofs.lean, Complexity.lean, ComplexityTests.lean. Build of touched module + test module with nice --wfail --iofail: ok, no warnings. Definitions match RR97: IsLarge = exists c eventually 2^-cn density; IsNatural = large subproperty with truth-table language in Gamma; IsUseful eventual, and isUseful_PPoly_iff gives RR per-n superpolynomial form. advantage = |C|/2^2^n exactly; not_secure hypotheses (t bounds the test, strict eps < density) correct. Barrier hypothesis forall c eventually Secure(2^cn, 2^-cn) has right quantifier order and follows from GGM over a 2^(k^eps)-hard PRG with k=n^d. Probes (lake env lean exit 0): identity family satisfies hsecure for all c,n (not contradictory); constant family violates it via a 0-gate bit test (has teeth); empty not large; univ not useful; not_secure instance at n>=16. 2^n/(5n) largeness/usefulness verified; language = GapMCSP.no. Axioms of 11 headlines: propext, Classical.choice, Quot.sound; no sorry/native_decide/set_option. Blocking: none. Follow-ups: barrier only needs usefulness at infinitely many n (stronger i.o. statement possible); nonuniform GGM derivation; optionally add hsecure non-vacuity probes to tests. Not checked: six gates, API style, landed deps. Evidence: .lake/codex-validation/natural-proofs-correctness/review.json sha256 37ab156287bbc30394d8fcdb03281cdf9c6f7e8d95e1fa405a1e3c6e0f77611f"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792390911,
+       "snapshot":
+       {"head": {"value": "2397f41ec42c3ee4710e6776f1f1e1a9b49ac54a"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+        "agent": {"value": "reviewer-sable-api4"}},
+       "note":
+       "API review (reviewer-sable-api4, independent, no contribution) of 2397f41e over 0d8ef4bf: NaturalProof.lean + tests. Build of touched module and test module with --wfail --iofail OK; probe confirms clean headline signatures and that hard-function truth tables are exactly GapMCSP.no (simp). Reuse good: MCSP.truthTable, PPoly/SIZE, Language.slice, cslib PRG.Generator.Secure with caller-supplied IsCircuitTest (idiomatic; truth-table generator = PRF read at all inputs, docstrings say so). Barrier stated citably; nonuniform hypothesis and missing GGM circuit analysis disclosed honestly. 8 axiom guards cover headlines. No blocking findings. Follow-ups: add RazborovRudich1997 to references.bib (central); move generic Generator.toReal_*Experiment_pure out of NW/Sampling (import at :14); move hard-function count (:351) to MCSP/Shannon; GapMCSP.no bridge + not_isNatural corollary for KC (:402); test comment :67-69 says not natural, theorem gives not constructive; name the repeated security hypothesis (:325,:407); Key variable shadowing (:262/:313). Not checked: six gates, deep correctness. Evidence .lake/codex-validation/natural-proofs-api/review.json sha256 3b09634956ae93c9a3c200393b2e33476b82845becb8b501b7465be86637c475"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/NaturalProof.lean",
     "Complexity/Computability/Circuit/Boolean/NaturalProof",
@@ -2897,52 +2807,42 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report": "",
-       "lease":
-       {"token": {"value": "1ebac7b3c86dddb38767145b5f163cec"},
-        "holder":
-        {"session": {"value": "15d3a3e432be6927c6de5db959e3458a"},
-         "agent": {"value": "worker-sable-graphs"}},
-        "expires": 1792403939},
-       "branch": "work/communication-complexity/worker-sable-graphs",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-graphs"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "M1 (deterministic). Protocol.leaf/leafOutput/leafAlice/leafBob; leaf_eq_iff: p.leaf x y = i <-> x in leafAlice i /\\ y in leafBob i; exists_rectangle_partition: <= 2^depth rectangles partition X x Y, run constant on each; card_filter_le_mul (area bound). IsFoolingSet f z S; card_lt_two_pow: #S < 2^depth if p.run = f, f takes a value /= z; le_ecomplexity: 2^n <= #S -> n+1 <= ecomplexity. communicationMatrix R f; rank_communicationMatrix_le: rank <= #{true leaves} (CommSemiring + StrongRankCondition, e.g. R); clog_rank_le_ecomplexity; LogRankConjecture : Prop. ecomplexity_equality/greaterThan/dotProduct/disjointness = n+1 on BitString n, 0 < n (upper: Protocol.aliceSend; IP: HadamardRectangles area bound). Checks: run-gates six ok; tests ComplexityTests/CommunicationComplexity.lean (n=0 boundary, EQ rank witness, axiom guards). Source: KushilevitzNisan1997 Ch.1, own proofs. Contributors: worker-sable-graphs. Continuation: M2 (public/private coins, Newman via Probability.Concentration, discrepancy, R(IP)); M3 (distributional, Yao, corruption, Razborov). Bib: @inproceedings{MehlhornSchmidt1982, author={Mehlhorn, Kurt and Schmidt, Erik M.}, title={Las {V}egas is better than determinism in {VLSI} and distributed computing}, booktitle={STOC}, pages={330--337}, year={1982}} @inproceedings{LovaszSaks1988, author={Lov{\\'a}sz, L{\\'a}szl{\\'o} and Saks, Michael}, title={Lattices, {M}{\\\"o}bius functions and communication complexity}, booktitle={FOCS}, pages={81--90}, year={1988}}",
       "snapshot":
       {"head": {"value": "d57c472c16dfef7cb8c3c8dc06deb1318fa25cf0"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390766,
-          "snapshot":
-          {"head": {"value": "d57c472c16dfef7cb8c3c8dc06deb1318fa25cf0"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
-           "agent": {"value": "reviewer-sable-cor6"}},
-          "note":
-          "Correctness review of M1 by reviewer-sable-cor6, who did not contribute to the epic. Read-only review of the exact head d57c472c. Scope: Rectangle, FoolingSet, Rank, Functions, the tests and the root imports. Build of the 4 touched modules and the test module under nice --wfail --iofail: success. Statements checked against Kushilevitz-Nisan Ch.1: the partition (at most 2^depth product rectangles, exists-unique cover, output constant on each), the fooling set (KN definition; the hz hypothesis is necessary; 2^n<=#S gives n+1<=D), and the rank bound (generic CommSemiring+StrongRankCondition, with R instantiated; clog2 rank<=D). LogRankConjecture is exists c, forall f; c=0 is refuted by EQ, and the swapped-quantifier form is provably trivial, so the order matters. EQ/GT/IP/DISJ are standard: IP is parity, DISJ means no common 1, GT means numeral(x)>numeral(y). Each = n+1 with both bounds proved; at n=0 each is 0. Probes (exit 0) cover n=0,1, EQ Fin 5 rank 5 giving D>=3, and a concrete AND protocol with rank<=1. Axioms of 17 decls: propext, Classical.choice, Quot.sound. No sorry, native_decide or set_option. Blocking: none. Nits: GT is strict (KN sometimes uses >=; same complexity); LogRank quantifies over Type 0. Not checked: six gates, API scope. Evidence: .lake/codex-validation/communication-complexity-correctness/review.json sha256 f666f71f20ab2f595f42cad27902dfccf8a03fe4fc2cbb93833f3adab1a28883 (+Probes.lean, probes.log, build.log)."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390947,
-          "snapshot":
-          {"head": {"value": "d57c472c16dfef7cb8c3c8dc06deb1318fa25cf0"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
-           "agent": {"value": "reviewer-sable-api6"}},
-          "note":
-          "API review by reviewer-sable-api6 (independent; sole author worker-sable-graphs) of d57c472c. Build: nice lake build of Rectangle, FoolingSet, Rank, Functions and ComplexityTests.CommunicationComplexity with --wfail --iofail: exit 0. Probes: axioms within propext/Classical.choice/Quot.sound; scoped #lint docBlame/simpNF/unusedArguments: 0 errors. Fit: no second rectangle type or depth/leaves API; reuses Protocol.leaves, leaves_le_two_pow_depth, Solves and ecomplexity_le_iff; DensityRectangle, Frontier.rectangle and DecisionTree area bound are different models; Mathlib Matrix.rank and Lindsey via card_mul_le_two_pow_of_hadamardCode_eq reused. Template, docstrings, 10 axiom guards, n=0 test OK. Blocking: none. Follow-ups: (1) Functions.lean:234-258 dotProduct counting lemmas belong in Cslib.BitString/Hadamard.lean (rule 6) and re-derive Parity.lean:171 card_filter_parityOn_eq; (2) aliceSend, run/depth lemmas and ecomplexity_le_succ belong in Protocol.lean; (3) references.bib needs MehlhornSchmidt1982, LovaszSaks1988; (4) nits: IsFoolingSet.le_ecomplexity -> succ_le_ecomplexity, generic card_filter_le_mul, namespace mix of ecomplexity_* lemmas; (5) M2: name the function form of ecomplexity, add weighted area bound for discrepancy; (6) simp equation lemmas for leaf*. Not checked: deep correctness, six gates, full lint. Evidence: .lake/codex-validation/communication-complexity-api/review.json sha256 11223863f16bc46f6cd1186e76d98a21005d61cf3d6a9beaddda35aecffd8317"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792391530,
+      "landed": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792390766,
+       "snapshot":
+       {"head": {"value": "d57c472c16dfef7cb8c3c8dc06deb1318fa25cf0"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
+        "agent": {"value": "reviewer-sable-cor6"}},
+       "note":
+       "Correctness review of M1 by reviewer-sable-cor6, who did not contribute to the epic. Read-only review of the exact head d57c472c. Scope: Rectangle, FoolingSet, Rank, Functions, the tests and the root imports. Build of the 4 touched modules and the test module under nice --wfail --iofail: success. Statements checked against Kushilevitz-Nisan Ch.1: the partition (at most 2^depth product rectangles, exists-unique cover, output constant on each), the fooling set (KN definition; the hz hypothesis is necessary; 2^n<=#S gives n+1<=D), and the rank bound (generic CommSemiring+StrongRankCondition, with R instantiated; clog2 rank<=D). LogRankConjecture is exists c, forall f; c=0 is refuted by EQ, and the swapped-quantifier form is provably trivial, so the order matters. EQ/GT/IP/DISJ are standard: IP is parity, DISJ means no common 1, GT means numeral(x)>numeral(y). Each = n+1 with both bounds proved; at n=0 each is 0. Probes (exit 0) cover n=0,1, EQ Fin 5 rank 5 giving D>=3, and a concrete AND protocol with rank<=1. Axioms of 17 decls: propext, Classical.choice, Quot.sound. No sorry, native_decide or set_option. Blocking: none. Nits: GT is strict (KN sometimes uses >=; same complexity); LogRank quantifies over Type 0. Not checked: six gates, API scope. Evidence: .lake/codex-validation/communication-complexity-correctness/review.json sha256 f666f71f20ab2f595f42cad27902dfccf8a03fe4fc2cbb93833f3adab1a28883 (+Probes.lean, probes.log, build.log)."},
+      "api":
+      {"verdict": "approve",
+       "time": 1792390947,
+       "snapshot":
+       {"head": {"value": "d57c472c16dfef7cb8c3c8dc06deb1318fa25cf0"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
+        "agent": {"value": "reviewer-sable-api6"}},
+       "note":
+       "API review by reviewer-sable-api6 (independent; sole author worker-sable-graphs) of d57c472c. Build: nice lake build of Rectangle, FoolingSet, Rank, Functions and ComplexityTests.CommunicationComplexity with --wfail --iofail: exit 0. Probes: axioms within propext/Classical.choice/Quot.sound; scoped #lint docBlame/simpNF/unusedArguments: 0 errors. Fit: no second rectangle type or depth/leaves API; reuses Protocol.leaves, leaves_le_two_pow_depth, Solves and ecomplexity_le_iff; DensityRectangle, Frontier.rectangle and DecisionTree area bound are different models; Mathlib Matrix.rank and Lindsey via card_mul_le_two_pow_of_hadamardCode_eq reused. Template, docstrings, 10 axiom guards, n=0 test OK. Blocking: none. Follow-ups: (1) Functions.lean:234-258 dotProduct counting lemmas belong in Cslib.BitString/Hadamard.lean (rule 6) and re-derive Parity.lean:171 card_filter_parityOn_eq; (2) aliceSend, run/depth lemmas and ecomplexity_le_succ belong in Protocol.lean; (3) references.bib needs MehlhornSchmidt1982, LovaszSaks1988; (4) nits: IsFoolingSet.le_ecomplexity -> succ_le_ecomplexity, generic card_filter_le_mul, namespace mix of ecomplexity_* lemmas; (5) M2: name the function form of ecomplexity, add weighted area bound for discrepancy; (6) simp equation lemmas for leaf*. Not checked: deep correctness, six gates, full lint. Evidence: .lake/codex-validation/communication-complexity-api/review.json sha256 11223863f16bc46f6cd1186e76d98a21005d61cf3d6a9beaddda35aecffd8317"}}}},
    "paths":
    ["Complexity/Computability/Communication/Rectangle.lean",
     "Complexity/Computability/Communication/FoolingSet.lean",
