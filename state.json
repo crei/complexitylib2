@@ -1620,4 +1620,10 @@
    "expires": 1792386055,
    "actor":
    {"session": {"value": "842267643c344d7a79017588bcfc8a39"},
-    "agent": {"value": "worker-sable-numbers"}}}]}
+    "agent": {"value": "worker-sable-numbers"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792386331,
+   "actor":
+   {"session": {"value": "7781632cd73663d87f4e864c19b303a8"},
+    "agent": {"value": "worker-sable-undecid"}}}]}
