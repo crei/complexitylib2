@@ -3015,7 +3015,16 @@
        "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor2"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "7b837b71017ca05a53c1aa9e100780b3"},
+          "holder":
+          {"session": {"value": "33380288772710be7744d177c8f66871"},
+           "agent": {"value": "reviewer-sable-api2"}},
+          "expires": 1792407004},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/ParityP.lean",
     "Complexity/Computability/Complexity/Classes/Operators.lean",
