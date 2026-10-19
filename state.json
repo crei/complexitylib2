@@ -2303,7 +2303,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "fefe7f2b24a3954069242211e73cb1cb"},
+       "holder":
+       {"session": {"value": "0d4e04fa36522a13475c8af7f7944f7d"},
+        "agent": {"value": "worker-sable-prob"}},
+       "expires": 1792401108},
       "branch": "work/probability-toolkit/worker-sable-prob",
       "blocked": false,
       "assignee": {"value": "worker-sable-prob"}}}},
@@ -2322,7 +2327,7 @@
    "goal":
    "Coverage epic 1 (citation canon): complete the probability toolkit papers cite in preliminaries, reusing Complexity/Probability (Concentration, Product, Entropy, PairwiseIndependent*, UniversalHash) and Mathlib (Probability.Moments.SubGaussian, InformationTheory.KullbackLeibler) without duplication. Endpoints: (1) multiplicative Chernoff upper and lower tails Pr[X >= (1+delta) mu] <= exp(-delta^2 mu/(2+delta)) for independent [0,1]-valued variables under the library product PMF, plus a counting form on bit strings; (2) k-wise independence IsKWiseIndependent with the k-th moment tail bound and the degree-(k-1) polynomial construction over a finite field; (3) Lovasz Local Lemma, symmetric and asymmetric, on finite product spaces; (4) finite-PMF entropy bridged to Mathlib KL divergence, then Gibbs, Pinsker, subadditivity, Han and Shearer; (5) min-entropy and (k, eps)-sources with the flat-source decomposition; (6) McDiarmid (bounded differences) from Mathlib Azuma-Hoeffding. Milestones may split (1)-(3) and (4)-(6). Tests with concrete instances, named axiom guards, six gates, frozen submissions; cite AlonSpencer, MitzenmacherUpfal or Vadhan as appropriate (propose entries).",
    "dependencies": [],
-   "authors": []},
+   "authors": [{"value": "worker-sable-prob"}]},
   {"resume": null,
    "report": "",
    "phase":
