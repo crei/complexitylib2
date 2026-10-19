@@ -3371,7 +3371,16 @@
        "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor3"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "64b26207ddcb5132d60170397a846d89"},
+          "holder":
+          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+           "agent": {"value": "reviewer-sable-api3"}},
+          "expires": 1792406997},
+         "blocked": false}}}}}},
    "paths": ["references.bib"],
    "id": {"value": "docs-bibliography-3"},
    "goal":
