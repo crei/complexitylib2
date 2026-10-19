@@ -2774,7 +2774,31 @@
    "goal":
    "Docs-only: refresh ROADMAP.md (landed Fagin, fixed-power, rational hitting, time hierarchy, logspace and Sipser-Lautemann; machine-class milestones; a coverage-priorities section from the citation audit), README.md selected developments (structural complexity, IP, NP-complete problems, Fagin) and UPSTREAM.md (#767 alignment of L/PSPACE/DTIME/EXP; probabilistic IterateWhile helpers). No Lean changes. check_docs, two reviews.",
    "dependencies": [],
-   "authors": [{"value": "coordinator-sable"}]}],
+   "authors": [{"value": "coordinator-sable"}]},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Problems/VertexCover.lean",
+    "Complexity/Computability/Complexity/Problems/Coloring.lean",
+    "Complexity/Computability/Complexity/Problems/Hamiltonian.lean",
+    "Complexity/Computability/Complexity/Problems/Hamiltonian",
+    "Complexity/Computability/Complexity/Problems/TSP.lean",
+    "Complexity/Computability/Complexity/Problems/GraphIsomorphism.lean",
+    "Complexity/Computability/Complexity/Problems/SubsetSum.lean",
+    "Complexity/Computability/Complexity/Problems/SubsetSum",
+    "Complexity/Computability/Complexity/Problems/Partition.lean",
+    "Complexity/Computability/Complexity/Problems/Knapsack.lean",
+    "Complexity/Computability/Complexity/Problems/IntegerProgramming.lean",
+    "Complexity/Computability/Complexity/Problems/Graph.lean",
+    "Complexity/Computability/Complexity/Classes/NP/Witness.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Complexity/PolyTime/Nat/Binary.lean",
+    "ComplexityTests/NPWitness.lean"],
+   "id": {"value": "np-witness-migration"},
+   "goal":
+   "Follow-up of np-witness-builder: migrate the remaining hand-rolled NP-membership proofs onto Classes/NP/Witness (mem_NP_of_witness, mem_NP_of_subsetWitness, IsVerifier.of_padding/guard): VertexCover, Coloring, Hamiltonian (directed and undirected), TSP, GraphIsomorphism, SubsetSum, Partition, Knapsack, ZeroOneIP, and Ladner's private SAT padding lemma; then define Graph.selectVertices as selectMask. Share the duplicated countP_range_lt / length_vertices_le / distinct-declared-vertices helpers of the graph problems in one place, and move listGetD_binary from TSP.lean to PolyTime/Nat/Binary.lean. No statement weakened; public names kept (deprecated aliases only if needed); report the line delta. Six gates via run-gates; two reviews.",
+   "dependencies": [{"value": "np-witness-builder"}],
+   "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
