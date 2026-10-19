@@ -1938,15 +1938,18 @@
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "1299c6804132c0d6045ce0c956b65c8a"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792384835,
+          "snapshot":
+          {"head": {"value": "881b9c0d619b066ea8d577e7097e821d0cfdc3f1"},
+           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+          "reviewer":
           {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
            "agent": {"value": "reviewer-sable-cor1"}},
-          "expires": 1792399194},
-         "blocked": false}},
+          "note":
+          "Independent bibliographic correctness review of 881b9c0 (reviewer did not author the epic). BLOCKING: duplicate keys. Cutland1980 and KatzLindell2020 already exist at references.bib:599 and :448 (main :583/:432, since scaffold 8a8a7c6). The epic appends second entries at :1802 and :1810: 178 entries, 176 distinct keys. The no-duplicates check missed the whitespace-padded existing keys. Fix: delete the new Cutland1980 (1802-1808) and KatzLindell2020 (1810-1817) entries. Optionally move doi 10.1017/CBO9781139171496 and 10.1201/9781351133036 into the existing ones. All other fields verified correct: Crossref + doi.org for all 8 DOIs (BGS SICOMP 4(4):431-442 1975; GMR 18(1):186-208 1989; GMW JACM 38(3):690-728 1991; BK SICOMP 41(4):880-914 2012; Bourgain GAFA 17(1):33-57 2007; FGHK FOCS 2016 89-98; Cutland CUP 1980; KL CRC ed3 2020). Ore Trans AMS 35(3):559-584 1933 via Crossref. GJ Freeman SF 1979 via OpenLibrary/LoC. ECCC TR26-260 authors/title match, and TR10-044 numbering matches every cited BK lemma, claim and theorem. Citing docstrings on main, relativ, ip, graphs, disperser and b2 name the same works. Nits: Ore add doi 10.1090/S0002-9947-1933-1501703-0; MS numbering checked against rev 0. Unverified: DBLP blocked (429), GJ has no publisher page, doc-gen4 not run on duplicates. Evidence: .lake/codex-validation/docs-bibliography-correctness/review.json sha256 c4307d1c92a5b8dd942981abf63bbde99d5c2676c2de1f7a27a78642f8aaeb40"}}},
        "api":
        {"finished":
         {"review":
