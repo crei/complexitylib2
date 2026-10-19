@@ -1111,15 +1111,18 @@
           "note":
           "Delta correctness review of eb1f274 on 764e3b8 by reviewer-sable-cor4 (independent; approved 78caf64 earlier). eb1f274 is a merge with parents 78caf64 and 764e3b8; git diff-tree --cc empty; Plain.lean, Classes/P.lean, Classes/NP.lean and ComplexityTests/PolyTimePlain.lean byte-identical to 78caf64; diff vs main is the same 6 files +341/-3. Landed since 5c14e51 (37 files: circuit iteration/metric, Fagin, Hierarchy/Decoder/NatPower/Exponential, quantitative-stretch streaming): cslib pin and toolchain unchanged, and no changed file is in the 41-module import closure of Plain/P/NP, so P, NP, ComputableTidilyInPolyTime, PolyBounded, encBool, DecidableInTimeAndSpace and the tidy bridges are unchanged. Build of the 4 modules --wfail --iofail OK, 0 warnings; #print axioms of the four headlines = [propext, Classical.choice, Quot.sound]. Blocking: none. Earlier nits unchanged (files identical). Not run: check.sh. Evidence .lake/codex-validation/polytime-plain-bridge-correctness/delta/review.json SHA256 865d9295b303aebba785d4757f4df989aac1b723cd0a92907ff859b8acd0ec84"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "cc2c95d7e1e74b91cb93335adc56eab3"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792373830,
+          "snapshot":
+          {"head": {"value": "eb1f274fc049d5a8ded60849d9baa3e2a6753bb4"},
+           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+          "reviewer":
           {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
            "agent": {"value": "reviewer-sable-api4"}},
-          "expires": 1792388154},
-         "blocked": false}}}}}},
+          "note":
+          "Delta API review of merge eb1f274 (base main 764e3b8) by reviewer-sable-api4, independent, read-only. Builds on my approval of 78caf64 (evidence .lake/codex-validation/polytime-plain-bridge-api/review.json sha256 f253047d...660e). Delta: parents are 78caf64 and 764e3b8; git diff-tree --cc is empty; Plain.lean, Classes/P.lean, Classes/NP.lean and ComplexityTests/PolyTimePlain.lean are blob-identical to 78caf64; the roots add exactly the two epic imports; the diff vs main is the same 6 files +341/-3. Main's changes since 5c14e51 do not touch P/NP, PolyTime.lean, Deterministic, TapeLemmas, TidyNormalForm or the pin, and add no overlapping bridge or name collision; UPSTREAM.md's #767 bullet is unchanged, so the proposed wording still applies. lake build Plain/P/NP/test --wfail --iofail ok (up to date); fresh lake env lean on all four files: exit 0, no output. No blocking findings; earlier nits unchanged. Limitation: check.sh not rerun. Evidence .lake/codex-validation/polytime-plain-bridge-api-delta/review.json sha256 452164eebbabaf8673dfd30d70f89a1a6d1a27de4a7b52be44622043531aa91b"}}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Complexity/PolyTime/Plain.lean",
     "Complexity/Computability/Complexity/Classes/P.lean",
