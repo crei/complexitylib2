@@ -3101,7 +3101,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/natural-proofs-2/worker-sable-ladner",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-ladner"}}}},
    "paths":
    ["Complexity/Crypto/Computational/GGM/Circuit.lean",
     "Complexity/Computability/Circuit/Boolean/NaturalProof.lean",
