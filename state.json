@@ -18,7 +18,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792356843,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792356674,
@@ -76,7 +75,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792357641,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792357482,
@@ -130,7 +128,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792355755,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792355217,
@@ -180,7 +177,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792353277,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792353139,
@@ -226,7 +222,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358231,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358092,
@@ -283,7 +278,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
-      "landed": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
       "correctness":
       {"verdict": "approve",
        "time": 1792374155,
@@ -336,7 +330,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364044,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792363911,
@@ -397,7 +390,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792368712,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792368575,
@@ -449,7 +441,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792361676,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792361403,
@@ -507,7 +498,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792371880,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792371576,
@@ -562,7 +552,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358627,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358495,
@@ -631,7 +620,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792359269,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792359175,
@@ -820,7 +808,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792360547,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792360283,
@@ -869,7 +856,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792373030,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792372858,
@@ -925,7 +911,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
-      "landed": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
       "correctness":
       {"verdict": "approve",
        "time": 1792371825,
@@ -992,7 +977,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792367280,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792367120,
@@ -1046,7 +1030,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792374035,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792373854,
@@ -1101,7 +1084,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364773,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792364624,
@@ -1147,7 +1129,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
-      "landed": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
       "correctness":
       {"verdict": "approve",
        "time": 1792373796,
@@ -1197,7 +1178,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792370838,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792369636,
@@ -1246,7 +1226,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
-      "landed": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
       "correctness":
       {"verdict": "approve",
        "time": 1792372831,
@@ -1300,7 +1279,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376022,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792375751,
@@ -1346,7 +1324,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
-      "landed": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
       "correctness":
       {"verdict": "approve",
        "time": 1792374437,
@@ -1653,7 +1630,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
-      "landed": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
       "correctness":
       {"verdict": "approve",
        "time": 1792374719,
@@ -1823,7 +1799,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "SURVEY + CHOICE (worker-sable-disperser). Choice: Ben-Sasson & Kopparty, Affine dispersers from subspace polynomials (SICOMP 41(4) 2012; ECCC TR10-044), Theorem 7.3 (Sym^t construction), with one honest adaptation. Rejected: Li O(log n) and Shaltiel (multi-layer extractor machinery, far larger); Bourgain/Yehudayoff/Li11 (exponential sums, only n/sqrt(loglog n)); BK univariate Thm 2.6/2.7 (linear dimension only).\nINFEASIBILITY FINDING (prime degree): BK as stated needs block fields F_(2^n) of PRIME degree n ~ 2N^(3/5). Poly-time arithmetic there needs a deterministic poly-time construction of irreducible polynomials of large prime degree (Shoup 1990: deterministic factoring + Kummer towers); brute force is 2^(N^(3/5)). Every elementary explicit family (x^(2*3^k)+x^(3^k)+1, Lidl-Niederreiter Thm 3.35 towers, Kummer towers) has subfields of index 2 or 3, and subfields defeat BK (their Remark 2.4; products over a subfield shift are confined to that shift). So literal BK is out of reach here.\nADAPTATION (feasible): BK's proof of Thm 7.3 uses non-containment in subfield shifts only for blocks with dim Y_i > r+1. Replacing r+1 by M = max(r+1, s), s = largest proper-subfield dimension, the same averaging gives: f is nonconstant on every F2-affine A in F^r with dim A > nr/t + nt + r*M, whenever n*t >= r(r+1). Take n = p_1...p_k, distinct primes in (L, 4L], L ~ 0.3 log2 N, so s <= n/L and r*M <= r(r+1) + N/L. Degree-p_j irreducibles found by brute force (2^O(L) = poly(N)); F = GaloisField 2 n with roots y_j of f_j, bits read in the tensor monomial basis prod_j y_j^(kappa_j) (independent by the coprime-degree tower law); multiplication is polynomial multiplication plus reduction mod each f_j (F2 coefficients). Mathlib Chebyshev.theta_ge / theta_le_log4_mul_x give the primes.\nFUNCTION: input x in F2^N. Parameters n (shortest prefix product of primes in (L,4L] with n^9 >= N^5), r = floor(N/n), t = ceil(r(r+1)/n); first n*r bits = r blocks x_i in F; f(x) = Tr( sum over |I|=t of prod_{i in I} x_i^(2^(r+2-i)-1) ). Small N: trivial branch with d(N) = N+1 (vacuous).\nTHEOREM (target): for every N, f_N is nonconstant on every affine subspace of F2^N of dimension >= d(N) := (N-nr) + floor(nr/t) + n*t + r*max(r+1, floor(n/L)) + 1, and d(N) = O(N/log N). With b2's Thm 4.1 this gives 3.5N - O(N/log N): o(N) as the goal asks, honestly weaker than the paper's O(log n).\nPROOF OUTLINE (finite differences instead of reduction mod X^q-X): (1) block-echelon (Bourgain) decomposition A = gamma + sum_k s_k(Y_k); (2) mixed difference of f o H with e_i+1 directions in Y_i (i in I_0): vanishes for J != I_0 by degree counting at a threshold (BK Claim 7.4, proved by Abel summation with weights 1/(r+2-i)), and equals Tr(prod_i Moore(W_i)) for J = I_0; (3) independent-source core (BK Thm 6.1): some W_i give Tr(prod Moore(W_i)) != 0, via image-subspace polynomials (BK Lemma 3.7), the structural Lemma 3.10, expansion of the permanents into reduced monomials (Mathlib MvPolynomial.eq_zero_of_eval_eq_zero) and the zero-pattern combinatorics of Claims 6.2/6.3.\nMATHLIB REUSE: Polynomial roots/card_roots', comp/natDegree_comp, MvPolynomial.eq_zero_of_eval_eq_zero, Matrix.permanent/det, FiniteField.algebraMap_trace_eq_sum_pow, frobenius, GaloisField, IntermediateField.adjoin finrank and tower law, Chebyshev bounds. Library: PolyTime fold/map/iterate/findWith primitives (fun_prop).\nPOLY TIME: tensor-basis multiplication (O(n^2 k) bit ops), powering by e+1 squarings, Sym^t by the DP e_j <- e_j + y e_(j-1), trace by n squarings, brute-force irreducibility by trial division in degree <= 4L, primes by trial division. Certificate via fun_prop folds, charging every field operation.\nSCOPE QUESTIONS for coordinator: (a) the poly-time certificate belongs under Computability (proposed Complexity/Computability/Complexity/AffineDisperser.lean); please add that path. (b) For now the field tower lives in Foundations/Combinatorics/AffineDisperser/. (c) Until b2 lands its definition I state results with Mathlib AffineSubspace (ZMod 2) (Fin N -> ZMod 2) and finrank of the direction, with no new public disperser definition; I bridge to b2's notion later.\nSIZE: several thousand lines. Milestones: M1 algebraic core (adapted Thm 7.3 for an abstract finite field with a subfield bound); M2 explicit field, bit-string function, d(N) = O(N/log N); M3 poly-time certificate. I will delegate disjoint files to my own subagents and record them as contributors.",
       "lease":
       {"token": {"value": "bd467318b8210427a7235dcddbf27444"},
        "holder":
