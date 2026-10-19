@@ -3046,6 +3046,24 @@
    "goal":
    "Milestone 2 of probability-toolkit (after M1 lands): a bridge from the library's finite-PMF entropy to Mathlib InformationTheory.klDiv, then Gibbs' inequality, Pinsker, entropy subadditivity, Han's inequality and Shearer's lemma; minEntropy and (k, eps)-sources with the flat-source decomposition (every k-source is a convex combination of flat k-sources); McDiarmid's bounded-differences inequality derived from Mathlib's Azuma-Hoeffding (ProbabilityTheory.measure_sum_ge_le_of_hasCondSubgaussianMGF). Reuse Probability/{Entropy, Product, StatisticalDistance, Concentration} and M1; no second entropy or distance notion. Cite CoverThomas2006, ChungGrahamFranklShearer1986, McDiarmid1989, ChorGoldreich1988 (propose entries). Tests, named axiom guards, run-gates, frozen submission.",
    "dependencies": [{"value": "probability-toolkit"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Communication/Randomized.lean",
+    "Complexity/Computability/Communication/Randomized",
+    "Complexity/Computability/Communication/Newman.lean",
+    "Complexity/Computability/Communication/Distributional.lean",
+    "Complexity/Computability/Communication/Discrepancy.lean",
+    "Complexity/Computability/Communication/Corruption.lean",
+    "Complexity/Computability/Communication/Disjointness.lean",
+    "Complexity/Computability/Communication/Protocol.lean",
+    "ComplexityTests/CommunicationComplexity2.lean"],
+   "id": {"value": "communication-complexity-2"},
+   "goal":
+   "Milestones 2-3 of communication-complexity (after M1 lands), on the M1 rectangle/rank API and Protocol: M2 randomized protocols (public coins as finite distributions over deterministic protocols, private coins as uniform per-player bit strings) with error eps, Newman's theorem via the library's general Hoeffding (Probability.Concentration.pi_sum_ge_mean_add) with the exact extra cost, the discrepancy bound 2*gamma <= 2^c * disc and R(IP) = Omega(n) via the Lindsey lemma; M3 distributional complexity and Yao's minimax (finite LP duality or Mathlib Sion), the corruption bound and Razborov's R(DISJ) = Omega(n) if the API supports it, else tracked. Move Protocol.aliceSend to Protocol.lean. Cite Newman1991, Yao1977, Razborov1992, KalyanasundaramSchnitger1992 (propose entries). Tests, named axiom guards, run-gates, frozen submission per milestone.",
+   "dependencies": [{"value": "communication-complexity"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
