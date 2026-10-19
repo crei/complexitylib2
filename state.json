@@ -2905,20 +2905,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "M1 implemented: Impagliazzo hard-core lemma (boosting, Boosting/Potential weights) and Yao XOR lemma, nonuniform over De Morgan circuits; head b783d8e6; full gates running.",
-      "lease":
-      {"token": {"value": "ec3ac2c1f4d3824598496a8bef23011c"},
-       "holder":
-       {"session": {"value": "9f33c425e7787c86e00bfa66ec90f517"},
-        "agent": {"value": "worker-sable-loop"}},
-       "expires": 1792405185},
-      "branch": "work/hardness-amplification/worker-sable-loop",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-loop"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "M1 implemented: Impagliazzo hard-core lemma (boosting, Boosting/Potential weights) and Yao XOR lemma, nonuniform over De Morgan circuits; head b783d8e6; full gates running.",
+       "lease":
+       {"token": {"value": "ec3ac2c1f4d3824598496a8bef23011c"},
+        "holder":
+        {"session": {"value": "9f33c425e7787c86e00bfa66ec90f517"},
+         "agent": {"value": "worker-sable-loop"}},
+        "expires": 1792405185},
+       "branch": "work/hardness-amplification/worker-sable-loop",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-loop"}},
+      "summary":
+      "M1: Circuit/Boolean/{HardCore,XorLemma}, nonuniform De Morgan circuits, size = complexity interpretation (single g).\n- IsHardCoreMeasure f s δ ε M: M∈[0,1], δ2^n ≤ ΣM, complexity g ≤ s ⇒ Σ_{g=f} M ≤ (1/2+ε)ΣM.\n- exists_isHardCoreMeasure (Impagliazzo): 0<δ, 0<ε, 1 ≤ 3ε²δ²T, (complexity g ≤ T*s+(2+T*(2*(T+2))) ⇒ #{g=f}/2^n ≤ 1-δ) ⇒ ∃ M, IsHardCoreMeasure f s δ ε M; _of_le: size S gives (S-(2+T(2(T+2))))/T.\n- card_eq_sum_le: XOR lemma for a measure, any Fintype.\n- IsHardCoreMeasure.card_eq_xorPower_div_le; card_eq_xorPower_div_le (Yao, hardness at T(s+3)+2+2T(T+2)): complexity g ≤ s ⇒ #{g=xorPower f k}/2^(kn) ≤ 1/2+ε+(1/2-ε)(1-δ)^k.\nProof: boosting with Boosting.weight/potential, rate εδ; strict majority; XOR by 1=M+(1-M) induction.\nChecks: run-gates all six ok; tests ComplexityTests/HardnessAmplification incl. parity-2 hard-core instance, 4 axiom guards.\nCredit: Impagliazzo95, Yao82, Holenstein05. Contributors: worker-sable-loop.\nLimits: measure not set; nonuniform. Continuation M2: worst→average, NW/IW/BFNW endpoints.\nBib:\n@inproceedings{Impagliazzo1995, author={Impagliazzo, Russell}, title={Hard-Core Distributions for Somewhat Hard Problems}, booktitle={36th Annual Symposium on Foundations of Computer Science}, pages={538--545}, year={1995}, doi={10.1109/SFCS.1995.492584}}\n@inproceedings{Yao1982, author={Yao, Andrew C.}, title={Theory and Applications of Trapdoor Functions}, booktitle={23rd Annual Symposium on Foundations of Computer Science}, pages={80--91}, year={1982}, doi={10.1109/SFCS.1982.45}}",
+      "snapshot":
+      {"head": {"value": "b783d8e63477e9ee70671daf67a89740bfc502d1"},
+       "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/HardCore.lean",
     "Complexity/Computability/Circuit/Boolean/HardCore",
