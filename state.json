@@ -2754,7 +2754,16 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api6"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "dc7efe3e26431303368ddcaca698fe8e"},
+          "holder":
+          {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
+           "agent": {"value": "reviewer-sable-api6"}},
+          "expires": 1792404820},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Communication/Rectangle.lean",
     "Complexity/Computability/Communication/FoolingSet.lean",
