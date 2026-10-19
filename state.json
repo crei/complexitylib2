@@ -1,5 +1,41 @@
 {"version": 1,
- "integration": null,
+ "integration":
+ {"snapshot":
+  {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
+   "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+  "main": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"},
+  "lease":
+  {"token": {"value": "f2dbdc1f1100d6b12ff924c61c65bcb1"},
+   "holder":
+   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+    "agent": {"value": "coordinator-sable"}},
+   "expires": 1792405463},
+  "epic": {"value": "np-witness-builder"},
+  "candidates":
+  [{"snapshot":
+    {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
+     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+    "epic": {"value": "np-witness-builder"}},
+   {"snapshot":
+    {"head": {"value": "ec271bcb5ddcddd0085ae9ec76f37a569c6f15cf"},
+     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+    "epic": {"value": "query-complexity"}},
+   {"snapshot":
+    {"head": {"value": "8a05720a1f07660e4d0e27e808dedbbc16322c3b"},
+     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+    "epic": {"value": "probability-toolkit"}},
+   {"snapshot":
+    {"head": {"value": "619bc0b59c3217fe8e9cb7ea1ddf1697444ede60"},
+     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+    "epic": {"value": "undecidability"}},
+   {"snapshot":
+    {"head": {"value": "d57c472c16dfef7cb8c3c8dc06deb1318fa25cf0"},
+     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+    "epic": {"value": "communication-complexity"}},
+   {"snapshot":
+    {"head": {"value": "2397f41ec42c3ee4710e6776f1f1e1a9b49ac54a"},
+     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+    "epic": {"value": "natural-proofs"}}]},
  "epics":
  [{"resume": null,
    "report":
