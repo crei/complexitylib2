@@ -3148,7 +3148,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "Started. Plan: GGM/Circuit.lean (fixed-width GGM tree, parallel-PRG hybrid over coordinates, level hybrid with loss (2^n-1)eps and size t+2^n(n*C(G)+1), bridge to landed GGM.eval), then PRG->barrier corollary. Path request (non-blocking): the M1 test comment fix and the IsLarge/IsNatural/IsUseful sub-namespace move both need ComplexityTests/NaturalProofs.lean, which is not in my paths; please revise to add it if you want those in this epic.",
       "lease":
       {"token": {"value": "ed01db2b5aeb45778b314d77c87b7d4b"},
        "holder":
