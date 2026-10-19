@@ -2586,7 +2586,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "dadd20d57bffda2cca8498983e4164f2"},
+       "holder":
+       {"session": {"value": "1c9857ba8b9709bb8b7bbe793f95b513"},
+        "agent": {"value": "worker-sable-logspace"}},
+       "expires": 1792407031},
       "branch": "work/space-hierarchy/worker-sable-logspace",
       "blocked": false,
       "assignee": {"value": "worker-sable-logspace"}}}},
@@ -2598,7 +2603,7 @@
    "goal":
    "Continuation of hierarchy-theorems: the deterministic space hierarchy theorem on the native machines. DSPACE (encoded analogue of cslib PR #767 conventions, consistent with Classes/Space and logspace-nl), SpaceConstructible, a space-budgeted variant of the in-place universal run (no second universal machine), the configuration-counting bound on running time of space-bounded deciders, DSPACE(f) strictly inside DSPACE(g) with the universal machine overhead stated honestly, and L strictly inside PSPACE as a corollary. Tests, axiom guards, six gates, frozen submission.",
    "dependencies": [{"value": "hierarchy-theorems"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-logspace"}]},
   {"resume": null,
    "report": "",
    "phase":
