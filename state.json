@@ -2791,54 +2791,18 @@
    "dependencies": [{"value": "hierarchy-theorems"}],
    "authors": []},
   {"resume": null,
-   "report": "",
+   "report":
+   "Both reviews requested changes: PSPACE shape claim, fixed-power forms, coverage-priorities section duplicates the board, link targets and wrapping.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report": "",
-       "lease":
-       {"token": {"value": "ed6961eec24538d8a6fd532ec7d4531d"},
-        "holder":
-        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-         "agent": {"value": "coordinator-sable"}},
-        "expires": 1792402846},
-       "branch": "work/docs-roadmap-refresh/coordinator-sable",
-       "blocked": false,
-       "assignee": {"value": "coordinator-sable"}},
-      "summary":
-      "Docs-only refresh at 6b954f70 on 0d8ef4bf. ROADMAP: canon-table rows for space/alternation and logic now build on landed NPSPACE = PSPACE, TQBF, NL in P and Fagin; new Coverage priorities section (ten ranked developments plus further priorities, from the weighted citation audit); iterated functions record the landed fixed-power theorem; the finished Fagin item is removed; rational hitting becomes its runtime certificate; machine-class milestones now list the space hierarchy, NL = coNL and PH in PSPACE as remaining. README selected developments: structural complexity (Ladner, BGS, time hierarchy and P strictly in EXP, Savitch, TQBF, NL in P, Sipser-Gacs-Lautemann, BPP in P/poly), IP (NP in IP, GNI), NP-complete problems, Fagin (stated as definable iff isomorphism-closed and in NP, matching definable_iff_isoClosed_and_queryLanguage_mem_NP). UPSTREAM: #767 alignment of local L/PSPACE/DTIME/EXP; Probabilistic/IterateWhile private helpers. Checks: check_docs --config-only; every local link resolves. No Lean changes. Author: coordinator-sable.",
-      "snapshot":
-      {"head": {"value": "6b954f709393d2324dc1dfe0a44ab7b84a2877a6"},
-       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "changes",
-          "time": 1792389258,
-          "snapshot":
-          {"head": {"value": "6b954f709393d2324dc1dfe0a44ab7b84a2877a6"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
-           "agent": {"value": "reviewer-sable-cor6"}},
-          "note":
-          "Correctness, docs-only, independent (author coordinator-sable). Checked every claim in the diff against Lean at head. BLOCKING: (1) UPSTREAM.md:28-30 says local PSPACE uses #767's shape, but Classes/Space.lean:22-25 says #767 defines PSPACE as a union of DSPACE(n^k) and that comparison is not formalized; local PSPACE (Space.lean:67-69) uses a per-instance PolyBounded bound. Only L (mem_L_iff), DTIME and EXP match. (2) ROADMAP.md:189-190 'encoded and record forms': no record form exists; Record*.lean are construction internals. The landed forms are encoded/burn-in, optimized square-root and permutation/periodicity. ROADMAP.md:183 still lists square-root fixed-power bounds as to port, but fixed_power_optimized has landed. NITS: README.md:46 Hamiltonian link has only mem_NP (HamCycle_npComplete is in Hamiltonian/Undirected.lean:592); README.md:36 time hierarchy is polynomial-gap, encBits; README.md:43 GNI is in IP/GraphNonIsomorphism.lean; ROADMAP.md:74 lists DTIME though it has landed; ROADMAP.md:252 the space hierarchy does not build on the time hierarchy. VERIFIED: 17 links and the anchor resolve; Fagin, BGS, P_ssubset_EXP, Savitch, TQBF, NL_subset_P, SGL, PPoly.of_mem_BPP, NP_subset_IP, GNI.mem_IP and the NP-completeness statements are as described; rational runtime is still open; the listed remaining items have not landed. Axioms clean for 9 headlines; the rest are unprobed because the .lake is stale (no build). Evidence .lake/codex-validation/docs-roadmap-refresh-correctness/review.json sha256 bada152f971994fe64cf4f2613172cacfc9fa2f637c3aaaadcce562270c1cf3b"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "changes",
-          "time": 1792389285,
-          "snapshot":
-          {"head": {"value": "6b954f709393d2324dc1dfe0a44ab7b84a2877a6"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
-           "agent": {"value": "reviewer-sable-api6"}},
-          "note":
-          "API, docs-only, independent (author coordinator-sable). check_docs --config-only passes. BLOCKING: ROADMAP.md:65-96 Coverage priorities is a parallel inventory. Its ten entries mirror the board's live coverage epics 1-10, against CONTRIBUTING.md:219 (priorities stay in epic guidance, not a parallel task list) and ROADMAP.md:41-42 (not assignments to current workers). The ranking cites an audit that is not in the repo (ROADMAP.md:67-68), against ROADMAP.md:107-108 (linked to declarations and reviewed revisions, no parallel narrative inventories). Entries restate canon rows 48-53 and 57. Further priorities (94-96) repeats the Machine-class milestones in the same diff (NL = coNL, space hierarchy; 252-256). Fix: fold new endpoints into the canon rows and keep at most an ordering sentence, or drop the section; do not cite an unlinked audit. NITS: README.md:34-36,43,46-47,49 run past 100 chars with prose after links (the base README had one such line); rewrap so only a link overflows. The nine-link structural bullet (README.md:33-41) is dense for README tone. OK: the UPSTREAM #767 note is actionable and not in markers (PSPACE accuracy is a correctness issue); the IterateWhile row is actionable (the source records the parallel, not the sharing action); Fagin, fixed-power, rational and space rows are updated in place. Evidence .lake/codex-validation/docs-roadmap-refresh-api/review.json sha256 64b59e9bc473a3ec23276cec0c2d01df91153ea670b92bb21083db4c74ad58c9"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "Both reviews requested changes: PSPACE shape claim, fixed-power forms, coverage-priorities section duplicates the board, link targets and wrapping.",
+      "lease": null,
+      "branch": "work/docs-roadmap-refresh/coordinator-sable",
+      "blocked": false,
+      "assignee": {"value": "coordinator-sable"}}}},
    "paths": ["ROADMAP.md", "README.md", "UPSTREAM.md"],
    "id": {"value": "docs-roadmap-refresh"},
    "goal":
