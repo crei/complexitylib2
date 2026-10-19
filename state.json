@@ -2075,7 +2075,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "Resumed: saved inherited WIP on scratch/np-witness-old-worker-sable-npbuilder (a082e0c), merged main 4c8d00c, reapplied. Witness.lean has IsVerifier.of_padding/guard, decoder-based witnessVerifier, subset builder (selectMask), PolyTimeReducible.mem_NP (no non-oracle version existed on main). Next: strict malformed-certificate rejection in witnessVerifier, keep Graph.selectVertices body (GraphIsomorphism unfolds it), tests, gates.",
       "lease":
       {"token": {"value": "cc32b63cfdda7525d709a8b35ae0fc75"},
        "holder":
