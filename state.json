@@ -2701,19 +2701,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "1ebac7b3c86dddb38767145b5f163cec"},
-       "holder":
-       {"session": {"value": "15d3a3e432be6927c6de5db959e3458a"},
-        "agent": {"value": "worker-sable-graphs"}},
-       "expires": 1792403939},
-      "branch": "work/communication-complexity/worker-sable-graphs",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-graphs"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "1ebac7b3c86dddb38767145b5f163cec"},
+        "holder":
+        {"session": {"value": "15d3a3e432be6927c6de5db959e3458a"},
+         "agent": {"value": "worker-sable-graphs"}},
+        "expires": 1792403939},
+       "branch": "work/communication-complexity/worker-sable-graphs",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-graphs"}},
+      "summary":
+      "M1 (deterministic). Protocol.leaf/leafOutput/leafAlice/leafBob; leaf_eq_iff: p.leaf x y = i <-> x in leafAlice i /\\ y in leafBob i; exists_rectangle_partition: <= 2^depth rectangles partition X x Y, run constant on each; card_filter_le_mul (area bound). IsFoolingSet f z S; card_lt_two_pow: #S < 2^depth if p.run = f, f takes a value /= z; le_ecomplexity: 2^n <= #S -> n+1 <= ecomplexity. communicationMatrix R f; rank_communicationMatrix_le: rank <= #{true leaves} (CommSemiring + StrongRankCondition, e.g. R); clog_rank_le_ecomplexity; LogRankConjecture : Prop. ecomplexity_equality/greaterThan/dotProduct/disjointness = n+1 on BitString n, 0 < n (upper: Protocol.aliceSend; IP: HadamardRectangles area bound). Checks: run-gates six ok; tests ComplexityTests/CommunicationComplexity.lean (n=0 boundary, EQ rank witness, axiom guards). Source: KushilevitzNisan1997 Ch.1, own proofs. Contributors: worker-sable-graphs. Continuation: M2 (public/private coins, Newman via Probability.Concentration, discrepancy, R(IP)); M3 (distributional, Yao, corruption, Razborov). Bib: @inproceedings{MehlhornSchmidt1982, author={Mehlhorn, Kurt and Schmidt, Erik M.}, title={Las {V}egas is better than determinism in {VLSI} and distributed computing}, booktitle={STOC}, pages={330--337}, year={1982}} @inproceedings{LovaszSaks1988, author={Lov{\\'a}sz, L{\\'a}szl{\\'o} and Saks, Michael}, title={Lattices, {M}{\\\"o}bius functions and communication complexity}, booktitle={FOCS}, pages={81--90}, year={1988}}",
+      "snapshot":
+      {"head": {"value": "d57c472c16dfef7cb8c3c8dc06deb1318fa25cf0"},
+       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Communication/Rectangle.lean",
     "Complexity/Computability/Communication/FoolingSet.lean",
