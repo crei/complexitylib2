@@ -1671,7 +1671,7 @@
     {"work":
      {"resume": null,
       "report":
-      "Implementation complete; six gates passed on ba7acf7. Merged the published open-oracle-composition head 3eb6238 and current origin/main eba426b (generated roots regenerated with mk_all); re-running scripts/check.sh on the merge 86fa9fa before publication.",
+      "PUBLICATION REQUEST: 86fa9faa8f39db6c883726107f80c597dd69f148 on work/interactive-proofs/worker-sable-ip (git push blocked by the local lean4 guardrail; not bypassed). Head = merge of origin/main eba426b over a823aa5 (merge of published open-oracle-composition head 3eb6238) over ba7acf7 (the single feature commit). scripts/check.sh at this head: all six gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Will run ready once the branch is visible on origin.",
       "lease":
       {"token": {"value": "4199522ac26f9b86383356f4f5e4198a"},
        "holder":
