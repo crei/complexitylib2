@@ -1,29 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "e3761bf730233e37d71fabefaf2356c864642e5f"},
-   "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-  "main": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"},
-  "lease":
-  {"token": {"value": "ac52f343c9d97c4b5cc4e9aefab1f059"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792406631},
-  "epic": {"value": "relativization-2"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "e3761bf730233e37d71fabefaf2356c864642e5f"},
-     "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-    "epic": {"value": "relativization-2"}},
-   {"snapshot":
-    {"head": {"value": "b783d8e63477e9ee70671daf67a89740bfc502d1"},
-     "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-    "epic": {"value": "hardness-amplification"}},
-   {"snapshot":
-    {"head": {"value": "f8c3d3cc04f65411b03ea5bb5ba908288d3efc58"},
-     "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-    "epic": {"value": "docs-bibliography-2"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -2370,52 +2346,42 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report": "",
-       "lease":
-       {"token": {"value": "f6293d163ad5bad8365eb854cd1c9bd6"},
-        "holder":
-        {"session": {"value": "b1cbc8b7223d2f96ea57cc362686fe08"},
-         "agent": {"value": "worker-sable-relativ"}},
-        "expires": 1792405261},
-       "branch": "work/relativization-2/worker-sable-relativ",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-relativ"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Milestone 2: P^A = NP^A for A = encQBF '' TQBF, plus oracle monotonicity. Proved: PWithOracle_image_TQBF_eq_NPWithOracle enc : PWithOracle (encQBF '' TQBF) enc = NPWithOracle (encQBF '' TQBF) enc; baker_gill_solovay : (∃ A, P^A = NP^A) ∧ ∃ B, P^B ≠ NP^B (encBits); for PSPACEComplete encBits A: PWithOracle_eq_PSPACE, NPWithOracle_eq_PSPACE, PWithOracle_eq_NPWithOracle; PWithOracle_subset_PSPACE, NPWithOracle_subset_PSPACE (A ∈ PSPACE encBits); PSPACE_subset_PWithOracle (PSPACEHard encBits A); image_TQBF_pspaceComplete; mem_PSPACE_of_isVerifier (certificate search); MultiTapePTM.exists_computableTidilyInO_run (clocked oracle run, oracle answered by a poly-space decider, in poly space); PolyTimeReducible.PWithOracle_subset / NPWithOracle_subset (A ≤p B ⇒ P^A ⊆ P^B, NP^A ⊆ NP^B, via open substitution). API follow-ups done (eval_mono, Action finiteness, unaryLengthLanguage, many-one, query_bounds citation). Checks: run-gates six gates ok at e3761bf7; tests and named axiom guards (standard axioms) in ComplexityTests/Relativization.lean. Source: AroraBarak09 Thm 3.7, BakerGillSolovay1975, Sipser2013 Thm 8.9. Contributors: worker-sable-relativ (AI: Claude). Limits: NP^A ⊆ PSPACE by direct certificate search, not NPSPACE/Savitch; general PSPACE helpers (wordMax, mem_PSPACE_of_computableTidilyInO, mem_PSPACE_of_isVerifier) and TQBF word decoding (Oracle/TQBF.lean) may belong in Classes/Space. No continuation needed. Bib: none new.",
       "snapshot":
       {"head": {"value": "e3761bf730233e37d71fabefaf2356c864642e5f"},
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792391416,
-          "snapshot":
-          {"head": {"value": "e3761bf730233e37d71fabefaf2356c864642e5f"},
-           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-          "reviewer":
-          {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
-           "agent": {"value": "reviewer-sable-cor6"}},
-          "note":
-          "Independent correctness review by reviewer-sable-cor6 (no contribution; author worker-sable-relativ) of exact e3761bf7 over 4274652a. Build of 10 Oracle modules + ComplexityTests.Relativization, nice, --wfail --iofail: success, 0 warnings. Hygiene: no sorry/native_decide/axiom/set_option in diff; meta audit of 323 constants in touched Oracle modules: only propext/Classical.choice/Quot.sound. Oracle defs unchanged (docstring only): each query symbol costs an instruction; probe derives poly bounds on request count and length. P^A subset PSPACE and NP^A subset PSPACE land in base non-oracle PSPACE: coin-fixed clocked run simulated by ComputableTidilyInO.iterate (space = counter + start + per-round + state, not cumulative), each answer computed by the PSPACE decider on the pending request (length <= clock); certificate search iterates 2^p(n) rounds with binary counter. image_TQBF_pspaceComplete: isCode re-encodes, so exactly words of true closed formulas. Monotonicity: many-one g, open substitution. Probes: headlines restated; P^TQBF = PSPACE, NP^TQBF = PSPACE on encQBF; empty oracle; PSPACE A gives P^A within P^TQBF; P^B countable so P^TQBF = NP^TQBF != univ and PSPACE != univ; on Unit P^B = NP^B for all B. Blocking: none. Nits: Collapse.lean:95 baker_gill_solovay docstring does not say instances are words (encBits); separation fails for finite instance types. Space.lean:27 cites NPSPACE though proof bypasses it. Not checked: six gates, API. Evidence .lake/codex-validation/relativization-2-correctness/review.json sha256 a9e45044f6bb5eae8fb8231a460af573728bf68223349f55fea2afcf8bccde9c"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792391473,
-          "snapshot":
-          {"head": {"value": "e3761bf730233e37d71fabefaf2356c864642e5f"},
-           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-          "reviewer":
-          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
-           "agent": {"value": "reviewer-sable-api4"}},
-          "note":
-          "API review by reviewer-sable-api4 (independent; no contribution) of exact e3761bf over 4274652, read-only. Evidence: build of 9 Oracle modules + ComplexityTests.Relativization --wfail --iofail exit 0; probe: headline axioms standard three, NP<=PSPACE derivable in 2 lines; diff --check clean, no simp/set_option/sorry; headers, markers, docstrings, tests and guards (incl. monotonicity) present. No blocking findings. Follow-ups: F1 seven public _pt names (Simulation.lean:212,220,235,245; TQBF.lean:215,274,297) break computableTidilyInPolyTime_<f> convention, rename before upstream; F2 wordMax -> BigO.lean beside listMax; F3 PSPACE helpers + mem_PSPACE_of_isVerifier -> Classes/Space, add NP_subset_PSPACE, reuse in TQBF_mem_PSPACE; F4 TQBF decoding -> Problems/TQBF, image_TQBF_* -> Classes/Space/TQBF, arity -> QBF.Kind.arity; F5 OracleComp.interpret_id_iterate -> Iteration.lean, Action.instFinite -> ChoiceTable.lean; F6 private binary counter duplicates Space/Reachability.lean incr/incrT; F7 baker_gill_solovay name OK (conjunction headline), file naming nit; F8 commit e3761bf7 not type(scope). Not checked: proofs line by line, six gates, correctness. Evidence .lake/codex-validation/relativization-2-api/review.json sha256 9a922febaa88a8114fa07953431b262945fbc2044d342a1c4cc2121352f40d62"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792392244,
+      "landed": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792391416,
+       "snapshot":
+       {"head": {"value": "e3761bf730233e37d71fabefaf2356c864642e5f"},
+        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+       "reviewer":
+       {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
+        "agent": {"value": "reviewer-sable-cor6"}},
+       "note":
+       "Independent correctness review by reviewer-sable-cor6 (no contribution; author worker-sable-relativ) of exact e3761bf7 over 4274652a. Build of 10 Oracle modules + ComplexityTests.Relativization, nice, --wfail --iofail: success, 0 warnings. Hygiene: no sorry/native_decide/axiom/set_option in diff; meta audit of 323 constants in touched Oracle modules: only propext/Classical.choice/Quot.sound. Oracle defs unchanged (docstring only): each query symbol costs an instruction; probe derives poly bounds on request count and length. P^A subset PSPACE and NP^A subset PSPACE land in base non-oracle PSPACE: coin-fixed clocked run simulated by ComputableTidilyInO.iterate (space = counter + start + per-round + state, not cumulative), each answer computed by the PSPACE decider on the pending request (length <= clock); certificate search iterates 2^p(n) rounds with binary counter. image_TQBF_pspaceComplete: isCode re-encodes, so exactly words of true closed formulas. Monotonicity: many-one g, open substitution. Probes: headlines restated; P^TQBF = PSPACE, NP^TQBF = PSPACE on encQBF; empty oracle; PSPACE A gives P^A within P^TQBF; P^B countable so P^TQBF = NP^TQBF != univ and PSPACE != univ; on Unit P^B = NP^B for all B. Blocking: none. Nits: Collapse.lean:95 baker_gill_solovay docstring does not say instances are words (encBits); separation fails for finite instance types. Space.lean:27 cites NPSPACE though proof bypasses it. Not checked: six gates, API. Evidence .lake/codex-validation/relativization-2-correctness/review.json sha256 a9e45044f6bb5eae8fb8231a460af573728bf68223349f55fea2afcf8bccde9c"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792391473,
+       "snapshot":
+       {"head": {"value": "e3761bf730233e37d71fabefaf2356c864642e5f"},
+        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+       "reviewer":
+       {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+        "agent": {"value": "reviewer-sable-api4"}},
+       "note":
+       "API review by reviewer-sable-api4 (independent; no contribution) of exact e3761bf over 4274652, read-only. Evidence: build of 9 Oracle modules + ComplexityTests.Relativization --wfail --iofail exit 0; probe: headline axioms standard three, NP<=PSPACE derivable in 2 lines; diff --check clean, no simp/set_option/sorry; headers, markers, docstrings, tests and guards (incl. monotonicity) present. No blocking findings. Follow-ups: F1 seven public _pt names (Simulation.lean:212,220,235,245; TQBF.lean:215,274,297) break computableTidilyInPolyTime_<f> convention, rename before upstream; F2 wordMax -> BigO.lean beside listMax; F3 PSPACE helpers + mem_PSPACE_of_isVerifier -> Classes/Space, add NP_subset_PSPACE, reuse in TQBF_mem_PSPACE; F4 TQBF decoding -> Problems/TQBF, image_TQBF_* -> Classes/Space/TQBF, arity -> QBF.Kind.arity; F5 OracleComp.interpret_id_iterate -> Iteration.lean, Action.instFinite -> ChoiceTable.lean; F6 private binary counter duplicates Space/Reachability.lean incr/incrT; F7 baker_gill_solovay name OK (conjunction headline), file naming nit; F8 commit e3761bf7 not type(scope). Not checked: proofs line by line, six gates, correctness. Evidence .lake/codex-validation/relativization-2-api/review.json sha256 9a922febaa88a8114fa07953431b262945fbc2044d342a1c4cc2121352f40d62"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Oracle.lean",
     "Complexity/Computability/Complexity/Classes/Oracle",
@@ -2893,53 +2859,42 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "M1 implemented: Impagliazzo hard-core lemma (boosting, Boosting/Potential weights) and Yao XOR lemma, nonuniform over De Morgan circuits; head b783d8e6; full gates running.",
-       "lease":
-       {"token": {"value": "ec3ac2c1f4d3824598496a8bef23011c"},
-        "holder":
-        {"session": {"value": "9f33c425e7787c86e00bfa66ec90f517"},
-         "agent": {"value": "worker-sable-loop"}},
-        "expires": 1792405185},
-       "branch": "work/hardness-amplification/worker-sable-loop",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-loop"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "M1: Circuit/Boolean/{HardCore,XorLemma}, nonuniform De Morgan circuits, size = complexity interpretation (single g).\n- IsHardCoreMeasure f s δ ε M: M∈[0,1], δ2^n ≤ ΣM, complexity g ≤ s ⇒ Σ_{g=f} M ≤ (1/2+ε)ΣM.\n- exists_isHardCoreMeasure (Impagliazzo): 0<δ, 0<ε, 1 ≤ 3ε²δ²T, (complexity g ≤ T*s+(2+T*(2*(T+2))) ⇒ #{g=f}/2^n ≤ 1-δ) ⇒ ∃ M, IsHardCoreMeasure f s δ ε M; _of_le: size S gives (S-(2+T(2(T+2))))/T.\n- card_eq_sum_le: XOR lemma for a measure, any Fintype.\n- IsHardCoreMeasure.card_eq_xorPower_div_le; card_eq_xorPower_div_le (Yao, hardness at T(s+3)+2+2T(T+2)): complexity g ≤ s ⇒ #{g=xorPower f k}/2^(kn) ≤ 1/2+ε+(1/2-ε)(1-δ)^k.\nProof: boosting with Boosting.weight/potential, rate εδ; strict majority; XOR by 1=M+(1-M) induction.\nChecks: run-gates all six ok; tests ComplexityTests/HardnessAmplification incl. parity-2 hard-core instance, 4 axiom guards.\nCredit: Impagliazzo95, Yao82, Holenstein05. Contributors: worker-sable-loop.\nLimits: measure not set; nonuniform. Continuation M2: worst→average, NW/IW/BFNW endpoints.\nBib:\n@inproceedings{Impagliazzo1995, author={Impagliazzo, Russell}, title={Hard-Core Distributions for Somewhat Hard Problems}, booktitle={36th Annual Symposium on Foundations of Computer Science}, pages={538--545}, year={1995}, doi={10.1109/SFCS.1995.492584}}\n@inproceedings{Yao1982, author={Yao, Andrew C.}, title={Theory and Applications of Trapdoor Functions}, booktitle={23rd Annual Symposium on Foundations of Computer Science}, pages={80--91}, year={1982}, doi={10.1109/SFCS.1982.45}}",
       "snapshot":
       {"head": {"value": "b783d8e63477e9ee70671daf67a89740bfc502d1"},
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792391522,
-          "snapshot":
-          {"head": {"value": "b783d8e63477e9ee70671daf67a89740bfc502d1"},
-           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-          "reviewer":
-          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
-           "agent": {"value": "reviewer-sable-cor2"}},
-          "note":
-          "Correctness review of b783d8e6 on 4274652a by reviewer-sable-cor2 (independent; author worker-sable-loop). Scope: Circuit/Boolean/HardCore, XorLemma, tests. Build 3 modules --wfail --iofail OK, 0 warnings; no sorry/native_decide/axiom/options; axioms of 5 headlines + xorPower_apply = propext, Classical.choice, Quot.sound. IsHardCoreMeasure: weights in [0,1], mass >= delta 2^n, agreement share normalised by mass (probe: scaling invariance; definition has teeth). exists_isHardCoreMeasure = Impagliazzo measure version, density delta; loss s ~ 3eps^2delta^2 S - O(T), threshold 3rate^2T>=1 matches gain vs potential cap. Vacuity: n>=1 forces delta<=1/2, so eps<1/2 needs T>=6, budget>=6s+98; unsatisfiable for n<=3 (truth-table bound); counting with cslib circuit-count bound shows delta-hard f exist at n>=22-31 (delta=eps=1/10 T=3334 s=1000: n>=31). XOR: 1/2+eps+(1/2-eps)(1-delta)^k (stronger than AB), -> 1/2+eps, <1 for k>=1; size T(s+3)+... correct. Blocking: none. Nits: O(T^2) majority cost; no axiom guard for exists_isHardCoreMeasure_of_le; Impagliazzo1995/Yao1982 bib entries for docs batch (Yao82 has no proof; consider Levin87/GNW). Not checked: six gates, API, Lean witness of hard f. Evidence .lake/codex-validation/hardness-amplification-correctness/review.json sha256 ed5e9811ecdc5a049d147f7f7c05ddb7541db7abf28bc8c47aaaceff87b6e260"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792391436,
-          "snapshot":
-          {"head": {"value": "b783d8e63477e9ee70671daf67a89740bfc502d1"},
-           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-          "reviewer":
-          {"session": {"value": "33380288772710be7744d177c8f66871"},
-           "agent": {"value": "reviewer-sable-api2"}},
-          "note":
-          "API review (independent; no contribution). Scope: Circuit/Boolean/HardCore.lean, XorLemma.lean, ComplexityTests/HardnessAmplification.lean. Build of the 3 modules --wfail --iofail exit 0. Template, header, upstream marker, namespace Cslib.Circuits.Boolean, docstrings (nonuniform, measure form, exact size loss) OK; no simp/set_option. Size via complexity interpretation (single g) and #{g=f}/2^n match PPoly.SIZE and the NW circuit theorems, so M2 composes. Boosting reuse good; Potential is a proof-only Crypto import (precedent: Kolmogorov/NisanWigderson). No new agreement definition; no Mathlib duplicate. Blocking: none. Nits: XorLemma.lean:93 card_eq_sum_le is circuit-free with a generic name in Circuits.Boolean (rename/BitString placement before upstream); HardCore.lean:130 private sum_ite_eq shadows Finset.sum_ite_eq; HardCore.lean:10 AtLeast import can be proof-only (probe ok); add a set-form-not-derived sentence and AB lemma numbers; floor division in _of_le doc; no guard/use of exists_isHardCoreMeasure_of_le, eps=1/2 test trivial; no mono. Follow-ups: move Potential to neutral place and share pointwise step with Progress; xorPower = parity o directProduct; central bib Impagliazzo1995, Yao1982 (Crossref title: application, singular). Not run: six gates, correctness. Evidence .lake/codex-validation/hardness-amplification-api/review.json sha256 9105364e59c7284041e3d8e64747bfd7ecdfc0d379dc500e2ad377ba91eb117c"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792392244,
+      "landed": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792391522,
+       "snapshot":
+       {"head": {"value": "b783d8e63477e9ee70671daf67a89740bfc502d1"},
+        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+       "reviewer":
+       {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
+        "agent": {"value": "reviewer-sable-cor2"}},
+       "note":
+       "Correctness review of b783d8e6 on 4274652a by reviewer-sable-cor2 (independent; author worker-sable-loop). Scope: Circuit/Boolean/HardCore, XorLemma, tests. Build 3 modules --wfail --iofail OK, 0 warnings; no sorry/native_decide/axiom/options; axioms of 5 headlines + xorPower_apply = propext, Classical.choice, Quot.sound. IsHardCoreMeasure: weights in [0,1], mass >= delta 2^n, agreement share normalised by mass (probe: scaling invariance; definition has teeth). exists_isHardCoreMeasure = Impagliazzo measure version, density delta; loss s ~ 3eps^2delta^2 S - O(T), threshold 3rate^2T>=1 matches gain vs potential cap. Vacuity: n>=1 forces delta<=1/2, so eps<1/2 needs T>=6, budget>=6s+98; unsatisfiable for n<=3 (truth-table bound); counting with cslib circuit-count bound shows delta-hard f exist at n>=22-31 (delta=eps=1/10 T=3334 s=1000: n>=31). XOR: 1/2+eps+(1/2-eps)(1-delta)^k (stronger than AB), -> 1/2+eps, <1 for k>=1; size T(s+3)+... correct. Blocking: none. Nits: O(T^2) majority cost; no axiom guard for exists_isHardCoreMeasure_of_le; Impagliazzo1995/Yao1982 bib entries for docs batch (Yao82 has no proof; consider Levin87/GNW). Not checked: six gates, API, Lean witness of hard f. Evidence .lake/codex-validation/hardness-amplification-correctness/review.json sha256 ed5e9811ecdc5a049d147f7f7c05ddb7541db7abf28bc8c47aaaceff87b6e260"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792391436,
+       "snapshot":
+       {"head": {"value": "b783d8e63477e9ee70671daf67a89740bfc502d1"},
+        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+       "reviewer":
+       {"session": {"value": "33380288772710be7744d177c8f66871"},
+        "agent": {"value": "reviewer-sable-api2"}},
+       "note":
+       "API review (independent; no contribution). Scope: Circuit/Boolean/HardCore.lean, XorLemma.lean, ComplexityTests/HardnessAmplification.lean. Build of the 3 modules --wfail --iofail exit 0. Template, header, upstream marker, namespace Cslib.Circuits.Boolean, docstrings (nonuniform, measure form, exact size loss) OK; no simp/set_option. Size via complexity interpretation (single g) and #{g=f}/2^n match PPoly.SIZE and the NW circuit theorems, so M2 composes. Boosting reuse good; Potential is a proof-only Crypto import (precedent: Kolmogorov/NisanWigderson). No new agreement definition; no Mathlib duplicate. Blocking: none. Nits: XorLemma.lean:93 card_eq_sum_le is circuit-free with a generic name in Circuits.Boolean (rename/BitString placement before upstream); HardCore.lean:130 private sum_ite_eq shadows Finset.sum_ite_eq; HardCore.lean:10 AtLeast import can be proof-only (probe ok); add a set-form-not-derived sentence and AB lemma numbers; floor division in _of_le doc; no guard/use of exists_isHardCoreMeasure_of_le, eps=1/2 test trivial; no mono. Follow-ups: move Potential to neutral place and share pointwise step with Progress; xorPower = parity o directProduct; central bib Impagliazzo1995, Yao1982 (Crossref title: application, singular). Not run: six gates, correctness. Evidence .lake/codex-validation/hardness-amplification-api/review.json sha256 9105364e59c7284041e3d8e64747bfd7ecdfc0d379dc500e2ad377ba91eb117c"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/HardCore.lean",
     "Complexity/Computability/Circuit/Boolean/HardCore",
@@ -3203,52 +3158,42 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report": "",
-       "lease":
-       {"token": {"value": "1a8994b8a07d9ca62c77050c35c38ae8"},
-        "holder":
-        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-         "agent": {"value": "coordinator-sable"}},
-        "expires": 1792406631},
-       "branch": "work/docs-bibliography-2/coordinator-sable",
-       "blocked": false,
-       "assignee": {"value": "coordinator-sable"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Docs-only: 15 references.bib entries cited by submitted epics: Turing1936, Rice1953 (undecidability); NisanSzegedy1994, Huang2019, GotsmanLinial1992, BealsBuhrmanCleveMoscaDeWolf2001 (query-complexity); MitzenmacherUpfal2017, Vadhan2012, BellareRompel1994, ErdosLovasz1975, ErdosSpencer1991, MoserTardos2010 (probability-toolkit); RazborovRudich1997 (natural-proofs); MehlhornSchmidt1982, LovaszSaks1988 (communication-complexity). Every DOI resolves through the DOI handle API and its Crossref title, venue, pages and volume match (ErdosLovasz1975 and MitzenmacherUpfal2017 have no DOI). check_docs --config-only passes, including the duplicate-key guard. Author: coordinator-sable.",
       "snapshot":
       {"head": {"value": "f8c3d3cc04f65411b03ea5bb5ba908288d3efc58"},
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792391194,
-          "snapshot":
-          {"head": {"value": "f8c3d3cc04f65411b03ea5bb5ba908288d3efc58"},
-           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-          "reviewer":
-          {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
-           "agent": {"value": "reviewer-sable-cor1"}},
-          "note":
-          "Correctness, reviewer-sable-cor1 (independent; did not contribute). Scope: 15 references.bib entries at f8c3d3cc on 4274652a. Evidence: all 13 DOIs fetched from api.crossref.org; authors, title, venue, volume, issue, pages and year match for each, ignoring case and diacritics. ErdosLovasz1975 matches zbMATH Zbl 0315.05117 and MitzenmacherUpfal2017 (2nd ed., CUP 2017) matches Zbl 1368.60002; DBLP blocked automated access. All 15 keys are cited by the five submitted branches at their recorded heads; every citation key in those branches resolves at head; no duplicates. Blocking: none. Nits: Turing1936 Crossref issued 1937 (parts appeared Nov-Dec 1936; 1936 is conventional); MehlhornSchmidt1982 omits the \"(Extended Abstract)\" title suffix; LovaszSaks1988 IEEE title reads \"mobius/communications\" (entry uses the standard form); ErdosLovasz1975 omits editors and Vol. II. Out of scope: probability-toolkit LocalLemma.lean:68-69 splits the MoserTardos2010 reference link across a line. Evidence: .lake/codex-validation/docs-bibliography-2-correctness/review.json sha256 d1b2c3ed5a9efdba38cb046149a9b0320690f5aeb2188b9bf7b7f970d8672683"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792391200,
-          "snapshot":
-          {"head": {"value": "f8c3d3cc04f65411b03ea5bb5ba908288d3efc58"},
-           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-          "reviewer":
-          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
-           "agent": {"value": "reviewer-sable-api1"}},
-          "note":
-          "API, reviewer-sable-api1 (independent; did not contribute). Scope: f8c3d3cc on 4274652a touches only references.bib (+161 lines, 15 appended entries; docbuild/docs/references.bib is a symlink to it). check_docs.py --config-only passes. The duplicate-key guard passes at head and rejects an injected case-variant duplicate. Style matches the file dominant aligned form: = at column 12, aligned continuation lines, field order as in recent entries, series FOCS/STOC as in FOCS2016, Erdos accent as in ErdosRado1960, NN:1--NN:15 article pages as in existing entries. Proper nouns are braced (Entscheidungsproblem, Boolean, Lovasz, Latin, Las Vegas, VLSI, Mobius). Entry types fit each source. bibtex with plain.bst on all 15 keys gives no warnings and 15 items. Blocking: none. Nits: Huang2019 could brace {Sensitivity Conjecture} to keep the published capitals; MitzenmacherUpfal2017 edition={2} renders as \"2 edition\" under plain.bst (the file already mixes {2} and {3rd}). Evidence: .lake/codex-validation/docs-bibliography-2-api/review.json sha256 d246d495bedaf805e2f91c405c3241e5ed0eb820bbca61eb09086e74cc4b5cf3"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792392244,
+      "landed": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792391194,
+       "snapshot":
+       {"head": {"value": "f8c3d3cc04f65411b03ea5bb5ba908288d3efc58"},
+        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+       "reviewer":
+       {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
+        "agent": {"value": "reviewer-sable-cor1"}},
+       "note":
+       "Correctness, reviewer-sable-cor1 (independent; did not contribute). Scope: 15 references.bib entries at f8c3d3cc on 4274652a. Evidence: all 13 DOIs fetched from api.crossref.org; authors, title, venue, volume, issue, pages and year match for each, ignoring case and diacritics. ErdosLovasz1975 matches zbMATH Zbl 0315.05117 and MitzenmacherUpfal2017 (2nd ed., CUP 2017) matches Zbl 1368.60002; DBLP blocked automated access. All 15 keys are cited by the five submitted branches at their recorded heads; every citation key in those branches resolves at head; no duplicates. Blocking: none. Nits: Turing1936 Crossref issued 1937 (parts appeared Nov-Dec 1936; 1936 is conventional); MehlhornSchmidt1982 omits the \"(Extended Abstract)\" title suffix; LovaszSaks1988 IEEE title reads \"mobius/communications\" (entry uses the standard form); ErdosLovasz1975 omits editors and Vol. II. Out of scope: probability-toolkit LocalLemma.lean:68-69 splits the MoserTardos2010 reference link across a line. Evidence: .lake/codex-validation/docs-bibliography-2-correctness/review.json sha256 d1b2c3ed5a9efdba38cb046149a9b0320690f5aeb2188b9bf7b7f970d8672683"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792391200,
+       "snapshot":
+       {"head": {"value": "f8c3d3cc04f65411b03ea5bb5ba908288d3efc58"},
+        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+       "reviewer":
+       {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
+        "agent": {"value": "reviewer-sable-api1"}},
+       "note":
+       "API, reviewer-sable-api1 (independent; did not contribute). Scope: f8c3d3cc on 4274652a touches only references.bib (+161 lines, 15 appended entries; docbuild/docs/references.bib is a symlink to it). check_docs.py --config-only passes. The duplicate-key guard passes at head and rejects an injected case-variant duplicate. Style matches the file dominant aligned form: = at column 12, aligned continuation lines, field order as in recent entries, series FOCS/STOC as in FOCS2016, Erdos accent as in ErdosRado1960, NN:1--NN:15 article pages as in existing entries. Proper nouns are braced (Entscheidungsproblem, Boolean, Lovasz, Latin, Las Vegas, VLSI, Mobius). Entry types fit each source. bibtex with plain.bst on all 15 keys gives no warnings and 15 items. Blocking: none. Nits: Huang2019 could brace {Sensitivity Conjecture} to keep the published capitals; MitzenmacherUpfal2017 edition={2} renders as \"2 edition\" under plain.bst (the file already mixes {2} and {3rd}). Evidence: .lake/codex-validation/docs-bibliography-2-api/review.json sha256 d246d495bedaf805e2f91c405c3241e5ed0eb820bbca61eb09086e74cc4b5cf3"}}}},
    "paths": ["references.bib"],
    "id": {"value": "docs-bibliography-2"},
    "goal":
