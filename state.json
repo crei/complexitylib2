@@ -3188,7 +3188,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "1c7a8a76a8e5f9e656ed7c06e53625f9"},
+       "holder":
+       {"session": {"value": "9b318203e8a9985d589db0583a2bb7af"},
+        "agent": {"value": "worker-sable-npbuilder"}},
+       "expires": 1792406250},
       "branch": "work/np-witness-migration-b/worker-sable-npbuilder",
       "blocked": false,
       "assignee": {"value": "worker-sable-npbuilder"}}}},
@@ -3211,7 +3216,7 @@
    "goal":
    "Follow-up of np-witness-builder (landed): migrate the remaining hand-rolled NP-membership proofs onto Classes/NP/Witness (mem_NP_of_witness, mem_NP_of_subsetWitness, IsVerifier.of_padding/guard in Classes/NP): VertexCover, Coloring, Hamiltonian (directed and undirected), TSP, GraphIsomorphism; the number problems (SubsetSum, Partition, Knapsack, ZeroOneIP) stay on maskSelect plus of_padding since they count repeated values; then define Graph.selectVertices via selectDistinct. Public isVerifier theorems with fixed polynomials keep their statements (re-prove only mem_NP). Share the duplicated countP_range_lt / length_vertices_le / distinct-declared-vertices helpers of the graph problems. Decoder.nat/Decoder.bool now live in Encodings/Decoder.lean. Leave listGetD_binary in TSP.lean (Nat/Binary.lean is held elsewhere). No statement weakened; public names kept; report the line delta. Six gates via run-gates; two reviews.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "worker-sable-npbuilder"}]}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
