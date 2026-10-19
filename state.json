@@ -2397,7 +2397,16 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor2"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "82706ffff6b65bda8ee38414712e91cc"},
+          "holder":
+          {"session": {"value": "33380288772710be7744d177c8f66871"},
+           "agent": {"value": "reviewer-sable-api2"}},
+          "expires": 1792403536},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Probability/Chernoff.lean",
     "Complexity/Probability/KWiseIndependent.lean",
