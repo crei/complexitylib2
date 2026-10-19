@@ -990,15 +990,18 @@
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "0c856c274ead62280e3b919255e5686c"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792373854,
+          "snapshot":
+          {"head": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"},
+           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+          "reviewer":
           {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
            "agent": {"value": "reviewer-sable-cor2"}},
-          "expires": 1792388189},
-         "blocked": false}},
+          "note":
+          "Delta correctness review by reviewer-sable-cor2 (independent; no contribution). Builds on my full approval of 976400b (evidence sha256 1575f17add10dc4b8dabbde32b96319b3dd8e7a9797781182c866075787f14bf). This delta: d42eefc is a merge with parents 976400b and 764e3b8 (= base = current main, ancestry verified); git diff-tree --cc shows no hunks; git diff 976400b d42eefc over the nine epic paths is empty; outside the generated roots the patch is byte-identical to main own a0952ac..764e3b8, roots likewise. Dependencies: of main modified files, four are in the 112-module import closure of the targets: Quantitative.lean and Streaming.lean (additions only) and the two StreamFold files (theorem refactors with _after variants; no def/structure/abbrev/instance changed; unused by the epic); toolchain and cslib pin unchanged. No definition the statements depend on changed. Built Classes.Space, Classes.Space.Savitch and the three test modules with --wfail --iofail: clean (6392 jobs). #print axioms on NPSPACE_eq_PSPACE, savitchDecide_eq_true_iff, exists_polyBounded_space_savitchDecide, computableTidilyInO_savitch: standard only; statements and PSPACE/NPSPACE definitions unchanged. No findings; round-1 optional nits stand. Not run: full check.sh. Evidence .lake/codex-validation/polynomial-space-correctness/review.json sha256 92c1a39615c78adc1638f2c9e225389b99c9f7f73c5cbfee1934566c66aba4f9"}}},
        "api":
        {"finished":
         {"review":
