@@ -2987,15 +2987,18 @@
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "d89f7499cacde99a03623cbb0d70631c"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792391522,
+          "snapshot":
+          {"head": {"value": "b783d8e63477e9ee70671daf67a89740bfc502d1"},
+           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+          "reviewer":
           {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
            "agent": {"value": "reviewer-sable-cor2"}},
-          "expires": 1792405763},
-         "blocked": false}},
+          "note":
+          "Correctness review of b783d8e6 on 4274652a by reviewer-sable-cor2 (independent; author worker-sable-loop). Scope: Circuit/Boolean/HardCore, XorLemma, tests. Build 3 modules --wfail --iofail OK, 0 warnings; no sorry/native_decide/axiom/options; axioms of 5 headlines + xorPower_apply = propext, Classical.choice, Quot.sound. IsHardCoreMeasure: weights in [0,1], mass >= delta 2^n, agreement share normalised by mass (probe: scaling invariance; definition has teeth). exists_isHardCoreMeasure = Impagliazzo measure version, density delta; loss s ~ 3eps^2delta^2 S - O(T), threshold 3rate^2T>=1 matches gain vs potential cap. Vacuity: n>=1 forces delta<=1/2, so eps<1/2 needs T>=6, budget>=6s+98; unsatisfiable for n<=3 (truth-table bound); counting with cslib circuit-count bound shows delta-hard f exist at n>=22-31 (delta=eps=1/10 T=3334 s=1000: n>=31). XOR: 1/2+eps+(1/2-eps)(1-delta)^k (stronger than AB), -> 1/2+eps, <1 for k>=1; size T(s+3)+... correct. Blocking: none. Nits: O(T^2) majority cost; no axiom guard for exists_isHardCoreMeasure_of_le; Impagliazzo1995/Yao1982 bib entries for docs batch (Yao82 has no proof; consider Levin87/GNW). Not checked: six gates, API, Lean witness of hard f. Evidence .lake/codex-validation/hardness-amplification-correctness/review.json sha256 ed5e9811ecdc5a049d147f7f7c05ddb7541db7abf28bc8c47aaaceff87b6e260"}}},
        "api":
        {"finished":
         {"review":
