@@ -9,7 +9,7 @@
    "holder":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}},
-   "expires": 1792391480},
+   "expires": 1792391566},
   "epic": {"value": "sipser-lautemann"},
   "candidates":
   [{"snapshot":
@@ -1922,7 +1922,7 @@
   "holder":
   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
    "agent": {"value": "coordinator-sable"}},
-  "expires": 1792391446},
+  "expires": 1792391566},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
@@ -2004,7 +2004,7 @@
     "agent": {"value": "worker-mythos"}}},
   {"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792391446,
+   "expires": 1792391566,
    "actor":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}}},
