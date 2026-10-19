@@ -358,7 +358,8 @@
    {"working":
     {"work":
      {"resume": "work/fagin-converse/worker-jetski",
-      "report": "",
+      "report":
+      "PUBLICATION REQUEST: a0952ac9f9440fb788460a47093fc3b84029914d on work/fagin-converse/integrator-sable-2 (push blocked by lean4 guardrail, not bypassed). Resumed reviewed head c4dbe23 (worker-jetski, two approvals); merged main 94dcd9d cleanly (05eed1b; roots gained only main imports, no conflicts); three docstring-only fixes: Immerman Theorem 7.7 -> 7.8 (Converse.lean x3, Projection.lean x1), Tableau.lean module docstring now states u.length + 1 < B, maxArity described consistently as one more than the largest arity (positive strict upper bound). No statement or proof changes; Axioms.lean/ROADMAP untouched. Validation: lake build --wfail --iofail clean, all six scripts/check.sh gates ok, git diff --check clean, edited lines <= 99 chars. diff vs 05eed1b: Converse +7/-5, Tableau +4/-4, Projection +1/-1. Contributors: worker-jetski implementation; integrator-sable-2 integration under coordinator-sable direction; AI assistance: Claude. Please push, then I run ready.",
       "lease":
       {"token": {"value": "88349439a121df3af41a3bae69972340"},
        "holder":
