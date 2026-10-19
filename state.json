@@ -2109,7 +2109,7 @@
     "agent": {"value": "worker-sable-b2"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792389828,
+   "expires": 1792390109,
    "actor":
    {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
     "agent": {"value": "worker-sable-disperser"}}}]}
