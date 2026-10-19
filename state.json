@@ -1069,15 +1069,18 @@
           "expires": 1792383887},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "cb48dfb1231fb0c0090bf9f667df5a8d"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792369528,
+          "snapshot":
+          {"head": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"},
+           "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
+          "reviewer":
           {"session": {"value": "6028cd701670813461915b10a3d32c60"},
            "agent": {"value": "reviewer-sable-api3"}},
-          "expires": 1792383909},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api3 (independent; no contribution) of exact base a0952ac / head c2016b0, read-only in own worktree. Scope: Circuit/Metric.lean, Circuit/Boolean/Metric.lean, ComplexityTests/CircuitMetric.lean, root imports, against Boolean/Synthesis.lean, Correction.lean, Circuit/Complexity.lean, cslib complexity API and Mathlib norms. Evidence: lake build of both modules + test --wfail --iofail exit 0, no warnings; mk_all --check clean; probe_synth.lean: all 8 #synth (Dist/Norm/NormedAddCommGroup/SeminormedAddGroup/PseudoMetricSpace/MetricSpace on function types, Dist Bool) fail, so no instance leaks; probe_boundary.lean: n = 0, translation+triangle, c = 0 breaks separation on ZMod 3, norm of circuitNormedAddCommGroup is circuitNorm by rfl, circuitDist = diffDist 4 by rfl, axioms of 12 further theorems within propext/choice/Quot.sound. Docstring quasi-metric/asymmetry claims match hypotheses; template, markers, simp hygiene, test placement fine; AddGroupNorm.toNormedAddCommGroup is the right Mathlib API; author limitations accurate. No blocking findings. Nits: engine lemmas complexity_single_unary_le/binary_le are generic complexity facts, better placed in Circuit/Complexity.lean, and Boolean.complexity_not_le/complexity_binary_le repeat the same Fin.append proof and should become one-line corollaries (follow-up); Metric.lean lacks public import Complexity.Init (transitive, precedent exists); characteristic two -> exponent two wording; test helpers complexity_single_proj (= complexity_wiring) and one_le_complexity_single are library candidates. diffDist name acceptable (owner term, avoids clash with circuitDist). Central: Axioms.lean guards for the five requested results. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/circuit-metric-api/review.json SHA256 0a43b6eed27172f0e10884ec03831565bc8d7e5be71f5ae1ca7a920dbff4fd82"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/Metric.lean",
     "Complexity/Computability/Circuit/Metric.lean",
