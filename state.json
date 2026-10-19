@@ -2070,7 +2070,12 @@
      {"resume": null,
       "report":
       "API review (reviewer-sable-api7) requested changes: rename or derive the new public selectMask (Witness.lean:199), which nearly duplicates maskSelect (Problems/SubsetSum/Mask.lean:47); move IsVerifier.of_padding/guard into Classes/NP.lean so SAT.lean need not import Witness. Correctness approved.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "536f08b32deef266c7b7d11de5c13a0c"},
+       "holder":
+       {"session": {"value": "9b318203e8a9985d589db0583a2bb7af"},
+        "agent": {"value": "worker-sable-npbuilder"}},
+       "expires": 1792403664},
       "branch": "work/np-witness-builder/worker-sable-npbuilder",
       "blocked": false,
       "assignee": {"value": "worker-sable-npbuilder"}}}},
