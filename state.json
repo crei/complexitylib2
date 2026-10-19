@@ -2373,15 +2373,18 @@
           "note":
           "Correctness review of exact head fc182c17 (base 0d8ef4bf) by reviewer-sable-cor2; independent (sole author worker-sable-prob). Built Chernoff, KWiseIndependent(+Polynomial), LocalLemma, ComplexityTests.ProbabilityToolkit with --wfail --iofail: ok. No sorry/native_decide/axiom/set_option in diff; #print axioms of 18 headlines = propext, Classical.choice, Quot.sound. Math: upper tails (mean<=mu, delta>=0) sharp/(2+delta)/delta<=1 forms and lower tail (mu<=mean) exp(-delta^2 mu/2), two-sided 2exp(-delta^2 mean/3) for delta<=1 match Mitzenmacher-Upfal Thm 4.4/4.5/Cor 4.6; bitstring forms are mu=n/2 specialisations. k-wise def implies distinct-points form (probe); 2m-moment tail (m^2|S|/a^2)^m correct; polynomial degree<k family standard (Lagrange). LLL lopsided hypothesis and asymmetric/symmetric (e q (d+1)<=1) forms correct; product versions use Disjoint coordinate sets via toOuterMeasure_pi_inter_eq_mul. Probes (all compile): Chernoff on non-identical Bernoulli coins with mu strictly above/below mean, negative probe that upper tail fails without mean<=mu, k-wise tail <0.03 for 4-wise poly hash over F_101, LLL d=1 symmetric and asymmetric on overlapping 3-clauses. Blocking: none. Nits: axiom guards omit a few secondary headlines; k-th moment only for even k; at-most-k convention stronger than distinct-points when |X|<k. Not checked: API, six gates. Evidence: .lake/codex-validation/probability-toolkit-correctness/review.json sha256 3b3c0b36eb5cf03ff0c2264ff6aea07e72da913866feee9011df32457f354635"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "82706ffff6b65bda8ee38414712e91cc"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792389634,
+          "snapshot":
+          {"head": {"value": "fc182c17bb1bc31d99e48c38ab30df619d76b22e"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "33380288772710be7744d177c8f66871"},
            "agent": {"value": "reviewer-sable-api2"}},
-          "expires": 1792403980},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api2 (independent; worker-sable-prob sole contributor) of exact fc182c17. Built 4 touched modules + ComplexityTests.ProbabilityToolkit niced --wfail --iofail: OK; hygiene clean; 28 new names grepped: no clashes; no LLL/k-wise in Mathlib/cslib. BLOCKING: B1 LocalLemma.lean:258-279 toOuterMeasure_pi_inter_eq_mul duplicates ProbabilityTheory.indepSet_pi_of_dependsOn (Foundations/Probability/SecondMoment.lean:156) and re-encodes Mathlib DependsOn as ad hoc hE/hF/hA (also :286,:309,:333); restate with DependsOn and derive (probe C). B2 KWiseIndependent.lean:141 only k-wise(k>=2)->pairwise; add IsKWiseIndependentHash 2 h <-> IsPairwiseIndependentHash h and Nonempty seed so affine/Toeplitz families reach the k-wise API (probe B proves converse). B3 Chernoff.lean:305-332 bit-string counting forms strictly weaker than existing BitString.card_filter_le_card_filter_sub_half_le (Hoeffding.lean:81, exp(-d^2 n/2) both tails; probe A); drop or derive from Hoeffding (goal endpoint itself dominated; coordinator may re-scope). Nits: sharp vs simplified Chernoff names; abs_sum vs sum_abs order; extra axiom guards. Mean convention OK. Follow-ups: LLL hypothesis from Mathlib independence; mean-dependent k-wise tail. Central: bib keys MitzenmacherUpfal2017 Vadhan2012 BellareRompel1994 ErdosLovasz1975 ErdosSpencer1991 MoserTardos2010 missing. Not run: six gates, lint. Evidence .lake/codex-validation/probability-toolkit-api/review.json sha256 1b53d6975f20f634d321a0ca10c157047d96e0f29d85f08ae6e789b7d0a635a1"}}}}}}},
    "paths":
    ["Complexity/Probability/Chernoff.lean",
     "Complexity/Probability/KWiseIndependent.lean",
