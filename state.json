@@ -2835,15 +2835,18 @@
           "expires": 1792406900},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "90ed8ef58acffefe0adf93a762d82afc"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792392789,
+          "snapshot":
+          {"head": {"value": "e10d94f4bca690c2e32b741ad287bbdb50f46784"},
+           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+          "reviewer":
           {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
            "agent": {"value": "reviewer-sable-api7"}},
-          "expires": 1792407133},
-         "blocked": false}}}}}},
+          "note":
+          "Independent API review (reviewer-sable-api7, no contribution) of exact e10d94f on base 4274652 (ancestry ok). BLOCKING: B1 Encoding/MCSP.lean:54 declares Cslib.MCSP (encInstance, verifier, mem_NP...) under Circuit/Boolean/Encoding/, breaking path/namespace rule 1; move to Computability/MCSP/NP.lean (path grant), fix Complexity.lean/test import, point MCSP/Basic docstring at it. B2 EvaluationTime.lean:151 private listGetD_binary is a byte-identical copy of TSP.lean:132; hoist one public lemma into the PolyTime layer used by both (path grant). OK: template, encodings stated accurately, no machines (fun_prop/foldl/finite_cases only), no dup vs cslib Circuit/Program/Wire, Circuit/Evaluation, PPoly, MachineSimulation; 15 axiom guards; boundary tests. Nits: generic codes/evalCode sit under Circuit/Boolean (split to Circuit/Code); NP/Witness landed after base, not duplicated, but CircuitSAT/MCSP.isVerifier hand-roll padding -> IsVerifier.of_padding; CircuitValue_mem_P -> CircuitValue.mem_P; SAT.isCodeFrom_flatMap public generic name; Wire.finEquiv -> equivFin; MCSP.binaryValue_reverse_ofFn belongs in BitString; Ladner1975 missing from references.bib. Built 6 modules + ComplexityTests.KarpLipton --wfail --iofail ok; probe ok; merge-tree with main clean. Not run: six gates. Evidence .lake/codex-validation/circuits-karp-lipton-api/review.json SHA256 daa376529110e6ad8c85e9c9130fe10b7caea72a02a4054edbfe24278d34353e"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/Encoding.lean",
     "Complexity/Computability/Circuit/Boolean/Encoding",
