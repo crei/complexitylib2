@@ -1545,15 +1545,18 @@
           "note":
           "Independent correctness review of 7b2a261 (no authorship). Build: the 6 epic modules plus the 4 NPCompleteGraphs test modules, under nice, --wfail --iofail: OK. Diff contains no sorry/native_decide/axiom/set_option/extern. Own probe .lake/.../Probe.lean: all 8 NPComplete headlines restated with exact encodings (encNat = Nat.bits binary, encTSP binary); KColoring k>=3 instantiated at 3 and 17. All gadget lemmas are two-sided iffs (3-coloring OR-chain, Sipser 7.46 diamonds, vertex splitting, HamCycle to TSP, IS to VC). 18 #print axioms (headlines, gadget iffs, mem_VertexCover_iff_exists_card_le) give only propext, Classical.choice, Quot.sound. Semantics probed. VC: repeated vertices count once, reverse edge must be covered, out-of-range edge ignored, empty graph only k=0, k>n rejected (Sipser exactly-k, GJ K<=|V|). Coloring: K4 not 3-colourable but 4-colourable; KColoring 0 = no declared vertices. Ham: self-loop gives a 1-vertex DirHamCycle; DirHamPath directional, HamPath not; undeclared s rejected; triangle in HamCycle, edge not. TSP: empty yes, diagonal for one city, asymmetric 1+7 tour; toTSP triangle evaluated. TSP NP: shared decodeVertexList/verifyOrdering, X^2 bit certificates, binary sum/compare. No blocking findings. Nits (documented): undirected readings ignore self-loops; TSP ragged rows read 0. Evidence: .lake/codex-validation/np-complete-graphs-correctness/review.json sha256 495215cb3821b0bfd646b0f70e51cb7ebb2f59cd82524bd7a6cd9d24a6d2fd19"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "bd6bf82e311e7ead91131a45f0ba9828"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792386477,
+          "snapshot":
+          {"head": {"value": "7b2a2619cc5d6756dfc2c1ff64daf525f301ba26"},
+           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+          "reviewer":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792400860},
-         "blocked": false}}}}}},
+          "note":
+          "API review of 7b2a261 (independent, read-only). Build: the 6 modules and 4 tests, --wfail --iofail, rc=0, no warnings. Probe: all 8 NPComplete and the key reductions use only propext/Classical.choice/Quot.sound; k>=3 instantiated; boundaries hold (empty TSP matrix, KColoring 0, one-vertex HamCycle). Reuse: no parallel graph model; Graph/encGraph/adjBool/selectVertices reused; Mathlib induce+IsVertexCover, Colorable, Walk.IsHamiltonian(Cycle); directed problems use arc lists (Digraph has no walks, documented). Template, docstrings, boundary statements and simp hygiene OK; guards for all 8 NPComplete in NPCompleteGraphs.lean. No blocking findings. Follow-ups: TSP.lean:132 private listGetD_binary has no counterpart in PolyTime/Nat/Binary.lean (not a duplicate); move it there and share its min step with VertexCover.lean:166. Duplicate private helpers: countP_range_lt (Coloring:120, Hamiltonian:380), length_vertices_le (Coloring:128 = Hamiltonian:549), distinct-vertex selectVertices proof x3 (VertexCover:143, Hamiltonian:501, TSP:249). Nits: _root_ Cycle lemma (Hamiltonian:125); generic SAT.* gadget names (Directed:81-92, Coloring:225-232); undocumented public lemmas (Directed:132-221). Integration: [GareyJohnson1979] has no entry here; land docs-bibliography 2bf2b21 first or together. Not run: the six gates. Evidence: .lake/codex-validation/np-complete-graphs-api/review.json sha256 c2ab910db50276f5e8f10ef1d98f25de35f1b9def2edc15f38d82f7bf7b58925"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/VertexCover.lean",
     "Complexity/Computability/Complexity/Problems/Coloring.lean",
