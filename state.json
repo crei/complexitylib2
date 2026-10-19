@@ -1324,15 +1324,18 @@
        "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "aedee482e5f99488394c419988cf16e3"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792374437,
+          "snapshot":
+          {"head": {"value": "8941c6c66290bb389c6f324d1076c9a2ecd1f277"},
+           "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
+          "reviewer":
           {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
            "agent": {"value": "reviewer-sable-cor5"}},
-          "expires": 1792388700},
-         "blocked": false}},
+          "note":
+          "Correctness review of fagin-cleanup 26253c9..8941c6c (Converse/Layout/Power/Small/StrictVerifier/Tableau, FO/Basic, FO/Encoding, ESO/Projection, tests). Independent: no contribution to fagin-converse/cleanup. Evidence: lake build of 9 changed modules + ComplexityTests.Fagin --wfail --iofail OK; mk_all --check OK; no sorry/native_decide/heartbeats. Probe (lake env lean, clean): headline statements identical to base, base forms restated verbatim and closed; new hypothesis-free iff re-derived from Definable.isoClosed and shown equivalent to landed iff, applied to 2-colorable graphs and card>=2 / empty-with-nullary classes; cardGe/cardEqSentence checked on Fin 0/1/2/5, 0|1|>=2 partition, infinite boundary shows [Finite M] needed, nullary decode on Fin 0; TableauRels: base realize_tableauESOSentence/npPowerSentence/initSentence restated and closed, canonical fields rfl to base symbols; removed letI Classical was dead (step RHS take no DecidableEq), headline has no extra params; axioms of all headlines = propext/choice/Quot.sound. Blocking: none. Nits: Fagin test docstring overstates (Phi is the Definable witness; checks characterization on decoded edge/triangle, not the construction); realize_isStrictLinearOrderSentence name repurposed and unconditional unfolding lemma made private; new iff docstring lacks citations; getElem?_frame_eq... names only half its conclusion. Limits: no full check.sh. Evidence .lake/codex-validation/fagin-cleanup-correctness/review.json sha256 527e4ad35c31617b8c0c6100fb96be0f3c7438a37b827b5d8e895ef1a1cef572"}}},
        "api":
        {"active":
         {"report": "",
