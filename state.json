@@ -3086,7 +3086,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "d25a0b5bc10ba0ac5a6540db3b7d5c04"},
+       "holder":
+       {"session": {"value": "15d3a3e432be6927c6de5db959e3458a"},
+        "agent": {"value": "worker-sable-graphs"}},
+       "expires": 1792406255},
       "branch": "work/communication-complexity-2/worker-sable-graphs",
       "blocked": false,
       "assignee": {"value": "worker-sable-graphs"}}}},
@@ -3104,7 +3109,7 @@
    "goal":
    "Milestones 2-3 of communication-complexity (after M1 lands), on the M1 rectangle/rank API and Protocol: M2 randomized protocols (public coins as finite distributions over deterministic protocols, private coins as uniform per-player bit strings) with error eps, Newman's theorem via the library's general Hoeffding (Probability.Concentration.pi_sum_ge_mean_add) with the exact extra cost, the discrepancy bound 2*gamma <= 2^c * disc and R(IP) = Omega(n) via the Lindsey lemma; M3 distributional complexity and Yao's minimax (finite LP duality or Mathlib Sion), the corruption bound and Razborov's R(DISJ) = Omega(n) if the API supports it, else tracked. Move Protocol.aliceSend to Protocol.lean. Cite Newman1991, Yao1977, Razborov1992, KalyanasundaramSchnitger1992 (propose entries). Tests, named axiom guards, run-gates, frozen submission per milestone.",
    "dependencies": [{"value": "communication-complexity"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-graphs"}]},
   {"resume": null,
    "report": "",
    "phase":
