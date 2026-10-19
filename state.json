@@ -944,7 +944,8 @@
    {"working":
     {"work":
      {"resume": "work/polynomial-space/worker-opus",
-      "report": "",
+      "report":
+      "PUBLICATION REQUEST: d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd on work/polynomial-space/integrator-sable-2. Content: worker-opus twice-approved head 976400b plus a clean merge of main 764e3b8 and nothing else (no code edits). Merge parents 976400b + 764e3b8; no conflicts; git diff-tree --cc --no-commit-id HEAD empty. Only overlap with main since base a0952ac was the generated roots, merged automatically; roots over main add exactly the epic own 11 import lines (8 Complexity, 3 ComplexityTests). Verified diff 976400b..HEAD equals main delta a0952ac..764e3b8 and diff 764e3b8..HEAD equals epic delta a0952ac..976400b (outside roots). Validation: all six scripts/check.sh gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports); git diff --check clean. Contributors: worker-opus (implementation), integrator-sable-2 (merge under coordinator-sable direction); AI assistance: Claude. After publication I will run ready.",
       "lease":
       {"token": {"value": "bf2b447b1ec06fad986f35fd48e2d05b"},
        "holder":
