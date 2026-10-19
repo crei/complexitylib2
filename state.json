@@ -961,7 +961,9 @@
       "snapshot":
       {"head": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"},
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space.lean",
     "Complexity/Computability/Complexity/Classes/Space",
