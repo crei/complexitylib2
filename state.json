@@ -699,7 +699,16 @@
       {"head": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"},
        "base": {"value": "fa9ab425853b7269b74ba22374583c026e548006"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor5"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "8c5180b89fa761b0db361582ca509372"},
+          "holder":
+          {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
+           "agent": {"value": "reviewer-sable-cor5"}},
+          "expires": 1792393847},
+         "blocked": false}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api5"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
