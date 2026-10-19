@@ -2988,54 +2988,18 @@
    "dependencies": [],
    "authors": [{"value": "worker-sable-loop"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "API review (reviewer-sable-api2) requested changes: two_pow_le_two_mul_card_exists_row and one_sub_pow_le re-prove Foundations/Data/Finset/Sampling lemmas; binaryValue_lt_two_pow duplicates the private GNI lemma and belongs in BitString/List/Binary. Correctness approved.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report": "",
-       "lease":
-       {"token": {"value": "b99d6637c7e120e0a9019e920253f3f6"},
-        "holder":
-        {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
-         "agent": {"value": "worker-sable-oracle"}},
-        "expires": 1792406742},
-       "branch": "work/isolation-counting/worker-sable-oracle",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-oracle"}},
-      "summary":
-      "M1 (Valiant-Vazirani, isolation). USAT, PromiseUSAT, PromiseUSAT_mem_PromiseNP. ValiantVazirani.reduce (k random affine parity eqns, prefix-parity aux vars): computableTidilyInPolyTime_reduce (encPair encCNF encBits->encCNF); reduce_mem_UNSAT: phi in UNSAT -> reduce (phi,r) in UNSAT; three_mul_two_pow_le_card_reduce_mem_USAT: phi in SAT -> randomBits phi <= m -> 3*2^m <= 32*(n+3)*#{r : Fin m -> Bool | reduce (phi, ofFn r) in USAT}, n = phi.vars.length, randomBits <= (n+2)^2. RPWithOracle A enc; RPWithPromiseOracle Q encQ enc (one algorithm correct vs every language solving Q); computableInPolyTimeWithOracle_any_mem; NP_subset_RPWithPromiseOracle_PromiseUSAT: NP enc ⊆ RPWithPromiseOracle PromiseUSAT encCNF enc; NP_subset_RPWithOracle_USAT. Isolation: dens_minWeightSets_card_ne_one_le (failure <= |U|/|W|), half_le_dens_minWeightSets_card_eq_one (weights 1..N, N>=2|U|). Checks: six gates (run-gates) ok on head; ComplexityTests/Isolation with concrete instances, axiom guards. Credit: VV1986, MVV1987; reuses PairwiseIndependentHash, LinearHash, Cook-Levin. Contributors: worker-sable-oracle only. Limits: n counts occurrences, constant 3/32; RPWithOracle, queryAny, generic helpers could move to Classes/Oracle, BitString, Logics. Continuation: M2 ParityP/operators/Toda, M3 Stockmeyer. Bib: @article{MulmuleyVaziraniVazirani1987, author={Mulmuley, Ketan and Vazirani, Umesh V. and Vazirani, Vijay V.}, title={Matching is as Easy as Matrix Inversion}, journal={Combinatorica}, volume={7}, number={1}, pages={105--113}, year={1987}, doi={10.1007/BF02579206}}",
-      "snapshot":
-      {"head": {"value": "ca80e7094f9d439e0202e487c2bdacf106e8348b"},
-       "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792393180,
-          "snapshot":
-          {"head": {"value": "ca80e7094f9d439e0202e487c2bdacf106e8348b"},
-           "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
-          "reviewer":
-          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
-           "agent": {"value": "reviewer-sable-cor2"}},
-          "note":
-          "Independent correctness review by reviewer-sable-cor2 (no contribution). HEAD=ca80e709 verified, base ancestor. Scope: USAT.lean, ValiantVazirani.lean, Isolation.lean, tests. Touched modules+tests build --wfail --iofail (exit 0). No sorry/native_decide/axiom/option overrides; #print axioms of 18 headlines within propext/Classical.choice/Quot.sound. Checked: reduce_mem_UNSAT for all r; 3*2^m <= 32(n+3)#good for m >= randomBits <= (n+2)^2; polytime on encPair encCNF encBits (k bounded 2n+5); RPWithPromiseOracle is standard one-sided RP, fixed program, correct for every language solving the promise (proof also robust to adaptive answers); (1-3/(32M))^(11M) <= 32/65; isolation failure <= |U|/|W|, >= 1/2 at N >= 2|U|. Probes: own #SAT counter, exhaustive success rates at m=randomBits ([[x0]] 120/256, [[x0 v x1]] 5856/32768, unsat 0 sat), isolation brute force Fin 3 N=1,3,6,9, non-promise oracles (SAT; yes on x0 v x1 and all non-encodings). Nonblocking: (1) Omega(1/n) with n = occurrences, weaker than AB 17.18 1/(8n) in #variables (documented); (2) NP_subset_RPWithOracle_USAT true but trivial in content: USAT language is coNP-hard so NP in P^USAT already; add a remark; (3) bib MulmuleyVaziraniVazirani1987 missing, proposed entry verified on Crossref. Not checked: six gates, framework internals. Evidence .worktrees/reviewer-sable-cor2/.lake/codex-validation/isolation-counting-correctness/review.json SHA256 88048031891d1678be9ed1885616ef87f8267a21dd582c6b803be145ee9c4d97."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "changes",
-          "time": 1792393113,
-          "snapshot":
-          {"head": {"value": "ca80e7094f9d439e0202e487c2bdacf106e8348b"},
-           "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
-          "reviewer":
-          {"session": {"value": "33380288772710be7744d177c8f66871"},
-           "agent": {"value": "reviewer-sable-api2"}},
-          "note":
-          "API review by reviewer-sable-api2 (independent; sole author worker-sable-oracle) of exact ca80e709 on 06c5f534 (ancestry ok). Built USAT, Isolation, ValiantVazirani + ComplexityTests.Isolation niced --wfail --iofail: exit 0. BLOCKING: B1 ValiantVazirani.lean:984-1059 two_pow_le_two_mul_card_exists_row + private one_sub_pow_le re-prove landed Fintype.half_le_dens_filter_exists_apply_mem / one_sub_pow_le_half (Finset/Sampling.lean:62,192). Probe derives it in ~30 lines; fix is in paths. B2 :188-201 public binaryValue_lt_two_pow duplicates the GNI private binaryValue_lt (GraphNonIsomorphism.lean:291). Hoist it with exists_binaryValue_eq (:709) into BitString/List/Binary.lean (path grant). FOLLOW-UPS: RPWithOracle/RPWithPromiseOracle to Oracle/Randomized (RPWithOracle mirrors PWithOracle; consider a ComputableInPolyTimeWithPromiseOracle); queryAny + any_mem to Oracle/Closure; interpret_iterate to Iteration. VV hash/isPairwiseIndependentHash_hash is a Bool copy of affineHash (Affine.lean:55,73): move to BitString/LinearHash. Generic CNF.vars/ofFn/take-drop helpers; take_ofFn = Fin.ofFn_take_eq_take_ofFn; hashBits bounds = dyadicSize_le/lt_dyadicSize. Add dens corollary 3/(32(n+3)) <= dens (isolation lemma already citable). Ambiguous/setWeight generic names. Non-terminal simp :341,722,958,970. Two more guards. Central: bib MulmuleyVaziraniVazirani1987 (Crossref ok). Not run: six gates, correctness. Evidence .lake/codex-validation/isolation-counting-api/review.json sha256 7908432554f7e2a6c64cb1a6f8f438932d60ef69c432367fbc1b50318c3fe328"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "API review (reviewer-sable-api2) requested changes: two_pow_le_two_mul_card_exists_row and one_sub_pow_le re-prove Foundations/Data/Finset/Sampling lemmas; binaryValue_lt_two_pow duplicates the private GNI lemma and belongs in BitString/List/Binary. Correctness approved.",
+      "lease": null,
+      "branch": "work/isolation-counting/worker-sable-oracle",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-oracle"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/ParityP.lean",
     "Complexity/Computability/Complexity/Classes/Operators.lean",
