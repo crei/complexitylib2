@@ -2081,7 +2081,7 @@
        "holder":
        {"session": {"value": "9b318203e8a9985d589db0583a2bb7af"},
         "agent": {"value": "worker-sable-npbuilder"}},
-       "expires": 1792401863},
+       "expires": 1792402156},
       "branch": "work/np-witness-builder/worker-sable-npbuilder",
       "blocked": false,
       "assignee": {"value": "worker-sable-npbuilder"}}}},
@@ -2840,7 +2840,7 @@
     "agent": {"value": "sable-graphs-verify"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792401863,
+   "expires": 1792402156,
    "actor":
    {"session": {"value": "9b318203e8a9985d589db0583a2bb7af"},
     "agent": {"value": "worker-sable-npbuilder"}}},
