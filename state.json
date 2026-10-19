@@ -1227,20 +1227,27 @@
    "report":
    "Plan accepted as posted (six items). Two cautions: keep every landed public statement at least as strong, with the hypothesis-free iff added beside, not instead of, the existing endpoints; and when bundling the twelve tableau symbols into FO.TableauSymbols, make sure the bundled statements remain readable and the realize lemmas stay simp-usable (write one probe). Report helper-inclusive line counts before/after; request publication through the board when the push hook blocks you; ready requires base == current main until the merge-queue tooling lands, so merge main right before your final validation.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Plan for fagin-cleanup (baseline 6253 lines across 17 Fagin/Logic/test files on a0952ac): (1) Move tupleIndex lemmas (tupleIndex_snoc, tupleIndex_eq_of_high_zero, tupleIndex_lt_pow_iff, tupleIndex_lt_iff) beside tupleIndex in Complexity/Logics/FirstOrder/Encoding.lean; move generic FO combinators (closeAll, closeEx, atVar, varEq, rel1, rel2, lt, le, isZero, isMax, succ, isFirstOut, eqOfPred without F suffix), cardinality helpers, and truthTableSentence into Complexity/Logics/FirstOrder/Basic.lean. (2) Replace cardGeTwoSentence with Mathlib Sentence.cardGe L 2 (plus Sentence.realize_cardGe_nat), express cardZeroSentence/cardOneSentence directly via Sentence.cardGe, remove unused FO.Definable.card_ge_two, and add Implementation notes + proof-only Finset.Sort import in Projection.lean. (3) Bundle the 12 tableau relation symbols into FO.TableauSymbols in Tableau.lean and add [DecidableEq State] to section variables instead of letI in statements. (4) Standardize iff lemma names to realize_*, rename realize_frameChunkSentence_imp to getElem_frame_eq_of_realize_frameChunkSentence, place nullarySymbolSentence/constTupleSentence/encodeOfZero/encodeOfOne in Vocabulary namespace, make Vocabulary.definable_iff_queryLanguage_mem_NP an alias, and add hypothesis-free ESO.definable_iff_isoClosed_and_queryLanguage_mem_NP. (5) Add References sections to StrictVerifier/Small/Power/Layout and list powerInTable in Power.lean docstring. (6) Add concrete semantic end-to-end test in ComplexityTests/Fagin.lean showing the converse sentence for 2-colorability holds on the 2-vertex edge and fails on the 3-vertex triangle.",
-      "lease":
-      {"token": {"value": "2b1c4e8937db5dfab3f9d11bd059fc40"},
-       "holder":
-       {"session": {"value": "4a93d95e627493ab82ddfefba0a046d0"},
-        "agent": {"value": "worker-jetski"}},
-       "expires": 1792387129},
-      "branch": "work/fagin-cleanup/worker-jetski",
-      "blocked": false,
-      "assignee": {"value": "worker-jetski"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Plan for fagin-cleanup (baseline 6253 lines across 17 Fagin/Logic/test files on a0952ac): (1) Move tupleIndex lemmas (tupleIndex_snoc, tupleIndex_eq_of_high_zero, tupleIndex_lt_pow_iff, tupleIndex_lt_iff) beside tupleIndex in Complexity/Logics/FirstOrder/Encoding.lean; move generic FO combinators (closeAll, closeEx, atVar, varEq, rel1, rel2, lt, le, isZero, isMax, succ, isFirstOut, eqOfPred without F suffix), cardinality helpers, and truthTableSentence into Complexity/Logics/FirstOrder/Basic.lean. (2) Replace cardGeTwoSentence with Mathlib Sentence.cardGe L 2 (plus Sentence.realize_cardGe_nat), express cardZeroSentence/cardOneSentence directly via Sentence.cardGe, remove unused FO.Definable.card_ge_two, and add Implementation notes + proof-only Finset.Sort import in Projection.lean. (3) Bundle the 12 tableau relation symbols into FO.TableauSymbols in Tableau.lean and add [DecidableEq State] to section variables instead of letI in statements. (4) Standardize iff lemma names to realize_*, rename realize_frameChunkSentence_imp to getElem_frame_eq_of_realize_frameChunkSentence, place nullarySymbolSentence/constTupleSentence/encodeOfZero/encodeOfOne in Vocabulary namespace, make Vocabulary.definable_iff_queryLanguage_mem_NP an alias, and add hypothesis-free ESO.definable_iff_isoClosed_and_queryLanguage_mem_NP. (5) Add References sections to StrictVerifier/Small/Power/Layout and list powerInTable in Power.lean docstring. (6) Add concrete semantic end-to-end test in ComplexityTests/Fagin.lean showing the converse sentence for 2-colorability holds on the 2-vertex edge and fails on the 3-vertex triangle.",
+       "lease":
+       {"token": {"value": "2b1c4e8937db5dfab3f9d11bd059fc40"},
+        "holder":
+        {"session": {"value": "4a93d95e627493ab82ddfefba0a046d0"},
+         "agent": {"value": "worker-jetski"}},
+        "expires": 1792387129},
+       "branch": "work/fagin-cleanup/worker-jetski",
+       "blocked": false,
+       "assignee": {"value": "worker-jetski"}},
+      "summary":
+      "Completed all 6 fagin-cleanup items at 8941c6c6: (1) moved generic FO combinators (without F suffix) and cardinality sentences to Complexity/Logics/FirstOrder/Basic.lean (309 lines) and tupleIndex lemmas to Complexity/Logics/FirstOrder/Encoding.lean (+97 lines); (2) replaced custom cardGeTwoSentence/cardZeroSentence/cardOneSentence with Mathlib Sentence.cardGe L 2 and FO.cardEqSentence L n, removed unused FO.Definable.card_ge_two, made Mathlib.Data.Finset.Sort a proof-only import in Projection.lean, and added ## Implementation notes on orderLanguage vs Language.order; (3) removed letI := Classical.typeDecidableEq State from theorem statements in Tableau.lean and bundled the 12 relation-symbol parameters into FO.TableauRels; (4) renamed realize_X_iff -> realize_X, realize_frameChunkSentence_imp -> getElem?_frame_eq_of_realize_frameChunkSentence, placed encodeOfZero/encodeOfOne/nullarySymbolSentence/constTupleSentence in Vocabulary namespace, made Vocabulary.definable_iff_queryLanguage_mem_NP an alias of ESO.definable_iff_queryLanguage_mem_NP, and added ESO.definable_iff_isoClosed_and_queryLanguage_mem_NP; (5) added ## References to StrictVerifier/Small/Power/Layout, listed powerInTable in Power.lean, and deduplicated realize_layoutESOSentence in Layout.lean; (6) added end-to-end semantic test in ComplexityTests/Fagin.lean showing the ESO sentence from Definable.of_queryLanguage_mem_NP for 2-colorability holds on the decoded 2-vertex edge and fails on a decoded 3-vertex triangle. Helper-inclusive line counts (Logics + Fagin + Fagin tests): 6,253 before -> 6,195 after (-58 net; Fagin/ 3,907 -> 3,521). All 6 gates of scripts/check.sh pass.",
+      "snapshot":
+      {"head": {"value": "8941c6c66290bb389c6f324d1076c9a2ecd1f277"},
+       "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
