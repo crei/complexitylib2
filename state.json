@@ -1838,19 +1838,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "40a939084b6ee1062eeca8130e15b4c8"},
-       "holder":
-       {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
-        "agent": {"value": "worker-sable-stretch"}},
-       "expires": 1792399867},
-      "branch": "work/circuit-complexity-consolidation/worker-sable-stretch",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-stretch"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "40a939084b6ee1062eeca8130e15b4c8"},
+        "holder":
+        {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
+         "agent": {"value": "worker-sable-stretch"}},
+        "expires": 1792399867},
+       "branch": "work/circuit-complexity-consolidation/worker-sable-stretch",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-stretch"}},
+      "summary":
+      "No statement weakened; names kept except the goal's rename. (1) Circuit/Complexity (additions to cslib Circuit/Complexity) holds complexity_single_proj : complexity I (single fun x => x i) = 0, one_le_complexity_single (hf : ∀ i, f ≠ fun x => x i) : 1 ≤ complexity I (single f), complexity_single_unary_le, complexity_single_binary_le, moved unchanged; Boolean.complexity_not_le/complexity_binary_le rederived from them; private test copies deleted. (2) BitString/Hamming: two_mul_hammingDist_parityOn (h : S ≠ T) : 2 * hammingDist (parityOn S) (parityOn T) = 2 ^ card ι, elementary symmDiff proof (private parityOn_symmDiff); two_mul_hammingDist_proj derived; Linearity drops the Fourier proof and public-imports Hamming. (3) Smolensky fst_trace_pair uses pointwise/trace_pointwise_apply. (4) median_median -> median_median_distrib (no alias); lattice-median docstring; Metric 'exponent two'; Gates distance-zero uses circuitDist_self; Boolean/Hamming imports BitString/Hamming, drops unused Pointwise. Tests: parity distances, axioms guard. Checks: six gates pass at 7077d8c (build, mk_all --check, test, lint, lint-style, checkInitImports); then merged docs-only main. Source: library's own code. Contributors: worker-sable-stretch (earlier holder: no commits). Follow-up: move parityOn_symmDiff public into BitString/Parity (outside paths). Bibliography: none.",
+      "snapshot":
+      {"head": {"value": "2b3f6de7e95735056f0e6f61bed05329732cd9da"},
+       "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Complexity.lean",
     "Complexity/Computability/Circuit/Pointwise.lean",
