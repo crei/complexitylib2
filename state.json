@@ -727,7 +727,8 @@
    "dependencies": [],
    "authors": [{"value": "worker-karn"}, {"value": "coordinator-sable"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "rational-hitting landed on main (f489429), including the coordinator attribution notes (Mathlib HahnSeries.SummableFamily.powers, Aaron Anderson; BirdDet lemmas, Paul Cadman) and bibliography entries OpenAI2026RationalHitting and Schlesinger2026RationalHitting. Start from current main. Keep those credits intact; post your milestone plan (first independently useful certificate endpoint) as a note before the bulk of the work.",
    "phase":
    {"working":
     {"work":
