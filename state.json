@@ -3042,7 +3042,16 @@
        "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor4"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "ad43c88ff005f36e1ef6ba13a896fbf9"},
+          "holder":
+          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+           "agent": {"value": "reviewer-sable-api4"}},
+          "expires": 1792407994},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/FineGrained.lean",
     "Complexity/Computability/Complexity/FineGrained",
