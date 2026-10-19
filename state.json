@@ -1638,55 +1638,18 @@
     {"value": "polytime-plain-bridge"}],
    "authors": [{"value": "worker-sable-hier"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "API review (reviewer-sable-api2): Ladner.ofBits_bits duplicates main Nat.foldr_bit_bits (Kolmogorov/SelfDelimiting.lean); use it and delete the copy. Cheap nits: notMem naming, plain import of CookLevin.Completeness. Placement follow-ups recorded separately.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "CHECKPOINT (local 6a5f2f7, unpushed): milestone-1 content compiles axiom-clean. Ladner/Basic.lean: word/index enumeration, pad/unpad, padSAT e, run/clock/Agrees, Hstep/Htable/H with H_le, H_le_of_agrees, agrees_H; SATH := padSAT H. Ladner/PolyTime.lean: Decoder for encNat/encBool/encCNF, capPow min(b^e,c) via iterate, universal with unary clock polytime (from computableTidilyInO_universal + Diagonal.universal_bounds_le), word polytime, padCheck + mem_padSAT_iff, bruteSAT_iff, hstepB = Hstep (search form), computableTidilyInPolyTime_H, verifier/isVerifier, SATH_mem_NP. Tests ComplexityTests/Ladner.lean. Proceeding directly to milestone 2 (holes + headline) since M1 was quick; will submit both together unless you prefer a separate M1 submission.",
-       "lease":
-       {"token": {"value": "bc3240ca4120bff5532ca06795fdbf2c"},
-        "holder":
-        {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
-         "agent": {"value": "worker-sable-ladner"}},
-        "expires": 1792399462},
-       "branch": "work/ladner/worker-sable-ladner",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-ladner"}},
-      "summary":
-      "Ladner's theorem, head 784cb3a on base f489429 (main). Proved: exists_NP_not_P_not_NPComplete (h : P enc ≠ NP enc) : ∃ L : Set (List Bool), L ∈ NP encBits ∧ L ∉ P encBits ∧ ¬NPComplete encBits L, witnessed by SATH = padSAT H. The unconditional forms: SATH_mem_NP (verifier evaluating the padded formula, isVerifier); SAT_mem_P_of_SATH_mem_P; SAT_mem_P_of_NPHard_SATH; P_eq_NP_of_SATH_mem_P; P_eq_NP_of_NPComplete_SATH (P enc = NP enc for every enc). H is certified polytime on unary numbers by the calculus (computableTidilyInPolyTime_H), via computableTidilyInPolyTime_universal (unary clock). Checks: scripts/check.sh, all six gates pass; headline axioms propext/Classical.choice/Quot.sound, guarded in ComplexityTests/Ladner. Source: Arora-Barak Thm 3.3; crei's universal interpreter; Classes/Hierarchy diagonal. Contributors: worker-sable-ladner (earlier holder and current). AI: Claude. Limitations/continuation: PolyTimeReducible.mem_P and P_subset_NP sit in Ladner.lean but belong in Reduction.lean / Classes/NP.lean; P_eq_NP_of_SAT_mem_P beside CookLevin.SAT_npComplete; computableTidilyInPolyTime_universal, runBound_mono beside Universal.Complexity; the decoders beside encodings (all outside epic paths). Infinite hierarchy of intermediate degrees not done. Bibliography: none new (AroraBarak09 present).",
-      "snapshot":
-      {"head": {"value": "784cb3afda77036d16f624185735d15fd09145b3"},
-       "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792385510,
-          "snapshot":
-          {"head": {"value": "784cb3afda77036d16f624185735d15fd09145b3"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
-           "agent": {"value": "reviewer-sable-cor2"}},
-          "note":
-          "Independent correctness review (reviewer-sable-cor2; no contribution). Scope: Ladner.lean, Ladner/Basic.lean, Ladner/PolyTime.lean, ComplexityTests/Ladner.lean at 784cb3a. Build of the 3 epic modules + test module with --wfail --iofail: exit 0. Headline exists_NP_not_P_not_NPComplete is true as stated over the standard Cslib.Complexity.P/NP/NPComplete (Karp PolyTimeReducible, all-encoding NPHard) with encBits = id (rfl). Hypothesis is not vacuous/mis-encoded: probe proves (exists enc, P enc != NP enc) <-> SAT notin P encCNF, and P encBits != NP encBits <-> P encCNF != NP encCNF; NPComplete encBits is satisfiable (probe: encoded SAT is NPComplete encBits), so the third conjunct is meaningful. Unconditional lemmas have the stated types; SATH_mem_NP uses a real verifier (padCheck H then SAT.verifier, cert length X, IsVerifier both ways). H: certified polytime encUnary->encUnary via hstepB = Hstep and the unary-clock universal; H n <= loglog n; probe proves (H bounded) <-> SATH in P and H -> infinity under P != NP (A-B Claim 3.4); every machine has unboundedly many indices; clocks (2l+2)^i capped at n. No sorry/native_decide/axiom/set_option. #print axioms (headline, 5 lemmas, H cert, probes): propext, Classical.choice, Quot.sound. Nits (non-blocking): placement of P_subset_NP etc. is API, disclosed. Not run: Axioms test, full gates. Evidence: .lake/codex-validation/ladner-correctness/review.json sha256 6dfcfeecf5e5388a28f7a851d8a4388d01b3f27134045be9eda976d62ffb98d3"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "changes",
-          "time": 1792385594,
-          "snapshot":
-          {"head": {"value": "784cb3afda77036d16f624185735d15fd09145b3"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "33380288772710be7744d177c8f66871"},
-           "agent": {"value": "reviewer-sable-api2"}},
-          "note":
-          "API review of exact 784cb3a on f489429 (independent; author worker-sable-ladner). Built Ladner.Basic/PolyTime/Ladner + ComplexityTests.Ladner --wfail --iofail: OK. BLOCKING: Ladner/PolyTime.lean:111 ofBits_bits restates main Nat.foldr_bit_bits (Kolmogorov/SelfDelimiting.lean:52, @[simp]); probe `@ofBits_bits = @Nat.foldr_bit_bits := rfl` checks. Fix: use Nat.foldr_bit_bits in natDecoder (:148), drop ofBits_bits (or move foldr_bit_bits to a shared Nat file). Not duplicates (searched Complexity/, cslib, Mathlib, work branches), placement OK as follow-up: PolyTimeReducible.mem_P, P_subset_NP (only via PH on main), P_eq_NP_of_SAT_mem_P/SAT_not_mem_P, computableTidilyInPolyTime_universal/universal_bounds_unary/runBound_mono (Universal files are vendored crei; use a local candidate file), Nat/Bool/CNF decoders (Decoder.nat/.bool). Also unlisted general lemmas: rdropWhile_append, bits_eq_nil_iff, min_min_mul, iterate_min_mul, capPow, find?_range_getD_eq_sInf, decodeDesc/map_eBit/eBit fun_prop lemmas, assignment_append_replicate, universal_desc_of_halted. Nits: Ladner.lean:12 CookLevin import proof-only (plain import compiles); notMem naming Ladner.lean:116,247,262,411; Hstep/Htable casing. Template, docstrings, simp hygiene, tests, 10 axiom guards OK. Evidence .lake/codex-validation/ladner-api/review.json sha256 08b268c6e0b9c166ff10a964fadd0eed4a482b058071884499e761004f78b409"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "API review (reviewer-sable-api2): Ladner.ofBits_bits duplicates main Nat.foldr_bit_bits (Kolmogorov/SelfDelimiting.lean); use it and delete the copy. Cheap nits: notMem naming, plain import of CookLevin.Completeness. Placement follow-ups recorded separately.",
+      "lease": null,
+      "branch": "work/ladner/worker-sable-ladner",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-ladner"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Ladner.lean",
     "Complexity/Computability/Complexity/Classes/Ladner",
