@@ -1744,7 +1744,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/circuit-complexity-consolidation/worker-sable-stretch",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-stretch"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Complexity.lean",
     "Complexity/Computability/Circuit/Pointwise.lean",
