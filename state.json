@@ -1363,7 +1363,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "6b3189f96b6434471433fa62550f0e97"},
+       "holder":
+       {"session": {"value": "a0e20ed2f18f79a2430412c297824d94"},
+        "agent": {"value": "worker-sable-tqbf"}},
+       "expires": 1792388661},
       "branch": "work/tqbf-pspace-complete/worker-sable-tqbf",
       "blocked": false,
       "assignee": {"value": "worker-sable-tqbf"}}}},
@@ -1376,7 +1381,7 @@
    "goal":
    "Continuation of polynomial-space for the same worker: TQBF is PSPACE-complete on the native classes. Define quantified Boolean formulas with a canonical bit encoding and native evaluation, prove TQBF is in PSPACE with an actual deterministic polynomial-workspace decider written as ordinary functional code over the existing machine calculus (recursive evaluation with an explicit bounded stack; charge input retention, stack frames, counters and copies), and prove PSPACE-hardness by a native polynomial-time Karp reduction from any native polynomial-space language, built from the encoded configuration view and midpoint reachability of polynomial-space (Savitch-style quantified formula of polynomial size). Reuse Classes/Space, the configuration encoding, Algorithms/Reachability and the Karp-reduction machinery from karp-reductions; no second formula or machine model; cite Sipser2013 Theorem 8.9 and AroraBarak09 Theorem 4.13; state empty-formula and zero-variable boundaries. First post a dependency map and exact statement forms; milestones: (1) TQBF syntax, evaluation and membership in PSPACE; (2) hardness reduction; (3) completeness corollary and AP = PSPACE left as a tracked follow-up. Tests with concrete formulas, nonvacuity, headline #print axioms guards in the epic test module, six gates, frozen submission per milestone.",
    "dependencies": [{"value": "polynomial-space"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-tqbf"}]},
   {"resume": null,
    "report":
    "Owner recorded: assigned to a local worker as soon as polynomial-space lands (its Classes/Space and Algorithms/Reachability scopes currently overlap this plan). polynomial-space has both reviews in progress and lands in the next batch.",
