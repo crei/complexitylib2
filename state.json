@@ -2601,15 +2601,18 @@
           "expires": 1792403918},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "8c166ad4de42941677faa18ddc8720ab"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792389617,
+          "snapshot":
+          {"head": {"value": "d0299eace631cd0e7fc0f4bc69103989ef7cf3a2"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
            "agent": {"value": "reviewer-sable-api4"}},
-          "expires": 1792403984},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api4 (independent; author worker-sable-stretch) of exact head d0299eac over base 0d8ef4bf. Evidence: nice lake build of 17 touched modules + 44 direct importers + touched tests --wfail --iofail OK, 0 warnings; probe: NPSPACE equals old form by rfl. Name audit (Lean env, base vs head public decls of touched modules): 12 removed, 15 added, 6 moved same-name; every removed name has a replacement except Ladner.rdropWhile_append/bits_eq_nil_iff, now private helpers (not in Mathlib); no stale refs. Moves land in right homes. Layering: Reduction->Classes.P fine (sibling of NP); Universal/PolyTime proof-only Hierarchy import acceptable interim, documented. Open decisions accepted: P_eq_NP_of_mem_P beside P_subset_NP in Ladner; cnfDecoder stays (Encodings must not import Problems.SAT). In-repo renames without aliases acceptable. No blocking findings. Follow-ups: move Diagonal.universal_bounds_le (Hierarchy.lean:229) beside runBound and drop Universal/PolyTime.lean:14 import; Nat.foldr_bit_bits to Foundations to drop Decoder.lean:14 Kolmogorov import; move Ladner.lean:106 with P_subset_NP; cnfDecoder beside encCNF. Nits: PolynomialBound/Log.lean:52 Nat.log2 vs Nat.log 2 convention; runBound_mono no docstring; ofBits in machine namespace; epic-named ComplexityTests/Consolidation. Not run: six gates, Axioms audit. Evidence .lake/codex-validation/machine-classes-consolidation-api/review.json sha256 4562bb6d5d2cc97d7b39da1e544a54d61ae6d24a1a2fc1cd7db648688d0bf829"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Reduction.lean",
     "Complexity/Computability/Complexity/Classes/Ladner.lean",
