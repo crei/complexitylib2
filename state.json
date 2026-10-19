@@ -3072,7 +3072,7 @@
     "agent": {"value": "worker-sable-numbers"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792402729,
+   "expires": 1792403761,
    "actor":
    {"session": {"value": "7781632cd73663d87f4e864c19b303a8"},
     "agent": {"value": "worker-sable-undecid"}}},
