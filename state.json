@@ -2556,15 +2556,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "d017e2fd268ea34b096c5e1fe7411b08"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390867,
+          "snapshot":
+          {"head": {"value": "ec271bcb5ddcddd0085ae9ec76f37a569c6f15cf"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
            "agent": {"value": "reviewer-sable-cor1"}},
-          "expires": 1792405203},
-         "blocked": false}},
+          "note":
+          "Correctness delta review a411ecce..ec271bcb (reviewer-sable-cor1, independent; sole contributor worker-sable-query; prior verdict approve). Scripted statement diff (delta/stmt_diff.py: comment-stripped declaration headers plus namespace/variable/open context, rename map applied): Degree 25/25, Relations 17/17, Huang 3/3 identical modulo the 3 renames; Hypercube 12/12 identical, only the Sqrt import changed. A self-test without the rename map flags exactly the 3 renamed theorems. Test: deg(MAJ3) = 3 and s(MAJ3) = 2 hold (my own probe: majority 3 = pairwise OR of ANDs by decide, Fourier coefficient -1/2 on univ, s < deg <= s^2), and the old names are unknown constants. #print axioms of 19 headlines incl. renamed: [propext, Classical.choice, Quot.sound]. Diff has no sorry/native_decide/axiom/set_option. Build of 4 modules + ComplexityTests.QueryComplexity.Measures --wfail --iofail: exit 0, 0 warnings. Blocking: none. Nit (API scope): Measures.lean:108 still credits D<=bs0*C1 to Nisan. Not checked: full six gates. Evidence .lake/codex-validation/query-complexity-correctness/review.json sha256 78538b8372f66f1bab2f363aee1d9dcbf906784aacde422f8b1a458ac07bad42"}}},
        "api":
        {"finished":
         {"review":
