@@ -1730,15 +1730,18 @@
        "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "0d4198896310e4aede0463af7b1cafe8"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792386783,
+          "snapshot":
+          {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
+           "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
+          "reviewer":
           {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
            "agent": {"value": "reviewer-sable-cor5"}},
-          "expires": 1792401099},
-         "blocked": false}},
+          "note":
+          "Delta correctness review by reviewer-sable-cor5 (no contribution; author worker-sable-ladner) of exact 647187e over board base 3034b37, relative to the approved 784cb3a (reviewer-sable-cor2). Delta: 8aaf396 (ofBits_bits deleted for main Nat.foldr_bit_bits via proof-only Kolmogorov.SelfDelimiting import; notMem renames; pad_injective -> pad_inj iff; CookLevin.Completeness plain import) plus a main merge touching only references.bib and scripts/check_docs.py. Built Ladner.Basic, Ladner.PolyTime, Ladner, ComplexityTests.Ladner with --wfail --iofail: pass. Probe: the headline exists_NP_not_P_not_NPComplete and SATH_mem_NP, SAT_mem_P_of_SATH_mem_P, SAT_mem_P_of_NPHard_SATH, P_eq_NP_of_SATH_mem_P, P_eq_NP_of_NPComplete_SATH, copied verbatim from 784cb3a, typecheck against HEAD; the four renamed lemmas keep their statements; pad_inj re-proved independently from unpad_pad, with concrete separating instances; natDecoder.decode_enc holds. Axiom audit of all 242 constants in the three Ladner modules: only propext/Classical.choice/Quot.sound; no stale old names remain. Blocking: none. Nits: none. Limitation: delta-only, unchanged content relies on the prior review. Note: the coordinator-quoted base 3034b372dd70b6a0... does not exist; used the board snapshot base. Evidence .lake/codex-validation/ladner-correctness/review.json sha256 ef6c3451...182e21e"}}},
        "api":
        {"finished":
         {"review":
