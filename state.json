@@ -2581,7 +2581,15 @@
    "authors": [{"value": "worker-sable-query"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/space-hierarchy/worker-sable-logspace",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-logspace"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Hierarchy/Space.lean",
     "Complexity/Computability/Complexity/Classes/Hierarchy/SpaceUniversal.lean",
