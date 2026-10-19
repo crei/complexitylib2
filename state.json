@@ -2397,20 +2397,27 @@
    "report":
    "API review (reviewer-sable-api2) requested changes: reuse ProbabilityTheory.indepSet_pi_of_dependsOn and Mathlib DependsOn in LocalLemma; prove the k-wise(2) <-> pairwise converse; drop or derive the bit-string counting forms that are weaker than the existing Hoeffding bound. Correctness approved.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "API review (reviewer-sable-api2) requested changes: reuse ProbabilityTheory.indepSet_pi_of_dependsOn and Mathlib DependsOn in LocalLemma; prove the k-wise(2) <-> pairwise converse; drop or derive the bit-string counting forms that are weaker than the existing Hoeffding bound. Correctness approved.",
-      "lease":
-      {"token": {"value": "ebb2536a384958166f7f3cf6a62d5f77"},
-       "holder":
-       {"session": {"value": "0d4e04fa36522a13475c8af7f7944f7d"},
-        "agent": {"value": "worker-sable-prob"}},
-       "expires": 1792404498},
-      "branch": "work/probability-toolkit/worker-sable-prob",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-prob"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "API review (reviewer-sable-api2) requested changes: reuse ProbabilityTheory.indepSet_pi_of_dependsOn and Mathlib DependsOn in LocalLemma; prove the k-wise(2) <-> pairwise converse; drop or derive the bit-string counting forms that are weaker than the existing Hoeffding bound. Correctness approved.",
+       "lease":
+       {"token": {"value": "ebb2536a384958166f7f3cf6a62d5f77"},
+        "holder":
+        {"session": {"value": "0d4e04fa36522a13475c8af7f7944f7d"},
+         "agent": {"value": "worker-sable-prob"}},
+        "expires": 1792404498},
+       "branch": "work/probability-toolkit/worker-sable-prob",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-prob"}},
+      "summary":
+      "M1 (Chernoff, k-wise, LLL), API fixes applied. PMF.pi, [0,1] scores, mean:=sum_i sum_a (p i a).toReal*score i a: pi_sum_ge_one_add_mul_le_exp_log: mean<=mu, 0<=d -> Pr[(1+d)mu<=X]<=exp(mu(d-(1+d)log(1+d))); pi_sum_ge_one_add_mul: <=exp(-(d^2 mu/(2+d))); _of_le_one: <=exp(-(d^2 mu/3)); pi_sum_le_one_sub_mul: mu<=mean -> Pr[X<=(1-d)mu]<=exp(-(d^2 mu/2)); pi_sum_abs_sub_mean_ge_mul. Counting-form endpoint already covered by BitString.card_filter_le_card_filter_sub_half_le (Hoeffding); the weaker bit-string forms were dropped. IsKWiseIndependentHash k h (#T<=k, documented vs exactly-k); isKWiseIndependentHash_two_iff: 2-wise <-> pairwise and Nonempty; expect_prod; isKWiseIndependentHash_of_surjective; expect_sum_pow_le; dens_filter_le_abs_sum_sub_expect: (2m)-wise -> Pr[|sum_S(g-Eg)|>=a]<=(m^2#S/a^2)^m; isKWiseIndependentHash_polynomialHash. LLL: prod_one_sub_le_measureReal_iInter_compl (lopsided), pow_le_/measureReal_iInter_compl_pos, and with DependsOn: PMF.toOuterMeasure_pi_inter_eq_mul (from indepSet_pi_of_dependsOn), PMF.prod_one_sub_le_pi_iInter_compl, PMF.pi_iInter_compl_pos. Checks: run-gates all six ok at 8a05720a. Source: original, reusing Mathlib. Contributors: worker-sable-prob. Limits: k-wise constant m^2; LLL nonconstructive. Continuation: M2 (Divergence/Pinsker/Shearer, MinEntropy, McDiarmid). Bib: board note.",
+      "snapshot":
+      {"head": {"value": "8a05720a1f07660e4d0e27e808dedbbc16322c3b"},
+       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Probability/Chernoff.lean",
     "Complexity/Probability/KWiseIndependent.lean",
