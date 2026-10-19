@@ -9,7 +9,7 @@
    "holder":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}},
-   "expires": 1792393307},
+   "expires": 1792393377},
   "epic": {"value": "np-complete-numbers"},
   "candidates":
   [{"snapshot":
@@ -704,7 +704,7 @@
         "holder":
         {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
          "agent": {"value": "coordinator-sable"}},
-        "expires": 1792393252},
+        "expires": 1792393377},
        "branch": "work/rational-hitting/coordinator-sable",
        "blocked": false,
        "assignee": {"value": "coordinator-sable"}},
@@ -1880,7 +1880,7 @@
        "holder":
        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
         "agent": {"value": "coordinator-sable"}},
-       "expires": 1792393252},
+       "expires": 1792393377},
       "branch": "work/b2-lower-bound/coordinator-sable",
       "blocked": false,
       "assignee": {"value": "coordinator-sable"}}}},
@@ -1927,7 +1927,7 @@
   "holder":
   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
    "agent": {"value": "coordinator-sable"}},
-  "expires": 1792393252},
+  "expires": 1792393377},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
@@ -2009,7 +2009,7 @@
     "agent": {"value": "worker-mythos"}}},
   {"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792393252,
+   "expires": 1792393377,
    "actor":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}}},
