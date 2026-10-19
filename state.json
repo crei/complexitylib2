@@ -631,7 +631,12 @@
     {"work":
      {"resume": "work/sipser-lautemann/reviewer-correctness",
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "c7494010867c8bda759b548d5af16efb"},
+       "holder":
+       {"session": {"value": "284b607582cb0e7bf0d45e8fbc04e81a"},
+        "agent": {"value": "integrator-sable-3"}},
+       "expires": 1792382511},
       "branch": "work/sipser-lautemann/integrator-sable-3",
       "blocked": false,
       "assignee": {"value": "integrator-sable-3"}}}},
@@ -649,7 +654,10 @@
    "goal":
    "Prove the full native Sipser-Lautemann theorem BPP enc subset SigmaP 2 enc inter PiP 2 enc and BPP enc subset PH enc for the current verifier-based classes with an actual native polynomial-time matrix certificate (original goal retained in the journal: majority amplification via MajorityVote/FiniteCover, explicit polynomial-length shift witnesses and universal seeds, functional shifted-seed matrix with exact quantifier-block lengths matching IsAlternatingVerifier, arbitrary input encoding, zero-length input/seed, malformed or short matrix strings, strict-majority tie convention, complement closure deriving Pi2, source Bolton Bailey v1 @add0aca8, cite AroraBarak09 Theorem 7.15). Integration addendum after review: seed and shift views are defined through Cslib.BitString.ofList/block/blocksEquiv and trialSeed through listRow and zipWith xor; completeness and soundness go through Cslib.exists_forall_exists_add_mem_of_card_mul_card_compl_pow_lt and Cslib.exists_forall_add_notMem_of_mul_card_lt from Foundations/Combinatorics/Lautemann.lean; the malformed-string contract is documented; references.bib gains Sipser1983; headline axiom guards stay in ComplexityTests/SipserLautemann.lean.",
    "dependencies": [{"value": "karp-reductions"}],
-   "authors": [{"value": "worker-nova"}, {"value": "reviewer-correctness"}]},
+   "authors":
+   [{"value": "worker-nova"},
+    {"value": "reviewer-correctness"},
+    {"value": "integrator-sable-3"}]},
   {"resume": null,
    "report": "",
    "phase":
