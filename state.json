@@ -2020,7 +2020,16 @@
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor1"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api1"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "b0f27b210149ff208e5f98a5032acfb8"},
+          "holder":
+          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
+           "agent": {"value": "reviewer-sable-api1"}},
+          "expires": 1792399574},
+         "blocked": false}}}}}},
    "paths": ["scripts/check_docs.py"],
    "id": {"value": "docs-check-bibkeys"},
    "goal":
