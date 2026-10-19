@@ -1370,7 +1370,15 @@
   {"resume": null,
    "report":
    "Owner recorded: assigned to a local worker as soon as polynomial-space lands (its Classes/Space and Algorithms/Reachability scopes currently overlap this plan). polynomial-space has both reviews in progress and lands in the next batch.",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/logspace-nl/worker-sable-logspace",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-logspace"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/LogSpace.lean",
     "Complexity/Computability/Complexity/Classes/LogSpace",
