@@ -1663,20 +1663,27 @@
    "report":
    "polytime-plain-bridge has two fresh approvals on current main and lands in the next batch, right after the merge-queue tooling (in its final re-review) or within about half an hour through the old path if that review asks for changes. Keep designing read-only until start succeeds.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "DESIGN (worker-sable-hier, resumed): merged main f489429; inherited untracked Hierarchy/Time.lean (DTIME over encoded DecidableInTimeAndSpace as #767 transposed, DTIME_mono(_of_eventually_le), TimeConstructible as an explicit native certificate, 2^n and (n+1)*f constructible, binary/unary length helpers). Milestone 1: clockedDiagonal J (the landed diagonal with clock J; diagonal = clockedDiagonal (2^.) definitionally) and timeDiagonal J x = if 2^|unframe x| <= |x| then clockedDiagonal J x else false, via ComputableTidilyInO.ite so the decoder costs O(n) whatever its degree; in DTIME((n+1)^5 (J n+1)^3) by universal_bounds_le; not in DTIME f when c*f+c <= J eventually for all c. Theorems DTIME_ssubset_DTIME_of_clock and DTIME_ssubset_DTIME (f constructible, n <= f n, (n+1)^8 (f n+1)^3 <= g n eventually). Classes/EXP.lean: EXP = Union_k DTIME(2^(n^k)), mem_P_iff_exists_mem_DTIME (P = Union_k DTIME(n^k) as an iff), P_subset_EXP, P_ssubset_EXP for encBits via the landed diagonal. No second universal machine. Space hierarchy needs a space-budgeted universal run (landed universal space is O(B^2 J) in the clock); will assess after milestone 1 and likely record it as the continuation.",
-      "lease":
-      {"token": {"value": "b98f4ed679158ad7e36a255f390b812a"},
-       "holder":
-       {"session": {"value": "0bac3bc8aa5546f3a00854a39d54904d"},
-        "agent": {"value": "worker-sable-hier"}},
-       "expires": 1792401193},
-      "branch": "work/hierarchy-theorems/worker-sable-hier",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-hier"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "DESIGN (worker-sable-hier, resumed): merged main f489429; inherited untracked Hierarchy/Time.lean (DTIME over encoded DecidableInTimeAndSpace as #767 transposed, DTIME_mono(_of_eventually_le), TimeConstructible as an explicit native certificate, 2^n and (n+1)*f constructible, binary/unary length helpers). Milestone 1: clockedDiagonal J (the landed diagonal with clock J; diagonal = clockedDiagonal (2^.) definitionally) and timeDiagonal J x = if 2^|unframe x| <= |x| then clockedDiagonal J x else false, via ComputableTidilyInO.ite so the decoder costs O(n) whatever its degree; in DTIME((n+1)^5 (J n+1)^3) by universal_bounds_le; not in DTIME f when c*f+c <= J eventually for all c. Theorems DTIME_ssubset_DTIME_of_clock and DTIME_ssubset_DTIME (f constructible, n <= f n, (n+1)^8 (f n+1)^3 <= g n eventually). Classes/EXP.lean: EXP = Union_k DTIME(2^(n^k)), mem_P_iff_exists_mem_DTIME (P = Union_k DTIME(n^k) as an iff), P_subset_EXP, P_ssubset_EXP for encBits via the landed diagonal. No second universal machine. Space hierarchy needs a space-budgeted universal run (landed universal space is O(B^2 J) in the clock); will assess after milestone 1 and likely record it as the continuation.",
+       "lease":
+       {"token": {"value": "b98f4ed679158ad7e36a255f390b812a"},
+        "holder":
+        {"session": {"value": "0bac3bc8aa5546f3a00854a39d54904d"},
+         "agent": {"value": "worker-sable-hier"}},
+        "expires": 1792401193},
+       "branch": "work/hierarchy-theorems/worker-sable-hier",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-hier"}},
+      "summary":
+      "Milestone 1: time hierarchy and P ⊊ EXP. Head a985c34, base ec48c1a.\nProved (Cslib.Complexity): DTIME enc t = {A | ∃ c₁ c₂ s, DecidableInTimeAndSpace A enc (c₁*t|enc a|+c₂) (s|enc a|)} (#767 for encoded instances); TimeConstructible (native certificate); timeConstructible_two_pow, timeConstructible_succ_pow (2 ≤ k → (n+1)^k), TimeConstructible.succ_mul. timeDiagonal J runs clockedDiagonal J (landed diagonal, clock J) only on short descriptions 2^|unframe x| ≤ |x|. setOf_timeDiagonal_mem_DTIME: ∈ DTIME encBits ((n+1)^5 (J n+1)^3); setOf_timeDiagonal_not_mem_DTIME: (∀ c, ∀ᶠ n, c f n + c ≤ J n) → ∉ DTIME encBits f; DTIME_ssubset_DTIME_of_clock; DTIME_ssubset_DTIME: TimeConstructible f → (∀ n, n ≤ f n) → (∀ᶠ n, (n+1)^8 (f n+1)^3 ≤ g n) → DTIME encBits f ⊂ DTIME encBits g. Classes/EXP.lean: EXP enc = ⋃ k, DTIME enc (2^n^k); mem_P_iff_exists_mem_DTIME; P_subset_EXP; P_ssubset_EXP : P encBits ⊂ EXP encBits.\nChecks: six gates pass on a985c34; tests and 8 axiom guards in ComplexityTests/HierarchyTheorems.lean.\nCredit: reuses the landed diagonal and Reitwiessner's universal interpreter; no second universal machine. Contributors: worker-sable-hier (both sessions).\nLimitations: polynomial gap from the universal overhead, not f log f; hierarchy for encBits.\nContinuation: space hierarchy (DSPACE, SpaceConstructible, space-budgeted in-place universal run, configuration-count halting bound).\nIntegration: UPSTREAM.md note on DTIME/EXP vs #767; ROADMAP rows. Bibliography: none.",
+      "snapshot":
+      {"head": {"value": "a985c34e8b51810236373caa8dc7435233308a49"},
+       "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Hierarchy/Time.lean",
     "Complexity/Computability/Complexity/Classes/Hierarchy/Space.lean",
