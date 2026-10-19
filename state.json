@@ -1000,15 +1000,18 @@
           "expires": 1792388189},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "6f65c40c4a53b35220b656b7efac9292"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792373815,
+          "snapshot":
+          {"head": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"},
+           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+          "reviewer":
           {"session": {"value": "33380288772710be7744d177c8f66871"},
            "agent": {"value": "reviewer-sable-api2"}},
-          "expires": 1792388210},
-         "blocked": false}}}}}},
+          "note":
+          "Delta API review of exact d42eefc (base 764e3b8 = current main, ancestry ok; coordinate tooling identical to main); no contribution. Builds on my approval of 976400b (evidence SHA256 54707df8...). Checks: d42eefc has exactly parents 976400b and 764e3b8; git diff-tree --cc empty; merge-tree(976400b, 764e3b8) = head tree 9eadd85f exactly; all 11 epic files byte-identical to 976400b; roots add only the 8 library and 3 test imports, same as the approved delta (identical name-status and root lines). Joint-import probe: the now-landed Encodings/Decoder, Classes/Hierarchy and Classes/Space/Savitch load together without clashes, and frames+decodeCell still matches decodeStackTape on encoded cells (F1 follow-up deferred to the space-cleanup epic as agreed). lake build of the 8 library modules and the 3 test modules --wfail --iofail clean (6392 jobs); mk_all --check and diff --check clean. No new findings; round-1 non-blocking nits unchanged. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/polynomial-space-api/review.json SHA256 5c2680799ae762fcebaae041844568bce7851df5a2362cd650cc16d1fdaf68f0"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space.lean",
     "Complexity/Computability/Complexity/Classes/Space",
