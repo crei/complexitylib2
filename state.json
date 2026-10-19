@@ -1635,7 +1635,12 @@
      {"resume": null,
       "report":
       "API review (reviewer-sable-api3) requested changes: Universal.length_applyTapes (Hardwire.lean:261) duplicates Universal.length_applyTapes_eq and collides with a vendored private name; space_le_space_of_halted (Basic.lean:91) follows from existing lemmas. Correctness approved with docstring follow-ups.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "ba3520aa1adfe5e19471b4f8f18f663f"},
+       "holder":
+       {"session": {"value": "7781632cd73663d87f4e864c19b303a8"},
+        "agent": {"value": "worker-sable-undecid"}},
+       "expires": 1792403776},
       "branch": "work/undecidability/worker-sable-undecid",
       "blocked": false,
       "assignee": {"value": "worker-sable-undecid"}}}},
