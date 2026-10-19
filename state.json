@@ -1,21 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"},
-   "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-  "main": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"},
-  "lease":
-  {"token": {"value": "4b9b4f1812f68b0c81875a8f1c7b77a7"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792399824},
-  "epic": {"value": "docs-bibliography"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"},
-     "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-    "epic": {"value": "docs-bibliography"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -1990,53 +1974,42 @@
    "report":
    "Both reviews: Cutland1980 and KatzLindell2020 already exist (cslib entries with padded keys); delete the duplicates. Also adopt nits: MishraSanthanam2026 as @techreport like other ECCC entries, braces around $3n$ in the FGHK title, Ore1933 DOI.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Both reviews: Cutland1980 and KatzLindell2020 already exist (cslib entries with padded keys); delete the duplicates. Also adopt nits: MishraSanthanam2026 as @techreport like other ECCC entries, braces around $3n$ in the FGHK title, Ore1933 DOI.",
-       "lease":
-       {"token": {"value": "c2a190b700efe4dc8a5efe78317fd451"},
-        "holder":
-        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-         "agent": {"value": "coordinator-sable"}},
-        "expires": 1792399824},
-       "branch": "work/docs-bibliography/coordinator-sable",
-       "blocked": false,
-       "assignee": {"value": "coordinator-sable"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Docs-only, revised after both reviews: nine new bibliography entries (BakerGillSolovay1975, GoldwasserMicaliRackoff1989, GoldreichMicaliWigderson1991, GareyJohnson1979, BenSassonKopparty2012, Ore1933, Bourgain2007, MishraSanthanam2026, FindGolovnevHirschKulikov2016). The duplicate Cutland1980 and KatzLindell2020 entries are removed (the cslib entries with padded keys already exist). Review nits adopted: MishraSanthanam2026 is an ECCC @techreport like Dinur2005 and Korten2026, the FGHK title braces {$3n$}, Ore1933 carries its DOI. 176 distinct keys; bibtex on the whole file succeeds with only pre-existing warnings; six gates and check_docs pass.",
       "snapshot":
       {"head": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792385050,
-          "snapshot":
-          {"head": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
-           "agent": {"value": "reviewer-sable-cor1"}},
-          "note":
-          "Delta correctness review 881b9c0..2bf2b21 by an independent reviewer (no authorship). Prior blocker fixed: the new duplicate Cutland1980/KatzLindell2020 entries are removed. 176 entries, 176 distinct keys, no case-insensitive duplicates. The existing entries at references.bib:599/:448 are untouched. base..head is append-only (97 insertions, 0 deletions), and the docbuild copy is still the symlink. Ore1933 doi 10.1090/S0002-9947-1933-1501703-0 is confirmed: Crossref gives Ore, On a special class of polynomials, Trans. AMS 35(3):559-584, 1933, and doi.org resolves to ams.org. MishraSanthanam2026 @techreport (institution ECCC, number TR26-260, 2026, url) matches the ECCC page re-fetched now, in the same style as the three existing ECCC techreports. The FGHK change only braces {$3n$}; the text is unchanged and matches Crossref. The other seven entries are identical to 881b9c0, whose fields were verified last round (Crossref/doi.org, OpenLibrary, ECCC PDFs). No blocking findings. Limits: DBLP unreachable (429); doc-gen4 render not run; MS numbering checked against ECCC rev 0. Evidence: .lake/codex-validation/docs-bibliography-correctness/delta-2bf2b21/review.json sha256 38a0e4273db842f9147445352ddff70360049e05dc3c7d20d96e91353a66664e"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792385060,
-          "snapshot":
-          {"head": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
-           "agent": {"value": "reviewer-sable-api1"}},
-          "note":
-          "Delta API review of 2bf2b21 (independent, read-only; started fresh). Scope: base..head changes only references.bib (+97, append-only, 0 lines removed); the docbuild copy is a symlink and byte-identical. The round-1 blocker is fixed: the duplicate Cutland1980/KatzLindell2020 entries are gone, and the citations on main resolve to the vendored cslib entries. Keys: 176 entries, 176 distinct, also case-insensitively (the parser handles padded keys). bibtex over the whole file (\\citation{*}, plain): rc=0, 176 bibitems, no Repeated entry. Its 7 warnings all concern pre-existing entries; none for the nine new ones. Braces balance. Conventions: MishraSanthanam2026 is now an ECCC @techreport (institution, number TR26-260), matching Dinur2005/Korten2026/HaitnerVadhan2017. The FGHK title braces {$3n$}. Ore1933 has a doi. Authors are Last, First; = is aligned per entry; continuation indents are right; acronyms and math are braced; added lines are at most 98 columns. All nine new keys are cited (relativ, ip, graphs, disperser, b2), and no cited key in main or the six worktrees is missing an entry. check_docs --config-only passes. No blocking findings, no nits. Limitations: publisher fields not verified (correctness review), TR26-260 and TR10-044 not checked, doc-gen4 not built. Evidence: .lake/codex-validation/docs-bibliography-api-r2/review.json sha256 6e12218cced9f8c42e128083183d4872f02e52d2deeea21fe3eb045360ce3589"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792385426,
+      "landed": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792385050,
+       "snapshot":
+       {"head": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"},
+        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+       "reviewer":
+       {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
+        "agent": {"value": "reviewer-sable-cor1"}},
+       "note":
+       "Delta correctness review 881b9c0..2bf2b21 by an independent reviewer (no authorship). Prior blocker fixed: the new duplicate Cutland1980/KatzLindell2020 entries are removed. 176 entries, 176 distinct keys, no case-insensitive duplicates. The existing entries at references.bib:599/:448 are untouched. base..head is append-only (97 insertions, 0 deletions), and the docbuild copy is still the symlink. Ore1933 doi 10.1090/S0002-9947-1933-1501703-0 is confirmed: Crossref gives Ore, On a special class of polynomials, Trans. AMS 35(3):559-584, 1933, and doi.org resolves to ams.org. MishraSanthanam2026 @techreport (institution ECCC, number TR26-260, 2026, url) matches the ECCC page re-fetched now, in the same style as the three existing ECCC techreports. The FGHK change only braces {$3n$}; the text is unchanged and matches Crossref. The other seven entries are identical to 881b9c0, whose fields were verified last round (Crossref/doi.org, OpenLibrary, ECCC PDFs). No blocking findings. Limits: DBLP unreachable (429); doc-gen4 render not run; MS numbering checked against ECCC rev 0. Evidence: .lake/codex-validation/docs-bibliography-correctness/delta-2bf2b21/review.json sha256 38a0e4273db842f9147445352ddff70360049e05dc3c7d20d96e91353a66664e"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792385060,
+       "snapshot":
+       {"head": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"},
+        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+       "reviewer":
+       {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
+        "agent": {"value": "reviewer-sable-api1"}},
+       "note":
+       "Delta API review of 2bf2b21 (independent, read-only; started fresh). Scope: base..head changes only references.bib (+97, append-only, 0 lines removed); the docbuild copy is a symlink and byte-identical. The round-1 blocker is fixed: the duplicate Cutland1980/KatzLindell2020 entries are gone, and the citations on main resolve to the vendored cslib entries. Keys: 176 entries, 176 distinct, also case-insensitively (the parser handles padded keys). bibtex over the whole file (\\citation{*}, plain): rc=0, 176 bibitems, no Repeated entry. Its 7 warnings all concern pre-existing entries; none for the nine new ones. Braces balance. Conventions: MishraSanthanam2026 is now an ECCC @techreport (institution, number TR26-260), matching Dinur2005/Korten2026/HaitnerVadhan2017. The FGHK title braces {$3n$}. Ore1933 has a doi. Authors are Last, First; = is aligned per entry; continuation indents are right; acronyms and math are braced; added lines are at most 98 columns. All nine new keys are cited (relativ, ip, graphs, disperser, b2), and no cited key in main or the six worktrees is missing an entry. check_docs --config-only passes. No blocking findings, no nits. Limitations: publisher fields not verified (correctness review), TR26-260 and TR10-044 not checked, doc-gen4 not built. Evidence: .lake/codex-validation/docs-bibliography-api-r2/review.json sha256 6e12218cced9f8c42e128083183d4872f02e52d2deeea21fe3eb045360ce3589"}}}},
    "paths": ["references.bib", "docbuild/docs/references.bib"],
    "id": {"value": "docs-bibliography"},
    "goal":
