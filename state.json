@@ -1,15 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"},
-   "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
-  "lease":
-  {"token": {"value": "eefeb93424e4ed422d98f18e5e3e7107"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792383110},
-  "epic": {"value": "fagin-converse"}},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -365,53 +355,41 @@
    "report":
    "Both independent reviews of exact c4dbe23 APPROVED (API: reviewer-sable-api1, correctness: reviewer-sable-cor1), no blocking findings. integrator-sable-2 now merges main and fixes three docstrings under coordinator direction; worker-jetski keeps authorship and will receive a follow-up cleanup epic for the recorded API nits after landing.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/fagin-converse/worker-jetski",
-       "report":
-       "PUBLICATION REQUEST: a0952ac9f9440fb788460a47093fc3b84029914d on work/fagin-converse/integrator-sable-2 (push blocked by lean4 guardrail, not bypassed). Resumed reviewed head c4dbe23 (worker-jetski, two approvals); merged main 94dcd9d cleanly (05eed1b; roots gained only main imports, no conflicts); three docstring-only fixes: Immerman Theorem 7.7 -> 7.8 (Converse.lean x3, Projection.lean x1), Tableau.lean module docstring now states u.length + 1 < B, maxArity described consistently as one more than the largest arity (positive strict upper bound). No statement or proof changes; Axioms.lean/ROADMAP untouched. Validation: lake build --wfail --iofail clean, all six scripts/check.sh gates ok, git diff --check clean, edited lines <= 99 chars. diff vs 05eed1b: Converse +7/-5, Tableau +4/-4, Projection +1/-1. Contributors: worker-jetski implementation; integrator-sable-2 integration under coordinator-sable direction; AI assistance: Claude. Please push, then I run ready.",
-       "lease":
-       {"token": {"value": "88349439a121df3af41a3bae69972340"},
-        "holder":
-        {"session": {"value": "9427f9bcda5b4272b037bcdec0a08ee2"},
-         "agent": {"value": "integrator-sable-2"}},
-        "expires": 1792382757},
-       "branch": "work/fagin-converse/integrator-sable-2",
-       "blocked": false,
-       "assignee": {"value": "integrator-sable-2"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Reviewed head c4dbe23 by worker-jetski with two independent approvals (reviewer-sable-api1, reviewer-sable-cor1); merged main 94dcd9d cleanly; three docstring corrections (Immerman Theorem 7.8 citations, Tableau u.length + 1 < B hypothesis, consistent maxArity description); lake build and all six scripts/check.sh gates passed; git diff --check clean; no statement or proof changes; Axioms.lean/ROADMAP untouched. Contributors: worker-jetski (implementation), integrator-sable-2 (integration under coordinator-sable direction); AI assistance: Claude. Head a0952ac9f9440fb788460a47093fc3b84029914d.",
       "snapshot":
       {"head": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"},
        "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792368575,
-          "snapshot":
-          {"head": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"},
-           "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
-          "reviewer":
-          {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
-           "agent": {"value": "reviewer-sable-cor1"}},
-          "note":
-          "Fresh independent correctness review (reviewer-sable-cor1, no contribution to this epic) of exact base 94dcd9d / head a0952ac. Delta from my approved head c4dbe23 (evidence review.json, SHA256 b9a41fa42335f64f7851c526f688a8f87245f6ca563623e7b2308fb06c93ea0f): 05eed1b is a clean merge of main 94dcd9d not touching the 8 submitted files; a0952ac changes 3 files, 12+/10- lines, all inside doc comments (Immerman 7.7->7.8 x4, Tableau module doc now states u.length+1<B, consistent maxArity wording), no declaration, statement or proof changed; git diff --stat 94dcd9d a0952ac is exactly the 10 submission files, 4063 insertions, 0 deletions; no unexplained files. Rebuilt the six Fagin modules, Projection and ComplexityTests.Fagin with --wfail --iofail on a0952ac: pass (3936 jobs). Re-ran #print axioms on the three endpoints and 21 main lemmas: propext, Classical.choice, Quot.sound only. Re-ran my five probes (empty, singleton/looped singleton, nullary at n=0,1,2 and malformed, concrete 2-/3-colorability separating decoded edge/triangle, uniform exponent bound): all pass. My three docstring nits are resolved; optional suggestion of a semantic end-to-end test client stands. No blocking findings. Not re-run: full six gates (coordinator reruns). Evidence .lake/codex-validation/fagin-converse-correctness/review-a0952ac.json SHA256 44e97750107caff94a20241b1c1bf19499da5b2dd796e71075e13a58c2406f91"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792368549,
-          "snapshot":
-          {"head": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"},
-           "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
-          "reviewer":
-          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
-           "agent": {"value": "reviewer-sable-api1"}},
-          "note":
-          "Fresh API review of a0952ac (base 94dcd9d, current main); independent, read-only. Builds on my full API review of c4dbe23 (evidence review.json sha256 59a848f178a47ed18fb76373e6623054517965a49ee46c01ae6f108659c45e22: approve, no blocking findings, nits N1-N7 unchanged). Delta check: c4dbe23 is an ancestor; 05eed1b is a clean merge whose diff from c4dbe23 equals main 6abc984..94dcd9d exactly (same 18-file stat, no submission file touched); per-file diff of 6abc984..c4dbe23 vs 94dcd9d..a0952ac is identical for StrictVerifier/Small/Power/Layout/ComplexityTests.Fagin and differs only by the announced docstring lines in Tableau.lean (module doc now u.length+1<B, matching huB at ll.1011/1243), Converse.lean (Immerman 7.7->7.8 x3; maxArity described as sup+1, a positive strict upper bound, consistent with one_le_maxArity/arity_le_maxArity) and Projection.lean (7.7->7.8); roots gain exactly the 8 imports. Citation 7.8 consistent with the existing Proposition 7.6 cite for the easy direction (book not available locally). git diff --check clean; no line >100 chars. Rebuilt the 7 library modules + ComplexityTests.Fagin --wfail --iofail at a0952ac: exit 0, 0 warnings (build-a0952ac.log). Not re-run at a0952ac: lint/test/mk_all/lint-style/checkInitImports (docstring-only change). Evidence .lake/codex-validation/fagin-converse-api/review-a0952ac.json sha256 d5a01ee7f7258d6e3b63993291535ac5b1a11cd1e05ab7b9994d0edaf8632576"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792368712,
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792368575,
+       "snapshot":
+       {"head": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"},
+        "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
+       "reviewer":
+       {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
+        "agent": {"value": "reviewer-sable-cor1"}},
+       "note":
+       "Fresh independent correctness review (reviewer-sable-cor1, no contribution to this epic) of exact base 94dcd9d / head a0952ac. Delta from my approved head c4dbe23 (evidence review.json, SHA256 b9a41fa42335f64f7851c526f688a8f87245f6ca563623e7b2308fb06c93ea0f): 05eed1b is a clean merge of main 94dcd9d not touching the 8 submitted files; a0952ac changes 3 files, 12+/10- lines, all inside doc comments (Immerman 7.7->7.8 x4, Tableau module doc now states u.length+1<B, consistent maxArity wording), no declaration, statement or proof changed; git diff --stat 94dcd9d a0952ac is exactly the 10 submission files, 4063 insertions, 0 deletions; no unexplained files. Rebuilt the six Fagin modules, Projection and ComplexityTests.Fagin with --wfail --iofail on a0952ac: pass (3936 jobs). Re-ran #print axioms on the three endpoints and 21 main lemmas: propext, Classical.choice, Quot.sound only. Re-ran my five probes (empty, singleton/looped singleton, nullary at n=0,1,2 and malformed, concrete 2-/3-colorability separating decoded edge/triangle, uniform exponent bound): all pass. My three docstring nits are resolved; optional suggestion of a semantic end-to-end test client stands. No blocking findings. Not re-run: full six gates (coordinator reruns). Evidence .lake/codex-validation/fagin-converse-correctness/review-a0952ac.json SHA256 44e97750107caff94a20241b1c1bf19499da5b2dd796e71075e13a58c2406f91"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792368549,
+       "snapshot":
+       {"head": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"},
+        "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
+       "reviewer":
+       {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
+        "agent": {"value": "reviewer-sable-api1"}},
+       "note":
+       "Fresh API review of a0952ac (base 94dcd9d, current main); independent, read-only. Builds on my full API review of c4dbe23 (evidence review.json sha256 59a848f178a47ed18fb76373e6623054517965a49ee46c01ae6f108659c45e22: approve, no blocking findings, nits N1-N7 unchanged). Delta check: c4dbe23 is an ancestor; 05eed1b is a clean merge whose diff from c4dbe23 equals main 6abc984..94dcd9d exactly (same 18-file stat, no submission file touched); per-file diff of 6abc984..c4dbe23 vs 94dcd9d..a0952ac is identical for StrictVerifier/Small/Power/Layout/ComplexityTests.Fagin and differs only by the announced docstring lines in Tableau.lean (module doc now u.length+1<B, matching huB at ll.1011/1243), Converse.lean (Immerman 7.7->7.8 x3; maxArity described as sup+1, a positive strict upper bound, consistent with one_le_maxArity/arity_le_maxArity) and Projection.lean (7.7->7.8); roots gain exactly the 8 imports. Citation 7.8 consistent with the existing Proposition 7.6 cite for the easy direction (book not available locally). git diff --check clean; no line >100 chars. Rebuilt the 7 library modules + ComplexityTests.Fagin --wfail --iofail at a0952ac: exit 0, 0 warnings (build-a0952ac.log). Not re-run at a0952ac: lint/test/mk_all/lint-style/checkInitImports (docstring-only change). Evidence .lake/codex-validation/fagin-converse-api/review-a0952ac.json sha256 d5a01ee7f7258d6e3b63993291535ac5b1a11cd1e05ab7b9994d0edaf8632576"}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
