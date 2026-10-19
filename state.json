@@ -1414,20 +1414,27 @@
    "report":
    "Owner recorded: assigned to a local worker as soon as polynomial-space lands (its Classes/Space and Algorithms/Reachability scopes currently overlap this plan). polynomial-space has both reviews in progress and lands in the next batch.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "M1-M3 complete and validated at local head 1a31f4f (merge of origin/main f489429; diff vs main limited to epic paths + generated roots). All six scripts/check.sh gates pass. Headlines: TQBF_mem_PSPACE, TQBF_pspaceHard : PSPACEHard encQBF TQBF, TQBF_pspaceComplete. The push of work/tqbf-pspace-complete/worker-sable-tqbf was denied by the permission classifier, so the branch is NOT pushed and ready is not yet run; the user needs to push it (! git push origin work/tqbf-pspace-complete/worker-sable-tqbf), then ready can follow.",
-      "lease":
-      {"token": {"value": "6b3189f96b6434471433fa62550f0e97"},
-       "holder":
-       {"session": {"value": "a0e20ed2f18f79a2430412c297824d94"},
-        "agent": {"value": "worker-sable-tqbf"}},
-       "expires": 1792399620},
-      "branch": "work/tqbf-pspace-complete/worker-sable-tqbf",
-      "blocked": true,
-      "assignee": {"value": "worker-sable-tqbf"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "M1-M3 complete and validated at local head 1a31f4f (merge of origin/main f489429; diff vs main limited to epic paths + generated roots). All six scripts/check.sh gates pass. Headlines: TQBF_mem_PSPACE, TQBF_pspaceHard : PSPACEHard encQBF TQBF, TQBF_pspaceComplete. The push of work/tqbf-pspace-complete/worker-sable-tqbf was denied by the permission classifier, so the branch is NOT pushed and ready is not yet run; the user needs to push it (! git push origin work/tqbf-pspace-complete/worker-sable-tqbf), then ready can follow.",
+       "lease":
+       {"token": {"value": "6b3189f96b6434471433fa62550f0e97"},
+        "holder":
+        {"session": {"value": "a0e20ed2f18f79a2430412c297824d94"},
+         "agent": {"value": "worker-sable-tqbf"}},
+        "expires": 1792399620},
+       "branch": "work/tqbf-pspace-complete/worker-sable-tqbf",
+       "blocked": true,
+       "assignee": {"value": "worker-sable-tqbf"}},
+      "summary":
+      "TQBF is PSPACE-complete (M1-M3), base f489429 head 1a31f4f. M1: TQBF_mem_PSPACE : TQBF ∈ PSPACE encQBF; explicit-stack evaluator, TQBF.evaluate_eq_true_iff, TQBF.exists_computableTidilyInO_evaluate : ∃ e, ComputableTidilyInO evaluate encQBF encBool (2^L*(L+1)^e) ((L+1)^e), L=|encQBF φ|, input/frames/2^L counter/copies charged via iterate. M2: TQBF_pspaceHard : PSPACEHard encQBF TQBF; reduce = Savitch formula on view codes (width=depth=2W+2, O(w^2) tokens) with Cook-Levin tableau of the edge test at level 0; TQBF.reduce_mem_TQBF_iff, computableTidilyInPolyTime_reduce, computableTidilyInPolyTime_edgeTest. M3: TQBF_pspaceComplete : PSPACEComplete encQBF TQBF. Checks: scripts/check.sh all six gates pass on 1a31f4f; ComplexityTests/TQBF.lean: concrete formulas, full evaluator runs, Savitch formula true/false/width 0, reductions from P/NPSPACE, 12 #print axioms guards (standard only). Credit: Sipser2013 Thm 8.9, AroraBarak09 Thm 4.13; no v1 source. Contributors: worker-sable-tqbf (both sessions); AI assistance: Claude. Limitations/notes: PSPACEHard, PSPACEComplete, PSPACEHard.trans defined in Classes/Space/TQBF.lean, could move beside NPHard in Reduction.lean; derived QBF connectives (Formula.lean) and CookLevin.exists_eval_tableau_iff (Reduction.lean) could move to Logics/Propositional/QBF and CookLevin/Correctness; QBF.lean doc saying completeness is not proved is now stale; inherited wip-prefixed commits not rewritten. Continuation: AP = PSPACE. Bibliography: none needed.",
+      "snapshot":
+      {"head": {"value": "1a31f4f1ee8ba4a0daad2cea655c4b75f8a059be"},
+       "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space/TQBF.lean",
     "Complexity/Computability/Complexity/Classes/Space/TQBF",
