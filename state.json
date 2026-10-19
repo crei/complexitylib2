@@ -2043,20 +2043,27 @@
    "report":
    "API review (reviewer-sable-api7) requested changes: rename or derive the new public selectMask (Witness.lean:199), which nearly duplicates maskSelect (Problems/SubsetSum/Mask.lean:47); move IsVerifier.of_padding/guard into Classes/NP.lean so SAT.lean need not import Witness. Correctness approved.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "API review (reviewer-sable-api7) requested changes: rename or derive the new public selectMask (Witness.lean:199), which nearly duplicates maskSelect (Problems/SubsetSum/Mask.lean:47); move IsVerifier.of_padding/guard into Classes/NP.lean so SAT.lean need not import Witness. Correctness approved.",
-      "lease":
-      {"token": {"value": "536f08b32deef266c7b7d11de5c13a0c"},
-       "holder":
-       {"session": {"value": "9b318203e8a9985d589db0583a2bb7af"},
-        "agent": {"value": "worker-sable-npbuilder"}},
-       "expires": 1792403953},
-      "branch": "work/np-witness-builder/worker-sable-npbuilder",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-npbuilder"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "API review (reviewer-sable-api7) requested changes: rename or derive the new public selectMask (Witness.lean:199), which nearly duplicates maskSelect (Problems/SubsetSum/Mask.lean:47); move IsVerifier.of_padding/guard into Classes/NP.lean so SAT.lean need not import Witness. Correctness approved.",
+       "lease":
+       {"token": {"value": "536f08b32deef266c7b7d11de5c13a0c"},
+        "holder":
+        {"session": {"value": "9b318203e8a9985d589db0583a2bb7af"},
+         "agent": {"value": "worker-sable-npbuilder"}},
+        "expires": 1792403953},
+       "branch": "work/np-witness-builder/worker-sable-npbuilder",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-npbuilder"}},
+      "summary":
+      "Head f1c1d30 base main 0d8ef4b. API-review revision (correctness approved at 0d58b55). (1) Witness.lean selectMask renamed selectDistinct (with mem_/nodup_/toFinset_..._map_append/computableTidilyInPolyTime_ and Graph.selectVertices_eq_selectDistinct); docstrings cross-reference SubsetSum/Mask.lean maskSelect both ways (sets vs sub-multisets). (2) IsVerifier.of_padding and IsVerifier.guard moved verbatim into Classes/NP.lean (statements unchanged, module doc Main results + pointer to NP/Witness); SAT.lean and ThreeSAT.lean no longer import Witness, restoring the SAT / SAT.PolyTime split. (3) of_padding summary now says it accepts certificates of exactly the prescribed length only for members. Reduction.lean cross-ref skipped (not in paths). Headline unchanged: mem_NP_of_witness, witnessVerifier_eq_true_iff, mem_NP_of_subsetWitness, PolyTimeReducible.mem_NP; migrated SAT, ThreeSAT, Clique, IndependentSet public statements unchanged. CHECKS: six gates pass via run-gates at head. CONTRIBUTORS worker-sable-npbuilder (both sessions). No bib. CONTINUATION as before: migrate VertexCover, Coloring, Hamiltonian, TSP, GraphIsomorphism (after natDecoder moves to Decoder.lean), number problems via maskSelect + of_padding, Fagin; mem_NPWithOracle could reuse of_padding; Reduction.lean doc cross-ref to PolyTimeReducible.mem_NP.",
+      "snapshot":
+      {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
+       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP/Witness.lean",
     "Complexity/Computability/Complexity/Problems/SAT.lean",
