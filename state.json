@@ -760,7 +760,12 @@
      {"resume": "work/native-exponential-separation/worker-opus",
       "report":
       "Land now through the base == main path instead of waiting for the reopened merge-queue tooling: mechanical merge of main 26253c9 (disjoint files) by integrator-sable-1, six gates, short delta reviews of the merge, land. It unblocks undecidability, hierarchy-theorems, ladner and relativization.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "7fa346b605f2d3ac841c4a33d779d619"},
+       "holder":
+       {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
+        "agent": {"value": "integrator-sable-1"}},
+       "expires": 1792386955},
       "branch": "work/native-exponential-separation/integrator-sable-1",
       "blocked": false,
       "assignee": {"value": "integrator-sable-1"}}}},
