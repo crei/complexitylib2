@@ -486,15 +486,18 @@
        "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "7635f97f2b8014b090d78bcc500d7f0e"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792371576,
+          "snapshot":
+          {"head": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"},
+           "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
+          "reviewer":
           {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
            "agent": {"value": "reviewer-sable-cor4"}},
-          "expires": 1792385874},
-         "blocked": false}},
+          "note":
+          "Correctness review of 26253c9 on c2016b0 by reviewer-sable-cor4 (independent; not an author). Scope: Stretch, Reverse, Combinators+Encodings/StreamFold, Streaming, Quantitative, tests PRGStretch+Quantitative. Evidence: 6 library + 2 test modules build --wfail --iofail, 0 warnings; whitespace-normalised statement diff: every main declaration unchanged (iterate/stretch/polyTime_iterate/security; vendored streamLoop/streamTM/streamLoop_encoded/streamFold_sum/streamFold now empty-prefix derivations). Time charges init, both generator calls per round on actual seeds, copying/control, finish and the final n+k reversal via comp; state only the seed, no suffix copying. Workspace via TimeAndSpace (not InO): forwardIterate O(Q+n+1) k-independent, reversal buffer charged. streamFold_sum_after init contract discharged by two in-tree clients. Probe ProbeStretch.lean (exit 0): nonconstant revCons through forward/iterate/stretch/degree/polytime certs; zero rounds (bounds collapse, stretch count 0 = id); empty seed; empty frame; shiftIn order test confirmed genuine; 17 axiom checks clean. Blocking: none. Nits: streamFold_pair_sum is new API vs main, not vendored (Encodings/StreamFold:583); pseudorandomGenerator proof needlessly switched to polyTime_stretch_of_length_eq (Stretch:1069); no quantitative zero-round test. Not run: check.sh. Evidence .lake/codex-validation/quantitative-stretch-correctness/review.json SHA256 e18a95d7a62debb41fa6c5611af02e023d07ae4876091ec6215655ec2646c306"}}},
        "api":
        {"active":
         {"report": "",
