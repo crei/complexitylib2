@@ -2748,7 +2748,16 @@
            "agent": {"value": "reviewer-sable-cor6"}},
           "expires": 1792403125},
          "blocked": false}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api6"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "9ee7c2bce76829907616f8f6b7ab2b2f"},
+          "holder":
+          {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
+           "agent": {"value": "reviewer-sable-api6"}},
+          "expires": 1792403135},
+         "blocked": false}}}}}},
    "paths": ["ROADMAP.md", "README.md", "UPSTREAM.md"],
    "id": {"value": "docs-roadmap-refresh"},
    "goal":
