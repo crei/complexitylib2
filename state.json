@@ -1967,20 +1967,27 @@
    "report":
    "API review (reviewer-sable-api6) requested changes: the generic Circuit/Continuity.lean imports Boolean modules and declares Cslib.Circuits.Boolean names; move the De Morgan section to Circuit/Boolean/Continuity.lean (generic + Boolean pattern). Correctness approved.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "API review (reviewer-sable-api6) requested changes: the generic Circuit/Continuity.lean imports Boolean modules and declares Cslib.Circuits.Boolean names; move the De Morgan section to Circuit/Boolean/Continuity.lean (generic + Boolean pattern). Correctness approved.",
-      "lease":
-      {"token": {"value": "b347af7a432e6af7b88fc1fe0cbe445f"},
-       "holder":
-       {"session": {"value": "79c04d2e099c5b1c2a7c8053cf47acf5"},
-        "agent": {"value": "worker-sable-hamming"}},
-       "expires": 1792407675},
-      "branch": "work/hamming-geometry-2/worker-sable-hamming",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-hamming"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "API review (reviewer-sable-api6) requested changes: the generic Circuit/Continuity.lean imports Boolean modules and declares Cslib.Circuits.Boolean names; move the De Morgan section to Circuit/Boolean/Continuity.lean (generic + Boolean pattern). Correctness approved.",
+       "lease":
+       {"token": {"value": "b347af7a432e6af7b88fc1fe0cbe445f"},
+        "holder":
+        {"session": {"value": "79c04d2e099c5b1c2a7c8053cf47acf5"},
+         "agent": {"value": "worker-sable-hamming"}},
+        "expires": 1792407675},
+       "branch": "work/hamming-geometry-2/worker-sable-hamming",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-hamming"}},
+      "summary":
+      "API fix at c0643ec8 (base main 06c5f534). De Morgan continuity moved to new Circuit/Boolean/Continuity.lean (Chashkin2024 ref there); generic Circuit/Continuity.lean now imports only Circuit.Complexity, Nat.Dist, Hamming (+ proof-only Data/Hamming). Renames: Boolean.complexityModulus_one_le -> complexityModulus_two_pow_single_output_le, Boolean.complexityModulus_le -> complexityModulus_two_pow_le (statements unchanged); docstring separates \"all large p\" bounds from the p >= 4 optimality bound. New public generic lemmas: Circuits.hammingDist_single (hammingDist (single f) (single g) = hammingDist f g, any finite U, from hammingDist_comp); exists_hammingDist_le_and_hammingDist_le in Foundations/Data/Hamming.lean (d_H(x,y) <= r + s -> exists z, d_H(x,z) <= r and d_H(z,y) <= s). noiseDist_parityOn moved from test into HammingFourier.lean. le_mul_size added to Approximation/Hamming Main results. M4 test scheme replaced by the one-bit-junta scheme (delta = 1, eps = 2) from reviewer-sable-cor6's probe, giving 2 <= C(XOR2) in Hamming, counting and weighted forms. Axiom guards added for noiseDist_parityOn and exists_hammingDist_le_and_hammingDist_le. Checks: run-gates, all six ok. Contributors: worker-sable-hamming; test scheme adapted from reviewer-sable-cor6's probe. No new bib.",
+      "snapshot":
+      {"head": {"value": "c0643ec8f8eedd4c2470024d3696461a2f8f4f66"},
+       "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Continuity.lean",
     "Complexity/Computability/Circuit/Approximation/Hamming.lean",
