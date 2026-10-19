@@ -1,21 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "b4b556921d48d533f0019c15959883b167cdc1a4"},
-   "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-  "main": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"},
-  "lease":
-  {"token": {"value": "2220411f88a7d30bd0929be1c8b6595f"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792401266},
-  "epic": {"value": "relativization"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "b4b556921d48d533f0019c15959883b167cdc1a4"},
-     "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-    "epic": {"value": "relativization"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -1767,53 +1751,42 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Milestone 1 complete and committed at b4b5569 (base f489429 = current main): main merged, six gates pass at b4b5569, headlines guarded in ComplexityTests/Relativization.lean. Push of work/relativization/worker-sable-relativ was denied (auto-mode classifier refused LEAN4_GUARDRAILS_BYPASS; plain push blocked by the lean4 guardrail hook). Needs the user to run: git push origin work/relativization/worker-sable-relativ. After that, ready can be run with the summary in .lake/summary.txt of the worktree. Milestone 2 (oracle A with P^A = NP^A via TQBF/PSPACE once tqbf-pspace-complete lands) not started; record as continuation.",
-       "lease":
-       {"token": {"value": "14d74384ffee6557dd9d79143283fe43"},
-        "holder":
-        {"session": {"value": "b1cbc8b7223d2f96ea57cc362686fe08"},
-         "agent": {"value": "worker-sable-relativ"}},
-        "expires": 1792399606},
-       "branch": "work/relativization/worker-sable-relativ",
-       "blocked": true,
-       "assignee": {"value": "worker-sable-relativ"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Milestone 1: P^A, NP^A on the native model and BGS's oracle B with P^B ⊊ NP^B. ComputableInPolyTimeWithOracle A f enc enc' (@[fun_prop]): a FreeM word-query program computes f against languageOracle A, certified by IsOraclePPTOn (one finite machine, one polynomial clock, all stateful handlers; queries cost instructions). PWithOracle/NPWithOracle A enc: P/NP with that substitution. Proved: P_subset_PWithOracle, NP_subset_NPWithOracle, mem_PWithOracle_self, PWithOracle_subset_NPWithOracle : PWithOracle A enc ⊆ NPWithOracle A enc, PolyTimeReducible.mem_PWithOracle/.mem_NPWithOracle, exists_oracle_diagonal, exists_unaryLanguage_notMem_PWithOracle : ∃ B, unaryLanguage B ∉ PWithOracle B encBits, unaryLanguage_mem_NPWithOracle, exists_PWithOracle_ssubset_NPWithOracle : ∃ B, PWithOracle B encBits ⊂ NPWithOracle B encBits. Checks: six gates pass; axiom guards and non-vacuity tests in ComplexityTests/Relativization.lean. Source: AroraBarak09 Thm 3.7, BakerGillSolovay1975. Contributors: worker-sable-relativ (AI: Claude). Limits: closure under reductions of the problem only; A ≤p B ⇒ P^A ⊆ P^B needs open-oracle-substitution. Continuation (milestone 2): oracle A with P^A = NP^A via TQBF/PSPACE once tqbf-pspace-complete lands. Bib: @article{BakerGillSolovay1975, author={Baker, Theodore and Gill, John and Solovay, Robert}, title={Relativizations of the {$\\mathcal{P} =? \\mathcal{NP}$} Question}, journal={SIAM Journal on Computing}, volume={4}, number={4}, pages={431--442}, year={1975}, doi={10.1137/0204037}}",
       "snapshot":
       {"head": {"value": "b4b556921d48d533f0019c15959883b167cdc1a4"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792386113,
-          "snapshot":
-          {"head": {"value": "b4b556921d48d533f0019c15959883b167cdc1a4"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
-           "agent": {"value": "reviewer-sable-cor5"}},
-          "note":
-          "Independent correctness review by reviewer-sable-cor5 (no contribution; author worker-sable-relativ) of exact b4b5569 over f489429. Built 5 Oracle modules + ComplexityTests.Relativization (--wfail --iofail): pass. Hygiene: no sorry/native_decide/axiom/option overrides in diff; meta audit of all 103 constants in the epic modules: only propext/Classical.choice/Quot.sound. Headline exists_PWithOracle_ssubset_NPWithOracle is meaningful: P^A = one Unit-channel FreeM program certified by IsOraclePPTOn (one finite machine, poly clock, all stateful handlers; each query symbol and submission cost an instruction); probe queries_polynomial derives concrete poly bounds on request count and length vs languageOracle A. NP^A = exact-length certificates + oracle-poly verifier. Diagonalization (AB Thm 3.7) ranges over all Fin-control tables with clocks c(n+1)^d via exists_fin_run_pure_false; stage argument checked. Non-vacuity probes: P in P^A; unaryLanguage empty in P^empty; for every B some language lies outside NP^B (countability+Cantor), so neither class is full. Test claim diagonal in P^itself, not in P: holds and meaningful. Blocking: none. Nits: Oracle.lean:34 cites IsOraclePPTOn.query_bounds not imported by the module; oracle monotonicity A<=pB => P^A sub P^B deferred to relativization-2 (tracked). Evidence .lake/codex-validation/relativization-correctness/review.json sha256 2fb78028...13d6"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792386138,
-          "snapshot":
-          {"head": {"value": "b4b556921d48d533f0019c15959883b167cdc1a4"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
-           "agent": {"value": "reviewer-sable-api5"}},
-          "note":
-          "API review of b4b5569 (base f489429) by reviewer-sable-api5, independent and read-only. Evidence: the 5 epic modules and the test built with --wfail (exit 0); #lint shows 0 errors in 63 declarations; fun_prop takes f as funArgId=3. Reuses IsOraclePPTOn, ProbOracleComp and MultiTapePTM, with no second machine model. @[fun_prop] is appropriate but there is no comp/prod rule (fun_prop fails on !decide(w in A)). notMem matches cslib. Docstrings are accurate; the closure is under oracle-free many-one reductions of the problem. 14 axiom guards and good non-vacuity tests. No blocking findings. Should-fix: Closure.lean:126 private eval_le_eval duplicates cslib Polynomial.eval_mono; Deterministic.lean:202 re-proves Turing.Action.instFinite (ChoiceTable.lean:52); BakerGillSolovay.lean:131-161 public allTrue duplicates private allT/all_deg in Reachability.lean:162-199. Nits: queriesWith and the machine lemmas belong in Languages/Probabilistic and Machines/Turing/MultiTape (central); rename instance finite to instFinite; unaryLanguage is a generic name; say many-one at Closure.lean:117,132. Evidence: .lake/codex-validation/relativization-api/review.json sha256 2f145185daa01a75b35ee48884b2dc33bb477b1cf1f8a88abf626fadc83b565e"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792386874,
+      "landed": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792386113,
+       "snapshot":
+       {"head": {"value": "b4b556921d48d533f0019c15959883b167cdc1a4"},
+        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+       "reviewer":
+       {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
+        "agent": {"value": "reviewer-sable-cor5"}},
+       "note":
+       "Independent correctness review by reviewer-sable-cor5 (no contribution; author worker-sable-relativ) of exact b4b5569 over f489429. Built 5 Oracle modules + ComplexityTests.Relativization (--wfail --iofail): pass. Hygiene: no sorry/native_decide/axiom/option overrides in diff; meta audit of all 103 constants in the epic modules: only propext/Classical.choice/Quot.sound. Headline exists_PWithOracle_ssubset_NPWithOracle is meaningful: P^A = one Unit-channel FreeM program certified by IsOraclePPTOn (one finite machine, poly clock, all stateful handlers; each query symbol and submission cost an instruction); probe queries_polynomial derives concrete poly bounds on request count and length vs languageOracle A. NP^A = exact-length certificates + oracle-poly verifier. Diagonalization (AB Thm 3.7) ranges over all Fin-control tables with clocks c(n+1)^d via exists_fin_run_pure_false; stage argument checked. Non-vacuity probes: P in P^A; unaryLanguage empty in P^empty; for every B some language lies outside NP^B (countability+Cantor), so neither class is full. Test claim diagonal in P^itself, not in P: holds and meaningful. Blocking: none. Nits: Oracle.lean:34 cites IsOraclePPTOn.query_bounds not imported by the module; oracle monotonicity A<=pB => P^A sub P^B deferred to relativization-2 (tracked). Evidence .lake/codex-validation/relativization-correctness/review.json sha256 2fb78028...13d6"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792386138,
+       "snapshot":
+       {"head": {"value": "b4b556921d48d533f0019c15959883b167cdc1a4"},
+        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+       "reviewer":
+       {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
+        "agent": {"value": "reviewer-sable-api5"}},
+       "note":
+       "API review of b4b5569 (base f489429) by reviewer-sable-api5, independent and read-only. Evidence: the 5 epic modules and the test built with --wfail (exit 0); #lint shows 0 errors in 63 declarations; fun_prop takes f as funArgId=3. Reuses IsOraclePPTOn, ProbOracleComp and MultiTapePTM, with no second machine model. @[fun_prop] is appropriate but there is no comp/prod rule (fun_prop fails on !decide(w in A)). notMem matches cslib. Docstrings are accurate; the closure is under oracle-free many-one reductions of the problem. 14 axiom guards and good non-vacuity tests. No blocking findings. Should-fix: Closure.lean:126 private eval_le_eval duplicates cslib Polynomial.eval_mono; Deterministic.lean:202 re-proves Turing.Action.instFinite (ChoiceTable.lean:52); BakerGillSolovay.lean:131-161 public allTrue duplicates private allT/all_deg in Reachability.lean:162-199. Nits: queriesWith and the machine lemmas belong in Languages/Probabilistic and Machines/Turing/MultiTape (central); rename instance finite to instFinite; unaryLanguage is a generic name; say many-one at Closure.lean:117,132. Evidence: .lake/codex-validation/relativization-api/review.json sha256 2f145185daa01a75b35ee48884b2dc33bb477b1cf1f8a88abf626fadc83b565e"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Oracle.lean",
     "Complexity/Computability/Complexity/Classes/Oracle",
