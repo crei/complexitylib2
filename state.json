@@ -1019,20 +1019,27 @@
    "report":
    "Land now through the base == main path: mechanical merge of main 764e3b8 (disjoint files) by integrator-sable-1 since worker-mythos left, six gates, short delta reviews, land. Unblocks hierarchy-theorems and space-cleanup.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/polytime-plain-bridge/worker-mythos",
-      "report":
-      "PUBLICATION REQUEST: eb1f274fc049d5a8ded60849d9baa3e2a6753bb4 on work/polytime-plain-bridge/integrator-sable-1. Content: worker-mythos twice-approved 78caf64 plus a clean merge of main 764e3b859b495b441073f0018387ac67ae2403c7 and nothing else (parents 78caf64 and 764e3b8; only overlapping files were the generated roots Complexity.lean and ComplexityTests.lean, auto-merged without conflict, mk_all not needed; git diff-tree --cc HEAD empty; diff vs origin/main is exactly the 6-file epic delta, 341 insertions/3 deletions; Classes/NP.lean, Classes/P.lean, PolyTime/Plain.lean and ComplexityTests/PolyTimePlain.lean are byte-identical blobs to 78caf64). No code edits. Validation on eb1f274: scripts/check.sh all six gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Contributors: worker-mythos (implementation), integrator-sable-1 (merge under coordinator-sable). AI assistance: Claude.",
-      "lease":
-      {"token": {"value": "18d5926321cd9d8b297eaa19c75b718a"},
-       "holder":
-       {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
-        "agent": {"value": "integrator-sable-1"}},
-       "expires": 1792387952},
-      "branch": "work/polytime-plain-bridge/integrator-sable-1",
-      "blocked": false,
-      "assignee": {"value": "integrator-sable-1"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/polytime-plain-bridge/worker-mythos",
+       "report":
+       "PUBLICATION REQUEST: eb1f274fc049d5a8ded60849d9baa3e2a6753bb4 on work/polytime-plain-bridge/integrator-sable-1. Content: worker-mythos twice-approved 78caf64 plus a clean merge of main 764e3b859b495b441073f0018387ac67ae2403c7 and nothing else (parents 78caf64 and 764e3b8; only overlapping files were the generated roots Complexity.lean and ComplexityTests.lean, auto-merged without conflict, mk_all not needed; git diff-tree --cc HEAD empty; diff vs origin/main is exactly the 6-file epic delta, 341 insertions/3 deletions; Classes/NP.lean, Classes/P.lean, PolyTime/Plain.lean and ComplexityTests/PolyTimePlain.lean are byte-identical blobs to 78caf64). No code edits. Validation on eb1f274: scripts/check.sh all six gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Contributors: worker-mythos (implementation), integrator-sable-1 (merge under coordinator-sable). AI assistance: Claude.",
+       "lease":
+       {"token": {"value": "18d5926321cd9d8b297eaa19c75b718a"},
+        "holder":
+        {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
+         "agent": {"value": "integrator-sable-1"}},
+        "expires": 1792387952},
+       "branch": "work/polytime-plain-bridge/integrator-sable-1",
+       "blocked": false,
+       "assignee": {"value": "integrator-sable-1"}},
+      "summary":
+      "Worker-mythos twice-approved 78caf64 plus a clean merge of main 764e3b859b495b441073f0018387ac67ae2403c7 and nothing else: parents 78caf64 and 764e3b8; only the generated roots overlapped and auto-merged without conflict; git diff-tree --cc HEAD empty; diff vs main is exactly the 6-file epic delta (341 insertions, 3 deletions) with Classes/NP.lean, Classes/P.lean, PolyTime/Plain.lean and ComplexityTests/PolyTimePlain.lean byte-identical to 78caf64; no code edits. Six gates passed on eb1f274 (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Contributors: worker-mythos (implementation) and integrator-sable-1 (merge) under coordinator-sable direction. AI assistance: Claude. Submitted head eb1f274fc049d5a8ded60849d9baa3e2a6753bb4.",
+      "snapshot":
+      {"head": {"value": "eb1f274fc049d5a8ded60849d9baa3e2a6753bb4"},
+       "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Complexity/PolyTime/Plain.lean",
     "Complexity/Computability/Complexity/Classes/P.lean",
