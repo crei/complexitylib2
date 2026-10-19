@@ -1552,7 +1552,7 @@
           "holder":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792400780},
+          "expires": 1792400860},
          "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/VertexCover.lean",
@@ -2387,7 +2387,7 @@
     "agent": {"value": "coordinator-sable"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792400780,
+   "expires": 1792400860,
    "actor":
    {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
     "agent": {"value": "reviewer-sable-api1"}}},
