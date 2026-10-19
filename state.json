@@ -2001,7 +2001,16 @@
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor3"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "d4cf6bbe7595ef775b457ff9933b921b"},
+          "holder":
+          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+           "agent": {"value": "reviewer-sable-api3"}},
+          "expires": 1792399957},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
     "Complexity/Foundations/Combinatorics/AffineDisperser.lean",
