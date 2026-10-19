@@ -2846,15 +2846,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "138d9dec6e2d289e8795b1a38e02908c"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390766,
+          "snapshot":
+          {"head": {"value": "d57c472c16dfef7cb8c3c8dc06deb1318fa25cf0"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
            "agent": {"value": "reviewer-sable-cor6"}},
-          "expires": 1792405129},
-         "blocked": false}},
+          "note":
+          "Correctness review of M1 by reviewer-sable-cor6, who did not contribute to the epic. Read-only review of the exact head d57c472c. Scope: Rectangle, FoolingSet, Rank, Functions, the tests and the root imports. Build of the 4 touched modules and the test module under nice --wfail --iofail: success. Statements checked against Kushilevitz-Nisan Ch.1: the partition (at most 2^depth product rectangles, exists-unique cover, output constant on each), the fooling set (KN definition; the hz hypothesis is necessary; 2^n<=#S gives n+1<=D), and the rank bound (generic CommSemiring+StrongRankCondition, with R instantiated; clog2 rank<=D). LogRankConjecture is exists c, forall f; c=0 is refuted by EQ, and the swapped-quantifier form is provably trivial, so the order matters. EQ/GT/IP/DISJ are standard: IP is parity, DISJ means no common 1, GT means numeral(x)>numeral(y). Each = n+1 with both bounds proved; at n=0 each is 0. Probes (exit 0) cover n=0,1, EQ Fin 5 rank 5 giving D>=3, and a concrete AND protocol with rank<=1. Axioms of 17 decls: propext, Classical.choice, Quot.sound. No sorry, native_decide or set_option. Blocking: none. Nits: GT is strict (KN sometimes uses >=; same complexity); LogRank quantifies over Type 0. Not checked: six gates, API scope. Evidence: .lake/codex-validation/communication-complexity-correctness/review.json sha256 f666f71f20ab2f595f42cad27902dfccf8a03fe4fc2cbb93833f3adab1a28883 (+Probes.lean, probes.log, build.log)."}}},
        "api":
        {"active":
         {"report": "",
