@@ -1631,15 +1631,18 @@
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "8a573bd71aaf665b74cb63d8c869f90d"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792385510,
+          "snapshot":
+          {"head": {"value": "784cb3afda77036d16f624185735d15fd09145b3"},
+           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+          "reviewer":
           {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
            "agent": {"value": "reviewer-sable-cor2"}},
-          "expires": 1792399896},
-         "blocked": false}},
+          "note":
+          "Independent correctness review (reviewer-sable-cor2; no contribution). Scope: Ladner.lean, Ladner/Basic.lean, Ladner/PolyTime.lean, ComplexityTests/Ladner.lean at 784cb3a. Build of the 3 epic modules + test module with --wfail --iofail: exit 0. Headline exists_NP_not_P_not_NPComplete is true as stated over the standard Cslib.Complexity.P/NP/NPComplete (Karp PolyTimeReducible, all-encoding NPHard) with encBits = id (rfl). Hypothesis is not vacuous/mis-encoded: probe proves (exists enc, P enc != NP enc) <-> SAT notin P encCNF, and P encBits != NP encBits <-> P encCNF != NP encCNF; NPComplete encBits is satisfiable (probe: encoded SAT is NPComplete encBits), so the third conjunct is meaningful. Unconditional lemmas have the stated types; SATH_mem_NP uses a real verifier (padCheck H then SAT.verifier, cert length X, IsVerifier both ways). H: certified polytime encUnary->encUnary via hstepB = Hstep and the unary-clock universal; H n <= loglog n; probe proves (H bounded) <-> SATH in P and H -> infinity under P != NP (A-B Claim 3.4); every machine has unboundedly many indices; clocks (2l+2)^i capped at n. No sorry/native_decide/axiom/set_option. #print axioms (headline, 5 lemmas, H cert, probes): propext, Classical.choice, Quot.sound. Nits (non-blocking): placement of P_subset_NP etc. is API, disclosed. Not run: Axioms test, full gates. Evidence: .lake/codex-validation/ladner-correctness/review.json sha256 6dfcfeecf5e5388a28f7a851d8a4388d01b3f27134045be9eda976d62ffb98d3"}}},
        "api":
        {"active":
         {"report": "",
