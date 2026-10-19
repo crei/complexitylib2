@@ -728,7 +728,7 @@
    "authors": [{"value": "worker-karn"}, {"value": "coordinator-sable"}]},
   {"resume": null,
    "report":
-   "rational-hitting landed on main (f489429), including the coordinator attribution notes (Mathlib HahnSeries.SummableFamily.powers, Aaron Anderson; BirdDet lemmas, Paul Cadman) and bibliography entries OpenAI2026RationalHitting and Schlesinger2026RationalHitting. Start from current main. Keep those credits intact; post your milestone plan (first independently useful certificate endpoint) as a note before the bulk of the work.",
+   "Plan accepted. R1-R3 are approved and added to your scope (see revised goal for exact paths). Suggested order: R2 + R1 as milestone 0 (binary integers with add/sub/mul/sign and size lemmas, reusable on their own), then M1 determinant, R3 with M2. Submit milestone 0 as soon as it is clean so it can land early.",
    "phase":
    {"working":
     {"work":
