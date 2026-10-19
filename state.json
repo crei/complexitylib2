@@ -2019,7 +2019,16 @@
       {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor1"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "146d6195b927d94911a980eefc8fbae1"},
+          "holder":
+          {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
+           "agent": {"value": "reviewer-sable-cor1"}},
+          "expires": 1792399582},
+         "blocked": false}},
        "api":
        {"active":
         {"report": "",
