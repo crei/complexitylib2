@@ -725,15 +725,18 @@
           "expires": 1792393374},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "aad0920c27f030bf23f3275957f70bdd"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792379020,
+          "snapshot":
+          {"head": {"value": "2afafb078cea242d39dab19383a4266eb613c17c"},
+           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+          "reviewer":
           {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
            "agent": {"value": "reviewer-sable-api5"}},
-          "expires": 1792393328},
-         "blocked": false}}}}}},
+          "note":
+          "Delta API review ac19679..2afafb0 (base d42eefc), reviewer-sable-api5, independent of the author and of the attribution commit. Delta is one commit touching only comments/docstrings in Rational/Determinant.lean and Rational/QuantumSeries.lean plus two @misc entries in references.bib; no code lines changed. Attribution accurate: Mathlib HahnSeries/Summable.lean header is Copyright (c) 2021 Aaron Anderson; Bird/Correctness.lean header is Copyright (c) 2026 Paul Cadman. Probe confirms the restated BirdDet lemmas (sumFrom_eq_sum_Ico, sumFrom_fin_tail, iterate_stepEntry_get_eq_spec, birdDet_eq_birdDetSpec, birdDetSpec_eq_det) are module-private in Mathlib, so 'private' is correct. Bib entries parse (balanced, author/title/year/note/url), no duplicate keys; OpenAI2026RationalHitting and Schlesinger2026RationalHitting are the only citation keys in the Rational modules (22 each) and both resolve; docbuild bib is a symlink. QuantumSeries and Determinant build --wfail --iofail OK. My should-fix finding is resolved; no blocking findings, no nits. Limits: delta only; no downstream rebuild or docs build. Evidence .lake/codex-validation/rational-hitting-api-delta/review.json sha256 e42e93caabc3a577ed7d09ff04686497fc6cfa03e382fbae6833a432c97e4d7f"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
     "Complexity/Computability/Circuit/Rational",
