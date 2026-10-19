@@ -2366,7 +2366,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "Design (M1). No coding API in Mathlib/cslib beyond hammingDist/hammingNorm; no v1 source. Namespace Cslib.Code, files Foundations/Data/Code/{Basic,Linear,Singleton,ReedSolomon,ReedMuller,BerlekampWelch}.lean, tests ComplexityTests/Code.lean. Basic: minDist (C : Set (forall i, b i)) : ENat := iInf over distinct pairs of hammingDist (top if C subsingleton); le_minDist_iff, minDist_le_hammingDist, unique decoding eq_of_two_mul_lt_minDist. Linear (C : Submodule R (i -> M)): le_minDist_iff_hammingNorm (minimum weight). Singleton: [Nonempty a] d <= minDist C -> #C <= card a ^ (n - d + 1) (C : Finset (i -> a)); linear: C != bot -> finrank F C + d <= n + 1. RS: reedSolomon (a : i -> F) k := (degreeLT F k).map (LinearMap.pi (leval o a)); a injective: minDist = n - k + 1 for 1 <= k <= n, finrank = k for k <= n (MDS). RM: reedMuller F m d := (restrictTotalDegree (Fin m) F d).map (evalL F (Fin m)); f != g codewords: (q - d) * q^m <= q * hammingDist f g via schwartz_zippel_totalDegree; d < q: minDist (reedMuller F (m+1) d) = (q - d) * q^m (witness prod_{t in T} (X 0 - t)). BW: IsSolution a w e k E Q (E monic deg e, deg Q < e + k, Q(a i) = w i * E(a i)); existence from an error locator; a injective, 2e + k <= n, p in degreeLT k within e of w: Q = p * E, Q /m E = p; berlekampWelch (choice-defined, correctness only, no running-time claim) = some p. M2: Johnson (agreement form, alphabet-free: #ball * ((n-e)^2 - n(n-d)) <= n(d-e)), Sudan (bivariate interpolation + root containment in F[X][Y]), concatenation distance >= d_out*d_in + asymptotically good binary family, RM local decoding along lines into LineCode (char 2, d <= q-2).",
       "lease":
       {"token": {"value": "819e46a5839dfd07fdf128801175e2d5"},
        "holder":
