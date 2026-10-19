@@ -2866,7 +2866,7 @@
        "holder":
        {"session": {"value": "842267643c344d7a79017588bcfc8a39"},
         "agent": {"value": "worker-sable-numbers"}},
-       "expires": 1792404585},
+       "expires": 1792405532},
       "branch": "work/circuits-karp-lipton/worker-sable-numbers",
       "blocked": false,
       "assignee": {"value": "worker-sable-numbers"}}}},
@@ -3450,7 +3450,7 @@
     "agent": {"value": "worker-sable-graphs"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792404585,
+   "expires": 1792405532,
    "actor":
    {"session": {"value": "842267643c344d7a79017588bcfc8a39"},
     "agent": {"value": "worker-sable-numbers"}}},
