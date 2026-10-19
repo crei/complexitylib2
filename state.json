@@ -1767,7 +1767,15 @@
    "authors": [{"value": "worker-sable-npbuilder"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/b2-lower-bound/worker-sable-b2",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-b2"}}}},
    "paths":
    ["Complexity/Foundations/Data/BitString/Affine.lean",
     "Complexity/Foundations/Data/BitString/AffineDisperser.lean",
