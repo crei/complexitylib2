@@ -1369,7 +1369,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "14d74384ffee6557dd9d79143283fe43"},
+       "holder":
+       {"session": {"value": "b1cbc8b7223d2f96ea57cc362686fe08"},
+        "agent": {"value": "worker-sable-relativ"}},
+       "expires": 1792387599},
       "branch": "work/relativization/worker-sable-relativ",
       "blocked": false,
       "assignee": {"value": "worker-sable-relativ"}}}},
@@ -1381,7 +1386,7 @@
    "goal":
    "Baker-Gill-Solovay relativization on the native model. First post a design note: deterministic and nondeterministic oracle access for native machines consistent with the design commitments (programs are PFunctor.FreeM values; reuse the existing OracleComp/IsOraclePPT interfaces and the open-oracle query semantics where they fit, coordinating with open-oracle-composition rather than editing its scope; no second machine model). Then define P^A and NP^A for an oracle language A with charged query costs, prove the relativized basics (P^A inside NP^A, monotone in reductions), and milestone 1: an oracle B with P^B different from NP^B by the standard diagonalization over oracle machines with clocks [AroraBarak09 Theorem 3.7]. Milestone 2 (tracked): an oracle A with P^A = NP^A, using TQBF/PSPACE once tqbf-pspace-complete lands or EXP-completeness otherwise. Tests and axiom guards in the epic test module. Six gates; frozen submission per milestone.",
    "dependencies": [{"value": "native-exponential-separation"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-relativ"}]},
   {"resume": null,
    "report": "",
    "phase":
