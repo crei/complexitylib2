@@ -1697,7 +1697,7 @@
       {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
        "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor5"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api5"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Ladner.lean",
