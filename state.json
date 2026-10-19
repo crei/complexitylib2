@@ -3149,7 +3149,7 @@
     {"work":
      {"resume": null,
       "report":
-      "Path request: the M1 follow-ups need files outside this epic: Functions.lean (remove aliceSend/run_aliceSend/depth_aliceSend_le/ecomplexity_le_succ when moving them to Protocol.lean; ready rejects changes outside paths), Rectangle.lean (leaf simp lemmas, weighted area bound next to card_filter_le_mul) and FoolingSet.lean (succ_le_ecomplexity rename). Please revise to add them if wanted; meanwhile I proceed with M2 inside the recorded paths and will do these only if the paths are added.",
+      "Path request addendum: also Complexity/Foundations/BooleanAnalysis/HadamardRectangles.lean (free), for the signed Lindsey bound (sum over A x B of signVal (hadamardCode x y))^2 <= |A||B| 2^n that gives disc(IP) <= 2^(-n/2); rule 6 puts it in Cslib.BitString there. Without it I keep that lemma private in Discrepancy.lean.",
       "lease":
       {"token": {"value": "d25a0b5bc10ba0ac5a6540db3b7d5c04"},
        "holder":
