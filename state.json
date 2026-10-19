@@ -1968,7 +1968,16 @@
        "base": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api6"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "0adb69638b6a37394d3cbdc0e5c5e7f0"},
+          "holder":
+          {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
+           "agent": {"value": "reviewer-sable-api6"}},
+          "expires": 1792406773},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Continuity.lean",
     "Complexity/Computability/Circuit/Approximation/Hamming.lean",
