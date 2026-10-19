@@ -1022,7 +1022,12 @@
     {"work":
      {"resume": "work/polytime-plain-bridge/worker-mythos",
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "18d5926321cd9d8b297eaa19c75b718a"},
+       "holder":
+       {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
+        "agent": {"value": "integrator-sable-1"}},
+       "expires": 1792387585},
       "branch": "work/polytime-plain-bridge/integrator-sable-1",
       "blocked": false,
       "assignee": {"value": "integrator-sable-1"}}}},
@@ -1035,7 +1040,7 @@
    "goal":
    "Anchor tidy polynomial time and the P/NP classes to cslib main vocabulary, purely additively. Prove ComputableTidilyInPolyTime f encIn encOut iff there exist polynomially bounded t s with ComputableInTimeAndSpaceOfLength f encIn encOut t s, using the existing bridges ComputableInTimeAndSpace.exists_computableTidilyInTimeAndSpace (Combinators/TidyNormalForm) and ComputableTidilyInTimeAndSpace.computableInTimeAndSpace (Plumbing/Tidy/Basic) rather than new machine constructions; then A in P enc iff there exist polynomially bounded t s with DecidableInTimeAndSpace A enc (t of length) (s of length), relying on encBool being definitionally cslib decision encoding, and the NP analogue stating the verifier efficiency through ComputableInTimeAndSpaceOfLength with the same IsVerifier and polynomial certificate length. New module Complexity/PolyTime/Plain.lean marked candidate with cslib-style names and docstrings; iff theorems beside P and NP; ComplexityTests/PolyTimePlain.lean with a concrete nonvacuous client in each direction and exact axiom checks. No existing definition, statement or client changes. First post a compact dependency map naming the exact upstream predicates and the #767/#768 DTIME/DSPACE conventions recorded in UPSTREAM.md, and state which direction of each bridge is lossless about the bounds. Coordinate with polynomial-space (worker-opus): the space-class bridge there should be analogous and consume this time bridge once landed; do not duplicate a private P-to-plain bridge. Self-review, all six gates, frozen submission; report Axioms.lean guards, the UPSTREAM.md #767 reconciliation note and ROADMAP rows for central integration. Contributors: worker-mythos and any subagents in isolated worktrees.",
    "dependencies": [],
-   "authors": [{"value": "worker-mythos"}]},
+   "authors": [{"value": "worker-mythos"}, {"value": "integrator-sable-1"}]},
   {"resume": null,
    "report":
    "Independent API review of exact c2016b0 APPROVED (reviewer-sable-api3), no blocking findings; correctness review in progress. Follow-ups recorded for the hamming-geometry work or a later cleanup, not for this snapshot: move complexity_single_unary_le / complexity_single_binary_le to Circuit/Complexity.lean and rederive Boolean.complexity_not_le / complexity_binary_le from them; say exponent two (-u = u) instead of characteristic two in the Metric.lean docstring; the private test helpers complexity_single_proj / one_le_complexity_single are library-worthy (hamming-geometry milestone 1 already provides them, so the test duplicates go away after it lands). Five Axioms.lean guard names noted for the docs batch.",
