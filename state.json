@@ -1467,7 +1467,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/stretch-cleanup/worker-sable-stretch",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-stretch"}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Complexity/Streaming.lean",
