@@ -1228,7 +1228,12 @@
      {"resume": null,
       "report":
       "Correctness review of 435e12f requested changes: merge-base drift lets a landing silently delete a landed file (reviewer fixture testReviewerMergeBaseDrift); API review found that old-binary rewrites drop the reservation main and batch candidates. Fix round by worker-sable-tooling: direct post-merge invariant check, unique recorded merge base, pinned merge config, land robust to old-binary rewrites, docs; fresh reviews of the new snapshot.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "20cdcf74faf732238daaa607bb4b99f4"},
+       "holder":
+       {"session": {"value": "c2a2464e315d85c0a64cfb5108d1ea0e"},
+        "agent": {"value": "worker-sable-tooling"}},
+       "expires": 1792388134},
       "branch": "work/merge-queue-landing/worker-sable-tooling",
       "blocked": false,
       "assignee": {"value": "worker-sable-tooling"}}}},
