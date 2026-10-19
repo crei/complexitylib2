@@ -2478,7 +2478,7 @@
           "holder":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792403356},
+          "expires": 1792403445},
          "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/QueryComplexity/Degree.lean",
@@ -2976,7 +2976,7 @@
     "agent": {"value": "coordinator-sable"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792400860,
+   "expires": 1792403445,
    "actor":
    {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
     "agent": {"value": "reviewer-sable-api1"}}},
