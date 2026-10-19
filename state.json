@@ -1946,7 +1946,16 @@
            "agent": {"value": "reviewer-sable-cor1"}},
           "expires": 1792398711},
          "blocked": false}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api1"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "9055f29917eb9806e3cdd36e17dc429b"},
+          "holder":
+          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
+           "agent": {"value": "reviewer-sable-api1"}},
+          "expires": 1792398715},
+         "blocked": false}}}}}},
    "paths": ["references.bib", "docbuild/docs/references.bib"],
    "id": {"value": "docs-bibliography"},
    "goal":
