@@ -2398,7 +2398,7 @@
       {"head": {"value": "8a05720a1f07660e4d0e27e808dedbbc16322c3b"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor2"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
    "paths":
    ["Complexity/Probability/Chernoff.lean",
