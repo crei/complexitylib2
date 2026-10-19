@@ -2598,7 +2598,7 @@
     {"work":
      {"resume": null,
       "report":
-      "Blocked: M1 is complete locally at 1c42e73c (branch work/resource-class-spine/worker-sable-hier, merged with current main). Gates: build ok, mk_all ok, test FAILS only on two deprecation warnings outside my paths: ComplexityTests/TimeHierarchy.lean:103 and ComplexityTests/Relativization.lean:91 use diagonal_not_mem_P, now a deprecated alias of diagonal_notMem_P (the requested rename). Fix is s/diagonal_not_mem_P/diagonal_notMem_P/ on those two lines. Please add both test files to my paths (relativization-2 is frozen/submitted), or apply the two-line edit centrally; then I re-run gates and submit.",
+      "Unblocked: merged main 06c5f534, renamed the two test uses, six gates pass at aa3bd309; pushed; submitting M1.",
       "lease":
       {"token": {"value": "f2bc825304723cc80a042b30f59cd335"},
        "holder":
@@ -2606,7 +2606,7 @@
         "agent": {"value": "worker-sable-hier"}},
        "expires": 1792406704},
       "branch": "work/resource-class-spine/worker-sable-hier",
-      "blocked": true,
+      "blocked": false,
       "assignee": {"value": "worker-sable-hier"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Time.lean",
