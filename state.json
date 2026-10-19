@@ -1246,55 +1246,17 @@
    "authors": [{"value": "worker-sable-hamming"}]},
   {"resume": null,
    "report":
-   "Correctness review of 435e12f requested changes: merge-base drift lets a landing silently delete a landed file (reviewer fixture testReviewerMergeBaseDrift); API review found that old-binary rewrites drop the reservation main and batch candidates. Fix round by worker-sable-tooling: direct post-merge invariant check, unique recorded merge base, pinned merge config, land robust to old-binary rewrites, docs; fresh reviews of the new snapshot.",
+   "Both round-2 reviews of 4bf0094 approved. Reopened for the merge of main d42eefc (required by the current base == main landing rule), the reviewer-suggested content-exact final-tree guard and two doc nits; fresh delta reviews by the same reviewers, then land by fast-forward.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Correctness review of 435e12f requested changes: merge-base drift lets a landing silently delete a landed file (reviewer fixture testReviewerMergeBaseDrift); API review found that old-binary rewrites drop the reservation main and batch candidates. Fix round by worker-sable-tooling: direct post-merge invariant check, unique recorded merge base, pinned merge config, land robust to old-binary rewrites, docs; fresh reviews of the new snapshot.",
-       "lease":
-       {"token": {"value": "20cdcf74faf732238daaa607bb4b99f4"},
-        "holder":
-        {"session": {"value": "c2a2464e315d85c0a64cfb5108d1ea0e"},
-         "agent": {"value": "worker-sable-tooling"}},
-        "expires": 1792388134},
-       "branch": "work/merge-queue-landing/worker-sable-tooling",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-tooling"}},
-      "summary":
-      "ready takes the unique merge base with main as the reviewed base; land EPIC... lands one or more approved epics: each step requires the reviewed base to be the unique merge base of the tip and the reviewed head, merges with renames, directory renames and rerere disabled, and must change exactly the reviewed paths and leave them as in the reviewed head; the final tree may differ from main only in reviewed files and the generated roots. Landing re-verifies the listed batch from the board, so it survives older checkouts that reduce the reservation and drop its main; publication stays guarded by the integrated main. The six checks and coordination tests run once on the final tree; main and all completed records are published atomically, each recording its reviewed snapshot and the landed main. Fixes since 435e12f: API review (R1-R3, N1-N4, N6) and correctness review (merge-base drift; pinned merge config). Validation at 4bf0094 (main 764e3b8 merged): coordination build --wfail clean, lake -d scripts/coordination test --wfail 54/54, scripts/check.sh six gates ok. Limitation: older checkouts drop the reservation main and completion landed (metadata only) when they rewrite the board; refusals after reservation keep it for cancel. Author: Claude (worker-sable-tooling) under coordinator-sable direction; drift fixture adapted from reviewer-sable-cor1.",
-      "snapshot":
-      {"head": {"value": "4bf009418a4038ae957fd81c9d458134cbd26831"},
-       "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792374555,
-          "snapshot":
-          {"head": {"value": "4bf009418a4038ae957fd81c9d458134cbd26831"},
-           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-          "reviewer":
-          {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
-           "agent": {"value": "reviewer-sable-cor1"}},
-          "note":
-          "Fresh independent correctness review (reviewer-sable-cor1, no contribution) of base 764e3b8 / head 4bf0094; all board commands via main's binary. Read Protocol/Runtime/tests/Legacy/docs deltas since my changes verdict on 435e12f. lake -d scripts/coordination test --wfail 54/54; tooling build --wfail ok. My round-1 blocking drift is fixed: ready needs a unique merge base; every step (FF included) needs merge-base --all tip head == [base]; verifyStep makes each step change exactly the reviewed non-root paths with head contents; merge config pinned; commit tree == verified tree. Scratch fixtures on the new code: single and batch drift refused, nothing published, clean worktree; hostile-config directory rename keeps the reviewed path; REAL pre-change binary on a fixture board reads batch reservations and merge-landed completions, its rewrite degrades the reservation, and the renewal lands exactly the reviewed tree; a .land naming only the first candidate of a degraded batch is refused by the final-tree guard. No blocking findings. Hardening (non-blocking): the protocol guard is path-only; a hand-made .land with altered content in a reviewed path is accepted, unreachable via the CLI since only Runtime.land dispatches it after verified integrate; suggest per-candidate diff(head, landed) disjoint from reviewed paths. Nit: Tests/Legacy LegacyState keeps landed (current Epic). Not run: check.sh. Evidence .lake/codex-validation/merge-queue-landing-correctness-r2/review.json SHA256 eb151a569538483c6a6fd40b69bd77cbae589a242b2ecad9cd727ec7bc98e250"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792374066,
-          "snapshot":
-          {"head": {"value": "4bf009418a4038ae957fd81c9d458134cbd26831"},
-           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-          "reviewer":
-          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
-           "agent": {"value": "reviewer-sable-api1"}},
-          "note":
-          "Fresh API review 4bf0094 (base 764e3b8); independent of author worker-sable-tooling; read-only; all board commands via main binary. Builds on my review of 435e12f (review.json sha256 f4cc1597...). Delta 45bd109 + 41b7167 (e6c9741, 4bf0094 merge main only); scope ok, diff --check clean. Evidence: coordination build --wfail clean; test --wfail 54/54; ProbeCompat re-run. Earlier findings: F1 resolved (land carries the integrated main, tolerates a reservation reduced by older checkouts, re-verifies the listed batch, publication guarded by exact old main; landed erasure documented as metadata). N1 resolved (landed shared by batch). N2 resolved (refusals name scripts/coordinate cancel; docs say refused merges keep the reservation). N3 resolved (AGENTS rule 7). N6 resolved (merge-base --all; unrelated and criss-cross refused with clear messages). N4 partly (Legacy records shared in Tests/Legacy.lean, legacy Completion test added; Diff and Landing base/head names unchanged). N5 limitation remains (real mk_all stubbed). New shapes (verifyStep invariant, unique-merge-base step check, pinned merge config, final-tree guard) are clean, documented and tested. No blocking findings. Nits: A1 land checks only the first candidate even when the reservation kept its main (reserve is stricter; safety holds via re-verification and final-tree guard); A2 LegacyState reuses current Epic so legacyHeartbeat keeps landed (docstring says so); A3 short reflow line CONTRIBUTING.md:144. Not run: scripts/check.sh. Evidence .lake/codex-validation/merge-queue-landing-api-r2/review.json sha256 305d2d9e78fd8bb3da08b6f283f33385279a62f7f14e8a7506f14642d725e2fc"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "Both round-2 reviews of 4bf0094 approved. Reopened for the merge of main d42eefc (required by the current base == main landing rule), the reviewer-suggested content-exact final-tree guard and two doc nits; fresh delta reviews by the same reviewers, then land by fast-forward.",
+      "lease": null,
+      "branch": "work/merge-queue-landing/worker-sable-tooling",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-tooling"}}}},
    "paths": ["scripts/coordination", "CONTRIBUTING.md", "AGENTS.md"],
    "id": {"value": "merge-queue-landing"},
    "goal":
