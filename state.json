@@ -2816,7 +2816,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "M1 implemented: Impagliazzo hard-core lemma (boosting, Boosting/Potential weights) and Yao XOR lemma, nonuniform over De Morgan circuits; head b783d8e6; full gates running.",
       "lease":
       {"token": {"value": "ec3ac2c1f4d3824598496a8bef23011c"},
        "holder":
