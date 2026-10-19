@@ -3385,15 +3385,18 @@
           "expires": 1792407346},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "2e08add81c3dc57c5d0cf82d6af1d087"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792393020,
+          "snapshot":
+          {"head": {"value": "5b33f3346aac949ec4f6541220f5ef69e05fd391"},
+           "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+          "reviewer":
           {"session": {"value": "6028cd701670813461915b10a3d32c60"},
            "agent": {"value": "reviewer-sable-api3"}},
-          "expires": 1792407342},
-         "blocked": false}}}}}},
+          "note":
+          "API delta review ef44eae9..5b33f334 by reviewer-sable-api3 (independent, not an author). Scope: references.bib only; only the Ladner1975 entry changed (5+/5-), no Lean changes. Entry style matches neighbours (aligned fields, brace-protected {$P$}, en-dash pages, doi field); no duplicate keys or DOIs; old JACM DOI removed. check_docs --config-only passes. Hardness-amplification and disperser entries unchanged from the approved ef44eae9. Blocking: none. Nits: none. Evidence .lake/codex-validation/docs-bibliography-3-api/review.json sha256 ce3e0fe23a81eea7d12ee6ced7fb711dfd4d03a2bd9d30c708cad741e638a566"}}}}}}},
    "paths": ["references.bib"],
    "id": {"value": "docs-bibliography-3"},
    "goal":
