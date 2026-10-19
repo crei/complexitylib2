@@ -2240,7 +2240,15 @@
    "authors": [{"value": "coordinator-sable"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/explicit-affine-disperser-2/worker-sable-disperser",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-disperser"}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
     "Complexity/Foundations/Combinatorics/AffineDisperser.lean",
