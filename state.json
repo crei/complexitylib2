@@ -2192,6 +2192,18 @@
    "goal":
    "Continuation of tqbf-pspace-complete: alternating Turing machines on the native model (existential/universal choice, consistent with the parametric machine and Choose), the class AP, and AP = PSPACE (Chandra-Kozen-Stockmeyer) via TQBF; ATIME/ASPACE basics and the polynomial hierarchy as bounded alternation if it falls out. No second machine model. Cite ChandraKozenStockmeyer1981 (propose entry). Tests, axiom guards, six gates.",
    "dependencies": [{"value": "tqbf-pspace-complete"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/IP.lean",
+    "Complexity/Computability/Complexity/Classes/IP",
+    "ComplexityTests/InteractiveProofs.lean"],
+   "id": {"value": "ip-pspace"},
+   "goal":
+   "Milestone 2 of interactive-proofs: IP is contained in PSPACE on the native classes, via the optimal-prover game value computed by a polynomial-space recursion over message histories (Classes/Space; reuse the IP definitions of interactive-proofs and the polynomial-space machinery). State the exact model assumptions (private coins, polynomially many rounds, message lengths). IP = PSPACE is out of scope (tracked). Tests, axiom guards, six gates, frozen submission.",
+   "dependencies": [{"value": "interactive-proofs"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
