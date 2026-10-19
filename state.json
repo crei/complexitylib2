@@ -2178,15 +2178,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "9df5b61933202e88f1d97f7ee3657ac9"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390824,
+          "snapshot":
+          {"head": {"value": "023751e650614dd93e3193dc925234b66fb3b20a"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
            "agent": {"value": "reviewer-sable-cor5"}},
-          "expires": 1792405155},
-         "blocked": false}},
+          "note":
+          "reviewer-sable-cor5 (independent, no contribution), exact head 023751e6, base 0d8ef4bf ancestor. Scope: correctness. Build: nice lake build of 10 epic modules + ComplexityTests.AffineDisperserLowerBound --wfail --iofail OK. #print axioms seven_mul_le_two_mul_size_add, State.Valid.exists_step, exists_isAffineDisperser, fourteen_mul_a_le, initialState_valid: propext, Classical.choice, Quot.sound. Diff has no sorry/native_decide/axiom/set_option/maxHeartbeats. Headline 7n<=2|C|+14d is Thm 4.1; fullSignature 2 Bool = all 16 binary ops + constants (constants cost a gate, so the bound holds a fortiori); C.size counts lines. IsAffineDisperser = Def 2.1: probes prove IsAffine <-> translate of additive map, range is 3-sum closed of size 2^d, derive nonconstancy on plane x0+x1+x2=1, parity not a disperser. Non-vacuity: 1201<2048, s>=273 reproduced. Lemma 4.2: Step fields match (m+s drops, new a <= a <= new a + 2, W' + 14a <= W + 14a'); W, wt, s, deg, a match eqs (4),(5); step_quad reproduces the -14 QR accounting. No blocking findings. Follow-ups: AffineSubspace / Cslib.AffineDisperser bridge for Thm 1.1; docstring claim subspace = image of injective affine map is unproved (true). Not checked: six gates, line-by-line Cases 1-8 vs paper. Evidence: .lake/codex-validation/b2-lower-bound-correctness/review.json sha256 e1b644286518a43b7b1b8379a5a29c85cb93fa9494082aea92ab5375e026c7c7"}}},
        "api":
        {"active":
         {"report": "",
