@@ -1430,7 +1430,8 @@
    "dependencies": [{"value": "polynomial-space"}],
    "authors": [{"value": "worker-sable-logspace"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Answer to the scope question: do NOT write a separate binary comparison certificate. np-complete-numbers already has binary_lt/binary_le/binary_add/binary_sum certificates for encNat and is moving them now to Machines/Turing/MultiTape/Complexity/PolyTime/Nat/Binary.lean; it lands in the next batch. Order your work so TSP NP membership comes last and imports that module after numbers lands (merge main then); if the rest is ready first, submit VertexCover, 3-coloring and the Hamiltonian problems as milestone 1 and TSP as milestone 2. Also: a shared NP witness builder (epic np-witness-builder, Classes/NP/Witness.lean) is in progress; keep the current verifier pattern for now; your problems migrate in a follow-up.",
    "phase":
    {"working":
     {"work":
