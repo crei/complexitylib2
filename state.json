@@ -728,7 +728,15 @@
    "authors": [{"value": "worker-karn"}, {"value": "coordinator-sable"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/rational-hitting-runtime/worker-karn",
+      "blocked": false,
+      "assignee": {"value": "worker-karn"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
     "Complexity/Computability/Circuit/Rational",
