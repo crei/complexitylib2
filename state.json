@@ -705,7 +705,16 @@
            "agent": {"value": "reviewer-sable-cor5"}},
           "expires": 1792390204},
          "blocked": false}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api5"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "97d1a1d03e2eb13849889cfa8dfe5e5c"},
+          "holder":
+          {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
+           "agent": {"value": "reviewer-sable-api5"}},
+          "expires": 1792390206},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
     "Complexity/Computability/Circuit/Rational",
