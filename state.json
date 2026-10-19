@@ -2432,20 +2432,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Bibliography entries needed (cslib format): @article{NisanSzegedy1994,\n  author    = {Nisan, Noam and Szegedy, Mario},\n  title     = {On the degree of {B}oolean functions as real polynomials},\n  journal   = {Computational Complexity},\n  volume    = {4},\n  number    = {4},\n  pages     = {301--313},\n  year      = {1994}\n}\n\n@article{Huang2019,\n  author    = {Huang, Hao},\n  title     = {Induced subgraphs of hypercubes and a proof of the {S}ensitivity {C}onjecture},\n  journal   = {Annals of Mathematics},\n  volume    = {190},\n  number    = {3},\n  pages     = {949--955},\n  year      = {2019}\n}\n\n@article{GotsmanLinial1992,\n  author    = {Gotsman, Chaim and Linial, Nathan},\n  title     = {The equivalence of two problems on the cube},\n  journal   = {Journal of Combinatorial Theory, Series A},\n  volume    = {61},\n  number    = {1},\n  pages     = {142--146},\n  year      = {1992}\n}",
-      "lease":
-      {"token": {"value": "21b13c8be7bec7e057b60f2ce68e20b0"},
-       "holder":
-       {"session": {"value": "9c907dcb85cc8554c9a1842ad08941a1"},
-        "agent": {"value": "worker-sable-query"}},
-       "expires": 1792402928},
-      "branch": "work/query-complexity/worker-sable-query",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-query"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Bibliography entries needed (cslib format): @article{NisanSzegedy1994,\n  author    = {Nisan, Noam and Szegedy, Mario},\n  title     = {On the degree of {B}oolean functions as real polynomials},\n  journal   = {Computational Complexity},\n  volume    = {4},\n  number    = {4},\n  pages     = {301--313},\n  year      = {1994}\n}\n\n@article{Huang2019,\n  author    = {Huang, Hao},\n  title     = {Induced subgraphs of hypercubes and a proof of the {S}ensitivity {C}onjecture},\n  journal   = {Annals of Mathematics},\n  volume    = {190},\n  number    = {3},\n  pages     = {949--955},\n  year      = {2019}\n}\n\n@article{GotsmanLinial1992,\n  author    = {Gotsman, Chaim and Linial, Nathan},\n  title     = {The equivalence of two problems on the cube},\n  journal   = {Journal of Combinatorial Theory, Series A},\n  volume    = {61},\n  number    = {1},\n  pages     = {142--146},\n  year      = {1992}\n}",
+       "lease":
+       {"token": {"value": "21b13c8be7bec7e057b60f2ce68e20b0"},
+        "holder":
+        {"session": {"value": "9c907dcb85cc8554c9a1842ad08941a1"},
+         "agent": {"value": "worker-sable-query"}},
+        "expires": 1792402928},
+       "branch": "work/query-complexity/worker-sable-query",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-query"}},
+      "summary":
+      "M1: degree, Nisan relations, Huang. Degree: BitString.totalDegree f := sInf {D | f ∈ lowDegree R ι D}, totalDegree_le_iff_mem_lowDegree; mem_lowDegree_iff_fourierCoeff : f ∈ lowDegree ℝ ι D ↔ ∀ S, D < #S → fourierCoeff f S = 0; QueryComplexity.degree f (0/1 in ℝ), degree_eq_totalDegree_signVal; DecisionTree.comp_eval_mem_lowDegree, degree_le_complexity : deg f ≤ D f; degree of parity, AND, OR = n. Relations: certificateComplexity_le_sensitivity_mul_blockSensitivity : C ≤ s*bs, C ≤ bs^2; blockSensitivityFor; DecisionTree.complexity_le_blockSensitivityFor_mul_certificateComplexityFor : D ≤ bs₀*C₁; complexity_le_certificateComplexity_mul_blockSensitivity : D ≤ C*bs; complexity_le_blockSensitivity_pow_three : D ≤ bs^3. Sensitivity/Hypercube: signedAdjacency_signedAdjacency (A_S² = #S); exists_mem_sqrt_card_le_card_update_mem : 2^card ι < 2*#V → ∃ x ∈ V, √#S ≤ #{i ∈ S | update x i (!x i) ∈ V} (dimension count, no interlacing). Huang: sqrt_card_le_sensitivity_of_fourierCoeff_ne_zero; degree_le_sensitivity_sq : deg f ≤ s f ^ 2; sqrt_degree_le_sensitivity. Checks: six gates ok; tests on OR, AND, parity, maj3, address; axiom guards. Source: original (Huang's proof). Contributors: worker-sable-query only. Continuation M2: approxDegree, symmetrization, Nisan–Szegedy bs ≤ 2deg², bs ≤ 6adeg², bs ≤ 2s⁴, adeg(OR) = Θ(√n) (needs interior Markov/Ehlich–Zeller; Mathlib has endpoint Chebyshev bounds only), randomized complexity + Yao. Bib: NisanSzegedy1994, Huang2019, GotsmanLinial1992 (in note).",
+      "snapshot":
+      {"head": {"value": "a411ecce5abaed9c0bae895685994d59dcf669cd"},
+       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/QueryComplexity/Degree.lean",
     "Complexity/Computability/QueryComplexity/ApproximateDegree.lean",
