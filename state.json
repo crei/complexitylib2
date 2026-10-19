@@ -2589,7 +2589,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "1ebac7b3c86dddb38767145b5f163cec"},
+       "holder":
+       {"session": {"value": "15d3a3e432be6927c6de5db959e3458a"},
+        "agent": {"value": "worker-sable-graphs"}},
+       "expires": 1792402810},
       "branch": "work/communication-complexity/worker-sable-graphs",
       "blocked": false,
       "assignee": {"value": "worker-sable-graphs"}}}},
@@ -2611,7 +2616,7 @@
    "goal":
    "Coverage epic 5: communication complexity core on the existing Communication/Protocol (Solves, depth, leaves, ecomplexity) and TopDown rectangles; no second protocol model. M1 (deterministic): a depth-d protocol partitions X x Y into at most 2^d monochromatic rectangles; fooling-set bound; rank bound D(f) >= log2 rank M_f over the reals; EQ, GT, IP and DISJ on n bits need n+1 bits; the log-rank conjecture as a Prop. M2 (randomized): public- and private-coin protocols with error eps on the library's finite PMFs, Newman's theorem (private coins with O(log n + log 1/delta) extra bits), the discrepancy bound and R(IP) = Omega(n) via the existing Lindsey lemma. M3: distributional complexity and Yao's minimax (Mathlib Sion or finite LP duality), the corruption bound and Razborov's R(DISJ) = Omega(n) if the M2 API supports it, else tracked. Reuse Foundations/LinearAlgebra/Matrix/Lindsey, BooleanAnalysis/HadamardRectangles and the probability-toolkit Chernoff once landed. Cite KushilevitzNisan1997, Newman1991, Razborov1992 (propose entries). Tests and named axiom guards per milestone; six gates; one frozen submission per milestone.",
    "dependencies": [],
-   "authors": []},
+   "authors": [{"value": "worker-sable-graphs"}]},
   {"resume": null,
    "report": "",
    "phase": "unassigned",
