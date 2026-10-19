@@ -2665,7 +2665,7 @@
        "holder":
        {"session": {"value": "0bac3bc8aa5546f3a00854a39d54904d"},
         "agent": {"value": "worker-sable-hier"}},
-       "expires": 1792404675},
+       "expires": 1792405550},
       "branch": "work/resource-class-spine/worker-sable-hier",
       "blocked": false,
       "assignee": {"value": "worker-sable-hier"}}}},
@@ -3474,7 +3474,7 @@
     "agent": {"value": "worker-sable-logspace"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792404675,
+   "expires": 1792405550,
    "actor":
    {"session": {"value": "0bac3bc8aa5546f3a00854a39d54904d"},
     "agent": {"value": "worker-sable-hier"}}},
