@@ -700,15 +700,18 @@
        "base": {"value": "fa9ab425853b7269b74ba22374583c026e548006"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "8c5180b89fa761b0db361582ca509372"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792379771,
+          "snapshot":
+          {"head": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"},
+           "base": {"value": "fa9ab425853b7269b74ba22374583c026e548006"}},
+          "reviewer":
           {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
            "agent": {"value": "reviewer-sable-cor5"}},
-          "expires": 1792394096},
-         "blocked": false}},
+          "note":
+          "Delta correctness review by reviewer-sable-cor5 (independent; did not contribute; previously approved parent 2afafb0 on base d42eefc). Scope: merge f489429 of main fa9ab42 into 2afafb0. (1) git diff 2afafb0 f489429 over all 24 epic Lean files is empty (blobs identical); epic diff fa9ab42..f489429 matches approved d42eefc..2afafb0 (27 files, +7888/-1, identical added/removed lines in Complexity.lean, ComplexityTests.lean, references.bib); bib merge is a pure union adding OpenAI2026RationalHitting and Schlesinger2026RationalHitting, no duplicate keys. (2) lake build of the 24 epic modules incl. ComplexityTests.RationalHitting --wfail --iofail OK; lake build Complexity ComplexityTests --wfail --iofail OK (9974 jobs, incl. Axioms audit); all 24 files re-elaborated with -DwarningAsError=true, clean; mk_all --check OK. (3) Own collectAxioms probe: 13 headline decls and all 907 Cslib.Circuits.Rational.* constants within propext/Classical.choice/Quot.sound. (4) No sorry/admit/native_decide/axiom/implemented_by/extern/unsafe or set_option in the epic diff. Blocking: none. Nits: none. Limitations: delta only, math relies on prior approval; lake test/lint not rerun by me. Evidence: .lake/codex-validation/rational-hitting-correctness/review.json sha256 fd6cfe08ff6bd04bf77341f692129b09db9407424d25d8964dd55a1dcc257054"}}},
        "api":
        {"finished":
         {"review":
