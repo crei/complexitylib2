@@ -1419,7 +1419,7 @@
       {"head": {"value": "1a31f4f1ee8ba4a0daad2cea655c4b75f8a059be"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor4"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space/TQBF.lean",
