@@ -1160,7 +1160,9 @@
       "snapshot":
       {"head": {"value": "6af7e40639228bc0a83e1114d4209eccc5c1cd65"},
        "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Pointwise.lean",
     "Complexity/Computability/Circuit/Boolean/Hamming.lean",
