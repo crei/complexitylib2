@@ -975,15 +975,18 @@
        "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "d2ff89dec8524b5fcb87c3169912a950"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792371996,
+          "snapshot":
+          {"head": {"value": "976400b8ca9601e1f476041f12aa857b95f2c49a"},
+           "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
+          "reviewer":
           {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
            "agent": {"value": "reviewer-sable-cor2"}},
-          "expires": 1792386312},
-         "blocked": false}},
+          "note":
+          "Correctness review by reviewer-sable-cor2 (independent, no contribution; exact 976400b, base a0952ac ancestor verified; board tool sources equal current main). Inspected all 11 Lean files plus upstream RunsInSpace/ComputationPath/ComputableInTimeAndSpace and local Accepts/iterate rule. Built every changed module and the 3 test modules with --wfail --iofail: clean. Own #print axioms on NPSPACE_eq_PSPACE, NPSPACE_subset_PSPACE, PSPACE_subset_NPSPACE, P_subset_PSPACE, savitchDecide_eq_true_iff, exists_polyBounded_space_savitchDecide, computableTidilyInO_savitch, savitch_iff and the view/decoder lemmas: standard only. Verified: PSPACE is plain upstream ComputableInTimeAndSpace into encBool, poly space, any time; NPSPACE is upstream RunsInSpace over every prefix, Accepts = some path halted with output exactly [true], no time or all-branches requirement; equality unconditional. outputClass is an append congruence, view acceptance iff is exact, view size bound has no path length; codes in 2^(2W+2) words, depth 2W+2 via two_pow_succ_iff; malformed codes harmless; certificate is for the same step function and charges stack, counter, register, parameter and worst-case edge space; time exponential; no O(s^2) claim; decoder total, inverse, real polytime. Probes: input-dependent language whose non-members only loop forever, through NPSPACE_subset_PSPACE, decider true/false incl. empty input; oscillating one-tape machine within 2 cells; malformed codes. No blocking findings. Nits: codeWidth redundancy remark; say exactly [true] in NPSPACE docstring. Central: axiom guards, ROADMAP, UPSTREAM #767 note; main moved (no epic paths). Not run: full check.sh. Evidence .lake/codex-validation/polynomial-space-correctness/review.json sha256 1575f17add10dc4b8dabbde32b96319b3dd8e7a9797781182c866075787f14bf"}}},
        "api":
        {"active":
         {"report": "",
