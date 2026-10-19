@@ -774,7 +774,16 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor7"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api7"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "11d169ea0e7417295a06d82be076fb19"},
+          "holder":
+          {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
+           "agent": {"value": "reviewer-sable-api7"}},
+          "expires": 1792404967},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
     "Complexity/Computability/Circuit/Rational",
