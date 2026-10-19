@@ -1,15 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"},
-   "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
-  "lease":
-  {"token": {"value": "90c5bec9745b36acbea67d5b406c0a2a"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792386278},
-  "epic": {"value": "quantitative-stretch"}},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -474,53 +464,41 @@
    "report":
    "Consolidation dependency map accepted as posted (raw prefix-aware owners in Combinators/StreamFold with vendored statements kept as empty-prefix wrappers, one typed streamFold_sum_of_init owning framing/embedding/loop/cleanup/assembly with streamFold_sum and streamFold_pair_sum as short clients, nonconstant-emission ordering test, helper-inclusive burden report). Main has moved to a0952ac (disjoint files); merge it right before your final validation, since ready requires base == current main until the merge-queue tooling lands. Request publication of the exact commit through the board if the push hook blocks you.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/quantitative-stretch/worker-orion",
-       "report":
-       "PUBLICATION REQUEST: 26253c9 on work/quantitative-stretch/worker-sable-stretch (merge of frozen main c2016b0 into consolidation commit 35d8076; resumes worker-orion 0c62545 via merge 0819972). Validation: all six scripts/check.sh gates passed at exactly this tree (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports); git diff --check clean; diff against main is the 9 epic files (+1923/-71). Push blocked by the lean4 guardrail hook; not bypassed.",
-       "lease":
-       {"token": {"value": "1203b70a2fc8b862645ef91b9410ced9"},
-        "holder":
-        {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
-         "agent": {"value": "worker-sable-stretch"}},
-        "expires": 1792385434},
-       "branch": "work/quantitative-stretch/worker-sable-stretch",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-stretch"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Submitted 26253c9 on work/quantitative-stretch/worker-sable-stretch: consolidation commit 35d8076 on top of worker-orion 0c62545 (merge 0819972 of main 94dcd9d), plus a merge of frozen main c2016b0. The diff against main is the 9 epic files (+1923/-71). This answers the independent API review of 0c62545.\n\n(1) Raw owners moved to Combinators/StreamFold.lean. transformsTapesAt_streamLoop_after: input pre ++ toks.flatten, cursor 1 + pre.length; this is now the only loop induction. computesTidily_streamTM_after: stated on streamTM with a cursor-advancing TransformsTapesAt initializer; this is now the only cleanup assembly. The vendored transformsTapesAt_streamLoop (1-line body) and computesTidily_streamTM (3-line body) are empty-prefix wrappers with exact statements, machines and numerical bounds. The duplicate copies in Encodings/StreamFold.lean are deleted.\n\n(2) One new typed theorem, ComputableTidilyInTimeAndSpace.streamFold_sum_after. Input: pre x ++ (elems x).flatMap tok. Initializer: I e for every tape selection e : Fin (kI+1) to Fin K, with an exact TransformsTapesAt contract: frame (encS (init x)) on tape e (Fin.last kI), cursor 1 + (pre x).length, time tI x, space sI x + (K - (kI+1)). It proves callback framing, tape embedding, loop, finalization, cleanup and the time/workspace bounds once. The time bound is c*(tI + tF(final) + |encIn| + sum of actual roundCost + lMax + 1). The space bound is c*(sI + sF(final) + sMax + lMax + 1). The token stream is never copied. streamFold_sum (statement unchanged; initializer tmI.outputToWord.extendTapes e, empty prefix) and streamFold_pair_sum (statement unchanged; kI = 0, initializer appendRead rawFrameReader (e (Fin.last 0)), prefix the framed seed) are now 28- and 26-line clients that only supply their initializer and the final constant. Unchanged: streamFold, transformsTapesAt_streamLoop_encoded(_after), MultiPass, Streaming foldl_bits_*, and all of Stretch, including iterate/stretch output order, polyTime_iterate, the security statements, and the O(n + k + sum_i (Tgen(seed_i)+n+1)) time and separate workspace bounds with the n+k reversal charge.\n\n(3) Ordering test in ComplexityTests/PRGStretch.lean: shiftIn = ([true] ++ .) emits the last bit of its seed. From [false,false,true], three rounds emit true,false,false. decide checks: forwardIterate gives [T,F,F,T,T,T]; stretch gives [T,T,T,F,F,T]; stretch differs from the generation-order word [T,T,T,T,F,F]. A reverse_forwardIterate example and the quantitative stretch certificate example now use shiftIn. ComplexityTests/Quantitative.lean adds axiom guards for streamFold_sum_after, transformsTapesAt_streamLoop_after and computesTidily_streamTM_after (propext, Classical.choice, Quot.sound only).\n\n(4) Helper-inclusive burden. Method: scripts/proof_lengths.py theorem/lemma body lines (statements, comments and blank lines excluded), summed over the 6 library files of the epic, including every helper.\n- Main 94dcd9d: 637. Submitted 0c62545 merged with main: 1487 (+850). Now: 1330 (+693, i.e. -157).\n- The two StreamFold files: main 347, submitted 585, now 428. Loop 49+58 became 58+1; cleanup 21+25 became 25+3; streamFold_sum 132 + streamFold_pair_sum 146 became core 133 + clients 28 + 26.\n- Raw library lines against main: +1511/-10 before, +1483/-71 now (net 1501 to 1412). Tests: +390 before, +440 now.\n- reverseInput is still the one genuinely new raw TM. rawFrameReader is an InputReader descriptor run by the existing appendRead.\n\nValidation: all six scripts/check.sh gates passed at exactly 26253c9. git diff --check is clean.\n\nSources and credit: Christian Reitwiessner (stream-fold machinery, crei:crei/tidy-universal @7f7c0696), Samuel Schlesinger, [Barak2016PRG]. The review findings came from reviewer-api; none of its probe code was copied.\n\nContributors: worker-orion (0c62545) and worker-sable-stretch (consolidation). No subagents.\n\nLimitations: the core statement is new public API (upstream: candidate) and needs fresh independent API and correctness review. The Streaming foldl_bits_stream_sum / foldl_bits_pair_stream_sum arithmetic and the Stretch forwardIterate / iterate_captured proofs keep their separate structure; the review did not flag them.",
       "snapshot":
       {"head": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"},
        "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792371576,
-          "snapshot":
-          {"head": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"},
-           "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
-          "reviewer":
-          {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
-           "agent": {"value": "reviewer-sable-cor4"}},
-          "note":
-          "Correctness review of 26253c9 on c2016b0 by reviewer-sable-cor4 (independent; not an author). Scope: Stretch, Reverse, Combinators+Encodings/StreamFold, Streaming, Quantitative, tests PRGStretch+Quantitative. Evidence: 6 library + 2 test modules build --wfail --iofail, 0 warnings; whitespace-normalised statement diff: every main declaration unchanged (iterate/stretch/polyTime_iterate/security; vendored streamLoop/streamTM/streamLoop_encoded/streamFold_sum/streamFold now empty-prefix derivations). Time charges init, both generator calls per round on actual seeds, copying/control, finish and the final n+k reversal via comp; state only the seed, no suffix copying. Workspace via TimeAndSpace (not InO): forwardIterate O(Q+n+1) k-independent, reversal buffer charged. streamFold_sum_after init contract discharged by two in-tree clients. Probe ProbeStretch.lean (exit 0): nonconstant revCons through forward/iterate/stretch/degree/polytime certs; zero rounds (bounds collapse, stretch count 0 = id); empty seed; empty frame; shiftIn order test confirmed genuine; 17 axiom checks clean. Blocking: none. Nits: streamFold_pair_sum is new API vs main, not vendored (Encodings/StreamFold:583); pseudorandomGenerator proof needlessly switched to polyTime_stretch_of_length_eq (Stretch:1069); no quantitative zero-round test. Not run: check.sh. Evidence .lake/codex-validation/quantitative-stretch-correctness/review.json SHA256 e18a95d7a62debb41fa6c5611af02e023d07ae4876091ec6215655ec2646c306"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792371701,
-          "snapshot":
-          {"head": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"},
-           "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
-          "reviewer":
-          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
-           "agent": {"value": "reviewer-sable-api4"}},
-          "note":
-          "API review of 26253c9 (base c2016b0) by reviewer-sable-api4, independent, read-only. Scope: the 9 epic files plus PolyTime/List, Primitives/Lists, UPSTREAM.md and reviewer-api's 0c62545 evidence. Evidence: 6 library + 2 test modules build --wfail --iofail ok. Every vendored docstring and statement in both StreamFold files is byte-identical to main (scripted); vendored def bodies untouched; 49 base statements in Stretch/Streaming/Quantitative/tests unchanged. Consolidation verified: one loop induction (_after, 58) with a 1-line vendored wrapper; one cleanup (_after, 25) with a 3-line wrapper; streamFold_sum_after core 133 with clients 28/26; nonconstant shiftIn ordering test; burden 637->1330 reproduced. Probes ok: fun_prop positive/negative with the new rules, reverseInput on [], rawFrameReader on the empty frame, standard axioms. No blocking findings. Nits: Stretch.lean:586 iterate_captured (169 lines) re-derives forwardIterate's streaming and reversal instead of sharing; UPSTREAM.md:70 row stale (owner is now streamFold_sum_after; Combinators/StreamFold vendored loop now derived); getLast_bits/bitsGetLast name a getLast?.toList; unaryAdd vs unary_*; duplicated transducer in getLast/getLast?; inlined linear length certificate. Limitation: check.sh not rerun. Evidence .lake/codex-validation/quantitative-stretch-api/review.json sha256 5f607539f9df13c7ed32e39b7db2aef66e53c1b3fc9ea7dfed946c3f62efce30"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792371880,
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792371576,
+       "snapshot":
+       {"head": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"},
+        "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
+       "reviewer":
+       {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
+        "agent": {"value": "reviewer-sable-cor4"}},
+       "note":
+       "Correctness review of 26253c9 on c2016b0 by reviewer-sable-cor4 (independent; not an author). Scope: Stretch, Reverse, Combinators+Encodings/StreamFold, Streaming, Quantitative, tests PRGStretch+Quantitative. Evidence: 6 library + 2 test modules build --wfail --iofail, 0 warnings; whitespace-normalised statement diff: every main declaration unchanged (iterate/stretch/polyTime_iterate/security; vendored streamLoop/streamTM/streamLoop_encoded/streamFold_sum/streamFold now empty-prefix derivations). Time charges init, both generator calls per round on actual seeds, copying/control, finish and the final n+k reversal via comp; state only the seed, no suffix copying. Workspace via TimeAndSpace (not InO): forwardIterate O(Q+n+1) k-independent, reversal buffer charged. streamFold_sum_after init contract discharged by two in-tree clients. Probe ProbeStretch.lean (exit 0): nonconstant revCons through forward/iterate/stretch/degree/polytime certs; zero rounds (bounds collapse, stretch count 0 = id); empty seed; empty frame; shiftIn order test confirmed genuine; 17 axiom checks clean. Blocking: none. Nits: streamFold_pair_sum is new API vs main, not vendored (Encodings/StreamFold:583); pseudorandomGenerator proof needlessly switched to polyTime_stretch_of_length_eq (Stretch:1069); no quantitative zero-round test. Not run: check.sh. Evidence .lake/codex-validation/quantitative-stretch-correctness/review.json SHA256 e18a95d7a62debb41fa6c5611af02e023d07ae4876091ec6215655ec2646c306"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792371701,
+       "snapshot":
+       {"head": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"},
+        "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
+       "reviewer":
+       {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+        "agent": {"value": "reviewer-sable-api4"}},
+       "note":
+       "API review of 26253c9 (base c2016b0) by reviewer-sable-api4, independent, read-only. Scope: the 9 epic files plus PolyTime/List, Primitives/Lists, UPSTREAM.md and reviewer-api's 0c62545 evidence. Evidence: 6 library + 2 test modules build --wfail --iofail ok. Every vendored docstring and statement in both StreamFold files is byte-identical to main (scripted); vendored def bodies untouched; 49 base statements in Stretch/Streaming/Quantitative/tests unchanged. Consolidation verified: one loop induction (_after, 58) with a 1-line vendored wrapper; one cleanup (_after, 25) with a 3-line wrapper; streamFold_sum_after core 133 with clients 28/26; nonconstant shiftIn ordering test; burden 637->1330 reproduced. Probes ok: fun_prop positive/negative with the new rules, reverseInput on [], rawFrameReader on the empty frame, standard axioms. No blocking findings. Nits: Stretch.lean:586 iterate_captured (169 lines) re-derives forwardIterate's streaming and reversal instead of sharing; UPSTREAM.md:70 row stale (owner is now streamFold_sum_after; Combinators/StreamFold vendored loop now derived); getLast_bits/bitsGetLast name a getLast?.toList; unaryAdd vs unary_*; duplicated transducer in getLast/getLast?; inlined linear length certificate. Limitation: check.sh not rerun. Evidence .lake/codex-validation/quantitative-stretch-api/review.json sha256 5f607539f9df13c7ed32e39b7db2aef66e53c1b3fc9ea7dfed946c3f62efce30"}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Crypto/Computational/Stretch",
