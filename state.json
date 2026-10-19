@@ -1697,20 +1697,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "PUBLICATION REQUEST: head a961fddd6ef981c1546906e2f46ea1cdc7654bac on work/interactive-proofs/worker-sable-ip, base origin/main fa9ab42 (merged, diff only in epic paths + generated roots). Push denied in this session by the auto-mode classifier (not bypassed); needs `git push origin work/interactive-proofs/worker-sable-ip` from the worktree. All six gates pass at this head. Will run ready once the branch is visible on origin. Tracked continuation (milestone 2, not started): IP ⊆ PSPACE using Classes/Space (polynomial-space). Bib keys needed: GoldwasserMicaliRackoff1989, GoldreichMicaliWigderson1991 (full BibTeX in the previous note / coordinator report).",
-      "lease":
-      {"token": {"value": "4199522ac26f9b86383356f4f5e4198a"},
-       "holder":
-       {"session": {"value": "96c57dfb40db0a4654e519b0c7249d36"},
-        "agent": {"value": "worker-sable-ip"}},
-       "expires": 1792399833},
-      "branch": "work/interactive-proofs/worker-sable-ip",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-ip"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "PUBLICATION REQUEST: head a961fddd6ef981c1546906e2f46ea1cdc7654bac on work/interactive-proofs/worker-sable-ip, base origin/main fa9ab42 (merged, diff only in epic paths + generated roots). Push denied in this session by the auto-mode classifier (not bypassed); needs `git push origin work/interactive-proofs/worker-sable-ip` from the worktree. All six gates pass at this head. Will run ready once the branch is visible on origin. Tracked continuation (milestone 2, not started): IP ⊆ PSPACE using Classes/Space (polynomial-space). Bib keys needed: GoldwasserMicaliRackoff1989, GoldreichMicaliWigderson1991 (full BibTeX in the previous note / coordinator report).",
+       "lease":
+       {"token": {"value": "4199522ac26f9b86383356f4f5e4198a"},
+        "holder":
+        {"session": {"value": "96c57dfb40db0a4654e519b0c7249d36"},
+         "agent": {"value": "worker-sable-ip"}},
+        "expires": 1792399833},
+       "branch": "work/interactive-proofs/worker-sable-ip",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-ip"}},
+      "summary":
+      "Milestone 1 (Cslib.Complexity). Prover: State : Type, init, respond : Op × List Bool → StateT State PMF (List Bool), unbounded. IP enc = {A | ∃ V, IsOraclePPTOn enc encBool V ∧ IsInteractiveProof V A (2/3) (1/3)}; exists_queryBounds_of_mem_IP (poly many messages, poly length). NP_subset_IP : NP enc ⊆ IP enc; BPP_subset_IP : BPP enc ⊆ IP enc. GraphIsomorphism.mem_NP : GraphIsomorphism ∈ NP (encPair encGraph encGraph). acceptProb_guessingRound_le_half (equal message laws ⇒ ≤ 1/2); GraphNonIsomorphism.isInteractiveProof_round : IsInteractiveProof round GraphNonIsomorphism 1 (17/32); acceptProb_sequentialRepeat_le (ε^k); GraphNonIsomorphism.mem_IP : GraphNonIsomorphism ∈ IP (encPair encGraph encGraph), completeness 1. Limits: fair coins can't sample uniform permutations, so random keys ⇒ 17/32 per round (1/2 + collisions ≤ 1/16), 2 sequential rounds = 289/1024 < 1/3; constant-k sequential repetition only. Checks: six gates at 9db80c1; tests: path/triangle/relabeled path, honest prover = 1, cheating prover = 1/2 per round and ≤ (17/32)^2; 13 axiom guards. Source: AroraBarak09 Ch. 8, GMR89, GMW91; original code. Contributors: worker-sable-ip (both holders); merged open-oracle-composition commits are on main. Continuation: milestone 2 IP ⊆ PSPACE via Classes/Space. Bib: GoldwasserMicaliRackoff1989, GoldreichMicaliWigderson1991 landed on main (881b9c0); none further.",
+      "snapshot":
+      {"head": {"value": "9db80c1c477a0fab1594ab5e697456283044e6f3"},
+       "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/IP.lean",
     "Complexity/Computability/Complexity/Classes/IP",
