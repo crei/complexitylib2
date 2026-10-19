@@ -1858,7 +1858,8 @@
    "dependencies": [],
    "authors": [{"value": "worker-sable-npbuilder"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Reassigned to worker-sable-b2 to finish and redesign. Resume from work/b2-lower-bound/coordinator-sable at ca4c0bf (coordinator-sable wrote all current code). Follow the design in the coordinator brief: one reduction-accounting theorem, a Normal-form structure, concept-named files and lemmas instead of paper case numbers, then the shared-second-child, fix-input and bottleneck cases, non-vacuity and tests. Headline Theorem 4.1 name and statement stay.",
    "phase":
    {"working":
     {"work":
