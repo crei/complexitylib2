@@ -2653,7 +2653,16 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor4"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "8c166ad4de42941677faa18ddc8720ab"},
+          "holder":
+          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+           "agent": {"value": "reviewer-sable-api4"}},
+          "expires": 1792403554},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Reduction.lean",
     "Complexity/Computability/Complexity/Classes/Ladner.lean",
