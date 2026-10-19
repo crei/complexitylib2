@@ -3383,15 +3383,18 @@
           "expires": 1792407209},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "64b26207ddcb5132d60170397a846d89"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792392853,
+          "snapshot":
+          {"head": {"value": "ef44eae9d72fc56e92c44013a0514dbb65bf7e55"},
+           "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+          "reviewer":
           {"session": {"value": "6028cd701670813461915b10a3d32c60"},
            "agent": {"value": "reviewer-sable-api3"}},
-          "expires": 1792407206},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api3 (independent; no contribution) of exact head ef44eae9 over base 06c5f534; references.bib +41 lines, 4 entries, no Lean. Evidence: scripts/check_docs.py --config-only consistent (exit 0; docbuild bib is a symlink); no duplicate keys (195 entries); bibtex plain on a probe citing the 4 keys over the full file: exit 0, 0 warnings. Style matches cslib and in-repo precedent: Family, Given authors, -- ranges, aligned =, LaTeX accents; FOCS entries mirror LovaszSaks1988 (booktitle Proceedings of the Nth Annual Symposium on FOCS, series FOCS YYYY, doi); articles mirror cslib AngluinLaird1988. No blocking API findings. Nits: Chebyshev1852 series = {1} is a biblatex journal-series field ignored by BibTeX, harmless; XorLemma.lean:57 (landed) says applications, bib title (correct) is singular. Cross-kind, recorded by correctness: Ladner1975 is the JACM paper but CircuitValue.lean:27/:42 cites the SIGACT News CVP paper (10.1145/990518.990519). Not run: Lean build/six gates (docs-only). Evidence .lake/codex-validation/docs-bibliography-3-api/review.json sha256 7e3dda45e230f8ebd2e2a246c463f7747baadbdce14694824d2c3d2497feff73"}}}}}}},
    "paths": ["references.bib"],
    "id": {"value": "docs-bibliography-3"},
    "goal":
