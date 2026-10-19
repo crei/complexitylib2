@@ -18,6 +18,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792356843,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792356674,
@@ -75,6 +76,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792357641,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792357482,
@@ -128,6 +130,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792355755,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792355217,
@@ -177,6 +180,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792353277,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792353139,
@@ -222,6 +226,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358231,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358092,
@@ -309,6 +314,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364044,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792363911,
@@ -369,6 +375,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792368712,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792368575,
@@ -420,6 +427,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792361676,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792361403,
@@ -537,6 +545,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358627,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358495,
@@ -604,6 +613,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792359269,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792359175,
@@ -726,6 +736,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792360547,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792360283,
@@ -893,6 +904,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792367280,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792367120,
@@ -933,20 +945,27 @@
    "report":
    "Published: work/polynomial-space/worker-opus is at c290c00 on origin (verified in scope, on main 94dcd9d, hygiene clean). Note that main has since moved to a0952ac (fagin-converse landed; files disjoint from yours), and until the merge-queue tooling lands, ready still requires base == current main. Fastest path: git fetch origin main, merge a0952ac (expect a clean merge), re-run scripts/check.sh, request publication of the new exact commit, then ready. No further landings will move main before the tooling lands. If you prefer to wait, the tooling (expected within the hour) will let ready accept your current base.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "PUBLICATION REQUEST: merged current main a0952ac cleanly. New exact head 976400b; all six gates pass at exactly 976400b, tree clean. Please publish it as origin/work/polynomial-space/worker-opus, a fast-forward from c290c00 (the user may push it directly). I will run ready immediately afterwards. After this submission worker-opus leaves the worker role at the user's request.",
-      "lease":
-      {"token": {"value": "f7b5ebabcb965cd8ca3c1315f452e719"},
-       "holder":
-       {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
-        "agent": {"value": "worker-opus"}},
-       "expires": 1792385108},
-      "branch": "work/polynomial-space/worker-opus",
-      "blocked": false,
-      "assignee": {"value": "worker-opus"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "PUBLICATION REQUEST: merged current main a0952ac cleanly. New exact head 976400b; all six gates pass at exactly 976400b, tree clean. Please publish it as origin/work/polynomial-space/worker-opus, a fast-forward from c290c00 (the user may push it directly). I will run ready immediately afterwards. After this submission worker-opus leaves the worker role at the user's request.",
+       "lease":
+       {"token": {"value": "f7b5ebabcb965cd8ca3c1315f452e719"},
+        "holder":
+        {"session": {"value": "918c8ffc3f88bc53aeb6898ed48038a4"},
+         "agent": {"value": "worker-opus"}},
+        "expires": 1792385108},
+       "branch": "work/polynomial-space/worker-opus",
+       "blocked": false,
+       "assignee": {"value": "worker-opus"}},
+      "summary":
+      "Polynomial-space milestone at 976400b (branch head; merges current main a0952ac; NO separation merge). All six checks pass at this exact commit (build/mk_all/test/lint/lint-style/checkInitImports ok).\n\nWORKER DEPARTURE: at the user's request, worker-opus leaves the worker role after this submission. It takes no follow-ups, so please route review fixes or continuations (e.g. logspace-nl) to another worker. The branch and its history are complete; local backup refs backup/pspace-separation-merge (the earlier Decoder-library variant) and backup/pspace-assigned-old remain only in the shared clone.\n\nHEADLINES (axioms propext, Classical.choice, Quot.sound):\n- Cslib.Complexity.NPSPACE_eq_PSPACE : NPSPACE enc = PSPACE enc, unconditional, via NPSPACE_subset_PSPACE and PSPACE_subset_NPSPACE.\n- Turing.MultiTapeNTM.savitchDecide_eq_true_iff : RunsInSpace input s, s <= c(n+1)^d => (savitchDecide c d input = true <-> Accepts input).\n- Turing.MultiTapeNTM.exists_polyBounded_space_savitchDecide : exists t s, PolyBounded s and ComputableTidilyInTimeAndSpace (savitchDecide c d o enc) enc encBool t s; the time is exponential.\n- Cslib.Reachability.computableTidilyInO_savitch : the whole-algorithm certificate. Space is Sin + (d+1)(d+w+1) + |par| + edge space at the worst endpoints; time is Tin + 2^((w+2)(d+1)) * (state^2 + edge time).\n\nSEMANTICS:\n- PSPACE is plain upstream ComputableInTimeAndSpace into encBool, with PolyBounded space and some time; there is no tidiness restriction. mem_PSPACE_iff shows this is upstream DecidableInTimeAndSpace.\n- NPSPACE is upstream RunsInSpace over every computation path, and Accepts means some path halts with output exactly [true]. There is no time bound and no all-branches-halting requirement.\n- PR #767 is cited and the comparison is softened, not formalized.\n- No O(s^2) claim: the decider retains the input, and the sublinear case is in logspace-nl.\n\nFILES:\n1. Classes/Space.lean: PSPACE, NPSPACE, mem_PSPACE_iff, P_subset_PSPACE, PSPACE_subset_NPSPACE.\n2. Classes/Space/Savitch.lean: NPSPACE_subset_PSPACE, NPSPACE_eq_PSPACE.\n3. Machine/Space.lean:\n   - run-path window invariant natAbs_lt_spaceUsedByTape (the NTM analogue of ConfigBound storage_fitsIn);\n   - views with outputClass summarizing the output (a congruence for appending), ViewStep, ViewRep (derived through FiniteCfg.Represents), accepts_iff_reflTransGen_viewStep;\n   - viewLengthBound and length_encFiniteCfg_le.\n4. Complexity/Space.lean:\n   - viewStepB, with viewStepB_iff and a polytime certificate;\n   - view codes (zero tag + BitString.padWord), the all-ones accepting code, codeEdge, accepts_iff_reflTransGen_codeStep;\n   - polytime certificates for codeEdge, the initial code and the sink.\n5. Complexity/Space/Decode.lean: decodeFiniteCfg, a total polytime decoder.\n6. Complexity/Space/Savitch.lean: codeWidth, savitchDecide, its iff and its space certificate.\n7. Algorithms/Reachability/Savitch.lean: the pure algorithm.\n   - reach and reach_iff over BitString.enumList; the machine internals in Cslib.Reachability.Savitch;\n   - savitch, savitch_eq and savitch_iff, reusing RelatesWithinSteps.two_pow_succ_iff and one_iff.\n8. Complexity/Space/Reachability.lean: encodings, the round certificate, the orbit invariant and the whole-algorithm certificates.\n9. Tests:\n   - ComplexityTests/Space.lean: inhabitants; a forever-looping branch (univ in NPSPACE with s = 0); a stuck branch (empty set); halted views; repeated-output summaries; empty input; malformed and accepting codes; the decider is true on the loop machine and false on the stuck one; a nonvacuous certificate; axiom guards.\n   - ComplexityTests/Space/Machines.lean: a machine that outputs true twice is not accepted and the decider rejects it; a one-tape machine that writes its work tape satisfies RunsInSpace 1 and the decider accepts; a head running right forever satisfies no space bound; codeEdge [] and codeEdge (true::_) are false.\n   - ComplexityTests/Space/Savitch.lean: algorithm tests.\n   - Total: 3521 lines across 13 files.\n\nDECODER HELPERS (as you asked):\n- It shares these main helpers: frame, unframe, dropFrame and their append laws, encList_cons, encOption_some, encBool_apply, Transducer.computableTidilyInLinearTimeAndSpace, foldl', bitsReverse, finite_cases, stackTape_cons, biTape_mk, pi and finiteCfg_mk.\n- After relocation it duplicates no Universal/Decode combinator. Three helpers are candidates to factor into Encodings/Decoder.lean:\n  (a) cellsTransducer, which is frames + Decoder.list (Decoder.option bit) specialized to cells;\n  (b) decodeState, which would be a Decoder.finite for encFinite;\n  (c) dropFrame_iterate_encList, which belongs beside frames_encList.\n- mem_PSPACE_iff will switch to decidableInTimeAndSpace_iff when polytime-plain-bridge lands.\n\nREVIEWS:\n- A read-only Claude review found one blocker (the PSPACE docstring said \"tidily\"); it is fixed. Its should-fixes and nits are addressed, apart from the out-of-scope placements below.\n- A Codex adversarial review at a74d719 (pre-rebuild) approved with no findings; the user has since said Codex is not used by default.\n- The board now uses the merge-queue schema (integration.candidates); main's CLI cannot parse it, so this ready was posted with the CLI built from work/merge-queue-landing/worker-sable-tooling d7c1d7e.\n- These are author-side reviews, not final reviews.\n\nCONTRIBUTORS:\n- worker-opus (Claude Opus 5.5).\n- One Claude subagent wrote the Savitch algorithm and certificates and their refactor (header Bolton Bailey, Samuel Schlesinger: the stack-frame design follows v1 Classes/Containments/Internal/Savitch* by Bolton Bailey; no v1 code ported).\n- The read-only Claude reviewer.\n- Nothing is ported from v1 Classes/Space or NPSPACESubsetPSPACE.\n\nCENTRAL / PLACEMENT REQUESTS:\n- ComplexityTests/Axioms.lean guards for NPSPACE_eq_PSPACE, NPSPACE_subset_PSPACE, PSPACE_subset_NPSPACE, P_subset_PSPACE, Reachability.savitch_iff and exists_polyBounded_space_savitch.\n- ROADMAP: record polynomial-space Savitch as done; NSPACE(s) subset DSPACE(s^2) for sublinear s, L/NL and TQBF remain.\n- UPSTREAM: the PR #767 DSPACE convention note.\n- Placements:\n  - StackTape.length_le_of_read_eq_none, StackTape.foldr_cons_toList, BiTape.spaceUsed_le_of_read_eq_none and BiTape.Represents.spaceUsed_le go to the Foundations StackTape/BiTape files.\n  - The private enumList indexing lemmas and Savitch.next / next_getElem_enumList go to Cslib.BitString.\n  - Kolmogorov.encard_setOf_length_eq goes to Cslib.BitString.\n  - bits_two_pow_sub_one goes to the Nat.bits material.",
+      "snapshot":
+      {"head": {"value": "976400b8ca9601e1f476041f12aa857b95f2c49a"},
+       "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space.lean",
     "Complexity/Computability/Complexity/Classes/Space",
@@ -979,6 +998,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364773,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792364624,
@@ -1085,6 +1105,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792370838,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792369636,
