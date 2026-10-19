@@ -2765,7 +2765,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "a6d34670df64b749017392e73c05071c"},
+       "holder":
+       {"session": {"value": "a0e20ed2f18f79a2430412c297824d94"},
+        "agent": {"value": "worker-sable-tqbf"}},
+       "expires": 1792403926},
       "branch": "work/fine-grained/worker-sable-tqbf",
       "blocked": false,
       "assignee": {"value": "worker-sable-tqbf"}}}},
@@ -2778,7 +2783,7 @@
    "goal":
    "Coverage epic 8: ETH, SETH and fine-grained reductions in the library time model (the DTIME of hierarchy-theorems; one definition). M1: ETH, SETH (with the exponents s_k) and the orthogonal-vectors hypothesis as Props with exact quantifiers; via the formalized sparsification lemma (Logics/Propositional/ClauseSet/Sparsification), ETH iff no 2^(o(m)) algorithm for 3SAT; SETH implies OVH (Williams 2005). M2: ETH implies no 2^(o(n)) algorithms for 3-coloring, independent set, vertex cover and clique, via size-tracked versions of the landed reductions (state the linear size bounds explicitly; do not change the existing NP-completeness statements). M3: the PPZ algorithm and its running time from CNF/Coding if cheap. Cite ImpagliazzoPaturi2001, ImpagliazzoPaturiZane2001, Williams2005 (propose entries). Tests, named axiom guards, six gates.",
    "dependencies": [{"value": "hierarchy-theorems"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-tqbf"}]},
   {"resume": null,
    "report":
    "Both reviews requested changes: PSPACE shape claim, fixed-power forms, coverage-priorities section duplicates the board, link targets and wrapping.",
