@@ -2919,7 +2919,16 @@
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor2"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "a130cea227bd7656f80e8b680f1e86d9"},
+          "holder":
+          {"session": {"value": "33380288772710be7744d177c8f66871"},
+           "agent": {"value": "reviewer-sable-api2"}},
+          "expires": 1792405412},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/HardCore.lean",
     "Complexity/Computability/Circuit/Boolean/HardCore",
