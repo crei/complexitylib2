@@ -1420,15 +1420,18 @@
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "c75144c5cf1b17a5a5521b1ff26e327f"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792385950,
+          "snapshot":
+          {"head": {"value": "1a31f4f1ee8ba4a0daad2cea655c4b75f8a059be"},
+           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+          "reviewer":
           {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
            "agent": {"value": "reviewer-sable-cor4"}},
-          "expires": 1792400233},
-         "blocked": false}},
+          "note":
+          "Correctness review by reviewer-sable-cor4 (independent; no contribution) of exact 1a31f4f (base f489429 ancestor ok). Built 7 epic modules + ComplexityTests.TQBF --wfail --iofail: clean (6466 jobs). Hygiene grep clean (no sorry/native_decide/axiom/set_option). Membership: evaluate = step^[2^L] of a total explicit-stack machine; evaluate_eq = Closed && eval; callSteps<4^n<=2^L. Library ComputableTidilyInO.iterate charges counter |encNat 2^L|=L+1, init copy, step space, states <=16(L+1)^2 (<=L frames each with token+suffix copy; Good invariant); input tape read-only. Stated 2^L*(L+1)^e / (L+1)^e is exactly the proved bound; TQBF_mem_PSPACE lands in Classes/Space PSPACE. Hardness: reduce = Savitch formula at width=depth=2W+2 over viewCode/acceptCode (formula form of approved savitchDecide), level 0 = Cook-Levin tableau of edgeTest machine, odd vars; reduce_mem_TQBF_iff via closed/eval_savitchFormula, savitch_eq, savitchDecide_eq_true_iff; tableau time matches tidy run; polytime cert real for same function. PSPACEHard/Complete unfold by Iff.rfl to textbook Karp form (as NPHard). Own probes: TQBF in P -> PSPACE subset P; kernel-run evaluate on top/bot; open/shadowing/sibling-scope cases; encQBF injective; width>=2; 15 #print axioms standard only. Nits: QBF.lean says completeness unproved; ex/all v (var v) claims lack lemmas; private pow_le_pow_of_le dup. Not run: full check.sh. Evidence .lake/codex-validation/tqbf-pspace-complete-correctness/review.json sha256 7a675983f6886ffe8a8df43a39d78fb22625d0280b8d31a808d0bcee91da8ece"}}},
        "api":
        {"active":
         {"report": "",
