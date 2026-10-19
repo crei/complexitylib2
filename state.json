@@ -1657,20 +1657,27 @@
    "report":
    "API review (reviewer-sable-api3) requested changes: Universal.length_applyTapes (Hardwire.lean:261) duplicates Universal.length_applyTapes_eq and collides with a vendored private name; space_le_space_of_halted (Basic.lean:91) follows from existing lemmas. Correctness approved with docstring follow-ups.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "API review (reviewer-sable-api3) requested changes: Universal.length_applyTapes (Hardwire.lean:261) duplicates Universal.length_applyTapes_eq and collides with a vendored private name; space_le_space_of_halted (Basic.lean:91) follows from existing lemmas. Correctness approved with docstring follow-ups.",
-      "lease":
-      {"token": {"value": "ba3520aa1adfe5e19471b4f8f18f663f"},
-       "holder":
-       {"session": {"value": "7781632cd73663d87f4e864c19b303a8"},
-        "agent": {"value": "worker-sable-undecid"}},
-       "expires": 1792404311},
-      "branch": "work/undecidability/worker-sable-undecid",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-undecid"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "API review (reviewer-sable-api3) requested changes: Universal.length_applyTapes (Hardwire.lean:261) duplicates Universal.length_applyTapes_eq and collides with a vendored private name; space_le_space_of_halted (Basic.lean:91) follows from existing lemmas. Correctness approved with docstring follow-ups.",
+       "lease":
+       {"token": {"value": "ba3520aa1adfe5e19471b4f8f18f663f"},
+        "holder":
+        {"session": {"value": "7781632cd73663d87f4e864c19b303a8"},
+         "agent": {"value": "worker-sable-undecid"}},
+        "expires": 1792404311},
+       "branch": "work/undecidability/worker-sable-undecid",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-undecid"}},
+      "summary":
+      "API-review fixes, base 0d8ef4bf head 619bc0b5 (merges current main). B1: deleted Universal.length_applyTapes (uses length_applyTapes_eq) and space_le_space_of_halted (Computes.exists_computesInTimeAndSpace now uses runsInSpace_of_halted hu le_rfl). N1: helper names moved under Universal.Redirect (runs, virtual tapes, redirect, rewind, bitSyms, eBit_false/true, read_blank, applyTapes lemmas), Universal.Hardwire (writeEntries, copyEntries, SMN helpers), Universal.Dispatch (outAct, dstate); length_step_workTapes renamed length_workTapes_step. N3 left (PolyTime/Option.lean outside paths). N4: Computable.lean names the five notions with .isComputable. N7: three simp calls made simp only. N8: behaviour→behavior (behavior, exists_behavior_eq, not_isDecidable_of_behavior; prose too). Correctness docs: exists_behavior_eq stated as the two-way case of Kleene's recursion theorem; Halting.lean Mathlib comparison reworded (halting_problem fixes the input, rice/rice₂); not_forall_halted_diagonal qualified by its module. New corollary: not_isDecidable_halts (x) : ¬IsDecidable {w | (decodeDesc w).Halts (x.map eBit)} encBits, via rice; test + axiom guard. Checks: run-gates six gates ok at 619bc0b5. Contributors: worker-sable-undecid. Bib still needed: Turing1936, Rice1953 (entries in previous summary).",
+      "snapshot":
+      {"head": {"value": "619bc0b59c3217fe8e9cb7ea1ddf1697444ede60"},
+       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Halting.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Halting",
