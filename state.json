@@ -797,7 +797,7 @@
    "authors": [{"value": "worker-opus"}, {"value": "integrator-sable-1"}]},
   {"resume": null,
    "report":
-   "Addendum: Boolean/Equality.lean and Boolean/CompareSwap.lean already exist on main; reuse them for word equality and compare-swap before writing Word.lean counterparts, and build Word.lean only for the arithmetic that is genuinely missing (carry chains, add, sub, unsigned less-than, mux, constants).",
+   "Published: work/iteration-fixed-power/worker-fable is at a1207d5 on origin (checkpoint verified in scope and hygiene clean; headline fixed_power_on and fixed_power proved). Continue with the consequences, ComplexityTests/Iteration.lean and the six gates. Main has moved to a0952ac (fagin-converse landed, disjoint files); merge it at your next clean checkpoint. Request publication of the exact final commit through the board as you did; ready requires base == current main until the merge-queue tooling lands.",
    "phase":
    {"working":
     {"work":
