@@ -1,21 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "7713dab891f6189e31a4d968405650308f91c5eb"},
-   "base": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"}},
-  "main": {"value": "4c8d00c133ca1b2983a938b9889ff78593502e09"},
-  "lease":
-  {"token": {"value": "8cf34bbe65dd2595bc90551245e7a0b9"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792402178},
-  "epic": {"value": "explicit-affine-disperser"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "7713dab891f6189e31a4d968405650308f91c5eb"},
-     "base": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"}},
-    "epic": {"value": "explicit-affine-disperser"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -2138,52 +2122,42 @@
    "report":
    "API review (reviewer-sable-api3): three public restatements of Mathlib facts (Cslib.two_eq_zero = CharTwo.two_eq_zero; FiniteField.charP_two = charP_of_injective_algebraMap; exists_span_range_eq = Submodule.exists_fun_fin_finrank_span_eq) must go; merge main for the landed bibliography entries; cheap nits.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report": "",
-       "lease":
-       {"token": {"value": "1d511e4f10c0e1e8c1bf58afcc83c828"},
-        "holder":
-        {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
-         "agent": {"value": "worker-sable-disperser"}},
-        "expires": 1792401306},
-       "branch": "work/explicit-affine-disperser/worker-sable-disperser",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-disperser"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "M1 revision after API review (correctness approved). Delta from 48291a1: public Mathlib restatements removed (Cslib.two_eq_zero inlined; charP_two -> charP_of_injective_algebraMap' (ZMod 2) 2; exists_span_range_eq -> Submodule.exists_fun_fin_finrank_span_eq); CubeSum helpers elim_smul_eq_mul / prod_elim_algebraMap / sum_cube_ite now private; namespace Cslib.FiniteField renamed to Cslib.AffineDisperser (no shadowing of Mathlib FiniteField); subspacePoly_monic -> monic_subspacePoly; exists_coeffPattern drops redundant hW; new traceSym_eq_esymm : traceSym μ r t x = Tr(μ * (univ.val.map fun i => x i ^ (2^(r+1-i)-1)).esymm t); docstrings (L3.13 analogue, Thm 6.1 finite-difference form and threshold one better than the paper, '> n'); tests: vacuous covering example replaced by a satisfiability witness and a J = {0,2} vs I = {1,2} exclusion, F^100 dimension wording. Headline statements unchanged: exists_traceSym_ne, exists_trace_mul_prod_det_mooreMatrix_ne_zero. Merged origin/main (bib entries BenSassonKopparty2012, Ore1933, Bourgain2007 now on main). Six gates ok at 7713dab. Contributors: worker-sable-disperser. Continuation unchanged: M2 explicit composite-degree field, bit-string function, d(N) = O(N/log N), IsAffineDisperser bridge; M3 poly-time certificate. Recorded follow-up: placement of general algebra (Moore, det = permanent in char 2, cube sums, subfield bounds).",
       "snapshot":
       {"head": {"value": "7713dab891f6189e31a4d968405650308f91c5eb"},
        "base": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792387526,
-          "snapshot":
-          {"head": {"value": "7713dab891f6189e31a4d968405650308f91c5eb"},
-           "base": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"}},
-          "reviewer":
-          {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
-           "agent": {"value": "reviewer-sable-cor3"}},
-          "note":
-          "Delta correctness, independent (reviewer-sable-cor3); prior approve of 48291a1. Delta = 20505e61 API refactor + merge 7713dab (touches no epic file). Built 6 epic modules + test --wfail --iofail exit 0; each file re-elaborated from source, no diagnostics; no sorry/native_decide/axiom/set_option. Headlines exists_traceSym_ne and exists_trace_mul_prod_det_mooreMatrix_ne_zero: #check output identical to 48291a1 modulo Cslib.FiniteField->Cslib.AffineDisperser, and fully spelled-out statements typecheck against the new constants. Replacement proofs sound: Mathlib charP_of_injective_algebraMap', Submodule.exists_fun_fin_finrank_span_eq with finrank(span W)=finrank W rewrites, inlined two_eq_zero, hW now derived from s<d (exists_coeffPattern strictly more general). traceSym_eq_esymm true, cross-checked by own probe against MvPolynomial.aeval of esymm (Fin r) (ZMod 2) t. New tests meaningful: covering hypotheses satisfiable; second example uses eq_of_covering to exclude J={0,2} vs I={1,2}, where slot counting (4 vs 3) does not (decide, not native_decide). Own probe: 19 #print axioms = propext, Classical.choice, Quot.sound; earlier prime-regime (n=101,s=1: 859<1010 on top and proper subspace) and n(t-1) sanity probes still pass. Blocking: none. Limits: no six gates/global Axioms/lint. Evidence .lake/codex-validation/explicit-affine-disperser-correctness/delta-7713dab/review.json sha256 21adf63cfdfa6cbffc690adddad14721a1fb221f0aeccc9a771bcbe0dc98f6d3"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792387496,
-          "snapshot":
-          {"head": {"value": "7713dab891f6189e31a4d968405650308f91c5eb"},
-           "base": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"}},
-          "reviewer":
-          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
-           "agent": {"value": "reviewer-sable-api3"}},
-          "note":
-          "Delta API review (reviewer-sable-api3, independent, read-only) of 7713dab vs d130901; prior verdict changes at 48291a1. Delta = 20505e6 + merge of main; epic diff touches only its 6 modules, tests, Complexity.lean, ComplexityTests.lean. Build of 6 modules + ComplexityTests.AffineDisperser --wfail ok; headline and traceSym_eq_esymm axioms std. BLOCKING RESOLVED: B1 Cslib.two_eq_zero removed (local h2), CubeSum helpers private; probe: open Cslib CharTwo; two_eq_zero is unambiguous. B2 charP_two replaced by charP_of_injective_algebraMap' everywhere. B3 exists_span_range_eq replaced by Submodule.exists_fun_fin_finrank_span_eq + span_eq. Nits fixed: namespace Cslib.AffineDisperser (no Cslib.FiniteField left), monic_subspacePoly, hW dropped, traceSym_eq_esymm bridge, 'analogue of L3.13', Thm 6.1 threshold noted, covering tests now real ({0,2} cannot cover {1,2}). No new Mathlib duplication: new public decls are only the esymm bridge and a test lemma; meta probe finds no name collisions for 61 public decls vs root/Polynomial/Matrix/Finset/Module/FiniteField/CharTwo etc. Bib keys present at head. Non-blocking: general-algebra placement (accepted follow-up); IsLinearized/mooreMatrix fix q=2. Skipped: six gates, lint. Evidence .lake/codex-validation/explicit-affine-disperser-api/review-delta.json sha256 e8efaef5fc98180cd91522439e19837d7e8503fc97bf66f97dc28f25cd86b780"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792387781,
+      "landed": {"value": "59b6eced334cffb786e5500118f136f3e1cbe94a"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792387526,
+       "snapshot":
+       {"head": {"value": "7713dab891f6189e31a4d968405650308f91c5eb"},
+        "base": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"}},
+       "reviewer":
+       {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
+        "agent": {"value": "reviewer-sable-cor3"}},
+       "note":
+       "Delta correctness, independent (reviewer-sable-cor3); prior approve of 48291a1. Delta = 20505e61 API refactor + merge 7713dab (touches no epic file). Built 6 epic modules + test --wfail --iofail exit 0; each file re-elaborated from source, no diagnostics; no sorry/native_decide/axiom/set_option. Headlines exists_traceSym_ne and exists_trace_mul_prod_det_mooreMatrix_ne_zero: #check output identical to 48291a1 modulo Cslib.FiniteField->Cslib.AffineDisperser, and fully spelled-out statements typecheck against the new constants. Replacement proofs sound: Mathlib charP_of_injective_algebraMap', Submodule.exists_fun_fin_finrank_span_eq with finrank(span W)=finrank W rewrites, inlined two_eq_zero, hW now derived from s<d (exists_coeffPattern strictly more general). traceSym_eq_esymm true, cross-checked by own probe against MvPolynomial.aeval of esymm (Fin r) (ZMod 2) t. New tests meaningful: covering hypotheses satisfiable; second example uses eq_of_covering to exclude J={0,2} vs I={1,2}, where slot counting (4 vs 3) does not (decide, not native_decide). Own probe: 19 #print axioms = propext, Classical.choice, Quot.sound; earlier prime-regime (n=101,s=1: 859<1010 on top and proper subspace) and n(t-1) sanity probes still pass. Blocking: none. Limits: no six gates/global Axioms/lint. Evidence .lake/codex-validation/explicit-affine-disperser-correctness/delta-7713dab/review.json sha256 21adf63cfdfa6cbffc690adddad14721a1fb221f0aeccc9a771bcbe0dc98f6d3"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792387496,
+       "snapshot":
+       {"head": {"value": "7713dab891f6189e31a4d968405650308f91c5eb"},
+        "base": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"}},
+       "reviewer":
+       {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+        "agent": {"value": "reviewer-sable-api3"}},
+       "note":
+       "Delta API review (reviewer-sable-api3, independent, read-only) of 7713dab vs d130901; prior verdict changes at 48291a1. Delta = 20505e6 + merge of main; epic diff touches only its 6 modules, tests, Complexity.lean, ComplexityTests.lean. Build of 6 modules + ComplexityTests.AffineDisperser --wfail ok; headline and traceSym_eq_esymm axioms std. BLOCKING RESOLVED: B1 Cslib.two_eq_zero removed (local h2), CubeSum helpers private; probe: open Cslib CharTwo; two_eq_zero is unambiguous. B2 charP_two replaced by charP_of_injective_algebraMap' everywhere. B3 exists_span_range_eq replaced by Submodule.exists_fun_fin_finrank_span_eq + span_eq. Nits fixed: namespace Cslib.AffineDisperser (no Cslib.FiniteField left), monic_subspacePoly, hW dropped, traceSym_eq_esymm bridge, 'analogue of L3.13', Thm 6.1 threshold noted, covering tests now real ({0,2} cannot cover {1,2}). No new Mathlib duplication: new public decls are only the esymm bridge and a test lemma; meta probe finds no name collisions for 61 public decls vs root/Polynomial/Matrix/Finset/Module/FiniteField/CharTwo etc. Bib keys present at head. Non-blocking: general-algebra placement (accepted follow-up); IsLinearized/mooreMatrix fix q=2. Skipped: six gates, lint. Evidence .lake/codex-validation/explicit-affine-disperser-api/review-delta.json sha256 e8efaef5fc98180cd91522439e19837d7e8503fc97bf66f97dc28f25cd86b780"}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
     "Complexity/Foundations/Combinatorics/AffineDisperser.lean",
