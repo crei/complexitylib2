@@ -1654,7 +1654,7 @@
     {"work":
      {"resume": null,
       "report":
-      "Resumed d236fae; merged main (c31e649), Halting modules build. Remaining: classical Rice. Plan: Desc-level input hardwiring (s-m-n, polytime) + Desc-level dispatch after a tidy total machine + Kleene fixed point, in Halting/Hardwire.lean and Halting/Rice.lean.",
+      "Classical Rice proved (Turing.MultiTapeTM.rice) via polytime s-m-n (computableTidilyInPolyTime_hardwire), Desc-level dispatch and a recursion theorem (exists_behaviour_eq). Now docs, tests, gates.",
       "lease":
       {"token": {"value": "f6fe835348be59c882fc08e25d10d6b4"},
        "holder":
