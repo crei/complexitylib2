@@ -2313,15 +2313,18 @@
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "bea9006b5c902efa2eb8dba163c0183c"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792392272,
+          "snapshot":
+          {"head": {"value": "783c51e2f3c92f958790d4d8768ecd45c24fca3e"},
+           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+          "reviewer":
           {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
            "agent": {"value": "reviewer-sable-cor3"}},
-          "expires": 1792406640},
-         "blocked": false}},
+          "note":
+          "Correctness review by reviewer-sable-cor3 (independent, read-only) of exact head 783c51e2. Built Threshold + ComplexityTests.AffineDisperser with --wfail --iofail: OK. Headline exists_explicitDisperser_ne is exactly disperser-for-dimension explicitThreshold N + 1 (probe). explicitThreshold is a closed form; the Lean value at 2^60 = 85913322832211920 matches an independent Python recomputation, ratio 0.0745 < 0.1. Numerically (l+1)thr/N is about 4 for exponents 30..400 and thr ln N / N is about 2.76, consistent with eventually_explicitThreshold_le and isBigO (bound 6, Real.log, correct). prodPowBasis, card_subfield_le_of_lt_prime and four_pow_le_mul_prod_primesIoc (Mathlib theta_ge, theta_le_log4_mul_x) are correct, and their hypotheses are instantiated. Explicitness: leastIrreducible is canonical (Nat.find). binaryRoot (BinaryField.lean:197) uses Classical.choose, but f_N is choice-independent: root tuples differ by a Frobenius power (CRT on distinct primes), and traceSymBits 1 is invariant under automorphisms (proved in probe Invariance.lean). No sorry, native_decide, axiom or set_option; #print axioms of 13 decls gives propext, Classical.choice, Quot.sound. Blocking: none. Follow-ups: M3 needs the choice-independence lemma; Chebyshev1852 is missing from references.bib (Primes.lean:43); IsAffineDisperser bridge deferred; the eventual N0 is astronomically large. Not checked: M1 base theorem, BSK Thm 7.3 numbering, API. Evidence: .lake/codex-validation/explicit-affine-disperser-2-correctness/review.json sha256 c4d4f16e42553c6ba92b7f14c2a525139607e00cc00dcf50bea4f4c1a713ecdf"}}},
        "api":
        {"active":
         {"report": "",
