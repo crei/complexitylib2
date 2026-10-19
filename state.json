@@ -1470,20 +1470,27 @@
    "report":
    "Answer to the scope question: do NOT write a separate binary comparison certificate. np-complete-numbers already has binary_lt/binary_le/binary_add/binary_sum certificates for encNat and is moving them now to Machines/Turing/MultiTape/Complexity/PolyTime/Nat/Binary.lean; it lands in the next batch. Order your work so TSP NP membership comes last and imports that module after numbers lands (merge main then); if the rest is ready first, submit VertexCover, 3-coloring and the Hamiltonian problems as milestone 1 and TSP as milestone 2. Also: a shared NP witness builder (epic np-witness-builder, Classes/NP/Witness.lean) is in progress; keep the current verifier pattern for now; your problems migrate in a follow-up.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Complete and validated locally: head 7b2a261 (base f489429), six gates pass, TSP.mem_NP and TSP_npComplete via shared PolyTime/Nat/Binary certificates. Push of work/np-complete-graphs/worker-sable-graphs is blocked for this agent (auto-mode classifier denies LEAN4_GUARDRAILS_BYPASS; lean4 guardrail blocks plain push). Needs the user to run: git push origin work/np-complete-graphs/worker-sable-graphs ; then ready can be submitted.",
-      "lease":
-      {"token": {"value": "791beb8e91346bcfbf88b3534d144528"},
-       "holder":
-       {"session": {"value": "15d3a3e432be6927c6de5db959e3458a"},
-        "agent": {"value": "worker-sable-graphs"}},
-       "expires": 1792399611},
-      "branch": "work/np-complete-graphs/worker-sable-graphs",
-      "blocked": true,
-      "assignee": {"value": "worker-sable-graphs"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Complete and validated locally: head 7b2a261 (base f489429), six gates pass, TSP.mem_NP and TSP_npComplete via shared PolyTime/Nat/Binary certificates. Push of work/np-complete-graphs/worker-sable-graphs is blocked for this agent (auto-mode classifier denies LEAN4_GUARDRAILS_BYPASS; lean4 guardrail blocks plain push). Needs the user to run: git push origin work/np-complete-graphs/worker-sable-graphs ; then ready can be submitted.",
+       "lease":
+       {"token": {"value": "791beb8e91346bcfbf88b3534d144528"},
+        "holder":
+        {"session": {"value": "15d3a3e432be6927c6de5db959e3458a"},
+         "agent": {"value": "worker-sable-graphs"}},
+        "expires": 1792399611},
+       "branch": "work/np-complete-graphs/worker-sable-graphs",
+       "blocked": true,
+       "assignee": {"value": "worker-sable-graphs"}},
+      "summary":
+      "np-complete-graphs, both milestones. Base f489429, head 7b2a261. On Graph/encGraph: VertexCover_npComplete : NPComplete (encPair encGraph encNat) VertexCover (exact-size covers; mem_VertexCover_iff_exists_card_le gives the <=k form for k <= n); KColoring.mem_NP k; ThreeColoring_npComplete; KColoring_npComplete (3 <= k); DirHamPath_npComplete, DirHamCycle_npComplete (Sipser 7.46 diamonds); HamPath_npComplete, HamCycle_npComplete (vertex splitting); TSP_npHard; TSP.mem_NP : TSP ∈ NP encTSP (Graph.verifyOrdering, X^2 certificates, shared binary_sum/binary_le); TSP_npComplete : NPComplete encTSP TSP. Checks: scripts/check.sh six gates pass at head; ComplexityTests/NPCompleteGraphs*: graphs in/out of each language, empty-graph and k = 0 boundaries, gadget checks, axiom guards for all 8 NPComplete theorems. Sources: Karp1972, Sipser2013 Thm 7.46/7.55, Papadimitriou94 9.3; original formalization. Contributors: worker-sable-graphs (both holders); helpers sable-graphs-verify (Hamiltonian verifiers), sable-graphs-split (Undirected.lean), sable-graphs-tsp (TSP reduction, via 4e5cad3). Limitations: verifiers migrate in np-witness-builder; private binary-index lookup in TSP.lean could move to PolyTime/Nat/Binary. Bib: @book{GareyJohnson1979, author = {Garey, Michael R. and Johnson, David S.}, title = {Computers and Intractability: A Guide to the Theory of {NP}-Completeness}, publisher = {W. H. Freeman}, address = {San Francisco}, year = {1979}}",
+      "snapshot":
+      {"head": {"value": "7b2a2619cc5d6756dfc2c1ff64daf525f301ba26"},
+       "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/VertexCover.lean",
     "Complexity/Computability/Complexity/Problems/Coloring.lean",
