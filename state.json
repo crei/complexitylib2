@@ -2428,15 +2428,18 @@
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "ab434dcb13131e51be00818bf8081d96"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792391416,
+          "snapshot":
+          {"head": {"value": "e3761bf730233e37d71fabefaf2356c864642e5f"},
+           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+          "reviewer":
           {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
            "agent": {"value": "reviewer-sable-cor6"}},
-          "expires": 1792405712},
-         "blocked": false}},
+          "note":
+          "Independent correctness review by reviewer-sable-cor6 (no contribution; author worker-sable-relativ) of exact e3761bf7 over 4274652a. Build of 10 Oracle modules + ComplexityTests.Relativization, nice, --wfail --iofail: success, 0 warnings. Hygiene: no sorry/native_decide/axiom/set_option in diff; meta audit of 323 constants in touched Oracle modules: only propext/Classical.choice/Quot.sound. Oracle defs unchanged (docstring only): each query symbol costs an instruction; probe derives poly bounds on request count and length. P^A subset PSPACE and NP^A subset PSPACE land in base non-oracle PSPACE: coin-fixed clocked run simulated by ComputableTidilyInO.iterate (space = counter + start + per-round + state, not cumulative), each answer computed by the PSPACE decider on the pending request (length <= clock); certificate search iterates 2^p(n) rounds with binary counter. image_TQBF_pspaceComplete: isCode re-encodes, so exactly words of true closed formulas. Monotonicity: many-one g, open substitution. Probes: headlines restated; P^TQBF = PSPACE, NP^TQBF = PSPACE on encQBF; empty oracle; PSPACE A gives P^A within P^TQBF; P^B countable so P^TQBF = NP^TQBF != univ and PSPACE != univ; on Unit P^B = NP^B for all B. Blocking: none. Nits: Collapse.lean:95 baker_gill_solovay docstring does not say instances are words (encBits); separation fails for finite instance types. Space.lean:27 cites NPSPACE though proof bypasses it. Not checked: six gates, API. Evidence .lake/codex-validation/relativization-2-correctness/review.json sha256 a9e45044f6bb5eae8fb8231a460af573728bf68223349f55fea2afcf8bccde9c"}}},
        "api":
        {"active":
         {"report": "",
