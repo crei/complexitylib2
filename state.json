@@ -3219,7 +3219,7 @@
        "holder":
        {"session": {"value": "9b318203e8a9985d589db0583a2bb7af"},
         "agent": {"value": "worker-sable-npbuilder"}},
-       "expires": 1792406250},
+       "expires": 1792406316},
       "branch": "work/np-witness-migration-b/worker-sable-npbuilder",
       "blocked": false,
       "assignee": {"value": "worker-sable-npbuilder"}}}},
@@ -3516,7 +3516,7 @@
     "agent": {"value": "sable-graphs-verify"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792403953,
+   "expires": 1792406316,
    "actor":
    {"session": {"value": "9b318203e8a9985d589db0583a2bb7af"},
     "agent": {"value": "worker-sable-npbuilder"}}},
