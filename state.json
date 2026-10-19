@@ -2483,7 +2483,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "08d2f86fbbb14be3d31fc575e4974f36"},
+       "holder":
+       {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
+        "agent": {"value": "worker-sable-stretch"}},
+       "expires": 1792401813},
       "branch": "work/machine-classes-consolidation/worker-sable-stretch",
       "blocked": false,
       "assignee": {"value": "worker-sable-stretch"}}}},
@@ -2516,7 +2521,7 @@
    "goal":
    "Architecture consolidation of review follow-ups (coordinator scratchpad followups.md): move general lemmas out of Ladner/TQBF/LogSpace files into their homes: PolyTimeReducible.mem_P to Reduction.lean; a general NPComplete.P_eq_NP_of_mem_P beside SAT_npComplete (CookLevin), deriving the Ladner corollaries; Nat/Bool/CNF decoders to Encodings/Decoder.lean; universal-machine poly-time helpers (computableTidilyInPolyTime_universal, universal_bounds_unary, runBound_mono) to the new local candidate file Universal/PolyTime.lean since the Universal files are vendored; PSPACEHard/PSPACEComplete/.trans into Classes/Space.lean beside PSPACE (Reduction.lean must not import Space); CookLevin.exists_eval_tableau_iff into CookLevin/Correctness with tableau_satisfiable_iff derived from it; factor the L_subset_NL / PSPACE_subset_NPSPACE shared step; restate NPSPACE via DecidesInSpace; fix the LogSpace/Reachability docstring reference; move Nat.two_pow_log2_succ_le and polyBounded_log to Foundations; make parityOn_symmDiff public in BitString/Parity; move the tests of complexity_single_proj/one_le_complexity_single beside their new home. Excluded for now: QBF connectives and QBF docstring (fagin-polish holds Logics), P_subset_NP (resource-class-spine Inclusions), oracle items (relativization-2), NP-problem helpers (np-witness-builder). No statement weakened; public names kept; six gates; two reviews.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "worker-sable-stretch"}]}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
