@@ -1503,7 +1503,7 @@
     {"work":
      {"resume": null,
       "report":
-      "PUBLICATION REQUEST: a8ce0451e598a9d7f5f836cff60a255787cae44f on work/np-complete-numbers/worker-sable-numbers (feature commit 0035afc + merge of origin/main d42eefc). git push blocked by the lean4 guardrail hook; not bypassed. Validation on this exact head: scripts/check.sh all six gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Delivered: SubsetSum_npComplete (Sipser digit construction from ThreeSAT, base 8, size < 8^(n+m)), Partition_npComplete, Knapsack_npComplete, ZeroOneIP_npComplete (equality form, natural coefficients), all binary-encoded; axioms propext/Classical.choice/Quot.sound. Will run ready once the branch is on the remote.",
+      "PUBLICATION REQUEST: 92aeab0e755f407e092b7cd28d3242117e0e1d5a on work/np-complete-numbers/worker-sable-numbers (\"refactor: place binary natural-number certificates beside PolyTime/Nat\", on top of a8ce045 = 0035afc + merge of origin/main d42eefc; main still d42eefc). Binary certificates moved to Machines/Turing/MultiTape/Complexity/PolyTime/Nat/Binary.lean, namespaces unchanged, docstring places it beside the unary PolyTime/Nat certificates, imports and roots updated. scripts/check.sh: all six gates ok on this exact head. Clean tree.",
       "lease":
       {"token": {"value": "7fc66c278e99124ab7c38af88a05ff35"},
        "holder":
