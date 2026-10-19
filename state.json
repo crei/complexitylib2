@@ -287,15 +287,18 @@
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "7cc4105588601aaad15a564905cf85f6"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792374155,
+          "snapshot":
+          {"head": {"value": "3eb6238592bd11415db970f1e3756c3b8eeb4e2d"},
+           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+          "reviewer":
           {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
            "agent": {"value": "reviewer-sable-cor3"}},
-          "expires": 1792388470},
-         "blocked": false}},
+          "note":
+          "Correctness review of exact base 764e3b8 / head 3eb6238 by reviewer-sable-cor3 (independent: no contribution; read-only in own worktree). Criteria: goal plus plan/revise/instruct journal entries. Evidence: 12 library modules and both tests built --wfail --iofail, no warnings; no sorry/axiom/native_decide/set_option; library files only gain lines. Verified: IsTidyOraclePPTOn = ComputesTidily, exact joint result/external-state law for every stateful handler and arbitrary answer tapes, empty query buffers at both boundaries; finiteRunFrom_take_runOracle is a program equality with no reply-length hypothesis (answer head reset on receive, one cell per step); runOracle realized by a clock-round interpreter with query_take at limit = clock, so requests, order and counts coincide; cond/ite/finite_cases run only the selected branch (forced by exactness for counting handlers); bind/pair/map/preprocess charge intermediate words; iterate rules quantify over ProbOracleComp.support (all handlers), constant growth rules out doubling; ofClosed/runOracle_ofClosed faithful; iterateWhile bound proved; closed APIs untouched. Own probes pass: two-query client with both branches querying (fun_prop), counting handler with arbitrarily long replies gives exactly 2 calls, also for the certified native machine; logging handler shows the exact request sequence; two-bit growth loop; doubled storage feeding a one-bit query refuted by query_bounds. 34 axiom prints standard. Nit: test boundaries refute only via output length; add a short-output request-length boundary. Limitation: machine transition proofs checked by compilation and statements; check.sh not re-run. Evidence: .lake/codex-validation/open-oracle-composition-correctness/review.json SHA256 7af01830b3d7491a7fc1578e2b2089370a5a23be1802af25864ffe5db4774ffb"}}},
        "api":
        {"active":
         {"report": "",
