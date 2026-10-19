@@ -717,20 +717,27 @@
    "report":
    "Mechanical integration after two approvals of exact 7e4cdca: merge main 94dcd9d, relocate the decoder library to Encodings/Decoder.lean and exists_le_mul_two_pow to PolynomialBound/Exponential.lean, docstring crossref fix, trueDoubled renames, UPSTREAM rows; no statement changes; fresh delta reviews follow.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/native-exponential-separation/worker-opus",
-      "report":
-      "PUBLICATION REQUEST: 4de95cdc57bdd489c7bc60aeb3c209ebeb2ffb06 on work/native-exponential-separation/integrator-sable-1 (local worktree .worktrees/integrator-sable-1; push blocked by the Lean guardrail hook, not bypassed). Integration of reviewed head 7e4cdca (base a5cb5821): clean merge of origin/main 94dcd9d, then edits A-F: Universal/Decode/Basic.lean moved unchanged to Encodings/Decoder.lean (Decode.lean import and docstring updated, mk_all), exists_le_mul_two_pow moved verbatim to PolynomialBound/Exponential.lean as Cslib.PolynomiallyBounded.exists_le_mul_two_pow (+ proof-only import Mathlib.Algebra.Order.BigOperators.Group.Finset, Main results entry; Hierarchy.lean call site updated), docstring cross-reference fixed to Diagonal.universal_bounds_le, renames doubled/encDoubled/doubleT/doubleT_run -> trueDoubled/encTrueDoubled/trueDoubleT/trueDoubleT_run, diagonal_desc and not_forall_halted_diagonal listed in Main results, two UPSTREAM.md rows (Encodings/Decoder, Encodings/NatPower). No public statement changes except the listed renames and the moved lemma namespace. Validation: lake build --wfail --iofail (8751 jobs), scripts/check.sh all six gates ok, git diff --check clean, no line over 100 chars; diff vs origin/main: Complexity.lean, Hierarchy.lean, Encodings/Decoder.lean, Encodings/NatPower.lean, Universal/Decode.lean, PolynomialBound/Exponential.lean, ComplexityTests.lean, ComplexityTests/TimeHierarchy.lean, UPSTREAM.md. Contributors: worker-opus (implementation), integrator-sable-1 (integration under coordinator-sable). AI assistance: Claude.",
-      "lease":
-      {"token": {"value": "e1d5474d32ad67c843686c62d601934c"},
-       "holder":
-       {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
-        "agent": {"value": "integrator-sable-1"}},
-       "expires": 1792382772},
-      "branch": "work/native-exponential-separation/integrator-sable-1",
-      "blocked": false,
-      "assignee": {"value": "integrator-sable-1"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/native-exponential-separation/worker-opus",
+       "report":
+       "PUBLICATION REQUEST: 4de95cdc57bdd489c7bc60aeb3c209ebeb2ffb06 on work/native-exponential-separation/integrator-sable-1 (local worktree .worktrees/integrator-sable-1; push blocked by the Lean guardrail hook, not bypassed). Integration of reviewed head 7e4cdca (base a5cb5821): clean merge of origin/main 94dcd9d, then edits A-F: Universal/Decode/Basic.lean moved unchanged to Encodings/Decoder.lean (Decode.lean import and docstring updated, mk_all), exists_le_mul_two_pow moved verbatim to PolynomialBound/Exponential.lean as Cslib.PolynomiallyBounded.exists_le_mul_two_pow (+ proof-only import Mathlib.Algebra.Order.BigOperators.Group.Finset, Main results entry; Hierarchy.lean call site updated), docstring cross-reference fixed to Diagonal.universal_bounds_le, renames doubled/encDoubled/doubleT/doubleT_run -> trueDoubled/encTrueDoubled/trueDoubleT/trueDoubleT_run, diagonal_desc and not_forall_halted_diagonal listed in Main results, two UPSTREAM.md rows (Encodings/Decoder, Encodings/NatPower). No public statement changes except the listed renames and the moved lemma namespace. Validation: lake build --wfail --iofail (8751 jobs), scripts/check.sh all six gates ok, git diff --check clean, no line over 100 chars; diff vs origin/main: Complexity.lean, Hierarchy.lean, Encodings/Decoder.lean, Encodings/NatPower.lean, Universal/Decode.lean, PolynomialBound/Exponential.lean, ComplexityTests.lean, ComplexityTests/TimeHierarchy.lean, UPSTREAM.md. Contributors: worker-opus (implementation), integrator-sable-1 (integration under coordinator-sable). AI assistance: Claude.",
+       "lease":
+       {"token": {"value": "e1d5474d32ad67c843686c62d601934c"},
+        "holder":
+        {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
+         "agent": {"value": "integrator-sable-1"}},
+        "expires": 1792382772},
+       "branch": "work/native-exponential-separation/integrator-sable-1",
+       "blocked": false,
+       "assignee": {"value": "integrator-sable-1"}},
+      "summary":
+      "Reviewed head 7e4cdca by worker-opus with two approvals (reviewer-integration correctness, reviewer-sable-api2 API); merge of main 94dcd9d; edits A-F (decoder library moved to Encodings/Decoder.lean, exists_le_mul_two_pow moved to PolynomiallyBounded, crossref fix, trueDoubled renames, Main results line, two UPSTREAM rows); six gates passed (lake build --wfail --iofail, mk_all --check, lake test --wfail --iofail, lint, lint-style, checkInitImports); no statement changes beyond the renames and the moved lemma namespace; contributors worker-opus and integrator-sable-1 under coordinator-sable direction; AI assistance: Claude. Submitted head 4de95cdc57bdd489c7bc60aeb3c209ebeb2ffb06.",
+      "snapshot":
+      {"head": {"value": "4de95cdc57bdd489c7bc60aeb3c209ebeb2ffb06"},
+       "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode",
