@@ -1088,7 +1088,8 @@
    "dependencies": [],
    "authors": [{"value": "worker-mythos"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Assigned to worker-mythos on 2026-10-18 after its read-only audit (audit file in its session scratchpad). Operational: start from main a0952ac; circuit-metric (dependency) is in review, so you may merge your own circuit-metric branch locally to use circuitDist for the sharing example, but submit only after circuit-metric lands and you have merged main, so the submitted diff contains only this epic scoped files. First submission endpoint is milestones 1 and 2; record milestones 3-5 as remaining in the ready summary. Pich 2024 citation pending from the owner; state the limitation in prose meanwhile.",
    "phase":
    {"working":
     {"work":
