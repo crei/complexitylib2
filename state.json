@@ -1,5 +1,25 @@
 {"version": 1,
- "integration": null,
+ "integration":
+ {"snapshot":
+  {"head": {"value": "d0299eace631cd0e7fc0f4bc69103989ef7cf3a2"},
+   "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+  "main": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"},
+  "lease":
+  {"token": {"value": "e41c264e92010ce2f42b284a2ae356e1"},
+   "holder":
+   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+    "agent": {"value": "coordinator-sable"}},
+   "expires": 1792404219},
+  "epic": {"value": "machine-classes-consolidation"},
+  "candidates":
+  [{"snapshot":
+    {"head": {"value": "d0299eace631cd0e7fc0f4bc69103989ef7cf3a2"},
+     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+    "epic": {"value": "machine-classes-consolidation"}},
+   {"snapshot":
+    {"head": {"value": "65d016ba57621f8d924763578b51a707cb5cc1d7"},
+     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+    "epic": {"value": "docs-roadmap-refresh"}}]},
  "epics":
  [{"resume": null,
    "report":
