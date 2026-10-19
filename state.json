@@ -3063,7 +3063,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "911c80cfeebbfc270c5bd434a3dbed13"},
+       "holder":
+       {"session": {"value": "0d4e04fa36522a13475c8af7f7944f7d"},
+        "agent": {"value": "worker-sable-prob"}},
+       "expires": 1792406260},
       "branch": "work/probability-toolkit-2/worker-sable-prob",
       "blocked": false,
       "assignee": {"value": "worker-sable-prob"}}}},
@@ -3078,7 +3083,7 @@
    "goal":
    "Milestone 2 of probability-toolkit (after M1 lands): a bridge from the library's finite-PMF entropy to Mathlib InformationTheory.klDiv, then Gibbs' inequality, Pinsker, entropy subadditivity, Han's inequality and Shearer's lemma; minEntropy and (k, eps)-sources with the flat-source decomposition (every k-source is a convex combination of flat k-sources); McDiarmid's bounded-differences inequality derived from Mathlib's Azuma-Hoeffding (ProbabilityTheory.measure_sum_ge_le_of_hasCondSubgaussianMGF). Reuse Probability/{Entropy, Product, StatisticalDistance, Concentration} and M1; no second entropy or distance notion. Cite CoverThomas2006, ChungGrahamFranklShearer1986, McDiarmid1989, ChorGoldreich1988 (propose entries). Tests, named axiom guards, run-gates, frozen submission.",
    "dependencies": [{"value": "probability-toolkit"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-prob"}]},
   {"resume": null,
    "report": "",
    "phase":
