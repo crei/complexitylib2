@@ -1593,20 +1593,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "CHECKPOINT (local 6a5f2f7, unpushed): milestone-1 content compiles axiom-clean. Ladner/Basic.lean: word/index enumeration, pad/unpad, padSAT e, run/clock/Agrees, Hstep/Htable/H with H_le, H_le_of_agrees, agrees_H; SATH := padSAT H. Ladner/PolyTime.lean: Decoder for encNat/encBool/encCNF, capPow min(b^e,c) via iterate, universal with unary clock polytime (from computableTidilyInO_universal + Diagonal.universal_bounds_le), word polytime, padCheck + mem_padSAT_iff, bruteSAT_iff, hstepB = Hstep (search form), computableTidilyInPolyTime_H, verifier/isVerifier, SATH_mem_NP. Tests ComplexityTests/Ladner.lean. Proceeding directly to milestone 2 (holes + headline) since M1 was quick; will submit both together unless you prefer a separate M1 submission.",
-      "lease":
-      {"token": {"value": "bc3240ca4120bff5532ca06795fdbf2c"},
-       "holder":
-       {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
-        "agent": {"value": "worker-sable-ladner"}},
-       "expires": 1792399462},
-      "branch": "work/ladner/worker-sable-ladner",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-ladner"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "CHECKPOINT (local 6a5f2f7, unpushed): milestone-1 content compiles axiom-clean. Ladner/Basic.lean: word/index enumeration, pad/unpad, padSAT e, run/clock/Agrees, Hstep/Htable/H with H_le, H_le_of_agrees, agrees_H; SATH := padSAT H. Ladner/PolyTime.lean: Decoder for encNat/encBool/encCNF, capPow min(b^e,c) via iterate, universal with unary clock polytime (from computableTidilyInO_universal + Diagonal.universal_bounds_le), word polytime, padCheck + mem_padSAT_iff, bruteSAT_iff, hstepB = Hstep (search form), computableTidilyInPolyTime_H, verifier/isVerifier, SATH_mem_NP. Tests ComplexityTests/Ladner.lean. Proceeding directly to milestone 2 (holes + headline) since M1 was quick; will submit both together unless you prefer a separate M1 submission.",
+       "lease":
+       {"token": {"value": "bc3240ca4120bff5532ca06795fdbf2c"},
+        "holder":
+        {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
+         "agent": {"value": "worker-sable-ladner"}},
+        "expires": 1792399462},
+       "branch": "work/ladner/worker-sable-ladner",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-ladner"}},
+      "summary":
+      "Ladner's theorem, head 784cb3a on base f489429 (main). Proved: exists_NP_not_P_not_NPComplete (h : P enc ≠ NP enc) : ∃ L : Set (List Bool), L ∈ NP encBits ∧ L ∉ P encBits ∧ ¬NPComplete encBits L, witnessed by SATH = padSAT H. The unconditional forms: SATH_mem_NP (verifier evaluating the padded formula, isVerifier); SAT_mem_P_of_SATH_mem_P; SAT_mem_P_of_NPHard_SATH; P_eq_NP_of_SATH_mem_P; P_eq_NP_of_NPComplete_SATH (P enc = NP enc for every enc). H is certified polytime on unary numbers by the calculus (computableTidilyInPolyTime_H), via computableTidilyInPolyTime_universal (unary clock). Checks: scripts/check.sh, all six gates pass; headline axioms propext/Classical.choice/Quot.sound, guarded in ComplexityTests/Ladner. Source: Arora-Barak Thm 3.3; crei's universal interpreter; Classes/Hierarchy diagonal. Contributors: worker-sable-ladner (earlier holder and current). AI: Claude. Limitations/continuation: PolyTimeReducible.mem_P and P_subset_NP sit in Ladner.lean but belong in Reduction.lean / Classes/NP.lean; P_eq_NP_of_SAT_mem_P beside CookLevin.SAT_npComplete; computableTidilyInPolyTime_universal, runBound_mono beside Universal.Complexity; the decoders beside encodings (all outside epic paths). Infinite hierarchy of intermediate degrees not done. Bibliography: none new (AroraBarak09 present).",
+      "snapshot":
+      {"head": {"value": "784cb3afda77036d16f624185735d15fd09145b3"},
+       "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Ladner.lean",
     "Complexity/Computability/Complexity/Classes/Ladner",
