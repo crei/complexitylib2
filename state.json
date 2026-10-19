@@ -2941,7 +2941,9 @@
       "snapshot":
       {"head": {"value": "b783d8e63477e9ee70671daf67a89740bfc502d1"},
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/HardCore.lean",
     "Complexity/Computability/Circuit/Boolean/HardCore",
