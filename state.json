@@ -9,7 +9,7 @@
    "holder":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}},
-   "expires": 1792405909},
+   "expires": 1792405927},
   "epic": {"value": "np-witness-builder"},
   "candidates":
   [{"snapshot":
@@ -3231,7 +3231,7 @@
         "holder":
         {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
          "agent": {"value": "coordinator-sable"}},
-        "expires": 1792405909},
+        "expires": 1792405927},
        "branch": "work/docs-bibliography-2/coordinator-sable",
        "blocked": false,
        "assignee": {"value": "coordinator-sable"}},
@@ -3278,7 +3278,7 @@
   "holder":
   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
    "agent": {"value": "coordinator-sable"}},
-  "expires": 1792405909},
+  "expires": 1792405927},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
@@ -3360,7 +3360,7 @@
     "agent": {"value": "worker-mythos"}}},
   {"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792405909,
+   "expires": 1792405927,
    "actor":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}}},
