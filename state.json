@@ -1273,15 +1273,18 @@
           "expires": 1792388272},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "c3bacec96b3150196ba2462df159dcb8"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792374066,
+          "snapshot":
+          {"head": {"value": "4bf009418a4038ae957fd81c9d458134cbd26831"},
+           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+          "reviewer":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792388428},
-         "blocked": false}}}}}},
+          "note":
+          "Fresh API review 4bf0094 (base 764e3b8); independent of author worker-sable-tooling; read-only; all board commands via main binary. Builds on my review of 435e12f (review.json sha256 f4cc1597...). Delta 45bd109 + 41b7167 (e6c9741, 4bf0094 merge main only); scope ok, diff --check clean. Evidence: coordination build --wfail clean; test --wfail 54/54; ProbeCompat re-run. Earlier findings: F1 resolved (land carries the integrated main, tolerates a reservation reduced by older checkouts, re-verifies the listed batch, publication guarded by exact old main; landed erasure documented as metadata). N1 resolved (landed shared by batch). N2 resolved (refusals name scripts/coordinate cancel; docs say refused merges keep the reservation). N3 resolved (AGENTS rule 7). N6 resolved (merge-base --all; unrelated and criss-cross refused with clear messages). N4 partly (Legacy records shared in Tests/Legacy.lean, legacy Completion test added; Diff and Landing base/head names unchanged). N5 limitation remains (real mk_all stubbed). New shapes (verifyStep invariant, unique-merge-base step check, pinned merge config, final-tree guard) are clean, documented and tested. No blocking findings. Nits: A1 land checks only the first candidate even when the reservation kept its main (reserve is stricter; safety holds via re-verification and final-tree guard); A2 LegacyState reuses current Epic so legacyHeartbeat keeps landed (docstring says so); A3 short reflow line CONTRIBUTING.md:144. Not run: scripts/check.sh. Evidence .lake/codex-validation/merge-queue-landing-api-r2/review.json sha256 305d2d9e78fd8bb3da08b6f283f33385279a62f7f14e8a7506f14642d725e2fc"}}}}}}},
    "paths": ["scripts/coordination", "CONTRIBUTING.md", "AGENTS.md"],
    "id": {"value": "merge-queue-landing"},
    "goal":
