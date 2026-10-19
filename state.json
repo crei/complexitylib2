@@ -1492,7 +1492,9 @@
       "snapshot":
       {"head": {"value": "92aeab0e755f407e092b7cd28d3242117e0e1d5a"},
        "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/SubsetSum.lean",
     "Complexity/Computability/Complexity/Problems/SubsetSum",
