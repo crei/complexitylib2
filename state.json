@@ -715,20 +715,27 @@
    "report":
    "API review of exact 800b146 returned changes: blocking duplication (seed/shift list views re-implement BitString.ofList/block/blocksEquiv/listRow; completeness and soundness re-prove Foundations/Combinatorics/Lautemann.lean lemmas). Coordinator-directed refactor by integrator-sable-3 with no public theorem statement changes; both reviews are then refreshed on the final snapshot.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/sipser-lautemann/reviewer-correctness",
-      "report":
-      "PUBLICATION REQUEST (supersedes 4f93509): f30b20385743d53d0f046e35e8ad47d6ea500bae on refs/heads/work/sipser-lautemann/integrator-sable-3 (worktree HEAD detached at that SHA). f30b203 is a clean merge of origin/main d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd into the published 4f93509 (parents 4f93509ab221ec9e8fb0d1264b35dff69a52bbad, d42eefce), so it fast-forwards the remote branch and contains current main; no root conflicts, mk_all not needed. main 26253c9..d42eefc touches none of my files; the four refactored files are unchanged from ee05678. Validation on f30b203: scripts/check.sh six gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Statement identity vs 800b146 re-run on f30b203: all ten listed theorems plus DecidesWithBoundedError.compl and the verifier signature identical; BPP.lean unchanged; only trialSeed changes arity (m L T -> m). Lines: module 513 -> 496, test 209 -> 212.",
-      "lease":
-      {"token": {"value": "c7494010867c8bda759b548d5af16efb"},
-       "holder":
-       {"session": {"value": "284b607582cb0e7bf0d45e8fbc04e81a"},
-        "agent": {"value": "integrator-sable-3"}},
-       "expires": 1792390185},
-      "branch": "work/sipser-lautemann/integrator-sable-3",
-      "blocked": false,
-      "assignee": {"value": "integrator-sable-3"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/sipser-lautemann/reviewer-correctness",
+       "report":
+       "PUBLICATION REQUEST (supersedes 4f93509): f30b20385743d53d0f046e35e8ad47d6ea500bae on refs/heads/work/sipser-lautemann/integrator-sable-3 (worktree HEAD detached at that SHA). f30b203 is a clean merge of origin/main d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd into the published 4f93509 (parents 4f93509ab221ec9e8fb0d1264b35dff69a52bbad, d42eefce), so it fast-forwards the remote branch and contains current main; no root conflicts, mk_all not needed. main 26253c9..d42eefc touches none of my files; the four refactored files are unchanged from ee05678. Validation on f30b203: scripts/check.sh six gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Statement identity vs 800b146 re-run on f30b203: all ten listed theorems plus DecidesWithBoundedError.compl and the verifier signature identical; BPP.lean unchanged; only trialSeed changes arity (m L T -> m). Lines: module 513 -> 496, test 209 -> 212.",
+       "lease":
+       {"token": {"value": "c7494010867c8bda759b548d5af16efb"},
+        "holder":
+        {"session": {"value": "284b607582cb0e7bf0d45e8fbc04e81a"},
+         "agent": {"value": "integrator-sable-3"}},
+        "expires": 1792390185},
+       "branch": "work/sipser-lautemann/integrator-sable-3",
+       "blocked": false,
+       "assignee": {"value": "integrator-sable-3"}},
+      "summary":
+      "Head f30b20385743d53d0f046e35e8ad47d6ea500bae on work/sipser-lautemann/integrator-sable-3 (contains main d42eefc). Coordinator-directed refactor of reviewed 800b146 resolving the API review (reviewer-sable-api2). B1 resolved: seed/shift views are the BitString API (listToSeed m r = block (ofList (runs m * m) r), listToShifts = nested block view, seedToList/shiftsToList = List.ofFn of blocksEquiv.symm; round trips by ofList_ofFn + Equiv.apply_symm_apply; private mul_add_lt_mul/mul_add_div_and_mod deleted); trialSeed = List.zipWith Bool.xor of two BitString.listRow rows, verifier_polyTime still by fun_prop via bitsRowWithInput/bitsZipWithInput. B2 resolved: exists_shifts_majorityAccepts and exists_seed_not_majorityAccepts go through Cslib.exists_forall_exists_add_mem_of_card_mul_card_compl_pow_lt and Cslib.exists_forall_add_notMem_of_mul_card_lt (Lautemann.lean) on the group Seed m; Equiv.addLeft translation and bad/biUnion union bound removed; FiniteCover and Units.Equiv imports dropped. Nits: Seed m uses BitString m; runs_pos deleted; Sipser1983 and Lautemann1983 cited separately with Gacs named; malformed-string contract (missing bits read false, extra bits ignored) on trialSeed and verifier; two_pow_mul_eight_pow_lt listed in MajorityVote Main results; references.bib gains Sipser1983 (STOC 1983, 330-335, doi 10.1145/800061.808762). No public theorem statement changes: scripted per-declaration diff vs 800b146 shows BPP_subset_SigmaP_two, BPP_subset_PiP_two, BPP_subset_SigmaP_two_inter_PiP_two, BPP_subset_PH, compl_mem_BPP, BPP_eq_preimage_compl_BPP, DecidesWithBoundedError.compl, exists_shifts_majorityAccepts, exists_seed_not_majorityAccepts, verifier_polyTime, isAlternatingVerifier_verifier and the verifier signature identical; BPP.lean unchanged; trialSeed loses its two always-determined parameters (m L T -> m; L = seedLen m, T = shifts m), test module follows. Lines (helper-inclusive): SipserLautemann.lean 513 -> 496 (private helpers 12 -> 10), ComplexityTests/SipserLautemann.lean 209 -> 212 (every example and guard kept). Validation on f30b203: scripts/check.sh six gates ok; git diff --check clean; lines <= 100 chars except pre-existing #guard_msgs info lines. Contributors: worker-nova (port), reviewer-correctness (cleanup), integrator-sable-3 (refactor, under coordinator-sable direction); source credit Bolton Bailey, Samuel Schlesinger (v1). Note: mis-titled c329e3a was never published; history is 800b146 <- merges <- ee05678 (refactor) <- merges of main. AI assistance: Claude.",
+      "snapshot":
+      {"head": {"value": "f30b20385743d53d0f046e35e8ad47d6ea500bae"},
+       "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/BPP.lean",
     "Complexity/Computability/Complexity/Classes/BPP",
