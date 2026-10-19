@@ -941,20 +941,27 @@
    "report":
    "Land now through the base == main path: mechanical merge of main (now including native-exponential-separation; disjoint files) by integrator-sable-2 since worker-opus left, six gates, short delta reviews, land. Unblocks tqbf-pspace-complete, logspace-nl and space-cleanup.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/polynomial-space/worker-opus",
-      "report":
-      "PUBLICATION REQUEST: d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd on work/polynomial-space/integrator-sable-2. Content: worker-opus twice-approved head 976400b plus a clean merge of main 764e3b8 and nothing else (no code edits). Merge parents 976400b + 764e3b8; no conflicts; git diff-tree --cc --no-commit-id HEAD empty. Only overlap with main since base a0952ac was the generated roots, merged automatically; roots over main add exactly the epic own 11 import lines (8 Complexity, 3 ComplexityTests). Verified diff 976400b..HEAD equals main delta a0952ac..764e3b8 and diff 764e3b8..HEAD equals epic delta a0952ac..976400b (outside roots). Validation: all six scripts/check.sh gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports); git diff --check clean. Contributors: worker-opus (implementation), integrator-sable-2 (merge under coordinator-sable direction); AI assistance: Claude. After publication I will run ready.",
-      "lease":
-      {"token": {"value": "bf2b447b1ec06fad986f35fd48e2d05b"},
-       "holder":
-       {"session": {"value": "9427f9bcda5b4272b037bcdec0a08ee2"},
-        "agent": {"value": "integrator-sable-2"}},
-       "expires": 1792387978},
-      "branch": "work/polynomial-space/integrator-sable-2",
-      "blocked": false,
-      "assignee": {"value": "integrator-sable-2"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/polynomial-space/worker-opus",
+       "report":
+       "PUBLICATION REQUEST: d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd on work/polynomial-space/integrator-sable-2. Content: worker-opus twice-approved head 976400b plus a clean merge of main 764e3b8 and nothing else (no code edits). Merge parents 976400b + 764e3b8; no conflicts; git diff-tree --cc --no-commit-id HEAD empty. Only overlap with main since base a0952ac was the generated roots, merged automatically; roots over main add exactly the epic own 11 import lines (8 Complexity, 3 ComplexityTests). Verified diff 976400b..HEAD equals main delta a0952ac..764e3b8 and diff 764e3b8..HEAD equals epic delta a0952ac..976400b (outside roots). Validation: all six scripts/check.sh gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports); git diff --check clean. Contributors: worker-opus (implementation), integrator-sable-2 (merge under coordinator-sable direction); AI assistance: Claude. After publication I will run ready.",
+       "lease":
+       {"token": {"value": "bf2b447b1ec06fad986f35fd48e2d05b"},
+        "holder":
+        {"session": {"value": "9427f9bcda5b4272b037bcdec0a08ee2"},
+         "agent": {"value": "integrator-sable-2"}},
+        "expires": 1792387978},
+       "branch": "work/polynomial-space/integrator-sable-2",
+       "blocked": false,
+       "assignee": {"value": "integrator-sable-2"}},
+      "summary":
+      "worker-opus twice-approved head 976400b plus a clean merge of main 764e3b8 and nothing else (no code edits; git diff-tree --cc empty; only the generated roots overlapped and merged automatically). All six scripts/check.sh gates passed; git diff --check clean. Contributors: worker-opus (implementation), integrator-sable-2 (merge under coordinator-sable direction); AI assistance: Claude. Head d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd.",
+      "snapshot":
+      {"head": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"},
+       "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space.lean",
     "Complexity/Computability/Complexity/Classes/Space",
