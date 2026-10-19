@@ -1977,15 +1977,18 @@
           "note":
           "Independent correctness review (reviewer-sable-cor7, no contribution) of exact head 2b3f6de over base 2bf2b21. Built 14 targets (touched modules, CircuitMetric/CircuitHamming.Gates/CircuitHamming.Pointwise tests, Hadamard, Smolensky, Boolean.Metric) --wfail --iofail: exit 0. Probes restate every BASE statement verbatim in its BASE binder context and prove it by the HEAD lemma: complexity_single_proj, one_le_complexity_single, complexity_single_unary_le/binary_le, Boolean.complexity_not_le/binary_le, two_mul_hammingDist_parityOn, two_mul_hammingDist_proj, median_median(->median_median_distrib); statement text identical, no weakening; fst_trace_pair statement untouched. New elementary proof sound (S∆T=(S∪T)\\(S∩T), x+x=0; disagreement set = parity on nonempty S∆T, card 2^(|ι|-1)); decide cross-checks on Fin 3 of parityOn_symmDiff and the distance equation, boundary S=T fails. Axioms of 15 decls within propext/Classical.choice/Quot.sound. No sorry/native_decide/axiom/set_option. Blocking: none. Nits: implicit binder order changed (σ U n I -> σ U I n; [IsComplete] now after n), no @-uses; rename without deprecated alias. Limitations: did not build all downstream importers of Synthesis (new simp lemma now in scope there) nor run lint gates; relies on worker six gates at 7077d8c (later commits add only references.bib). Evidence .lake/codex-validation/circuit-complexity-consolidation-correctness/review.json sha256 c2a51af806a77746a8419734eb7ddcd343cd37de053c9159f5d8f2413dd68d39"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "b34a294bffc1dfd63f30769669940f4a"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792386543,
+          "snapshot":
+          {"head": {"value": "2b3f6de7e95735056f0e6f61bed05329732cd9da"},
+           "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
+          "reviewer":
           {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
            "agent": {"value": "reviewer-sable-api7"}},
-          "expires": 1792400848},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api7 (independent; no contribution). Scope: exact head 2b3f6de over base 2bf2b21. Evidence: nice lake build of touched modules + Hadamard + tests CircuitMetric, CircuitHamming.Gates, CircuitHamming.Pointwise --wfail --iofail OK; #lint over touched import closure 0 errors; lint-style and mk_all --check OK; probes show moved lemmas keep identical explicit statements (only implicit binder order shifts), simp attr kept, axioms std three; name diff base->head: only median_median -> median_median_distrib (no uses elsewhere on main 3034b37/ec48c1a or 15 active branch refs), private test copies dropped, private parityOn_symmDiff added. Markers correct (Circuit/Complexity additions marker; inline Pointwise marker removed with block). Placement per goal. Blocking: none. Nits: Circuit/Complexity.lean:71,80 decl docstrings omit argument complexities; Synthesis.lean:12 public import only proof/doc-used (keeps CircuitHamming/Pointwise test compiling); Hamming.lean:138 parityOn_symmDiff should go public to BitString/Parity (follow-up); CircuitHamming/Pointwise test still hosts guards for lemmas now in Circuit/Complexity. Integration: Pointwise no longer provides complexity lemmas and Boolean/Hamming no longer re-exports Pointwise; hamming-geometry-2 must import directly. Skipped: full-repo gates, other Synthesis importers. Evidence .lake/codex-validation/circuit-complexity-consolidation-api/review.json sha256 2758b78ab6a31a816a49fac0c6003d1e313a93084c8746293f1c706c5cd4ebad"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Complexity.lean",
     "Complexity/Computability/Circuit/Pointwise.lean",
