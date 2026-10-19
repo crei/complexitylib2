@@ -1,15 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"},
-   "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-  "lease":
-  {"token": {"value": "436219025568892725f735779f580a3c"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792388432},
-  "epic": {"value": "polynomial-space"}},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -978,53 +968,41 @@
    "report":
    "Land now through the base == main path: mechanical merge of main (now including native-exponential-separation; disjoint files) by integrator-sable-2 since worker-opus left, six gates, short delta reviews, land. Unblocks tqbf-pspace-complete, logspace-nl and space-cleanup.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/polynomial-space/worker-opus",
-       "report":
-       "PUBLICATION REQUEST: d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd on work/polynomial-space/integrator-sable-2. Content: worker-opus twice-approved head 976400b plus a clean merge of main 764e3b8 and nothing else (no code edits). Merge parents 976400b + 764e3b8; no conflicts; git diff-tree --cc --no-commit-id HEAD empty. Only overlap with main since base a0952ac was the generated roots, merged automatically; roots over main add exactly the epic own 11 import lines (8 Complexity, 3 ComplexityTests). Verified diff 976400b..HEAD equals main delta a0952ac..764e3b8 and diff 764e3b8..HEAD equals epic delta a0952ac..976400b (outside roots). Validation: all six scripts/check.sh gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports); git diff --check clean. Contributors: worker-opus (implementation), integrator-sable-2 (merge under coordinator-sable direction); AI assistance: Claude. After publication I will run ready.",
-       "lease":
-       {"token": {"value": "bf2b447b1ec06fad986f35fd48e2d05b"},
-        "holder":
-        {"session": {"value": "9427f9bcda5b4272b037bcdec0a08ee2"},
-         "agent": {"value": "integrator-sable-2"}},
-        "expires": 1792387978},
-       "branch": "work/polynomial-space/integrator-sable-2",
-       "blocked": false,
-       "assignee": {"value": "integrator-sable-2"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "worker-opus twice-approved head 976400b plus a clean merge of main 764e3b8 and nothing else (no code edits; git diff-tree --cc empty; only the generated roots overlapped and merged automatically). All six scripts/check.sh gates passed; git diff --check clean. Contributors: worker-opus (implementation), integrator-sable-2 (merge under coordinator-sable direction); AI assistance: Claude. Head d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd.",
       "snapshot":
       {"head": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"},
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792373854,
-          "snapshot":
-          {"head": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"},
-           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-          "reviewer":
-          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
-           "agent": {"value": "reviewer-sable-cor2"}},
-          "note":
-          "Delta correctness review by reviewer-sable-cor2 (independent; no contribution). Builds on my full approval of 976400b (evidence sha256 1575f17add10dc4b8dabbde32b96319b3dd8e7a9797781182c866075787f14bf). This delta: d42eefc is a merge with parents 976400b and 764e3b8 (= base = current main, ancestry verified); git diff-tree --cc shows no hunks; git diff 976400b d42eefc over the nine epic paths is empty; outside the generated roots the patch is byte-identical to main own a0952ac..764e3b8, roots likewise. Dependencies: of main modified files, four are in the 112-module import closure of the targets: Quantitative.lean and Streaming.lean (additions only) and the two StreamFold files (theorem refactors with _after variants; no def/structure/abbrev/instance changed; unused by the epic); toolchain and cslib pin unchanged. No definition the statements depend on changed. Built Classes.Space, Classes.Space.Savitch and the three test modules with --wfail --iofail: clean (6392 jobs). #print axioms on NPSPACE_eq_PSPACE, savitchDecide_eq_true_iff, exists_polyBounded_space_savitchDecide, computableTidilyInO_savitch: standard only; statements and PSPACE/NPSPACE definitions unchanged. No findings; round-1 optional nits stand. Not run: full check.sh. Evidence .lake/codex-validation/polynomial-space-correctness/review.json sha256 92c1a39615c78adc1638f2c9e225389b99c9f7f73c5cbfee1934566c66aba4f9"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792373815,
-          "snapshot":
-          {"head": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"},
-           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-          "reviewer":
-          {"session": {"value": "33380288772710be7744d177c8f66871"},
-           "agent": {"value": "reviewer-sable-api2"}},
-          "note":
-          "Delta API review of exact d42eefc (base 764e3b8 = current main, ancestry ok; coordinate tooling identical to main); no contribution. Builds on my approval of 976400b (evidence SHA256 54707df8...). Checks: d42eefc has exactly parents 976400b and 764e3b8; git diff-tree --cc empty; merge-tree(976400b, 764e3b8) = head tree 9eadd85f exactly; all 11 epic files byte-identical to 976400b; roots add only the 8 library and 3 test imports, same as the approved delta (identical name-status and root lines). Joint-import probe: the now-landed Encodings/Decoder, Classes/Hierarchy and Classes/Space/Savitch load together without clashes, and frames+decodeCell still matches decodeStackTape on encoded cells (F1 follow-up deferred to the space-cleanup epic as agreed). lake build of the 8 library modules and the 3 test modules --wfail --iofail clean (6392 jobs); mk_all --check and diff --check clean. No new findings; round-1 non-blocking nits unchanged. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/polynomial-space-api/review.json SHA256 5c2680799ae762fcebaae041844568bce7851df5a2362cd650cc16d1fdaf68f0"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792374035,
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792373854,
+       "snapshot":
+       {"head": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"},
+        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+       "reviewer":
+       {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
+        "agent": {"value": "reviewer-sable-cor2"}},
+       "note":
+       "Delta correctness review by reviewer-sable-cor2 (independent; no contribution). Builds on my full approval of 976400b (evidence sha256 1575f17add10dc4b8dabbde32b96319b3dd8e7a9797781182c866075787f14bf). This delta: d42eefc is a merge with parents 976400b and 764e3b8 (= base = current main, ancestry verified); git diff-tree --cc shows no hunks; git diff 976400b d42eefc over the nine epic paths is empty; outside the generated roots the patch is byte-identical to main own a0952ac..764e3b8, roots likewise. Dependencies: of main modified files, four are in the 112-module import closure of the targets: Quantitative.lean and Streaming.lean (additions only) and the two StreamFold files (theorem refactors with _after variants; no def/structure/abbrev/instance changed; unused by the epic); toolchain and cslib pin unchanged. No definition the statements depend on changed. Built Classes.Space, Classes.Space.Savitch and the three test modules with --wfail --iofail: clean (6392 jobs). #print axioms on NPSPACE_eq_PSPACE, savitchDecide_eq_true_iff, exists_polyBounded_space_savitchDecide, computableTidilyInO_savitch: standard only; statements and PSPACE/NPSPACE definitions unchanged. No findings; round-1 optional nits stand. Not run: full check.sh. Evidence .lake/codex-validation/polynomial-space-correctness/review.json sha256 92c1a39615c78adc1638f2c9e225389b99c9f7f73c5cbfee1934566c66aba4f9"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792373815,
+       "snapshot":
+       {"head": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"},
+        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+       "reviewer":
+       {"session": {"value": "33380288772710be7744d177c8f66871"},
+        "agent": {"value": "reviewer-sable-api2"}},
+       "note":
+       "Delta API review of exact d42eefc (base 764e3b8 = current main, ancestry ok; coordinate tooling identical to main); no contribution. Builds on my approval of 976400b (evidence SHA256 54707df8...). Checks: d42eefc has exactly parents 976400b and 764e3b8; git diff-tree --cc empty; merge-tree(976400b, 764e3b8) = head tree 9eadd85f exactly; all 11 epic files byte-identical to 976400b; roots add only the 8 library and 3 test imports, same as the approved delta (identical name-status and root lines). Joint-import probe: the now-landed Encodings/Decoder, Classes/Hierarchy and Classes/Space/Savitch load together without clashes, and frames+decodeCell still matches decodeStackTape on encoded cells (F1 follow-up deferred to the space-cleanup epic as agreed). lake build of the 8 library modules and the 3 test modules --wfail --iofail clean (6392 jobs); mk_all --check and diff --check clean. No new findings; round-1 non-blocking nits unchanged. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/polynomial-space-api/review.json SHA256 5c2680799ae762fcebaae041844568bce7851df5a2362cd650cc16d1fdaf68f0"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space.lean",
     "Complexity/Computability/Complexity/Classes/Space",
