@@ -2438,7 +2438,16 @@
       {"head": {"value": "8a05720a1f07660e4d0e27e808dedbbc16322c3b"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor2"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "3010def81ceae21e1fdb8d906f3d6a04"},
+          "holder":
+          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
+           "agent": {"value": "reviewer-sable-cor2"}},
+          "expires": 1792404877},
+         "blocked": false}},
        "api":
        {"active":
         {"report": "",
