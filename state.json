@@ -2735,7 +2735,7 @@
       {"head": {"value": "d57c472c16dfef7cb8c3c8dc06deb1318fa25cf0"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api6"}}}}}}},
    "paths":
    ["Complexity/Computability/Communication/Rectangle.lean",
