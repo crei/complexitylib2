@@ -2369,6 +2369,19 @@
    "goal":
    "Coverage epic 2 (see scratchpad coverage-audit.md): the structural spine papers cite in preliminaries, building on the DTIME/EXP of hierarchy-theorems (one definition only): NTIME, BPTIME, E, NE, NEXP, ZPP with ZPP = RP inter coRP; inclusions P within NP within PSPACE within EXP, PH within PSPACE, P within BPP, RP within BPP, NP within PP and PP closed under complement where missing; class-level error reduction for BPP and RP (exponentially small error); padding (P = NP implies EXP = NEXP) with a generic translation lemma; PH collapse lemmas (SigmaP k = PiP k implies PH = SigmaP k, P = NP implies P = PH, NP = coNP implies PH = NP); ACC0 as the union of AC0 with MOD-q gates and NC within P where the uniform classes exist. Reuse Classes/*, Hierarchy, Savitch, MajorityVote, DepthClasses. Tests, axiom guards, six gates, milestones.",
    "dependencies": [{"value": "hierarchy-theorems"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Circuit/Boolean/NaturalProof.lean",
+    "Complexity/Computability/Circuit/Boolean/NaturalProof",
+    "Complexity/Crypto/Computational/GGM/Circuit.lean",
+    "ComplexityTests/NaturalProofs.lean"],
+   "id": {"value": "natural-proofs"},
+   "goal":
+   "Coverage epic 4: the natural proofs barrier. NaturalProperty (largeness: density at least 2^-O(n) of truth tables; constructivity: decided in time polynomial in the truth table or by 2^O(n)-size circuits; usefulness against SIZE(s)); Razborov-Rudich: a natural property useful against SIZE(s) yields a distinguisher for every function family in SIZE(s); with a nonuniform concrete-security GGM bound (Crypto/Computational/GGM), no P/poly-natural property is useful against P/poly assuming PRGs secure against 2^(n^eps)-size circuits; demonstrations that Hastad and Razborov-Smolensky properties are natural if cheap. Reuse MCSP/Basic truth tables, Circuit/Boolean/Hierarchy, GGM, PRG/Game. Cite RazborovRudich1997 (propose entry). Tests, axiom guards, six gates.",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
