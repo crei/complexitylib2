@@ -1923,7 +1923,12 @@
      {"resume": null,
       "report":
       "Both reviews: Cutland1980 and KatzLindell2020 already exist (cslib entries with padded keys); delete the duplicates. Also adopt nits: MishraSanthanam2026 as @techreport like other ECCC entries, braces around $3n$ in the FGHK title, Ore1933 DOI.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "c2a190b700efe4dc8a5efe78317fd451"},
+       "holder":
+       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+        "agent": {"value": "coordinator-sable"}},
+       "expires": 1792399280},
       "branch": "work/docs-bibliography/coordinator-sable",
       "blocked": false,
       "assignee": {"value": "coordinator-sable"}}}},
