@@ -2968,19 +2968,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "b99d6637c7e120e0a9019e920253f3f6"},
-       "holder":
-       {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
-        "agent": {"value": "worker-sable-oracle"}},
-       "expires": 1792406742},
-      "branch": "work/isolation-counting/worker-sable-oracle",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-oracle"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "b99d6637c7e120e0a9019e920253f3f6"},
+        "holder":
+        {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
+         "agent": {"value": "worker-sable-oracle"}},
+        "expires": 1792406742},
+       "branch": "work/isolation-counting/worker-sable-oracle",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-oracle"}},
+      "summary":
+      "M1 (Valiant-Vazirani, isolation). USAT, PromiseUSAT, PromiseUSAT_mem_PromiseNP. ValiantVazirani.reduce (k random affine parity eqns, prefix-parity aux vars): computableTidilyInPolyTime_reduce (encPair encCNF encBits->encCNF); reduce_mem_UNSAT: phi in UNSAT -> reduce (phi,r) in UNSAT; three_mul_two_pow_le_card_reduce_mem_USAT: phi in SAT -> randomBits phi <= m -> 3*2^m <= 32*(n+3)*#{r : Fin m -> Bool | reduce (phi, ofFn r) in USAT}, n = phi.vars.length, randomBits <= (n+2)^2. RPWithOracle A enc; RPWithPromiseOracle Q encQ enc (one algorithm correct vs every language solving Q); computableInPolyTimeWithOracle_any_mem; NP_subset_RPWithPromiseOracle_PromiseUSAT: NP enc ⊆ RPWithPromiseOracle PromiseUSAT encCNF enc; NP_subset_RPWithOracle_USAT. Isolation: dens_minWeightSets_card_ne_one_le (failure <= |U|/|W|), half_le_dens_minWeightSets_card_eq_one (weights 1..N, N>=2|U|). Checks: six gates (run-gates) ok on head; ComplexityTests/Isolation with concrete instances, axiom guards. Credit: VV1986, MVV1987; reuses PairwiseIndependentHash, LinearHash, Cook-Levin. Contributors: worker-sable-oracle only. Limits: n counts occurrences, constant 3/32; RPWithOracle, queryAny, generic helpers could move to Classes/Oracle, BitString, Logics. Continuation: M2 ParityP/operators/Toda, M3 Stockmeyer. Bib: @article{MulmuleyVaziraniVazirani1987, author={Mulmuley, Ketan and Vazirani, Umesh V. and Vazirani, Vijay V.}, title={Matching is as Easy as Matrix Inversion}, journal={Combinatorica}, volume={7}, number={1}, pages={105--113}, year={1987}, doi={10.1007/BF02579206}}",
+      "snapshot":
+      {"head": {"value": "ca80e7094f9d439e0202e487c2bdacf106e8348b"},
+       "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/ParityP.lean",
     "Complexity/Computability/Complexity/Classes/Operators.lean",
