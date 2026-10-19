@@ -623,7 +623,16 @@
        "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api6"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "2f6d5dd24b106b19e32e300641941b8b"},
+          "holder":
+          {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
+           "agent": {"value": "reviewer-sable-api6"}},
+          "expires": 1792401798},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Probabilistic",
     "Complexity/Languages/Probabilistic",
