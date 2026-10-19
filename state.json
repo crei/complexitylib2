@@ -296,7 +296,16 @@
            "agent": {"value": "reviewer-sable-cor3"}},
           "expires": 1792388143},
          "blocked": false}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "1e9645eb673a8db8364f30cfa4c65769"},
+          "holder":
+          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+           "agent": {"value": "reviewer-sable-api3"}},
+          "expires": 1792388159},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Probabilistic",
     "Complexity/Languages/Probabilistic",
