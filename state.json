@@ -2064,7 +2064,7 @@
       {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor7"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api7"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP/Witness.lean",
