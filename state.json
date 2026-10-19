@@ -2351,7 +2351,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "21b13c8be7bec7e057b60f2ce68e20b0"},
+       "holder":
+       {"session": {"value": "9c907dcb85cc8554c9a1842ad08941a1"},
+        "agent": {"value": "worker-sable-query"}},
+       "expires": 1792401101},
       "branch": "work/query-complexity/worker-sable-query",
       "blocked": false,
       "assignee": {"value": "worker-sable-query"}}}},
@@ -2368,7 +2373,7 @@
    "goal":
    "Coverage epic 6: query complexity measures and their relations, on cslib QueryComplexity/Measures, DecisionTree/* and Foundations/BooleanAnalysis/{Fourier, LowDegree} (reuse; no parallel decision-tree model). Endpoints: real degree deg f linked to LowDegree and approximate degree adeg_eps; Nisan-Szegedy bs <= 2 deg^2 and bs <= 6 adeg^2; Nisan C <= s * bs and D <= C * bs <= bs^3; symmetrization and adeg(OR) = Omega(sqrt n) (Chebyshev upper bound via Mathlib Polynomial.Chebyshev if feasible); Huang sensitivity theorem s(f) >= sqrt(deg f) (a proof avoiding Cauchy interlacing if Mathlib lacks it); randomized query complexity with Yao principle. Tests on concrete functions (OR, AND, parity, majority, address), axiom guards, six gates, frozen submissions per milestone; cite BuhrmanDeWolf2002, Huang2019, NisanSzegedy1994 (propose entries).",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "worker-sable-query"}]}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
