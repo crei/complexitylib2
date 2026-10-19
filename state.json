@@ -1792,15 +1792,18 @@
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "2caa197659bfa161a36030454fb56a60"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792386433,
+          "snapshot":
+          {"head": {"value": "9db80c1c477a0fab1594ab5e697456283044e6f3"},
+           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+          "reviewer":
           {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
            "agent": {"value": "reviewer-sable-cor6"}},
-          "expires": 1792400673},
-         "blocked": false}},
+          "note":
+          "Independent correctness review (reviewer-sable-cor6, no contribution). Scoped build of 5 epic modules + ComplexityTests.InteractiveProofs --wfail --iofail: OK. Own probes compile: acceptProb equals the IsOraclePPTOn machine law against any prover (same handler); stateful adaptive prover fools a two-query verifier w.p.1, constant provers w.p.0; (17/32)^2<1/3; P4 vs star non-isomorphic, self-loops/dup edges ignored, no GI certificate accepted on (P4,star); GNI completeness 1 on (P4,star). IP: unbounded randomized stateful private-coin prover, IsOraclePPTOn verifier, poly calls/request length, 2/3-1/3. NP/BPP in IP real. GNI: guessing-round bound (1+d)/2, le_half hypothesis eval-equality correct, random-key coupling R->R o sigma on injective keys, birthday n^2/D<=1/16, 17/32/round, seq repetition eps^k adaptive, k=2. GI in NP via isVerifier both directions. 31 axiom probes std only; no sorry/native_decide/axiom/set_option. Blocking: none. Nits: Guessing.lean:23 module doc says differ by at most d though hypothesis is one-sided; summary says 13 guards (14). Limits: no full six gates; board snapshot base f4894296 used (assigned a961fdd rejected by protocol; also an ancestor). Evidence .lake/codex-validation/interactive-proofs-correctness/review.json sha256 c6646537c98c5bf55dcab2cd1590d3012337451c4f033c7f6cdcc20964d212ec"}}},
        "api":
        {"active":
         {"report": "",
