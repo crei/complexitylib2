@@ -1936,7 +1936,16 @@
       {"head": {"value": "881b9c0d619b066ea8d577e7097e821d0cfdc3f1"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor1"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "1299c6804132c0d6045ce0c956b65c8a"},
+          "holder":
+          {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
+           "agent": {"value": "reviewer-sable-cor1"}},
+          "expires": 1792398711},
+         "blocked": false}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api1"}}}}}}},
    "paths": ["references.bib", "docbuild/docs/references.bib"],
    "id": {"value": "docs-bibliography"},
