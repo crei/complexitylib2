@@ -1287,15 +1287,18 @@
           "expires": 1792389591},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "01e18311928ebb6142bef5dec59dbb58"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792375564,
+          "snapshot":
+          {"head": {"value": "eba426bc0b9c6cedd743aa72051099827767ae82"},
+           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+          "reviewer":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792389612},
-         "blocked": false}}}}}},
+          "note":
+          "Delta API review eba426b (base d42eefc); independent; read-only; board commands via main binary. Builds on my approval of 4bf0094 (r2 review.json sha256 305d2d9e...). History: 30855b5 merges main d42eefc only (file list equals main delta, no tooling/docs file); eba426b 6 files +81/-23, diff --check clean, attribution ok. Evidence: coordination build --wfail clean; test --wfail 55/55. Verified: content-exact final-tree guard (per candidate, head..landing diff must exclude its reviewed paths, roots excepted; together with the path-set guard the landed tree equals main outside reviewed files and each reviewed head on its files; missing observation fails closed; actionable message; tampered hand-made landing refused end to end in new runtime test). A1 resolved (full candidate equality while main is recorded, first-candidate match only for reduced reservations, tested). A2 resolved (legacyHeartbeat clears landed; erasure asserted). A3 resolved (reflowed, lines <= 100). No new findings. Remaining cosmetic/limitation from earlier: Diff and Landing base/head names; real mk_all stubbed in fixtures. Not run: scripts/check.sh. Evidence .lake/codex-validation/merge-queue-landing-api-r3/review.json sha256 20de55d3ef2a0fd6ca3406e4cb86da8a2e50f9976792b9a8b1fd974e0b032a93"}}}}}}},
    "paths": ["scripts/coordination", "CONTRIBUTING.md", "AGENTS.md"],
    "id": {"value": "merge-queue-landing"},
    "goal":
