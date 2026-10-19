@@ -269,7 +269,7 @@
     {"work":
      {"resume": "work/open-oracle-composition/worker-nova",
       "report":
-      "PUBLICATION REQUEST: 21ba29a on work/open-oracle-composition/worker-sable-oracle (git push blocked by the local lean4 guardrail; not bypassed). Base main c2016b0 merged. scripts/check.sh at 21ba29a: all six gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Milestone endpoint complete: isOraclePPTOn_iff_isTidyOraclePPTOn normalization, fun_prop-registered IsOraclePPTOn calculus (query_take, bind, bind_with, pair, keep_input, map, map_with, preprocess, cond, ite, finite_cases, iterate_spec, iterateWith_spec, iterate(With)_of_bounded_growth, IsPPTOn.isOraclePPTOn), PTM repeatUntilBlank/iterateWhile, readHead table removed. Will submit ready once the branch is visible on origin.",
+      "PUBLICATION REQUEST: 3eb6238592bd11415db970f1e3756c3b8eeb4e2d on work/open-oracle-composition/worker-sable-oracle (merge of current main 764e3b8 into 21ba29a; clean auto-merge of generated roots). scripts/check.sh at this SHA: all six gates ok. Push blocked by the local lean4 guardrail; not bypassed. Will run ready once it is on origin.",
       "lease":
       {"token": {"value": "a320c179b5bafcaa2cb3683d7072e0ae"},
        "holder":
