@@ -1978,15 +1978,18 @@
           "expires": 1792406925},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "0adb69638b6a37394d3cbdc0e5c5e7f0"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792392641,
+          "snapshot":
+          {"head": {"value": "8ebbd2862a60625725dd51674d7a394e60f87b59"},
+           "base": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"}},
+          "reviewer":
           {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
            "agent": {"value": "reviewer-sable-api6"}},
-          "expires": 1792406966},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api6 (independent; no contribution). Scope: exact head 8ebbd286 over base e93fa0ea; HammingFourier, Approximation/Hamming, Continuity + 3 tests. Evidence: nice lake build of the 3 modules + 3 tests --wfail --iofail exit 0, 0 warnings; probe_api.lean exit 0; layering scan. BLOCKING: Circuit/Continuity.lean:10,14,162-218 - the generic basis-free file publicly imports Circuit.Boolean.Complexity, imports Boolean.SparseSynthesis and declares Cslib.Circuits.Boolean.*; no other generic Circuit file (cslib or here) imports Boolean/*, and precedent is Metric + Boolean/Metric, Pointwise + Boolean/Hamming. Move the De Morgan section, its docstring part and Chashkin2024 into Circuit/Boolean/Continuity.lean; generic file then imports only Circuit.Complexity, Nat.Dist, Hamming. Reuse otherwise good: M3 builds on Parseval/noiseOp/noiseStability/fourierCoeff_injective and Mathlib EuclideanSpace + MetricSpace.induced; M4 on card_failures_le_cost/cost_eq_sum/cost_le_mul; M4 prose (lines 40-42) states reformulation + known limitations. Nits: private hammingDist_single (:166) is hammingDist_comp over any U, make public generic; private exists_hammingDist_le_le (:122) belongs in Data/Hamming; Boolean.complexityModulus_one_le (m=1) clashes in meaning with radius-1 complexityModulus I n m 1, and Boolean.complexityModulus_le is too generic; le_mul_size missing from Main results; promote test noiseDist_parityOn (Parseval.lean:21). Not checked: six gates, correctness. Evidence .lake/codex-validation/hamming-geometry-2-api/review.json SHA256 910fcba6e3b6ec4f0205ec041072068739252d58053de7100d4a5693c9b8e72f"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Continuity.lean",
     "Complexity/Computability/Circuit/Approximation/Hamming.lean",
