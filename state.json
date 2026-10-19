@@ -1748,7 +1748,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/fagin-polish/worker-jetski",
+      "blocked": false,
+      "assignee": {"value": "worker-jetski"}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
