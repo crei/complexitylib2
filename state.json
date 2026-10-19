@@ -3305,7 +3305,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/docs-bibliography-3/coordinator-sable",
+      "blocked": false,
+      "assignee": {"value": "coordinator-sable"}}}},
    "paths": ["references.bib"],
    "id": {"value": "docs-bibliography-3"},
    "goal":
