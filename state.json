@@ -2746,7 +2746,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/isolation-counting/worker-sable-oracle",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-oracle"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/ParityP.lean",
     "Complexity/Computability/Complexity/Classes/Operators.lean",
