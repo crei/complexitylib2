@@ -1445,7 +1445,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/interactive-proofs/worker-sable-ip",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-ip"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/IP.lean",
     "Complexity/Computability/Complexity/Classes/IP",
