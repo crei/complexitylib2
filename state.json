@@ -1369,6 +1369,21 @@
    "goal":
    "Undecidability on the library's own machine model. Using the native universal interpreter and the total raw-word decoder from native-exponential-separation (Encodings/Decoder.lean, Universal decodeDesc, padded self-description), prove: (1) the halting problem for native finite binary MultiTapeTM descriptions is not decidable by any native machine (no total machine outputs [halts] exactly), by diagonalization through the universal machine, with both the decision-on-encoded-pairs form and the self-application form; (2) acceptance (halted output [true]) is undecidable; (3) computable many-one (mapping) reductions between languages on bit words, defined via native ComputableInTimeAndSpace or the native computability predicate the library already has, with transitivity and transfer of undecidability; (4) Rice's theorem for nontrivial semantic properties of native machine descriptions; (5) relate to Mathlib ComputablePred.halting_problem only if a clean bridge exists, otherwise state the relationship in the docstring. No new machine model, no second universal machine; reuse Universal correctness and the decoder. Tests: concrete machines that halt and loop, the diagonal machine, a nontrivial property for Rice. #print axioms guards in the epic test module. Cite Sipser2013 Chapter 4-5, Turing1936 (propose bibliography entries if missing). Six gates; frozen submission.",
    "dependencies": [{"value": "native-exponential-separation"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/Hierarchy/Time.lean",
+    "Complexity/Computability/Complexity/Classes/Hierarchy/Space.lean",
+    "Complexity/Computability/Complexity/Classes/EXP.lean",
+    "ComplexityTests/HierarchyTheorems.lean"],
+   "id": {"value": "hierarchy-theorems"},
+   "goal":
+   "The time and space hierarchy theorems as stated in courses, on the native machines, plus their class corollaries. Define deterministic time and space classes on encoded bit-word languages consistently with the upstream conventions recorded in UPSTREAM.md for cslib PR #767 (DTIME/DSPACE with length-indexed bounds over the encoded DecidableInTimeAndSpace on main, through the plain/tidy bridges of polytime-plain-bridge), and EXP. Prove a deterministic time hierarchy theorem for time-constructible bounds with the overhead the native universal machine actually provides (state the exact gap honestly: the Universal run is polynomial in description size and clock, so the provable form is DTIME(f) strictly inside DTIME(g) when g dominates a fixed polynomial of f; a tight f log f form needs a linear-overhead simulation and is out of scope), the corollary P strictly inside EXP as an equality-free class statement, and a deterministic space hierarchy theorem for space-constructible bounds with the universal machine's space overhead, with L strictly inside PSPACE once L exists or polynomial-space strictness otherwise. Reuse the native-exponential-separation diagonal (Classes/Hierarchy.lean: diagonal, decoder, padded self-description, NatPower clock, universal_bounds_le) rather than a second diagonalizer; define constructibility as an explicit native certificate. Tests: concrete constructible bounds, the P/EXP corollary, axiom guards in the epic test module. Cite AroraBarak09 Theorems 3.1 and 4.8, Sipser2013 Theorems 9.3 and 9.10. Six gates; frozen submission.",
+   "dependencies":
+   [{"value": "native-exponential-separation"},
+    {"value": "polytime-plain-bridge"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
