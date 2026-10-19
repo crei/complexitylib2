@@ -18,6 +18,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792356843,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792356674,
@@ -75,6 +76,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792357641,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792357482,
@@ -128,6 +130,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792355755,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792355217,
@@ -177,6 +180,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792353277,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792353139,
@@ -222,6 +226,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358231,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358092,
@@ -278,6 +283,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792374155,
@@ -330,6 +336,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364044,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792363911,
@@ -390,6 +397,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792368712,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792368575,
@@ -441,6 +449,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792361676,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792361403,
@@ -498,6 +507,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792371880,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792371576,
@@ -552,6 +562,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358627,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358495,
@@ -634,6 +645,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792359269,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792359175,
@@ -666,19 +678,26 @@
    "report":
    "Both independent reviews of exact ac19679 APPROVED. Reopened for a mechanical attribution fix by coordinator-sable (worker-karn keeps authorship): provenance notes crediting Mathlib (Aaron Anderson, HahnSeries.SummableFamily.powers; Paul Cadman, BirdDet) for adapted code in Rational/QuantumSeries.lean and Rational/Determinant.lean, plus the two bibliography entries the author supplied; fresh delta reviews, then land.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/rational-hitting/worker-karn",
-      "report": "",
-      "lease":
-      {"token": {"value": "15cd185a48453397344dc43344d06415"},
-       "holder":
-       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-        "agent": {"value": "coordinator-sable"}},
-       "expires": 1792393252},
-      "branch": "work/rational-hitting/coordinator-sable",
-      "blocked": false,
-      "assignee": {"value": "coordinator-sable"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/rational-hitting/worker-karn",
+       "report": "",
+       "lease":
+       {"token": {"value": "15cd185a48453397344dc43344d06415"},
+        "holder":
+        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+         "agent": {"value": "coordinator-sable"}},
+        "expires": 1792393252},
+       "branch": "work/rational-hitting/coordinator-sable",
+       "blocked": false,
+       "assignee": {"value": "coordinator-sable"}},
+      "summary":
+      "Twice-approved rational-hitting milestone ac19679 (worker-karn: native rational formulas, hitting-list generator with exact hitting semantics for all s, dimension <= 256(n+s+1)^10, encoding length <= outputConstant (n+s+1)^104 for all n, admissibility and nonzeroness tests) plus one documentation commit 2afafb0 by coordinator-sable: Mathlib attribution for the HahnGeometric adaptation of HahnSeries.SummableFamily.powers (Aaron Anderson) in Rational/QuantumSeries.lean and for the restated private BirdDet lemmas (Paul Cadman) in Rational/Determinant.lean, and the bibliography entries OpenAI2026RationalHitting and Schlesinger2026RationalHitting. No declaration changes. Validation: scripts/check.sh six gates passed at the new head. Contributors: worker-karn (implementation), coordinator-sable (integration). AI assistance: Claude.",
+      "snapshot":
+      {"head": {"value": "2afafb078cea242d39dab19383a4266eb613c17c"},
+       "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
     "Complexity/Computability/Circuit/Rational",
@@ -721,6 +740,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792378499,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792376461,
@@ -777,6 +797,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792360547,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792360283,
@@ -825,6 +846,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792373030,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792372858,
@@ -880,6 +902,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792371825,
@@ -946,6 +969,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792367280,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792367120,
@@ -999,6 +1023,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792374035,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792373854,
@@ -1053,6 +1078,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364773,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792364624,
@@ -1098,6 +1124,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792373796,
@@ -1147,6 +1174,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792370838,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792369636,
@@ -1195,6 +1223,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792372831,
@@ -1248,6 +1277,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376022,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792375751,
@@ -1293,6 +1323,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792374437,
@@ -1629,6 +1660,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792374719,
