@@ -2730,7 +2730,15 @@
    "authors": [{"value": "worker-sable-graphs"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/hardness-amplification/worker-sable-loop",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-loop"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/HardCore.lean",
     "Complexity/Computability/Circuit/Boolean/HardCore",
