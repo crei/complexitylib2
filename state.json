@@ -1717,6 +1717,19 @@
    "goal":
    "Consolidation follow-up from the circuit-metric and hamming-geometry reviews; no statement weakening; six gates; two reviews. (1) Move complexity_single_proj and one_le_complexity_single (Circuit/Pointwise.lean marked block) and complexity_single_unary_le / complexity_single_binary_le (Circuit/Metric.lean) into Complexity/Computability/Circuit/Complexity.lean (marked as additions to cslib Circuit/Complexity), rederive Boolean.complexity_not_le and complexity_binary_le from them, and delete the private copies in ComplexityTests/CircuitMetric.lean. (2) Generalize: move two_mul_hammingDist_parityOn (BooleanAnalysis/Linearity.lean) into Foundations/Data/BitString/Hamming.lean with the elementary symmetric-difference proof, derive two_mul_hammingDist_proj from it, and replace the Fourier proof in Linearity by the new lemma. (3) Smolensky/Approximation.lean uses Interpretation.pointwise/evalAt instead of its local let. (4) Naming/docs: median_median → median_median_distrib (or a documented equivalent), median docstring notes it is the lattice median, Metric.lean says exponent two (-u = u) instead of characteristic two, Gates.lean distance-zero comment uses circuitDist_self, Boolean/Hamming.lean imports or stops citing two_mul_hammingDist_add_proj.",
    "dependencies": [{"value": "hamming-geometry"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Logics",
+    "Complexity/Computability/Complexity/Fagin",
+    "ComplexityTests/Fagin.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Encodings/Frame.lean"],
+   "id": {"value": "fagin-polish"},
+   "goal":
+   "Small follow-up from the fagin-cleanup reviews (both approved 8941c6c); no statement weakening; six gates; two reviews. (1) Remove the unused FO.eqOfPred/realize_eqOfPred or give it a use and a test. (2) Restore a public unfolding lemma for isStrictLinearOrderSentence (irreflexive, transitive, trichotomous, any N) under a descriptive name, beside the finite-domain characterization realize_isStrictLinearOrderSentence. (3) Import Mathlib.ModelTheory.Semantics instead of Mathlib.ModelTheory.Complexity in Logics/FirstOrder/Basic.lean if sufficient; write closeEx via Formula.iExs mirroring closeAll. (4) Rename getElem?_frame_eq_of_realize_frameChunkSentence after its full conjunction or split it. (5) Add the Fagin1974/Immerman1999 citations to the hypothesis-free iff docstring; reword the ComplexityTests/Fagin.lean semantic-test docstring to say it exercises decoding and the Definable statement, not the construction. (6) Move the general frame/List lemmas in Fagin/Layout.lean (getElem?_frame_two_mul*, forall_getElem?_frame_iff, forall_getElem?_append_iff) beside Turing.MultiTapeTM.frame or into a List foundations file. (7) Use the bound r in Tableau.lean's hlt.",
+   "dependencies": [{"value": "fagin-cleanup"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
