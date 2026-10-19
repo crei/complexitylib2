@@ -2896,15 +2896,18 @@
           "note":
           "Correctness review of M1 by reviewer-sable-cor6, who did not contribute to the epic. Read-only review of the exact head d57c472c. Scope: Rectangle, FoolingSet, Rank, Functions, the tests and the root imports. Build of the 4 touched modules and the test module under nice --wfail --iofail: success. Statements checked against Kushilevitz-Nisan Ch.1: the partition (at most 2^depth product rectangles, exists-unique cover, output constant on each), the fooling set (KN definition; the hz hypothesis is necessary; 2^n<=#S gives n+1<=D), and the rank bound (generic CommSemiring+StrongRankCondition, with R instantiated; clog2 rank<=D). LogRankConjecture is exists c, forall f; c=0 is refuted by EQ, and the swapped-quantifier form is provably trivial, so the order matters. EQ/GT/IP/DISJ are standard: IP is parity, DISJ means no common 1, GT means numeral(x)>numeral(y). Each = n+1 with both bounds proved; at n=0 each is 0. Probes (exit 0) cover n=0,1, EQ Fin 5 rank 5 giving D>=3, and a concrete AND protocol with rank<=1. Axioms of 17 decls: propext, Classical.choice, Quot.sound. No sorry, native_decide or set_option. Blocking: none. Nits: GT is strict (KN sometimes uses >=; same complexity); LogRank quantifies over Type 0. Not checked: six gates, API scope. Evidence: .lake/codex-validation/communication-complexity-correctness/review.json sha256 f666f71f20ab2f595f42cad27902dfccf8a03fe4fc2cbb93833f3adab1a28883 (+Probes.lean, probes.log, build.log)."}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "dc7efe3e26431303368ddcaca698fe8e"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390947,
+          "snapshot":
+          {"head": {"value": "d57c472c16dfef7cb8c3c8dc06deb1318fa25cf0"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
            "agent": {"value": "reviewer-sable-api6"}},
-          "expires": 1792405137},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api6 (independent; sole author worker-sable-graphs) of d57c472c. Build: nice lake build of Rectangle, FoolingSet, Rank, Functions and ComplexityTests.CommunicationComplexity with --wfail --iofail: exit 0. Probes: axioms within propext/Classical.choice/Quot.sound; scoped #lint docBlame/simpNF/unusedArguments: 0 errors. Fit: no second rectangle type or depth/leaves API; reuses Protocol.leaves, leaves_le_two_pow_depth, Solves and ecomplexity_le_iff; DensityRectangle, Frontier.rectangle and DecisionTree area bound are different models; Mathlib Matrix.rank and Lindsey via card_mul_le_two_pow_of_hadamardCode_eq reused. Template, docstrings, 10 axiom guards, n=0 test OK. Blocking: none. Follow-ups: (1) Functions.lean:234-258 dotProduct counting lemmas belong in Cslib.BitString/Hadamard.lean (rule 6) and re-derive Parity.lean:171 card_filter_parityOn_eq; (2) aliceSend, run/depth lemmas and ecomplexity_le_succ belong in Protocol.lean; (3) references.bib needs MehlhornSchmidt1982, LovaszSaks1988; (4) nits: IsFoolingSet.le_ecomplexity -> succ_le_ecomplexity, generic card_filter_le_mul, namespace mix of ecomplexity_* lemmas; (5) M2: name the function form of ecomplexity, add weighted area bound for discrepancy; (6) simp equation lemmas for leaf*. Not checked: deep correctness, six gates, full lint. Evidence: .lake/codex-validation/communication-complexity-api/review.json sha256 11223863f16bc46f6cd1186e76d98a21005d61cf3d6a9beaddda35aecffd8317"}}}}}}},
    "paths":
    ["Complexity/Computability/Communication/Rectangle.lean",
     "Complexity/Computability/Communication/FoolingSet.lean",
