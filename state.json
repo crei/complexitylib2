@@ -3035,15 +3035,18 @@
           "expires": 1792407478},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "7b837b71017ca05a53c1aa9e100780b3"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792393113,
+          "snapshot":
+          {"head": {"value": "ca80e7094f9d439e0202e487c2bdacf106e8348b"},
+           "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+          "reviewer":
           {"session": {"value": "33380288772710be7744d177c8f66871"},
            "agent": {"value": "reviewer-sable-api2"}},
-          "expires": 1792407467},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api2 (independent; sole author worker-sable-oracle) of exact ca80e709 on 06c5f534 (ancestry ok). Built USAT, Isolation, ValiantVazirani + ComplexityTests.Isolation niced --wfail --iofail: exit 0. BLOCKING: B1 ValiantVazirani.lean:984-1059 two_pow_le_two_mul_card_exists_row + private one_sub_pow_le re-prove landed Fintype.half_le_dens_filter_exists_apply_mem / one_sub_pow_le_half (Finset/Sampling.lean:62,192). Probe derives it in ~30 lines; fix is in paths. B2 :188-201 public binaryValue_lt_two_pow duplicates the GNI private binaryValue_lt (GraphNonIsomorphism.lean:291). Hoist it with exists_binaryValue_eq (:709) into BitString/List/Binary.lean (path grant). FOLLOW-UPS: RPWithOracle/RPWithPromiseOracle to Oracle/Randomized (RPWithOracle mirrors PWithOracle; consider a ComputableInPolyTimeWithPromiseOracle); queryAny + any_mem to Oracle/Closure; interpret_iterate to Iteration. VV hash/isPairwiseIndependentHash_hash is a Bool copy of affineHash (Affine.lean:55,73): move to BitString/LinearHash. Generic CNF.vars/ofFn/take-drop helpers; take_ofFn = Fin.ofFn_take_eq_take_ofFn; hashBits bounds = dyadicSize_le/lt_dyadicSize. Add dens corollary 3/(32(n+3)) <= dens (isolation lemma already citable). Ambiguous/setWeight generic names. Non-terminal simp :341,722,958,970. Two more guards. Central: bib MulmuleyVaziraniVazirani1987 (Crossref ok). Not run: six gates, correctness. Evidence .lake/codex-validation/isolation-counting-api/review.json sha256 7908432554f7e2a6c64cb1a6f8f438932d60ef69c432367fbc1b50318c3fe328"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/ParityP.lean",
     "Complexity/Computability/Complexity/Classes/Operators.lean",
