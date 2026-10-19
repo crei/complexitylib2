@@ -2540,6 +2540,28 @@
    "goal":
    "Coverage epic 3: circuits as data and Karp-Lipton. M1: a binary encoding of De Morgan circuits (cslib Circuit over the existing Boolean signature; gate list in topological order, explicit size) with a native ComputableTidilyInPolyTime evaluation certificate (CVP in P), CircuitSAT NP-complete via the Cook-Levin tableau or SAT, and MCSP in NP for the existing MCSP definitions where the truth-table encoding allows. M2: search-to-decision self-reduction for SAT and Karp-Lipton (NP within P/poly implies PH = SigmaP 2, on the existing Classes/PH quantifier definitions and Circuit/Boolean/PPoly; no second P/poly). M3: Kannan (for every k, SigmaP 2 not within SIZE(n^k), from the size hierarchy and Shannon counting), Meyer (EXP within P/poly implies EXP = SigmaP 2, after hierarchy-theorems' EXP lands), and Mahaney if cheap. Reuse PPoly, SIZE, Circuit/Evaluation, MachineSimulation, CookLevin and NP/GuessVerify; one machine model. Cite KarpLipton1980, Kannan1982 (propose entries). Tests and named axiom guards per milestone; six gates; one frozen submission per milestone.",
    "dependencies": [],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Communication/Rectangle.lean",
+    "Complexity/Computability/Communication/FoolingSet.lean",
+    "Complexity/Computability/Communication/Rank.lean",
+    "Complexity/Computability/Communication/Randomized.lean",
+    "Complexity/Computability/Communication/Randomized",
+    "Complexity/Computability/Communication/Newman.lean",
+    "Complexity/Computability/Communication/Distributional.lean",
+    "Complexity/Computability/Communication/Discrepancy.lean",
+    "Complexity/Computability/Communication/Corruption.lean",
+    "Complexity/Computability/Communication/Disjointness.lean",
+    "Complexity/Computability/Communication/Functions.lean",
+    "ComplexityTests/CommunicationComplexity.lean",
+    "ComplexityTests/CommunicationComplexity"],
+   "id": {"value": "communication-complexity"},
+   "goal":
+   "Coverage epic 5: communication complexity core on the existing Communication/Protocol (Solves, depth, leaves, ecomplexity) and TopDown rectangles; no second protocol model. M1 (deterministic): a depth-d protocol partitions X x Y into at most 2^d monochromatic rectangles; fooling-set bound; rank bound D(f) >= log2 rank M_f over the reals; EQ, GT, IP and DISJ on n bits need n+1 bits; the log-rank conjecture as a Prop. M2 (randomized): public- and private-coin protocols with error eps on the library's finite PMFs, Newman's theorem (private coins with O(log n + log 1/delta) extra bits), the discrepancy bound and R(IP) = Omega(n) via the existing Lindsey lemma. M3: distributional complexity and Yao's minimax (Mathlib Sion or finite LP duality), the corruption bound and Razborov's R(DISJ) = Omega(n) if the M2 API supports it, else tracked. Reuse Foundations/LinearAlgebra/Matrix/Lindsey, BooleanAnalysis/HadamardRectangles and the probability-toolkit Chernoff once landed. Cite KushilevitzNisan1997, Newman1991, Razborov1992 (propose entries). Tests and named axiom guards per milestone; six gates; one frozen submission per milestone.",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
