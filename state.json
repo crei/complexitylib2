@@ -1607,15 +1607,18 @@
           "note":
           "Correctness review of e22e74f on 764e3b8 by reviewer-sable-cor4 (independent; not an author). Scope: Stretch, Streaming, Quantitative, tests PRGStretch+Quantitative. Build of the 5 modules --wfail --iofail OK, 0 warnings. Statement diff: no Stretch statement changed (additions only); renamed getLast?_toList_bits / bitsGetLast?ToList keep identical statements (4n+8, zero space), old names unused. pseudorandomGenerator back on polyTime_stretch. iterate_unary_stream_sum: cumulative sum of actual round costs, input length absorbed honestly, workspace Q+B independent of k. forwardIterate_captured k-independent; shared reversal helper charges n+k via comp (5|mid|). streamState_replicate correctly generalizes; forwardIterate_eq true (decide-checked). length_bits correct (map_bits along encUnary). Zero-round test is through the stretch certificate (Q=0, vacuous hspace). Probe ProbeCleanup.lean (exit 0): nonconstant captured capRev through forward/iterate captured certs, zero rounds collapse to c*(|a|+n+1), non-PRG core client (map not); axioms clean on all new/renamed public theorems. Blocking: none. Nits: no axiom guards for streamState_replicate/forwardIterate_eq; old names dropped without deprecation (API call). Note: main moved to d42eefc. Not run: check.sh. Evidence .lake/codex-validation/stretch-cleanup-correctness/review.json SHA256 0a8f19f838bd00ec7f2ae6078a2a2eebf48599440c6280c1fcbaf1d0868cef56"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "17bfd3a5391a982322ce1dd33d2ce7e5"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792374780,
+          "snapshot":
+          {"head": {"value": "e22e74ff563d3bc79758e445aa71f714035811a7"},
+           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+          "reviewer":
           {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
            "agent": {"value": "reviewer-sable-api4"}},
-          "expires": 1792389066},
-         "blocked": false}}}}}},
+          "note":
+          "API review of stretch-cleanup e22e74f (base main 764e3b8) by reviewer-sable-api4, independent (no code; this epic addresses my earlier nits), read-only. Build of the 5 modules --wfail --iofail ok. 89 base statements unchanged; forwardIterate is docstring-only; the only removals are the two renames, referenced nowhere on main or any work branch. (1) The goal's alternative is justified: Comp.lean:129 comp charges 5*|intermediate| workspace, so re-encoding (s,k) into the captured input would break forwardIterate's public k-independent workspace. One core iterate_unary_stream_sum (62) with forwardIterate (31) and public forwardIterate_captured (70) as clients; iterate_pair/iterate_captured (8/10) share a private reversal helper; streamState_replicate replaces hstate_eq. (2)-(5) verified. Burden 831->733 body / 455->514 statements reproduced. Probes ok: core used on a non-PRG map (List.reverse), zero rounds, forwardIterate_eq concrete, renames resolve, standard axioms, length_bits found by fun_prop with no effect on probed polytime/degree goals. Nits: no degree twin for length_bits (degree fun_prop on List.length fails); streamState_replicate would sit naturally beside streamState_succ. No vendored file touched; markers ok; diff --check and upstream_sync clean. Limitations: check.sh not rerun; timings not measurable under load ~45. Evidence .lake/codex-validation/stretch-cleanup-api/review.json sha256 770c6e428402837259206abe742e75720f350eaf666478c8ab5adb760d633bf5"}}}}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Complexity/Streaming.lean",
