@@ -1866,11 +1866,11 @@
      {"resume": "work/b2-lower-bound/coordinator-sable",
       "report": "",
       "lease":
-      {"token": {"value": "a4c7e8bcd842baf01970997495173fd0"},
+      {"token": {"value": "f5ea434d3ee9c83c103d41bc1cd30798"},
        "holder":
        {"session": {"value": "abc254b86ea9eef6d4f1c5836328aaff"},
         "agent": {"value": "worker-sable-b2"}},
-       "expires": 1792399112},
+       "expires": 1792399125},
       "branch": "work/b2-lower-bound/worker-sable-b2",
       "blocked": false,
       "assignee": {"value": "worker-sable-b2"}}}},
