@@ -1801,7 +1801,16 @@
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api6"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "79ffff8cad2e297a9cf35deddbd3332e"},
+          "holder":
+          {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
+           "agent": {"value": "reviewer-sable-api6"}},
+          "expires": 1792400499},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/IP.lean",
     "Complexity/Computability/Complexity/Classes/IP",
