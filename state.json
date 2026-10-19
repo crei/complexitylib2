@@ -1947,4 +1947,10 @@
    "expires": 1792388644,
    "actor":
    {"session": {"value": "6eb1f9ed34747f9a90b9fd3f54b86dec"},
-    "agent": {"value": "sable-graphs-tsp"}}}]}
+    "agent": {"value": "sable-graphs-tsp"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792388650,
+   "actor":
+   {"session": {"value": "d98df9ee269d195e708c8b5ca2345547"},
+    "agent": {"value": "sable-graphs-verify"}}}]}
