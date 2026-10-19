@@ -2683,15 +2683,18 @@
           "expires": 1792404894},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "4af633b9ed51c5a302ab0a4bbbe1f110"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390911,
+          "snapshot":
+          {"head": {"value": "2397f41ec42c3ee4710e6776f1f1e1a9b49ac54a"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
            "agent": {"value": "reviewer-sable-api4"}},
-          "expires": 1792405259},
-         "blocked": false}}}}}},
+          "note":
+          "API review (reviewer-sable-api4, independent, no contribution) of 2397f41e over 0d8ef4bf: NaturalProof.lean + tests. Build of touched module and test module with --wfail --iofail OK; probe confirms clean headline signatures and that hard-function truth tables are exactly GapMCSP.no (simp). Reuse good: MCSP.truthTable, PPoly/SIZE, Language.slice, cslib PRG.Generator.Secure with caller-supplied IsCircuitTest (idiomatic; truth-table generator = PRF read at all inputs, docstrings say so). Barrier stated citably; nonuniform hypothesis and missing GGM circuit analysis disclosed honestly. 8 axiom guards cover headlines. No blocking findings. Follow-ups: add RazborovRudich1997 to references.bib (central); move generic Generator.toReal_*Experiment_pure out of NW/Sampling (import at :14); move hard-function count (:351) to MCSP/Shannon; GapMCSP.no bridge + not_isNatural corollary for KC (:402); test comment :67-69 says not natural, theorem gives not constructive; name the repeated security hypothesis (:325,:407); Key variable shadowing (:262/:313). Not checked: six gates, deep correctness. Evidence .lake/codex-validation/natural-proofs-api/review.json sha256 3b09634956ae93c9a3c200393b2e33476b82845becb8b501b7465be86637c475"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/NaturalProof.lean",
     "Complexity/Computability/Circuit/Boolean/NaturalProof",
