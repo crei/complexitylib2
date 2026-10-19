@@ -2768,7 +2768,7 @@
        "holder":
        {"session": {"value": "9f33c425e7787c86e00bfa66ec90f517"},
         "agent": {"value": "worker-sable-loop"}},
-       "expires": 1792404565},
+       "expires": 1792404775},
       "branch": "work/hardness-amplification/worker-sable-loop",
       "blocked": false,
       "assignee": {"value": "worker-sable-loop"}}}},
@@ -3124,7 +3124,7 @@
     "agent": {"value": "integrator-sable-3"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792404565,
+   "expires": 1792404775,
    "actor":
    {"session": {"value": "9f33c425e7787c86e00bfa66ec90f517"},
     "agent": {"value": "worker-sable-loop"}}},
