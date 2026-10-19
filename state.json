@@ -461,7 +461,7 @@
    "authors": [{"value": "worker-opus"}, {"value": "coordinator"}]},
   {"resume": null,
    "report":
-   "Reassigned by coordinator-sable to local worker worker-sable-stretch (worker-orion never acknowledged the reopened assignment). Resume from the published head 0c62545a250a0b4d8ca564c73142124cbaef0a1d on work/quantitative-stretch/worker-orion, retain worker-orion as contributor, merge current main at a clean checkpoint, and implement the consolidation the independent API review requested (recorded above): move the prefix-aware raw stream-loop and tidy cleanup contracts into the existing Combinators/StreamFold owner with the old exact statements as thin wrappers, share the post-initialization callback/tape adaptation and cost assembly between streamFold_sum and streamFold_pair_sum, add the nonconstant-bits ordering test, and report helper-inclusive before/after burden truthfully. Review evidence is readable at .worktrees/reviewer-api/.lake/codex-validation/quantitative-stretch-api-review/api-review.json. Report checkpoints through the board.",
+   "Consolidation dependency map accepted as posted (raw prefix-aware owners in Combinators/StreamFold with vendored statements kept as empty-prefix wrappers, one typed streamFold_sum_of_init owning framing/embedding/loop/cleanup/assembly with streamFold_sum and streamFold_pair_sum as short clients, nonconstant-emission ordering test, helper-inclusive burden report). Main has moved to a0952ac (disjoint files); merge it right before your final validation, since ready requires base == current main until the merge-queue tooling lands. Request publication of the exact commit through the board if the push hook blocks you.",
    "phase":
    {"working":
     {"work":
