@@ -1321,6 +1321,21 @@
    "goal":
    "The textbook NP-complete graph problems on the existing Graph encoding and Karp-reduction machinery (Problems/IndependentSet.lean, Clique.lean, ThreeSAT.lean, Reduction.lean). Endpoints, each with membership in NP via a polynomial-time verifier, a polynomial-time Karp reduction, NPHard and NPComplete: (1) VertexCover from IndependentSet (complement of the vertex set, k |-> |V| - k); (2) graph 3-coloring (ThreeColoring) from ThreeSAT with the standard palette/variable/clause gadget [Sipser2013 Thm 7.? / AroraBarak09], and k-coloring for k >= 3 if cheap; (3) directed Hamiltonian path and Hamiltonian cycle from ThreeSAT (Sipser2013 Theorem 7.46 construction), then undirected Hamiltonian path/cycle from the directed versions; (4) TSP decision from undirected Hamiltonian cycle. Reuse Graph, encGraph, adjBool, selectVertices, verifySubset and the existing SimpleGraph semantics (Mathlib SimpleGraph.Coloring, Walk.IsHamiltonian, IsHamiltonianCycle where they fit; do not add a parallel graph model). Exact semantics: vertices are the declared vertex list, duplicate and out-of-range edges handled as in IndependentSet; empty graphs and k = 0 boundaries stated. Tests with concrete small graphs in and out of each language, gadget sanity checks, and #print axioms guards for every NPComplete theorem in the epic's own test module. Cite Karp1972, Sipser2013, AroraBarak09, GareyJohnson1979 if present (propose a bibliography entry otherwise). Six gates; self-review; frozen submission; one milestone per two problems is fine if the Hamiltonian gadget is large.",
    "dependencies": [],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Problems/SubsetSum.lean",
+    "Complexity/Computability/Complexity/Problems/SubsetSum",
+    "Complexity/Computability/Complexity/Problems/Partition.lean",
+    "Complexity/Computability/Complexity/Problems/Knapsack.lean",
+    "Complexity/Computability/Complexity/Problems/IntegerProgramming.lean",
+    "ComplexityTests/NPCompleteNumbers.lean"],
+   "id": {"value": "np-complete-numbers"},
+   "goal":
+   "The textbook NP-complete number problems on the existing Karp-reduction machinery (Problems/ThreeSAT.lean, Reduction.lean, PolyTime/Nat and PolyTime/List certificates). Endpoints, each with NP membership via a polynomial-time verifier, a polynomial-time Karp reduction, NPHard and NPComplete: (1) SubsetSum from ThreeSAT by the digit construction (Sipser2013 Theorem 7.56), with binary-encoded natural numbers and the reduction's output size and time honestly bounded (numbers have O(n + m) digits); (2) Partition from SubsetSum; (3) 0-1 Knapsack decision from SubsetSum; (4) zero-one integer programming feasibility from ThreeSAT if a short reduction fits. Encodings: lists of natural numbers with the existing encNat/encList (binary or unary as the library's encNat provides; state which, and do not claim strong NP-hardness for a unary encoding). Boundaries: empty multisets, target 0, duplicates. Tests with concrete instances in and out of each language and #print axioms guards for every NPComplete theorem in the epic's own test module. Cite Karp1972, Sipser2013, AroraBarak09. Six gates; self-review; frozen submission.",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
