@@ -1586,20 +1586,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "PUBLICATION REQUEST: e22e74f on work/stretch-cleanup/worker-sable-stretch. It merges main 764e3b8 into cleanup commit 5d69c37, which was cut from main 26253c9. Validation: all six scripts/check.sh gates passed at exactly this tree; git diff --check is clean. The diff against main is the 5 epic files (+380/-335). The push is blocked by the lean4 guardrail hook (not bypassed).",
-      "lease":
-      {"token": {"value": "72a550e18875ba4e0f509ff106f356d0"},
-       "holder":
-       {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
-        "agent": {"value": "worker-sable-stretch"}},
-       "expires": 1792388359},
-      "branch": "work/stretch-cleanup/worker-sable-stretch",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-stretch"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "PUBLICATION REQUEST: e22e74f on work/stretch-cleanup/worker-sable-stretch. It merges main 764e3b8 into cleanup commit 5d69c37, which was cut from main 26253c9. Validation: all six scripts/check.sh gates passed at exactly this tree; git diff --check is clean. The diff against main is the 5 epic files (+380/-335). The push is blocked by the lean4 guardrail hook (not bypassed).",
+       "lease":
+       {"token": {"value": "72a550e18875ba4e0f509ff106f356d0"},
+        "holder":
+        {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
+         "agent": {"value": "worker-sable-stretch"}},
+        "expires": 1792388359},
+       "branch": "work/stretch-cleanup/worker-sable-stretch",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-stretch"}},
+      "summary":
+      "Submitted e22e74f on work/stretch-cleanup/worker-sable-stretch: cleanup commit 5d69c37 cut from main 26253c9, plus a merge of main 764e3b8. Diff vs main: the 5 epic files (+380/-335). No vendored file touched.\n\n(1) The captured certificate cannot literally be the core. encPair (encPair encParam encBits) encUnary (((),s),k) is never encPair encBits encUnary (s,k), and re-encoding by composition would materialize the n+k input bits and break the k-independent workspace bound. So I took the goal alternative. One generic core, ComputableTidilyInTimeAndSpace.iterate_unary_stream_sum in Streaming.lean: input (s,k) on encPair enc encUnary for any state encoding; certificates for state map f, emission and finish, each on enc. It returns the emissions of f^[i] s for i<k, then finish (f^[k] s), with cumulative time sum_i R and workspace Q+B independent of k. It reuses streamFold_pair_sum and a new general streamState_replicate.\n- streamState_replicate_eq_seedAt is now its 1-line specialization and feeds the new forwardIterate_eq characterization.\n- computableTidilyInTimeAndSpace_forwardIterate (state = seed) and the new computableTidilyInTimeAndSpace_forwardIterate_captured (state = (a, seed); a captured-orbit lemma replaces the local hstate_eq/hemit_eq) are its clients.\n- _iterate_pair and _iterate_captured derive from them through one private reversal helper that charges the n+k buffer.\n- All public Stretch statements are unchanged.\n\n(2) Accurate names: Streaming getLast_bits -> getLast?_toList_bits, Quantitative bitsGetLast -> bitsGetLast?ToList. One private last-bit transducer is shared with getLast?_bits; both keep 4n+8 time and zero workspace.\n\n(3) ComputableTidilyInTimeAndSpace.length_bits (List.length, encBits to encUnary, 4n+8 time, 0 space) sits beside reverse_bits, is registered with fun_prop, and replaces the inline certificate in _stretch.\n\n(4) pseudorandomGenerator uses polyTime_stretch again. polyTime_stretch_of_length_eq stays as the tested corollary of the quantitative certificate.\n\n(5) Zero-round test: stretch shiftIn with count 0 through computableTidilyInTimeAndSpace_stretch, with generator workspace Q = 0. The bound collapses to O(tCount n + n + 1) time and O(sCount n + n + 1) space. Axiom guards were added for the new public theorems (iterate_unary_stream_sum, length_bits, forwardIterate_captured); guards for renamed ones updated.\n\nBurden (scripts/proof_lengths.py theorem/lemma body lines, helpers included, statements excluded; Streaming/Quantitative/Stretch): main 237+21+573 = 831, now 281+21+431 = 733 (-98).\n- forwardIterate 78 -> 31; iterate_pair 15 -> 8.\n- iterate_captured 169 -> captured forward 70 + iterate_captured 10.\n- getLast pair 40 -> 2+2 plus transducer lemma 8.\n- New: core 62, reversal helper 8, orbit lemmas 1+3, forwardIterate_eq 5.\n- Statement lines 455 -> 514 (new public core, captured forward certificate, forwardIterate_eq, length_bits). Raw library lines +336/-331.\n\nValidation: all six scripts/check.sh gates passed at exactly e22e74f; git diff --check clean.\n\nContributors: worker-sable-stretch only, no subagents.\n\nLimitations: new public candidates (iterate_unary_stream_sum, streamState_replicate, length_bits, forwardIterate_eq, forwardIterate_captured) need independent review. length_bits joins the fun_prop set.",
+      "snapshot":
+      {"head": {"value": "e22e74ff563d3bc79758e445aa71f714035811a7"},
+       "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Complexity/Streaming.lean",
