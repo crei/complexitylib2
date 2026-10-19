@@ -1335,7 +1335,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/np-complete-numbers/worker-sable-numbers",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-numbers"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/SubsetSum.lean",
     "Complexity/Computability/Complexity/Problems/SubsetSum",
