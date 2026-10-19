@@ -285,7 +285,9 @@
       "snapshot":
       {"head": {"value": "3eb6238592bd11415db970f1e3756c3b8eeb4e2d"},
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
    "paths":
    ["Complexity/Computability/Probabilistic",
     "Complexity/Languages/Probabilistic",
