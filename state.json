@@ -3106,6 +3106,15 @@
    "goal":
    "Continuation of natural-proofs (after M1 lands): (1) nonuniform concrete-security GGM: from a length-doubling PRG secure against circuits of size 2^(k^eps) with advantage 2^(-k^eps), the GGM family is a PRF family secure against circuits (hybrid argument with explicit size and advantage loss), in Crypto/Computational/GGM/Circuit.lean, reusing the landed GGM construction and hybrid lemmas; then instantiate not_isUseful_PPoly_of_isNatural to: if such PRGs exist, no P/poly-natural property is useful against P/poly. (2) Naturalness demonstrations: the Hastad (parity not in AC0) and Razborov-Smolensky properties are large and constructive, stated against the landed Hastad/Smolensky developments. State all assumptions explicitly. Tests, named axiom guards, run-gates.",
    "dependencies": [{"value": "natural-proofs"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths": ["references.bib"],
+   "id": {"value": "docs-bibliography-2"},
+   "goal":
+   "Docs-only: add the bibliography entries cited by submitted epics (undecidability, query-complexity, probability-toolkit, natural-proofs, communication-complexity) to references.bib in cslib's format, each verified against Crossref/DOI metadata. No Lean changes. check_docs --config-only (duplicate-key guard), two reviews.",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
