@@ -2342,7 +2342,7 @@
        "holder":
        {"session": {"value": "b1cbc8b7223d2f96ea57cc362686fe08"},
         "agent": {"value": "worker-sable-relativ"}},
-       "expires": 1792404210},
+       "expires": 1792404316},
       "branch": "work/relativization-2/worker-sable-relativ",
       "blocked": false,
       "assignee": {"value": "worker-sable-relativ"}}}},
@@ -3172,7 +3172,7 @@
     "agent": {"value": "worker-sable-ladner"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792404210,
+   "expires": 1792404316,
    "actor":
    {"session": {"value": "b1cbc8b7223d2f96ea57cc362686fe08"},
     "agent": {"value": "worker-sable-relativ"}}},
