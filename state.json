@@ -2787,7 +2787,7 @@
       {"head": {"value": "e10d94f4bca690c2e32b741ad287bbdb50f46784"},
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor7"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api7"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/Encoding.lean",
