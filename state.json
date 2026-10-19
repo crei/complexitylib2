@@ -2002,4 +2002,10 @@
    "expires": 1792388650,
    "actor":
    {"session": {"value": "d98df9ee269d195e708c8b5ca2345547"},
-    "agent": {"value": "sable-graphs-verify"}}}]}
+    "agent": {"value": "sable-graphs-verify"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792389520,
+   "actor":
+   {"session": {"value": "9b318203e8a9985d589db0583a2bb7af"},
+    "agent": {"value": "worker-sable-npbuilder"}}}]}
