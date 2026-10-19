@@ -2830,15 +2830,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "0da6593996f6f5611b5d73d1533549b1"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792389638,
+          "snapshot":
+          {"head": {"value": "65d016ba57621f8d924763578b51a707cb5cc1d7"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
            "agent": {"value": "reviewer-sable-cor6"}},
-          "expires": 1792404023},
-         "blocked": false}},
+          "note":
+          "Correctness re-review of fix delta 6b954f70..65d016ba by reviewer-sable-cor6 (did not contribute). Both prior blocking findings resolved: UPSTREAM.md now scopes the #767 alignment to L, DTIME, EXP (matching LogSpace.lean:33,106, Time.lean:23, EXP.lean:19) and states that local PSPACE uses a different bound, not compared (matches Space.lean:22-25); ROADMAP fixed-power sentence (encoded and burn-in forms, optimized square-root bounds, permutation inversion) matches fixed_power_encoded/fixed_power_image (Encoded.lean), fixed_power_optimized family (Optimization.lean), permutation_inverse(_encoded) (Permutation.lean), and square-root bounds left the to-port list. Nits resolved: Hamiltonian link to Hamiltonian/Undirected.lean:592, GNI link to IP/GraphNonIsomorphism.lean:611, README time hierarchy states the polynomial gap (DTIME_ssubset_DTIME, encBits), parametric DTIME item removed, space-hierarchy sentence now accurate (needs a space-budgeted universal simulation; time hierarchy and P subset EXP via polynomial-overhead universal machine). No new inaccuracy; all 10 added links resolve; check_docs --config-only passes. Limitations: docs-only, no Lean build. Evidence: .lake/codex-validation/docs-roadmap-refresh-correctness/review.json sha256 f29c7d70f661fa52b3ea4088ba8dfb25180a4a0b474d2a332920b3dc848fffc6"}}},
        "api":
        {"finished":
         {"review":
