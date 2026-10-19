@@ -2125,7 +2125,7 @@
        "holder":
        {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
         "agent": {"value": "worker-sable-disperser"}},
-       "expires": 1792401069},
+       "expires": 1792401285},
       "branch": "work/explicit-affine-disperser/worker-sable-disperser",
       "blocked": false,
       "assignee": {"value": "worker-sable-disperser"}}}},
@@ -2655,7 +2655,7 @@
     "agent": {"value": "worker-sable-b2"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792397831,
+   "expires": 1792401285,
    "actor":
    {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
     "agent": {"value": "worker-sable-disperser"}}},
