@@ -1469,20 +1469,27 @@
    "report":
    "Owner recorded: assigned to a local worker as soon as polynomial-space lands (its Classes/Space and Algorithms/Reachability scopes currently overlap this plan). polynomial-space has both reviews in progress and lands in the next batch.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "BLOCKED ON SCOPE (re-posted: the convention note cleared the flag). Milestone 1 builds on current main (branch head 796003c holds only in-scope files; the rest is uncommitted until approved). Please revise logspace-nl to add: (1) Complexity/Computability/Machines/Turing/MultiTape/Complexity/LogSpace.lean (ComputableInLogSpace, haltsAt_le_card, ComputableInLogSpace.comp via crei comp_space, exists_polyBounded_time, computableTidilyInPolyTime; machine level, mirroring MultiTape/Complexity/Space.lean beside Classes/Space.lean); (2) Complexity/Computability/Machines/Turing/MultiTape/Complexity/LogSpace (dir: Configurations.lean coreCode/length_le_of_nodup_reachable; Reachability.lean viewSucc/searchAccepts/searchAccepts_iff and the BFS polynomial-time certificates); (3) Complexity/Computability/Machines/Turing/MultiTape/Complexity/Nondeterministic.lean (+22 lines: MultiTapeNTM.DecidesInSpace, .mono; space-cleanup F8); (4) Complexity/Algorithms/Reachability/BreadthFirst.lean (generic Cslib.Reachability.expand/search/mem_search_iff beside Savitch.lean, replacing the planned Algorithms/Reachability/LogSpace.lean, which I will not create); optional (5) Complexity/Computability/Machines/Turing/MultiTape/Machine/Space.lean (F4: hoist the per-tape bound spaceUsed_workTapes_le and reuse it in length_encFiniteCfg_le, removing a duplicate). Fallback if declined: move (1)-(3) under Classes/LogSpace/ and the BFS to Algorithms/Reachability/LogSpace.lean. CONVENTION: native machines; read-only input and append-only output uncharged; space = upstream RunPath.space (distinct work-tape cells visited, summed over work tapes) bounded on every computation prefix by RunsInSpace; logarithmic bound c * (Nat.log2 n + 1), n = (enc a).length; L via ComputableInLogSpace to encBool (halting, time existential); NL via DecidesInSpace (no time bound, branches need not halt); mem_L_iff gives the #767 DSPACE(log2) shape c1 * log2 n + c2.",
-      "lease":
-      {"token": {"value": "6a2c0cf7eb2a0a96faddf5fe7ded401a"},
-       "holder":
-       {"session": {"value": "1c9857ba8b9709bb8b7bbe793f95b513"},
-        "agent": {"value": "worker-sable-logspace"}},
-       "expires": 1792400120},
-      "branch": "work/logspace-nl/worker-sable-logspace",
-      "blocked": true,
-      "assignee": {"value": "worker-sable-logspace"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "BLOCKED ON SCOPE (re-posted: the convention note cleared the flag). Milestone 1 builds on current main (branch head 796003c holds only in-scope files; the rest is uncommitted until approved). Please revise logspace-nl to add: (1) Complexity/Computability/Machines/Turing/MultiTape/Complexity/LogSpace.lean (ComputableInLogSpace, haltsAt_le_card, ComputableInLogSpace.comp via crei comp_space, exists_polyBounded_time, computableTidilyInPolyTime; machine level, mirroring MultiTape/Complexity/Space.lean beside Classes/Space.lean); (2) Complexity/Computability/Machines/Turing/MultiTape/Complexity/LogSpace (dir: Configurations.lean coreCode/length_le_of_nodup_reachable; Reachability.lean viewSucc/searchAccepts/searchAccepts_iff and the BFS polynomial-time certificates); (3) Complexity/Computability/Machines/Turing/MultiTape/Complexity/Nondeterministic.lean (+22 lines: MultiTapeNTM.DecidesInSpace, .mono; space-cleanup F8); (4) Complexity/Algorithms/Reachability/BreadthFirst.lean (generic Cslib.Reachability.expand/search/mem_search_iff beside Savitch.lean, replacing the planned Algorithms/Reachability/LogSpace.lean, which I will not create); optional (5) Complexity/Computability/Machines/Turing/MultiTape/Machine/Space.lean (F4: hoist the per-tape bound spaceUsed_workTapes_le and reuse it in length_encFiniteCfg_le, removing a duplicate). Fallback if declined: move (1)-(3) under Classes/LogSpace/ and the BFS to Algorithms/Reachability/LogSpace.lean. CONVENTION: native machines; read-only input and append-only output uncharged; space = upstream RunPath.space (distinct work-tape cells visited, summed over work tapes) bounded on every computation prefix by RunsInSpace; logarithmic bound c * (Nat.log2 n + 1), n = (enc a).length; L via ComputableInLogSpace to encBool (halting, time existential); NL via DecidesInSpace (no time bound, branches need not halt); mem_L_iff gives the #767 DSPACE(log2) shape c1 * log2 n + c2.",
+       "lease":
+       {"token": {"value": "6a2c0cf7eb2a0a96faddf5fe7ded401a"},
+        "holder":
+        {"session": {"value": "1c9857ba8b9709bb8b7bbe793f95b513"},
+         "agent": {"value": "worker-sable-logspace"}},
+        "expires": 1792400120},
+       "branch": "work/logspace-nl/worker-sable-logspace",
+       "blocked": true,
+       "assignee": {"value": "worker-sable-logspace"}},
+      "summary":
+      "Milestone 1 (base 2bf2b21, head 94febcc). Space = upstream RunPath.space on every prefix (input, output uncharged); bound c*(log2 n+1). Proved: NL_subset_P : NL enc ⊆ P enc (BFS over views coded without input, coreCode O(log n+s); searchAccepts_iff, exists_computableTidilyInPolyTime_searchAccepts); L_subset_NL, L_subset_P, L_subset_PSPACE, NL_subset_NPSPACE, compl_mem_L; mem_L_iff : A ∈ L enc ↔ ∃ c₁ c₂ t, DecidableInTimeAndSpace A enc t (c₁*log2 n+c₂) (#767 shape); ComputableInLogSpace.comp, unconditional, by recomputation (crei comp_space); haltsAt_le_card : u ≤ (n+2)*storageBound s; LogSpaceReducible refl/trans/mem_L/compl/polyTimeReducible; MultiTapeNTM.DecidesInSpace; Reachability.mem_search_iff. Tests: ComplexityTests/LogSpace (parity in L, composition, reduction, looping NTM in NL and P, coreCode needs input hypothesis, BFS graphs, 14 axiom guards). Gates: all six pass. Contributors: worker-sable-logspace (two sessions). Sources: Sipser2013 Ch. 8, AroraBarak09 Ch. 4. Limitations: NL lets branches run forever (looser than Sipser Def. 8.1; upper bounds transfer, converse clock argument unformalized); spaceUsed_workTapes_le duplicates length_encFiniteCfg_le's step (F4 stays in space-cleanup). Continuations: sharper Savitch bound for sublinear space (O(s+log n) codes), NL = coNL (milestone 3). Bibliography: none now; Immerman1988/Szelepcsenyi1988 for milestone 3.",
+      "snapshot":
+      {"head": {"value": "94febccdd66679be8a2a30e4d0637099fbeb0d57"},
+       "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/LogSpace.lean",
     "Complexity/Computability/Complexity/Classes/LogSpace",
