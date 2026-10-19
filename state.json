@@ -1650,4 +1650,10 @@
    "expires": 1792386363,
    "actor":
    {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
-    "agent": {"value": "worker-sable-ladner"}}}]}
+    "agent": {"value": "worker-sable-ladner"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792386368,
+   "actor":
+   {"session": {"value": "b1cbc8b7223d2f96ea57cc362686fe08"},
+    "agent": {"value": "worker-sable-relativ"}}}]}
