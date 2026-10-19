@@ -3122,7 +3122,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "ed01db2b5aeb45778b314d77c87b7d4b"},
+       "holder":
+       {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
+        "agent": {"value": "worker-sable-ladner"}},
+       "expires": 1792406262},
       "branch": "work/natural-proofs-2/worker-sable-ladner",
       "blocked": false,
       "assignee": {"value": "worker-sable-ladner"}}}},
@@ -3135,7 +3140,7 @@
    "goal":
    "Continuation of natural-proofs (after M1 lands): (1) nonuniform concrete-security GGM: from a length-doubling PRG secure against circuits of size 2^(k^eps) with advantage 2^(-k^eps), the GGM family is a PRF family secure against circuits (hybrid argument with explicit size and advantage loss), in Crypto/Computational/GGM/Circuit.lean, reusing the landed GGM construction and hybrid lemmas; then instantiate not_isUseful_PPoly_of_isNatural to: if such PRGs exist, no P/poly-natural property is useful against P/poly. (2) Naturalness demonstrations: the Hastad (parity not in AC0) and Razborov-Smolensky properties are large and constructive, stated against the landed Hastad/Smolensky developments. State all assumptions explicitly. Tests, named axiom guards, run-gates.",
    "dependencies": [{"value": "natural-proofs"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-ladner"}]},
   {"resume": null,
    "report": "",
    "phase":
