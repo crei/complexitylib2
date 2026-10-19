@@ -2537,19 +2537,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "47afa9bc3dccaabe05432a9940c18ce4"},
-       "holder":
-       {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
-        "agent": {"value": "worker-sable-ladner"}},
-       "expires": 1792404490},
-      "branch": "work/natural-proofs/worker-sable-ladner",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-ladner"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "47afa9bc3dccaabe05432a9940c18ce4"},
+        "holder":
+        {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
+         "agent": {"value": "worker-sable-ladner"}},
+        "expires": 1792404490},
+       "branch": "work/natural-proofs/worker-sable-ladner",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-ladner"}},
+      "summary":
+      "M1 Circuit/Boolean/NaturalProof.lean + tests. Defs: truthTableTest, truthTableLanguage, IsLarge (∃c ∀ᶠn, 2^2^n ≤ 2^(cn)|C n|), IsNatural Γ (large subproperty, truth tables ∈ Γ), IsUseful Λ (∀L∈Λ ∀ᶠn, L.slice n ∉ C n), IsCircuitTest t, truthTableGenerator F (cslib PRG.Generator). Results: advantage_truthTableGenerator_truthTableTest (F avoids C → advantage = |C|/2^2^n); not_secure_truthTableGenerator (test C ≤ t gates, C avoids SIZE s, members ≤ s, ε < |C|/2^2^n → ¬Secure (IsCircuitTest t) ε); not_isUseful_PPoly_of_isNatural (poly-size F, ∀c ∀ᶠn Secure (IsCircuitTest 2^(cn)) 2^(-cn), IsNatural PPoly C → ¬IsUseful PPoly C); isUseful_PPoly_iff; IsNatural.PPoly_of_P; isLarge/isUseful_PPoly_setOf_lt_complexity (2^n/(5n)); truthTableLanguage_setOf_lt_complexity_notMem_PPoly. Checks: six gates via run-gates, all ok. Source: RR97 Sec. 4. Contributors: worker-sable-ladner only. Limits: hypothesis is an exponentially secure keyed family; continuation: nonuniform GGM bound (GGM/Circuit.lean; landed GGM is uniform PPT) to get it from 2^(k^ε)-secure PRGs; Håstad/Smolensky naturalness. Bib: @article{RazborovRudich1997, author={Razborov, Alexander A. and Rudich, Steven}, title={Natural Proofs}, journal={Journal of Computer and System Sciences}, volume={55}, number={1}, pages={24--35}, year={1997}, doi={10.1006/jcss.1997.1494}}",
+      "snapshot":
+      {"head": {"value": "2397f41ec42c3ee4710e6776f1f1e1a9b49ac54a"},
+       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/NaturalProof.lean",
     "Complexity/Computability/Circuit/Boolean/NaturalProof",
