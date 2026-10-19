@@ -1474,15 +1474,18 @@
           "expires": 1792393060},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "63b512c5cb414f707d8966dacb8967e7"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792378699,
+          "snapshot":
+          {"head": {"value": "92aeab0e755f407e092b7cd28d3242117e0e1d5a"},
+           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+          "reviewer":
           {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
            "agent": {"value": "reviewer-sable-api4"}},
-          "expires": 1792393043},
-         "blocked": false}}}}}},
+          "note":
+          "API review of np-complete-numbers 92aeab0 (base d42eefc) by reviewer-sable-api4, independent, read-only; board commands via coordinate-main; resumed after the restart with the lease and snapshot unchanged. Build of 7 library modules + test --wfail --iofail ok. Binary.lean is generic (encNat/encUnary/encList), placed beside PolyTime/Nat, with binary_* names mirroring unary_*. No duplication: the base had no polytime add/mul/sum/compare wrappers, Complexity/Binary.lean has only the counter, and Mathlib/cslib lack Nat.size_add_le and lt_iff_exists_testBit. The problems follow the Clique/IndependentSet pattern. SubsetSum states the binary encoding and 'not strong NP-hardness'. Headers and candidate markers ok; only simp is maskSelect_nil; cited keys exist. Tests: in/out instances, boundaries, guards for all four NPComplete theorems. Probes ok: public-import fun_prop composition incl. mul, Nat-lemma boundaries, empty ZeroOneIP, 15 helpers standard axioms. Nits: mark Nat lemmas as Mathlib candidates (sum_range_mul_pow_lt restates ofDigits_lt_base_pow_length); length_le_length_encPair belongs beside length_le_length_encList; maskSelect is selectVertices' core (witness-builder candidate); no binary_mul'. GareyJohnson1979 is not cited yet. Limitation: check.sh not rerun. Evidence .lake/codex-validation/np-complete-numbers-api/review.json sha256 68cb196e41229e164c862e78b851d2ce3f4e625bca91e16797088f3df0b6e113"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/SubsetSum.lean",
     "Complexity/Computability/Complexity/Problems/SubsetSum",
