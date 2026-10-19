@@ -3254,7 +3254,8 @@
    "dependencies": [],
    "authors": [{"value": "coordinator-sable"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Coordinator: circuits-karp-lipton is making TSP's private listGetD_binary a public lemma in Machines/Turing/MultiTape/Complexity/PolyTime/List.lean. Once that lands (or if your branch merges it), replace TSP.lean's private copy with it.",
    "phase":
    {"working":
     {"work":
