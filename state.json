@@ -790,15 +790,18 @@
           "note":
           "Delta correctness review by reviewer-sable-cor2 (independent; no contribution). Builds on my approval of 4de95cd (evidence sha256 2dc4975b3ef1bf8617925b4d61b60188ad782afcba5c77a8992e23bbe3df6181, which relied on the recorded full audit of 7e4cdca). This delta: 764e3b8 is a merge with parents 4de95cd and 26253c9 (= base = current main, ancestry verified); git diff-tree --cc shows no hunks (clean merge); git diff 4de95cd 764e3b8 over the nine epic paths is empty and main 94dcd9d..26253c9 touches none of them; the whole 4de95cd..764e3b8 patch outside the generated roots is byte-identical to main own 94dcd9d..26253c9 patch, and the root changes are exactly main 12 added imports; scripts/ equal current main. Rebuilt Classes.Hierarchy and ComplexityTests.TimeHierarchy with --wfail --iofail: clean (3878 jobs). #print axioms on computableTidilyInO_diagonal, diagonal_not_mem_P, not_computableInTimeAndSpace_diagonal: propext/Classical.choice/Quot.sound only; statements unchanged. No findings. Not run: full check.sh. Evidence .lake/codex-validation/native-exponential-separation-correctness/review.json sha256 0dd2e0898c31b954cdb50ab52bba439a6b461905c7c52a5e5ecb8c62433c5830"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "a1bd94e7fbad096475344863ba0a6664"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792372895,
+          "snapshot":
+          {"head": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"},
+           "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
+          "reviewer":
           {"session": {"value": "33380288772710be7744d177c8f66871"},
            "agent": {"value": "reviewer-sable-api2"}},
-          "expires": 1792387291},
-         "blocked": false}}}}}},
+          "note":
+          "Delta API review of exact 764e3b8 (base 26253c9 = current main, ancestry ok; coordinate tooling identical to main); no contribution. Builds on my approvals of 7e4cdca (evidence 20c5d515...) and 4de95cd (27ce01c0...). Checks: 764e3b8 has exactly parents 4de95cd and 26253c9; git diff-tree --cc empty; merge-tree(4de95cd, 26253c9) = head tree a10f5967 exactly; git diff -M 26253c9 764e3b8 equals git diff -M 94dcd9d 4de95cd (same 9 files, +989/-1, identical name-status and per-file added/removed lines); the six epic-owned files are byte-identical to 4de95cd; main's new commits (quantitative stretch, stream-fold refactor) touch none of them; no new declaration clashes. lake build Encodings.Decoder, Universal.Decode, Encodings.NatPower, PolynomialBound.Exponential, Classes.Hierarchy, ComplexityTests.TimeHierarchy --wfail --iofail clean (3878 jobs); mk_all --check and diff --check clean. No findings. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/native-exponential-separation-api/review.json SHA256 0061f0f64947cfd6954eee2860a1d0b2f512c3954ef69587748f3d608e5241c6"}}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode",
