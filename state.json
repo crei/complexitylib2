@@ -2071,8 +2071,7 @@
    {"working":
     {"work":
      {"resume": null,
-      "report":
-      "API review (reviewer-sable-api3): three public restatements of Mathlib facts (Cslib.two_eq_zero = CharTwo.two_eq_zero; FiniteField.charP_two = charP_of_injective_algebraMap; exists_span_range_eq = Submodule.exists_fun_fin_finrank_span_eq) must go; merge main for the landed bibliography entries; cheap nits.",
+      "report": "",
       "lease": null,
       "branch": "work/explicit-affine-disperser/worker-sable-disperser",
       "blocked": false,
