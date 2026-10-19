@@ -1177,7 +1177,7 @@
     {"work":
      {"resume": "work/hamming-geometry/worker-mythos",
       "report":
-      "Checkpoint: milestones 1 and 2 committed as ffd4119 (six gates pass on base c2016b0), merged current main 26253c9 cleanly as 6af7e40; re-running the six gates on the merged head before push. Files: Circuit/Pointwise.lean, Foundations/Data/BitString/Hamming.lean, Circuit/Boolean/Hamming.lean, ComplexityTests/CircuitHamming/{Pointwise,Gates}.lean.",
+      "PUBLICATION REQUEST: 6af7e40639228bc0a83e1114d4209eccc5c1cd65 on work/hamming-geometry/worker-sable-hamming (feature commit ffd4119 plus clean merge of main 26253c9). The lean4 guardrail hook blocked the ordinary git push and I did not bypass it. Please publish with: git -C /Users/samuelschlesinger/projects/lean/complexitylib2/.worktrees/worker-sable-hamming push -u origin work/hamming-geometry/worker-sable-hamming. Validation: scripts/check.sh, all six gates pass on 6af7e40 (and on ffd4119 over c2016b0). ready follows once the branch is on the remote.",
       "lease":
       {"token": {"value": "4e52ae1eaed9847184f18a9df427dd8d"},
        "holder":
@@ -1185,7 +1185,7 @@
         "agent": {"value": "worker-sable-hamming"}},
        "expires": 1792386752},
       "branch": "work/hamming-geometry/worker-sable-hamming",
-      "blocked": false,
+      "blocked": true,
       "assignee": {"value": "worker-sable-hamming"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Pointwise.lean",
