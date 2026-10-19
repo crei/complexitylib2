@@ -1105,7 +1105,8 @@
    {"working":
     {"work":
      {"resume": "work/hamming-geometry/worker-mythos",
-      "report": "",
+      "report":
+      "Started on branch work/hamming-geometry/worker-sable-hamming from main c2016b0 (start recorded the claim but its checkout failed: resume ref work/hamming-geometry/worker-mythos was never pushed; created the branch from main by hand, drafts taken from the coordinator handoff). Dependency map: reuse cslib Homomorphism/Program.map_trace/Circuit.map_eval (pointwise lift), complexity_le_of_computes/exists_computes_size_eq_complexity/Circuit.wiring (projection costs), Mathlib hammingDist_comp/hammingDist_comp_le_hammingDist/hammingDist_triangle (isometries, Lipschitz), Cslib.parityOn + card_filter_parityOn_eq (projections differ on half the cube, replacing the flipOn proof), Cslib.majority, Boolean.complexity_xor_le/complexity_comp_le/complexity_append_le/Synthesis.family (sharing example), circuitDist_add_left/circuitDist_of_ne (circuit-metric). Missing and delivered: Interpretation.pointwise/evalAt + truth-table theorems (Circuit/Pointwise.lean), BitString cube geometry (Foundations/Data/BitString/Hamming.lean), sharing example (Circuit/Boolean/Hamming.lean), tests ComplexityTests/CircuitHamming/{Pointwise,Gates}.lean. No scope questions.",
       "lease":
       {"token": {"value": "4e52ae1eaed9847184f18a9df427dd8d"},
        "holder":
