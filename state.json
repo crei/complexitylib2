@@ -2465,20 +2465,27 @@
    "report":
    "API review (reviewer-sable-api1) requested changes: D <= C1*bs, D <= C*bs and D <= bs^3 are credited to Nisan; the survey credits Beals-Buhrman-Cleve-Mosca-de Wolf 2001. Correctness approved.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "API review (reviewer-sable-api1) requested changes: D <= C1*bs, D <= C*bs and D <= bs^3 are credited to Nisan; the survey credits Beals-Buhrman-Cleve-Mosca-de Wolf 2001. Correctness approved.",
-      "lease":
-      {"token": {"value": "50f5fa2bf802ea9ae16ef320585b1464"},
-       "holder":
-       {"session": {"value": "9c907dcb85cc8554c9a1842ad08941a1"},
-        "agent": {"value": "worker-sable-query"}},
-       "expires": 1792404524},
-      "branch": "work/query-complexity/worker-sable-query",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-query"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "API review (reviewer-sable-api1) requested changes: D <= C1*bs, D <= C*bs and D <= bs^3 are credited to Nisan; the survey credits Beals-Buhrman-Cleve-Mosca-de Wolf 2001. Correctness approved.",
+       "lease":
+       {"token": {"value": "50f5fa2bf802ea9ae16ef320585b1464"},
+        "holder":
+        {"session": {"value": "9c907dcb85cc8554c9a1842ad08941a1"},
+         "agent": {"value": "worker-sable-query"}},
+        "expires": 1792404524},
+       "branch": "work/query-complexity/worker-sable-query",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-query"}},
+      "summary":
+      "M1 revision after API review (correctness approved). Fixes: D ≤ bs₀·C₁, D ≤ C·bs, D ≤ bs³ now credited to Beals–Buhrman–Cleve–Mosca–de Wolf [BealsBuhrmanCleveMoscaDeWolf2001] (BdW Thm 11, Cor 1); only C ≤ s·bs to Nisan. Renamed mem_lowDegree_iff_fourierCoeff_eq_zero, totalDegree_le_iff_fourierCoeff_eq_zero, degree_threshold_one_right. Hypercube imports Mathlib.Analysis.Real.Sqrt. Huang credit: theorem and signed matrix from Huang2019 (who uses interlacing; here a dimension count); reduction Gotsman–Linial 1992; Mathlib Archive/Sensitivity.lean (S = univ, not importable) noted. Test now proves deg(MAJ₃) = 3 > s(MAJ₃) = 2. Headlines otherwise unchanged (degree_le_sensitivity_sq : deg f ≤ s f ^ 2, induced subgraph theorem, C ≤ s·bs, D ≤ bs₀·C₁, D ≤ C·bs, D ≤ bs³, deg ≤ D). Checks: run-gates all six ok. Source: original formalization. Contributors: worker-sable-query only. Placement follow-ups left to coordinator. M2 continuation unchanged. Bib (new): @article{BealsBuhrmanCleveMoscaDeWolf2001, author = {Beals, Robert and Buhrman, Harry and Cleve, Richard and Mosca, Michele and de Wolf, Ronald}, title = {Quantum lower bounds by polynomials}, journal = {Journal of the ACM}, volume = {48}, number = {4}, pages = {778--797}, year = {2001}}; plus NisanSzegedy1994, Huang2019, GotsmanLinial1992 (earlier note).",
+      "snapshot":
+      {"head": {"value": "ec271bcb5ddcddd0085ae9ec76f37a569c6f15cf"},
+       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/QueryComplexity/Degree.lean",
     "Complexity/Computability/QueryComplexity/ApproximateDegree.lean",
