@@ -2799,7 +2799,12 @@
      {"resume": null,
       "report":
       "Both reviews requested changes: PSPACE shape claim, fixed-power forms, coverage-priorities section duplicates the board, link targets and wrapping.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "663bf89dd169f190075c0d31e224eac2"},
+       "holder":
+       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+        "agent": {"value": "coordinator-sable"}},
+       "expires": 1792403736},
       "branch": "work/docs-roadmap-refresh/coordinator-sable",
       "blocked": false,
       "assignee": {"value": "coordinator-sable"}}}},
