@@ -2615,15 +2615,18 @@
           "expires": 1792407141},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "ef1979ce81e88faea33bfb0c885329eb"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792393040,
+          "snapshot":
+          {"head": {"value": "aa3bd309550398f3442839c6c9ce2b59b0b29ff0"},
+           "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+          "reviewer":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792407348},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api1 (independent; author worker-sable-hier) of exact head aa3bd309 over base 06c5f534. Builds (nice, --wfail --iofail): 6 touched modules + 4 tests OK, 0 warnings; direct importers Ladner.PolyTime, Universal.PolyTime OK. Probes: moved DTIME API, clockedDiagonal, lengthUnary resolve via old imports; deprecated aliases warn. One definition per class: DTIME/NTIME/BPTIME/E/NE/NEXP/ZPP unique, none upstream; #767 shapes followed (E, EXP exact). No blocking findings. Central integration: Inclusions.lean:340 mem_PSPACE_iff_computableTidilyInO duplicates Oracle/Space.lean:70,83 (probe: 3-line restatement); Inclusions.lean:411 setOf_exists_mem_PSPACE subsumes Oracle/Space.lean:218 mem_PSPACE_of_isVerifier (probe: 5-line derivation); move PSPACE iff/compl/reduction closure to Classes/Space and derive the Oracle lemmas. UPSTREAM.md:29 stale DTIME path. Follow-ups: private helpers to Probability/BitString, PMF/Map, BPP, BitString counting (uniformList_map_apply is a 3rd copy: IP.lean:262, SharpP/Probability:37); compl_mem_PP to PP.lean; runsInSpace, DecidesWithBoundedErrorInTime to machine files; BPTIME import weight on DTIME users. Nits: Time.lean:15 unused SharpP import (probe); EXP.lean:126,130 no docstrings; ResourceClasses.lean:72 unclear docstring. Not run: six gates, Axioms audit. Evidence .lake/codex-validation/resource-class-spine-api/review.json sha256 6b87be688a31e166560bd300f38e6dd05ee2d94596089e4f038b601417c0dfd1"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Time.lean",
     "Complexity/Computability/Complexity/Classes/Exponential.lean",
