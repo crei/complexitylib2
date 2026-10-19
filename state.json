@@ -1532,15 +1532,18 @@
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "0889aa5e4a052b334267374462c7fab3"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792386455,
+          "snapshot":
+          {"head": {"value": "7b2a2619cc5d6756dfc2c1ff64daf525f301ba26"},
+           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+          "reviewer":
           {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
            "agent": {"value": "reviewer-sable-cor1"}},
-          "expires": 1792400840},
-         "blocked": false}},
+          "note":
+          "Independent correctness review of 7b2a261 (no authorship). Build: the 6 epic modules plus the 4 NPCompleteGraphs test modules, under nice, --wfail --iofail: OK. Diff contains no sorry/native_decide/axiom/set_option/extern. Own probe .lake/.../Probe.lean: all 8 NPComplete headlines restated with exact encodings (encNat = Nat.bits binary, encTSP binary); KColoring k>=3 instantiated at 3 and 17. All gadget lemmas are two-sided iffs (3-coloring OR-chain, Sipser 7.46 diamonds, vertex splitting, HamCycle to TSP, IS to VC). 18 #print axioms (headlines, gadget iffs, mem_VertexCover_iff_exists_card_le) give only propext, Classical.choice, Quot.sound. Semantics probed. VC: repeated vertices count once, reverse edge must be covered, out-of-range edge ignored, empty graph only k=0, k>n rejected (Sipser exactly-k, GJ K<=|V|). Coloring: K4 not 3-colourable but 4-colourable; KColoring 0 = no declared vertices. Ham: self-loop gives a 1-vertex DirHamCycle; DirHamPath directional, HamPath not; undeclared s rejected; triangle in HamCycle, edge not. TSP: empty yes, diagonal for one city, asymmetric 1+7 tour; toTSP triangle evaluated. TSP NP: shared decodeVertexList/verifyOrdering, X^2 bit certificates, binary sum/compare. No blocking findings. Nits (documented): undirected readings ignore self-loops; TSP ragged rows read 0. Evidence: .lake/codex-validation/np-complete-graphs-correctness/review.json sha256 495215cb3821b0bfd646b0f70e51cb7ebb2f59cd82524bd7a6cd9d24a6d2fd19"}}},
        "api":
        {"active":
         {"report": "",
