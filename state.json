@@ -3313,19 +3313,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "6c51df37a26d8aa8854071d7bcbded79"},
-       "holder":
-       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-        "agent": {"value": "coordinator-sable"}},
-       "expires": 1792406825},
-      "branch": "work/docs-bibliography-3/coordinator-sable",
-      "blocked": false,
-      "assignee": {"value": "coordinator-sable"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "6c51df37a26d8aa8854071d7bcbded79"},
+        "holder":
+        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+         "agent": {"value": "coordinator-sable"}},
+        "expires": 1792406825},
+       "branch": "work/docs-bibliography-3/coordinator-sable",
+       "blocked": false,
+       "assignee": {"value": "coordinator-sable"}},
+      "summary":
+      "Docs-only: four references.bib entries. Impagliazzo1995 and Yao1982 (cited by the landed HardCore.lean and XorLemma.lean), Chebyshev1852 (cited by explicit-affine-disperser-2 Primes.lean:43), Ladner1975 (cited by circuits-karp-lipton; the JACM version, DOI 10.1145/321864.321877, not the DOI the worker proposed). DOIs checked against Crossref title, venue, pages and year; Chebyshev1852 has no DOI (J. Math. Pures Appl. 17, 1852, 366-390). check_docs --config-only passes. Author: coordinator-sable.",
+      "snapshot":
+      {"head": {"value": "ef44eae9d72fc56e92c44013a0514dbb65bf7e55"},
+       "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths": ["references.bib"],
    "id": {"value": "docs-bibliography-3"},
    "goal":
