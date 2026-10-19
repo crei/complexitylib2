@@ -2384,7 +2384,16 @@
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "6594a1ac58f14c368209494844849402"},
+          "holder":
+          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+           "agent": {"value": "reviewer-sable-api4"}},
+          "expires": 1792405431},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Oracle.lean",
     "Complexity/Computability/Complexity/Classes/Oracle",
