@@ -2793,20 +2793,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "M1 progress: Circuit/Boolean/Encoding (codes, decoding, encCircuit), EvaluationTime (evalCode + polytime certs), CVP in P, CircuitSAT NP-complete (SAT reduction) all compile. Next: fixed-width circuit certificates (Encoding/Certificate.lean) and MCSP in NP. Path request (non-blocking): add Complexity/Computability/MCSP/NP.lean for MCSP in NP (else I will place it under Circuit/Boolean/Encoding/). Later for M2: PH collapse lemma (Sigma2=Pi2 -> PH=Sigma2) would best live in Classes/PH/Collapse.lean; currently I plan to keep it in Classes/PH/KarpLipton.lean.",
-      "lease":
-      {"token": {"value": "864bb1ee6b5fd7169a30e137e35e435d"},
-       "holder":
-       {"session": {"value": "842267643c344d7a79017588bcfc8a39"},
-        "agent": {"value": "worker-sable-numbers"}},
-       "expires": 1792406321},
-      "branch": "work/circuits-karp-lipton/worker-sable-numbers",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-numbers"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "M1 progress: Circuit/Boolean/Encoding (codes, decoding, encCircuit), EvaluationTime (evalCode + polytime certs), CVP in P, CircuitSAT NP-complete (SAT reduction) all compile. Next: fixed-width circuit certificates (Encoding/Certificate.lean) and MCSP in NP. Path request (non-blocking): add Complexity/Computability/MCSP/NP.lean for MCSP in NP (else I will place it under Circuit/Boolean/Encoding/). Later for M2: PH collapse lemma (Sigma2=Pi2 -> PH=Sigma2) would best live in Classes/PH/Collapse.lean; currently I plan to keep it in Classes/PH/KarpLipton.lean.",
+       "lease":
+       {"token": {"value": "864bb1ee6b5fd7169a30e137e35e435d"},
+        "holder":
+        {"session": {"value": "842267643c344d7a79017588bcfc8a39"},
+         "agent": {"value": "worker-sable-numbers"}},
+        "expires": 1792406321},
+       "branch": "work/circuits-karp-lipton/worker-sable-numbers",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-numbers"}},
+      "summary":
+      "M1 (circuits as data) at e10d94f. Proved: Circuit.ofCode_code: ofCode n m c.code = some c; Circuit.isSome_ofCode_iff (decodable codes = IsCodeFrom + m outputs); Program.evalCode_code: evalCode I d (ofFn x) p.code = ofFn x ++ ofFn (p.eval I x); Boolean.computableTidilyInPolyTime_evalCode/_evalOutput; CircuitValue_mem_P: CircuitValue ∈ P encCircuitValue; CircuitSAT.mem_NP; SAT.polyTimeReducible_CircuitSAT: PolyTimeReducible encCNF (encCircuit 1) SAT CircuitSAT; CircuitSAT_npComplete: NPComplete (encCircuit 1) CircuitSAT; readCertificate_certificate_append + polytime reading (fixed-length circuit certificates); MCSP.mem_NP: MCSP ∈ NP MCSP.encInstance. Encodings: encCircuit m = inputs unary, gates (op unary, wires binary), outputs; CVP adds input bits; MCSP = table bits + binary threshold, certificates capped at 2^n(2n+3)+1 gates. Checks: run-gates six gates ok; 15 axiom guards. Source: new code (AroraBarak09 §6.1, KabanetsCai2000), no v1 port. Contributors: worker-sable-numbers. Limitations: generic σ simp lemmas don't fire on Boolean gate lists; listGetD_binary duplicated privately from TSP; MCSP∈NP sits at Circuit/Boolean/Encoding/MCSP.lean (MCSP/NP.lean not in paths). Continuation: M2 self-reduction (drafted) + Karp-Lipton/PH collapse; M3 Kannan, Meyer. Bib: @article{Ladner1975, author = {Ladner, Richard E.}, title = {The Circuit Value Problem is Log Space Complete for {P}}, journal = {{SIGACT} News}, volume = {7}, number = {1}, pages = {18--20}, year = {1975}, doi = {10.1145/990518.990519}}",
+      "snapshot":
+      {"head": {"value": "e10d94f4bca690c2e32b741ad287bbdb50f46784"},
+       "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/Encoding.lean",
     "Complexity/Computability/Circuit/Boolean/Encoding",
