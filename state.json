@@ -3349,7 +3349,22 @@
    "goal":
    "Docs-only: references.bib entries cited by landed or approved epics (hardness-amplification: Impagliazzo1995, Yao1982; explicit-affine-disperser-2: Chebyshev1852; circuits-karp-lipton: Ladner1975), verified against Crossref/DOI metadata. No Lean changes. check_docs --config-only, two reviews.",
    "dependencies": [],
-   "authors": [{"value": "coordinator-sable"}]}],
+   "authors": [{"value": "coordinator-sable"}]},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/PH/Collapse.lean",
+    "Complexity/Computability/Complexity/Classes/BPP/Amplification.lean",
+    "Complexity/Computability/Complexity/Classes/Padding.lean",
+    "Complexity/Computability/Complexity/Classes/RP.lean",
+    "Complexity/Computability/Circuit/Boolean/ACC.lean",
+    "ComplexityTests/ResourceClasses2.lean"],
+   "id": {"value": "resource-class-spine-2"},
+   "goal":
+   "Milestones 2-3 of resource-class-spine (after M1 lands): M2 first the PH collapse lemmas in Classes/PH/Collapse.lean (one level, PH = SigmaP k from PiP k within SigmaP k, NP = coNP implies PH = NP, P = NP implies P = PH; circuits-karp-lipton-2 imports these), then RP within BPP, class-level error reduction for BPP and RP (exponentially small error, reusing MajorityVote and the probability toolkit's Chernoff), padding with a generic translation lemma (P = NP implies EXP = NEXP); M3 ACC0 as the union of AC0 with MOD-q gates and P-uniform NC within P where the uniform classes exist, else tracked. Place the M1 private count/probability helpers (uniformList_map_apply, two_thirds_le_div_iff, map_apply_of_injective, card_filter_take_drop, card_filter_ofFn_succ) in their natural Probability/BitString homes if in paths. Tests, named axiom guards, run-gates, frozen submission per milestone.",
+   "dependencies": [{"value": "resource-class-spine"}],
+   "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
