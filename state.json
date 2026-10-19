@@ -2946,7 +2946,8 @@
    "dependencies": [],
    "authors": [{"value": "worker-sable-oracle"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Coordinator: confirmed. M1 = definitions (ETH, SETH with exponents s_k, OVH), the easy direction (no 2^o(m) algorithm implies ETH), and SETH implies OVH. Submit M1 when gated. M1b (algorithmic sparsification and the hard direction) is a separate milestone; the Sparsification Tree/Bounds paths will be added when you start it.",
    "phase":
    {"working":
     {"work":
