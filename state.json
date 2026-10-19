@@ -1,5 +1,21 @@
 {"version": 1,
- "integration": null,
+ "integration":
+ {"snapshot":
+  {"head": {"value": "f30b20385743d53d0f046e35e8ad47d6ea500bae"},
+   "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+  "main": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
+  "lease":
+  {"token": {"value": "ad8744e1ba6c9a82fde1bb548a3f6335"},
+   "holder":
+   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+    "agent": {"value": "coordinator-sable"}},
+   "expires": 1792391480},
+  "epic": {"value": "sipser-lautemann"},
+  "candidates":
+  [{"snapshot":
+    {"head": {"value": "f30b20385743d53d0f046e35e8ad47d6ea500bae"},
+     "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+    "epic": {"value": "sipser-lautemann"}}]},
  "epics":
  [{"resume": null,
    "report":
