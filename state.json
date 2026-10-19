@@ -611,7 +611,7 @@
        "holder":
        {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
         "agent": {"value": "worker-sable-oracle"}},
-       "expires": 1792400842},
+       "expires": 1792400874},
       "branch": "work/open-oracle-substitution/worker-sable-oracle",
       "blocked": false,
       "assignee": {"value": "worker-sable-oracle"}}}},
@@ -2453,7 +2453,7 @@
     "agent": {"value": "integrator-sable-2"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792400842,
+   "expires": 1792400874,
    "actor":
    {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
     "agent": {"value": "worker-sable-oracle"}}},
