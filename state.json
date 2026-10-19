@@ -1310,7 +1310,7 @@
   "holder":
   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
    "agent": {"value": "coordinator-sable"}},
-  "expires": 1792385718},
+  "expires": 1792386031},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
@@ -1392,7 +1392,7 @@
     "agent": {"value": "worker-mythos"}}},
   {"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792385718,
+   "expires": 1792386031,
    "actor":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}}},
