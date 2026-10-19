@@ -1968,7 +1968,16 @@
       {"head": {"value": "c0643ec8f8eedd4c2470024d3696461a2f8f4f66"},
        "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "6dd23f9e1efc6817e23c0453bfc8ba73"},
+          "holder":
+          {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
+           "agent": {"value": "reviewer-sable-cor6"}},
+          "expires": 1792408015},
+         "blocked": false}},
        "api":
        {"active":
         {"report": "",
