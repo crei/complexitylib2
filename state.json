@@ -2066,15 +2066,18 @@
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "146d6195b927d94911a980eefc8fbae1"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792385337,
+          "snapshot":
+          {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
+           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+          "reviewer":
           {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
            "agent": {"value": "reviewer-sable-cor1"}},
-          "expires": 1792399701},
-         "blocked": false}},
+          "note":
+          "Independent correctness review of 99abd78 (no authorship): check_bibliography_keys in scripts/check_docs.py, called from check_config, which runs in docs.yml. I tested 12 bibliographies: base, head, main 9b1b683, bad 881b9c0, fixed 2bf2b21 and seven worktree heads. Entry forms present: padded keys, compact @type{Key, and mixed-case types; there are no @string/@comment/@preamble, paren-delimited, indented or BOM entries. On all 12, the regex key sequence equals an independent BibTeX-rules scanner. Real bibtex with citation{*} finds 2 Repeated entry (Cutland1980 l.1802, KatzLindell2020 l.1810) in 881b9c0 and none elsewhere; .bbl counts equal the regex counts (head 167, main 165, 2bf2b21 176). CLI: head --config-only rc=0. Temp roots: 881b9c0 rc=1 (Duplicate bibliography keys: cutland1980, katzlindell2020); main, 2bf2b21 and head rc=0. Synthetic cases handled: padded vs compact, case-differing keys, upper-case type, whitespace or newline after type, key on next line, newline before comma, CRLF, duplicate @string/@preamble. Non-blocking nits (none occur in any current file): misses indented entries, @type(key, and a BOM-prefixed first entry; false positive on a duplicated @string{x=\"a,b\"} or @comment{a,b}, or a field line starting @type{key,. Evidence: .lake/codex-validation/docs-check-bibkeys-correctness/review.json sha256 4cecc365ba3ee3b4a6ac86bcf66d4e5ae673c6f335bf2b7e142c0aba8258010a"}}},
        "api":
        {"finished":
         {"review":
