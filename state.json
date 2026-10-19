@@ -1,15 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "eba426bc0b9c6cedd743aa72051099827767ae82"},
-   "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-  "lease":
-  {"token": {"value": "7038da39ca6fab0dc15379c7417c9ed8"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792390420},
-  "epic": {"value": "merge-queue-landing"}},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -1292,53 +1282,41 @@
    "report":
    "Both round-2 reviews of 4bf0094 approved. Reopened for the merge of main d42eefc (required by the current base == main landing rule), the reviewer-suggested content-exact final-tree guard and two doc nits; fresh delta reviews by the same reviewers, then land by fast-forward.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Both round-2 reviews of 4bf0094 approved. Reopened for the merge of main d42eefc (required by the current base == main landing rule), the reviewer-suggested content-exact final-tree guard and two doc nits; fresh delta reviews by the same reviewers, then land by fast-forward.",
-       "lease":
-       {"token": {"value": "e39c5219e7298c925c596a7bfa5aa375"},
-        "holder":
-        {"session": {"value": "c2a2464e315d85c0a64cfb5108d1ea0e"},
-         "agent": {"value": "worker-sable-tooling"}},
-        "expires": 1792389470},
-       "branch": "work/merge-queue-landing/worker-sable-tooling",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-tooling"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Approved 4bf0094 (round-2 API and correctness approvals), plus merge of main d42eefc, plus eba426b: content-exact final-tree guard (land refuses when any reviewed non-root path differs between a reviewed head and the landed commit, so a hand-made land that alters a reviewed file after integration is refused) and review nits A1 (whole reservation compared while it records its main, first candidate only once reduced, matching reserve), A2 (test heartbeat of an older checkout clears Completion.landed), A3 (CONTRIBUTING land paragraph reflow). Validation at eba426b: coordination build --wfail clean, lake -d scripts/coordination test --wfail 55/55, scripts/check.sh six gates ok. Limitation unchanged: older checkouts drop the reservation main and completion landed (metadata only) when they rewrite the board; refusals after reservation keep it for cancel. Author: Claude (worker-sable-tooling) under coordinator-sable direction; tampered-landing fixture idea from reviewer-sable-cor1.",
       "snapshot":
       {"head": {"value": "eba426bc0b9c6cedd743aa72051099827767ae82"},
        "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792375751,
-          "snapshot":
-          {"head": {"value": "eba426bc0b9c6cedd743aa72051099827767ae82"},
-           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-          "reviewer":
-          {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
-           "agent": {"value": "reviewer-sable-cor1"}},
-          "note":
-          "Delta correctness review (reviewer-sable-cor1, no contribution) of base d42eefc / head eba426b; board commands via main's binary. Builds on my approve of 4bf0094 (r2 review.json SHA256 eb151a569538483c6a6fd40b69bd77cbae589a242b2ecad9cd727ec7bc98e250). Merge 30855b5 touches no epic path and equals main d42eefc outside them; merge-base --all(main, head) = base. eba426b: land now checks, per candidate, that its reviewed non-root paths are identical between its reviewed head and the landed commit (skipped when head == landed); with the existing path guard, the protocol enforces landed = main + each reviewed head on its reviewed paths + roots. The guard ranges over that candidate's own reviewed paths only, so a disjoint batch cannot trip it. A1 restores full-list equality while the reservation records main. lake -d scripts/coordination test --wfail 55/55; tooling build ok. Scratch: all 6 reviewer fixtures pass on eba426b (61/61): my tampered-landing probe is now refused; a batch onto a moved main with the second candidate's file tampered is refused, then the untampered batch lands on the same reservation; drift, batch drift, hostile-config rename and real old-binary interop still pass. No blocking findings. Nits: CONTRIBUTING could say landed files equal their reviewed heads; root contents rely on mk_all --check (by design). Not run: check.sh. Evidence .lake/codex-validation/merge-queue-landing-correctness-r3/review.json SHA256 1b52650c20c61fac72d194875eae570a7940a73919fb88d8227ce6275af9ea6c"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792375564,
-          "snapshot":
-          {"head": {"value": "eba426bc0b9c6cedd743aa72051099827767ae82"},
-           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-          "reviewer":
-          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
-           "agent": {"value": "reviewer-sable-api1"}},
-          "note":
-          "Delta API review eba426b (base d42eefc); independent; read-only; board commands via main binary. Builds on my approval of 4bf0094 (r2 review.json sha256 305d2d9e...). History: 30855b5 merges main d42eefc only (file list equals main delta, no tooling/docs file); eba426b 6 files +81/-23, diff --check clean, attribution ok. Evidence: coordination build --wfail clean; test --wfail 55/55. Verified: content-exact final-tree guard (per candidate, head..landing diff must exclude its reviewed paths, roots excepted; together with the path-set guard the landed tree equals main outside reviewed files and each reviewed head on its files; missing observation fails closed; actionable message; tampered hand-made landing refused end to end in new runtime test). A1 resolved (full candidate equality while main is recorded, first-candidate match only for reduced reservations, tested). A2 resolved (legacyHeartbeat clears landed; erasure asserted). A3 resolved (reflowed, lines <= 100). No new findings. Remaining cosmetic/limitation from earlier: Diff and Landing base/head names; real mk_all stubbed in fixtures. Not run: scripts/check.sh. Evidence .lake/codex-validation/merge-queue-landing-api-r3/review.json sha256 20de55d3ef2a0fd6ca3406e4cb86da8a2e50f9976792b9a8b1fd974e0b032a93"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792376022,
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792375751,
+       "snapshot":
+       {"head": {"value": "eba426bc0b9c6cedd743aa72051099827767ae82"},
+        "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+       "reviewer":
+       {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
+        "agent": {"value": "reviewer-sable-cor1"}},
+       "note":
+       "Delta correctness review (reviewer-sable-cor1, no contribution) of base d42eefc / head eba426b; board commands via main's binary. Builds on my approve of 4bf0094 (r2 review.json SHA256 eb151a569538483c6a6fd40b69bd77cbae589a242b2ecad9cd727ec7bc98e250). Merge 30855b5 touches no epic path and equals main d42eefc outside them; merge-base --all(main, head) = base. eba426b: land now checks, per candidate, that its reviewed non-root paths are identical between its reviewed head and the landed commit (skipped when head == landed); with the existing path guard, the protocol enforces landed = main + each reviewed head on its reviewed paths + roots. The guard ranges over that candidate's own reviewed paths only, so a disjoint batch cannot trip it. A1 restores full-list equality while the reservation records main. lake -d scripts/coordination test --wfail 55/55; tooling build ok. Scratch: all 6 reviewer fixtures pass on eba426b (61/61): my tampered-landing probe is now refused; a batch onto a moved main with the second candidate's file tampered is refused, then the untampered batch lands on the same reservation; drift, batch drift, hostile-config rename and real old-binary interop still pass. No blocking findings. Nits: CONTRIBUTING could say landed files equal their reviewed heads; root contents rely on mk_all --check (by design). Not run: check.sh. Evidence .lake/codex-validation/merge-queue-landing-correctness-r3/review.json SHA256 1b52650c20c61fac72d194875eae570a7940a73919fb88d8227ce6275af9ea6c"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792375564,
+       "snapshot":
+       {"head": {"value": "eba426bc0b9c6cedd743aa72051099827767ae82"},
+        "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+       "reviewer":
+       {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
+        "agent": {"value": "reviewer-sable-api1"}},
+       "note":
+       "Delta API review eba426b (base d42eefc); independent; read-only; board commands via main binary. Builds on my approval of 4bf0094 (r2 review.json sha256 305d2d9e...). History: 30855b5 merges main d42eefc only (file list equals main delta, no tooling/docs file); eba426b 6 files +81/-23, diff --check clean, attribution ok. Evidence: coordination build --wfail clean; test --wfail 55/55. Verified: content-exact final-tree guard (per candidate, head..landing diff must exclude its reviewed paths, roots excepted; together with the path-set guard the landed tree equals main outside reviewed files and each reviewed head on its files; missing observation fails closed; actionable message; tampered hand-made landing refused end to end in new runtime test). A1 resolved (full candidate equality while main is recorded, first-candidate match only for reduced reservations, tested). A2 resolved (legacyHeartbeat clears landed; erasure asserted). A3 resolved (reflowed, lines <= 100). No new findings. Remaining cosmetic/limitation from earlier: Diff and Landing base/head names; real mk_all stubbed in fixtures. Not run: scripts/check.sh. Evidence .lake/codex-validation/merge-queue-landing-api-r3/review.json sha256 20de55d3ef2a0fd6ca3406e4cb86da8a2e50f9976792b9a8b1fd974e0b032a93"}}}},
    "paths": ["scripts/coordination", "CONTRIBUTING.md", "AGENTS.md"],
    "id": {"value": "merge-queue-landing"},
    "goal":
