@@ -9,7 +9,7 @@
    "holder":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}},
-   "expires": 1792400591},
+   "expires": 1792400653},
   "epic": {"value": "tqbf-pspace-complete"},
   "candidates":
   [{"snapshot":
@@ -2289,7 +2289,7 @@
   "holder":
   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
    "agent": {"value": "coordinator-sable"}},
-  "expires": 1792400591},
+  "expires": 1792400653},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
@@ -2371,7 +2371,7 @@
     "agent": {"value": "worker-mythos"}}},
   {"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792400591,
+   "expires": 1792400653,
    "actor":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}}},
