@@ -355,20 +355,27 @@
    "report":
    "Both independent reviews of exact c4dbe23 APPROVED (API: reviewer-sable-api1, correctness: reviewer-sable-cor1), no blocking findings. integrator-sable-2 now merges main and fixes three docstrings under coordinator direction; worker-jetski keeps authorship and will receive a follow-up cleanup epic for the recorded API nits after landing.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/fagin-converse/worker-jetski",
-      "report":
-      "PUBLICATION REQUEST: a0952ac9f9440fb788460a47093fc3b84029914d on work/fagin-converse/integrator-sable-2 (push blocked by lean4 guardrail, not bypassed). Resumed reviewed head c4dbe23 (worker-jetski, two approvals); merged main 94dcd9d cleanly (05eed1b; roots gained only main imports, no conflicts); three docstring-only fixes: Immerman Theorem 7.7 -> 7.8 (Converse.lean x3, Projection.lean x1), Tableau.lean module docstring now states u.length + 1 < B, maxArity described consistently as one more than the largest arity (positive strict upper bound). No statement or proof changes; Axioms.lean/ROADMAP untouched. Validation: lake build --wfail --iofail clean, all six scripts/check.sh gates ok, git diff --check clean, edited lines <= 99 chars. diff vs 05eed1b: Converse +7/-5, Tableau +4/-4, Projection +1/-1. Contributors: worker-jetski implementation; integrator-sable-2 integration under coordinator-sable direction; AI assistance: Claude. Please push, then I run ready.",
-      "lease":
-      {"token": {"value": "88349439a121df3af41a3bae69972340"},
-       "holder":
-       {"session": {"value": "9427f9bcda5b4272b037bcdec0a08ee2"},
-        "agent": {"value": "integrator-sable-2"}},
-       "expires": 1792382757},
-      "branch": "work/fagin-converse/integrator-sable-2",
-      "blocked": false,
-      "assignee": {"value": "integrator-sable-2"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/fagin-converse/worker-jetski",
+       "report":
+       "PUBLICATION REQUEST: a0952ac9f9440fb788460a47093fc3b84029914d on work/fagin-converse/integrator-sable-2 (push blocked by lean4 guardrail, not bypassed). Resumed reviewed head c4dbe23 (worker-jetski, two approvals); merged main 94dcd9d cleanly (05eed1b; roots gained only main imports, no conflicts); three docstring-only fixes: Immerman Theorem 7.7 -> 7.8 (Converse.lean x3, Projection.lean x1), Tableau.lean module docstring now states u.length + 1 < B, maxArity described consistently as one more than the largest arity (positive strict upper bound). No statement or proof changes; Axioms.lean/ROADMAP untouched. Validation: lake build --wfail --iofail clean, all six scripts/check.sh gates ok, git diff --check clean, edited lines <= 99 chars. diff vs 05eed1b: Converse +7/-5, Tableau +4/-4, Projection +1/-1. Contributors: worker-jetski implementation; integrator-sable-2 integration under coordinator-sable direction; AI assistance: Claude. Please push, then I run ready.",
+       "lease":
+       {"token": {"value": "88349439a121df3af41a3bae69972340"},
+        "holder":
+        {"session": {"value": "9427f9bcda5b4272b037bcdec0a08ee2"},
+         "agent": {"value": "integrator-sable-2"}},
+        "expires": 1792382757},
+       "branch": "work/fagin-converse/integrator-sable-2",
+       "blocked": false,
+       "assignee": {"value": "integrator-sable-2"}},
+      "summary":
+      "Reviewed head c4dbe23 by worker-jetski with two independent approvals (reviewer-sable-api1, reviewer-sable-cor1); merged main 94dcd9d cleanly; three docstring corrections (Immerman Theorem 7.8 citations, Tableau u.length + 1 < B hypothesis, consistent maxArity description); lake build and all six scripts/check.sh gates passed; git diff --check clean; no statement or proof changes; Axioms.lean/ROADMAP untouched. Contributors: worker-jetski (implementation), integrator-sable-2 (integration under coordinator-sable direction); AI assistance: Claude. Head a0952ac9f9440fb788460a47093fc3b84029914d.",
+      "snapshot":
+      {"head": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"},
+       "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
