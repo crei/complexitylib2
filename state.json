@@ -1275,7 +1275,16 @@
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor1"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api1"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "c3bacec96b3150196ba2462df159dcb8"},
+          "holder":
+          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
+           "agent": {"value": "reviewer-sable-api1"}},
+          "expires": 1792388268},
+         "blocked": false}}}}}},
    "paths": ["scripts/coordination", "CONTRIBUTING.md", "AGENTS.md"],
    "id": {"value": "merge-queue-landing"},
    "goal":
