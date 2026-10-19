@@ -1020,13 +1020,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Land now through the base == main path: mechanical merge of main 764e3b8 (disjoint files) by integrator-sable-1 since worker-mythos left, six gates, short delta reviews, land. Unblocks hierarchy-theorems and space-cleanup.",
+     {"resume": "work/polytime-plain-bridge/worker-mythos",
+      "report": "",
       "lease": null,
-      "branch": "work/polytime-plain-bridge/worker-mythos",
+      "branch": "work/polytime-plain-bridge/integrator-sable-1",
       "blocked": false,
-      "assignee": {"value": "worker-mythos"}}}},
+      "assignee": {"value": "integrator-sable-1"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Complexity/PolyTime/Plain.lean",
     "Complexity/Computability/Complexity/Classes/P.lean",
