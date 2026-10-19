@@ -1968,7 +1968,7 @@
       {"head": {"value": "c0643ec8f8eedd4c2470024d3696461a2f8f4f66"},
        "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api6"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Continuity.lean",
