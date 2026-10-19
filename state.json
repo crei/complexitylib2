@@ -2395,19 +2395,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "f6293d163ad5bad8365eb854cd1c9bd6"},
-       "holder":
-       {"session": {"value": "b1cbc8b7223d2f96ea57cc362686fe08"},
-        "agent": {"value": "worker-sable-relativ"}},
-       "expires": 1792405261},
-      "branch": "work/relativization-2/worker-sable-relativ",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-relativ"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "f6293d163ad5bad8365eb854cd1c9bd6"},
+        "holder":
+        {"session": {"value": "b1cbc8b7223d2f96ea57cc362686fe08"},
+         "agent": {"value": "worker-sable-relativ"}},
+        "expires": 1792405261},
+       "branch": "work/relativization-2/worker-sable-relativ",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-relativ"}},
+      "summary":
+      "Milestone 2: P^A = NP^A for A = encQBF '' TQBF, plus oracle monotonicity. Proved: PWithOracle_image_TQBF_eq_NPWithOracle enc : PWithOracle (encQBF '' TQBF) enc = NPWithOracle (encQBF '' TQBF) enc; baker_gill_solovay : (∃ A, P^A = NP^A) ∧ ∃ B, P^B ≠ NP^B (encBits); for PSPACEComplete encBits A: PWithOracle_eq_PSPACE, NPWithOracle_eq_PSPACE, PWithOracle_eq_NPWithOracle; PWithOracle_subset_PSPACE, NPWithOracle_subset_PSPACE (A ∈ PSPACE encBits); PSPACE_subset_PWithOracle (PSPACEHard encBits A); image_TQBF_pspaceComplete; mem_PSPACE_of_isVerifier (certificate search); MultiTapePTM.exists_computableTidilyInO_run (clocked oracle run, oracle answered by a poly-space decider, in poly space); PolyTimeReducible.PWithOracle_subset / NPWithOracle_subset (A ≤p B ⇒ P^A ⊆ P^B, NP^A ⊆ NP^B, via open substitution). API follow-ups done (eval_mono, Action finiteness, unaryLengthLanguage, many-one, query_bounds citation). Checks: run-gates six gates ok at e3761bf7; tests and named axiom guards (standard axioms) in ComplexityTests/Relativization.lean. Source: AroraBarak09 Thm 3.7, BakerGillSolovay1975, Sipser2013 Thm 8.9. Contributors: worker-sable-relativ (AI: Claude). Limits: NP^A ⊆ PSPACE by direct certificate search, not NPSPACE/Savitch; general PSPACE helpers (wordMax, mem_PSPACE_of_computableTidilyInO, mem_PSPACE_of_isVerifier) and TQBF word decoding (Oracle/TQBF.lean) may belong in Classes/Space. No continuation needed. Bib: none new.",
+      "snapshot":
+      {"head": {"value": "e3761bf730233e37d71fabefaf2356c864642e5f"},
+       "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Oracle.lean",
     "Complexity/Computability/Complexity/Classes/Oracle",
