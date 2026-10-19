@@ -2650,15 +2650,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "3aa72b325b66d115d5c7a19f98a3fa83"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390992,
+          "snapshot":
+          {"head": {"value": "2397f41ec42c3ee4710e6776f1f1e1a9b49ac54a"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
            "agent": {"value": "reviewer-sable-cor4"}},
-          "expires": 1792405332},
-         "blocked": false}},
+          "note":
+          "Correctness review by reviewer-sable-cor4 (independent; author worker-sable-ladner only) of exact HEAD 2397f41e over base 0d8ef4bf. Scope: Circuit/Boolean/NaturalProof.lean, ComplexityTests/NaturalProofs.lean, Complexity.lean, ComplexityTests.lean. Build of touched module + test module with nice --wfail --iofail: ok, no warnings. Definitions match RR97: IsLarge = exists c eventually 2^-cn density; IsNatural = large subproperty with truth-table language in Gamma; IsUseful eventual, and isUseful_PPoly_iff gives RR per-n superpolynomial form. advantage = |C|/2^2^n exactly; not_secure hypotheses (t bounds the test, strict eps < density) correct. Barrier hypothesis forall c eventually Secure(2^cn, 2^-cn) has right quantifier order and follows from GGM over a 2^(k^eps)-hard PRG with k=n^d. Probes (lake env lean exit 0): identity family satisfies hsecure for all c,n (not contradictory); constant family violates it via a 0-gate bit test (has teeth); empty not large; univ not useful; not_secure instance at n>=16. 2^n/(5n) largeness/usefulness verified; language = GapMCSP.no. Axioms of 11 headlines: propext, Classical.choice, Quot.sound; no sorry/native_decide/set_option. Blocking: none. Follow-ups: barrier only needs usefulness at infinitely many n (stronger i.o. statement possible); nonuniform GGM derivation; optionally add hsecure non-vacuity probes to tests. Not checked: six gates, API style, landed deps. Evidence: .lake/codex-validation/natural-proofs-correctness/review.json sha256 37ab156287bbc30394d8fcdb03281cdf9c6f7e8d95e1fa405a1e3c6e0f77611f"}}},
        "api":
        {"finished":
         {"review":
