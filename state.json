@@ -3452,7 +3452,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "7baefd613093baaa8d14d3d983d15b38"},
+       "holder":
+       {"session": {"value": "9f33c425e7787c86e00bfa66ec90f517"},
+        "agent": {"value": "worker-sable-loop"}},
+       "expires": 1792407024},
       "branch": "work/hardness-amplification-2/worker-sable-loop",
       "blocked": false,
       "assignee": {"value": "worker-sable-loop"}}}},
@@ -3466,7 +3471,7 @@
    "goal":
    "Milestone 2 of hardness-amplification (M1 landed: hard-core lemma, XOR lemma): hardness versus randomness, nonuniform circuits throughout. First the average-case endpoint: if some function in E is (1/2 - 1/s)-hard for circuits of size s(n) = 2^(eps n), then P = BPP, via the landed Nisan-Wigderson generator (Crypto/Primitives/PRG/NisanWigderson, Design.polynomial) and seed enumeration for BPP verifiers, using DTIME/E from Classes/Time and Classes/EXP; then worst-case to average-case amplification (Impagliazzo-Wigderson or Sudan-Trevisan-Vadhan via local list decoding of Reed-Muller codes once coding-theory lands, else XOR-lemma/direct-product route) giving E not in SIZE(2^(eps n)) implies P = BPP, and the BFNW endpoint EXP not in P/poly implies BPP within the intersection of DTIME(2^(n^eps)). NW assumes strict < where the XOR lemma gives <=: add slack explicitly. Cite ImpagliazzoWigderson1997, BabaiFortnowNisanWigderson1993, NisanWigderson1994 (propose entries). Tests, named axiom guards, run-gates, frozen submission per milestone.",
    "dependencies": [],
-   "authors": []},
+   "authors": [{"value": "worker-sable-loop"}]},
   {"resume": null,
    "report": "",
    "phase": "unassigned",
