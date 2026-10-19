@@ -618,7 +618,7 @@
        "holder":
        {"session": {"value": "9d337a1ee8541975a1472b2a6af80742"},
         "agent": {"value": "worker-karn"}},
-       "expires": 1792382879},
+       "expires": 1792383126},
       "branch": "work/rational-hitting/worker-karn",
       "blocked": false,
       "assignee": {"value": "worker-karn"}}}},
@@ -1203,7 +1203,7 @@
     "agent": {"value": "worker-orion"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792382879,
+   "expires": 1792383126,
    "actor":
    {"session": {"value": "9d337a1ee8541975a1472b2a6af80742"},
     "agent": {"value": "worker-karn"}}},
