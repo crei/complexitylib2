@@ -2134,7 +2134,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "1d511e4f10c0e1e8c1bf58afcc83c828"},
+       "holder":
+       {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
+        "agent": {"value": "worker-sable-disperser"}},
+       "expires": 1792401069},
       "branch": "work/explicit-affine-disperser/worker-sable-disperser",
       "blocked": false,
       "assignee": {"value": "worker-sable-disperser"}}}},
