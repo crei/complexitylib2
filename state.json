@@ -2069,7 +2069,7 @@
     {"work":
      {"resume": "work/b2-lower-bound/coordinator-sable",
       "report":
-      "Relocated (46376ba, pushed): SemiCircuit.lean (Cslib.Circuits.Boolean.SemiCircuit) and AffineDisperser/{State,Operations,Reduction,Normal,MinimalAnd,Step,LowerBound}.lean (Cslib.Circuits.Boolean.AffineDisperser); B2/ removed. All six preliminary reductions now on the Reduction API with descriptive names; Step records Delta a in {0,-1,-2}. Next: Normal structure, then the minimal-AND cases.",
+      "Theorem 4.1 sorry-free at 68760f6 (pushed): Normal structure + step_or_normal; MinimalAnd.lean proves step_of_sharedSecondChild (Case 7), step_fixInput (Case 8), step_of_bottleneck (Cases 9 AND and 10 XOR via step_quad), step_of_minimalAnd. #print axioms seven_mul_le_two_mul_size_add: propext, Classical.choice, Quot.sound. Next: non-vacuity (dispersers exist by counting), tests, quality pass, gates.",
       "lease":
       {"token": {"value": "f5ea434d3ee9c83c103d41bc1cd30798"},
        "holder":
