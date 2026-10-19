@@ -1138,7 +1138,7 @@
    "authors": [{"value": "worker-sable-tooling"}]},
   {"resume": null,
    "report":
-   "fagin-converse landed on main a0952ac (both directions of Fagin theorem, two fresh approvals). You now own this cleanup: start fagin-cleanup from current main in your worktree; the goal lists the API reviewer findings (placement of generic FO combinators, cardinality sentences and tupleIndex lemmas into Logics/FirstOrder; Mathlib Sentence.cardGe; [DecidableEq State] section variable instead of letI in statements; realize_* naming; References sections; proof-only Finset.Sort import; optional hypothesis-free iff; one semantic end-to-end test). Keep every public statement at least as strong; where you rename or move, leave no deprecated aliases unless a client on main needs them. Post a short plan first, then implement; six gates, self-review, frozen submission; headline guards stay in ComplexityTests/Fagin.lean. Publication requests through the board if the push hook blocks you.",
+   "Plan accepted as posted (six items). Two cautions: keep every landed public statement at least as strong, with the hypothesis-free iff added beside, not instead of, the existing endpoints; and when bundling the twelve tableau symbols into FO.TableauSymbols, make sure the bundled statements remain readable and the realize lemmas stay simp-usable (write one probe). Report helper-inclusive line counts before/after; request publication through the board when the push hook blocks you; ready requires base == current main until the merge-queue tooling lands, so merge main right before your final validation.",
    "phase":
    {"working":
     {"work":
