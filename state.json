@@ -1,21 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"},
-   "base": {"value": "fa9ab425853b7269b74ba22374583c026e548006"}},
-  "main": null,
-  "lease":
-  {"token": {"value": "83735e3f5369a283e6276fe2c7a068e8"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792394544},
-  "epic": {"value": "rational-hitting"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"},
-     "base": {"value": "fa9ab425853b7269b74ba22374583c026e548006"}},
-    "epic": {"value": "rational-hitting"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -694,53 +678,42 @@
    "report":
    "Main moved on references.bib (np-complete-numbers landed GareyJohnson-era entries). Coordinator merges main mechanically (bibliography union only); fresh delta reviews of the merge, then land.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/rational-hitting/worker-karn",
-       "report":
-       "Main moved on references.bib (np-complete-numbers landed GareyJohnson-era entries). Coordinator merges main mechanically (bibliography union only); fresh delta reviews of the merge, then land.",
-       "lease":
-       {"token": {"value": "935e718e953dd7bcf7151753192bdfc3"},
-        "holder":
-        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-         "agent": {"value": "coordinator-sable"}},
-        "expires": 1792394544},
-       "branch": "work/rational-hitting/coordinator-sable",
-       "blocked": false,
-       "assignee": {"value": "coordinator-sable"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Twice-approved rational-hitting work (worker-karn ac19679, native rational formulas and hitting lists; coordinator-sable 2afafb0, Mathlib attribution notes and the two source bibliography entries) plus merge f489429 of current main fa9ab42 by coordinator-sable. The merge is mechanical: references.bib is the union of np-complete-numbers entries and the two rational-hitting entries, with no other conflicts; diff against main is unchanged apart from that. Six gates pass on f489429. Contributors: worker-karn, coordinator-sable. Delta review: confirm the bibliography union and that the epic diff against fa9ab42 equals the previously approved content.",
       "snapshot":
       {"head": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"},
        "base": {"value": "fa9ab425853b7269b74ba22374583c026e548006"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792379771,
-          "snapshot":
-          {"head": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"},
-           "base": {"value": "fa9ab425853b7269b74ba22374583c026e548006"}},
-          "reviewer":
-          {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
-           "agent": {"value": "reviewer-sable-cor5"}},
-          "note":
-          "Delta correctness review by reviewer-sable-cor5 (independent; did not contribute; previously approved parent 2afafb0 on base d42eefc). Scope: merge f489429 of main fa9ab42 into 2afafb0. (1) git diff 2afafb0 f489429 over all 24 epic Lean files is empty (blobs identical); epic diff fa9ab42..f489429 matches approved d42eefc..2afafb0 (27 files, +7888/-1, identical added/removed lines in Complexity.lean, ComplexityTests.lean, references.bib); bib merge is a pure union adding OpenAI2026RationalHitting and Schlesinger2026RationalHitting, no duplicate keys. (2) lake build of the 24 epic modules incl. ComplexityTests.RationalHitting --wfail --iofail OK; lake build Complexity ComplexityTests --wfail --iofail OK (9974 jobs, incl. Axioms audit); all 24 files re-elaborated with -DwarningAsError=true, clean; mk_all --check OK. (3) Own collectAxioms probe: 13 headline decls and all 907 Cslib.Circuits.Rational.* constants within propext/Classical.choice/Quot.sound. (4) No sorry/admit/native_decide/axiom/implemented_by/extern/unsafe or set_option in the epic diff. Blocking: none. Nits: none. Limitations: delta only, math relies on prior approval; lake test/lint not rerun by me. Evidence: .lake/codex-validation/rational-hitting-correctness/review.json sha256 fd6cfe08ff6bd04bf77341f692129b09db9407424d25d8964dd55a1dcc257054"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792379610,
-          "snapshot":
-          {"head": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"},
-           "base": {"value": "fa9ab425853b7269b74ba22374583c026e548006"}},
-          "reviewer":
-          {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
-           "agent": {"value": "reviewer-sable-api5"}},
-          "note":
-          "Delta API review by reviewer-sable-api5, independent (no contribution). Scope: merge f489429 (parents 2afafb0, fa9ab42) over previously approved ac19679+2afafb0. (1) diff 2afafb0..f489429 equals d42eefc..fa9ab42 on all 71 paths outside the roots; the only differences are references.bib blob ids and a +16 hunk offset. Root changed lines are identical. git show --cc shows only the Complexity.lean import union, with no conflict markers. (2) Epic diff fa9ab42..f489429 has the same 27 files and the same +/- lines as approved d42eefc..2afafb0. All non-root blobs are byte-identical to 2afafb0. references.bib adds only OpenAI2026RationalHitting and Schlesinger2026RationalHitting as @misc entries formatted like their neighbours. 167 entries, no duplicate keys, braces balanced, cited keys resolve. (3) mk_all --check passes. (4) lake build of 22 Rational modules + Circuit.Formula + ComplexityTests.RationalHitting --wfail --iofail exit 0. Blocking: none. Nits: none. Limits: delta only, no full build/test/lint rerun. Evidence: .lake/codex-validation/rational-hitting-api/review.json sha256 e77aaa281dfc9608ec0470c97d48e453984ef3d3f598f1583e9c27274831f796"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792380146,
+      "landed": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792379771,
+       "snapshot":
+       {"head": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"},
+        "base": {"value": "fa9ab425853b7269b74ba22374583c026e548006"}},
+       "reviewer":
+       {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
+        "agent": {"value": "reviewer-sable-cor5"}},
+       "note":
+       "Delta correctness review by reviewer-sable-cor5 (independent; did not contribute; previously approved parent 2afafb0 on base d42eefc). Scope: merge f489429 of main fa9ab42 into 2afafb0. (1) git diff 2afafb0 f489429 over all 24 epic Lean files is empty (blobs identical); epic diff fa9ab42..f489429 matches approved d42eefc..2afafb0 (27 files, +7888/-1, identical added/removed lines in Complexity.lean, ComplexityTests.lean, references.bib); bib merge is a pure union adding OpenAI2026RationalHitting and Schlesinger2026RationalHitting, no duplicate keys. (2) lake build of the 24 epic modules incl. ComplexityTests.RationalHitting --wfail --iofail OK; lake build Complexity ComplexityTests --wfail --iofail OK (9974 jobs, incl. Axioms audit); all 24 files re-elaborated with -DwarningAsError=true, clean; mk_all --check OK. (3) Own collectAxioms probe: 13 headline decls and all 907 Cslib.Circuits.Rational.* constants within propext/Classical.choice/Quot.sound. (4) No sorry/admit/native_decide/axiom/implemented_by/extern/unsafe or set_option in the epic diff. Blocking: none. Nits: none. Limitations: delta only, math relies on prior approval; lake test/lint not rerun by me. Evidence: .lake/codex-validation/rational-hitting-correctness/review.json sha256 fd6cfe08ff6bd04bf77341f692129b09db9407424d25d8964dd55a1dcc257054"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792379610,
+       "snapshot":
+       {"head": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"},
+        "base": {"value": "fa9ab425853b7269b74ba22374583c026e548006"}},
+       "reviewer":
+       {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
+        "agent": {"value": "reviewer-sable-api5"}},
+       "note":
+       "Delta API review by reviewer-sable-api5, independent (no contribution). Scope: merge f489429 (parents 2afafb0, fa9ab42) over previously approved ac19679+2afafb0. (1) diff 2afafb0..f489429 equals d42eefc..fa9ab42 on all 71 paths outside the roots; the only differences are references.bib blob ids and a +16 hunk offset. Root changed lines are identical. git show --cc shows only the Complexity.lean import union, with no conflict markers. (2) Epic diff fa9ab42..f489429 has the same 27 files and the same +/- lines as approved d42eefc..2afafb0. All non-root blobs are byte-identical to 2afafb0. references.bib adds only OpenAI2026RationalHitting and Schlesinger2026RationalHitting as @misc entries formatted like their neighbours. 167 entries, no duplicate keys, braces balanced, cited keys resolve. (3) mk_all --check passes. (4) lake build of 22 Rational modules + Circuit.Formula + ComplexityTests.RationalHitting --wfail --iofail exit 0. Blocking: none. Nits: none. Limits: delta only, no full build/test/lint rerun. Evidence: .lake/codex-validation/rational-hitting-api/review.json sha256 e77aaa281dfc9608ec0470c97d48e453984ef3d3f598f1583e9c27274831f796"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
     "Complexity/Computability/Circuit/Rational",
