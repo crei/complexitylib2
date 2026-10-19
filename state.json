@@ -2065,55 +2065,18 @@
    "dependencies": [],
    "authors": [{"value": "worker-sable-b2"}, {"value": "coordinator-sable"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "API review (reviewer-sable-api3): three public restatements of Mathlib facts (Cslib.two_eq_zero = CharTwo.two_eq_zero; FiniteField.charP_two = charP_of_injective_algebraMap; exists_span_range_eq = Submodule.exists_fun_fin_finrank_span_eq) must go; merge main for the landed bibliography entries; cheap nits.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "M1 COMPLETE locally at 48291a1 (branch work/explicit-affine-disperser/worker-sable-disperser, merged origin/main 81305c8), sorry-free, six gates ok at 48291a1. Push was refused by the auto-mode permission classifier, so ready is not yet run; the user needs to run: git push origin work/explicit-affine-disperser/worker-sable-disperser. BIB ENTRIES NEEDED for M1 (cslib format; not added by me, references.bib is coordinator-owned):\n@article{BenSassonKopparty2012,\n  author = {Ben-Sasson, Eli and Kopparty, Swastik},\n  title = {Affine Dispersers from Subspace Polynomials},\n  journal = {SIAM Journal on Computing},\n  volume = {41},\n  number = {4},\n  year = {2012},\n  note = {Theorem numbers follow the ECCC report TR10-044 (2010)},\n  url = {https://eccc.weizmann.ac.il/report/2010/044/}\n}\n@article{Ore1933,\n  author = {Ore, Oystein},\n  title = {On a Special Class of Polynomials},\n  journal = {Transactions of the American Mathematical Society},\n  volume = {35},\n  number = {3},\n  pages = {559--584},\n  year = {1933}\n}\n@article{Bourgain2007,\n  author = {Bourgain, Jean},\n  title = {On the Construction of Affine Extractors},\n  journal = {Geometric and Functional Analysis},\n  volume = {17},\n  number = {1},\n  pages = {33--57},\n  year = {2007}\n}",
-       "lease":
-       {"token": {"value": "bd467318b8210427a7235dcddbf27444"},
-        "holder":
-        {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
-         "agent": {"value": "worker-sable-disperser"}},
-        "expires": 1792397831},
-       "branch": "work/explicit-affine-disperser/worker-sable-disperser",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-disperser"}},
-      "summary":
-      "M1 (algebraic core) of explicit-affine-disperser, sorry-free. Headline: Cslib.AffineDisperser.exists_traceSym_ne (hn : finrank (ZMod 2) F = n) (hs : ∀ K : Subfield F, K ≠ ⊤ → Nat.card K ≤ 2 ^ s) (hμ : μ ≠ 0) (ht : 0 < t) (A : AffineSubspace (ZMod 2) (Fin r → F)) (hA : r * max (r + 1) s + r * (r + 1) + n * t + n * r / t < finrank (ZMod 2) A.direction) : ∃ x ∈ A, ∃ y ∈ A, traceSym μ r t x ≠ traceSym μ r t y, traceSym μ r t x = Tr(μ ∑_{|I|=t} ∏_{i∈I} x i ^ (2^(r+1-i) - 1)) [BK Thm 7.3, subfield-bound adaptation]. Core: exists_trace_mul_prod_det_mooreMatrix_ne_zero [BK Thm 6.1 with dim > s]. Reusable: subspacePoly, exists_isLinearized_range_eq (L3.7), exists_coeffPattern (L3.10), mooreMatrix, sum_cube_pow_eq_det_mooreMatrix, permanent_mooreMatrix_linearizedEval (L3.13), Cslib.sum_cube_prod_affine(_eq_zero/_eq_permanent), pivotSpace (L7.1), eq_of_covering (Claim 7.4), card_subfield_le. Checks: six gates ok at 48291a1; tests incl. GF(2^400)^100 non-vacuity and 8 axiom guards. Source: Ben-Sasson–Kopparty ECCC TR10-044, proofs re-derived (cube sums replace reduction mod X^q-X). Contributors: worker-sable-disperser (both holders). Continuation: M2 explicit composite-degree field (s ≤ n/L), bit-string function, d(N) = O(N/log N), bridge to Cslib.BitString.IsAffineDisperser; M3 poly-time certificate. Bib: BenSassonKopparty2012, Ore1933, Bourgain2007 (entries in board note).",
-      "snapshot":
-      {"head": {"value": "48291a11dcb757bb1c02a8984f35191d0da5883b"},
-       "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792385983,
-          "snapshot":
-          {"head": {"value": "48291a11dcb757bb1c02a8984f35191d0da5883b"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
-           "agent": {"value": "reviewer-sable-cor3"}},
-          "note":
-          "M1 correctness, independent (reviewer-sable-cor3), exact head 48291a1. Built 6 epic modules + test with --wfail --iofail (exit 0); each file re-elaborated from source, no diagnostics. No sorry/native_decide/axiom/set_option; own #print axioms of 13 decls incl. both headlines = propext, Classical.choice, Quot.sound. Compared with ECCC TR10-044 (numbering matches). traceSym = BK Thm 7.3 (e_i=r+1-i, alpha_i=2^(r+1-i)-1 0-indexed, Tr(mu.) covers all nontrivial functionals). For s<=r+1 (prime n, s=1) the bound is the paper's plus r(r+1), dropping nt>=r(r+1) and t<r; extra term <= r*M, no asymptotic loss. Thm 6.1 analogue matches (k=e+1, d>s sufficient for non-containment, exact for prime n); threshold one better than paper's, conclusion in Moore-det finite-difference form. Non-vacuity: test 38100<40000; own probes: n=101 prime, s=1 (proved), r=10, t=3: 859<1010 on top and on proper 909-dim subspace; traceSym=0 with <t nonzero blocks, so nt term needed. Blocking: none. Nits: IndependentSources.lean:356 doc could note threshold/finite-difference form; AffineDisperser.lean:39 says >=n (proof >n); public Cslib.two_eq_zero CubeSum.lean:82 generic name (API). Limits: no six gates/global Axioms/lint. Evidence .lake/codex-validation/explicit-affine-disperser-correctness/review.json sha256 d1d3b578540ffe9e1be286da6bf6d4d870d5166961583c9aef0b86a74efc702a"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "changes",
-          "time": 1792386117,
-          "snapshot":
-          {"head": {"value": "48291a11dcb757bb1c02a8984f35191d0da5883b"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
-           "agent": {"value": "reviewer-sable-api3"}},
-          "note":
-          "API review (reviewer-sable-api3, independent, read-only) of 48291a1 vs f489429. Build of 6 modules + ComplexityTests.AffineDisperser --wfail ok; template/hygiene ok; headline axioms std. Pinned Mathlib has no Moore matrix, linearized/subspace poly, char-2 det=perm, subfield-card bound. Adaptation docstrings checked against BK TR10-044 and accurate. BLOCKING (Mathlib duplicates, public): B1 CubeSum.lean:82 Cslib.two_eq_zero restates CharTwo.two_eq_zero; open Cslib CharTwo makes it ambiguous (probe). Privatize; also root-Cslib helpers :55 :63 :88. B2 SubspacePolynomial.lean:143 charP_two = charP_of_injective_algebraMap' (ZMod 2) 2. B3 SubspacePolynomial.lean:220 exists_span_range_eq restates Submodule.exists_fun_fin_finrank_span_eq. NITS: general algebra under Combinatorics/AffineDisperser with disperser/FiniteField names (Moore.lean:70,79; AffineDisperser.lean:146,180,198; IndependentSources.lean:98), relocation is a central call; IsLinearized/mooreMatrix fix q=2; exists_coeffPattern hW redundant (:457); traceSym = Multiset.esymm, add bridge; Moore.lean:100 'analogue of L3.13'; covering test proves I=I (tests:43); GF(2^400)^100 instance genuine but A=top only. CENTRAL: bib keys missing at head, on main 3034b37. Skipped: six gates, lint. Evidence .lake/codex-validation/explicit-affine-disperser-api/review.json sha256 dd40aa3713f1c1fffeb7a72fc13c28deeaae2246b4ac59a7ab84846179c37c8e"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "API review (reviewer-sable-api3): three public restatements of Mathlib facts (Cslib.two_eq_zero = CharTwo.two_eq_zero; FiniteField.charP_two = charP_of_injective_algebraMap; exists_span_range_eq = Submodule.exists_fun_fin_finrank_span_eq) must go; merge main for the landed bibliography entries; cheap nits.",
+      "lease": null,
+      "branch": "work/explicit-affine-disperser/worker-sable-disperser",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-disperser"}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
     "Complexity/Foundations/Combinatorics/AffineDisperser.lean",
