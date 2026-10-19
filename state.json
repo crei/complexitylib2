@@ -1918,20 +1918,27 @@
    "report":
    "Both reviews: Cutland1980 and KatzLindell2020 already exist (cslib entries with padded keys); delete the duplicates. Also adopt nits: MishraSanthanam2026 as @techreport like other ECCC entries, braces around $3n$ in the FGHK title, Ore1933 DOI.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Both reviews: Cutland1980 and KatzLindell2020 already exist (cslib entries with padded keys); delete the duplicates. Also adopt nits: MishraSanthanam2026 as @techreport like other ECCC entries, braces around $3n$ in the FGHK title, Ore1933 DOI.",
-      "lease":
-      {"token": {"value": "c2a190b700efe4dc8a5efe78317fd451"},
-       "holder":
-       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-        "agent": {"value": "coordinator-sable"}},
-       "expires": 1792399280},
-      "branch": "work/docs-bibliography/coordinator-sable",
-      "blocked": false,
-      "assignee": {"value": "coordinator-sable"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Both reviews: Cutland1980 and KatzLindell2020 already exist (cslib entries with padded keys); delete the duplicates. Also adopt nits: MishraSanthanam2026 as @techreport like other ECCC entries, braces around $3n$ in the FGHK title, Ore1933 DOI.",
+       "lease":
+       {"token": {"value": "c2a190b700efe4dc8a5efe78317fd451"},
+        "holder":
+        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+         "agent": {"value": "coordinator-sable"}},
+        "expires": 1792399280},
+       "branch": "work/docs-bibliography/coordinator-sable",
+       "blocked": false,
+       "assignee": {"value": "coordinator-sable"}},
+      "summary":
+      "Docs-only, revised after both reviews: nine new bibliography entries (BakerGillSolovay1975, GoldwasserMicaliRackoff1989, GoldreichMicaliWigderson1991, GareyJohnson1979, BenSassonKopparty2012, Ore1933, Bourgain2007, MishraSanthanam2026, FindGolovnevHirschKulikov2016). The duplicate Cutland1980 and KatzLindell2020 entries are removed (the cslib entries with padded keys already exist). Review nits adopted: MishraSanthanam2026 is an ECCC @techreport like Dinur2005 and Korten2026, the FGHK title braces {$3n$}, Ore1933 carries its DOI. 176 distinct keys; bibtex on the whole file succeeds with only pre-existing warnings; six gates and check_docs pass.",
+      "snapshot":
+      {"head": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"},
+       "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths": ["references.bib", "docbuild/docs/references.bib"],
    "id": {"value": "docs-bibliography"},
    "goal":
