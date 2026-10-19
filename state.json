@@ -1800,7 +1800,16 @@
       {"head": {"value": "9db80c1c477a0fab1594ab5e697456283044e6f3"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "2caa197659bfa161a36030454fb56a60"},
+          "holder":
+          {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
+           "agent": {"value": "reviewer-sable-cor6"}},
+          "expires": 1792400502},
+         "blocked": false}},
        "api":
        {"active":
         {"report": "",
