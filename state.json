@@ -1384,6 +1384,18 @@
    "dependencies":
    [{"value": "native-exponential-separation"},
     {"value": "polytime-plain-bridge"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/Ladner.lean",
+    "Complexity/Computability/Complexity/Classes/Ladner",
+    "ComplexityTests/Ladner.lean"],
+   "id": {"value": "ladner"},
+   "goal":
+   "Ladner's theorem on the native classes: if P is not NP then there is a language in NP that is neither in P nor NP-complete under the library's polynomial-time Karp reductions. Use the standard padding/diagonalization (blowing holes in SAT) proof [AroraBarak09 Theorem 3.3] with a native polynomial-time computable slowly growing function certified by the existing calculus, the native universal machine with clocks from native-exponential-separation for enumerating polynomial-time machines and reductions, and SAT from Problems/SAT.lean. State the hypothesis P ≠ NP explicitly as a premise; prove the language's NP membership with an actual verifier certificate. Also prove the unconditional form: the constructed language is in NP, and it is in P only if SAT is, and NP-complete only if P = NP. Tests for the padding function and nonvacuity of the construction's pieces; axiom guards in the epic test module. Six gates; frozen submission.",
+   "dependencies": [{"value": "native-exponential-separation"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
