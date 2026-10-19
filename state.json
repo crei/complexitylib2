@@ -1,15 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"},
-   "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
-  "lease":
-  {"token": {"value": "1c0e52cd75421b6d56fcb6b61b294f0f"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792385235},
-  "epic": {"value": "circuit-metric"}},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -1055,53 +1045,41 @@
    "report":
    "Independent API review of exact c2016b0 APPROVED (reviewer-sable-api3), no blocking findings; correctness review in progress. Follow-ups recorded for the hamming-geometry work or a later cleanup, not for this snapshot: move complexity_single_unary_le / complexity_single_binary_le to Circuit/Complexity.lean and rederive Boolean.complexity_not_le / complexity_binary_le from them; say exponent two (-u = u) instead of characteristic two in the Metric.lean docstring; the private test helpers complexity_single_proj / one_le_complexity_single are library-worthy (hamming-geometry milestone 1 already provides them, so the test duplicates go away after it lands). Five Axioms.lean guard names noted for the docs batch.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "PUBLICATION REQUEST: please publish c2016b0765523a616b12c7665eab317ceba0677e to refs/heads/work/circuit-metric/worker-mythos (fast-forward from the published 06bc350). It merges current origin/main a0952ac (fagin-converse; files disjoint from this epic; clean merge, mk_all --check consistent). Six gates passed on c2016b0 with a clean tree. ready follows as soon as git ls-remote shows c2016b0.",
-       "lease":
-       {"token": {"value": "94a1e55af26bc3a97278c471aaa616dc"},
-        "holder":
-        {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
-         "agent": {"value": "worker-mythos"}},
-        "expires": 1792384912},
-       "branch": "work/circuit-metric/worker-mythos",
-       "blocked": false,
-       "assignee": {"value": "worker-mythos"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "RESULT: circuit complexity as a translation-invariant distance, milestone 1 of the owner note. GENERIC (Circuit/Metric.lean): diffDist I c f g := if f = g then 0 else complexity I (single (f - g)) + c on (Fin n -> U) -> U for any complete I with [AddGroup U]. Proved: diffDist_self; diffDist_eq_zero_iff (0 < c); diffDist_add_right; diffDist_triangle (complexity of the two-input addition <= c); diffDist_comm_le (negation of cost <= e gives D g f <= D f g + e); diffDist_comm (negation invariance); diffDist_add_left ([AddCommGroup U]). TRUE GENERAL STATEMENT: a right-translation-invariant quasi-metric, not symmetric in general (test: full binary basis on ZMod 3, c = 1, D(x0,0) = 1 but D(0,x0) = 2); diffNorm is an AddGroupNorm exactly under 0 < c, the addition bound and negation invariance, and dist_diffNorm shows its normed group induces D for commutative carriers. Engine: complexity_single_unary_le and complexity_single_binary_le, generic forms of Boolean.complexity_not_le and complexity_binary_le; no new circuit, function, norm model or gadget. BOOLEAN (Boolean/Metric.lean): circuitDist f g := diffDist interpretation 4 f g, so the Boolean case IS the specialization (circuitDist_eq_diffDist by rfl; circuitDist_def gives the specified if f = g then 0 else C(single (f + g)) + 4; circuitDist_of_ne the xor form). Metric: self, eq_zero_iff, comm, triangle (from the four-gate xor), add_right, add_left; dist_complexity_single_le_circuitDist (1-Lipschitz, from dist_complexity_single_le_complexity_xor). circuitNorm := diffNorm interpretation 4 (complexity_single_add_le via Synthesis.xor; complexity_single_neg by rfl since -f = f); circuitNormedAddCommGroup is a reducible definition (Mathlib note on reducible non-instances), never an instance; dist_circuitNormedAddCommGroup. MCSP: complexity_single_le_iff_circuitDist_le and complexity_single_le_iff_mem_closedBall for f != 0. TESTS (ComplexityTests/CircuitMetric.lean): exact one-bit distances d(x0,0)=4, d(!x0,0)=5, d(x0,!x0)=5, d(0,1)=5; norm value, Lipschitz, closed-ball membership and non-membership; two bits 5 <= d(x0,x1) <= 8 and the sharing example d(f + x0, f + x1) <= 8 for every f; the non-Boolean generic instance with triangle, quasi-symmetry, translation and the exact asymmetry; exact axiom guards for eight results, all [propext, Classical.choice, Quot.sound]. Exact values use private test helpers: projections cost zero gates, and non-projections need one. NOTE: omega distinguishes otherwise equal complexity terms whose lambda binder is written BitString n versus Fin n -> Bool; the tests state goals without binder annotations. VALIDATION: scripts/check.sh six gates passed. SOURCES: owner note 2026-10-18 (provenance in the commit only, not cited in docstrings); Jukna2012 for the correction inequality. CONTRIBUTORS: worker-mythos only, no subagents; AI assistance Claude Code (Claude Opus 5.5). CENTRAL INTEGRATION REQUESTS: Axioms.lean named guards for Cslib.Circuits.diffDist_triangle, Cslib.Circuits.dist_diffNorm, Cslib.Circuits.Boolean.circuitDist_triangle, Cslib.Circuits.Boolean.dist_complexity_single_le_circuitDist, Cslib.Circuits.Boolean.complexity_single_le_iff_mem_closedBall; no ROADMAP change (hamming-geometry continuation already planned). LIMITATIONS: single-output functions only (multi-output distances need m addition gadgets); no lower bound on the exclusive or, so d(x0,x1) is bracketed, not exact; Boolean.complexity_binary_le/complexity_not_le not yet rederived from the generic engine (outside scope).",
       "snapshot":
       {"head": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"},
        "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792369636,
-          "snapshot":
-          {"head": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"},
-           "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
-          "reviewer":
-          {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
-           "agent": {"value": "reviewer-sable-cor3"}},
-          "note":
-          "Correctness review of exact base a0952ac / head c2016b0 by reviewer-sable-cor3 (independent: no contribution to this epic; read-only in own worktree). Scope: Circuit/Metric.lean, Circuit/Boolean/Metric.lean, ComplexityTests/CircuitMetric.lean, root imports; dependencies checked in cslib Complexity/Full/Boolean.Synthesis, Complexity Boolean/Synthesis (xor = 4 gates), Boolean/Correction, Mathlib BooleanRing Bool (add := xor, neg := id, sub := xor). Evidence: lake build of both modules and the test --wfail --iofail succeeded with no warnings; delta has no sorry/axiom/native_decide/heartbeat overrides/instances. Statements verified: diffDist is the specified classical ite; eq_zero_iff needs 0 < c (necessity shown in my probe), add_right in any AddGroup, triangle uses only the addition gadget via complexity_single_binary_le, comm_le/comm via negation, add_left needs AddCommGroup; diffNorm is a Mathlib AddGroupNorm under exactly 0 < c + addition bound + negation invariance and dist_diffNorm induces diffDist; Boolean circuitDist = diffDist interpretation 4 by rfl, circuitDist_def exact, -f = f and f - g = f + g by rfl, Lipschitz from the Jukna correction bound, ball offsets exact (C f <= s iff C f + 4 <= s + 4), circuitNormedAddCommGroup is an abbrev not an instance. Test cost facts correct (projection = 0 gates; size-0 circuits output an input wire); ZMod 3 asymmetry real (1 vs 2). Own probes (all pass): third function x0 && x1 (C = 1, d = 5), d(y0, y0 + y1) = 4, 5 <= d(y0, and) <= 6, sharing bound re-derived via triangle (4 + 4), balls at s = 1/0, norm values; non-commutative carrier Additive (DihedralGroup 3) under the full basis with triangle/quasi-symmetry/translation and exact 1 vs 2; norm on ZMod 2 with c = 1; 25 #print axioms incl. the 8 guarded: only propext/Classical.choice/Quot.sound. Nits: Metric.lean cites Jukna2012 though no generic result uses it; 0 < c necessity not in tests; RelativeComplexity unused. Limitation: full check.sh not re-run. Evidence: .lake/codex-validation/circuit-metric-correctness/review.json SHA256 b24efffcb09278d5a69662bfb0e234df625aa84b2122786076a521b38f49d374"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792369528,
-          "snapshot":
-          {"head": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"},
-           "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
-          "reviewer":
-          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
-           "agent": {"value": "reviewer-sable-api3"}},
-          "note":
-          "API review by reviewer-sable-api3 (independent; no contribution) of exact base a0952ac / head c2016b0, read-only in own worktree. Scope: Circuit/Metric.lean, Circuit/Boolean/Metric.lean, ComplexityTests/CircuitMetric.lean, root imports, against Boolean/Synthesis.lean, Correction.lean, Circuit/Complexity.lean, cslib complexity API and Mathlib norms. Evidence: lake build of both modules + test --wfail --iofail exit 0, no warnings; mk_all --check clean; probe_synth.lean: all 8 #synth (Dist/Norm/NormedAddCommGroup/SeminormedAddGroup/PseudoMetricSpace/MetricSpace on function types, Dist Bool) fail, so no instance leaks; probe_boundary.lean: n = 0, translation+triangle, c = 0 breaks separation on ZMod 3, norm of circuitNormedAddCommGroup is circuitNorm by rfl, circuitDist = diffDist 4 by rfl, axioms of 12 further theorems within propext/choice/Quot.sound. Docstring quasi-metric/asymmetry claims match hypotheses; template, markers, simp hygiene, test placement fine; AddGroupNorm.toNormedAddCommGroup is the right Mathlib API; author limitations accurate. No blocking findings. Nits: engine lemmas complexity_single_unary_le/binary_le are generic complexity facts, better placed in Circuit/Complexity.lean, and Boolean.complexity_not_le/complexity_binary_le repeat the same Fin.append proof and should become one-line corollaries (follow-up); Metric.lean lacks public import Complexity.Init (transitive, precedent exists); characteristic two -> exponent two wording; test helpers complexity_single_proj (= complexity_wiring) and one_le_complexity_single are library candidates. diffDist name acceptable (owner term, avoids clash with circuitDist). Central: Axioms.lean guards for the five requested results. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/circuit-metric-api/review.json SHA256 0a43b6eed27172f0e10884ec03831565bc8d7e5be71f5ae1ca7a920dbff4fd82"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792370838,
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792369636,
+       "snapshot":
+       {"head": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"},
+        "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
+       "reviewer":
+       {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
+        "agent": {"value": "reviewer-sable-cor3"}},
+       "note":
+       "Correctness review of exact base a0952ac / head c2016b0 by reviewer-sable-cor3 (independent: no contribution to this epic; read-only in own worktree). Scope: Circuit/Metric.lean, Circuit/Boolean/Metric.lean, ComplexityTests/CircuitMetric.lean, root imports; dependencies checked in cslib Complexity/Full/Boolean.Synthesis, Complexity Boolean/Synthesis (xor = 4 gates), Boolean/Correction, Mathlib BooleanRing Bool (add := xor, neg := id, sub := xor). Evidence: lake build of both modules and the test --wfail --iofail succeeded with no warnings; delta has no sorry/axiom/native_decide/heartbeat overrides/instances. Statements verified: diffDist is the specified classical ite; eq_zero_iff needs 0 < c (necessity shown in my probe), add_right in any AddGroup, triangle uses only the addition gadget via complexity_single_binary_le, comm_le/comm via negation, add_left needs AddCommGroup; diffNorm is a Mathlib AddGroupNorm under exactly 0 < c + addition bound + negation invariance and dist_diffNorm induces diffDist; Boolean circuitDist = diffDist interpretation 4 by rfl, circuitDist_def exact, -f = f and f - g = f + g by rfl, Lipschitz from the Jukna correction bound, ball offsets exact (C f <= s iff C f + 4 <= s + 4), circuitNormedAddCommGroup is an abbrev not an instance. Test cost facts correct (projection = 0 gates; size-0 circuits output an input wire); ZMod 3 asymmetry real (1 vs 2). Own probes (all pass): third function x0 && x1 (C = 1, d = 5), d(y0, y0 + y1) = 4, 5 <= d(y0, and) <= 6, sharing bound re-derived via triangle (4 + 4), balls at s = 1/0, norm values; non-commutative carrier Additive (DihedralGroup 3) under the full basis with triangle/quasi-symmetry/translation and exact 1 vs 2; norm on ZMod 2 with c = 1; 25 #print axioms incl. the 8 guarded: only propext/Classical.choice/Quot.sound. Nits: Metric.lean cites Jukna2012 though no generic result uses it; 0 < c necessity not in tests; RelativeComplexity unused. Limitation: full check.sh not re-run. Evidence: .lake/codex-validation/circuit-metric-correctness/review.json SHA256 b24efffcb09278d5a69662bfb0e234df625aa84b2122786076a521b38f49d374"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792369528,
+       "snapshot":
+       {"head": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"},
+        "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
+       "reviewer":
+       {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+        "agent": {"value": "reviewer-sable-api3"}},
+       "note":
+       "API review by reviewer-sable-api3 (independent; no contribution) of exact base a0952ac / head c2016b0, read-only in own worktree. Scope: Circuit/Metric.lean, Circuit/Boolean/Metric.lean, ComplexityTests/CircuitMetric.lean, root imports, against Boolean/Synthesis.lean, Correction.lean, Circuit/Complexity.lean, cslib complexity API and Mathlib norms. Evidence: lake build of both modules + test --wfail --iofail exit 0, no warnings; mk_all --check clean; probe_synth.lean: all 8 #synth (Dist/Norm/NormedAddCommGroup/SeminormedAddGroup/PseudoMetricSpace/MetricSpace on function types, Dist Bool) fail, so no instance leaks; probe_boundary.lean: n = 0, translation+triangle, c = 0 breaks separation on ZMod 3, norm of circuitNormedAddCommGroup is circuitNorm by rfl, circuitDist = diffDist 4 by rfl, axioms of 12 further theorems within propext/choice/Quot.sound. Docstring quasi-metric/asymmetry claims match hypotheses; template, markers, simp hygiene, test placement fine; AddGroupNorm.toNormedAddCommGroup is the right Mathlib API; author limitations accurate. No blocking findings. Nits: engine lemmas complexity_single_unary_le/binary_le are generic complexity facts, better placed in Circuit/Complexity.lean, and Boolean.complexity_not_le/complexity_binary_le repeat the same Fin.append proof and should become one-line corollaries (follow-up); Metric.lean lacks public import Complexity.Init (transitive, precedent exists); characteristic two -> exponent two wording; test helpers complexity_single_proj (= complexity_wiring) and one_le_complexity_single are library candidates. diffDist name acceptable (owner term, avoids clash with circuitDist). Central: Axioms.lean guards for the five requested results. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/circuit-metric-api/review.json SHA256 0a43b6eed27172f0e10884ec03831565bc8d7e5be71f5ae1ca7a920dbff4fd82"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/Metric.lean",
     "Complexity/Computability/Circuit/Metric.lean",
