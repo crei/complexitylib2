@@ -1,21 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "f30b20385743d53d0f046e35e8ad47d6ea500bae"},
-   "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-  "main": null,
-  "lease":
-  {"token": {"value": "ad8744e1ba6c9a82fde1bb548a3f6335"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792392897},
-  "epic": {"value": "sipser-lautemann"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "f30b20385743d53d0f046e35e8ad47d6ea500bae"},
-     "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-    "epic": {"value": "sipser-lautemann"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -769,53 +753,42 @@
    "report":
    "API review of exact 800b146 returned changes: blocking duplication (seed/shift list views re-implement BitString.ofList/block/blocksEquiv/listRow; completeness and soundness re-prove Foundations/Combinatorics/Lautemann.lean lemmas). Coordinator-directed refactor by integrator-sable-3 with no public theorem statement changes; both reviews are then refreshed on the final snapshot.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/sipser-lautemann/reviewer-correctness",
-       "report":
-       "PUBLICATION REQUEST (supersedes 4f93509): f30b20385743d53d0f046e35e8ad47d6ea500bae on refs/heads/work/sipser-lautemann/integrator-sable-3 (worktree HEAD detached at that SHA). f30b203 is a clean merge of origin/main d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd into the published 4f93509 (parents 4f93509ab221ec9e8fb0d1264b35dff69a52bbad, d42eefce), so it fast-forwards the remote branch and contains current main; no root conflicts, mk_all not needed. main 26253c9..d42eefc touches none of my files; the four refactored files are unchanged from ee05678. Validation on f30b203: scripts/check.sh six gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Statement identity vs 800b146 re-run on f30b203: all ten listed theorems plus DecidesWithBoundedError.compl and the verifier signature identical; BPP.lean unchanged; only trialSeed changes arity (m L T -> m). Lines: module 513 -> 496, test 209 -> 212.",
-       "lease":
-       {"token": {"value": "c7494010867c8bda759b548d5af16efb"},
-        "holder":
-        {"session": {"value": "284b607582cb0e7bf0d45e8fbc04e81a"},
-         "agent": {"value": "integrator-sable-3"}},
-        "expires": 1792390185},
-       "branch": "work/sipser-lautemann/integrator-sable-3",
-       "blocked": false,
-       "assignee": {"value": "integrator-sable-3"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Head f30b20385743d53d0f046e35e8ad47d6ea500bae on work/sipser-lautemann/integrator-sable-3 (contains main d42eefc). Coordinator-directed refactor of reviewed 800b146 resolving the API review (reviewer-sable-api2). B1 resolved: seed/shift views are the BitString API (listToSeed m r = block (ofList (runs m * m) r), listToShifts = nested block view, seedToList/shiftsToList = List.ofFn of blocksEquiv.symm; round trips by ofList_ofFn + Equiv.apply_symm_apply; private mul_add_lt_mul/mul_add_div_and_mod deleted); trialSeed = List.zipWith Bool.xor of two BitString.listRow rows, verifier_polyTime still by fun_prop via bitsRowWithInput/bitsZipWithInput. B2 resolved: exists_shifts_majorityAccepts and exists_seed_not_majorityAccepts go through Cslib.exists_forall_exists_add_mem_of_card_mul_card_compl_pow_lt and Cslib.exists_forall_add_notMem_of_mul_card_lt (Lautemann.lean) on the group Seed m; Equiv.addLeft translation and bad/biUnion union bound removed; FiniteCover and Units.Equiv imports dropped. Nits: Seed m uses BitString m; runs_pos deleted; Sipser1983 and Lautemann1983 cited separately with Gacs named; malformed-string contract (missing bits read false, extra bits ignored) on trialSeed and verifier; two_pow_mul_eight_pow_lt listed in MajorityVote Main results; references.bib gains Sipser1983 (STOC 1983, 330-335, doi 10.1145/800061.808762). No public theorem statement changes: scripted per-declaration diff vs 800b146 shows BPP_subset_SigmaP_two, BPP_subset_PiP_two, BPP_subset_SigmaP_two_inter_PiP_two, BPP_subset_PH, compl_mem_BPP, BPP_eq_preimage_compl_BPP, DecidesWithBoundedError.compl, exists_shifts_majorityAccepts, exists_seed_not_majorityAccepts, verifier_polyTime, isAlternatingVerifier_verifier and the verifier signature identical; BPP.lean unchanged; trialSeed loses its two always-determined parameters (m L T -> m; L = seedLen m, T = shifts m), test module follows. Lines (helper-inclusive): SipserLautemann.lean 513 -> 496 (private helpers 12 -> 10), ComplexityTests/SipserLautemann.lean 209 -> 212 (every example and guard kept). Validation on f30b203: scripts/check.sh six gates ok; git diff --check clean; lines <= 100 chars except pre-existing #guard_msgs info lines. Contributors: worker-nova (port), reviewer-correctness (cleanup), integrator-sable-3 (refactor, under coordinator-sable direction); source credit Bolton Bailey, Samuel Schlesinger (v1). Note: mis-titled c329e3a was never published; history is 800b146 <- merges <- ee05678 (refactor) <- merges of main. AI assistance: Claude.",
       "snapshot":
       {"head": {"value": "f30b20385743d53d0f046e35e8ad47d6ea500bae"},
        "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792376461,
-          "snapshot":
-          {"head": {"value": "f30b20385743d53d0f046e35e8ad47d6ea500bae"},
-           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-          "reviewer":
-          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
-           "agent": {"value": "reviewer-sable-cor2"}},
-          "note":
-          "Fresh correctness review by reviewer-sable-cor2 (independent; no contribution) of f30b203 on base d42eefc (both 800b146 and the base are ancestors), building on my round-1 approval of 800b146 (sha256 4e4e418022c27526233b4876ebc160c22dbae87a3377bfc5cfd9b811946eee1f). Statements: the ten headlines, DecidesWithBoundedError.compl and the parameter/verifier/shiftAccepts definitions are source-identical to 800b146; Seed now uses upstream BitString m, an abbrev for Fin m -> Bool, so the type is definitionally unchanged. trialSeed (listRow + zipWith xor): my probe proves it equals the old getD formula for every m, w, i, j, so shiftAccepts and verifier are unchanged on well-formed and malformed certificates; listToSeed/listToShifts read the same indices. Completeness/soundness via exists_forall_exists_add_mem_of_card_mul_card_compl_pow_lt (needs N|S^c|^T < N^T, from 9^R|S^c| <= 8^R N and (2^m 8^R)^T < (9^R)^T) and exists_forall_add_notMem_of_mul_card_lt (T|S| < N from T 8^R < 9^R), same T = shifts m = 2R, R = 6m+48. Built SipserLautemann, BPP, MajorityVote, Lautemann and the test with --wfail --iofail: clean. probe_concrete re-run unchanged and probe_boundary (only trialSeed call sites adapted, two helper proofs redone) pass, incl. decide +kernel malformed-certificate checks. Axioms of all headlines and both Lautemann lemmas: standard only. No blocking findings. Nits: trialSeed signature changed (no other client); main moved to eba426b (no epic paths). Not run: full check.sh. Evidence .lake/codex-validation/sipser-lautemann-correctness/review.json sha256 f9f49a6b5a35dc6999558e16450c23b91a0ff99c3f1774b11f73deeb6e30e6e0"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792376537,
-          "snapshot":
-          {"head": {"value": "f30b20385743d53d0f046e35e8ad47d6ea500bae"},
-           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-          "reviewer":
-          {"session": {"value": "33380288772710be7744d177c8f66871"},
-           "agent": {"value": "reviewer-sable-api2"}},
-          "note":
-          "Fresh independent API review of exact f30b203 (base d42eefc, ancestry ok); no contribution to the epic or the refactor ee05678. B1 resolved as specified: listToSeed/listToShifts are BitString.block (ofList ...) views, seedToList/shiftsToList are List.ofFn of blocksEquiv.symm, round trips via ofList_ofFn + Equiv.apply_symm_apply, trialSeed m w i j = zipWith xor of two BitString.listRow rows without L T, private index helpers gone (probe checks each form by rfl). B2 resolved: completeness/soundness end in Lautemann.lean's exists_forall_exists_add_mem_of_card_mul_card_compl_pow_lt and exists_forall_add_notMem_of_mul_card_lt on the xor group Seed m; addLeft/biUnion arguments and FiniteCover import removed. Nits done: Seed via BitString m, runs_pos removed, Sipser1983 + Lautemann1983 cited separately with Gacs named, malformed-string contract on trialSeed/verifier/views, MajorityVote Main results. All public statements byte-identical to 800b146, verifier type included, except trialSeed/trialSeed_append (the required arity drop). No new duplication. lake build SipserLautemann, BPP, MajorityVote, Lautemann, ComplexityTests.SipserLautemann --wfail --iofail clean; mk_all --check, lint-style, diff --check clean; probes clean. Nits: make getElem_listRow public in BitString/List; optional List.countP_ofFn. Central: Axioms guards, ROADMAP. Not run: lake test/lint/checkInitImports. Evidence .lake/codex-validation/sipser-lautemann-api-r2/review.json SHA256 f55abb53e03b7c3e02912294a0210267f200b01c21196e512c52ec8466c347f2"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792378499,
+      "landed": {"value": "9b1b683a10fbd647bc2a397b71e2dc5f977cdbba"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792376461,
+       "snapshot":
+       {"head": {"value": "f30b20385743d53d0f046e35e8ad47d6ea500bae"},
+        "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+       "reviewer":
+       {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
+        "agent": {"value": "reviewer-sable-cor2"}},
+       "note":
+       "Fresh correctness review by reviewer-sable-cor2 (independent; no contribution) of f30b203 on base d42eefc (both 800b146 and the base are ancestors), building on my round-1 approval of 800b146 (sha256 4e4e418022c27526233b4876ebc160c22dbae87a3377bfc5cfd9b811946eee1f). Statements: the ten headlines, DecidesWithBoundedError.compl and the parameter/verifier/shiftAccepts definitions are source-identical to 800b146; Seed now uses upstream BitString m, an abbrev for Fin m -> Bool, so the type is definitionally unchanged. trialSeed (listRow + zipWith xor): my probe proves it equals the old getD formula for every m, w, i, j, so shiftAccepts and verifier are unchanged on well-formed and malformed certificates; listToSeed/listToShifts read the same indices. Completeness/soundness via exists_forall_exists_add_mem_of_card_mul_card_compl_pow_lt (needs N|S^c|^T < N^T, from 9^R|S^c| <= 8^R N and (2^m 8^R)^T < (9^R)^T) and exists_forall_add_notMem_of_mul_card_lt (T|S| < N from T 8^R < 9^R), same T = shifts m = 2R, R = 6m+48. Built SipserLautemann, BPP, MajorityVote, Lautemann and the test with --wfail --iofail: clean. probe_concrete re-run unchanged and probe_boundary (only trialSeed call sites adapted, two helper proofs redone) pass, incl. decide +kernel malformed-certificate checks. Axioms of all headlines and both Lautemann lemmas: standard only. No blocking findings. Nits: trialSeed signature changed (no other client); main moved to eba426b (no epic paths). Not run: full check.sh. Evidence .lake/codex-validation/sipser-lautemann-correctness/review.json sha256 f9f49a6b5a35dc6999558e16450c23b91a0ff99c3f1774b11f73deeb6e30e6e0"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792376537,
+       "snapshot":
+       {"head": {"value": "f30b20385743d53d0f046e35e8ad47d6ea500bae"},
+        "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+       "reviewer":
+       {"session": {"value": "33380288772710be7744d177c8f66871"},
+        "agent": {"value": "reviewer-sable-api2"}},
+       "note":
+       "Fresh independent API review of exact f30b203 (base d42eefc, ancestry ok); no contribution to the epic or the refactor ee05678. B1 resolved as specified: listToSeed/listToShifts are BitString.block (ofList ...) views, seedToList/shiftsToList are List.ofFn of blocksEquiv.symm, round trips via ofList_ofFn + Equiv.apply_symm_apply, trialSeed m w i j = zipWith xor of two BitString.listRow rows without L T, private index helpers gone (probe checks each form by rfl). B2 resolved: completeness/soundness end in Lautemann.lean's exists_forall_exists_add_mem_of_card_mul_card_compl_pow_lt and exists_forall_add_notMem_of_mul_card_lt on the xor group Seed m; addLeft/biUnion arguments and FiniteCover import removed. Nits done: Seed via BitString m, runs_pos removed, Sipser1983 + Lautemann1983 cited separately with Gacs named, malformed-string contract on trialSeed/verifier/views, MajorityVote Main results. All public statements byte-identical to 800b146, verifier type included, except trialSeed/trialSeed_append (the required arity drop). No new duplication. lake build SipserLautemann, BPP, MajorityVote, Lautemann, ComplexityTests.SipserLautemann --wfail --iofail clean; mk_all --check, lint-style, diff --check clean; probes clean. Nits: make getElem_listRow public in BitString/List; optional List.countP_ofFn. Central: Axioms guards, ROADMAP. Not run: lake test/lint/checkInitImports. Evidence .lake/codex-validation/sipser-lautemann-api-r2/review.json SHA256 f55abb53e03b7c3e02912294a0210267f200b01c21196e512c52ec8466c347f2"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/BPP.lean",
     "Complexity/Computability/Complexity/Classes/BPP",
