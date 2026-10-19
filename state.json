@@ -619,13 +619,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": "work/sipser-lautemann/worker-nova",
-      "report":
-      "API review of exact 800b146 returned changes: blocking duplication (seed/shift list views re-implement BitString.ofList/block/blocksEquiv/listRow; completeness and soundness re-prove Foundations/Combinatorics/Lautemann.lean lemmas). Coordinator-directed refactor by integrator-sable-3 with no public theorem statement changes; both reviews are then refreshed on the final snapshot.",
+     {"resume": "work/sipser-lautemann/reviewer-correctness",
+      "report": "",
       "lease": null,
-      "branch": "work/sipser-lautemann/reviewer-correctness",
+      "branch": "work/sipser-lautemann/integrator-sable-3",
       "blocked": false,
-      "assignee": {"value": "reviewer-correctness"}}}},
+      "assignee": {"value": "integrator-sable-3"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/BPP.lean",
     "Complexity/Computability/Complexity/Classes/BPP",
