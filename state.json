@@ -730,7 +730,7 @@
    "authors": [{"value": "reviewer-api"}]},
   {"resume": null,
    "report":
-   "Mechanical integration after two approvals of exact 7e4cdca: merge main 94dcd9d, relocate the decoder library to Encodings/Decoder.lean and exists_le_mul_two_pow to PolynomialBound/Exponential.lean, docstring crossref fix, trueDoubled renames, UPSTREAM rows; no statement changes; fresh delta reviews follow.",
+   "Fresh API review of exact 4de95cd APPROVED (reviewer-sable-api2); correctness review of the same snapshot in progress. Main moved to a0952ac (fagin-converse landed); this epic is NOT reopened again: it lands via the merge-queue tooling as soon as that lands (base 94dcd9d is an ancestor of main and its files are disjoint from the Fagin landing).",
    "phase":
    {"submitted":
     {"submission":
