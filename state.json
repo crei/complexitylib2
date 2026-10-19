@@ -1041,7 +1041,7 @@
     {"work":
      {"resume": null,
       "report":
-      "IMPLEMENTATION COMPLETE, awaiting publication by the user (local guardrail blocks push; coordinator publication is also denied, so the user publishes). Head 06bc350367cc964496504c02d95014a7da34490a on branch work/circuit-metric/worker-mythos = merge of current origin/main 94dcd9d into work commit 79745ee (no conflicts; root imports consistent per mk_all --check; no duplication with the new generic synthesis helper, which only replaces Synthesis.circuit). Six gates passed on 06bc350. Files: Circuit/Metric.lean, Circuit/Boolean/Metric.lean, ComplexityTests/CircuitMetric.lean, generated root imports. ready follows as soon as git ls-remote shows 06bc350.",
+      "PUBLICATION REQUEST: please publish c2016b0765523a616b12c7665eab317ceba0677e to refs/heads/work/circuit-metric/worker-mythos (fast-forward from the published 06bc350). It merges current origin/main a0952ac (fagin-converse; files disjoint from this epic; clean merge, mk_all --check consistent). Six gates passed on c2016b0 with a clean tree. ready follows as soon as git ls-remote shows c2016b0.",
       "lease":
       {"token": {"value": "94a1e55af26bc3a97278c471aaa616dc"},
        "holder":
