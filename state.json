@@ -2410,55 +2410,18 @@
    "dependencies": [],
    "authors": [{"value": "worker-sable-codes"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "API review (reviewer-sable-api1) requested changes: D <= C1*bs, D <= C*bs and D <= bs^3 are credited to Nisan; the survey credits Beals-Buhrman-Cleve-Mosca-de Wolf 2001. Correctness approved.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Bibliography entries needed (cslib format): @article{NisanSzegedy1994,\n  author    = {Nisan, Noam and Szegedy, Mario},\n  title     = {On the degree of {B}oolean functions as real polynomials},\n  journal   = {Computational Complexity},\n  volume    = {4},\n  number    = {4},\n  pages     = {301--313},\n  year      = {1994}\n}\n\n@article{Huang2019,\n  author    = {Huang, Hao},\n  title     = {Induced subgraphs of hypercubes and a proof of the {S}ensitivity {C}onjecture},\n  journal   = {Annals of Mathematics},\n  volume    = {190},\n  number    = {3},\n  pages     = {949--955},\n  year      = {2019}\n}\n\n@article{GotsmanLinial1992,\n  author    = {Gotsman, Chaim and Linial, Nathan},\n  title     = {The equivalence of two problems on the cube},\n  journal   = {Journal of Combinatorial Theory, Series A},\n  volume    = {61},\n  number    = {1},\n  pages     = {142--146},\n  year      = {1992}\n}",
-       "lease":
-       {"token": {"value": "21b13c8be7bec7e057b60f2ce68e20b0"},
-        "holder":
-        {"session": {"value": "9c907dcb85cc8554c9a1842ad08941a1"},
-         "agent": {"value": "worker-sable-query"}},
-        "expires": 1792402928},
-       "branch": "work/query-complexity/worker-sable-query",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-query"}},
-      "summary":
-      "M1: degree, Nisan relations, Huang. Degree: BitString.totalDegree f := sInf {D | f ∈ lowDegree R ι D}, totalDegree_le_iff_mem_lowDegree; mem_lowDegree_iff_fourierCoeff : f ∈ lowDegree ℝ ι D ↔ ∀ S, D < #S → fourierCoeff f S = 0; QueryComplexity.degree f (0/1 in ℝ), degree_eq_totalDegree_signVal; DecisionTree.comp_eval_mem_lowDegree, degree_le_complexity : deg f ≤ D f; degree of parity, AND, OR = n. Relations: certificateComplexity_le_sensitivity_mul_blockSensitivity : C ≤ s*bs, C ≤ bs^2; blockSensitivityFor; DecisionTree.complexity_le_blockSensitivityFor_mul_certificateComplexityFor : D ≤ bs₀*C₁; complexity_le_certificateComplexity_mul_blockSensitivity : D ≤ C*bs; complexity_le_blockSensitivity_pow_three : D ≤ bs^3. Sensitivity/Hypercube: signedAdjacency_signedAdjacency (A_S² = #S); exists_mem_sqrt_card_le_card_update_mem : 2^card ι < 2*#V → ∃ x ∈ V, √#S ≤ #{i ∈ S | update x i (!x i) ∈ V} (dimension count, no interlacing). Huang: sqrt_card_le_sensitivity_of_fourierCoeff_ne_zero; degree_le_sensitivity_sq : deg f ≤ s f ^ 2; sqrt_degree_le_sensitivity. Checks: six gates ok; tests on OR, AND, parity, maj3, address; axiom guards. Source: original (Huang's proof). Contributors: worker-sable-query only. Continuation M2: approxDegree, symmetrization, Nisan–Szegedy bs ≤ 2deg², bs ≤ 6adeg², bs ≤ 2s⁴, adeg(OR) = Θ(√n) (needs interior Markov/Ehlich–Zeller; Mathlib has endpoint Chebyshev bounds only), randomized complexity + Yao. Bib: NisanSzegedy1994, Huang2019, GotsmanLinial1992 (in note).",
-      "snapshot":
-      {"head": {"value": "a411ecce5abaed9c0bae895685994d59dcf669cd"},
-       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792389312,
-          "snapshot":
-          {"head": {"value": "a411ecce5abaed9c0bae895685994d59dcf669cd"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
-           "agent": {"value": "reviewer-sable-cor1"}},
-          "note":
-          "Correctness review by reviewer-sable-cor1 (independent; contributor worker-sable-query only) of exact head a411ecce. Scope: Degree, Relations, Sensitivity/Hypercube, Huang, tests. Definitions standard: deg = multilinear degree of f as 0/1 real function, +-1 reading agrees (degree_eq_totalDegree_signVal); degree_le_complexity is deg<=D. Nisan C<=s*bs, C<=bs^2, D<=bs0*C1, D<=C*bs, D<=bs^3 stated over cslib measures as in Nisan91/BdW. Huang subgraph: 2^n<2#V (>=2^(n-1)+1), sqrt#S S-neighbours; S=univ recovers Huang Thm 1 (probe), so a generalization; probe shows exactly-half fails (sharp). degree_le_sensitivity_sq has no hypotheses. Probes: deg(MAJ3)=3>s=2, D(MAJ3)=3 via deg<=D, constants/dictator/n=0, bs_b. Build of 4 modules+test --wfail --iofail ok; no sorry/native_decide/axiom/set_option; #print axioms of 17 theorems within propext/Classical.choice/Quot.sound. Blocking: none. Nits: Relations.lean:24,268 one-sided D<=C1*bs is credited to Beals et al. 1998 in BdW Thm 4; test :86 could assert deg(MAJ3)=3; bib keys NisanSzegedy1994/Huang2019/GotsmanLinial1992 missing from references.bib (coordinator). Not checked: API, six gates, lint, docs. Evidence .lake/codex-validation/query-complexity-correctness/review.json sha256 991f9b170e43f318d2f5d5bcd97d7a4bb5d967a63e5cb39d07510ad89c5d6852"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "changes",
-          "time": 1792389417,
-          "snapshot":
-          {"head": {"value": "a411ecce5abaed9c0bae895685994d59dcf669cd"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
-           "agent": {"value": "reviewer-sable-api1"}},
-          "note":
-          "API review (reviewer-sable-api1, independent; author worker-sable-query) of a411ecce on 0d8ef4bf: Degree, Relations, Sensitivity/Hypercube, Huang, tests. Touched modules and the test module build under nice with --wfail --iofail, 0 warnings. Template, imports, simp and axiom guards OK. Grepped all 49 new public names: no clash with cslib, Mathlib or Complexity. BLOCKING: Relations.lean:15-16,24,268,305 credit D<=C1*bs (so D<=C*bs and D<=bs^3) to Nisan [Nisan1991]. The cited source [BuhrmanDeWolf2002] (Thm 11, Cor 1) credits Beals-Buhrman-Cleve-Mosca-de Wolf (JACM 2001); only C<=s*bs (Thm 2) is Nisan's. The fix is docstring-only plus a new bib entry. NON-BLOCKING: (1) Relations.lean:180 certificateComplexityFor_comp_piecewise_le restates private certificateComplexityFor_restrict_le (DecisionTree/Certificate.lean:139). Central fix: make that lemma public, drop the copy, and pick restrict or comp_piecewise naming. (2) Placement: BitString foundations (Degree.lean:74-178 totalDegree/Fourier; Hypercube.lean:62,70 chi lemmas; Relations.lean:69,83,93) belong in Foundations/BooleanAnalysis or cslib Defs/Measures. (3) DecisionTree.fourierCoeff_eq_zero_of_depth_lt now follows from the new API. (4) Names: ..._fourierCoeff -> ..._fourierCoeff_eq_zero (cf Polynomial.degree_le_iff_coeff_zero); degree_threshold_one -> _one_right. The totalDegree/degree split is sound. (5) Hypercube.lean:11: Mathlib.Analysis.Real.Sqrt suffices (probe compiles). (6) Bib entries: NisanSzegedy1994, Huang2019, GotsmanLinial1992, Beals2001. Not checked: correctness, full gates. Evidence: .lake/codex-validation/query-complexity-api/review.json sha256 90cea0f01f6ea3dc4744539d1890a07e16f6b8d1016c8a688b7cc8b83c406bac"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "API review (reviewer-sable-api1) requested changes: D <= C1*bs, D <= C*bs and D <= bs^3 are credited to Nisan; the survey credits Beals-Buhrman-Cleve-Mosca-de Wolf 2001. Correctness approved.",
+      "lease": null,
+      "branch": "work/query-complexity/worker-sable-query",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-query"}}}},
    "paths":
    ["Complexity/Computability/QueryComplexity/Degree.lean",
     "Complexity/Computability/QueryComplexity/ApproximateDegree.lean",
