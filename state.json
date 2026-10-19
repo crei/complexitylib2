@@ -1140,20 +1140,27 @@
    "report":
    "worker-mythos left the board at the user request before the dependency landed; drafts of milestones 1 and 2 preserved by the coordinator for the next assignee (credit worker-mythos).",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/hamming-geometry/worker-mythos",
-      "report":
-      "PUBLICATION REQUEST: 6af7e40639228bc0a83e1114d4209eccc5c1cd65 on work/hamming-geometry/worker-sable-hamming (feature commit ffd4119 plus clean merge of main 26253c9). The lean4 guardrail hook blocked the ordinary git push and I did not bypass it. Please publish with: git -C /Users/samuelschlesinger/projects/lean/complexitylib2/.worktrees/worker-sable-hamming push -u origin work/hamming-geometry/worker-sable-hamming. Validation: scripts/check.sh, all six gates pass on 6af7e40 (and on ffd4119 over c2016b0). ready follows once the branch is on the remote.",
-      "lease":
-      {"token": {"value": "4e52ae1eaed9847184f18a9df427dd8d"},
-       "holder":
-       {"session": {"value": "a74021989faee7a4ebeea06fe52cb54c"},
-        "agent": {"value": "worker-sable-hamming"}},
-       "expires": 1792386953},
-      "branch": "work/hamming-geometry/worker-sable-hamming",
-      "blocked": true,
-      "assignee": {"value": "worker-sable-hamming"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/hamming-geometry/worker-mythos",
+       "report":
+       "PUBLICATION REQUEST: 6af7e40639228bc0a83e1114d4209eccc5c1cd65 on work/hamming-geometry/worker-sable-hamming (feature commit ffd4119 plus clean merge of main 26253c9). The lean4 guardrail hook blocked the ordinary git push and I did not bypass it. Please publish with: git -C /Users/samuelschlesinger/projects/lean/complexitylib2/.worktrees/worker-sable-hamming push -u origin work/hamming-geometry/worker-sable-hamming. Validation: scripts/check.sh, all six gates pass on 6af7e40 (and on ffd4119 over c2016b0). ready follows once the branch is on the remote.",
+       "lease":
+       {"token": {"value": "4e52ae1eaed9847184f18a9df427dd8d"},
+        "holder":
+        {"session": {"value": "a74021989faee7a4ebeea06fe52cb54c"},
+         "agent": {"value": "worker-sable-hamming"}},
+        "expires": 1792386953},
+       "branch": "work/hamming-geometry/worker-sable-hamming",
+       "blocked": true,
+       "assignee": {"value": "worker-sable-hamming"}},
+      "summary":
+      "Milestones 1 and 2 of hamming-geometry at 6af7e40 (feature commit ffd4119 over c2016b0, merged with main 26253c9). (1) Complexity/Computability/Circuit/Pointwise.lean: Interpretation.pointwise X I and Interpretation.evalAt x (a cslib Homomorphism, by rfl); Program.trace_pointwise_apply and Circuit.eval_pointwise_apply from map_trace/map_eval; Program.trace_pointwise_proj (p.trace (I.pointwise (Fin n → U)) (fun j x => x j) = p.wireFunction I), available_eq_range_trace_pointwise, Circuit.eval_pointwise_proj, Circuit.computes_iff_eval_pointwise_proj; marked addition to Circuit/Complexity: complexity_single_proj (= complexity_wiring) and one_le_complexity_single. (2) Complexity/Foundations/Data/BitString/Hamming.lean (Cslib.BitString, any Fintype ι): hammingDist_and_add_hammingDist_or, hammingDist_add_hammingDist_and/_or (geodesics), hammingDist_and_le/_or_le (1-Lipschitz), hammingDist_add_right/_add_left/_not (isometries), median with median_apply_eq_majority, median_self_left, median_swap_left/_right, median_assoc, median_median, hammingDist_add_hammingDist_median (betweenness), hammingDist_median_le (minimality), two_mul_hammingDist_proj (2 d(x_i,x_j) = 2^card ι for i ≠ j, via parityOn {i,j} and card_filter_parityOn_eq), hammingDist_proj_div (= 1/2 in any char-zero semifield), two_mul_hammingDist_add_proj. Complexity/Computability/Circuit/Boolean/Hamming.lean (De Morgan): complexity_add_proj_le (≤ C(f)+4), complexity_add_projs_le (m shifts ≤ C(f)+4m), circuitDist_add_proj, circuitDist_proj_le (≤ 8), five_le_circuitDist_proj (≥ 5, i ≠ j). Tests ComplexityTests/CircuitHamming/{Pointwise,Gates}.lean: n = 2, 3 truth tables and distances (theorem and decide), median of projections = majority 3, sharing example for majority 3 (distance 4/8, joint ≤ C+12, circuitDist in [5,8]), n = 0, empty index types, m = 0, #print axioms guards (propext, Classical.choice, Quot.sound; median laws Quot.sound only). Validation: scripts/check.sh six gates pass on 6af7e40. Source: owner note 2026-10-18 (Samuel Schlesinger); cites Jukna2012, MacWilliamsSloane1977. Contributors: worker-mythos (drafts of both milestones), worker-sable-hamming (placement/split, parity-based projection proof, complexity_wiring reuse, trace_pointwise_proj, hammingDist_add_left, median_assoc, two_mul_hammingDist_add_proj, tests, integration). Remaining (tracked): milestones 3 (Parseval/noise distances), 4 (metric approximation), 5 (modulus of continuity in Circuit/Continuity.lean, ℕ-valued for complete interpretations). Follow-ups outside scope: move the two projection lemmas into Circuit/Complexity.lean; drop the private copies in ComplexityTests/CircuitMetric.lean; Smolensky/Approximation.lean's local pointwise interpretation could use Interpretation.pointwise; add headline names to ComplexityTests/Axioms.lean.",
+      "snapshot":
+      {"head": {"value": "6af7e40639228bc0a83e1114d4209eccc5c1cd65"},
+       "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Pointwise.lean",
     "Complexity/Computability/Circuit/Boolean/Hamming.lean",
