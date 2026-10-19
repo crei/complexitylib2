@@ -2097,6 +2097,18 @@
    "Milestone 2 of relativization: an oracle A with P^A = NP^A, using TQBF (PSPACE-complete, from tqbf-pspace-complete): NP^TQBF within NPSPACE = PSPACE within P^TQBF, on the native oracle classes of relativization. Also oracle monotonicity A <=p B implies P^A within P^B once open-oracle-substitution provides open substitution. Cite BakerGillSolovay1975. Tests, axiom guards, six gates, frozen submission.",
    "dependencies":
    [{"value": "relativization"}, {"value": "tqbf-pspace-complete"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/Alternation.lean",
+    "Complexity/Computability/Complexity/Classes/Alternation",
+    "ComplexityTests/Alternation.lean"],
+   "id": {"value": "alternation-ap"},
+   "goal":
+   "Continuation of tqbf-pspace-complete: alternating Turing machines on the native model (existential/universal choice, consistent with the parametric machine and Choose), the class AP, and AP = PSPACE (Chandra-Kozen-Stockmeyer) via TQBF; ATIME/ASPACE basics and the polynomial hierarchy as bounded alternation if it falls out. No second machine model. Cite ChandraKozenStockmeyer1981 (propose entry). Tests, axiom guards, six gates.",
+   "dependencies": [{"value": "tqbf-pspace-complete"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
