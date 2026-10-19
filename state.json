@@ -1948,15 +1948,18 @@
           "expires": 1792398954},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "9055f29917eb9806e3cdd36e17dc429b"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792384740,
+          "snapshot":
+          {"head": {"value": "881b9c0d619b066ea8d577e7097e821d0cfdc3f1"},
+           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+          "reviewer":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792399121},
-         "blocked": false}}}}}},
+          "note":
+          "API review of 881b9c0 (independent, read-only). Scope OK: only references.bib changed (+112); the docbuild copy is a symlink. Braces balance. check_docs --config-only passes. All 11 keys are cited (main/relativ/ip/graphs/disperser/b2), and no cited key is missing an entry. BLOCKING: duplicate keys. Cutland1980 (references.bib:599) and KatzLindell2020 (:448) already exist as vendored cslib entries (also in pinned cslib references.bib:452/:291, present since scaffold 8a8a7c6). The base scan missed them because they use the padded key form \"@book{            Cutland1980,\". The new copies at :1802/:1810 make bibtex fail (rc=2, \"Repeated entry\" at 1802 and 1810; the base bib gives rc=0). doc-gen4/BibtexQuery dedupes display tags, not citekeys, so references.html would list each book twice. The head has 178 entries but 176 distinct keys. Fix: delete the two new entries and leave the cslib ones alone (add any DOI upstream). The other nine follow house style. Nits: MishraSanthanam2026 should be @techreport with institution ECCC, number TR26-260, like Dinur2005/Korten2026/HaitnerVadhan2017; FGHK title \"$3n$\" is unbraced while Mishra braces its math; Ore1933 has no doi. Limitations: publisher fields not verified (correctness review), doc-gen4 not built. Evidence: .lake/codex-validation/docs-bibliography-api/review.json sha256 310a3747642bbfeeb79eee74caaeb525ccaec6e2d4328424d0a80184ad33f640"}}}}}}},
    "paths": ["references.bib", "docbuild/docs/references.bib"],
    "id": {"value": "docs-bibliography"},
    "goal":
