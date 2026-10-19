@@ -2209,7 +2209,12 @@
      {"resume": "work/b2-lower-bound/coordinator-sable",
       "report":
       "API review (reviewer-sable-api5) requested changes: Operations.lean is 1553 lines with 88-207-line validity proofs; split into semi-circuit-level WellFormed lemmas plus Valid.of_map obligations and per-family files; break up step_of_bottleneck, step_fixInput and step_of_sharedSecondChild in MinimalAnd.lean. Correctness approved.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "1fee5ee575b37c462ef0cf115352d0e8"},
+       "holder":
+       {"session": {"value": "abc254b86ea9eef6d4f1c5836328aaff"},
+        "agent": {"value": "worker-sable-b2"}},
+       "expires": 1792405504},
       "branch": "work/b2-lower-bound/worker-sable-b2",
       "blocked": false,
       "assignee": {"value": "worker-sable-b2"}}}},
