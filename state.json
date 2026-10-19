@@ -3,19 +3,13 @@
  {"snapshot":
   {"head": {"value": "eb1f274fc049d5a8ded60849d9baa3e2a6753bb4"},
    "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-  "main": null,
   "lease":
   {"token": {"value": "63ebd8318d0862b9a6a225c955c394c3"},
    "holder":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}},
    "expires": 1792390693},
-  "epic": {"value": "polytime-plain-bridge"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "eb1f274fc049d5a8ded60849d9baa3e2a6753bb4"},
-     "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-    "epic": {"value": "polytime-plain-bridge"}}]},
+  "epic": {"value": "polytime-plain-bridge"}},
  "epics":
  [{"resume": null,
    "report":
@@ -34,7 +28,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792356843,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792356674,
@@ -92,7 +85,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792357641,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792357482,
@@ -146,7 +138,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792355755,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792355217,
@@ -196,7 +187,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792353277,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792353139,
@@ -242,7 +232,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358231,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358092,
@@ -363,7 +352,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364044,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792363911,
@@ -424,7 +412,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792368712,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792368575,
@@ -476,7 +463,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792361676,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792361403,
@@ -534,7 +520,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792371880,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792371576,
@@ -589,7 +574,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358627,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358495,
@@ -658,7 +642,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792359269,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792359175,
@@ -835,7 +818,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792360547,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792360283,
@@ -884,7 +866,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792373030,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792372858,
@@ -1018,7 +999,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792367280,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792367120,
@@ -1072,7 +1052,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792374035,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792373854,
@@ -1127,7 +1106,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364773,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792364624,
@@ -1234,7 +1212,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792370838,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792369636,
@@ -1348,7 +1325,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376022,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792375751,
@@ -1448,7 +1424,7 @@
     {"work":
      {"resume": null,
       "report":
-      "DEPENDENCY MAP + PLAN (worker-sable-tqbf, base main d42eefc). Formula model: reuse Cslib.Logic.PL.QBF (Logics/Propositional/QBF.lean: eval, freeVars, Closed, eval_congr); no second formula type. Problem: TQBF : Set (QBF Nat) := {phi | phi.Closed /\\ phi.eval (fun _ => false) = true} (value independent of the assignment by eval_eq_of_closed); canonical encoding encQBF = encList (encPair encKind encNat) (toTokens phi): prefix (Polish) token list, explicit unary kind tag, binary variables, computable; injectivity by induction on toTokens phi ++ r (no parser). Boundaries stated: top/bot are the zero-variable formulas (top in TQBF, bot not), var v is never closed, empty token list encodes no formula; empty conj = top, empty clause = bot, exs [] phi = phi. M1 MEMBERSHIP: deterministic explicit-stack streaming evaluator on the token list (frames = operator token, first value, suffix for quantifier rewind; environment read off the quantifier frames; a flag records unbound variables, so it also decides closedness), call-returns lemma by induction (pattern of Cslib.Reachability.Savitch.exists_iterate_step_call), suffix-nesting invariant bounding the stack by the token count, so every state is O(L^2); clock 2^L via ComputableTidilyInDegree.two_pow_length, run by ComputableTidilyInO.iterate (binary counter, charges state copies, counter, rounds); step certified polytime then ComputableTidilyInPolyTime.exists_degree/.inO. Endpoint: TQBF_mem_PSPACE : TQBF in PSPACE encQBF (+ explicit ComputableTidilyInO bound: time 2^L * poly, space poly). M2 HARDNESS (Sipser2013 Thm 8.9, AroraBarak09 Thm 4.13): from A in PSPACE via PSPACE_subset_NPSPACE, Turing.MultiTapeNTM.savitchDecide_eq_true_iff + Cslib.Reachability.savitch_eq reduce acceptance to reach codeEdge w w src dst (w = 2*codeWidth+2, src = viewCode, dst = acceptCode). Midpoint formula Phi_{i+1} = exists M forall A_i B_i ((A_i=A_{i+1} /\\ B_i=M) \\/ (A_i=M /\\ B_i=B_{i+1})) -> Phi_i over even block variables, proved Phi_i.eval s = reach e w i (A_i.map s) (B_i.map s) for all s. Base Phi_0 = existential closure of the Cook-Levin tableau (CookLevin.tableau, agrees_of_eval_tableau, eval_tableau_runAssignment, certWord_runAssignment, computableTidilyInPolyTime_tableau, Var.index on odd variables) of a tidy polytime machine for the level-0 test V(a,xy) = reach codeEdge w 0 (take w xy) (drop w xy) (computableTidilyInPolyTime_codeEdge/_codeWidth/_viewCode_initView/_acceptCode), cert variables linked to the endpoint blocks by iff. Closedness via freeVars bounds. Reduction certified polytime by an explicit token-list form. M3: PSPACEHard/PSPACEComplete (pattern of NPHard/NPComplete), TQBF_pspaceHard, TQBF_pspaceComplete (+ NPSPACE forms via NPSPACE_eq_PSPACE). Files: Problems/TQBF.lean (tokens, encQBF, TQBF), Classes/Space/TQBF/{Evaluation,Formula,Reduction}.lean, Classes/Space/TQBF.lean, ComplexityTests/TQBF.lean. SCOPE QUESTIONS: (1) the derived QBF connectives with semantics/freeVars lemmas (exs, alls, conj, imp, iff, CNF-to-QBF) belong upstream-wise in Logics/Propositional/QBF.lean; please add Complexity/Logics/Propositional/QBF.lean and Complexity/Logics/Propositional/QBF (dir) to scope, otherwise they stay in Problems/TQBF.lean. (2) PSPACEHard/PSPACEComplete will sit in Classes/Space/TQBF.lean unless you prefer Reduction.lean (would need that path). AP = PSPACE not in scope. Will submit M1 separately if M2 runs long.",
+      "CHECKPOINT 1378dee (local WIP, not pushed): milestone-1 core compiles with standard axioms only: Problems/TQBF.lean (QBF.Kind, QBF.tokens prefix tokens, tokens_append_inj, encQBF, TQBF := Closed /\\ eval (fun _ => false) = true, boundary lemmas); Classes/Space/TQBF/Evaluation.lean (explicit-stack streaming evaluator: frames token/first/rest, quantifier rewind, unbound-variable flag; exists_iterate_step_call; callSteps < 4^tokens; evaluate_eq : evaluate phi = (decide Closed && eval); Good invariant with nested suffixes, stack depth <= tokens); Classes/Space/TQBF/Membership.lean (step polytime via finite_cases, length_encState_le 16(L+1)^2, exists_computableTidilyInO_evaluate time 2^L*(L+1)^e space (L+1)^e via ComputableTidilyInO.iterate, TQBF_mem_PSPACE). Next: tests, then hardness (midpoint formula + Cook-Levin base).",
       "lease":
       {"token": {"value": "6b3189f96b6434471433fa62550f0e97"},
        "holder":
