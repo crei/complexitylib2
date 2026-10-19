@@ -2086,15 +2086,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "37a4e96f16db4c854ea95f34e9b29043"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792389165,
+          "snapshot":
+          {"head": {"value": "0d58b5540b86a8530df9d57493d0c4df3e61d962"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
            "agent": {"value": "reviewer-sable-cor7"}},
-          "expires": 1792403471},
-         "blocked": false}},
+          "note":
+          "Independent correctness review of 0d58b55 (no authorship, read-only). Build: Witness, SAT, ThreeSAT, IndependentSet, Clique, ComplexityTests.NPWitness under nice, --wfail --iofail: rc=0, no warnings. Statement script (SAT, ThreeSAT, IndependentSet, Clique, SAT/PolyTime, CookLevin/Completeness): all theorem statements byte-identical; Graph.verifySubset header only curried (same type), and probe proves it rfl-equal to the base body. Own probe: composite numbers via mem_NP_of_witness with Decoder.pair unary unary, fun_prop check, 3X+1 bound (6 in, 7 out); non-canonical inner frame decoding to a valid factor pair is rejected, as are unterminated/empty certificates; witnessVerifier_eq_true_iff instantiated exactly; of_padding soundness constrains only exact-length certificates and completeness needs one short prefix under all false paddings, as documented; subset builder with sum predicate, duplicates not double-counted. 28 #print axioms incl. CookLevin.SAT_npComplete, ThreeSAT/IndependentSet/Clique_npComplete: only propext, Classical.choice, Quot.sound. Diff: no sorry/native_decide/axiom/set_option. No blocking findings. Nits: Witness.lean:61-63 summary omits exact length (theorem doc 90-93 precise); Decoder hypothesis is necessary (literal goal without it is false) and documented at 36-38. Not checked: six gates, downstream importers of IndependentSet, API. Evidence: .lake/codex-validation/np-witness-builder-correctness/review.json sha256 ae49ef9d47c2df11f025c5cce74b43812eda091ee3671e295e81d9c1c7a7eb9b"}}},
        "api":
        {"active":
         {"report": "",
