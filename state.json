@@ -3032,7 +3032,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "5d3fffd199a376bae1ec9abc69a862f8"},
+       "holder":
+       {"session": {"value": "9c907dcb85cc8554c9a1842ad08941a1"},
+        "agent": {"value": "worker-sable-query"}},
+       "expires": 1792406237},
       "branch": "work/query-complexity-2/worker-sable-query",
       "blocked": false,
       "assignee": {"value": "worker-sable-query"}}}},
@@ -3050,7 +3055,7 @@
    "goal":
    "Milestone 2 of query-complexity (after M1 lands): approximate degree adeg_eps; Minsky-Papert symmetrization; the Markov brothers' inequality for real polynomials on an interval (prove it in Foundations if Mathlib lacks it; the Ehlich-Zeller / Coppersmith-Rivlin discrete form if that is what the proofs need), hence Nisan-Szegedy bs <= 2 deg^2 and bs <= 6 adeg^2, s >= sqrt(bs)-style corollaries such as bs <= 2 s^4, and adeg(OR) = Theta(sqrt n) with the Chebyshev upper bound from Mathlib Polynomial.Chebyshev; randomized query complexity with bounded error and Yao's minimax principle (finite LP duality or Mathlib Sion). Exact constants where the proofs give them. Reuse M1's degree API and cslib QueryComplexity measures. Cite NisanSzegedy1994, MinskyPapert1969, Yao1977 (propose entries). Tests, named axiom guards, run-gates, frozen submission per milestone.",
    "dependencies": [{"value": "query-complexity"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-query"}]},
   {"resume": null,
    "report": "",
    "phase":
