@@ -3116,7 +3116,7 @@
        "holder":
        {"session": {"value": "9c907dcb85cc8554c9a1842ad08941a1"},
         "agent": {"value": "worker-sable-query"}},
-       "expires": 1792407728},
+       "expires": 1792407893},
       "branch": "work/query-complexity-2/worker-sable-query",
       "blocked": false,
       "assignee": {"value": "worker-sable-query"}}}},
@@ -3768,7 +3768,7 @@
     "agent": {"value": "worker-sable-codes"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792407728,
+   "expires": 1792407893,
    "actor":
    {"session": {"value": "9c907dcb85cc8554c9a1842ad08941a1"},
     "agent": {"value": "worker-sable-query"}}}]}
