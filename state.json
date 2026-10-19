@@ -1,21 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "eb1f274fc049d5a8ded60849d9baa3e2a6753bb4"},
-   "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-  "main": null,
-  "lease":
-  {"token": {"value": "63ebd8318d0862b9a6a225c955c394c3"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792391363},
-  "epic": {"value": "polytime-plain-bridge"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "eb1f274fc049d5a8ded60849d9baa3e2a6753bb4"},
-     "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-    "epic": {"value": "polytime-plain-bridge"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -286,53 +270,42 @@
    "report":
    "Reassigned by coordinator-sable to local worker worker-sable-oracle (worker-nova never acknowledged; worker-atlas stopped at the user request). Resume from the published checkpoint 21af39d55df2cd9169930d661a0dab233d275883 on work/open-oracle-composition/worker-atlas, retain worker-atlas as contributor, merge current main at a clean checkpoint, and follow the accepted milestone endpoint and all guidance already recorded above. First post a compact checked dependency map and the remaining functional-certificate endpoints; then deliver the client-facing IsOraclePPTOn normalization and compositional rules with the functional query client replacing the handwritten readHead table. Report checkpoints through the board.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/open-oracle-composition/worker-nova",
-       "report":
-       "PUBLICATION REQUEST: 3eb6238592bd11415db970f1e3756c3b8eeb4e2d on work/open-oracle-composition/worker-sable-oracle (merge of current main 764e3b8 into 21ba29a; clean auto-merge of generated roots). scripts/check.sh at this SHA: all six gates ok. Push blocked by the local lean4 guardrail; not bypassed. Will run ready once it is on origin.",
-       "lease":
-       {"token": {"value": "a320c179b5bafcaa2cb3683d7072e0ae"},
-        "holder":
-        {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
-         "agent": {"value": "worker-sable-oracle"}},
-        "expires": 1792388003},
-       "branch": "work/open-oracle-composition/worker-sable-oracle",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-oracle"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Head 3eb6238 (base main 764e3b8). ENDPOINTS: normalization isOraclePPTOn_iff_isTidyOraclePPTOn / IsOraclePPTOn.isTidyOraclePPTOn: every strict witness has a clean halting realization (blank tapes, empty query buffers, robust to stale answers, input head restored) with the exact joint result/external-state law and the same adaptive query sequence; proof via finiteRunFrom_take_runOracle (replies truncated to the charged clock, no reply-length assumption) and IsTidyOraclePPTOn.finiteStep/.runOracle. Clean calculus IsTidyOraclePPTOn (Oracle/Tidy, Oracle/Iteration): query_take, uniform_bool, pair, bind, bind_with, map, map_with, preprocess, cond, ite, finite_cases (only selected branch runs), iterate_spec, iterateWith_spec, iterateWith_of_bounded_growth with final invariants over ProbOracleComp.support. Client rules (Oracle/Composition, fun_prop): IsOraclePPTOn.{query_take, bind, bind_with, pair, keep_input, map, map_with, preprocess, cond, ite, finite_cases, iterate_spec, iterateWith_spec, iterateWith_of_bounded_growth, iterate_of_bounded_growth}, IsPPTOn.isOraclePPTOn (closed lifting via MultiTapePTM.ofClosed/runOracle_ofClosed). Machine loop: Probabilistic/Loop repeatUntilBlank + RunsWords.repeatUntilBlank, Probabilistic/IterateWhile ComputesTidily.iterateWhile (time (r+1)(t+10L+23)+8L+17). TESTS: OraclePPT readHead table removed; requestHead := List.take 1 <$> query ((),[]) certified by fun_prop; OracleComposition: fun_prop-certified adaptive two-query branch client, stateful counter tests (unselected branch makes no call), closed sample feeding a query, one-bit-growth adaptive loop, failure boundaries (exponential reply prefix and state doubling not oracle PPT, polynomial prefix is), axiom guards (propext, Classical.choice, Quot.sound). Closed PPT and worker-opus APIs unchanged. VALIDATION: scripts/check.sh at 3eb6238 all six gates ok. BURDEN (scripts/proof_lengths.py vs main, helper-inclusive proof bodies): +2211 total = worker-atlas base 1372 (QueryBounds 71, QueryTake 522, Tidy 779) + worker-sable-loop 375 (Loop 223, IterateWhile 152) + worker-sable-oracle 464 (Oracle/Tidy 115, Iteration 133, Normalization 119, Composition 28, Support 28, ofClosed 41); client requestHead certificate went from handwritten table + 13-line law + two congr proofs to unfold/fun_prop (2 lines) and a one-line parameterized certificate. SOURCES/CREDIT: closed interpreter, composition and adaptive rules of the cslib crypto branch 5ff69ca; crei tidy calculus, IterateWhile and RepeatUntilBlank (Christian Reitwiessner) ported to probabilistic oracle machines. CONTRIBUTORS: worker-atlas, worker-sable-loop (subagent), worker-sable-oracle. CENTRAL: add Axioms.lean named checks for isOraclePPTOn_iff_isTidyOraclePPTOn, IsOraclePPTOn.bind, IsOraclePPTOn.iterate_spec, IsOraclePPTOn.query_take, IsPPTOn.isOraclePPTOn, Turing.MultiTapePTM.ComputesTidily.iterateWhile; ROADMAP entry; no new bib keys. FOLLOW-UPS: open-oracle-substitution (stateful handler substitution, two-level cache); public tape helpers in vendored Combinators/IterateWhile would remove about 70 restated lines; loop could move to generic Machine/ (worker-opus scope); clocks are coarse polynomials.",
       "snapshot":
       {"head": {"value": "3eb6238592bd11415db970f1e3756c3b8eeb4e2d"},
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792374155,
-          "snapshot":
-          {"head": {"value": "3eb6238592bd11415db970f1e3756c3b8eeb4e2d"},
-           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-          "reviewer":
-          {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
-           "agent": {"value": "reviewer-sable-cor3"}},
-          "note":
-          "Correctness review of exact base 764e3b8 / head 3eb6238 by reviewer-sable-cor3 (independent: no contribution; read-only in own worktree). Criteria: goal plus plan/revise/instruct journal entries. Evidence: 12 library modules and both tests built --wfail --iofail, no warnings; no sorry/axiom/native_decide/set_option; library files only gain lines. Verified: IsTidyOraclePPTOn = ComputesTidily, exact joint result/external-state law for every stateful handler and arbitrary answer tapes, empty query buffers at both boundaries; finiteRunFrom_take_runOracle is a program equality with no reply-length hypothesis (answer head reset on receive, one cell per step); runOracle realized by a clock-round interpreter with query_take at limit = clock, so requests, order and counts coincide; cond/ite/finite_cases run only the selected branch (forced by exactness for counting handlers); bind/pair/map/preprocess charge intermediate words; iterate rules quantify over ProbOracleComp.support (all handlers), constant growth rules out doubling; ofClosed/runOracle_ofClosed faithful; iterateWhile bound proved; closed APIs untouched. Own probes pass: two-query client with both branches querying (fun_prop), counting handler with arbitrarily long replies gives exactly 2 calls, also for the certified native machine; logging handler shows the exact request sequence; two-bit growth loop; doubled storage feeding a one-bit query refuted by query_bounds. 34 axiom prints standard. Nit: test boundaries refute only via output length; add a short-output request-length boundary. Limitation: machine transition proofs checked by compilation and statements; check.sh not re-run. Evidence: .lake/codex-validation/open-oracle-composition-correctness/review.json SHA256 7af01830b3d7491a7fc1578e2b2089370a5a23be1802af25864ffe5db4774ffb"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792374189,
-          "snapshot":
-          {"head": {"value": "3eb6238592bd11415db970f1e3756c3b8eeb4e2d"},
-           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-          "reviewer":
-          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
-           "agent": {"value": "reviewer-sable-api3"}},
-          "note":
-          "API review by reviewer-sable-api3 (independent; no contribution) of exact base 764e3b8 / head 3eb6238, read-only in own worktree; statements, definitions, headers, attributes and diffs reviewed, proof bodies not line by line. Evidence: lake build of 12 modules + both tests --wfail --iofail exit 0, 0 warnings; mk_all clean; fun_prop probe at maxHeartbeats 40000: closed IsPPTOn clients 22.8/10.0/2.8/5.7 ms without vs 18.5/8.9/2.5/4.0 ms with the oracle stack imported, adaptive oracle client certified, full reply rejected; axioms of 16 unguarded results within the standard three. Small core (IsTidyOraclePPTOn rules + isOraclePPTOn_iff_isTidyOraclePPTOn) with one-line client wrappers, not a parallel framework; machines composed from outputToTape/inputFromTape/extendTapes/seq/ofDeterministic; fun_prop rules only on existing IsOraclePPTOn plus IsPPTOn transition, core unregistered; closed PPT and worker-opus APIs unchanged (modified files only add); crei attribution correct; no set_option. No blocking findings. Nits: Probabilistic/IterateWhile.lean:57-160 restates ~81 lines of crei tape helpers that are private in the vendored file but public here: keep the copy, make it private, record in UPSTREAM.md for deletion when crei exposes them; QueryTake/Support lack References (QueryTake should cite crei tidy notions); redundant PTM suffix on appendPTM/queryTakePTM; generic Machine/ loop later. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/open-oracle-composition-api/review.json SHA256 0b1600ec2c1a3b158a468ff909ac0e68e9a87a32e21eb2eef8843b7c32ab82c9"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792376966,
+      "landed": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792374155,
+       "snapshot":
+       {"head": {"value": "3eb6238592bd11415db970f1e3756c3b8eeb4e2d"},
+        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+       "reviewer":
+       {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
+        "agent": {"value": "reviewer-sable-cor3"}},
+       "note":
+       "Correctness review of exact base 764e3b8 / head 3eb6238 by reviewer-sable-cor3 (independent: no contribution; read-only in own worktree). Criteria: goal plus plan/revise/instruct journal entries. Evidence: 12 library modules and both tests built --wfail --iofail, no warnings; no sorry/axiom/native_decide/set_option; library files only gain lines. Verified: IsTidyOraclePPTOn = ComputesTidily, exact joint result/external-state law for every stateful handler and arbitrary answer tapes, empty query buffers at both boundaries; finiteRunFrom_take_runOracle is a program equality with no reply-length hypothesis (answer head reset on receive, one cell per step); runOracle realized by a clock-round interpreter with query_take at limit = clock, so requests, order and counts coincide; cond/ite/finite_cases run only the selected branch (forced by exactness for counting handlers); bind/pair/map/preprocess charge intermediate words; iterate rules quantify over ProbOracleComp.support (all handlers), constant growth rules out doubling; ofClosed/runOracle_ofClosed faithful; iterateWhile bound proved; closed APIs untouched. Own probes pass: two-query client with both branches querying (fun_prop), counting handler with arbitrarily long replies gives exactly 2 calls, also for the certified native machine; logging handler shows the exact request sequence; two-bit growth loop; doubled storage feeding a one-bit query refuted by query_bounds. 34 axiom prints standard. Nit: test boundaries refute only via output length; add a short-output request-length boundary. Limitation: machine transition proofs checked by compilation and statements; check.sh not re-run. Evidence: .lake/codex-validation/open-oracle-composition-correctness/review.json SHA256 7af01830b3d7491a7fc1578e2b2089370a5a23be1802af25864ffe5db4774ffb"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792374189,
+       "snapshot":
+       {"head": {"value": "3eb6238592bd11415db970f1e3756c3b8eeb4e2d"},
+        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+       "reviewer":
+       {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+        "agent": {"value": "reviewer-sable-api3"}},
+       "note":
+       "API review by reviewer-sable-api3 (independent; no contribution) of exact base 764e3b8 / head 3eb6238, read-only in own worktree; statements, definitions, headers, attributes and diffs reviewed, proof bodies not line by line. Evidence: lake build of 12 modules + both tests --wfail --iofail exit 0, 0 warnings; mk_all clean; fun_prop probe at maxHeartbeats 40000: closed IsPPTOn clients 22.8/10.0/2.8/5.7 ms without vs 18.5/8.9/2.5/4.0 ms with the oracle stack imported, adaptive oracle client certified, full reply rejected; axioms of 16 unguarded results within the standard three. Small core (IsTidyOraclePPTOn rules + isOraclePPTOn_iff_isTidyOraclePPTOn) with one-line client wrappers, not a parallel framework; machines composed from outputToTape/inputFromTape/extendTapes/seq/ofDeterministic; fun_prop rules only on existing IsOraclePPTOn plus IsPPTOn transition, core unregistered; closed PPT and worker-opus APIs unchanged (modified files only add); crei attribution correct; no set_option. No blocking findings. Nits: Probabilistic/IterateWhile.lean:57-160 restates ~81 lines of crei tape helpers that are private in the vendored file but public here: keep the copy, make it private, record in UPSTREAM.md for deletion when crei exposes them; QueryTake/Support lack References (QueryTake should cite crei tidy notions); redundant PTM suffix on appendPTM/queryTakePTM; generic Machine/ loop later. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/open-oracle-composition-api/review.json SHA256 0b1600ec2c1a3b158a468ff909ac0e68e9a87a32e21eb2eef8843b7c32ab82c9"}}}},
    "paths":
    ["Complexity/Computability/Probabilistic",
     "Complexity/Languages/Probabilistic",
@@ -939,53 +912,42 @@
    "report":
    "Published: work/iteration-fixed-power/worker-fable is at a1207d5 on origin (checkpoint verified in scope and hygiene clean; headline fixed_power_on and fixed_power proved). Continue with the consequences, ComplexityTests/Iteration.lean and the six gates. Main has moved to a0952ac (fagin-converse landed, disjoint files); merge it at your next clean checkpoint. Request publication of the exact final commit through the board as you did; ready requires base == current main until the merge-queue tooling lands.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "PUBLICATION REQUEST (final): please publish exact commit d722dfa81615ac554d4d328538577f2fc0da6e60 on work/iteration-fixed-power/worker-fable (merge of current main a0952ac; local hook blocks ordinary push, not bypassed; I am also asking the user to push). I will run ready once it is on origin. ENDPOINTS (namespace Cslib.Circuits.Boolean.Iteration, native De Morgan circuits, constants counted, free wiring/fanout): fixed_power_on (finite S with c(S) subset S, 0<L<=2^n: ComputesOn S, size <= 40000*powerBudget n s |S| L, powerBudget = L*s+(n+1)^3*(L+M/L+1)); fixed_power (all states, M=2^n); FixedPowerOnBound/FixedPowerBound with fixedPowerOnBound/fixedPowerBound; fixed_power_encoded (finite invariant set of any universe via Set.InjOn encoding, storage |S|); fixed_power_image (source image_sensitive: burn-in circuit + image of f^[d]); fixed_power_optimized / fixed_power_on_optimized (120000*optimizedBudget, real sqrt), fixed_power_half_exponent (120000*(s+(n+1)^3)*2^((n+1)/2)), fixed_power_polynomial; permutation_inverse, permutation_inverse_encoded (factorial exponent), periodicPts_circuit (source cyclicity_circuit, +6n+1 gates). FILES: Boolean/Word.lean (generic, per scope addendum: Synthesis.mux, word_carry/word_carries/word_addCarry/word_add (shared-carry ripple adder 12w+1, source was 40(w+1)^2), word_sub 13w+1, word_ult 5w+2, word_eq_const, word_not, word_const, word_mux, Boolean.word/wordWires/selectBits + Synthesis.selectBits); Boolean/Iteration.lean (statements, construction, 40000); Boolean/Iteration/{Residue,Selection (pure sorted-array collision lemmas + chooseRecord),Record,RecordCircuit,Decoder,Encoded,Permutation,Optimization}.lean; FunctionalGraph.iterate_eq_iterate_of_mod_eq. REUSE: native bitonicSortCircuit (perm, monotone keys, four_mul_size -> <= 18 d^2 2^d (width+1), no scheduler import), Synthesis.xor, Formula.equalBits via Synthesis.circuit for bit-string equality (duplicate beq/word_eq removed per your addendum), Synthesis.orbit/steps/stages/circuit, FunctionalGraph.exists_checkpoints. DELETED source: Sorting.lean + v1 SortingCorrectness/SortingSemantics, Arithmetic.xor, lexLess, unused collision lemmas, extension-only synthesis_flaggedRecords. FIX from Codex review: selectBits compares index.toNat with positions (source compared truncated BitVec.ofNat, aliasing tables with R > 2^k); regression test added. TESTS ComplexityTests/Iteration.lean: 2-bit ripple adder circuit <= 25 gates, selection in/out of range and oversized-table non-aliasing, concrete repeatWordIndex, record collisions (padding/identical rejected), bit-flip fixed powers at L=1, zero-width n=0, empty and singleton invariant sets, ULift.{1} encoding, flip permutation inverse, periodicity, half-exponent form; exact axiom guards for 12 headline theorems, all [propext, Classical.choice, Quot.sound] (reconstruct_spec only propext, Quot.sound). EVIDENCE: scripts/check.sh all six gates passed at d722dfa; git diff --check clean; Codex adversarial review at 70c3b12: only finding = selector aliasing, fixed in 21fc5d2, no defect in bounds/gate accounting/encodings. BURDEN (scripts/proof_lengths scanner): source modules replaced (Statement, Arithmetic, Words, Residues, Collisions, Selection, Records, RecordCircuits, Detector, Decoder, DecoderCircuits, Construction, FixedPower, Extensions, Optimization, Applications, Sorting, Boolean part of Synthesis, shifted_payload) = 116 proofs/1005 body lines (~2334 physical) plus uncounted v1 sorting; port = 93 proofs/776 body lines, 2060 physical in 10 library modules + 1 FunctionalGraph lemma, 222 test lines; proofs >= 40 lines: exists_le_three_mul_add_sqrt 48, fixed_power_on 45 (both near-verbatim from source). CREDIT: Samuel Schlesinger, iterating-functions @c4cfa198 (cite key Schlesinger2026IteratedFunctions, already central); sorting/compare-swap/equality reused from existing native modules. Contributors: worker-fable only, no subagents. LIMITS: nonuniform existence only (checkpoints chosen nonconstructively), no constructor-runtime claim; gate bounds are Synthesis upper bounds; remaining source extensions stay in iterated-functions-extensions. Suggested central guards: fixed_power_on, fixed_power, fixed_power_encoded, fixed_power_optimized, permutation_inverse.",
-       "lease":
-       {"token": {"value": "26f34d6a28c97cf4f1da52192c44f0f7"},
-        "holder":
-        {"session": {"value": "60a448c1698e33ed0b212fc3f266bb27"},
-         "agent": {"value": "worker-fable"}},
-        "expires": 1792383118},
-       "branch": "work/iteration-fixed-power/worker-fable",
-       "blocked": false,
-       "assignee": {"value": "worker-fable"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Fixed-power milestone at exact head d722dfa81615ac554d4d328538577f2fc0da6e60 (includes current main a0952ac; pushed by the user, remote parity verified). Native De Morgan circuits, constants counted, free wiring/fanout. Headline: fixed_power_on (finite S with c(S) subset S, 0<L<=2^n, ComputesOn S, size <= 40000*powerBudget n s |S| L with powerBudget = L*s+(n+1)^3*(L+M/L+1)), fixed_power (all states), FixedPowerOnBound/FixedPowerBound. Consequences: fixed_power_encoded (any universe, injective encoding), fixed_power_image (burn-in, image of f^[d]), fixed_power_optimized/fixed_power_on_optimized (120000*sqrt budget), fixed_power_half_exponent, fixed_power_polynomial, permutation_inverse(_encoded), periodicPts_circuit. Files: Boolean/Word.lean (generic word arithmetic per scope addendum; shared-carry ripple adder 12w+1, sub 13w+1, ult 5w+2, eq_const, not, const, mux, selectBits by index value), Boolean/Iteration.lean, Boolean/Iteration/{Residue,Selection,Record,RecordCircuit,Decoder,Encoded,Permutation,Optimization}.lean, FunctionalGraph.iterate_eq_iterate_of_mod_eq. Reuse: native bitonicSortCircuit (source Sorting + v1 sorting deleted; size from four_mul_size_bitonicSortCircuit, no scheduler import), Synthesis.xor, Formula.equalBits via Synthesis.circuit, Synthesis.orbit/steps/circuit, FunctionalGraph.exists_checkpoints. Codex adversarial review: one finding (selectBits aliasing for tables beyond 2^k, inherited from source) fixed with regression test; no defect in bounds, gate accounting or encodings. Tests ComplexityTests/Iteration.lean: adder circuit, selection incl. oversized table, residue index, record collisions, bit-flip powers, n=0, empty/singleton invariant sets, ULift.{1} encoding, permutation inverse, periodicity, half-exponent; exact axiom guards for 12 headline theorems, all standard three. Evidence: scripts/check.sh all six gates passed at d722dfa, git diff --check clean. Burden: replaced source 116 proofs/1005 body lines (plus uncounted v1 sorting) vs port 93/776 (2060 library + 222 test physical lines). Credit Samuel Schlesinger iterating-functions @c4cfa198 (Schlesinger2026IteratedFunctions); worker-fable sole contributor, no subagents. Limits: nonuniform existence only, no constructor runtime; remaining source extensions stay in iterated-functions-extensions. Full details in prior board report.",
       "snapshot":
       {"head": {"value": "d722dfa81615ac554d4d328538577f2fc0da6e60"},
        "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792371825,
-          "snapshot":
-          {"head": {"value": "d722dfa81615ac554d4d328538577f2fc0da6e60"},
-           "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
-          "reviewer":
-          {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
-           "agent": {"value": "reviewer-sable-cor3"}},
-          "note":
-          "Correctness review of exact base a0952ac / head d722dfa by reviewer-sable-cor3 (independent: no contribution; read-only in own worktree). Scope: Boolean/Word.lean, Boolean/Iteration.lean, Iteration/{Residue,Selection,Record,RecordCircuit,Decoder,Encoded,Permutation,Optimization}.lean, FunctionalGraph addition, ComplexityTests/Iteration.lean. Evidence: all 12 modules built --wfail --iofail, no warnings; no sorry/axiom/native_decide/set_option. fixed_power_on matches the epic goal (finite invariant S, 0<L<=2^n, ComputesOn, 40000*powerBudget, powerBudget = L*s+(n+1)^3*(L+M/L+1)); De Morgan basis with constants charged, free wiring; prefix orbit, residue tables, lookups, Batcher sort, collision scan and reconstruction all charged via Synthesis; construction_cost and |H|<=|S|/L close the bound. Word counts exact as charged: add 12w+1, sub 13w+1, ult 5w+2, eq_const 2k+1; selectBits fix correct. Consequences honest. Own probes pass: n=0; 5-gate 2-bit increment (4-cycle) with inverse=decrement at L=2^n=4, T=1003 vs T mod 4, T=0; non-injective shift on invariant {00,01}, burn-in, periodicity 00 yes/11 no; encoded inverse on ULift.{2} Bool; encoded non-injective map on Fin 5; optimized/half-exponent at n=0; 2-bit sub/ult circuits; oversized-table selector. 23 axiom prints: standard three (reconstruct_spec propext+Quot.sound). Nits: RecordCircuit.lean:20-21 says sorter bound is per record bit and comparison layer (it is total 18 d^2 2^d (width+1)); tests lack concrete clients for permutation_inverse_encoded/fixed_power_image/fixed_power_on_optimized; selectBits repeats comparisons per output bit. Limitations: no local iterating-functions clone (compared to epic goal); check.sh not re-run. Evidence: .lake/codex-validation/iteration-fixed-power-correctness/review.json SHA256 5b52707dcc17f0cce62ecda7aca72244e2712464f5decd6937d0fde69811561e"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792371803,
-          "snapshot":
-          {"head": {"value": "d722dfa81615ac554d4d328538577f2fc0da6e60"},
-           "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
-          "reviewer":
-          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
-           "agent": {"value": "reviewer-sable-api3"}},
-          "note":
-          "API review by reviewer-sable-api3 (independent; no contribution) of exact base a0952ac / head d722dfa, read-only in own worktree; scripts/ unchanged vs main so the board binary is main's. Scope: Word.lean, Boolean/Iteration.lean + 8 submodules, FunctionalGraph lemma, ComplexityTests/Iteration.lean, root imports. Evidence: lake build of all 11 modules + test --wfail --iofail exit 0, 0 warnings; mk_all clean; probe_api.lean exit 0: word_add at w=0 on arbitrary s, empty table and BitVec 0 index for selectBits, headline theorems as clients (image after fixed_power burn-in, encoded Fin 3, encoded swap inverse, Bound wrappers), axioms of 25 more results within the standard three. Word.lean generic with exact counts, cslib Synthesis.* naming; no duplicate of Equality (equalBits reused), CompareSwap (lexLt differs), Synthesis.xor (reused) or BitVec API (no core ofFn). Sorting via native bitonicSortCircuit, no scheduler import; orbit/steps/circuit/exists_checkpoints reused. Template, citations, simp hygiene, no set_option. No blocking findings. Nits: RecordCircuit wires/synthesis_bits_eq/bits_mux/ite are generic, belong in Word.lean per addendum (bits_mux parallels word_mux); Word.lean:272 hlit = Synthesis.literal; Selection collision lemmas and exists_le_three_mul_add_sqrt are pure facts in Boolean.Iteration; Record.initial_wires_subset sits in the headline file; n explicit only in fixed_power_on/fixed_power; bare docstrings Optimization:120,132, Encoded:56 wording. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/iteration-fixed-power-api/review.json SHA256 6bdaa02411db88ef2779787f679e799f4ee5d7e1c80882fa4edcdb424a89f82c"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792376966,
+      "landed": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792371825,
+       "snapshot":
+       {"head": {"value": "d722dfa81615ac554d4d328538577f2fc0da6e60"},
+        "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
+       "reviewer":
+       {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
+        "agent": {"value": "reviewer-sable-cor3"}},
+       "note":
+       "Correctness review of exact base a0952ac / head d722dfa by reviewer-sable-cor3 (independent: no contribution; read-only in own worktree). Scope: Boolean/Word.lean, Boolean/Iteration.lean, Iteration/{Residue,Selection,Record,RecordCircuit,Decoder,Encoded,Permutation,Optimization}.lean, FunctionalGraph addition, ComplexityTests/Iteration.lean. Evidence: all 12 modules built --wfail --iofail, no warnings; no sorry/axiom/native_decide/set_option. fixed_power_on matches the epic goal (finite invariant S, 0<L<=2^n, ComputesOn, 40000*powerBudget, powerBudget = L*s+(n+1)^3*(L+M/L+1)); De Morgan basis with constants charged, free wiring; prefix orbit, residue tables, lookups, Batcher sort, collision scan and reconstruction all charged via Synthesis; construction_cost and |H|<=|S|/L close the bound. Word counts exact as charged: add 12w+1, sub 13w+1, ult 5w+2, eq_const 2k+1; selectBits fix correct. Consequences honest. Own probes pass: n=0; 5-gate 2-bit increment (4-cycle) with inverse=decrement at L=2^n=4, T=1003 vs T mod 4, T=0; non-injective shift on invariant {00,01}, burn-in, periodicity 00 yes/11 no; encoded inverse on ULift.{2} Bool; encoded non-injective map on Fin 5; optimized/half-exponent at n=0; 2-bit sub/ult circuits; oversized-table selector. 23 axiom prints: standard three (reconstruct_spec propext+Quot.sound). Nits: RecordCircuit.lean:20-21 says sorter bound is per record bit and comparison layer (it is total 18 d^2 2^d (width+1)); tests lack concrete clients for permutation_inverse_encoded/fixed_power_image/fixed_power_on_optimized; selectBits repeats comparisons per output bit. Limitations: no local iterating-functions clone (compared to epic goal); check.sh not re-run. Evidence: .lake/codex-validation/iteration-fixed-power-correctness/review.json SHA256 5b52707dcc17f0cce62ecda7aca72244e2712464f5decd6937d0fde69811561e"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792371803,
+       "snapshot":
+       {"head": {"value": "d722dfa81615ac554d4d328538577f2fc0da6e60"},
+        "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
+       "reviewer":
+       {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+        "agent": {"value": "reviewer-sable-api3"}},
+       "note":
+       "API review by reviewer-sable-api3 (independent; no contribution) of exact base a0952ac / head d722dfa, read-only in own worktree; scripts/ unchanged vs main so the board binary is main's. Scope: Word.lean, Boolean/Iteration.lean + 8 submodules, FunctionalGraph lemma, ComplexityTests/Iteration.lean, root imports. Evidence: lake build of all 11 modules + test --wfail --iofail exit 0, 0 warnings; mk_all clean; probe_api.lean exit 0: word_add at w=0 on arbitrary s, empty table and BitVec 0 index for selectBits, headline theorems as clients (image after fixed_power burn-in, encoded Fin 3, encoded swap inverse, Bound wrappers), axioms of 25 more results within the standard three. Word.lean generic with exact counts, cslib Synthesis.* naming; no duplicate of Equality (equalBits reused), CompareSwap (lexLt differs), Synthesis.xor (reused) or BitVec API (no core ofFn). Sorting via native bitonicSortCircuit, no scheduler import; orbit/steps/circuit/exists_checkpoints reused. Template, citations, simp hygiene, no set_option. No blocking findings. Nits: RecordCircuit wires/synthesis_bits_eq/bits_mux/ite are generic, belong in Word.lean per addendum (bits_mux parallels word_mux); Word.lean:272 hlit = Synthesis.literal; Selection collision lemmas and exists_le_three_mul_add_sqrt are pure facts in Boolean.Iteration; Record.initial_wires_subset sits in the headline file; n explicit only in fixed_power_on/fixed_power; bare docstrings Optimization:120,132, Encoded:56 wording. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/iteration-fixed-power-api/review.json SHA256 6bdaa02411db88ef2779787f679e799f4ee5d7e1c80882fa4edcdb424a89f82c"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
     "Complexity/Computability/Circuit/Boolean/Iteration.lean",
@@ -1172,53 +1134,42 @@
    "report":
    "Land now through the base == main path: mechanical merge of main 764e3b8 (disjoint files) by integrator-sable-1 since worker-mythos left, six gates, short delta reviews, land. Unblocks hierarchy-theorems and space-cleanup.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/polytime-plain-bridge/worker-mythos",
-       "report":
-       "PUBLICATION REQUEST: eb1f274fc049d5a8ded60849d9baa3e2a6753bb4 on work/polytime-plain-bridge/integrator-sable-1. Content: worker-mythos twice-approved 78caf64 plus a clean merge of main 764e3b859b495b441073f0018387ac67ae2403c7 and nothing else (parents 78caf64 and 764e3b8; only overlapping files were the generated roots Complexity.lean and ComplexityTests.lean, auto-merged without conflict, mk_all not needed; git diff-tree --cc HEAD empty; diff vs origin/main is exactly the 6-file epic delta, 341 insertions/3 deletions; Classes/NP.lean, Classes/P.lean, PolyTime/Plain.lean and ComplexityTests/PolyTimePlain.lean are byte-identical blobs to 78caf64). No code edits. Validation on eb1f274: scripts/check.sh all six gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Contributors: worker-mythos (implementation), integrator-sable-1 (merge under coordinator-sable). AI assistance: Claude.",
-       "lease":
-       {"token": {"value": "18d5926321cd9d8b297eaa19c75b718a"},
-        "holder":
-        {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
-         "agent": {"value": "integrator-sable-1"}},
-        "expires": 1792387952},
-       "branch": "work/polytime-plain-bridge/integrator-sable-1",
-       "blocked": false,
-       "assignee": {"value": "integrator-sable-1"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Worker-mythos twice-approved 78caf64 plus a clean merge of main 764e3b859b495b441073f0018387ac67ae2403c7 and nothing else: parents 78caf64 and 764e3b8; only the generated roots overlapped and auto-merged without conflict; git diff-tree --cc HEAD empty; diff vs main is exactly the 6-file epic delta (341 insertions, 3 deletions) with Classes/NP.lean, Classes/P.lean, PolyTime/Plain.lean and ComplexityTests/PolyTimePlain.lean byte-identical to 78caf64; no code edits. Six gates passed on eb1f274 (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Contributors: worker-mythos (implementation) and integrator-sable-1 (merge) under coordinator-sable direction. AI assistance: Claude. Submitted head eb1f274fc049d5a8ded60849d9baa3e2a6753bb4.",
       "snapshot":
       {"head": {"value": "eb1f274fc049d5a8ded60849d9baa3e2a6753bb4"},
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792373796,
-          "snapshot":
-          {"head": {"value": "eb1f274fc049d5a8ded60849d9baa3e2a6753bb4"},
-           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-          "reviewer":
-          {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
-           "agent": {"value": "reviewer-sable-cor4"}},
-          "note":
-          "Delta correctness review of eb1f274 on 764e3b8 by reviewer-sable-cor4 (independent; approved 78caf64 earlier). eb1f274 is a merge with parents 78caf64 and 764e3b8; git diff-tree --cc empty; Plain.lean, Classes/P.lean, Classes/NP.lean and ComplexityTests/PolyTimePlain.lean byte-identical to 78caf64; diff vs main is the same 6 files +341/-3. Landed since 5c14e51 (37 files: circuit iteration/metric, Fagin, Hierarchy/Decoder/NatPower/Exponential, quantitative-stretch streaming): cslib pin and toolchain unchanged, and no changed file is in the 41-module import closure of Plain/P/NP, so P, NP, ComputableTidilyInPolyTime, PolyBounded, encBool, DecidableInTimeAndSpace and the tidy bridges are unchanged. Build of the 4 modules --wfail --iofail OK, 0 warnings; #print axioms of the four headlines = [propext, Classical.choice, Quot.sound]. Blocking: none. Earlier nits unchanged (files identical). Not run: check.sh. Evidence .lake/codex-validation/polytime-plain-bridge-correctness/delta/review.json SHA256 865d9295b303aebba785d4757f4df989aac1b723cd0a92907ff859b8acd0ec84"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792373830,
-          "snapshot":
-          {"head": {"value": "eb1f274fc049d5a8ded60849d9baa3e2a6753bb4"},
-           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-          "reviewer":
-          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
-           "agent": {"value": "reviewer-sable-api4"}},
-          "note":
-          "Delta API review of merge eb1f274 (base main 764e3b8) by reviewer-sable-api4, independent, read-only. Builds on my approval of 78caf64 (evidence .lake/codex-validation/polytime-plain-bridge-api/review.json sha256 f253047d...660e). Delta: parents are 78caf64 and 764e3b8; git diff-tree --cc is empty; Plain.lean, Classes/P.lean, Classes/NP.lean and ComplexityTests/PolyTimePlain.lean are blob-identical to 78caf64; the roots add exactly the two epic imports; the diff vs main is the same 6 files +341/-3. Main's changes since 5c14e51 do not touch P/NP, PolyTime.lean, Deterministic, TapeLemmas, TidyNormalForm or the pin, and add no overlapping bridge or name collision; UPSTREAM.md's #767 bullet is unchanged, so the proposed wording still applies. lake build Plain/P/NP/test --wfail --iofail ok (up to date); fresh lake env lean on all four files: exit 0, no output. No blocking findings; earlier nits unchanged. Limitation: check.sh not rerun. Evidence .lake/codex-validation/polytime-plain-bridge-api-delta/review.json sha256 452164eebbabaf8673dfd30d70f89a1a6d1a27de4a7b52be44622043531aa91b"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792376966,
+      "landed": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792373796,
+       "snapshot":
+       {"head": {"value": "eb1f274fc049d5a8ded60849d9baa3e2a6753bb4"},
+        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+       "reviewer":
+       {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
+        "agent": {"value": "reviewer-sable-cor4"}},
+       "note":
+       "Delta correctness review of eb1f274 on 764e3b8 by reviewer-sable-cor4 (independent; approved 78caf64 earlier). eb1f274 is a merge with parents 78caf64 and 764e3b8; git diff-tree --cc empty; Plain.lean, Classes/P.lean, Classes/NP.lean and ComplexityTests/PolyTimePlain.lean byte-identical to 78caf64; diff vs main is the same 6 files +341/-3. Landed since 5c14e51 (37 files: circuit iteration/metric, Fagin, Hierarchy/Decoder/NatPower/Exponential, quantitative-stretch streaming): cslib pin and toolchain unchanged, and no changed file is in the 41-module import closure of Plain/P/NP, so P, NP, ComputableTidilyInPolyTime, PolyBounded, encBool, DecidableInTimeAndSpace and the tidy bridges are unchanged. Build of the 4 modules --wfail --iofail OK, 0 warnings; #print axioms of the four headlines = [propext, Classical.choice, Quot.sound]. Blocking: none. Earlier nits unchanged (files identical). Not run: check.sh. Evidence .lake/codex-validation/polytime-plain-bridge-correctness/delta/review.json SHA256 865d9295b303aebba785d4757f4df989aac1b723cd0a92907ff859b8acd0ec84"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792373830,
+       "snapshot":
+       {"head": {"value": "eb1f274fc049d5a8ded60849d9baa3e2a6753bb4"},
+        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+       "reviewer":
+       {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+        "agent": {"value": "reviewer-sable-api4"}},
+       "note":
+       "Delta API review of merge eb1f274 (base main 764e3b8) by reviewer-sable-api4, independent, read-only. Builds on my approval of 78caf64 (evidence .lake/codex-validation/polytime-plain-bridge-api/review.json sha256 f253047d...660e). Delta: parents are 78caf64 and 764e3b8; git diff-tree --cc is empty; Plain.lean, Classes/P.lean, Classes/NP.lean and ComplexityTests/PolyTimePlain.lean are blob-identical to 78caf64; the roots add exactly the two epic imports; the diff vs main is the same 6 files +341/-3. Main's changes since 5c14e51 do not touch P/NP, PolyTime.lean, Deterministic, TapeLemmas, TidyNormalForm or the pin, and add no overlapping bridge or name collision; UPSTREAM.md's #767 bullet is unchanged, so the proposed wording still applies. lake build Plain/P/NP/test --wfail --iofail ok (up to date); fresh lake env lean on all four files: exit 0, no output. No blocking findings; earlier nits unchanged. Limitation: check.sh not rerun. Evidence .lake/codex-validation/polytime-plain-bridge-api-delta/review.json sha256 452164eebbabaf8673dfd30d70f89a1a6d1a27de4a7b52be44622043531aa91b"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Complexity/PolyTime/Plain.lean",
     "Complexity/Computability/Complexity/Classes/P.lean",
@@ -1282,53 +1233,42 @@
    "report":
    "worker-mythos left the board at the user request before the dependency landed; drafts of milestones 1 and 2 preserved by the coordinator for the next assignee (credit worker-mythos).",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/hamming-geometry/worker-mythos",
-       "report":
-       "PUBLICATION REQUEST: 6af7e40639228bc0a83e1114d4209eccc5c1cd65 on work/hamming-geometry/worker-sable-hamming (feature commit ffd4119 plus clean merge of main 26253c9). The lean4 guardrail hook blocked the ordinary git push and I did not bypass it. Please publish with: git -C /Users/samuelschlesinger/projects/lean/complexitylib2/.worktrees/worker-sable-hamming push -u origin work/hamming-geometry/worker-sable-hamming. Validation: scripts/check.sh, all six gates pass on 6af7e40 (and on ffd4119 over c2016b0). ready follows once the branch is on the remote.",
-       "lease":
-       {"token": {"value": "4e52ae1eaed9847184f18a9df427dd8d"},
-        "holder":
-        {"session": {"value": "a74021989faee7a4ebeea06fe52cb54c"},
-         "agent": {"value": "worker-sable-hamming"}},
-        "expires": 1792386953},
-       "branch": "work/hamming-geometry/worker-sable-hamming",
-       "blocked": true,
-       "assignee": {"value": "worker-sable-hamming"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Milestones 1 and 2 of hamming-geometry at 6af7e40 (feature commit ffd4119 over c2016b0, merged with main 26253c9). (1) Complexity/Computability/Circuit/Pointwise.lean: Interpretation.pointwise X I and Interpretation.evalAt x (a cslib Homomorphism, by rfl); Program.trace_pointwise_apply and Circuit.eval_pointwise_apply from map_trace/map_eval; Program.trace_pointwise_proj (p.trace (I.pointwise (Fin n → U)) (fun j x => x j) = p.wireFunction I), available_eq_range_trace_pointwise, Circuit.eval_pointwise_proj, Circuit.computes_iff_eval_pointwise_proj; marked addition to Circuit/Complexity: complexity_single_proj (= complexity_wiring) and one_le_complexity_single. (2) Complexity/Foundations/Data/BitString/Hamming.lean (Cslib.BitString, any Fintype ι): hammingDist_and_add_hammingDist_or, hammingDist_add_hammingDist_and/_or (geodesics), hammingDist_and_le/_or_le (1-Lipschitz), hammingDist_add_right/_add_left/_not (isometries), median with median_apply_eq_majority, median_self_left, median_swap_left/_right, median_assoc, median_median, hammingDist_add_hammingDist_median (betweenness), hammingDist_median_le (minimality), two_mul_hammingDist_proj (2 d(x_i,x_j) = 2^card ι for i ≠ j, via parityOn {i,j} and card_filter_parityOn_eq), hammingDist_proj_div (= 1/2 in any char-zero semifield), two_mul_hammingDist_add_proj. Complexity/Computability/Circuit/Boolean/Hamming.lean (De Morgan): complexity_add_proj_le (≤ C(f)+4), complexity_add_projs_le (m shifts ≤ C(f)+4m), circuitDist_add_proj, circuitDist_proj_le (≤ 8), five_le_circuitDist_proj (≥ 5, i ≠ j). Tests ComplexityTests/CircuitHamming/{Pointwise,Gates}.lean: n = 2, 3 truth tables and distances (theorem and decide), median of projections = majority 3, sharing example for majority 3 (distance 4/8, joint ≤ C+12, circuitDist in [5,8]), n = 0, empty index types, m = 0, #print axioms guards (propext, Classical.choice, Quot.sound; median laws Quot.sound only). Validation: scripts/check.sh six gates pass on 6af7e40. Source: owner note 2026-10-18 (Samuel Schlesinger); cites Jukna2012, MacWilliamsSloane1977. Contributors: worker-mythos (drafts of both milestones), worker-sable-hamming (placement/split, parity-based projection proof, complexity_wiring reuse, trace_pointwise_proj, hammingDist_add_left, median_assoc, two_mul_hammingDist_add_proj, tests, integration). Remaining (tracked): milestones 3 (Parseval/noise distances), 4 (metric approximation), 5 (modulus of continuity in Circuit/Continuity.lean, ℕ-valued for complete interpretations). Follow-ups outside scope: move the two projection lemmas into Circuit/Complexity.lean; drop the private copies in ComplexityTests/CircuitMetric.lean; Smolensky/Approximation.lean's local pointwise interpretation could use Interpretation.pointwise; add headline names to ComplexityTests/Axioms.lean.",
       "snapshot":
       {"head": {"value": "6af7e40639228bc0a83e1114d4209eccc5c1cd65"},
        "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792372831,
-          "snapshot":
-          {"head": {"value": "6af7e40639228bc0a83e1114d4209eccc5c1cd65"},
-           "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
-          "reviewer":
-          {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
-           "agent": {"value": "reviewer-sable-cor3"}},
-          "note":
-          "Correctness review of exact base 26253c9 / head 6af7e40 by reviewer-sable-cor3 (independent: no contribution; read-only in own worktree). Scope: Circuit/Pointwise.lean, BitString/Hamming.lean, Circuit/Boolean/Hamming.lean, ComplexityTests/CircuitHamming/{Pointwise,Gates}.lean. Evidence: all five modules built --wfail --iofail, no warnings; no sorry/axiom/native_decide/set_option/instances. Verified: pointwise lift and evalAt (a genuine cslib Homomorphism), trace/eval pointwise from map_trace/map_eval, wires and outputs at the projections are truth tables, computes iff lifted outputs are the truth tables; cube identities for any Fintype index (sorting, geodesics, Lipschitz, XOR both sides and NOT isometries); median = pointwise majority 3; median algebra laws, betweenness, minimality; projections half apart via parityOn {i,j}; 1/2 in char-zero semifields; complexity_add_projs_le bounds one m-output circuit computing f once (G o F), +4 per output; circuitDist of shifts in [5,8], lower bound needs i != j. Own probes pass: 5-gate majority circuit whose lifted output is majority 3 (C <= 5); 3-input identities with majority/parity/projections checked by theorem and decide; 1/2 in Q>=0; joint shifts of majority <= 17, non-injective family <= 21; i = j distance 0; n = 0, m = 0. 33 axiom prints standard (median laws Quot.sound only; evalAt none). Nits: Gates.lean:197-198 says distance zero but proves <= 8; public projection lemmas duplicate private copies in ComplexityTests/CircuitMetric.lean. Limitation: check.sh not re-run; milestones 3-5 out of scope. Evidence: .lake/codex-validation/hamming-geometry-correctness/review.json SHA256 e82f6cce46b922445782f09eb9d4b8a67d41c3ac3d04dfa5f129101ad1de5246"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792372933,
-          "snapshot":
-          {"head": {"value": "6af7e40639228bc0a83e1114d4209eccc5c1cd65"},
-           "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
-          "reviewer":
-          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
-           "agent": {"value": "reviewer-sable-api3"}},
-          "note":
-          "API review by reviewer-sable-api3 (independent; no contribution) of exact base 26253c9 / head 6af7e40, read-only in own worktree. Scope: Circuit/Pointwise.lean, Foundations/Data/BitString/Hamming.lean, Circuit/Boolean/Hamming.lean, CircuitHamming tests, root imports, against Mathlib hammingDist, BitString Weight/Parity/Hamming, BooleanAnalysis, Smolensky, Circuit/Complexity.lean. Evidence: lake build of 3 modules + 2 tests --wfail --iofail exit 0, 0 warnings; mk_all clean; probe_api.lean exit 0: lift over N with point type Z, evalAt with Homomorphism.comp, Smolensky local lift = pointwise/evalAt by rfl, median = Pi-lattice median by rfl, empty index, proj_div in R and Q, axioms of 20 results within the standard three. Placement follows rule 6; Mathlib has no hammingDist translation lemmas (names mirror dist_add_right/left); median vs majority distinct and bridged; simp, template, bib fine. No blocking findings. Nits: two_mul_hammingDist_proj is the {i},{j} case of existing two_mul_hammingDist_parityOn (Linearity.lean:109, Fourier proof; probe derives it in 3 lines) - generalize the elementary proof here and derive both; move complexity_single_proj/one_le_complexity_single to Circuit/Complexity.lean (mirrored file, outside epic paths) and drop CircuitMetric private copies, bundled with Metric engine lemmas; Smolensky can reuse pointwise; median_median name; Boolean/Hamming doc cites a non-imported lemma. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/hamming-geometry-api/review.json SHA256 90ccf98d16d9f34a40fbf5d4c87020d44e788705642a8ef57bd9eb2cb11539f4"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792376966,
+      "landed": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792372831,
+       "snapshot":
+       {"head": {"value": "6af7e40639228bc0a83e1114d4209eccc5c1cd65"},
+        "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
+       "reviewer":
+       {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
+        "agent": {"value": "reviewer-sable-cor3"}},
+       "note":
+       "Correctness review of exact base 26253c9 / head 6af7e40 by reviewer-sable-cor3 (independent: no contribution; read-only in own worktree). Scope: Circuit/Pointwise.lean, BitString/Hamming.lean, Circuit/Boolean/Hamming.lean, ComplexityTests/CircuitHamming/{Pointwise,Gates}.lean. Evidence: all five modules built --wfail --iofail, no warnings; no sorry/axiom/native_decide/set_option/instances. Verified: pointwise lift and evalAt (a genuine cslib Homomorphism), trace/eval pointwise from map_trace/map_eval, wires and outputs at the projections are truth tables, computes iff lifted outputs are the truth tables; cube identities for any Fintype index (sorting, geodesics, Lipschitz, XOR both sides and NOT isometries); median = pointwise majority 3; median algebra laws, betweenness, minimality; projections half apart via parityOn {i,j}; 1/2 in char-zero semifields; complexity_add_projs_le bounds one m-output circuit computing f once (G o F), +4 per output; circuitDist of shifts in [5,8], lower bound needs i != j. Own probes pass: 5-gate majority circuit whose lifted output is majority 3 (C <= 5); 3-input identities with majority/parity/projections checked by theorem and decide; 1/2 in Q>=0; joint shifts of majority <= 17, non-injective family <= 21; i = j distance 0; n = 0, m = 0. 33 axiom prints standard (median laws Quot.sound only; evalAt none). Nits: Gates.lean:197-198 says distance zero but proves <= 8; public projection lemmas duplicate private copies in ComplexityTests/CircuitMetric.lean. Limitation: check.sh not re-run; milestones 3-5 out of scope. Evidence: .lake/codex-validation/hamming-geometry-correctness/review.json SHA256 e82f6cce46b922445782f09eb9d4b8a67d41c3ac3d04dfa5f129101ad1de5246"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792372933,
+       "snapshot":
+       {"head": {"value": "6af7e40639228bc0a83e1114d4209eccc5c1cd65"},
+        "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
+       "reviewer":
+       {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+        "agent": {"value": "reviewer-sable-api3"}},
+       "note":
+       "API review by reviewer-sable-api3 (independent; no contribution) of exact base 26253c9 / head 6af7e40, read-only in own worktree. Scope: Circuit/Pointwise.lean, Foundations/Data/BitString/Hamming.lean, Circuit/Boolean/Hamming.lean, CircuitHamming tests, root imports, against Mathlib hammingDist, BitString Weight/Parity/Hamming, BooleanAnalysis, Smolensky, Circuit/Complexity.lean. Evidence: lake build of 3 modules + 2 tests --wfail --iofail exit 0, 0 warnings; mk_all clean; probe_api.lean exit 0: lift over N with point type Z, evalAt with Homomorphism.comp, Smolensky local lift = pointwise/evalAt by rfl, median = Pi-lattice median by rfl, empty index, proj_div in R and Q, axioms of 20 results within the standard three. Placement follows rule 6; Mathlib has no hammingDist translation lemmas (names mirror dist_add_right/left); median vs majority distinct and bridged; simp, template, bib fine. No blocking findings. Nits: two_mul_hammingDist_proj is the {i},{j} case of existing two_mul_hammingDist_parityOn (Linearity.lean:109, Fourier proof; probe derives it in 3 lines) - generalize the elementary proof here and derive both; move complexity_single_proj/one_le_complexity_single to Circuit/Complexity.lean (mirrored file, outside epic paths) and drop CircuitMetric private copies, bundled with Metric engine lemmas; Smolensky can reuse pointwise; median_median name; Boolean/Hamming doc cites a non-imported lemma. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/hamming-geometry-api/review.json SHA256 90ccf98d16d9f34a40fbf5d4c87020d44e788705642a8ef57bd9eb2cb11539f4"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Pointwise.lean",
     "Complexity/Computability/Circuit/Boolean/Hamming.lean",
@@ -1393,53 +1333,42 @@
    "report":
    "Plan accepted as posted (six items). Two cautions: keep every landed public statement at least as strong, with the hypothesis-free iff added beside, not instead of, the existing endpoints; and when bundling the twelve tableau symbols into FO.TableauSymbols, make sure the bundled statements remain readable and the realize lemmas stay simp-usable (write one probe). Report helper-inclusive line counts before/after; request publication through the board when the push hook blocks you; ready requires base == current main until the merge-queue tooling lands, so merge main right before your final validation.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Plan for fagin-cleanup (baseline 6253 lines across 17 Fagin/Logic/test files on a0952ac): (1) Move tupleIndex lemmas (tupleIndex_snoc, tupleIndex_eq_of_high_zero, tupleIndex_lt_pow_iff, tupleIndex_lt_iff) beside tupleIndex in Complexity/Logics/FirstOrder/Encoding.lean; move generic FO combinators (closeAll, closeEx, atVar, varEq, rel1, rel2, lt, le, isZero, isMax, succ, isFirstOut, eqOfPred without F suffix), cardinality helpers, and truthTableSentence into Complexity/Logics/FirstOrder/Basic.lean. (2) Replace cardGeTwoSentence with Mathlib Sentence.cardGe L 2 (plus Sentence.realize_cardGe_nat), express cardZeroSentence/cardOneSentence directly via Sentence.cardGe, remove unused FO.Definable.card_ge_two, and add Implementation notes + proof-only Finset.Sort import in Projection.lean. (3) Bundle the 12 tableau relation symbols into FO.TableauSymbols in Tableau.lean and add [DecidableEq State] to section variables instead of letI in statements. (4) Standardize iff lemma names to realize_*, rename realize_frameChunkSentence_imp to getElem_frame_eq_of_realize_frameChunkSentence, place nullarySymbolSentence/constTupleSentence/encodeOfZero/encodeOfOne in Vocabulary namespace, make Vocabulary.definable_iff_queryLanguage_mem_NP an alias, and add hypothesis-free ESO.definable_iff_isoClosed_and_queryLanguage_mem_NP. (5) Add References sections to StrictVerifier/Small/Power/Layout and list powerInTable in Power.lean docstring. (6) Add concrete semantic end-to-end test in ComplexityTests/Fagin.lean showing the converse sentence for 2-colorability holds on the 2-vertex edge and fails on the 3-vertex triangle.",
-       "lease":
-       {"token": {"value": "2b1c4e8937db5dfab3f9d11bd059fc40"},
-        "holder":
-        {"session": {"value": "4a93d95e627493ab82ddfefba0a046d0"},
-         "agent": {"value": "worker-jetski"}},
-        "expires": 1792388169},
-       "branch": "work/fagin-cleanup/worker-jetski",
-       "blocked": false,
-       "assignee": {"value": "worker-jetski"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Completed all 6 fagin-cleanup items at 8941c6c6: (1) moved generic FO combinators (without F suffix) and cardinality sentences to Complexity/Logics/FirstOrder/Basic.lean (309 lines) and tupleIndex lemmas to Complexity/Logics/FirstOrder/Encoding.lean (+97 lines); (2) replaced custom cardGeTwoSentence/cardZeroSentence/cardOneSentence with Mathlib Sentence.cardGe L 2 and FO.cardEqSentence L n, removed unused FO.Definable.card_ge_two, made Mathlib.Data.Finset.Sort a proof-only import in Projection.lean, and added ## Implementation notes on orderLanguage vs Language.order; (3) removed letI := Classical.typeDecidableEq State from theorem statements in Tableau.lean and bundled the 12 relation-symbol parameters into FO.TableauRels; (4) renamed realize_X_iff -> realize_X, realize_frameChunkSentence_imp -> getElem?_frame_eq_of_realize_frameChunkSentence, placed encodeOfZero/encodeOfOne/nullarySymbolSentence/constTupleSentence in Vocabulary namespace, made Vocabulary.definable_iff_queryLanguage_mem_NP an alias of ESO.definable_iff_queryLanguage_mem_NP, and added ESO.definable_iff_isoClosed_and_queryLanguage_mem_NP; (5) added ## References to StrictVerifier/Small/Power/Layout, listed powerInTable in Power.lean, and deduplicated realize_layoutESOSentence in Layout.lean; (6) added end-to-end semantic test in ComplexityTests/Fagin.lean showing the ESO sentence from Definable.of_queryLanguage_mem_NP for 2-colorability holds on the decoded 2-vertex edge and fails on a decoded 3-vertex triangle. Helper-inclusive line counts (Logics + Fagin + Fagin tests): 6,253 before -> 6,195 after (-58 net; Fagin/ 3,907 -> 3,521). All 6 gates of scripts/check.sh pass.",
       "snapshot":
       {"head": {"value": "8941c6c66290bb389c6f324d1076c9a2ecd1f277"},
        "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792374437,
-          "snapshot":
-          {"head": {"value": "8941c6c66290bb389c6f324d1076c9a2ecd1f277"},
-           "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
-          "reviewer":
-          {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
-           "agent": {"value": "reviewer-sable-cor5"}},
-          "note":
-          "Correctness review of fagin-cleanup 26253c9..8941c6c (Converse/Layout/Power/Small/StrictVerifier/Tableau, FO/Basic, FO/Encoding, ESO/Projection, tests). Independent: no contribution to fagin-converse/cleanup. Evidence: lake build of 9 changed modules + ComplexityTests.Fagin --wfail --iofail OK; mk_all --check OK; no sorry/native_decide/heartbeats. Probe (lake env lean, clean): headline statements identical to base, base forms restated verbatim and closed; new hypothesis-free iff re-derived from Definable.isoClosed and shown equivalent to landed iff, applied to 2-colorable graphs and card>=2 / empty-with-nullary classes; cardGe/cardEqSentence checked on Fin 0/1/2/5, 0|1|>=2 partition, infinite boundary shows [Finite M] needed, nullary decode on Fin 0; TableauRels: base realize_tableauESOSentence/npPowerSentence/initSentence restated and closed, canonical fields rfl to base symbols; removed letI Classical was dead (step RHS take no DecidableEq), headline has no extra params; axioms of all headlines = propext/choice/Quot.sound. Blocking: none. Nits: Fagin test docstring overstates (Phi is the Definable witness; checks characterization on decoded edge/triangle, not the construction); realize_isStrictLinearOrderSentence name repurposed and unconditional unfolding lemma made private; new iff docstring lacks citations; getElem?_frame_eq... names only half its conclusion. Limits: no full check.sh. Evidence .lake/codex-validation/fagin-cleanup-correctness/review.json sha256 527e4ad35c31617b8c0c6100fb96be0f3c7438a37b827b5d8e895ef1a1cef572"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792374450,
-          "snapshot":
-          {"head": {"value": "8941c6c66290bb389c6f324d1076c9a2ecd1f277"},
-           "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
-          "reviewer":
-          {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
-           "agent": {"value": "reviewer-sable-api5"}},
-          "note":
-          "API review of 26253c9..8941c6c (reviewer-sable-api5, independent: no contribution to fagin-converse/cleanup). Inspected Logics/FirstOrder/{Basic,Encoding}, SecondOrder/Projection, Fagin/{Converse,Layout,Power,Small,StrictVerifier,Tableau}, ComplexityTests/Fagin. All six goal items done. Built changed+dependent Logics/Fagin modules and ComplexityTests.{Fagin,FaginEncoding,FaginNP} --wfail --iofail OK; lint-style, mk_all --check OK. Probe: headline statements unchanged; Vocabulary alias rfl-equal and dot-usable; hypothesis-free iff recovers old iff, instantiated on colorability; removed letI was a no-op (outStepRHS has no DecidableEq arg); realize lemmas same content modulo renames/TableauRels; simp works on bundled fields; cardGe/cardEq and B=1 boundaries; axioms standard. No dangling refs or deprecated aliases; no Mathlib/cslib duplication. No blocking findings. Nits: Basic.lean:130 FO.eqOfPred/realize_eqOfPred new and unused (remove or test); Projection.lean:198 old public unfold lemma now private _aux; Basic.lean:11 ModelTheory.Semantics suffices; closeEx could use Formula.iExs; Layout.lean:213 name covers one conjunct; Converse.lean:288 docstring lacks citations; test docstring overclaims witness; Tableau.lean:922 r.lt. Limits: no full check.sh/lake lint/test. Evidence .lake/codex-validation/fagin-cleanup-api/review.json sha256 a560ba95aa4a82f57474477bd105eedb8b1955db39f3bb068f40b7702aafcdcd"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792376966,
+      "landed": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792374437,
+       "snapshot":
+       {"head": {"value": "8941c6c66290bb389c6f324d1076c9a2ecd1f277"},
+        "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
+       "reviewer":
+       {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
+        "agent": {"value": "reviewer-sable-cor5"}},
+       "note":
+       "Correctness review of fagin-cleanup 26253c9..8941c6c (Converse/Layout/Power/Small/StrictVerifier/Tableau, FO/Basic, FO/Encoding, ESO/Projection, tests). Independent: no contribution to fagin-converse/cleanup. Evidence: lake build of 9 changed modules + ComplexityTests.Fagin --wfail --iofail OK; mk_all --check OK; no sorry/native_decide/heartbeats. Probe (lake env lean, clean): headline statements identical to base, base forms restated verbatim and closed; new hypothesis-free iff re-derived from Definable.isoClosed and shown equivalent to landed iff, applied to 2-colorable graphs and card>=2 / empty-with-nullary classes; cardGe/cardEqSentence checked on Fin 0/1/2/5, 0|1|>=2 partition, infinite boundary shows [Finite M] needed, nullary decode on Fin 0; TableauRels: base realize_tableauESOSentence/npPowerSentence/initSentence restated and closed, canonical fields rfl to base symbols; removed letI Classical was dead (step RHS take no DecidableEq), headline has no extra params; axioms of all headlines = propext/choice/Quot.sound. Blocking: none. Nits: Fagin test docstring overstates (Phi is the Definable witness; checks characterization on decoded edge/triangle, not the construction); realize_isStrictLinearOrderSentence name repurposed and unconditional unfolding lemma made private; new iff docstring lacks citations; getElem?_frame_eq... names only half its conclusion. Limits: no full check.sh. Evidence .lake/codex-validation/fagin-cleanup-correctness/review.json sha256 527e4ad35c31617b8c0c6100fb96be0f3c7438a37b827b5d8e895ef1a1cef572"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792374450,
+       "snapshot":
+       {"head": {"value": "8941c6c66290bb389c6f324d1076c9a2ecd1f277"},
+        "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
+       "reviewer":
+       {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
+        "agent": {"value": "reviewer-sable-api5"}},
+       "note":
+       "API review of 26253c9..8941c6c (reviewer-sable-api5, independent: no contribution to fagin-converse/cleanup). Inspected Logics/FirstOrder/{Basic,Encoding}, SecondOrder/Projection, Fagin/{Converse,Layout,Power,Small,StrictVerifier,Tableau}, ComplexityTests/Fagin. All six goal items done. Built changed+dependent Logics/Fagin modules and ComplexityTests.{Fagin,FaginEncoding,FaginNP} --wfail --iofail OK; lint-style, mk_all --check OK. Probe: headline statements unchanged; Vocabulary alias rfl-equal and dot-usable; hypothesis-free iff recovers old iff, instantiated on colorability; removed letI was a no-op (outStepRHS has no DecidableEq arg); realize lemmas same content modulo renames/TableauRels; simp works on bundled fields; cardGe/cardEq and B=1 boundaries; axioms standard. No dangling refs or deprecated aliases; no Mathlib/cslib duplication. No blocking findings. Nits: Basic.lean:130 FO.eqOfPred/realize_eqOfPred new and unused (remove or test); Projection.lean:198 old public unfold lemma now private _aux; Basic.lean:11 ModelTheory.Semantics suffices; closeEx could use Formula.iExs; Layout.lean:213 name covers one conjunct; Converse.lean:288 docstring lacks citations; test docstring overclaims witness; Tableau.lean:922 r.lt. Limits: no full check.sh/lake lint/test. Evidence .lake/codex-validation/fagin-cleanup-api/review.json sha256 a560ba95aa4a82f57474477bd105eedb8b1955db39f3bb068f40b7702aafcdcd"}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
@@ -1709,53 +1638,42 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "PUBLICATION REQUEST: e22e74f on work/stretch-cleanup/worker-sable-stretch. It merges main 764e3b8 into cleanup commit 5d69c37, which was cut from main 26253c9. Validation: all six scripts/check.sh gates passed at exactly this tree; git diff --check is clean. The diff against main is the 5 epic files (+380/-335). The push is blocked by the lean4 guardrail hook (not bypassed).",
-       "lease":
-       {"token": {"value": "72a550e18875ba4e0f509ff106f356d0"},
-        "holder":
-        {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
-         "agent": {"value": "worker-sable-stretch"}},
-        "expires": 1792388359},
-       "branch": "work/stretch-cleanup/worker-sable-stretch",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-stretch"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Submitted e22e74f on work/stretch-cleanup/worker-sable-stretch: cleanup commit 5d69c37 cut from main 26253c9, plus a merge of main 764e3b8. Diff vs main: the 5 epic files (+380/-335). No vendored file touched.\n\n(1) The captured certificate cannot literally be the core. encPair (encPair encParam encBits) encUnary (((),s),k) is never encPair encBits encUnary (s,k), and re-encoding by composition would materialize the n+k input bits and break the k-independent workspace bound. So I took the goal alternative. One generic core, ComputableTidilyInTimeAndSpace.iterate_unary_stream_sum in Streaming.lean: input (s,k) on encPair enc encUnary for any state encoding; certificates for state map f, emission and finish, each on enc. It returns the emissions of f^[i] s for i<k, then finish (f^[k] s), with cumulative time sum_i R and workspace Q+B independent of k. It reuses streamFold_pair_sum and a new general streamState_replicate.\n- streamState_replicate_eq_seedAt is now its 1-line specialization and feeds the new forwardIterate_eq characterization.\n- computableTidilyInTimeAndSpace_forwardIterate (state = seed) and the new computableTidilyInTimeAndSpace_forwardIterate_captured (state = (a, seed); a captured-orbit lemma replaces the local hstate_eq/hemit_eq) are its clients.\n- _iterate_pair and _iterate_captured derive from them through one private reversal helper that charges the n+k buffer.\n- All public Stretch statements are unchanged.\n\n(2) Accurate names: Streaming getLast_bits -> getLast?_toList_bits, Quantitative bitsGetLast -> bitsGetLast?ToList. One private last-bit transducer is shared with getLast?_bits; both keep 4n+8 time and zero workspace.\n\n(3) ComputableTidilyInTimeAndSpace.length_bits (List.length, encBits to encUnary, 4n+8 time, 0 space) sits beside reverse_bits, is registered with fun_prop, and replaces the inline certificate in _stretch.\n\n(4) pseudorandomGenerator uses polyTime_stretch again. polyTime_stretch_of_length_eq stays as the tested corollary of the quantitative certificate.\n\n(5) Zero-round test: stretch shiftIn with count 0 through computableTidilyInTimeAndSpace_stretch, with generator workspace Q = 0. The bound collapses to O(tCount n + n + 1) time and O(sCount n + n + 1) space. Axiom guards were added for the new public theorems (iterate_unary_stream_sum, length_bits, forwardIterate_captured); guards for renamed ones updated.\n\nBurden (scripts/proof_lengths.py theorem/lemma body lines, helpers included, statements excluded; Streaming/Quantitative/Stretch): main 237+21+573 = 831, now 281+21+431 = 733 (-98).\n- forwardIterate 78 -> 31; iterate_pair 15 -> 8.\n- iterate_captured 169 -> captured forward 70 + iterate_captured 10.\n- getLast pair 40 -> 2+2 plus transducer lemma 8.\n- New: core 62, reversal helper 8, orbit lemmas 1+3, forwardIterate_eq 5.\n- Statement lines 455 -> 514 (new public core, captured forward certificate, forwardIterate_eq, length_bits). Raw library lines +336/-331.\n\nValidation: all six scripts/check.sh gates passed at exactly e22e74f; git diff --check clean.\n\nContributors: worker-sable-stretch only, no subagents.\n\nLimitations: new public candidates (iterate_unary_stream_sum, streamState_replicate, length_bits, forwardIterate_eq, forwardIterate_captured) need independent review. length_bits joins the fun_prop set.",
       "snapshot":
       {"head": {"value": "e22e74ff563d3bc79758e445aa71f714035811a7"},
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792374719,
-          "snapshot":
-          {"head": {"value": "e22e74ff563d3bc79758e445aa71f714035811a7"},
-           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-          "reviewer":
-          {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
-           "agent": {"value": "reviewer-sable-cor4"}},
-          "note":
-          "Correctness review of e22e74f on 764e3b8 by reviewer-sable-cor4 (independent; not an author). Scope: Stretch, Streaming, Quantitative, tests PRGStretch+Quantitative. Build of the 5 modules --wfail --iofail OK, 0 warnings. Statement diff: no Stretch statement changed (additions only); renamed getLast?_toList_bits / bitsGetLast?ToList keep identical statements (4n+8, zero space), old names unused. pseudorandomGenerator back on polyTime_stretch. iterate_unary_stream_sum: cumulative sum of actual round costs, input length absorbed honestly, workspace Q+B independent of k. forwardIterate_captured k-independent; shared reversal helper charges n+k via comp (5|mid|). streamState_replicate correctly generalizes; forwardIterate_eq true (decide-checked). length_bits correct (map_bits along encUnary). Zero-round test is through the stretch certificate (Q=0, vacuous hspace). Probe ProbeCleanup.lean (exit 0): nonconstant captured capRev through forward/iterate captured certs, zero rounds collapse to c*(|a|+n+1), non-PRG core client (map not); axioms clean on all new/renamed public theorems. Blocking: none. Nits: no axiom guards for streamState_replicate/forwardIterate_eq; old names dropped without deprecation (API call). Note: main moved to d42eefc. Not run: check.sh. Evidence .lake/codex-validation/stretch-cleanup-correctness/review.json SHA256 0a8f19f838bd00ec7f2ae6078a2a2eebf48599440c6280c1fcbaf1d0868cef56"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792374780,
-          "snapshot":
-          {"head": {"value": "e22e74ff563d3bc79758e445aa71f714035811a7"},
-           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
-          "reviewer":
-          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
-           "agent": {"value": "reviewer-sable-api4"}},
-          "note":
-          "API review of stretch-cleanup e22e74f (base main 764e3b8) by reviewer-sable-api4, independent (no code; this epic addresses my earlier nits), read-only. Build of the 5 modules --wfail --iofail ok. 89 base statements unchanged; forwardIterate is docstring-only; the only removals are the two renames, referenced nowhere on main or any work branch. (1) The goal's alternative is justified: Comp.lean:129 comp charges 5*|intermediate| workspace, so re-encoding (s,k) into the captured input would break forwardIterate's public k-independent workspace. One core iterate_unary_stream_sum (62) with forwardIterate (31) and public forwardIterate_captured (70) as clients; iterate_pair/iterate_captured (8/10) share a private reversal helper; streamState_replicate replaces hstate_eq. (2)-(5) verified. Burden 831->733 body / 455->514 statements reproduced. Probes ok: core used on a non-PRG map (List.reverse), zero rounds, forwardIterate_eq concrete, renames resolve, standard axioms, length_bits found by fun_prop with no effect on probed polytime/degree goals. Nits: no degree twin for length_bits (degree fun_prop on List.length fails); streamState_replicate would sit naturally beside streamState_succ. No vendored file touched; markers ok; diff --check and upstream_sync clean. Limitations: check.sh not rerun; timings not measurable under load ~45. Evidence .lake/codex-validation/stretch-cleanup-api/review.json sha256 770c6e428402837259206abe742e75720f350eaf666478c8ab5adb760d633bf5"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792376966,
+      "landed": {"value": "342f28449902fa5547f83bad6c073f3d1cf35643"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792374719,
+       "snapshot":
+       {"head": {"value": "e22e74ff563d3bc79758e445aa71f714035811a7"},
+        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+       "reviewer":
+       {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
+        "agent": {"value": "reviewer-sable-cor4"}},
+       "note":
+       "Correctness review of e22e74f on 764e3b8 by reviewer-sable-cor4 (independent; not an author). Scope: Stretch, Streaming, Quantitative, tests PRGStretch+Quantitative. Build of the 5 modules --wfail --iofail OK, 0 warnings. Statement diff: no Stretch statement changed (additions only); renamed getLast?_toList_bits / bitsGetLast?ToList keep identical statements (4n+8, zero space), old names unused. pseudorandomGenerator back on polyTime_stretch. iterate_unary_stream_sum: cumulative sum of actual round costs, input length absorbed honestly, workspace Q+B independent of k. forwardIterate_captured k-independent; shared reversal helper charges n+k via comp (5|mid|). streamState_replicate correctly generalizes; forwardIterate_eq true (decide-checked). length_bits correct (map_bits along encUnary). Zero-round test is through the stretch certificate (Q=0, vacuous hspace). Probe ProbeCleanup.lean (exit 0): nonconstant captured capRev through forward/iterate captured certs, zero rounds collapse to c*(|a|+n+1), non-PRG core client (map not); axioms clean on all new/renamed public theorems. Blocking: none. Nits: no axiom guards for streamState_replicate/forwardIterate_eq; old names dropped without deprecation (API call). Note: main moved to d42eefc. Not run: check.sh. Evidence .lake/codex-validation/stretch-cleanup-correctness/review.json SHA256 0a8f19f838bd00ec7f2ae6078a2a2eebf48599440c6280c1fcbaf1d0868cef56"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792374780,
+       "snapshot":
+       {"head": {"value": "e22e74ff563d3bc79758e445aa71f714035811a7"},
+        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+       "reviewer":
+       {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+        "agent": {"value": "reviewer-sable-api4"}},
+       "note":
+       "API review of stretch-cleanup e22e74f (base main 764e3b8) by reviewer-sable-api4, independent (no code; this epic addresses my earlier nits), read-only. Build of the 5 modules --wfail --iofail ok. 89 base statements unchanged; forwardIterate is docstring-only; the only removals are the two renames, referenced nowhere on main or any work branch. (1) The goal's alternative is justified: Comp.lean:129 comp charges 5*|intermediate| workspace, so re-encoding (s,k) into the captured input would break forwardIterate's public k-independent workspace. One core iterate_unary_stream_sum (62) with forwardIterate (31) and public forwardIterate_captured (70) as clients; iterate_pair/iterate_captured (8/10) share a private reversal helper; streamState_replicate replaces hstate_eq. (2)-(5) verified. Burden 831->733 body / 455->514 statements reproduced. Probes ok: core used on a non-PRG map (List.reverse), zero rounds, forwardIterate_eq concrete, renames resolve, standard axioms, length_bits found by fun_prop with no effect on probed polytime/degree goals. Nits: no degree twin for length_bits (degree fun_prop on List.length fails); streamState_replicate would sit naturally beside streamState_succ. No vendored file touched; markers ok; diff --check and upstream_sync clean. Limitations: check.sh not rerun; timings not measurable under load ~45. Evidence .lake/codex-validation/stretch-cleanup-api/review.json sha256 770c6e428402837259206abe742e75720f350eaf666478c8ab5adb760d633bf5"}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Complexity/Streaming.lean",
