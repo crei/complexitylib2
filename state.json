@@ -3332,7 +3332,9 @@
       "snapshot":
       {"head": {"value": "ef44eae9d72fc56e92c44013a0514dbb65bf7e55"},
        "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
    "paths": ["references.bib"],
    "id": {"value": "docs-bibliography-3"},
    "goal":
