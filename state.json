@@ -1589,7 +1589,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "b98f4ed679158ad7e36a255f390b812a"},
+       "holder":
+       {"session": {"value": "0bac3bc8aa5546f3a00854a39d54904d"},
+        "agent": {"value": "worker-sable-hier"}},
+       "expires": 1792391581},
       "branch": "work/hierarchy-theorems/worker-sable-hier",
       "blocked": false,
       "assignee": {"value": "worker-sable-hier"}}}},
@@ -1604,7 +1609,7 @@
    "dependencies":
    [{"value": "native-exponential-separation"},
     {"value": "polytime-plain-bridge"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-hier"}]},
   {"resume": null,
    "report": "",
    "phase":
