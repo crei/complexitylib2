@@ -2383,7 +2383,7 @@
       {"head": {"value": "e3761bf730233e37d71fabefaf2356c864642e5f"},
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Oracle.lean",
