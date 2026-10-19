@@ -2994,15 +2994,18 @@
           "expires": 1792405763},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "a130cea227bd7656f80e8b680f1e86d9"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792391436,
+          "snapshot":
+          {"head": {"value": "b783d8e63477e9ee70671daf67a89740bfc502d1"},
+           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+          "reviewer":
           {"session": {"value": "33380288772710be7744d177c8f66871"},
            "agent": {"value": "reviewer-sable-api2"}},
-          "expires": 1792405819},
-         "blocked": false}}}}}},
+          "note":
+          "API review (independent; no contribution). Scope: Circuit/Boolean/HardCore.lean, XorLemma.lean, ComplexityTests/HardnessAmplification.lean. Build of the 3 modules --wfail --iofail exit 0. Template, header, upstream marker, namespace Cslib.Circuits.Boolean, docstrings (nonuniform, measure form, exact size loss) OK; no simp/set_option. Size via complexity interpretation (single g) and #{g=f}/2^n match PPoly.SIZE and the NW circuit theorems, so M2 composes. Boosting reuse good; Potential is a proof-only Crypto import (precedent: Kolmogorov/NisanWigderson). No new agreement definition; no Mathlib duplicate. Blocking: none. Nits: XorLemma.lean:93 card_eq_sum_le is circuit-free with a generic name in Circuits.Boolean (rename/BitString placement before upstream); HardCore.lean:130 private sum_ite_eq shadows Finset.sum_ite_eq; HardCore.lean:10 AtLeast import can be proof-only (probe ok); add a set-form-not-derived sentence and AB lemma numbers; floor division in _of_le doc; no guard/use of exists_isHardCoreMeasure_of_le, eps=1/2 test trivial; no mono. Follow-ups: move Potential to neutral place and share pointwise step with Progress; xorPower = parity o directProduct; central bib Impagliazzo1995, Yao1982 (Crossref title: application, singular). Not run: six gates, correctness. Evidence .lake/codex-validation/hardness-amplification-api/review.json sha256 9105364e59c7284041e3d8e64747bfd7ecdfc0d379dc500e2ad377ba91eb117c"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/HardCore.lean",
     "Complexity/Computability/Circuit/Boolean/HardCore",
