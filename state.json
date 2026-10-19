@@ -2322,20 +2322,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Scope note (non-blocking): M2 adds general algebra under AffineDisperser/ in the Cslib.AffineDisperser namespace: TensorBasis.lean (prodPowBasis, monomial basis of coprime-degree composita), bitEquiv : ZMod 2 ≃+* Bool (Bits.lean), primesIoc/selectBelow (Primes.lean). Proposed homes: Foundations/Algebra (or FieldTheory) for TensorBasis with the M1 Moore/cube-sum lemmas, Foundations/Data/BitString for bitEquiv. Bridge to IsAffineDisperser and the 3.5N corollary wait for b2-lower-bound.",
-      "lease":
-      {"token": {"value": "bcad1ef7f3c26c8b0c1d5ccc8c129bba"},
-       "holder":
-       {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
-        "agent": {"value": "worker-sable-disperser"}},
-       "expires": 1792405885},
-      "branch": "work/explicit-affine-disperser-2/worker-sable-disperser",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-disperser"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Scope note (non-blocking): M2 adds general algebra under AffineDisperser/ in the Cslib.AffineDisperser namespace: TensorBasis.lean (prodPowBasis, monomial basis of coprime-degree composita), bitEquiv : ZMod 2 ≃+* Bool (Bits.lean), primesIoc/selectBelow (Primes.lean). Proposed homes: Foundations/Algebra (or FieldTheory) for TensorBasis with the M1 Moore/cube-sum lemmas, Foundations/Data/BitString for bitEquiv. Bridge to IsAffineDisperser and the 3.5N corollary wait for b2-lower-bound.",
+       "lease":
+       {"token": {"value": "bcad1ef7f3c26c8b0c1d5ccc8c129bba"},
+        "holder":
+        {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
+         "agent": {"value": "worker-sable-disperser"}},
+        "expires": 1792405885},
+       "branch": "work/explicit-affine-disperser-2/worker-sable-disperser",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-disperser"}},
+      "summary":
+      "M2, ns Cslib.AffineDisperser. exists_explicitDisperser_ne (A : AffineSubspace Bool (BitString N)) (hA : explicitThreshold N < finrank Bool A.direction) : ∃ x ∈ A, ∃ y ∈ A, explicitDisperser N x ≠ explicitDisperser N y, where explicitThreshold N = N - r*n + (r*max (r+1) s + r*(r+1) + n*t + n*r/t); ℓ=log₂N, L=ℓ/3, n = greedy product of primes in (L,4L] at most N/(ℓ+1)^2, r=N/n, s=n/(L+1), t=ℓ+1, μ=1, F=GaloisField 2 n, monomial basis in roots of least-code irreducibles. eventually_explicitThreshold_le : ∀ᶠ N in atTop, (Nat.log 2 N + 1) * explicitThreshold N ≤ 6 * N; isBigO_explicitThreshold : explicitThreshold =O[atTop] N / log N; eventually_explicitThreshold_lt. Supporting: prodPowBasis, card_subfield_le_of_lt_prime, exists_code_leastIrreducible, four_pow_le_mul_prod_primesIoc (Mathlib Chebyshev), exists_traceSymBits_ne. Tests: N=2^60 parameters, threshold < N/10, nonconstant; eventual nonconstancy; axiom guards. Checks: all six gates ok (run-gates) at 783c51e2. Source: Ben-Sasson-Kopparty Thm 7.3 via M1. Contributors: worker-sable-disperser. Continuation: IsAffineDisperser bridge and 3.5N corollary await b2-lower-bound; M3 poly-time certificate next. Scope note: TensorBasis, bitEquiv, primesIoc/selectBelow are general, belong in Foundations/Algebra and BitString homes. Bib: @article{Chebyshev1852, author = {Tchebichef, Pafnuty}, title = {M{\\'e}moire sur les nombres premiers}, journal = {Journal de Math{\\'e}matiques Pures et Appliqu{\\'e}es}, volume = {17}, pages = {366--390}, year = {1852}}",
+      "snapshot":
+      {"head": {"value": "783c51e2f3c92f958790d4d8768ecd45c24fca3e"},
+       "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
     "Complexity/Foundations/Combinatorics/AffineDisperser.lean",
