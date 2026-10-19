@@ -2834,7 +2834,10 @@
     "Complexity/Computability/Complexity/Classes/NP/SelfReduction.lean",
     "Complexity/Computability/Complexity/Classes/Sparse.lean",
     "ComplexityTests/KarpLipton.lean",
-    "ComplexityTests/KarpLipton"],
+    "ComplexityTests/KarpLipton",
+    "Complexity/Computability/MCSP/NP.lean",
+    "Complexity/Computability/MCSP/Basic.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Complexity/PolyTime/List.lean"],
    "id": {"value": "circuits-karp-lipton"},
    "goal":
    "Coverage epic 3: circuits as data and Karp-Lipton. M1: a binary encoding of De Morgan circuits (cslib Circuit over the existing Boolean signature; gate list in topological order, explicit size) with a native ComputableTidilyInPolyTime evaluation certificate (CVP in P), CircuitSAT NP-complete via the Cook-Levin tableau or SAT, and MCSP in NP for the existing MCSP definitions where the truth-table encoding allows. M2: search-to-decision self-reduction for SAT and Karp-Lipton (NP within P/poly implies PH = SigmaP 2, on the existing Classes/PH quantifier definitions and Circuit/Boolean/PPoly; no second P/poly). M3: Kannan (for every k, SigmaP 2 not within SIZE(n^k), from the size hierarchy and Shannon counting), Meyer (EXP within P/poly implies EXP = SigmaP 2, after hierarchy-theorems' EXP lands), and Mahaney if cheap. Reuse PPoly, SIZE, Circuit/Evaluation, MachineSimulation, CookLevin and NP/GuessVerify; one machine model. Cite KarpLipton1980, Kannan1982 (propose entries). Tests and named axiom guards per milestone; six gates; one frozen submission per milestone.",
