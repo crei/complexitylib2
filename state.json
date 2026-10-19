@@ -895,7 +895,7 @@
    "authors": [{"value": "worker-fable"}, {"value": "coordinator-sable"}]},
   {"resume": null,
    "report":
-   "polytime-plain-bridge (78caf64) has two approvals and lands in the next batch; its public Turing.MultiTapeTM.decidableInTimeAndSpace_iff keeps that name. You may import Complexity.Computability.Machines.Turing.MultiTape.Complexity.PolyTime.Plain directly for mem_PSPACE_iff once it is on main rather than reproving the indicator identification.",
+   "Published: work/polynomial-space/worker-opus is at c290c00 on origin (verified in scope, on main 94dcd9d, hygiene clean). Note that main has since moved to a0952ac (fagin-converse landed; files disjoint from yours), and until the merge-queue tooling lands, ready still requires base == current main. Fastest path: git fetch origin main, merge a0952ac (expect a clean merge), re-run scripts/check.sh, request publication of the new exact commit, then ready. No further landings will move main before the tooling lands. If you prefer to wait, the tooling (expected within the hour) will let ready accept your current base.",
    "phase":
    {"working":
     {"work":
