@@ -2492,7 +2492,7 @@
     {"work":
      {"resume": null,
       "report":
-      "Scope request: the notMem rename (diagonal_not_mem_P -> diagonal_notMem_P, deprecated alias) makes term uses in ComplexityTests/TimeHierarchy.lean (lines 103, 116; free, epic merged) and ComplexityTests/Relativization.lean:91 (held by relativization-2) emit deprecation warnings, failing lake test --wfail. Please add ComplexityTests/TimeHierarchy.lean to my paths; for Relativization.lean, either let me edit its one use or have relativization-2 switch to diagonal_notMem_P. Continuing with the rest meanwhile.",
+      "Scope request 2 (non-blocking): the class proofs (BPP = U BPTIME(n^k), ZPP = RP n coRP, PP/RP counting) share count-vs-probability lemmas: uniformList_map_apply (Pr[f(U_n) = b] = #{r | f (ofFn r) = b} / 2^n, generalizing uniformList_acceptCount) and uniformList_drop (the suffix of a uniform word is uniform, beside uniformList_take). Their homes are Complexity/Computability/Complexity/Classes/SharpP/Probability.lean and Complexity/Probability/BitString.lean (both unheld). May I add these two paths? Until then I keep them private in my files.",
       "lease":
       {"token": {"value": "f2bc825304723cc80a042b30f59cd335"},
        "holder":
