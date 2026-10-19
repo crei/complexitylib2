@@ -2362,7 +2362,12 @@
      {"resume": null,
       "report":
       "API review (reviewer-sable-api2) requested changes: reuse ProbabilityTheory.indepSet_pi_of_dependsOn and Mathlib DependsOn in LocalLemma; prove the k-wise(2) <-> pairwise converse; drop or derive the bit-string counting forms that are weaker than the existing Hoeffding bound. Correctness approved.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "ebb2536a384958166f7f3cf6a62d5f77"},
+       "holder":
+       {"session": {"value": "0d4e04fa36522a13475c8af7f7944f7d"},
+        "agent": {"value": "worker-sable-prob"}},
+       "expires": 1792404108},
       "branch": "work/probability-toolkit/worker-sable-prob",
       "blocked": false,
       "assignee": {"value": "worker-sable-prob"}}}},
