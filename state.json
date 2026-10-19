@@ -1,25 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "d0299eace631cd0e7fc0f4bc69103989ef7cf3a2"},
-   "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-  "main": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"},
-  "lease":
-  {"token": {"value": "e41c264e92010ce2f42b284a2ae356e1"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792404658},
-  "epic": {"value": "machine-classes-consolidation"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "d0299eace631cd0e7fc0f4bc69103989ef7cf3a2"},
-     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-    "epic": {"value": "machine-classes-consolidation"}},
-   {"snapshot":
-    {"head": {"value": "65d016ba57621f8d924763578b51a707cb5cc1d7"},
-     "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-    "epic": {"value": "docs-roadmap-refresh"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -2621,53 +2601,42 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Question (not blocking other items): NPComplete.P_eq_NP_of_mem_P needs P ⊆ NP. P_subset_NP is excluded and sits in Ladner.lean, which imports CookLevin.Completeness, so the lemma cannot go beside SAT_npComplete without moving P_subset_NP. Default unless told otherwise: put the general NPComplete.P_eq_NP_of_mem_P in Ladner.lean right after P_subset_NP, derive the Ladner corollaries, and leave the move beside SAT_npComplete to resource-class-spine. Alternative if you prefer: allow me to move P_subset_NP into Reduction.lean (which will import Classes.P for PolyTimeReducible.mem_P). Also: the CNF decoder cannot go to Encodings/Decoder.lean without importing Problems.SAT (Classes.NP) into the Encodings layer; default is to move Decoder.nat/Decoder.bool there and keep cnfDecoder := .list (.list (.pair .nat .bool)) in Ladner/PolyTime pending a home beside encCNF (outside paths).",
-       "lease":
-       {"token": {"value": "08d2f86fbbb14be3d31fc575e4974f36"},
-        "holder":
-        {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
-         "agent": {"value": "worker-sable-stretch"}},
-        "expires": 1792403381},
-       "branch": "work/machine-classes-consolidation/worker-sable-stretch",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-stretch"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "No statement weakened. PolyTimeReducible.mem_P -> Reduction. New NPComplete.P_eq_NP_of_mem_P (hB : NPComplete encB B) (h : B ∈ P encB) (enc) : P enc = NP enc; Ladner.P_eq_NP_of_SAT_mem_P/SAT_notMem_P derived. It sits in Ladner beside P_subset_NP (excluded; Ladner imports CookLevin) until that moves (see note). Decoder.nat/.bool (+ofBits, bits_ofBits) in Encodings/Decoder; cnfDecoder := .list (.list (.pair .nat .bool)) stays in Ladner/PolyTime (encCNF's home is outside paths). New Universal/PolyTime: runBound_mono, universal_bounds_unary, computableTidilyInPolyTime_universal (proof-only import of Classes.Hierarchy for Diagonal.universal_bounds_le). PSPACEHard/Complete/.trans -> Classes/Space; NPSPACE via DecidesInSpace (defeq). Shared step ComputableInTimeAndSpace.exists_decidesInSpace used by L_subset_NL, PSPACE_subset_NPSPACE. exists_eval_tableau_iff -> CookLevin/Correctness, tableau_satisfiable_iff derived. Nat.two_pow_log2_succ_le -> Foundations Nat/Log; polynomiallyBounded_mul_log2_add_one gives polyBounded_log; parityOn_symmDiff public in Parity; Reachability docstring fixed. Repo-internal renames, no aliases: Ladner.{natDecoder,boolDecoder,ofBits,bits_ofBits,dropFalsesT*,runBound_mono,universal_bounds_unary,computableTidilyInPolyTime_universal} -> Turing.MultiTapeTM(.Universal/.Decoder); rdropWhile_append, bits_eq_nil_iff now private. Tests: ComplexityTests/Consolidation. Six gates pass at d0299eac. Contributors: worker-sable-stretch. Not in goal, left: capPow/find? homes, BreadthFirst. Bibliography: none.",
       "snapshot":
       {"head": {"value": "d0299eace631cd0e7fc0f4bc69103989ef7cf3a2"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792389775,
-          "snapshot":
-          {"head": {"value": "d0299eace631cd0e7fc0f4bc69103989ef7cf3a2"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
-           "agent": {"value": "reviewer-sable-cor4"}},
-          "note":
-          "Correctness review by reviewer-sable-cor4 (independent; contributor worker-sable-stretch) of exact head d0299eac over base 0d8ef4bf. No statement weakened. Evidence: structural signature dump (binder-name-free, level-normalised types + def value hashes) of the closure of 17 touched + 38 direct-importer modules at base and head, compared with a rename map: all 13 renamed/moved decls identical after renaming; unchanged names have identical types except 2 harmless; only NPSPACE, cnfDecoder, Decoder.unary values changed. Probes: base statements restated verbatim and closed by head decls (tableau_satisfiable_iff, exists_eval_tableau_iff, polyBounded_log, L_subset_NL, PSPACE_subset_NPSPACE, mem_P, Ladner.P_eq_NP_of_SAT_mem_P, SAT_notMem_P, parityOn_symmDiff); NPSPACE = base body by rfl; decoder data rfl. Build of 62 targets (touched, direct importers, Consolidation and related tests) under nice --wfail --iofail: success. Headlines SAT_npComplete, TQBF_pspaceComplete, NL_subset_P, NPSPACE_eq_PSPACE, exists_NP_not_P_not_NPComplete and 24 new/moved decls: axioms within propext/Classical.choice/Quot.sound; no sorry/native_decide/axiom/set_option added. Nonblocking: Correctness.lean:288 implicit binder order changed (same prop); Nat/Log.lean:55 instPowNat vs Monoid.npow (defeq, base form closes); Ladner.lean:106 general lemma not beside SAT_npComplete (pending P_subset_NP); Ladner.* renamed without aliases (API). Not checked: six gates, Axioms.lean audit, indirect importers (grep only). Evidence: .lake/codex-validation/machine-classes-consolidation-correctness/review.json sha256 343a6b9641eb9776a4e17b40847ab7a94dc199ac3d741e427a2a65977837b260"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792389617,
-          "snapshot":
-          {"head": {"value": "d0299eace631cd0e7fc0f4bc69103989ef7cf3a2"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
-           "agent": {"value": "reviewer-sable-api4"}},
-          "note":
-          "API review by reviewer-sable-api4 (independent; author worker-sable-stretch) of exact head d0299eac over base 0d8ef4bf. Evidence: nice lake build of 17 touched modules + 44 direct importers + touched tests --wfail --iofail OK, 0 warnings; probe: NPSPACE equals old form by rfl. Name audit (Lean env, base vs head public decls of touched modules): 12 removed, 15 added, 6 moved same-name; every removed name has a replacement except Ladner.rdropWhile_append/bits_eq_nil_iff, now private helpers (not in Mathlib); no stale refs. Moves land in right homes. Layering: Reduction->Classes.P fine (sibling of NP); Universal/PolyTime proof-only Hierarchy import acceptable interim, documented. Open decisions accepted: P_eq_NP_of_mem_P beside P_subset_NP in Ladner; cnfDecoder stays (Encodings must not import Problems.SAT). In-repo renames without aliases acceptable. No blocking findings. Follow-ups: move Diagonal.universal_bounds_le (Hierarchy.lean:229) beside runBound and drop Universal/PolyTime.lean:14 import; Nat.foldr_bit_bits to Foundations to drop Decoder.lean:14 Kolmogorov import; move Ladner.lean:106 with P_subset_NP; cnfDecoder beside encCNF. Nits: PolynomialBound/Log.lean:52 Nat.log2 vs Nat.log 2 convention; runBound_mono no docstring; ofBits in machine namespace; epic-named ComplexityTests/Consolidation. Not run: six gates, Axioms audit. Evidence .lake/codex-validation/machine-classes-consolidation-api/review.json sha256 4562bb6d5d2cc97d7b39da1e544a54d61ae6d24a1a2fc1cd7db648688d0bf829"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792390267,
+      "landed": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792389775,
+       "snapshot":
+       {"head": {"value": "d0299eace631cd0e7fc0f4bc69103989ef7cf3a2"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
+        "agent": {"value": "reviewer-sable-cor4"}},
+       "note":
+       "Correctness review by reviewer-sable-cor4 (independent; contributor worker-sable-stretch) of exact head d0299eac over base 0d8ef4bf. No statement weakened. Evidence: structural signature dump (binder-name-free, level-normalised types + def value hashes) of the closure of 17 touched + 38 direct-importer modules at base and head, compared with a rename map: all 13 renamed/moved decls identical after renaming; unchanged names have identical types except 2 harmless; only NPSPACE, cnfDecoder, Decoder.unary values changed. Probes: base statements restated verbatim and closed by head decls (tableau_satisfiable_iff, exists_eval_tableau_iff, polyBounded_log, L_subset_NL, PSPACE_subset_NPSPACE, mem_P, Ladner.P_eq_NP_of_SAT_mem_P, SAT_notMem_P, parityOn_symmDiff); NPSPACE = base body by rfl; decoder data rfl. Build of 62 targets (touched, direct importers, Consolidation and related tests) under nice --wfail --iofail: success. Headlines SAT_npComplete, TQBF_pspaceComplete, NL_subset_P, NPSPACE_eq_PSPACE, exists_NP_not_P_not_NPComplete and 24 new/moved decls: axioms within propext/Classical.choice/Quot.sound; no sorry/native_decide/axiom/set_option added. Nonblocking: Correctness.lean:288 implicit binder order changed (same prop); Nat/Log.lean:55 instPowNat vs Monoid.npow (defeq, base form closes); Ladner.lean:106 general lemma not beside SAT_npComplete (pending P_subset_NP); Ladner.* renamed without aliases (API). Not checked: six gates, Axioms.lean audit, indirect importers (grep only). Evidence: .lake/codex-validation/machine-classes-consolidation-correctness/review.json sha256 343a6b9641eb9776a4e17b40847ab7a94dc199ac3d741e427a2a65977837b260"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792389617,
+       "snapshot":
+       {"head": {"value": "d0299eace631cd0e7fc0f4bc69103989ef7cf3a2"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+        "agent": {"value": "reviewer-sable-api4"}},
+       "note":
+       "API review by reviewer-sable-api4 (independent; author worker-sable-stretch) of exact head d0299eac over base 0d8ef4bf. Evidence: nice lake build of 17 touched modules + 44 direct importers + touched tests --wfail --iofail OK, 0 warnings; probe: NPSPACE equals old form by rfl. Name audit (Lean env, base vs head public decls of touched modules): 12 removed, 15 added, 6 moved same-name; every removed name has a replacement except Ladner.rdropWhile_append/bits_eq_nil_iff, now private helpers (not in Mathlib); no stale refs. Moves land in right homes. Layering: Reduction->Classes.P fine (sibling of NP); Universal/PolyTime proof-only Hierarchy import acceptable interim, documented. Open decisions accepted: P_eq_NP_of_mem_P beside P_subset_NP in Ladner; cnfDecoder stays (Encodings must not import Problems.SAT). In-repo renames without aliases acceptable. No blocking findings. Follow-ups: move Diagonal.universal_bounds_le (Hierarchy.lean:229) beside runBound and drop Universal/PolyTime.lean:14 import; Nat.foldr_bit_bits to Foundations to drop Decoder.lean:14 Kolmogorov import; move Ladner.lean:106 with P_subset_NP; cnfDecoder beside encCNF. Nits: PolynomialBound/Log.lean:52 Nat.log2 vs Nat.log 2 convention; runBound_mono no docstring; ofBits in machine namespace; epic-named ComplexityTests/Consolidation. Not run: six gates, Axioms audit. Evidence .lake/codex-validation/machine-classes-consolidation-api/review.json sha256 4562bb6d5d2cc97d7b39da1e544a54d61ae6d24a1a2fc1cd7db648688d0bf829"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Reduction.lean",
     "Complexity/Computability/Complexity/Classes/Ladner.lean",
@@ -2866,53 +2835,42 @@
    "report":
    "Both reviews requested changes: PSPACE shape claim, fixed-power forms, coverage-priorities section duplicates the board, link targets and wrapping.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Both reviews requested changes: PSPACE shape claim, fixed-power forms, coverage-priorities section duplicates the board, link targets and wrapping.",
-       "lease":
-       {"token": {"value": "663bf89dd169f190075c0d31e224eac2"},
-        "holder":
-        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-         "agent": {"value": "coordinator-sable"}},
-        "expires": 1792404658},
-       "branch": "work/docs-roadmap-refresh/coordinator-sable",
-       "blocked": false,
-       "assignee": {"value": "coordinator-sable"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Docs-only refresh, delta 6b954f70..65d016ba on base 0d8ef4bf, addressing both reviews. Dropped the Coverage priorities section (it duplicated the board's epics and cited an audit outside the repo). Iterated functions: landed forms stated exactly (fixed-power theorem, encoded and burn-in forms, optimized square-root bounds, permutation inversion); square-root bounds removed from the to-port list. Machine-class milestones: the space hierarchy needs a space-budgeted universal simulation; the time hierarchy and P strictly in EXP carry a polynomial simulation gap. UPSTREAM: #767 shapes only for L, DTIME and EXP; PSPACE noted as different and uncompared. README: links to the theorems' modules (Hamiltonian/Undirected, IP/GraphNonIsomorphism), time hierarchy stated with its polynomial gap for bit-string problems, prose wrapped at 100 characters. Checks: check_docs --config-only, all local links resolve. Author: coordinator-sable.",
       "snapshot":
       {"head": {"value": "65d016ba57621f8d924763578b51a707cb5cc1d7"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792389638,
-          "snapshot":
-          {"head": {"value": "65d016ba57621f8d924763578b51a707cb5cc1d7"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
-           "agent": {"value": "reviewer-sable-cor6"}},
-          "note":
-          "Correctness re-review of fix delta 6b954f70..65d016ba by reviewer-sable-cor6 (did not contribute). Both prior blocking findings resolved: UPSTREAM.md now scopes the #767 alignment to L, DTIME, EXP (matching LogSpace.lean:33,106, Time.lean:23, EXP.lean:19) and states that local PSPACE uses a different bound, not compared (matches Space.lean:22-25); ROADMAP fixed-power sentence (encoded and burn-in forms, optimized square-root bounds, permutation inversion) matches fixed_power_encoded/fixed_power_image (Encoded.lean), fixed_power_optimized family (Optimization.lean), permutation_inverse(_encoded) (Permutation.lean), and square-root bounds left the to-port list. Nits resolved: Hamiltonian link to Hamiltonian/Undirected.lean:592, GNI link to IP/GraphNonIsomorphism.lean:611, README time hierarchy states the polynomial gap (DTIME_ssubset_DTIME, encBits), parametric DTIME item removed, space-hierarchy sentence now accurate (needs a space-budgeted universal simulation; time hierarchy and P subset EXP via polynomial-overhead universal machine). No new inaccuracy; all 10 added links resolve; check_docs --config-only passes. Limitations: docs-only, no Lean build. Evidence: .lake/codex-validation/docs-roadmap-refresh-correctness/review.json sha256 f29c7d70f661fa52b3ea4088ba8dfb25180a4a0b474d2a332920b3dc848fffc6"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792389602,
-          "snapshot":
-          {"head": {"value": "65d016ba57621f8d924763578b51a707cb5cc1d7"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
-           "agent": {"value": "reviewer-sable-api6"}},
-          "note":
-          "API re-review of fix delta 6b954f70..65d016ba by reviewer-sable-api6 (did not contribute). Prior blocking finding resolved: the Coverage priorities section and its Further priorities paragraph are removed from ROADMAP.md; no dangling references; remaining anchors resolve. check_docs.py --config-only passes. README links now target the theorem modules; #767 note scoped to L, DTIME, EXP with an actionable PSPACE carve-out; fixed-power and machine-class edits are in-place updates. Residual non-blocking nit: README.md:46 (114 chars), :51 (114) and :53 (106) still carry prose after a link past column 100 (move the trailing prose to the next line); no codified wrap rule, so not blocking. New cosmetic nit: UPSTREAM.md:31-32 ragged wrap after the PSPACE sentence. Limitations: docs-only, no Lean build. Evidence: .lake/codex-validation/docs-roadmap-refresh-api/review.json sha256 2c9f9b1be0f70ba1d443fd359a3a46cea4690aee45325069eaed3300fa0e158d"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792390267,
+      "landed": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792389638,
+       "snapshot":
+       {"head": {"value": "65d016ba57621f8d924763578b51a707cb5cc1d7"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
+        "agent": {"value": "reviewer-sable-cor6"}},
+       "note":
+       "Correctness re-review of fix delta 6b954f70..65d016ba by reviewer-sable-cor6 (did not contribute). Both prior blocking findings resolved: UPSTREAM.md now scopes the #767 alignment to L, DTIME, EXP (matching LogSpace.lean:33,106, Time.lean:23, EXP.lean:19) and states that local PSPACE uses a different bound, not compared (matches Space.lean:22-25); ROADMAP fixed-power sentence (encoded and burn-in forms, optimized square-root bounds, permutation inversion) matches fixed_power_encoded/fixed_power_image (Encoded.lean), fixed_power_optimized family (Optimization.lean), permutation_inverse(_encoded) (Permutation.lean), and square-root bounds left the to-port list. Nits resolved: Hamiltonian link to Hamiltonian/Undirected.lean:592, GNI link to IP/GraphNonIsomorphism.lean:611, README time hierarchy states the polynomial gap (DTIME_ssubset_DTIME, encBits), parametric DTIME item removed, space-hierarchy sentence now accurate (needs a space-budgeted universal simulation; time hierarchy and P subset EXP via polynomial-overhead universal machine). No new inaccuracy; all 10 added links resolve; check_docs --config-only passes. Limitations: docs-only, no Lean build. Evidence: .lake/codex-validation/docs-roadmap-refresh-correctness/review.json sha256 f29c7d70f661fa52b3ea4088ba8dfb25180a4a0b474d2a332920b3dc848fffc6"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792389602,
+       "snapshot":
+       {"head": {"value": "65d016ba57621f8d924763578b51a707cb5cc1d7"},
+        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+       "reviewer":
+       {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
+        "agent": {"value": "reviewer-sable-api6"}},
+       "note":
+       "API re-review of fix delta 6b954f70..65d016ba by reviewer-sable-api6 (did not contribute). Prior blocking finding resolved: the Coverage priorities section and its Further priorities paragraph are removed from ROADMAP.md; no dangling references; remaining anchors resolve. check_docs.py --config-only passes. README links now target the theorem modules; #767 note scoped to L, DTIME, EXP with an actionable PSPACE carve-out; fixed-power and machine-class edits are in-place updates. Residual non-blocking nit: README.md:46 (114 chars), :51 (114) and :53 (106) still carry prose after a link past column 100 (move the trailing prose to the next line); no codified wrap rule, so not blocking. New cosmetic nit: UPSTREAM.md:31-32 ragged wrap after the PSPACE sentence. Limitations: docs-only, no Lean build. Evidence: .lake/codex-validation/docs-roadmap-refresh-api/review.json sha256 2c9f9b1be0f70ba1d443fd359a3a46cea4690aee45325069eaed3300fa0e158d"}}}},
    "paths": ["ROADMAP.md", "README.md", "UPSTREAM.md"],
    "id": {"value": "docs-roadmap-refresh"},
    "goal":
