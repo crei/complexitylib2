@@ -1397,7 +1397,7 @@
        "holder":
        {"session": {"value": "a0e20ed2f18f79a2430412c297824d94"},
         "agent": {"value": "worker-sable-tqbf"}},
-       "expires": 1792395122},
+       "expires": 1792395160},
       "branch": "work/tqbf-pspace-complete/worker-sable-tqbf",
       "blocked": false,
       "assignee": {"value": "worker-sable-tqbf"}}}},
@@ -2109,7 +2109,7 @@
     "agent": {"value": "worker-sable-undecid"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792395122,
+   "expires": 1792395160,
    "actor":
    {"session": {"value": "a0e20ed2f18f79a2430412c297824d94"},
     "agent": {"value": "worker-sable-tqbf"}}},
