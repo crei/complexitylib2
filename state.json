@@ -680,13 +680,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Both independent reviews of exact ac19679 APPROVED. Reopened for a mechanical attribution fix by coordinator-sable (worker-karn keeps authorship): provenance notes crediting Mathlib (Aaron Anderson, HahnSeries.SummableFamily.powers; Paul Cadman, BirdDet) for adapted code in Rational/QuantumSeries.lean and Rational/Determinant.lean, plus the two bibliography entries the author supplied; fresh delta reviews, then land.",
+     {"resume": "work/rational-hitting/worker-karn",
+      "report": "",
       "lease": null,
-      "branch": "work/rational-hitting/worker-karn",
+      "branch": "work/rational-hitting/coordinator-sable",
       "blocked": false,
-      "assignee": {"value": "worker-karn"}}}},
+      "assignee": {"value": "coordinator-sable"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
     "Complexity/Computability/Circuit/Rational",
