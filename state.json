@@ -1892,7 +1892,7 @@
        "holder":
        {"session": {"value": "abc254b86ea9eef6d4f1c5836328aaff"},
         "agent": {"value": "worker-sable-b2"}},
-       "expires": 1792391667},
+       "expires": 1792391937},
       "branch": "work/b2-lower-bound/worker-sable-b2",
       "blocked": false,
       "assignee": {"value": "worker-sable-b2"}}}},
@@ -2213,7 +2213,7 @@
     "agent": {"value": "worker-sable-npbuilder"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792391667,
+   "expires": 1792391937,
    "actor":
    {"session": {"value": "abc254b86ea9eef6d4f1c5836328aaff"},
     "agent": {"value": "worker-sable-b2"}}},
