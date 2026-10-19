@@ -2267,7 +2267,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "f6293d163ad5bad8365eb854cd1c9bd6"},
+       "holder":
+       {"session": {"value": "b1cbc8b7223d2f96ea57cc362686fe08"},
+        "agent": {"value": "worker-sable-relativ"}},
+       "expires": 1792401828},
       "branch": "work/relativization-2/worker-sable-relativ",
       "blocked": false,
       "assignee": {"value": "worker-sable-relativ"}}}},
@@ -2280,7 +2285,7 @@
    "Milestone 2 of relativization: an oracle A with P^A = NP^A, using TQBF (PSPACE-complete, from tqbf-pspace-complete): NP^TQBF within NPSPACE = PSPACE within P^TQBF, on the native oracle classes of relativization. Also oracle monotonicity A <=p B implies P^A within P^B once open-oracle-substitution provides open substitution. Cite BakerGillSolovay1975. Tests, axiom guards, six gates, frozen submission.",
    "dependencies":
    [{"value": "relativization"}, {"value": "tqbf-pspace-complete"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-relativ"}]},
   {"resume": null,
    "report": "",
    "phase": "unassigned",
