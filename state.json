@@ -1958,7 +1958,9 @@
       "snapshot":
       {"head": {"value": "48291a11dcb757bb1c02a8984f35191d0da5883b"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
     "Complexity/Foundations/Combinatorics/AffineDisperser.lean",
