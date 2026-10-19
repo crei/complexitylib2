@@ -866,15 +866,18 @@
        "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "18ba66707e4a3fea388f583f487d1f5e"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792371825,
+          "snapshot":
+          {"head": {"value": "d722dfa81615ac554d4d328538577f2fc0da6e60"},
+           "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
+          "reviewer":
           {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
            "agent": {"value": "reviewer-sable-cor3"}},
-          "expires": 1792386138},
-         "blocked": false}},
+          "note":
+          "Correctness review of exact base a0952ac / head d722dfa by reviewer-sable-cor3 (independent: no contribution; read-only in own worktree). Scope: Boolean/Word.lean, Boolean/Iteration.lean, Iteration/{Residue,Selection,Record,RecordCircuit,Decoder,Encoded,Permutation,Optimization}.lean, FunctionalGraph addition, ComplexityTests/Iteration.lean. Evidence: all 12 modules built --wfail --iofail, no warnings; no sorry/axiom/native_decide/set_option. fixed_power_on matches the epic goal (finite invariant S, 0<L<=2^n, ComputesOn, 40000*powerBudget, powerBudget = L*s+(n+1)^3*(L+M/L+1)); De Morgan basis with constants charged, free wiring; prefix orbit, residue tables, lookups, Batcher sort, collision scan and reconstruction all charged via Synthesis; construction_cost and |H|<=|S|/L close the bound. Word counts exact as charged: add 12w+1, sub 13w+1, ult 5w+2, eq_const 2k+1; selectBits fix correct. Consequences honest. Own probes pass: n=0; 5-gate 2-bit increment (4-cycle) with inverse=decrement at L=2^n=4, T=1003 vs T mod 4, T=0; non-injective shift on invariant {00,01}, burn-in, periodicity 00 yes/11 no; encoded inverse on ULift.{2} Bool; encoded non-injective map on Fin 5; optimized/half-exponent at n=0; 2-bit sub/ult circuits; oversized-table selector. 23 axiom prints: standard three (reconstruct_spec propext+Quot.sound). Nits: RecordCircuit.lean:20-21 says sorter bound is per record bit and comparison layer (it is total 18 d^2 2^d (width+1)); tests lack concrete clients for permutation_inverse_encoded/fixed_power_image/fixed_power_on_optimized; selectBits repeats comparisons per output bit. Limitations: no local iterating-functions clone (compared to epic goal); check.sh not re-run. Evidence: .lake/codex-validation/iteration-fixed-power-correctness/review.json SHA256 5b52707dcc17f0cce62ecda7aca72244e2712464f5decd6937d0fde69811561e"}}},
        "api":
        {"finished":
         {"review":
