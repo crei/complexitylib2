@@ -3437,7 +3437,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "Uniformity check: the landed NW generator has no polynomial-time certificate (purely mathematical; Design.polynomial is noncomputable). Also Design.polynomial has seed length 4n^2, which only yields quasi-polynomial derandomization; P = BPP from 2^(eps n) hardness needs linear-seed designs. Plan (in scope): greedy maximal design of n-subsets of [l] as bit masks with l = O(n), counting bound |F| C(n,a+1)^2 >= C(l,a+1), its fold certificate, a poly-time NW generator over E-functions (DTIME 2^(kn) bridged via ComputableTidilyInO), seed enumeration and majority; nonuniform hardness hypothesis with explicit slack.",
       "lease":
       {"token": {"value": "7baefd613093baaa8d14d3d983d15b38"},
        "holder":
