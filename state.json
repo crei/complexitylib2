@@ -750,7 +750,16 @@
        "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor2"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "bea1d3cb412e14050c8823475724961b"},
+          "holder":
+          {"session": {"value": "33380288772710be7744d177c8f66871"},
+           "agent": {"value": "reviewer-sable-api2"}},
+          "expires": 1792382877},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode",
