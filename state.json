@@ -2344,15 +2344,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "cd52d0ad861c2db9b6f56b1cbc4cb542"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792389421,
+          "snapshot":
+          {"head": {"value": "fc182c17bb1bc31d99e48c38ab30df619d76b22e"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
            "agent": {"value": "reviewer-sable-cor2"}},
-          "expires": 1792403694},
-         "blocked": false}},
+          "note":
+          "Correctness review of exact head fc182c17 (base 0d8ef4bf) by reviewer-sable-cor2; independent (sole author worker-sable-prob). Built Chernoff, KWiseIndependent(+Polynomial), LocalLemma, ComplexityTests.ProbabilityToolkit with --wfail --iofail: ok. No sorry/native_decide/axiom/set_option in diff; #print axioms of 18 headlines = propext, Classical.choice, Quot.sound. Math: upper tails (mean<=mu, delta>=0) sharp/(2+delta)/delta<=1 forms and lower tail (mu<=mean) exp(-delta^2 mu/2), two-sided 2exp(-delta^2 mean/3) for delta<=1 match Mitzenmacher-Upfal Thm 4.4/4.5/Cor 4.6; bitstring forms are mu=n/2 specialisations. k-wise def implies distinct-points form (probe); 2m-moment tail (m^2|S|/a^2)^m correct; polynomial degree<k family standard (Lagrange). LLL lopsided hypothesis and asymmetric/symmetric (e q (d+1)<=1) forms correct; product versions use Disjoint coordinate sets via toOuterMeasure_pi_inter_eq_mul. Probes (all compile): Chernoff on non-identical Bernoulli coins with mu strictly above/below mean, negative probe that upper tail fails without mean<=mu, k-wise tail <0.03 for 4-wise poly hash over F_101, LLL d=1 symmetric and asymmetric on overlapping 3-clauses. Blocking: none. Nits: axiom guards omit a few secondary headlines; k-th moment only for even k; at-most-k convention stronger than distinct-points when |X|<k. Not checked: API, six gates. Evidence: .lake/codex-validation/probability-toolkit-correctness/review.json sha256 3b3c0b36eb5cf03ff0c2264ff6aea07e72da913866feee9011df32457f354635"}}},
        "api":
        {"active":
         {"report": "",
