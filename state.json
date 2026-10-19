@@ -1644,8 +1644,7 @@
    {"working":
     {"work":
      {"resume": null,
-      "report":
-      "API review (reviewer-sable-api2): Ladner.ofBits_bits duplicates main Nat.foldr_bit_bits (Kolmogorov/SelfDelimiting.lean); use it and delete the copy. Cheap nits: notMem naming, plain import of CookLevin.Completeness. Placement follow-ups recorded separately.",
+      "report": "",
       "lease": null,
       "branch": "work/ladner/worker-sable-ladner",
       "blocked": false,
