@@ -1920,7 +1920,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "1434775c4ca9297a91b90925a7db0d59"},
+       "holder":
+       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+        "agent": {"value": "coordinator-sable"}},
+       "expires": 1792398495},
       "branch": "work/docs-bibliography/coordinator-sable",
       "blocked": false,
       "assignee": {"value": "coordinator-sable"}}}},
@@ -1929,7 +1934,7 @@
    "goal":
    "Docs-only (coordinator batch): add the bibliography entries cited by main and by the five finished worker epics, in cslib format, to references.bib and its required copy docbuild/docs/references.bib: Cutland1980 and KatzLindell2020 (already cited on main), BakerGillSolovay1975 (relativization), GoldwasserMicaliRackoff1989 and GoldreichMicaliWigderson1991 (interactive-proofs), GareyJohnson1979 (np-complete-graphs), BenSassonKopparty2012, Ore1933 and Bourgain2007 (explicit-affine-disperser), MishraSanthanam2026 and FindGolovnevHirschKulikov2016 (b2-lower-bound). Every entry checked against the publisher record (authors, title, venue, volume, pages, year, DOI); no other edits. Gates: the six plus scripts/check_docs.py --config-only.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "coordinator-sable"}]}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
