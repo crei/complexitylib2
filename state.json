@@ -1059,7 +1059,16 @@
        "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor3"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "cb48dfb1231fb0c0090bf9f667df5a8d"},
+          "holder":
+          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+           "agent": {"value": "reviewer-sable-api3"}},
+          "expires": 1792383553},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/Metric.lean",
     "Complexity/Computability/Circuit/Metric.lean",
