@@ -1958,7 +1958,16 @@
        "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor7"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api7"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "b34a294bffc1dfd63f30769669940f4a"},
+          "holder":
+          {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
+           "agent": {"value": "reviewer-sable-api7"}},
+          "expires": 1792400508},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Complexity.lean",
     "Complexity/Computability/Circuit/Pointwise.lean",
