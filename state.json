@@ -2351,6 +2351,24 @@
    "goal":
    "Continuation of hierarchy-theorems: the deterministic space hierarchy theorem on the native machines. DSPACE (encoded analogue of cslib PR #767 conventions, consistent with Classes/Space and logspace-nl), SpaceConstructible, a space-budgeted variant of the in-place universal run (no second universal machine), the configuration-counting bound on running time of space-bounded deciders, DSPACE(f) strictly inside DSPACE(g) with the universal machine overhead stated honestly, and L strictly inside PSPACE as a corollary. Tests, axiom guards, six gates, frozen submission.",
    "dependencies": [{"value": "hierarchy-theorems"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/Time.lean",
+    "Complexity/Computability/Complexity/Classes/Exponential.lean",
+    "Complexity/Computability/Complexity/Classes/ZPP.lean",
+    "Complexity/Computability/Complexity/Classes/Inclusions.lean",
+    "Complexity/Computability/Complexity/Classes/Padding.lean",
+    "Complexity/Computability/Complexity/Classes/PH/Collapse.lean",
+    "Complexity/Computability/Complexity/Classes/BPP/Amplification.lean",
+    "Complexity/Computability/Circuit/Boolean/ACC.lean",
+    "ComplexityTests/ResourceClasses.lean"],
+   "id": {"value": "resource-class-spine"},
+   "goal":
+   "Coverage epic 2 (see scratchpad coverage-audit.md): the structural spine papers cite in preliminaries, building on the DTIME/EXP of hierarchy-theorems (one definition only): NTIME, BPTIME, E, NE, NEXP, ZPP with ZPP = RP inter coRP; inclusions P within NP within PSPACE within EXP, PH within PSPACE, P within BPP, RP within BPP, NP within PP and PP closed under complement where missing; class-level error reduction for BPP and RP (exponentially small error); padding (P = NP implies EXP = NEXP) with a generic translation lemma; PH collapse lemmas (SigmaP k = PiP k implies PH = SigmaP k, P = NP implies P = PH, NP = coNP implies PH = NP); ACC0 as the union of AC0 with MOD-q gates and NC within P where the uniform classes exist. Reuse Classes/*, Hierarchy, Savitch, MajorityVote, DepthClasses. Tests, axiom guards, six gates, milestones.",
+   "dependencies": [{"value": "hierarchy-theorems"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
