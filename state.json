@@ -1609,7 +1609,7 @@
        "holder":
        {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
         "agent": {"value": "worker-sable-ladner"}},
-       "expires": 1792391159},
+       "expires": 1792391569},
       "branch": "work/ladner/worker-sable-ladner",
       "blocked": false,
       "assignee": {"value": "worker-sable-ladner"}}}},
@@ -2142,7 +2142,7 @@
     "agent": {"value": "worker-sable-hier"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792391159,
+   "expires": 1792391569,
    "actor":
    {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
     "agent": {"value": "worker-sable-ladner"}}},
