@@ -2522,7 +2522,15 @@
    "authors": [{"value": "worker-sable-stretch"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/circuits-karp-lipton/worker-sable-numbers",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-numbers"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/Encoding.lean",
     "Complexity/Computability/Circuit/Boolean/Encoding",
