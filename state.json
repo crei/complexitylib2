@@ -759,7 +759,7 @@
     {"work":
      {"resume": "work/native-exponential-separation/worker-opus",
       "report":
-      "Land now through the base == main path instead of waiting for the reopened merge-queue tooling: mechanical merge of main 26253c9 (disjoint files) by integrator-sable-1, six gates, short delta reviews of the merge, land. It unblocks undecidability, hierarchy-theorems, ladner and relativization.",
+      "PUBLICATION REQUEST: 764e3b859b495b441073f0018387ac67ae2403c7 on work/native-exponential-separation/integrator-sable-1. Content: the already twice-approved 4de95cd plus a clean merge of main 26253c93eed5bfed0f4cffe337328b549d96cd18 and nothing else (no conflicts; combined merge diff empty; diff vs origin/main is the same 9-file delta as 4de95cd, 989 insertions/1 deletion; no stale references to Universal.Decode.Basic, Diagonal.exists_le_mul_two_pow, encDoubled or doubleT). Validation on 764e3b8: scripts/check.sh all six gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Contributors: worker-opus (implementation), integrator-sable-1 (integration under coordinator-sable). AI assistance: Claude.",
       "lease":
       {"token": {"value": "7fa346b605f2d3ac841c4a33d779d619"},
        "holder":
