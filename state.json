@@ -2424,7 +2424,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "Scope request: the notMem rename (diagonal_not_mem_P -> diagonal_notMem_P, deprecated alias) makes term uses in ComplexityTests/TimeHierarchy.lean (lines 103, 116; free, epic merged) and ComplexityTests/Relativization.lean:91 (held by relativization-2) emit deprecation warnings, failing lake test --wfail. Please add ComplexityTests/TimeHierarchy.lean to my paths; for Relativization.lean, either let me edit its one use or have relativization-2 switch to diagonal_notMem_P. Continuing with the rest meanwhile.",
       "lease":
       {"token": {"value": "f2bc825304723cc80a042b30f59cd335"},
        "holder":
