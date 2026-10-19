@@ -2335,7 +2335,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "819e46a5839dfd07fdf128801175e2d5"},
+       "holder":
+       {"session": {"value": "7a912ae683ce14b4dd5e08d1e74bc468"},
+        "agent": {"value": "worker-sable-codes"}},
+       "expires": 1792401112},
       "branch": "work/coding-theory/worker-sable-codes",
       "blocked": false,
       "assignee": {"value": "worker-sable-codes"}}}},
@@ -2348,7 +2353,7 @@
    "goal":
    "Coverage epic 7: algebraic coding theory, reusing Foundations/Data/{Hamming, HammingBound, ListDecoding}.lean, BooleanAnalysis/Hadamard.lean, Foundations/Combinatorics/LineCode and Mathlib polynomial roots and MvPolynomial.schwartz_zippel_totalDegree; check Mathlib (Mathlib.InformationTheory.Hamming, any linear-code API) before defining anything. Endpoints: linear codes and the Singleton bound; Reed-Solomon codes with distance n - k + 1; Reed-Muller codes with distance via Schwartz-Zippel; Berlekamp-Welch unique decoding (correctness; an efficient-algorithm claim only with a certificate); the Johnson bound; Sudan list decoding of RS (interpolation plus root containment); concatenation and an explicit asymptotically good binary code; local decoding of RM along lines connecting LineCode. Tests, axiom guards, six gates, frozen submissions per milestone; cite Guruswami-Rudra-Sudan or MacWilliamsSloane (propose entries).",
    "dependencies": [],
-   "authors": []},
+   "authors": [{"value": "worker-sable-codes"}]},
   {"resume": null,
    "report": "",
    "phase":
