@@ -1253,7 +1253,12 @@
      {"resume": null,
       "report":
       "Both round-2 reviews of 4bf0094 approved. Reopened for the merge of main d42eefc (required by the current base == main landing rule), the reviewer-suggested content-exact final-tree guard and two doc nits; fresh delta reviews by the same reviewers, then land by fast-forward.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "e39c5219e7298c925c596a7bfa5aa375"},
+       "holder":
+       {"session": {"value": "c2a2464e315d85c0a64cfb5108d1ea0e"},
+        "agent": {"value": "worker-sable-tooling"}},
+       "expires": 1792389470},
       "branch": "work/merge-queue-landing/worker-sable-tooling",
       "blocked": false,
       "assignee": {"value": "worker-sable-tooling"}}}},
