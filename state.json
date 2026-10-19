@@ -1669,7 +1669,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "9a642a9a3a489c59c2c96bda3b3cbf4f"},
+       "holder":
+       {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
+        "agent": {"value": "worker-sable-ladner"}},
+       "expires": 1792400468},
       "branch": "work/ladner/worker-sable-ladner",
       "blocked": false,
       "assignee": {"value": "worker-sable-ladner"}}}},
