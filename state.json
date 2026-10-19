@@ -750,55 +750,17 @@
    "authors": [{"value": "worker-karn"}, {"value": "coordinator-sable"}]},
   {"resume": null,
    "report":
-   "Plan accepted. R1-R3 are approved and added to your scope (see revised goal for exact paths). Suggested order: R2 + R1 as milestone 0 (binary integers with add/sub/mul/sign and size lemmas, reusable on their own), then M1 determinant, R3 with M2. Submit milestone 0 as soon as it is clean so it can land early.",
+   "API review (reviewer-sable-api7) requested changes: rename the 13 public *_polytime certificates in Runtime/Parameters.lean:104-205 to computableTidilyInPolyTime_<f> (library convention, 163 uses) and use namespace Cslib.Circuits.Rational unless Runtime is justified. Correctness approved.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Milestone 0 ready for gates. It contains:\n- R2: binary_sub as a borrow fold, binary_foldr_bit, binary_pow, plus Nat.size add/mul/pow/sum lemmas, all added to PolyTime/Nat/Binary.lean (existing declarations untouched).\n- R1: encIntBin z = sign bit :: binary magnitude, with length = natAbs.size + 1 = intBits and zero code [false] unique. Certified intBin_neg/add/sub/mul/pow/natAbs/natCast/isNeg/isZero/isPos/sign/toNat/lt/le/signMagnitude and intBin_sum over encList, with composition forms and Int size lemmas.\n- The already-reported pure Runtime/Determinant, Runtime/Parameters and Runtime/Lift (pure lift tables with equality lemmas and intBits bounds; the beta-sum is eliminated).\nThe tests for the integer API sit at ComplexityTests/RationalHitting/IntBinary.lean to stay inside scope; please say if you would rather have them at ComplexityTests/IntBinary.lean.\nRunning all six gates now. Before I call ready, please record the continuation, i.e. M1 detRows_polytime, M2 binary divMod/gcd and the encodeRat/divInt serializer, M3 lift-table certificates, M4 point words, M5 the full generator endpoint. Then revise this epic to milestone 0 as delivered, or tell me to keep going on the same epic.",
-       "lease":
-       {"token": {"value": "d3baee9264808b709b251af4420b25dd"},
-        "holder":
-        {"session": {"value": "9d337a1ee8541975a1472b2a6af80742"},
-         "agent": {"value": "worker-karn"}},
-        "expires": 1792406077},
-       "branch": "work/rational-hitting-runtime/worker-karn",
-       "blocked": false,
-       "assignee": {"value": "worker-karn"}},
-      "summary":
-      "MILESTONE 0 of rational-hitting-runtime, submitted at 8e63eac on work/rational-hitting-runtime/worker-karn. Current origin/main is merged in. All six gates passed on e4738ae4+fix (the commit before the last mechanical main merge). After that merge, mk_all --check and a build --wfail of the whole Complexity library plus the four Rational runtime tests pass. 12 files, +2619 lines.\n\nR2 — PolyTime/Nat/Binary.lean (additions only):\n- Nat.size_add_le_max, size_mul_le, size_pow_le, size_sum_le, size_le_self.\n- Turing.MultiTapeTM.BinarySub, a schoolbook borrow fold with sub_eq.\n- Certified (all @[fun_prop]): binary_foldr_bit (raw digits to a normalized binary Nat), binary_sub (truncated), binary_pow (binary base, unary exponent), and the composition forms binary_mul'/sub'/pow'. Comparison already existed (binary_lt/le).\n\nR1 — encoding and certificates:\n- Encodings/IntBinary.lean: encIntBin z = decide (z < 0) :: encNat z.natAbs. Length = natAbs.size + 1; the code of zero, [false], is unique.\n- PolyTime/Int/Binary.lean: Int.size_natAbs_add/sub/mul/pow/sum lemmas.\n- Certified (all @[fun_prop]): intBin_neg, add, sub, mul, pow, natAbs, natCast, isNeg, isZero, isPos, sign, toNat, lt, le, signMagnitude; intBin_sum over encList with its size invariant; and composition forms.\n- Every operation is an ordinary functional program over the Nat binary primitives. No new machines.\n\nRuntime groundwork (Circuit/Rational/Runtime; independently useful, with no poly-time claim beyond Parameters):\n- Determinant.lean:\n  - detRows, a list program for the staged Bird determinant (dimension = number of rows, missing entries 0).\n  - detRows_eq : detRows (rowsOf A) = A.det, plus the ragged-input form detRows_eq_det_ofRows.\n  - The v1 stage bounds (step_bound, stages_bound, stages_power_bound) ported.\n  - intBits z := Nat.size z.natAbs + 1, and per-step bit bounds for every prefix sum, product and entry. These are the size invariant for M1.\n- Parameters.lean: all generator parameters (N, e, M, Dg, H, d) and (hittingList n s).dimension certified ComputableTidilyInPolyTime from unary inputs, using existing APIs only. Equality lemmas ambientDimension_eq and degree_eq.\n- Lift.lean:\n  - Integer lift tables as list programs: shift-add coefficient rows instead of Nat.choose; List.range sums in place of the ZMod/Fin sums; the redundant beta-sum eliminated, so each entry is an M^2-term sum.\n  - Equality lemmas to IntegralTest/IntegralLift/inputTables.\n  - intBits bounds for every term, prefix sum and entry.\n  - Partial port of v1 TaylorComputation/LiftComputation, credited.\n\nTests (ComplexityTests/RationalHitting/{IntBinary,Determinant,Parameters,Lift}.lean):\n- Concrete codes and values by decide +kernel.\n- Composed fun_prop clients, e.g. fun p : Z x Z => p.1 * p.2 - p.2.\n- Satisfiable instances of the size lemmas.\n- #print axioms guards on all headline theorems: [propext, Classical.choice, Quot.sound] only.\n\nAuthors and credit:\n- New files: Samuel Schlesinger, per repo convention; please adjust if needed.\n- Runtime/Determinant and Runtime/Lift are partial v1 ports: OpenAI, Samuel Schlesinger, citing [OpenAI2026RationalHitting] and [Schlesinger2026RationalHitting].\n\nCONTRIBUTORS (AI-assisted): worker-karn (Claude Code agent for karnseth) and its implementation subagents in separate worktrees: intbin, det, param, lift.\n\nCENTRAL EDITS: none required. Optional Axioms.lean guards: Turing.MultiTapeTM.ComputableTidilyInPolyTime.{binary_sub, binary_pow, intBin_add, intBin_mul, intBin_sum}, Cslib.Circuits.Rational.detRows_eq.\nOptional ROADMAP line: \"Binary sign-magnitude integers with certified arithmetic (encIntBin) are available; the rational hitting-list runtime certificate continues.\"\n\nLIMITATIONS:\n- Lift.lean's coeffRows recomputes rows (polynomial, not optimal).\n- The liftBits budget inherits the loose landed logarithmic bound.\n- Integer API tests live under RationalHitting/ to stay in scope; please move them if you prefer.\n\nREMAINING (please record as a continuation epic):\n- M1: detRows_polytime, using intBin_* with the stage invariant.\n- M2: R3 binary divMod/gcd and the encodeRat/divInt serializer.\n- M3: lift-table certificates.\n- M4: per-point output words.\n- M5: grid, tuple count, parser, and the full hittingGenerator endpoint with malformed input giving [].",
-      "snapshot":
-      {"head": {"value": "8e63eaca4cc31a99e9df7d9f0a60120fc9aa8ed3"},
-       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792390893,
-          "snapshot":
-          {"head": {"value": "8e63eaca4cc31a99e9df7d9f0a60120fc9aa8ed3"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
-           "agent": {"value": "reviewer-sable-cor7"}},
-          "note":
-          "Independent correctness review (reviewer-sable-cor7, no contribution) of exact head 8e63eac, base 0d8ef4b verified ancestor. Built 6 touched modules + 4 RationalHitting tests with nice --wfail --iofail: success, 0 warnings. Own probes (all pass; negative controls rejected): encIntBin injective, length natAbs.size+1 brute-forced on -20..20, [false] unique zero code and [true] not a code; borrow-fold sub = truncated Nat sub for all a,b<24 plus edges; signMagnitude drops sign of zero; intBin_add case program = + on -7..7^2; elaborated statements of intBin_add/sub/mul/neg/toNat/sign/pow and binary_sub/pow are the intended functions; size lemmas attained at witnesses (add_max, mul, pow k=0, sum, Int on negatives). #print axioms of 24 representative decls: propext, Classical.choice, Quot.sound only. No sorry/native_decide/axiom/set_option in touched files. No overclaim: only Parameters claims poly time (unary params); nothing about rational formula bit complexity. Blocking: none. Nits/follow-ups: Runtime/Determinant.lean:182 intBits duplicates (encIntBin z).length with no bridge lemma (M1 needs it); Determinant.lean:24-26 says every partial sum and product is bounded but individual product terms are not stated separately; size_pow_le +1 slack for k>=1; liftBits loose (53 vs 4654 bits at n=s=0, documented, polynomial). Not checked: six gates, pre-existing PolyTime/fold framework, API/placement, citations. Evidence .lake/codex-validation/rational-hitting-runtime-correctness/review.json sha256 73f593a1236f8e23531970d661ae0cd49c44f5c733d452294739f0612905c0b4."}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "changes",
-          "time": 1792391047,
-          "snapshot":
-          {"head": {"value": "8e63eaca4cc31a99e9df7d9f0a60120fc9aa8ed3"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
-           "agent": {"value": "reviewer-sable-api7"}},
-          "note":
-          "API review by reviewer-sable-api7 (independent; no contribution). Scope: 0d8ef4b..8e63eac, 12 files. Evidence: nice lake build of the 6 touched modules + 4 RationalHitting tests --wfail --iofail exit 0; own probe: 354 constants of the touched modules within propext/Classical.choice/Quot.sound, composed intBin fun_prop clients elaborate. No Int binary encoding exists in cslib/Mathlib/Complexity (only unary encInt); integer ops are ordinary functional programs, no new machines; docstrings honest (Runtime Determinant/Lift claim no poly-time). BLOCKING: Runtime/Parameters.lean:104-205 names 13 public certificates *_polytime; library convention is computableTidilyInPolyTime_<f> (163 at base, 0 *_polytime), and the M1-M5 plan would propagate it. Rename, and use namespace Cslib.Circuits.Rational like Determinant/Lift (or justify Runtime). NON-BLOCKING: Nat/Binary.lean:397 binary_foldr_bit duplicates ofBits/Decoder.nat now on main (Encodings/Decoder.lean), so reconcile at the main merge; Determinant.lean:182 intBits duplicates (encIntBin z).length / natAbs.size, so add a bridge before M1; move the IntBinary tests out of RationalHitting/; BinarySub->NatSub (crei NatAdd/NatMul); generic lemmas public in Rational namespace; tabulateRows lemmas belong in Determinant; intBin_neg vs unary int_neg; AroraBarak09 cite. Not run: six gates, dependents of Nat/Binary. Evidence .lake/codex-validation/rational-hitting-runtime-api/review.json sha256 db6e7e1c1e760529855cdc18dfe96679dfe09fef76f88b6941fe8cd0b92aac71"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "API review (reviewer-sable-api7) requested changes: rename the 13 public *_polytime certificates in Runtime/Parameters.lean:104-205 to computableTidilyInPolyTime_<f> (library convention, 163 uses) and use namespace Cslib.Circuits.Rational unless Runtime is justified. Correctness approved.",
+      "lease": null,
+      "branch": "work/rational-hitting-runtime/worker-karn",
+      "blocked": false,
+      "assignee": {"value": "worker-karn"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
     "Complexity/Computability/Circuit/Rational",
