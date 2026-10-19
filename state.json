@@ -2679,6 +2679,15 @@
    "goal":
    "Coverage epic 8: ETH, SETH and fine-grained reductions in the library time model (the DTIME of hierarchy-theorems; one definition). M1: ETH, SETH (with the exponents s_k) and the orthogonal-vectors hypothesis as Props with exact quantifiers; via the formalized sparsification lemma (Logics/Propositional/ClauseSet/Sparsification), ETH iff no 2^(o(m)) algorithm for 3SAT; SETH implies OVH (Williams 2005). M2: ETH implies no 2^(o(n)) algorithms for 3-coloring, independent set, vertex cover and clique, via size-tracked versions of the landed reductions (state the linear size bounds explicitly; do not change the existing NP-completeness statements). M3: the PPZ algorithm and its running time from CNF/Coding if cheap. Cite ImpagliazzoPaturi2001, ImpagliazzoPaturiZane2001, Williams2005 (propose entries). Tests, named axiom guards, six gates.",
    "dependencies": [{"value": "hierarchy-theorems"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths": ["ROADMAP.md", "README.md", "UPSTREAM.md"],
+   "id": {"value": "docs-roadmap-refresh"},
+   "goal":
+   "Docs-only: refresh ROADMAP.md (landed Fagin, fixed-power, rational hitting, time hierarchy, logspace and Sipser-Lautemann; machine-class milestones; a coverage-priorities section from the citation audit), README.md selected developments (structural complexity, IP, NP-complete problems, Fagin) and UPSTREAM.md (#767 alignment of L/PSPACE/DTIME/EXP; probabilistic IterateWhile helpers). No Lean changes. check_docs, two reviews.",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
