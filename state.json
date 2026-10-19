@@ -1,25 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
-   "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
-  "main": {"value": "59b6eced334cffb786e5500118f136f3e1cbe94a"},
-  "lease":
-  {"token": {"value": "5e9ffb8e4b3215cdaaee68b557d3af60"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792402674},
-  "epic": {"value": "open-oracle-substitution"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
-     "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
-    "epic": {"value": "open-oracle-substitution"}},
-   {"snapshot":
-    {"head": {"value": "a985c34e8b51810236373caa8dc7435233308a49"},
-     "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
-    "epic": {"value": "hierarchy-theorems"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -621,53 +601,42 @@
    "report":
    "Next for worker-sable-oracle once open-oracle-composition lands (both reviews approved 3eb6238). First, small follow-ups from its reviews inside this same scope: make the restated IterateWhile tape-helper block in Probabilistic/IterateWhile.lean module-private (it duplicates crei module-private helpers and must not become a second public API), add References sections to Probabilistic/QueryTake.lean and Languages/Probabilistic/Oracle/Support.lean (cite the tidy/TransformsTapes source), and add a short-output failure boundary refuted through IsOraclePPTOn.query_bounds (request charges) to ComplexityTests/OracleComposition.lean. Then the substitution theorem and the two-level cache client as the goal states.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Checkpoint: follow-ups done (private IterateWhile helpers, References in QueryTake/Support, request-length boundary via query_bounds). Open interpreter OpenOracleSimulation.{step, step_eq_run_interpret, isOraclePPTOn_step, isOraclePPTOn_run} and headline IsOraclePPTOn.run_interpret_preprocess_open + IsOraclePPT.run_interpret_preprocess_open compile (stacking lemma ProbOracleComp.run_interpret_run_interpret). Next: IsOraclePPTOn.memoize contract (hit makes no call), two-level cache client, substitution failure boundaries, tests.",
-       "lease":
-       {"token": {"value": "8ca12df677751a6e711a8ee22b85c925"},
-        "holder":
-        {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
-         "agent": {"value": "worker-sable-oracle"}},
-        "expires": 1792401095},
-       "branch": "work/open-oracle-substitution/worker-sable-oracle",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-oracle"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Head 5e88dee base main ec48c1a. Milestone 1. IsOraclePPTOn.run_interpret_preprocess_open: program IsOraclePPTOn; handler a q s : WordOracleComp External (List Bool × State) IsOraclePPTOn on (caller,(op,request),state); invariant over ProbOracleComp.support, computable additive allowance on replies and state growth ⊢ IsOraclePPTOn input (encPair output stateEncoding) of the substituted program (handler lift ∘ sample ∘ unifFin); joint law of result, handler and external state, no external reply bound. IsOraclePPT.run_interpret_preprocess_open. Closed run_interpret_preprocess and OracleSimulation.isPPTOn_step/run now corollaries (External := Empty; IsOraclePPTOn.isPPTOn, sample_run_interpret, runOracle_eq_sample_runClosed), statements unchanged. Core OpenOracleSimulation.{step, step_eq_run_interpret, isOraclePPTOn_step, isOraclePPTOn_run}, ProbOracleComp.run_interpret_run_interpret; IsOraclePPTOn.memoize (fun_prop, hit makes no call). Follow-ups: private IterateWhile helpers, References, request-length boundary. TESTS: two-level cache client certified, exact counting-oracle law (2 calls, cached reply); full-reply copy and state doubling refuted; axiom guards. CHECKS: six gates pass. BURDEN +126 proof lines. CREDIT crypto 5ff69ca; crei tidy. CONTRIBUTORS worker-sable-oracle. CENTRAL: Axioms guards; UPSTREAM note on IterateWhile copy. No bib. CONTINUATION: derive reply bound from handler length; relativization.",
       "snapshot":
       {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
        "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792387635,
-          "snapshot":
-          {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
-           "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
-          "reviewer":
-          {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
-           "agent": {"value": "reviewer-sable-cor6"}},
-          "note":
-          "Independent correctness review (reviewer-sable-cor6, no contribution). Scoped build of 15 touched modules + OracleComposition, OracleComposition.Substitution, OraclePPT, RandomOracle tests --wfail --iofail: OK (IterateWhile importers rebuilt). Open theorem: conclusion is IsOraclePPTOn of the substituted run, i.e. equality of the joint law of (result, handler state) and external state for every external oracle; run_interpret_run_interpret makes the joint handler explicit. Hypotheses honest: handler certificate over all external oracles/reply lengths; invariant over support bounds handler reply and additive state growth by poly-time resources(caller,request); no external reply bound. Satisfiable: cache client + exact counting law; my own witness (forwarding handler, unary call counter) discharges all hypotheses. Closed statements textually identical to base (script), now External:=Empty corollaries. Boundaries genuine: free reply copying breaks the clock (copy handler itself uncertified, my probe); per-call-PPT doubling handler + PPT client gives 2^n state, refuting substitution without growth allowance. 22 axiom probes std only; no sorry/native_decide/axiom/set_option. Blocking: none. Nit: test comment that copyReply has no certificate is unproved there. Limits: no full gates. Evidence .lake/codex-validation/open-oracle-substitution-correctness/review.json sha256 99457b7ec82ace321ed9d1face88d8540984ece62c927158bd3bdf894ffd2b3c"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792387636,
-          "snapshot":
-          {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
-           "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
-          "reviewer":
-          {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
-           "agent": {"value": "reviewer-sable-api6"}},
-          "note":
-          "API review by reviewer-sable-api6 (independent; author worker-sable-oracle). Scope ec48c1a..5e88dee, 19 files in epic paths. Evidence: 36 targets built --wfail --iofail, 0 warnings (touched modules, both tests, 15 direct importers, closed-substitution users Normalization, Boosting.Program, PRF.RandomOracle, RandomOracle test). Closed statements unchanged: signatures of IsOraclePPTOn/IsOraclePPT.run_interpret_preprocess, query_bounds, OracleSimulation.{step,step_eq_run_interpret,isPPTOn_step,isPPTOn_run} textually identical at base and head; downstream compiles; now corollaries via External := Empty, IsOraclePPTOn.isPPTOn, sample_run_interpret, old proofs removed. Only removed public API: IterateWhile helpers, unused outside the file. No second language or machine model: OracleComp.interpret/handler/StateT/FreeM, MultiTapePTM+FiniteConfig. Naming/placement consistent (OpenOracleSimulation mirrors OracleSimulation; iff_encoded matches Tidy). Axioms standard (two lemmas use only propext, Quot.sound). Tests: two-level cache client, exact 2-call counting law, copy/doubling refutations, long-request boundary, 5 guards. No blocking findings. Nits: Oracle/Memoize.lean:126-131 re-proves private lookup_eq_map_find (Probabilistic/Memoize.lean:48); runOracle_eq_sample_runClosed repeats last step of runOracle_ofClosed; memoize_call_size_le name in two namespaces; [Nonempty Value] on IsOraclePPTOn.memoize; test namespace vs path. Evidence .lake/codex-validation/open-oracle-substitution-api/review.json sha256 01065f1ee1673980d4e02641f9c7e90dcadec1f8a13a548bd98584ea51053705"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792388277,
+      "landed": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792387635,
+       "snapshot":
+       {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
+        "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
+       "reviewer":
+       {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
+        "agent": {"value": "reviewer-sable-cor6"}},
+       "note":
+       "Independent correctness review (reviewer-sable-cor6, no contribution). Scoped build of 15 touched modules + OracleComposition, OracleComposition.Substitution, OraclePPT, RandomOracle tests --wfail --iofail: OK (IterateWhile importers rebuilt). Open theorem: conclusion is IsOraclePPTOn of the substituted run, i.e. equality of the joint law of (result, handler state) and external state for every external oracle; run_interpret_run_interpret makes the joint handler explicit. Hypotheses honest: handler certificate over all external oracles/reply lengths; invariant over support bounds handler reply and additive state growth by poly-time resources(caller,request); no external reply bound. Satisfiable: cache client + exact counting law; my own witness (forwarding handler, unary call counter) discharges all hypotheses. Closed statements textually identical to base (script), now External:=Empty corollaries. Boundaries genuine: free reply copying breaks the clock (copy handler itself uncertified, my probe); per-call-PPT doubling handler + PPT client gives 2^n state, refuting substitution without growth allowance. 22 axiom probes std only; no sorry/native_decide/axiom/set_option. Blocking: none. Nit: test comment that copyReply has no certificate is unproved there. Limits: no full gates. Evidence .lake/codex-validation/open-oracle-substitution-correctness/review.json sha256 99457b7ec82ace321ed9d1face88d8540984ece62c927158bd3bdf894ffd2b3c"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792387636,
+       "snapshot":
+       {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
+        "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
+       "reviewer":
+       {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
+        "agent": {"value": "reviewer-sable-api6"}},
+       "note":
+       "API review by reviewer-sable-api6 (independent; author worker-sable-oracle). Scope ec48c1a..5e88dee, 19 files in epic paths. Evidence: 36 targets built --wfail --iofail, 0 warnings (touched modules, both tests, 15 direct importers, closed-substitution users Normalization, Boosting.Program, PRF.RandomOracle, RandomOracle test). Closed statements unchanged: signatures of IsOraclePPTOn/IsOraclePPT.run_interpret_preprocess, query_bounds, OracleSimulation.{step,step_eq_run_interpret,isPPTOn_step,isPPTOn_run} textually identical at base and head; downstream compiles; now corollaries via External := Empty, IsOraclePPTOn.isPPTOn, sample_run_interpret, old proofs removed. Only removed public API: IterateWhile helpers, unused outside the file. No second language or machine model: OracleComp.interpret/handler/StateT/FreeM, MultiTapePTM+FiniteConfig. Naming/placement consistent (OpenOracleSimulation mirrors OracleSimulation; iff_encoded matches Tidy). Axioms standard (two lemmas use only propext, Quot.sound). Tests: two-level cache client, exact 2-call counting law, copy/doubling refutations, long-request boundary, 5 guards. No blocking findings. Nits: Oracle/Memoize.lean:126-131 re-proves private lookup_eq_map_find (Probabilistic/Memoize.lean:48); runOracle_eq_sample_runClosed repeats last step of runOracle_ofClosed; memoize_call_size_le name in two namespaces; [Nonempty Value] on IsOraclePPTOn.memoize; test namespace vs path. Evidence .lake/codex-validation/open-oracle-substitution-api/review.json sha256 01065f1ee1673980d4e02641f9c7e90dcadec1f8a13a548bd98584ea51053705"}}}},
    "paths":
    ["Complexity/Computability/Probabilistic",
     "Complexity/Languages/Probabilistic",
@@ -1687,53 +1656,42 @@
    "report":
    "polytime-plain-bridge has two fresh approvals on current main and lands in the next batch, right after the merge-queue tooling (in its final re-review) or within about half an hour through the old path if that review asks for changes. Keep designing read-only until start succeeds.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "DESIGN (worker-sable-hier, resumed): merged main f489429; inherited untracked Hierarchy/Time.lean (DTIME over encoded DecidableInTimeAndSpace as #767 transposed, DTIME_mono(_of_eventually_le), TimeConstructible as an explicit native certificate, 2^n and (n+1)*f constructible, binary/unary length helpers). Milestone 1: clockedDiagonal J (the landed diagonal with clock J; diagonal = clockedDiagonal (2^.) definitionally) and timeDiagonal J x = if 2^|unframe x| <= |x| then clockedDiagonal J x else false, via ComputableTidilyInO.ite so the decoder costs O(n) whatever its degree; in DTIME((n+1)^5 (J n+1)^3) by universal_bounds_le; not in DTIME f when c*f+c <= J eventually for all c. Theorems DTIME_ssubset_DTIME_of_clock and DTIME_ssubset_DTIME (f constructible, n <= f n, (n+1)^8 (f n+1)^3 <= g n eventually). Classes/EXP.lean: EXP = Union_k DTIME(2^(n^k)), mem_P_iff_exists_mem_DTIME (P = Union_k DTIME(n^k) as an iff), P_subset_EXP, P_ssubset_EXP for encBits via the landed diagonal. No second universal machine. Space hierarchy needs a space-budgeted universal run (landed universal space is O(B^2 J) in the clock); will assess after milestone 1 and likely record it as the continuation.",
-       "lease":
-       {"token": {"value": "b98f4ed679158ad7e36a255f390b812a"},
-        "holder":
-        {"session": {"value": "0bac3bc8aa5546f3a00854a39d54904d"},
-         "agent": {"value": "worker-sable-hier"}},
-        "expires": 1792401193},
-       "branch": "work/hierarchy-theorems/worker-sable-hier",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-hier"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Milestone 1: time hierarchy and P ⊊ EXP. Head a985c34, base ec48c1a.\nProved (Cslib.Complexity): DTIME enc t = {A | ∃ c₁ c₂ s, DecidableInTimeAndSpace A enc (c₁*t|enc a|+c₂) (s|enc a|)} (#767 for encoded instances); TimeConstructible (native certificate); timeConstructible_two_pow, timeConstructible_succ_pow (2 ≤ k → (n+1)^k), TimeConstructible.succ_mul. timeDiagonal J runs clockedDiagonal J (landed diagonal, clock J) only on short descriptions 2^|unframe x| ≤ |x|. setOf_timeDiagonal_mem_DTIME: ∈ DTIME encBits ((n+1)^5 (J n+1)^3); setOf_timeDiagonal_not_mem_DTIME: (∀ c, ∀ᶠ n, c f n + c ≤ J n) → ∉ DTIME encBits f; DTIME_ssubset_DTIME_of_clock; DTIME_ssubset_DTIME: TimeConstructible f → (∀ n, n ≤ f n) → (∀ᶠ n, (n+1)^8 (f n+1)^3 ≤ g n) → DTIME encBits f ⊂ DTIME encBits g. Classes/EXP.lean: EXP enc = ⋃ k, DTIME enc (2^n^k); mem_P_iff_exists_mem_DTIME; P_subset_EXP; P_ssubset_EXP : P encBits ⊂ EXP encBits.\nChecks: six gates pass on a985c34; tests and 8 axiom guards in ComplexityTests/HierarchyTheorems.lean.\nCredit: reuses the landed diagonal and Reitwiessner's universal interpreter; no second universal machine. Contributors: worker-sable-hier (both sessions).\nLimitations: polynomial gap from the universal overhead, not f log f; hierarchy for encBits.\nContinuation: space hierarchy (DSPACE, SpaceConstructible, space-budgeted in-place universal run, configuration-count halting bound).\nIntegration: UPSTREAM.md note on DTIME/EXP vs #767; ROADMAP rows. Bibliography: none.",
       "snapshot":
       {"head": {"value": "a985c34e8b51810236373caa8dc7435233308a49"},
        "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792387633,
-          "snapshot":
-          {"head": {"value": "a985c34e8b51810236373caa8dc7435233308a49"},
-           "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
-          "reviewer":
-          {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
-           "agent": {"value": "reviewer-sable-cor7"}},
-          "note":
-          "Independent correctness review (reviewer-sable-cor7, no contribution), milestone 1, exact head a985c34 over ec48c1a. Built Hierarchy.Time, Classes.EXP, ComplexityTests.HierarchyTheorems --wfail --iofail: exit 0. Iff.rfl/rfl probes: DTIME enc t = upstream DecidableInTimeAndSpace within c1*t|enc a|+c2, any space; TimeConstructible = one binary finite-state machine maps every x to encNat(t|x|) in c*t|x|+c steps (AB style, omits T(n)>=n: more permissive, harmless since DTIME_ssubset_DTIME assumes n<=f n); EXP = U_k DTIME(2^(n^k)); P is the library P and mem_P_iff_exists_mem_DTIME gives U_k DTIME(n^k). Diagonal checked: arbitrary k/State/tm/c1/c2/s, padded own description short and past clock threshold, universal_desc gives the negated verdict; ite charges only the test off short inputs; decoder degree bounded by cA*2^L<=cA(n+1). Headline arithmetic checked. Independent instances compile: DTIME((n+1)^3) strictly in DTIME(2^n), the (f n+1)^11 gap corollary, P encBits != EXP encBits. Axiom scan of all 124 constants in both modules: only propext/Classical.choice/Quot.sound; no sorry/native_decide/axiom/set_option. Blocking: none. Nits: note the omitted T(n)>=n in TimeConstructible docstring; encBits only; space hierarchy deferred. Limitations: lint gates/full build not run. Evidence .lake/codex-validation/hierarchy-theorems-correctness/review.json sha256 4d7f2f0ef249428dada49519a37eac86fda32d700bf34822ec416ea66c67f700"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792387745,
-          "snapshot":
-          {"head": {"value": "a985c34e8b51810236373caa8dc7435233308a49"},
-           "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
-          "reviewer":
-          {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
-           "agent": {"value": "reviewer-sable-api7"}},
-          "note":
-          "API review M1 by reviewer-sable-api7 (independent). Exact a985c34 on ec48c1a. Built Hierarchy.Time, EXP, ComplexityTests.HierarchyTheorems --wfail --iofail OK; #lint 0 errors; lint-style, mk_all OK. #767 (pr-767-head): DTIME/EXP match its shapes with length-indexed bounds over main encoded DecidableInTimeAndSpace; mem_P_iff_exists_mem_DTIME bridges tidy P. No DTIME/EXP/TimeConstructible elsewhere on origin/main 4c8d00c, pinned cslib or work refs; no name clashes. Gap honest (poly overhead, f log f disclaimed). Template, citations, reuse of landed diagonal OK; tests non-vacuous, 8 guards. Blocking: none. Follow-ups: Time.lean:121 lengthUnary re-proves existing length_bits (Streaming.lean:472) more weakly; derive via of_bounds or drop (in-path, before landing). Generic Turing.MultiTapeTM lemmas (:87,:95,:107,:157,:196,:243,:529) belong in Encodings/Nat/BigO/Plain/Universal. clockedDiagonal duplicates Hierarchy.lean diagonal; fold diagonal into it. not_mem names should be notMem. UPSTREAM.md: record DTIME/EXP vs #767. Evidence .lake/codex-validation/hierarchy-theorems-api/review.json sha256 15238898733c6878314f1c9ba3e9598453d942f136fbb443d9a6c571aaa2b369"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792388277,
+      "landed": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792387633,
+       "snapshot":
+       {"head": {"value": "a985c34e8b51810236373caa8dc7435233308a49"},
+        "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
+       "reviewer":
+       {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
+        "agent": {"value": "reviewer-sable-cor7"}},
+       "note":
+       "Independent correctness review (reviewer-sable-cor7, no contribution), milestone 1, exact head a985c34 over ec48c1a. Built Hierarchy.Time, Classes.EXP, ComplexityTests.HierarchyTheorems --wfail --iofail: exit 0. Iff.rfl/rfl probes: DTIME enc t = upstream DecidableInTimeAndSpace within c1*t|enc a|+c2, any space; TimeConstructible = one binary finite-state machine maps every x to encNat(t|x|) in c*t|x|+c steps (AB style, omits T(n)>=n: more permissive, harmless since DTIME_ssubset_DTIME assumes n<=f n); EXP = U_k DTIME(2^(n^k)); P is the library P and mem_P_iff_exists_mem_DTIME gives U_k DTIME(n^k). Diagonal checked: arbitrary k/State/tm/c1/c2/s, padded own description short and past clock threshold, universal_desc gives the negated verdict; ite charges only the test off short inputs; decoder degree bounded by cA*2^L<=cA(n+1). Headline arithmetic checked. Independent instances compile: DTIME((n+1)^3) strictly in DTIME(2^n), the (f n+1)^11 gap corollary, P encBits != EXP encBits. Axiom scan of all 124 constants in both modules: only propext/Classical.choice/Quot.sound; no sorry/native_decide/axiom/set_option. Blocking: none. Nits: note the omitted T(n)>=n in TimeConstructible docstring; encBits only; space hierarchy deferred. Limitations: lint gates/full build not run. Evidence .lake/codex-validation/hierarchy-theorems-correctness/review.json sha256 4d7f2f0ef249428dada49519a37eac86fda32d700bf34822ec416ea66c67f700"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792387745,
+       "snapshot":
+       {"head": {"value": "a985c34e8b51810236373caa8dc7435233308a49"},
+        "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
+       "reviewer":
+       {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
+        "agent": {"value": "reviewer-sable-api7"}},
+       "note":
+       "API review M1 by reviewer-sable-api7 (independent). Exact a985c34 on ec48c1a. Built Hierarchy.Time, EXP, ComplexityTests.HierarchyTheorems --wfail --iofail OK; #lint 0 errors; lint-style, mk_all OK. #767 (pr-767-head): DTIME/EXP match its shapes with length-indexed bounds over main encoded DecidableInTimeAndSpace; mem_P_iff_exists_mem_DTIME bridges tidy P. No DTIME/EXP/TimeConstructible elsewhere on origin/main 4c8d00c, pinned cslib or work refs; no name clashes. Gap honest (poly overhead, f log f disclaimed). Template, citations, reuse of landed diagonal OK; tests non-vacuous, 8 guards. Blocking: none. Follow-ups: Time.lean:121 lengthUnary re-proves existing length_bits (Streaming.lean:472) more weakly; derive via of_bounds or drop (in-path, before landing). Generic Turing.MultiTapeTM lemmas (:87,:95,:107,:157,:196,:243,:529) belong in Encodings/Nat/BigO/Plain/Universal. clockedDiagonal duplicates Hierarchy.lean diagonal; fold diagonal into it. not_mem names should be notMem. UPSTREAM.md: record DTIME/EXP vs #767. Evidence .lake/codex-validation/hierarchy-theorems-api/review.json sha256 15238898733c6878314f1c9ba3e9598453d942f136fbb443d9a6c571aaa2b369"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Hierarchy/Time.lean",
     "Complexity/Computability/Complexity/Classes/Hierarchy/Space.lean",
