@@ -1595,7 +1595,7 @@
     {"work":
      {"resume": null,
       "report":
-      "PUBLICATION REQUEST: d236fae2e840e269990698d231851b872edf2000 on work/undecidability/worker-sable-undecid (guardrail hook blocked git push; not bypassed). Single commit on top of main d42eefc (clean merge, then squashed to one cslib-style commit). Validation: scripts/check.sh all six gates ok on this exact commit (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports); ComplexityTests/Halting.lean axiom guards: propext/Classical.choice/Quot.sound only. Files: MultiTape/Halting.lean, Halting/{Basic,Partialize,Computable,Reduction}.lean, ComplexityTests/Halting.lean, generated roots.",
+      "Resumed d236fae; merged main (c31e649), Halting modules build. Remaining: classical Rice. Plan: Desc-level input hardwiring (s-m-n, polytime) + Desc-level dispatch after a tidy total machine + Kleene fixed point, in Halting/Hardwire.lean and Halting/Rice.lean.",
       "lease":
       {"token": {"value": "f6fe835348be59c882fc08e25d10d6b4"},
        "holder":
