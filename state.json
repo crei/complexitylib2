@@ -1342,7 +1342,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "7fc66c278e99124ab7c38af88a05ff35"},
+       "holder":
+       {"session": {"value": "842267643c344d7a79017588bcfc8a39"},
+        "agent": {"value": "worker-sable-numbers"}},
+       "expires": 1792386386},
       "branch": "work/np-complete-numbers/worker-sable-numbers",
       "blocked": false,
       "assignee": {"value": "worker-sable-numbers"}}}},
@@ -1357,7 +1362,7 @@
    "goal":
    "The textbook NP-complete number problems on the existing Karp-reduction machinery (Problems/ThreeSAT.lean, Reduction.lean, PolyTime/Nat and PolyTime/List certificates). Endpoints, each with NP membership via a polynomial-time verifier, a polynomial-time Karp reduction, NPHard and NPComplete: (1) SubsetSum from ThreeSAT by the digit construction (Sipser2013 Theorem 7.56), with binary-encoded natural numbers and the reduction's output size and time honestly bounded (numbers have O(n + m) digits); (2) Partition from SubsetSum; (3) 0-1 Knapsack decision from SubsetSum; (4) zero-one integer programming feasibility from ThreeSAT if a short reduction fits. Encodings: lists of natural numbers with the existing encNat/encList (binary or unary as the library's encNat provides; state which, and do not claim strong NP-hardness for a unary encoding). Boundaries: empty multisets, target 0, duplicates. Tests with concrete instances in and out of each language and #print axioms guards for every NPComplete theorem in the epic's own test module. Cite Karp1972, Sipser2013, AroraBarak09. Six gates; self-review; frozen submission.",
    "dependencies": [],
-   "authors": []},
+   "authors": [{"value": "worker-sable-numbers"}]},
   {"resume": null,
    "report": "",
    "phase":
