@@ -1682,15 +1682,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "d9fa6986168085b1c82f85da99ac1300"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390942,
+          "snapshot":
+          {"head": {"value": "619bc0b59c3217fe8e9cb7ea1ddf1697444ede60"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
            "agent": {"value": "reviewer-sable-cor3"}},
-          "expires": 1792405160},
-         "blocked": false}},
+          "note":
+          "Delta correctness review (reviewer-sable-cor3, independent) of aed5f718..619bc0b5; merge touches no Halting file. Build: nice -n 10 lake build of the 8 Halting modules and ComplexityTests.Halting with --wfail --iofail, exit 0, 3768 jobs. Statements: script delta/stmt_diff.py finds 243 declaration headers identical apart from the renames (behaviour->behavior, length_workTapes_step, computableTidilyInPolyTime_redirect). Only the two requested lemmas were removed. The additions are not_isDecidable_halts plus private helpers, and 50 decls moved namespace. All 22 elaborated #check outputs from the previous probe log reappear verbatim. Docstrings are accurate: the two-way case of Kleene (fixed point of e -> d (f e) with f Bool-valued); the Mathlib comparison (halting_problem fixes n; rice2 matches not_isDecidable_of_behavior); not_forall_halted_diagonal is in Classes.Hierarchy:175. not_isDecidable_halts is correct and non-vacuous. Its set is rfl-equal to the slice (w,x) of haltingProblem, and on descriptions membership is iff tm.Halts x. Every x has a member and a non-member, and IsDecidable univ holds. The pair halting result is re-derived from it by w -> (w,[]). Axioms: 25 #print axioms give only propext, Classical.choice and Quot.sound. Nit: the fixed-point form is closer to Sipser Thm 6.8 (unverified) than to Thm 6.3. Not run: gates, lint. Evidence: .lake/codex-validation/undecidability-correctness/review.json sha256 ce5a7e5bca1914d20e60c1dd93290d753af34e38f0e599de602b07d1faab748f"}}},
        "api":
        {"finished":
         {"review":
