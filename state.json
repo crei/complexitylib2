@@ -2809,7 +2809,16 @@
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor7"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api7"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "90ed8ef58acffefe0adf93a762d82afc"},
+          "holder":
+          {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
+           "agent": {"value": "reviewer-sable-api7"}},
+          "expires": 1792406791},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/Encoding.lean",
     "Complexity/Computability/Circuit/Boolean/Encoding",
