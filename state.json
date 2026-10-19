@@ -1944,55 +1944,18 @@
     {"value": "polytime-plain-bridge"}],
    "authors": []},
   {"resume": null,
-   "report": "",
+   "report":
+   "API review (reviewer-sable-api6) requested changes: the generic Circuit/Continuity.lean imports Boolean modules and declares Cslib.Circuits.Boolean names; move the De Morgan section to Circuit/Boolean/Continuity.lean (generic + Boolean pattern). Correctness approved.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Started on work/hamming-geometry-2/worker-sable-hamming from main 342f284. Dependency map. M3 (Foundations/BooleanAnalysis/HammingFourier.lean): reuse fourierCoeff, fourierCoeff_sub, expect_sq_eq_sum_fourierCoeff_sq (Parseval), hammingDist_div_eq_expect (Data/Hamming), signVal, noiseOp, noiseOp_sub, noiseOp_one, fourierCoeff_noiseOp, fourierCoeff_injective, Mathlib EuclideanSpace.dist_eq / MetricSpace.induced. Deliver: hammingDist_div_eq_sum_fourierCoeff_sub_sq (d_H/2^n = (1/4) sum_S (F^(S) - G^(S))^2); noiseDist rho f g := E[(T_rho F - T_rho G)^2]/4 with noiseDist_eq_sum (rho^(2|S|) weights), noiseDist_one (= relative Hamming distance), monotonicity in |rho| (noise contracts the Hamming distance), noiseEmbedding into EuclideanSpace R (Finset iota) with sqrt noiseDist = dist, triangle inequality, separation for rho != 0, and noiseMetricSpace as a def (no instance). M4 (Circuit/Approximation/Hamming.lean): reuse Scheme, programExceptions, program_correct, failures, card_failures_le_cost, Program.cost_eq_sum/cost_le_mul, complexity/exists_computes_size_eq_complexity. Deliver: hammingDist target-to-decoded output <= C.program.cost errorCost when correctness implies equality; lower-bound principle eps <= delta * complexity; weighted union bound sum_{failures} mu <= sum over gates of per-op weight bounds (via programExceptions induction), weighted lower bound; prose that this reformulates the approximation method, limitations stated without citation. M5 (Circuit/Continuity.lean): complexityModulus I n m r : N (Finset.sup over pairs with hammingDist <= r of Nat.dist of complexities; Fintype U, IsComplete), le/iff/mono/zero/attained API; De Morgan restatements from SparseSynthesis.dist_complexity_single_le / dist_complexity_le (m <= 2p outputs) and the matching lower bound 2^p <= 16 omega from exists_hammingDist_eq_le_dist_complexity. SCOPE QUESTION: the De Morgan restatement imports SparseSynthesis; may I add Complexity/Computability/Circuit/Boolean/Continuity.lean for it so the generic Continuity.lean stays basis-free? Otherwise I put it in a Boolean section of Continuity.lean.",
-       "lease":
-       {"token": {"value": "0309702c7f0a5ad7ab2a1faff320c62f"},
-        "holder":
-        {"session": {"value": "79c04d2e099c5b1c2a7c8053cf47acf5"},
-         "agent": {"value": "worker-sable-hamming"}},
-        "expires": 1792406342},
-       "branch": "work/hamming-geometry-2/worker-sable-hamming",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-hamming"}},
-      "summary":
-      "M3-M5 at 8ebbd286 (base main e93fa0ea). M3 HammingFourier: hammingDist_div_eq_sum_fourierCoeff_sub_sq: d_H(f,g)/2^n = 1/4 * sum_S (F^(S) - G^(S))^2 (F = signVal o f); noiseDist rho f g := E(T_rho F - T_rho G)^2/4 with noiseDist_eq_sum (rho^(2|S|)), _eq_noiseStability, noiseDist_one (= d_H/2^n), noiseDist_mono (|rho|<=|sigma|), noiseDist_le_hammingDist_div (|rho|<=1), dist_noiseEmbedding (EuclideanSpace dist = sqrt noiseDist), sqrt_noiseDist_triangle, noiseDist_eq_zero_iff (rho != 0), noiseMetricSpace (abbrev). M4 Approximation/Hamming: Scheme.hammingDist_le_sum_errorCost (relation -> eq: d_H(target, decoded) <= sum_k errorCost (lines k).op); le_mul_complexity, _of_le_hammingDist (eps <= delta * C(f)); sum_failures_le (weighted union bound, mu >= 0), le_mul_complexity_of_le_sum_failures. Prose: reformulates the classical method, known limitations apply, no Pich citation. M5 Continuity: complexityModulus I n m r : N (Fintype U, IsComplete), le_iff/attained/mono/zero/add_le (subadditive)/le_mul; Boolean.complexityModulus_one_le ((1+eps)2^p), complexityModulus_le (m<=2p, (3+eps)2^p), two_pow_le_sixteen_mul_complexityModulus (p>=4). Checks: run-gates, all six ok. Tests + axiom guards in ComplexityTests/CircuitHamming/{Parseval,Approximation,Continuity}. Sources: O'Donnell, Jukna Ch. 9, Chashkin2024; no new bib. Contributors: worker-sable-hamming only. Limitations: De Morgan restatement in generic Continuity.lean (imports SparseSynthesis); M4 tests use toy schemes.",
-      "snapshot":
-      {"head": {"value": "8ebbd2862a60625725dd51674d7a394e60f87b59"},
-       "base": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792392703,
-          "snapshot":
-          {"head": {"value": "8ebbd2862a60625725dd51674d7a394e60f87b59"},
-           "base": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"}},
-          "reviewer":
-          {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
-           "agent": {"value": "reviewer-sable-cor6"}},
-          "note":
-          "Correctness review by reviewer-sable-cor6 (independent; no contribution). Exact head 8ebbd286 over base e93fa0ea (ancestor verified). Scope: HammingFourier, Approximation/Hamming, Continuity + 3 CircuitHamming tests. Evidence: nice lake build of the 6 modules --wfail --iofail OK; own probes compile: 1-junta scheme on 2 bits (errorCost 1) gives C(XOR)>=2 in Hamming, counting (eps=2>delta=1) and weighted (mu=1/4) forms, so hypotheses are satisfiable and non-trivial; D_{-1}=d_H/2^n via mono both ways; 1/4 constant checked against decide count; strict D_{1/2}<D_1; omega_{0,1}(1)=0. #print axioms on 29 headlines + probes: propext/Classical.choice/Quot.sound only; no sorry/native_decide/set_option. Statements match goal: d_H/2^n=1/4 sum(F^-G^)^2; D_rho with rho^(2|S|), =d_H/2^n at 1, mono in |rho|, <= at |rho|<=1, Euclidean dist, triangle, separation rho!=0; d_H<=sum errorCost; eps<=delta*C(f) three forms; modulus attained (Nonempty U), mono, 0, subadditive; De Morgan bounds forall eps>0 exists p0 forall p>=p0 explicit, lower bound exact for p>=4. Blocking: none. Nits: Continuity.lean:28-37 docstring 'all large p' also heads exact p>=4 bullet; :199-201 m<=2p weaker than source (documented); M4 tests have delta>eps, consider a delta<eps instance. Not checked: six gates, API. Evidence .lake/codex-validation/hamming-geometry-2-correctness/review.json sha256 584b89d9afe4575fb62de88d55a87b380bfdfba445ead6bd1000943ca199ac9c"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "changes",
-          "time": 1792392641,
-          "snapshot":
-          {"head": {"value": "8ebbd2862a60625725dd51674d7a394e60f87b59"},
-           "base": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"}},
-          "reviewer":
-          {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
-           "agent": {"value": "reviewer-sable-api6"}},
-          "note":
-          "API review by reviewer-sable-api6 (independent; no contribution). Scope: exact head 8ebbd286 over base e93fa0ea; HammingFourier, Approximation/Hamming, Continuity + 3 tests. Evidence: nice lake build of the 3 modules + 3 tests --wfail --iofail exit 0, 0 warnings; probe_api.lean exit 0; layering scan. BLOCKING: Circuit/Continuity.lean:10,14,162-218 - the generic basis-free file publicly imports Circuit.Boolean.Complexity, imports Boolean.SparseSynthesis and declares Cslib.Circuits.Boolean.*; no other generic Circuit file (cslib or here) imports Boolean/*, and precedent is Metric + Boolean/Metric, Pointwise + Boolean/Hamming. Move the De Morgan section, its docstring part and Chashkin2024 into Circuit/Boolean/Continuity.lean; generic file then imports only Circuit.Complexity, Nat.Dist, Hamming. Reuse otherwise good: M3 builds on Parseval/noiseOp/noiseStability/fourierCoeff_injective and Mathlib EuclideanSpace + MetricSpace.induced; M4 on card_failures_le_cost/cost_eq_sum/cost_le_mul; M4 prose (lines 40-42) states reformulation + known limitations. Nits: private hammingDist_single (:166) is hammingDist_comp over any U, make public generic; private exists_hammingDist_le_le (:122) belongs in Data/Hamming; Boolean.complexityModulus_one_le (m=1) clashes in meaning with radius-1 complexityModulus I n m 1, and Boolean.complexityModulus_le is too generic; le_mul_size missing from Main results; promote test noiseDist_parityOn (Parseval.lean:21). Not checked: six gates, correctness. Evidence .lake/codex-validation/hamming-geometry-2-api/review.json SHA256 910fcba6e3b6ec4f0205ec041072068739252d58053de7100d4a5693c9b8e72f"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "API review (reviewer-sable-api6) requested changes: the generic Circuit/Continuity.lean imports Boolean modules and declares Cslib.Circuits.Boolean names; move the De Morgan section to Circuit/Boolean/Continuity.lean (generic + Boolean pattern). Correctness approved.",
+      "lease": null,
+      "branch": "work/hamming-geometry-2/worker-sable-hamming",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-hamming"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Continuity.lean",
     "Complexity/Computability/Circuit/Approximation/Hamming.lean",
