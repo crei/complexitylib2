@@ -3310,7 +3310,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "6c51df37a26d8aa8854071d7bcbded79"},
+       "holder":
+       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+        "agent": {"value": "coordinator-sable"}},
+       "expires": 1792406825},
       "branch": "work/docs-bibliography-3/coordinator-sable",
       "blocked": false,
       "assignee": {"value": "coordinator-sable"}}}},
@@ -3319,7 +3324,7 @@
    "goal":
    "Docs-only: references.bib entries cited by landed or approved epics (hardness-amplification: Impagliazzo1995, Yao1982; explicit-affine-disperser-2: Chebyshev1852; circuits-karp-lipton: Ladner1975), verified against Crossref/DOI metadata. No Lean changes. check_docs --config-only, two reviews.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "coordinator-sable"}]}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
