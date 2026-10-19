@@ -1696,7 +1696,8 @@
    "dependencies": [],
    "authors": [{"value": "worker-sable-stretch"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Deferred: its Classes/Space and Algorithms/Reachability scopes overlap the active tqbf-pspace-complete and logspace-nl epics; assign after both land (integrator-sable-2 intended).",
    "phase": "unassigned",
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space.lean",
