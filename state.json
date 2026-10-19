@@ -3147,7 +3147,7 @@
        "holder":
        {"session": {"value": "15d3a3e432be6927c6de5db959e3458a"},
         "agent": {"value": "worker-sable-graphs"}},
-       "expires": 1792406255},
+       "expires": 1792406366},
       "branch": "work/communication-complexity-2/worker-sable-graphs",
       "blocked": false,
       "assignee": {"value": "worker-sable-graphs"}}}},
@@ -3472,7 +3472,7 @@
     "agent": {"value": "worker-sable-hamming"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792403939,
+   "expires": 1792406366,
    "actor":
    {"session": {"value": "15d3a3e432be6927c6de5db959e3458a"},
     "agent": {"value": "worker-sable-graphs"}}},
