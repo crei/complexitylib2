@@ -715,15 +715,18 @@
        "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "77eabade57174f4bc2c370be7c6e58ed"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792379022,
+          "snapshot":
+          {"head": {"value": "2afafb078cea242d39dab19383a4266eb613c17c"},
+           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+          "reviewer":
           {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
            "agent": {"value": "reviewer-sable-cor5"}},
-          "expires": 1792393374},
-         "blocked": false}},
+          "note":
+          "Delta correctness review of rational-hitting d42eefc..2afafb0 (reviewer-sable-cor5, independent; earlier full review approved ac19679, evidence .lake/codex-validation/rational-hitting-correctness/review.json sha256 2b744c961a5097bae6b96377c2932384eb18d313a8fe08fb71c3bb41ffa91505). ac19679 is an ancestor of 2afafb0; the only new commit touches Rational/Determinant.lean and Rational/QuantumSeries.lean module-doc text (References bullets and section-header doc comments) plus references.bib (OpenAI2026RationalHitting, Schlesinger2026RationalHitting). No declaration, statement or proof changed. Attribution claims checked against pinned Mathlib: Bird/Correctness.lean is a module whose bridge lemmas are non-public (Paul Cadman 2026); HahnSeries/Summable powers needs CommRing (Aaron Anderson 2021). docbuild/docs/references.bib is a symlink, so check_docs byte-equality holds. lake build QuantumSeries, Determinant, ComplexityTests.RationalHitting --wfail --iofail OK, no warnings. Blocking: none. Earlier non-blocking nits stand (n>=1 encoding constant ~16x v1; slow Decidable instances). Evidence .lake/codex-validation/rational-hitting-correctness-delta/review.json sha256 d90c1dd4269465ba7aa545c32f3f27ede1aaa796302b568d55e34da060f84466"}}},
        "api":
        {"finished":
         {"review":
