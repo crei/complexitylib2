@@ -3155,7 +3155,7 @@
       {"head": {"value": "f8c3d3cc04f65411b03ea5bb5ba908288d3efc58"},
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor1"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api1"}}}}}}},
    "paths": ["references.bib"],
    "id": {"value": "docs-bibliography-2"},
