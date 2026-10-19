@@ -3026,7 +3026,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/query-complexity-2/worker-sable-query",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-query"}}}},
    "paths":
    ["Complexity/Computability/QueryComplexity/ApproximateDegree.lean",
     "Complexity/Computability/QueryComplexity/ApproximateDegree",
