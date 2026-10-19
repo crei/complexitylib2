@@ -2407,7 +2407,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/resource-class-spine/worker-sable-hier",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-hier"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Time.lean",
     "Complexity/Computability/Complexity/Classes/Exponential.lean",
