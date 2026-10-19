@@ -2597,6 +2597,19 @@
    "goal":
    "Coverage epic 9: isolation and counting at class level. M1: PromiseUSAT; Valiant-Vazirani as a randomized polynomial-time reduction from SAT to unique SAT succeeding with probability Omega(1/n), from Probability/PairwiseIndependentHash's three_sixteenths_le_dens_filter_card_filter_eq_one, hence NP within RP^PromiseUSAT on the native oracle classes; the Mulmuley-Vazirani-Vazirani isolation lemma. M2: ParityP and the BP and parity operators, Toda's theorem PH within BP.ParityP within P^SharpP. M3: Stockmeyer approximate counting of SharpP in BPP^NP as the class form of the existing ApproximateCounting estimates. Reuse Classes/SharpP, Classes/PH, Classes/Oracle, PPT and Probability; no second oracle model. Cite ValiantVazirani1986, MulmuleyVaziraniVazirani1987, Toda1991, Stockmeyer1983 (propose entries). Tests, named axiom guards, six gates, one frozen submission per milestone.",
    "dependencies": [],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/FineGrained.lean",
+    "Complexity/Computability/Complexity/FineGrained",
+    "ComplexityTests/FineGrained.lean",
+    "ComplexityTests/FineGrained"],
+   "id": {"value": "fine-grained"},
+   "goal":
+   "Coverage epic 8: ETH, SETH and fine-grained reductions in the library time model (the DTIME of hierarchy-theorems; one definition). M1: ETH, SETH (with the exponents s_k) and the orthogonal-vectors hypothesis as Props with exact quantifiers; via the formalized sparsification lemma (Logics/Propositional/ClauseSet/Sparsification), ETH iff no 2^(o(m)) algorithm for 3SAT; SETH implies OVH (Williams 2005). M2: ETH implies no 2^(o(n)) algorithms for 3-coloring, independent set, vertex cover and clique, via size-tracked versions of the landed reductions (state the linear size bounds explicitly; do not change the existing NP-completeness statements). M3: the PPZ algorithm and its running time from CNF/Coding if cheap. Cite ImpagliazzoPaturi2001, ImpagliazzoPaturiZane2001, Williams2005 (propose entries). Tests, named axiom guards, six gates.",
+   "dependencies": [{"value": "hierarchy-theorems"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
