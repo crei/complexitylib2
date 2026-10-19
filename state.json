@@ -3430,7 +3430,15 @@
    "authors": [{"value": "worker-sable-loop"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/explicit-affine-disperser-3/worker-sable-disperser",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-disperser"}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
     "Complexity/Foundations/Combinatorics/AffineDisperser.lean",
