@@ -2615,7 +2615,7 @@
       {"head": {"value": "aa3bd309550398f3442839c6c9ce2b59b0b29ff0"},
        "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor1"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api1"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Time.lean",
