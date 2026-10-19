@@ -2328,15 +2328,18 @@
           "note":
           "Correctness review by reviewer-sable-cor3 (independent, read-only) of exact head 783c51e2. Built Threshold + ComplexityTests.AffineDisperser with --wfail --iofail: OK. Headline exists_explicitDisperser_ne is exactly disperser-for-dimension explicitThreshold N + 1 (probe). explicitThreshold is a closed form; the Lean value at 2^60 = 85913322832211920 matches an independent Python recomputation, ratio 0.0745 < 0.1. Numerically (l+1)thr/N is about 4 for exponents 30..400 and thr ln N / N is about 2.76, consistent with eventually_explicitThreshold_le and isBigO (bound 6, Real.log, correct). prodPowBasis, card_subfield_le_of_lt_prime and four_pow_le_mul_prod_primesIoc (Mathlib theta_ge, theta_le_log4_mul_x) are correct, and their hypotheses are instantiated. Explicitness: leastIrreducible is canonical (Nat.find). binaryRoot (BinaryField.lean:197) uses Classical.choose, but f_N is choice-independent: root tuples differ by a Frobenius power (CRT on distinct primes), and traceSymBits 1 is invariant under automorphisms (proved in probe Invariance.lean). No sorry, native_decide, axiom or set_option; #print axioms of 13 decls gives propext, Classical.choice, Quot.sound. Blocking: none. Follow-ups: M3 needs the choice-independence lemma; Chebyshev1852 is missing from references.bib (Primes.lean:43); IsAffineDisperser bridge deferred; the eventual N0 is astronomically large. Not checked: M1 base theorem, BSK Thm 7.3 numbering, API. Evidence: .lake/codex-validation/explicit-affine-disperser-2-correctness/review.json sha256 c4d4f16e42553c6ba92b7f14c2a525139607e00cc00dcf50bea4f4c1a713ecdf"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "70c859ee1817105bcba0bd56ad618cef"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792392344,
+          "snapshot":
+          {"head": {"value": "783c51e2f3c92f958790d4d8768ecd45c24fca3e"},
+           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+          "reviewer":
           {"session": {"value": "6028cd701670813461915b10a3d32c60"},
            "agent": {"value": "reviewer-sable-api3"}},
-          "expires": 1792406711},
-         "blocked": false}}}}}},
+          "note":
+          "API review, independent (reviewer-sable-api3; contributor worker-sable-disperser). Scope: 6 new AffineDisperser modules + tests at 783c51e2. Built touched modules + ComplexityTests.AffineDisperser --wfail --iofail exit 0; probe exit 0; 2^60 parameters recomputed independently (d=0.0745N<N/10, (l+1)d/N=4.55). Template, markers, imports, simp hygiene ok; no sorry/native_decide/set_option. Duplication: Chebyshev, GaloisField reused from Mathlib; k-fold prodPowBasis not in Mathlib (only 2-factor LinearDisjoint); bitEquiv equals Mathlib ZMod.ringEquivOfPrime and bitEquiv.symm = BitString.bitVal (ZMod 2) (probed). No blocking findings. Follow-ups (M3 or placement epic, batch with M1's): move TensorBasis to a field-theory home, bitEquiv to Cslib.BitString with bitVal bridge (reuse HadamardRectangles.lean:50), primesIoc/selectBelow to Data/Nat; Threshold.lean:52 near-duplicates cslib Nat.eventually_mul_pow_le_pow (4-line derivation probed), privatize :72, :99; prefix generic defs Explicit.lean:70-97; Threshold.lean:102 'exact constants' -> 'explicit constant 6' (N0 unstated); Explicit.lean:167 'after' BSK Thm 7.3; mention stronger dispersers (Li) before the corollary; References in Threshold doc; axiom guard for eventually_explicitThreshold_lt. Central: add Chebyshev1852 bib entry. Not checked: six gates, full build, proof correctness, paper figures. Evidence .lake/codex-validation/explicit-affine-disperser-2-api/review.json sha256 5e53d0fd5d2fe0a428425fedef11d33842547f3f84ad66d3b70f5fb01765f7d2"}}}}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
     "Complexity/Foundations/Combinatorics/AffineDisperser.lean",
