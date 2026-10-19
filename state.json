@@ -1218,15 +1218,18 @@
           "note":
           "Correctness review of exact base 26253c9 / head 6af7e40 by reviewer-sable-cor3 (independent: no contribution; read-only in own worktree). Scope: Circuit/Pointwise.lean, BitString/Hamming.lean, Circuit/Boolean/Hamming.lean, ComplexityTests/CircuitHamming/{Pointwise,Gates}.lean. Evidence: all five modules built --wfail --iofail, no warnings; no sorry/axiom/native_decide/set_option/instances. Verified: pointwise lift and evalAt (a genuine cslib Homomorphism), trace/eval pointwise from map_trace/map_eval, wires and outputs at the projections are truth tables, computes iff lifted outputs are the truth tables; cube identities for any Fintype index (sorting, geodesics, Lipschitz, XOR both sides and NOT isometries); median = pointwise majority 3; median algebra laws, betweenness, minimality; projections half apart via parityOn {i,j}; 1/2 in char-zero semifields; complexity_add_projs_le bounds one m-output circuit computing f once (G o F), +4 per output; circuitDist of shifts in [5,8], lower bound needs i != j. Own probes pass: 5-gate majority circuit whose lifted output is majority 3 (C <= 5); 3-input identities with majority/parity/projections checked by theorem and decide; 1/2 in Q>=0; joint shifts of majority <= 17, non-injective family <= 21; i = j distance 0; n = 0, m = 0. 33 axiom prints standard (median laws Quot.sound only; evalAt none). Nits: Gates.lean:197-198 says distance zero but proves <= 8; public projection lemmas duplicate private copies in ComplexityTests/CircuitMetric.lean. Limitation: check.sh not re-run; milestones 3-5 out of scope. Evidence: .lake/codex-validation/hamming-geometry-correctness/review.json SHA256 e82f6cce46b922445782f09eb9d4b8a67d41c3ac3d04dfa5f129101ad1de5246"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "bef978402e93343fd04b1237f7629007"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792372933,
+          "snapshot":
+          {"head": {"value": "6af7e40639228bc0a83e1114d4209eccc5c1cd65"},
+           "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
+          "reviewer":
           {"session": {"value": "6028cd701670813461915b10a3d32c60"},
            "agent": {"value": "reviewer-sable-api3"}},
-          "expires": 1792387282},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api3 (independent; no contribution) of exact base 26253c9 / head 6af7e40, read-only in own worktree. Scope: Circuit/Pointwise.lean, Foundations/Data/BitString/Hamming.lean, Circuit/Boolean/Hamming.lean, CircuitHamming tests, root imports, against Mathlib hammingDist, BitString Weight/Parity/Hamming, BooleanAnalysis, Smolensky, Circuit/Complexity.lean. Evidence: lake build of 3 modules + 2 tests --wfail --iofail exit 0, 0 warnings; mk_all clean; probe_api.lean exit 0: lift over N with point type Z, evalAt with Homomorphism.comp, Smolensky local lift = pointwise/evalAt by rfl, median = Pi-lattice median by rfl, empty index, proj_div in R and Q, axioms of 20 results within the standard three. Placement follows rule 6; Mathlib has no hammingDist translation lemmas (names mirror dist_add_right/left); median vs majority distinct and bridged; simp, template, bib fine. No blocking findings. Nits: two_mul_hammingDist_proj is the {i},{j} case of existing two_mul_hammingDist_parityOn (Linearity.lean:109, Fourier proof; probe derives it in 3 lines) - generalize the elementary proof here and derive both; move complexity_single_proj/one_le_complexity_single to Circuit/Complexity.lean (mirrored file, outside epic paths) and drop CircuitMetric private copies, bundled with Metric engine lemmas; Smolensky can reuse pointwise; median_median name; Boolean/Hamming doc cites a non-imported lemma. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/hamming-geometry-api/review.json SHA256 90ccf98d16d9f34a40fbf5d4c87020d44e788705642a8ef57bd9eb2cb11539f4"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Pointwise.lean",
     "Complexity/Computability/Circuit/Boolean/Hamming.lean",
