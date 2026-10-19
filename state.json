@@ -3390,7 +3390,7 @@
           "holder":
           {"session": {"value": "6028cd701670813461915b10a3d32c60"},
            "agent": {"value": "reviewer-sable-api3"}},
-          "expires": 1792406997},
+          "expires": 1792407206},
          "blocked": false}}}}}},
    "paths": ["references.bib"],
    "id": {"value": "docs-bibliography-3"},
@@ -3588,7 +3588,7 @@
     "agent": {"value": "reviewer-sable-cor2"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792406711,
+   "expires": 1792407206,
    "actor":
    {"session": {"value": "6028cd701670813461915b10a3d32c60"},
     "agent": {"value": "reviewer-sable-api3"}}},
