@@ -2891,6 +2891,21 @@
    "goal":
    "Milestone 2 of query-complexity (after M1 lands): approximate degree adeg_eps; Minsky-Papert symmetrization; the Markov brothers' inequality for real polynomials on an interval (prove it in Foundations if Mathlib lacks it; the Ehlich-Zeller / Coppersmith-Rivlin discrete form if that is what the proofs need), hence Nisan-Szegedy bs <= 2 deg^2 and bs <= 6 adeg^2, s >= sqrt(bs)-style corollaries such as bs <= 2 s^4, and adeg(OR) = Theta(sqrt n) with the Chebyshev upper bound from Mathlib Polynomial.Chebyshev; randomized query complexity with bounded error and Yao's minimax principle (finite LP duality or Mathlib Sion). Exact constants where the proofs give them. Reuse M1's degree API and cslib QueryComplexity measures. Cite NisanSzegedy1994, MinskyPapert1969, Yao1977 (propose entries). Tests, named axiom guards, run-gates, frozen submission per milestone.",
    "dependencies": [{"value": "query-complexity"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Probability/Divergence.lean",
+    "Complexity/Probability/Divergence",
+    "Complexity/Probability/Shearer.lean",
+    "Complexity/Probability/MinEntropy.lean",
+    "Complexity/Probability/BoundedDifferences.lean",
+    "ComplexityTests/ProbabilityToolkit2.lean"],
+   "id": {"value": "probability-toolkit-2"},
+   "goal":
+   "Milestone 2 of probability-toolkit (after M1 lands): a bridge from the library's finite-PMF entropy to Mathlib InformationTheory.klDiv, then Gibbs' inequality, Pinsker, entropy subadditivity, Han's inequality and Shearer's lemma; minEntropy and (k, eps)-sources with the flat-source decomposition (every k-source is a convex combination of flat k-sources); McDiarmid's bounded-differences inequality derived from Mathlib's Azuma-Hoeffding (ProbabilityTheory.measure_sum_ge_le_of_hasCondSubgaussianMGF). Reuse Probability/{Entropy, Product, StatisticalDistance, Concentration} and M1; no second entropy or distance notion. Cite CoverThomas2006, ChungGrahamFranklShearer1986, McDiarmid1989, ChorGoldreich1988 (propose entries). Tests, named axiom guards, run-gates, frozen submission.",
+   "dependencies": [{"value": "probability-toolkit"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
