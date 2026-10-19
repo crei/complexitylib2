@@ -622,7 +622,7 @@
       {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
        "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api6"}}}}}}},
    "paths":
    ["Complexity/Computability/Probabilistic",
