@@ -1396,6 +1396,18 @@
    "goal":
    "Ladner's theorem on the native classes: if P is not NP then there is a language in NP that is neither in P nor NP-complete under the library's polynomial-time Karp reductions. Use the standard padding/diagonalization (blowing holes in SAT) proof [AroraBarak09 Theorem 3.3] with a native polynomial-time computable slowly growing function certified by the existing calculus, the native universal machine with clocks from native-exponential-separation for enumerating polynomial-time machines and reductions, and SAT from Problems/SAT.lean. State the hypothesis P ≠ NP explicitly as a premise; prove the language's NP membership with an actual verifier certificate. Also prove the unconditional form: the constructed language is in NP, and it is in P only if SAT is, and NP-complete only if P = NP. Tests for the padding function and nonvacuity of the construction's pieces; axiom guards in the epic test module. Six gates; frozen submission.",
    "dependencies": [{"value": "native-exponential-separation"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/Oracle.lean",
+    "Complexity/Computability/Complexity/Classes/Oracle",
+    "ComplexityTests/Relativization.lean"],
+   "id": {"value": "relativization"},
+   "goal":
+   "Baker-Gill-Solovay relativization on the native model. First post a design note: deterministic and nondeterministic oracle access for native machines consistent with the design commitments (programs are PFunctor.FreeM values; reuse the existing OracleComp/IsOraclePPT interfaces and the open-oracle query semantics where they fit, coordinating with open-oracle-composition rather than editing its scope; no second machine model). Then define P^A and NP^A for an oracle language A with charged query costs, prove the relativized basics (P^A inside NP^A, monotone in reductions), and milestone 1: an oracle B with P^B different from NP^B by the standard diagonalization over oracle machines with clocks [AroraBarak09 Theorem 3.7]. Milestone 2 (tracked): an oracle A with P^A = NP^A, using TQBF/PSPACE once tqbf-pspace-complete lands or EXP-completeness otherwise. Tests and axiom guards in the epic test module. Six gates; frozen submission per milestone.",
+   "dependencies": [{"value": "native-exponential-separation"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
