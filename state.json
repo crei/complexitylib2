@@ -786,15 +786,18 @@
           "expires": 1792382920},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "bea1d3cb412e14050c8823475724961b"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792368636,
+          "snapshot":
+          {"head": {"value": "4de95cdc57bdd489c7bc60aeb3c209ebeb2ffb06"},
+           "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
+          "reviewer":
           {"session": {"value": "33380288772710be7744d177c8f66871"},
            "agent": {"value": "reviewer-sable-api2"}},
-          "expires": 1792383032},
-         "blocked": false}}}}}},
+          "note":
+          "Fresh independent API review of exact 4de95cd (base 94dcd9d = current main, ancestry verified); no contribution. Builds on my earlier full review of 7e4cdca (evidence SHA256 20c5d515...c3d, retained in the same review.json as round 1). Delta check: 98a47c9 tree equals git merge-tree(7e4cdca, 94dcd9d) exactly (clean merge, nothing beyond main's own additions); git diff -M 98a47c9 4de95cd is precisely the announced list: R100 Universal/Decode/Basic -> Encodings/Decoder (header, marker candidate, imports Complexity.Lists+Encodings.Option unchanged), Decode.lean import+docstring path, exists_le_mul_two_pow moved verbatim to PolynomialBound/Exponential as Cslib.PolynomiallyBounded.exists_le_mul_two_pow with proof-only BigOperators import and Main results line, Hierarchy call site + Diagonal.universal_bounds_le crossref + Main results bullet for diagonal_desc/not_forall_halted_diagonal, renames trueDoubled/encTrueDoubled/trueDoubleT/trueDoubleT_run, Complexity.lean (mk_all order) and two UPSTREAM.md placement rows (Decoder, NatPower). Test file and the three headline statements unchanged. Evidence: lake build Encodings.Decoder, Universal.Decode, Encodings.NatPower, PolynomialBound.Exponential, Classes.Hierarchy, ComplexityTests.TimeHierarchy --wfail --iofail clean (3876 jobs); mk_all --check and lint-style clean; git diff --check clean; 8 lake env lean probes clean on the new head (headline client shapes, Decoder from Encodings without Universal, renamed helpers, clock, Exponential placement; probe 5a's expected runBound-unknown-in-Bound.lean retained). No findings; remaining nits from round 1 (inline unframe/dropFrame degree certificates, test file name, signOf visibility) are optional. Not run: lake test/lint/checkInitImports. Evidence .lake/codex-validation/native-exponential-separation-api/review.json SHA256 27ce01c0605514d4eeb1ec7ac1e80f9149c13d7127deeb2dd730c0dd219550e5"}}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode",
