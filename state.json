@@ -1,25 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "783c51e2f3c92f958790d4d8768ecd45c24fca3e"},
-   "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-  "main": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"},
-  "lease":
-  {"token": {"value": "f7f98a03321fb5d6f390e568c1c19bfa"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792407808},
-  "epic": {"value": "explicit-affine-disperser-2"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "783c51e2f3c92f958790d4d8768ecd45c24fca3e"},
-     "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-    "epic": {"value": "explicit-affine-disperser-2"}},
-   {"snapshot":
-    {"head": {"value": "5b33f3346aac949ec4f6541220f5ef69e05fd391"},
-     "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
-    "epic": {"value": "docs-bibliography-3"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -2321,53 +2301,42 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Scope note (non-blocking): M2 adds general algebra under AffineDisperser/ in the Cslib.AffineDisperser namespace: TensorBasis.lean (prodPowBasis, monomial basis of coprime-degree composita), bitEquiv : ZMod 2 ≃+* Bool (Bits.lean), primesIoc/selectBelow (Primes.lean). Proposed homes: Foundations/Algebra (or FieldTheory) for TensorBasis with the M1 Moore/cube-sum lemmas, Foundations/Data/BitString for bitEquiv. Bridge to IsAffineDisperser and the 3.5N corollary wait for b2-lower-bound.",
-       "lease":
-       {"token": {"value": "bcad1ef7f3c26c8b0c1d5ccc8c129bba"},
-        "holder":
-        {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
-         "agent": {"value": "worker-sable-disperser"}},
-        "expires": 1792405962},
-       "branch": "work/explicit-affine-disperser-2/worker-sable-disperser",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-disperser"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "M2, ns Cslib.AffineDisperser. exists_explicitDisperser_ne (A : AffineSubspace Bool (BitString N)) (hA : explicitThreshold N < finrank Bool A.direction) : ∃ x ∈ A, ∃ y ∈ A, explicitDisperser N x ≠ explicitDisperser N y, where explicitThreshold N = N - r*n + (r*max (r+1) s + r*(r+1) + n*t + n*r/t); ℓ=log₂N, L=ℓ/3, n = greedy product of primes in (L,4L] at most N/(ℓ+1)^2, r=N/n, s=n/(L+1), t=ℓ+1, μ=1, F=GaloisField 2 n, monomial basis in roots of least-code irreducibles. eventually_explicitThreshold_le : ∀ᶠ N in atTop, (Nat.log 2 N + 1) * explicitThreshold N ≤ 6 * N; isBigO_explicitThreshold : explicitThreshold =O[atTop] N / log N; eventually_explicitThreshold_lt. Supporting: prodPowBasis, card_subfield_le_of_lt_prime, exists_code_leastIrreducible, four_pow_le_mul_prod_primesIoc (Mathlib Chebyshev), exists_traceSymBits_ne. Tests: N=2^60 parameters, threshold < N/10, nonconstant; eventual nonconstancy; axiom guards. Checks: all six gates ok (run-gates) at 783c51e2. Source: Ben-Sasson-Kopparty Thm 7.3 via M1. Contributors: worker-sable-disperser. Continuation: IsAffineDisperser bridge and 3.5N corollary await b2-lower-bound; M3 poly-time certificate next. Scope note: TensorBasis, bitEquiv, primesIoc/selectBelow are general, belong in Foundations/Algebra and BitString homes. Bib: @article{Chebyshev1852, author = {Tchebichef, Pafnuty}, title = {M{\\'e}moire sur les nombres premiers}, journal = {Journal de Math{\\'e}matiques Pures et Appliqu{\\'e}es}, volume = {17}, pages = {366--390}, year = {1852}}",
       "snapshot":
       {"head": {"value": "783c51e2f3c92f958790d4d8768ecd45c24fca3e"},
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792392272,
-          "snapshot":
-          {"head": {"value": "783c51e2f3c92f958790d4d8768ecd45c24fca3e"},
-           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-          "reviewer":
-          {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
-           "agent": {"value": "reviewer-sable-cor3"}},
-          "note":
-          "Correctness review by reviewer-sable-cor3 (independent, read-only) of exact head 783c51e2. Built Threshold + ComplexityTests.AffineDisperser with --wfail --iofail: OK. Headline exists_explicitDisperser_ne is exactly disperser-for-dimension explicitThreshold N + 1 (probe). explicitThreshold is a closed form; the Lean value at 2^60 = 85913322832211920 matches an independent Python recomputation, ratio 0.0745 < 0.1. Numerically (l+1)thr/N is about 4 for exponents 30..400 and thr ln N / N is about 2.76, consistent with eventually_explicitThreshold_le and isBigO (bound 6, Real.log, correct). prodPowBasis, card_subfield_le_of_lt_prime and four_pow_le_mul_prod_primesIoc (Mathlib theta_ge, theta_le_log4_mul_x) are correct, and their hypotheses are instantiated. Explicitness: leastIrreducible is canonical (Nat.find). binaryRoot (BinaryField.lean:197) uses Classical.choose, but f_N is choice-independent: root tuples differ by a Frobenius power (CRT on distinct primes), and traceSymBits 1 is invariant under automorphisms (proved in probe Invariance.lean). No sorry, native_decide, axiom or set_option; #print axioms of 13 decls gives propext, Classical.choice, Quot.sound. Blocking: none. Follow-ups: M3 needs the choice-independence lemma; Chebyshev1852 is missing from references.bib (Primes.lean:43); IsAffineDisperser bridge deferred; the eventual N0 is astronomically large. Not checked: M1 base theorem, BSK Thm 7.3 numbering, API. Evidence: .lake/codex-validation/explicit-affine-disperser-2-correctness/review.json sha256 c4d4f16e42553c6ba92b7f14c2a525139607e00cc00dcf50bea4f4c1a713ecdf"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792392344,
-          "snapshot":
-          {"head": {"value": "783c51e2f3c92f958790d4d8768ecd45c24fca3e"},
-           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
-          "reviewer":
-          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
-           "agent": {"value": "reviewer-sable-api3"}},
-          "note":
-          "API review, independent (reviewer-sable-api3; contributor worker-sable-disperser). Scope: 6 new AffineDisperser modules + tests at 783c51e2. Built touched modules + ComplexityTests.AffineDisperser --wfail --iofail exit 0; probe exit 0; 2^60 parameters recomputed independently (d=0.0745N<N/10, (l+1)d/N=4.55). Template, markers, imports, simp hygiene ok; no sorry/native_decide/set_option. Duplication: Chebyshev, GaloisField reused from Mathlib; k-fold prodPowBasis not in Mathlib (only 2-factor LinearDisjoint); bitEquiv equals Mathlib ZMod.ringEquivOfPrime and bitEquiv.symm = BitString.bitVal (ZMod 2) (probed). No blocking findings. Follow-ups (M3 or placement epic, batch with M1's): move TensorBasis to a field-theory home, bitEquiv to Cslib.BitString with bitVal bridge (reuse HadamardRectangles.lean:50), primesIoc/selectBelow to Data/Nat; Threshold.lean:52 near-duplicates cslib Nat.eventually_mul_pow_le_pow (4-line derivation probed), privatize :72, :99; prefix generic defs Explicit.lean:70-97; Threshold.lean:102 'exact constants' -> 'explicit constant 6' (N0 unstated); Explicit.lean:167 'after' BSK Thm 7.3; mention stronger dispersers (Li) before the corollary; References in Threshold doc; axiom guard for eventually_explicitThreshold_lt. Central: add Chebyshev1852 bib entry. Not checked: six gates, full build, proof correctness, paper figures. Evidence .lake/codex-validation/explicit-affine-disperser-2-api/review.json sha256 5e53d0fd5d2fe0a428425fedef11d33842547f3f84ad66d3b70f5fb01765f7d2"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792393410,
+      "landed": {"value": "b8c3b3efcccaaf61b4218b9ae94d116510d32fe8"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792392272,
+       "snapshot":
+       {"head": {"value": "783c51e2f3c92f958790d4d8768ecd45c24fca3e"},
+        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+       "reviewer":
+       {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
+        "agent": {"value": "reviewer-sable-cor3"}},
+       "note":
+       "Correctness review by reviewer-sable-cor3 (independent, read-only) of exact head 783c51e2. Built Threshold + ComplexityTests.AffineDisperser with --wfail --iofail: OK. Headline exists_explicitDisperser_ne is exactly disperser-for-dimension explicitThreshold N + 1 (probe). explicitThreshold is a closed form; the Lean value at 2^60 = 85913322832211920 matches an independent Python recomputation, ratio 0.0745 < 0.1. Numerically (l+1)thr/N is about 4 for exponents 30..400 and thr ln N / N is about 2.76, consistent with eventually_explicitThreshold_le and isBigO (bound 6, Real.log, correct). prodPowBasis, card_subfield_le_of_lt_prime and four_pow_le_mul_prod_primesIoc (Mathlib theta_ge, theta_le_log4_mul_x) are correct, and their hypotheses are instantiated. Explicitness: leastIrreducible is canonical (Nat.find). binaryRoot (BinaryField.lean:197) uses Classical.choose, but f_N is choice-independent: root tuples differ by a Frobenius power (CRT on distinct primes), and traceSymBits 1 is invariant under automorphisms (proved in probe Invariance.lean). No sorry, native_decide, axiom or set_option; #print axioms of 13 decls gives propext, Classical.choice, Quot.sound. Blocking: none. Follow-ups: M3 needs the choice-independence lemma; Chebyshev1852 is missing from references.bib (Primes.lean:43); IsAffineDisperser bridge deferred; the eventual N0 is astronomically large. Not checked: M1 base theorem, BSK Thm 7.3 numbering, API. Evidence: .lake/codex-validation/explicit-affine-disperser-2-correctness/review.json sha256 c4d4f16e42553c6ba92b7f14c2a525139607e00cc00dcf50bea4f4c1a713ecdf"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792392344,
+       "snapshot":
+       {"head": {"value": "783c51e2f3c92f958790d4d8768ecd45c24fca3e"},
+        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+       "reviewer":
+       {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+        "agent": {"value": "reviewer-sable-api3"}},
+       "note":
+       "API review, independent (reviewer-sable-api3; contributor worker-sable-disperser). Scope: 6 new AffineDisperser modules + tests at 783c51e2. Built touched modules + ComplexityTests.AffineDisperser --wfail --iofail exit 0; probe exit 0; 2^60 parameters recomputed independently (d=0.0745N<N/10, (l+1)d/N=4.55). Template, markers, imports, simp hygiene ok; no sorry/native_decide/set_option. Duplication: Chebyshev, GaloisField reused from Mathlib; k-fold prodPowBasis not in Mathlib (only 2-factor LinearDisjoint); bitEquiv equals Mathlib ZMod.ringEquivOfPrime and bitEquiv.symm = BitString.bitVal (ZMod 2) (probed). No blocking findings. Follow-ups (M3 or placement epic, batch with M1's): move TensorBasis to a field-theory home, bitEquiv to Cslib.BitString with bitVal bridge (reuse HadamardRectangles.lean:50), primesIoc/selectBelow to Data/Nat; Threshold.lean:52 near-duplicates cslib Nat.eventually_mul_pow_le_pow (4-line derivation probed), privatize :72, :99; prefix generic defs Explicit.lean:70-97; Threshold.lean:102 'exact constants' -> 'explicit constant 6' (N0 unstated); Explicit.lean:167 'after' BSK Thm 7.3; mention stronger dispersers (Li) before the corollary; References in Threshold doc; axiom guard for eventually_explicitThreshold_lt. Central: add Chebyshev1852 bib entry. Not checked: six gates, full build, proof correctness, paper figures. Evidence .lake/codex-validation/explicit-affine-disperser-2-api/review.json sha256 5e53d0fd5d2fe0a428425fedef11d33842547f3f84ad66d3b70f5fb01765f7d2"}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
     "Complexity/Foundations/Combinatorics/AffineDisperser.lean",
@@ -3409,53 +3378,42 @@
    "report":
    "Correctness review: Ladner1975 must be the SIGACT News CVP paper (10.1145/990518.990519), not the JACM reducibility paper.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Correctness review: Ladner1975 must be the SIGACT News CVP paper (10.1145/990518.990519), not the JACM reducibility paper.",
-       "lease":
-       {"token": {"value": "a04701ed5687b06b5e4cba9ae24019ba"},
-        "holder":
-        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-         "agent": {"value": "coordinator-sable"}},
-        "expires": 1792407808},
-       "branch": "work/docs-bibliography-3/coordinator-sable",
-       "blocked": false,
-       "assignee": {"value": "coordinator-sable"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Docs-only, delta ef44eae9..5b33f334: Ladner1975 is now the SIGACT News paper 'The Circuit Value Problem Is Log Space Complete for P' (7(1):18-20, 1975, doi 10.1145/990518.990519, Crossref-verified), which is what CircuitValue.lean cites; Impagliazzo1995, Yao1982 and Chebyshev1852 unchanged (approved). check_docs --config-only passes. Author: coordinator-sable.",
       "snapshot":
       {"head": {"value": "5b33f3346aac949ec4f6541220f5ef69e05fd391"},
        "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792393032,
-          "snapshot":
-          {"head": {"value": "5b33f3346aac949ec4f6541220f5ef69e05fd391"},
-           "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
-          "reviewer":
-          {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
-           "agent": {"value": "reviewer-sable-cor3"}},
-          "note":
-          "Correctness delta review ef44eae9..5b33f334 by reviewer-sable-cor3 (independent, not an author). Prior blocking finding resolved: Ladner1975 is now the SIGACT News CVP paper. Every field matches Crossref 10.1145/990518.990519: author Ladner, Richard E.; title The circuit value problem is log space complete for P; ACM SIGACT News 7(1):18-20; issued 1975-01; DOI exact. Old JACM DOI 10.1145/321864.321877 removed. Delta touches only this entry; base..head only references.bib; no Lean changes. Citing site CircuitValue.lean:27,42 on work/circuits-karp-lipton uses it as the CVP log-space P-completeness paper, consistent. check_docs --config-only passes. Blocking: none. Nits: none. Evidence .lake/codex-validation/docs-bibliography-3-correctness/review.json (+ Crossref JSON) sha256 fcce2e651fa3ebab982a92363c55277e75692715868579f0b124e78681d0e8ba"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792393020,
-          "snapshot":
-          {"head": {"value": "5b33f3346aac949ec4f6541220f5ef69e05fd391"},
-           "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
-          "reviewer":
-          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
-           "agent": {"value": "reviewer-sable-api3"}},
-          "note":
-          "API delta review ef44eae9..5b33f334 by reviewer-sable-api3 (independent, not an author). Scope: references.bib only; only the Ladner1975 entry changed (5+/5-), no Lean changes. Entry style matches neighbours (aligned fields, brace-protected {$P$}, en-dash pages, doi field); no duplicate keys or DOIs; old JACM DOI removed. check_docs --config-only passes. Hardness-amplification and disperser entries unchanged from the approved ef44eae9. Blocking: none. Nits: none. Evidence .lake/codex-validation/docs-bibliography-3-api/review.json sha256 ce3e0fe23a81eea7d12ee6ced7fb711dfd4d03a2bd9d30c708cad741e638a566"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792393410,
+      "landed": {"value": "b8c3b3efcccaaf61b4218b9ae94d116510d32fe8"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792393032,
+       "snapshot":
+       {"head": {"value": "5b33f3346aac949ec4f6541220f5ef69e05fd391"},
+        "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+       "reviewer":
+       {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
+        "agent": {"value": "reviewer-sable-cor3"}},
+       "note":
+       "Correctness delta review ef44eae9..5b33f334 by reviewer-sable-cor3 (independent, not an author). Prior blocking finding resolved: Ladner1975 is now the SIGACT News CVP paper. Every field matches Crossref 10.1145/990518.990519: author Ladner, Richard E.; title The circuit value problem is log space complete for P; ACM SIGACT News 7(1):18-20; issued 1975-01; DOI exact. Old JACM DOI 10.1145/321864.321877 removed. Delta touches only this entry; base..head only references.bib; no Lean changes. Citing site CircuitValue.lean:27,42 on work/circuits-karp-lipton uses it as the CVP log-space P-completeness paper, consistent. check_docs --config-only passes. Blocking: none. Nits: none. Evidence .lake/codex-validation/docs-bibliography-3-correctness/review.json (+ Crossref JSON) sha256 fcce2e651fa3ebab982a92363c55277e75692715868579f0b124e78681d0e8ba"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792393020,
+       "snapshot":
+       {"head": {"value": "5b33f3346aac949ec4f6541220f5ef69e05fd391"},
+        "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+       "reviewer":
+       {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+        "agent": {"value": "reviewer-sable-api3"}},
+       "note":
+       "API delta review ef44eae9..5b33f334 by reviewer-sable-api3 (independent, not an author). Scope: references.bib only; only the Ladner1975 entry changed (5+/5-), no Lean changes. Entry style matches neighbours (aligned fields, brace-protected {$P$}, en-dash pages, doi field); no duplicate keys or DOIs; old JACM DOI removed. check_docs --config-only passes. Hardness-amplification and disperser entries unchanged from the approved ef44eae9. Blocking: none. Nits: none. Evidence .lake/codex-validation/docs-bibliography-3-api/review.json sha256 ce3e0fe23a81eea7d12ee6ced7fb711dfd4d03a2bd9d30c708cad741e638a566"}}}},
    "paths": ["references.bib"],
    "id": {"value": "docs-bibliography-3"},
    "goal":
