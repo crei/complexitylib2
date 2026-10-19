@@ -1814,15 +1814,18 @@
           "note":
           "Independent correctness review (reviewer-sable-cor6, no contribution). Scoped build of 5 epic modules + ComplexityTests.InteractiveProofs --wfail --iofail: OK. Own probes compile: acceptProb equals the IsOraclePPTOn machine law against any prover (same handler); stateful adaptive prover fools a two-query verifier w.p.1, constant provers w.p.0; (17/32)^2<1/3; P4 vs star non-isomorphic, self-loops/dup edges ignored, no GI certificate accepted on (P4,star); GNI completeness 1 on (P4,star). IP: unbounded randomized stateful private-coin prover, IsOraclePPTOn verifier, poly calls/request length, 2/3-1/3. NP/BPP in IP real. GNI: guessing-round bound (1+d)/2, le_half hypothesis eval-equality correct, random-key coupling R->R o sigma on injective keys, birthday n^2/D<=1/16, 17/32/round, seq repetition eps^k adaptive, k=2. GI in NP via isVerifier both directions. 31 axiom probes std only; no sorry/native_decide/axiom/set_option. Blocking: none. Nits: Guessing.lean:23 module doc says differ by at most d though hypothesis is one-sided; summary says 13 guards (14). Limits: no full six gates; board snapshot base f4894296 used (assigned a961fdd rejected by protocol; also an ancestor). Evidence .lake/codex-validation/interactive-proofs-correctness/review.json sha256 c6646537c98c5bf55dcab2cd1590d3012337451c4f033c7f6cdcc20964d212ec"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "79ffff8cad2e297a9cf35deddbd3332e"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792386519,
+          "snapshot":
+          {"head": {"value": "9db80c1c477a0fab1594ab5e697456283044e6f3"},
+           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+          "reviewer":
           {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
            "agent": {"value": "reviewer-sable-api6"}},
-          "expires": 1792400763},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api6 (independent; author worker-sable-ip). Scope: f489429..9db80c1 (board base; assigned a961fdd also an ancestor), IP.lean, IP/{Guessing,Repetition,GraphNonIsomorphism}.lean, Problems/GraphIsomorphism.lean, tests. Evidence: epic modules+test built --wfail --iofail, 0 warnings; probes: (rankPerm k).symm = Tuple.sort k; binaryValue_lt from public uniformList_binaryValue; extra axiom checks clean. Reuse OK: WordOracleComp verifiers, IsOraclePPTOn efficiency, Prover.respond = the oracle type of IsOraclePPTOn, Prover.run = same handler; BPP reused; no second machine model; no edits outside epic paths. 17/32 honestly documented (GNI.lean:34-45,530). Template, namespaces, placement, simp hygiene OK; 14 axiom guards (summary says 13). No blocking findings. Follow-ups: keyRank/rankPerm (GNI:85-146) duplicate Mathlib Tuple.sort; private binaryValue_lt/injective (GNI:291-315) -> public in BitString/List/Binary.lean; private uniformList_map_apply (IP:262) duplicates uniformList_acceptCount; tsum_map_mul, natCast_div_le_natCast_div generic. Nits: GNI:29-32 textbook 1/2 in present tense, GNI:35-37 \"exactly when\" reads as iff; no docstrings on isInteractiveProof_round/_verifier; {P with init := s} in public statements; distinctVertices-length polytime repeated 3x. Integration: GMR89/GMW91 bib keys absent at head, on origin/main (881b9c0). Evidence .lake/codex-validation/interactive-proofs-api/review.json sha256 47f122d5864717d43df75e6ca4ee533719d1b98602bd125c728f5118e408188d"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/IP.lean",
     "Complexity/Computability/Complexity/Classes/IP",
