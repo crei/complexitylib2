@@ -1,5 +1,21 @@
 {"version": 1,
- "integration": null,
+ "integration":
+ {"snapshot":
+  {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
+   "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+  "main": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"},
+  "lease":
+  {"token": {"value": "aea2ae0c5e33e6d17c1050d9f6e2929c"},
+   "holder":
+   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+    "agent": {"value": "coordinator-sable"}},
+   "expires": 1792399936},
+  "epic": {"value": "docs-check-bibkeys"},
+  "candidates":
+  [{"snapshot":
+    {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
+     "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+    "epic": {"value": "docs-check-bibkeys"}}]},
  "epics":
  [{"resume": null,
    "report":
