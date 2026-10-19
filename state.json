@@ -2578,6 +2578,25 @@
    "goal":
    "Coverage epic 10: hardness amplification and hardness versus randomness, all nonuniform over the library's De Morgan circuits (Circuit/Boolean/PPoly SIZE). M1: Impagliazzo's hard-core lemma (boosting or finite minimax; state the size loss and density exactly) and Yao's XOR lemma derived from it. M2: worst-case to average-case hardness via local list decoding (Goldreich-Levin decoding and ListDecoding.lean, or Reed-Muller from coding-theory once landed), and the Impagliazzo-Wigderson / BFNW endpoints from the landed Nisan-Wigderson generator: E not in SIZE(2^(eps n)) implies P = BPP, and EXP not in P/poly implies BPP within the intersection of DTIME(2^(n^eps)), using the DTIME/EXP of hierarchy-theorems and seed enumeration for BPP verifiers. Reuse Crypto/Primitives/PRG/NisanWigderson, GoldreichLevin, Pseudoentropy/Boosting and Probability. Cite Impagliazzo1995, ImpagliazzoWigderson1997, Yao1982 (propose entries). Tests, named axiom guards, six gates, one frozen submission per milestone.",
    "dependencies": [],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/ParityP.lean",
+    "Complexity/Computability/Complexity/Classes/Operators.lean",
+    "Complexity/Computability/Complexity/Classes/ValiantVazirani.lean",
+    "Complexity/Computability/Complexity/Classes/Toda.lean",
+    "Complexity/Computability/Complexity/Classes/Toda",
+    "Complexity/Computability/Complexity/Classes/ApproximateCounting.lean",
+    "Complexity/Computability/Complexity/Problems/USAT.lean",
+    "Complexity/Probability/Isolation.lean",
+    "ComplexityTests/Isolation.lean",
+    "ComplexityTests/Isolation"],
+   "id": {"value": "isolation-counting"},
+   "goal":
+   "Coverage epic 9: isolation and counting at class level. M1: PromiseUSAT; Valiant-Vazirani as a randomized polynomial-time reduction from SAT to unique SAT succeeding with probability Omega(1/n), from Probability/PairwiseIndependentHash's three_sixteenths_le_dens_filter_card_filter_eq_one, hence NP within RP^PromiseUSAT on the native oracle classes; the Mulmuley-Vazirani-Vazirani isolation lemma. M2: ParityP and the BP and parity operators, Toda's theorem PH within BP.ParityP within P^SharpP. M3: Stockmeyer approximate counting of SharpP in BPP^NP as the class form of the existing ApproximateCounting estimates. Reuse Classes/SharpP, Classes/PH, Classes/Oracle, PPT and Probability; no second oracle model. Cite ValiantVazirani1986, MulmuleyVaziraniVazirani1987, Toda1991, Stockmeyer1983 (propose entries). Tests, named axiom guards, six gates, one frozen submission per milestone.",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
