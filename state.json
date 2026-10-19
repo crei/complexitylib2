@@ -753,55 +753,17 @@
    "authors": [{"value": "reviewer-api"}]},
   {"resume": null,
    "report":
-   "Fresh API review of exact 4de95cd APPROVED (reviewer-sable-api2); correctness review of the same snapshot in progress. Main moved to a0952ac (fagin-converse landed); this epic is NOT reopened again: it lands via the merge-queue tooling as soon as that lands (base 94dcd9d is an ancestor of main and its files are disjoint from the Fagin landing).",
+   "Land now through the base == main path instead of waiting for the reopened merge-queue tooling: mechanical merge of main 26253c9 (disjoint files) by integrator-sable-1, six gates, short delta reviews of the merge, land. It unblocks undecidability, hierarchy-theorems, ladner and relativization.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/native-exponential-separation/worker-opus",
-       "report":
-       "PUBLICATION REQUEST: 4de95cdc57bdd489c7bc60aeb3c209ebeb2ffb06 on work/native-exponential-separation/integrator-sable-1 (local worktree .worktrees/integrator-sable-1; push blocked by the Lean guardrail hook, not bypassed). Integration of reviewed head 7e4cdca (base a5cb5821): clean merge of origin/main 94dcd9d, then edits A-F: Universal/Decode/Basic.lean moved unchanged to Encodings/Decoder.lean (Decode.lean import and docstring updated, mk_all), exists_le_mul_two_pow moved verbatim to PolynomialBound/Exponential.lean as Cslib.PolynomiallyBounded.exists_le_mul_two_pow (+ proof-only import Mathlib.Algebra.Order.BigOperators.Group.Finset, Main results entry; Hierarchy.lean call site updated), docstring cross-reference fixed to Diagonal.universal_bounds_le, renames doubled/encDoubled/doubleT/doubleT_run -> trueDoubled/encTrueDoubled/trueDoubleT/trueDoubleT_run, diagonal_desc and not_forall_halted_diagonal listed in Main results, two UPSTREAM.md rows (Encodings/Decoder, Encodings/NatPower). No public statement changes except the listed renames and the moved lemma namespace. Validation: lake build --wfail --iofail (8751 jobs), scripts/check.sh all six gates ok, git diff --check clean, no line over 100 chars; diff vs origin/main: Complexity.lean, Hierarchy.lean, Encodings/Decoder.lean, Encodings/NatPower.lean, Universal/Decode.lean, PolynomialBound/Exponential.lean, ComplexityTests.lean, ComplexityTests/TimeHierarchy.lean, UPSTREAM.md. Contributors: worker-opus (implementation), integrator-sable-1 (integration under coordinator-sable). AI assistance: Claude.",
-       "lease":
-       {"token": {"value": "e1d5474d32ad67c843686c62d601934c"},
-        "holder":
-        {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
-         "agent": {"value": "integrator-sable-1"}},
-        "expires": 1792382772},
-       "branch": "work/native-exponential-separation/integrator-sable-1",
-       "blocked": false,
-       "assignee": {"value": "integrator-sable-1"}},
-      "summary":
-      "Reviewed head 7e4cdca by worker-opus with two approvals (reviewer-integration correctness, reviewer-sable-api2 API); merge of main 94dcd9d; edits A-F (decoder library moved to Encodings/Decoder.lean, exists_le_mul_two_pow moved to PolynomiallyBounded, crossref fix, trueDoubled renames, Main results line, two UPSTREAM rows); six gates passed (lake build --wfail --iofail, mk_all --check, lake test --wfail --iofail, lint, lint-style, checkInitImports); no statement changes beyond the renames and the moved lemma namespace; contributors worker-opus and integrator-sable-1 under coordinator-sable direction; AI assistance: Claude. Submitted head 4de95cdc57bdd489c7bc60aeb3c209ebeb2ffb06.",
-      "snapshot":
-      {"head": {"value": "4de95cdc57bdd489c7bc60aeb3c209ebeb2ffb06"},
-       "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792368736,
-          "snapshot":
-          {"head": {"value": "4de95cdc57bdd489c7bc60aeb3c209ebeb2ffb06"},
-           "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
-          "reviewer":
-          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
-           "agent": {"value": "reviewer-sable-cor2"}},
-          "note":
-          "Fresh delta correctness review by reviewer-sable-cor2 (independent; no contribution; exact 4de95cd on base 94dcd9d = current main, ancestry verified). Scope: relies on the recorded full correctness audit of 7e4cdca (reviewer-integration: total decoder with malformed-input degree bounds, binary clock, universal run on the padded input, halted-singleton-true verdict, padded polynomial-vs-exponential contradiction for tidy P and plain machines) and re-checks the integration delta. Evidence: main did not touch the epic paths between a5cb5821 and 94dcd9d; git diff --name-status 94dcd9d 4de95cd is only the 9 epic files; git diff -M 7e4cdca 4de95cd on those paths is exactly: R100 Universal/Decode/Basic -> Encodings/Decoder, Decode.lean import/docstring path, renames doubled/encDoubled/doubleT/doubleT_run -> trueDoubled/encTrueDoubled/trueDoubleT/trueDoubleT_run with identical bodies, exists_le_mul_two_pow moved verbatim (statement+proof) to Cslib.PolynomiallyBounded in PolynomialBound/Exponential.lean with a proof-only BigOperators import and call site updated, Main results/crossref docstring lines, two UPSTREAM.md rows. No hunk touches computableTidilyInO_diagonal, diagonal_not_mem_P, not_computableInTimeAndSpace_diagonal, diagonal_desc or not_forall_halted_diagonal; TimeHierarchy.lean and NatPower.lean unchanged; old names absent from the tree. Rebuilt Classes.Hierarchy, Encodings.Decoder, Encodings.NatPower, Universal.Decode, PolynomialBound.Exponential, ComplexityTests.TimeHierarchy --wfail --iofail: clean. Own #print axioms on the three headlines, diagonal_desc, not_forall_halted_diagonal and the moved lemma: propext/Classical.choice/Quot.sound only. Probe (lake env lean, clean): diagonal on the padded description of a one-step answering machine with three pads gives !b (problem nonempty and proper), moved lemma on n^3+5n+7 via fun_prop, renamed transducer values, separation at 3(n+1)^2. No findings. Nit: Exponential.lean upstream marker targets PolynomialBound.lean, which will need the Finset big-operator import upstream. Not run: full check.sh; prior note text not in current state.json (reopen), used coordinator summary. Evidence .lake/codex-validation/native-exponential-separation-correctness/review.json sha256 2dc4975b3ef1bf8617925b4d61b60188ad782afcba5c77a8992e23bbe3df6181"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792368636,
-          "snapshot":
-          {"head": {"value": "4de95cdc57bdd489c7bc60aeb3c209ebeb2ffb06"},
-           "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
-          "reviewer":
-          {"session": {"value": "33380288772710be7744d177c8f66871"},
-           "agent": {"value": "reviewer-sable-api2"}},
-          "note":
-          "Fresh independent API review of exact 4de95cd (base 94dcd9d = current main, ancestry verified); no contribution. Builds on my earlier full review of 7e4cdca (evidence SHA256 20c5d515...c3d, retained in the same review.json as round 1). Delta check: 98a47c9 tree equals git merge-tree(7e4cdca, 94dcd9d) exactly (clean merge, nothing beyond main's own additions); git diff -M 98a47c9 4de95cd is precisely the announced list: R100 Universal/Decode/Basic -> Encodings/Decoder (header, marker candidate, imports Complexity.Lists+Encodings.Option unchanged), Decode.lean import+docstring path, exists_le_mul_two_pow moved verbatim to PolynomialBound/Exponential as Cslib.PolynomiallyBounded.exists_le_mul_two_pow with proof-only BigOperators import and Main results line, Hierarchy call site + Diagonal.universal_bounds_le crossref + Main results bullet for diagonal_desc/not_forall_halted_diagonal, renames trueDoubled/encTrueDoubled/trueDoubleT/trueDoubleT_run, Complexity.lean (mk_all order) and two UPSTREAM.md placement rows (Decoder, NatPower). Test file and the three headline statements unchanged. Evidence: lake build Encodings.Decoder, Universal.Decode, Encodings.NatPower, PolynomialBound.Exponential, Classes.Hierarchy, ComplexityTests.TimeHierarchy --wfail --iofail clean (3876 jobs); mk_all --check and lint-style clean; git diff --check clean; 8 lake env lean probes clean on the new head (headline client shapes, Decoder from Encodings without Universal, renamed helpers, clock, Exponential placement; probe 5a's expected runBound-unknown-in-Bound.lean retained). No findings; remaining nits from round 1 (inline unframe/dropFrame degree certificates, test file name, signOf visibility) are optional. Not run: lake test/lint/checkInitImports. Evidence .lake/codex-validation/native-exponential-separation-api/review.json SHA256 27ce01c0605514d4eeb1ec7ac1e80f9149c13d7127deeb2dd730c0dd219550e5"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": "work/native-exponential-separation/worker-opus",
+      "report":
+      "Land now through the base == main path instead of waiting for the reopened merge-queue tooling: mechanical merge of main 26253c9 (disjoint files) by integrator-sable-1, six gates, short delta reviews of the merge, land. It unblocks undecidability, hierarchy-theorems, ladner and relativization.",
+      "lease": null,
+      "branch": "work/native-exponential-separation/integrator-sable-1",
+      "blocked": false,
+      "assignee": {"value": "integrator-sable-1"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode",
