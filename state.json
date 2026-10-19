@@ -1172,7 +1172,9 @@
       "snapshot":
       {"head": {"value": "435e12f3c659780e0e6e16605828d50704a78189"},
        "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api1"}}}}}}},
    "paths": ["scripts/coordination", "CONTRIBUTING.md", "AGENTS.md"],
    "id": {"value": "merge-queue-landing"},
    "goal":
