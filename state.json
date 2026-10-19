@@ -18,7 +18,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792356843,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792356674,
@@ -76,7 +75,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792357641,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792357482,
@@ -130,7 +128,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792355755,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792355217,
@@ -180,7 +177,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792353277,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792353139,
@@ -226,7 +222,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358231,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358092,
@@ -280,7 +275,7 @@
        "holder":
        {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
         "agent": {"value": "worker-sable-oracle"}},
-       "expires": 1792385618},
+       "expires": 1792385698},
       "branch": "work/open-oracle-composition/worker-sable-oracle",
       "blocked": false,
       "assignee": {"value": "worker-sable-oracle"}}}},
@@ -314,7 +309,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364044,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792363911,
@@ -375,7 +369,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792368712,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792368575,
@@ -427,7 +420,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792361676,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792361403,
@@ -545,7 +537,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358627,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358495,
@@ -613,7 +604,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792359269,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792359175,
@@ -736,7 +726,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792360547,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792360283,
@@ -904,7 +893,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792367280,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792367120,
@@ -998,7 +986,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364773,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792364624,
@@ -1105,7 +1092,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792370838,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792369636,
@@ -1417,7 +1403,7 @@
     "agent": {"value": "integrator-sable-2"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792385618,
+   "expires": 1792385698,
    "actor":
    {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
     "agent": {"value": "worker-sable-oracle"}}},
