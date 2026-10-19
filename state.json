@@ -1270,15 +1270,18 @@
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "f69619ffe2a866cf52b1a55bf2a16fbc"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792374555,
+          "snapshot":
+          {"head": {"value": "4bf009418a4038ae957fd81c9d458134cbd26831"},
+           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+          "reviewer":
           {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
            "agent": {"value": "reviewer-sable-cor1"}},
-          "expires": 1792388272},
-         "blocked": false}},
+          "note":
+          "Fresh independent correctness review (reviewer-sable-cor1, no contribution) of base 764e3b8 / head 4bf0094; all board commands via main's binary. Read Protocol/Runtime/tests/Legacy/docs deltas since my changes verdict on 435e12f. lake -d scripts/coordination test --wfail 54/54; tooling build --wfail ok. My round-1 blocking drift is fixed: ready needs a unique merge base; every step (FF included) needs merge-base --all tip head == [base]; verifyStep makes each step change exactly the reviewed non-root paths with head contents; merge config pinned; commit tree == verified tree. Scratch fixtures on the new code: single and batch drift refused, nothing published, clean worktree; hostile-config directory rename keeps the reviewed path; REAL pre-change binary on a fixture board reads batch reservations and merge-landed completions, its rewrite degrades the reservation, and the renewal lands exactly the reviewed tree; a .land naming only the first candidate of a degraded batch is refused by the final-tree guard. No blocking findings. Hardening (non-blocking): the protocol guard is path-only; a hand-made .land with altered content in a reviewed path is accepted, unreachable via the CLI since only Runtime.land dispatches it after verified integrate; suggest per-candidate diff(head, landed) disjoint from reviewed paths. Nit: Tests/Legacy LegacyState keeps landed (current Epic). Not run: check.sh. Evidence .lake/codex-validation/merge-queue-landing-correctness-r2/review.json SHA256 eb151a569538483c6a6fd40b69bd77cbae589a242b2ecad9cd727ec7bc98e250"}}},
        "api":
        {"finished":
         {"review":
