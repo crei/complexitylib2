@@ -1504,7 +1504,31 @@
    "goal":
    "Follow-up cleanup of the landed quantitative-stretch work from its independent API review (reviewer-sable-api4) and correctness review (reviewer-sable-cor4); no statement weakening, six gates, two reviews. (1) Make one captured forwardIterate streaming certificate the core of Crypto/Computational/Stretch.lean and derive computableTidilyInTimeAndSpace_forwardIterate, _iterate_pair and _iterate_captured from it (or factor the shared callback setup and final reversal), reusing streamState_replicate_eq_seedAt instead of the local hstate_eq; report helper-inclusive before/after line counts. (2) Name the getLast?.toList certificates accurately (Streaming getLast_bits, Quantitative bitsGetLast) and share the common transducer of getLast_bits/getLast?_bits. (3) Expose the inline linear List.length certificate used by computableTidilyInTimeAndSpace_stretch as a reusable primitive beside reverse_bits. (4) Revert pseudorandomGenerator's proof to polyTime_stretch if the streaming dependency buys nothing. (5) Add a zero-round test through a quantitative certificate. Keep vendored statements byte-identical and markers correct; candidate additions only.",
    "dependencies": [],
-   "authors": [{"value": "worker-sable-stretch"}]}],
+   "authors": [{"value": "worker-sable-stretch"}]},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/Space.lean",
+    "Complexity/Computability/Complexity/Classes/Space",
+    "Complexity/Computability/Machines/Turing/MultiTape/Complexity/Space.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Complexity/Space",
+    "Complexity/Computability/Machines/Turing/MultiTape/Machine/Space.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Encodings/Decoder.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Encodings/NatPower.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Encodings/Configuration.lean",
+    "Complexity/Algorithms/Reachability",
+    "Complexity/Foundations/Data/BitString/Enumeration.lean",
+    "ComplexityTests/Space.lean",
+    "ComplexityTests/Space"],
+   "id": {"value": "space-cleanup"},
+   "goal":
+   "Follow-up cleanup of polynomial-space from its independent API review (reviewer-sable-api2), after the separation and the plain-machine bridge land; no statement weakening, six gates, two reviews. (F1) Factor the configuration decoder through Encodings/Decoder: add Decoder.bool and Decoder.finite, move dropFrame_iterate_encList beside frames_encList, rewrite decodeTapes with frames, keep decodeStackTape/decodeFiniteCfg as normalizing PolyTime-certified functions or add a normalizing-decoder combinator, adapting degree-level and PolyTime certificates once. (F2) Namespace or privatize the generic helper names in Complexity/Space/Decode.lean. (F3) Place the generic configuration decoder beside Encodings/Configuration or Encodings/Decoder. (F6) Prove mem_PSPACE_iff from the bridge's decidableInTimeAndSpace_iff and add a length-indexed mem_PSPACE_iff_exists_decidableInTimeAndSpace. (F7) Generalize PSPACE/NPSPACE/P_subset_PSPACE to Type*. (F10) Make proof-only imports plain. (F11) Move encard_setOf_length_eq and the enumList/next lemmas to Foundations/Data/BitString, and bits_two_pow_sub_one to Encodings/NatPower as encNat_two_pow_sub_one. (F13) Credit Bolton Bailey's v1 Savitch design in the Algorithms module docstring. (F14) Test namespaces mirror paths; loopWidth via viewLengthBound. The NTM RunPath lemmas (F4) and a DecidesInSpace predicate (F8) are left to logspace-nl, which consumes them.",
+   "dependencies":
+   [{"value": "polynomial-space"},
+    {"value": "native-exponential-separation"},
+    {"value": "polytime-plain-bridge"}],
+   "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
