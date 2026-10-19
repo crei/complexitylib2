@@ -3001,7 +3001,8 @@
    "dependencies": [],
    "authors": [{"value": "coordinator-sable"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "Superseded by np-witness-migration-b (same goal without PolyTime/Nat/Binary.lean, which rational-hitting-runtime holds). Do not assign.",
    "phase": "unassigned",
    "paths":
    ["Complexity/Computability/Complexity/Problems/VertexCover.lean",
