@@ -2102,15 +2102,18 @@
           "expires": 1792404385},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "c79b2331da0bd0e5d8c1345d29036f37"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390042,
+          "snapshot":
+          {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
            "agent": {"value": "reviewer-sable-api7"}},
-          "expires": 1792404383},
-         "blocked": false}}}}}},
+          "note":
+          "Delta review 0d58b554..f1c1d302 by reviewer-sable-api7 (independent, read-only). Blocking finding resolved: selectMask and its 4 lemmas renamed to selectDistinct (no selectMask left in tree); docstrings cross-reference accurately both ways (Witness.lean:168-172 vs maskSelect multisets; SubsetSum/Mask.lean:45-47). Should-fix resolved: IsVerifier.of_padding/guard moved to Classes/NP.lean:105-133, 22-line block byte-identical to old Witness.lean:90-111 with equal section variables; NP module doc and Main results updated, Witness Main results trimmed. SAT.lean and ThreeSAT.lean drop the Witness import; local closures back to base (SAT 67->48, ThreeSAT 98->96). Delta adds no new declarations or duplication. Build (one run, correctness worktree, same SHA): 32 targets = touched modules + all direct importers + ComplexityTests.NPWitness, nice -n 10, --wfail --iofail, rc=0, 0 warnings. Nit: Witness.lean:81 section variable V now unused. Followups: Oracle/Closure.lean:152 and PCP/NP.lean:163 inline padding predate the epic. Not checked: six gates, lint. Evidence .lake/codex-validation/np-witness-builder-api/review.json sha256 66b0c8768edf131e657ca81f34acfd639018f4c1428c3d2b0154b8a381aa45af"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP/Witness.lean",
     "Complexity/Computability/Complexity/Problems/SAT.lean",
