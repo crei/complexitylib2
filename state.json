@@ -943,13 +943,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": null,
-      "report":
-      "Land now through the base == main path: mechanical merge of main (now including native-exponential-separation; disjoint files) by integrator-sable-2 since worker-opus left, six gates, short delta reviews, land. Unblocks tqbf-pspace-complete, logspace-nl and space-cleanup.",
+     {"resume": "work/polynomial-space/worker-opus",
+      "report": "",
       "lease": null,
-      "branch": "work/polynomial-space/worker-opus",
+      "branch": "work/polynomial-space/integrator-sable-2",
       "blocked": false,
-      "assignee": {"value": "worker-opus"}}}},
+      "assignee": {"value": "integrator-sable-2"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space.lean",
     "Complexity/Computability/Complexity/Classes/Space",
