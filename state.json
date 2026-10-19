@@ -2345,55 +2345,18 @@
    "dependencies": [{"value": "interactive-proofs"}],
    "authors": []},
   {"resume": null,
-   "report": "",
+   "report":
+   "API review (reviewer-sable-api2) requested changes: reuse ProbabilityTheory.indepSet_pi_of_dependsOn and Mathlib DependsOn in LocalLemma; prove the k-wise(2) <-> pairwise converse; drop or derive the bit-string counting forms that are weaker than the existing Hoeffding bound. Correctness approved.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Milestone 1 bibliography entries needed (cslib BibTeX; AlonSpencer2016, WegmanCarter1981 already present):\n@book{MitzenmacherUpfal2017,\n  author    = {Mitzenmacher, Michael and Upfal, Eli},\n  title     = {Probability and Computing: Randomization and Probabilistic Techniques in\n               Algorithms and Data Analysis},\n  edition   = {2},\n  publisher = {Cambridge University Press},\n  year      = {2017}\n}\n\n@article{Vadhan2012,\n  author    = {Vadhan, Salil P.},\n  title     = {Pseudorandomness},\n  journal   = {Foundations and Trends in Theoretical Computer Science},\n  volume    = {7},\n  number    = {1--3},\n  pages     = {1--336},\n  year      = {2012},\n  doi       = {10.1561/0400000010}\n}\n\n@inproceedings{BellareRompel1994,\n  author    = {Bellare, Mihir and Rompel, John},\n  title     = {Randomness-Efficient Oblivious Sampling},\n  booktitle = {35th Annual Symposium on Foundations of Computer Science},\n  pages     = {276--287},\n  publisher = {IEEE Computer Society},\n  year      = {1994}\n}\n\n@incollection{ErdosLovasz1975,\n  author    = {Erd{\\H{o}}s, Paul and Lov{\\'a}sz, L{\\'a}szl{\\'o}},\n  title     = {Problems and Results on 3-Chromatic Hypergraphs and Some Related Questions},\n  booktitle = {Infinite and Finite Sets},\n  series    = {Colloquia Mathematica Societatis J{\\'a}nos Bolyai},\n  volume    = {10},\n  pages     = {609--627},\n  publisher = {North-Holland},\n  year      = {1975}\n}\n\n@article{ErdosSpencer1991,\n  author    = {Erd{\\H{o}}s, Paul and Spencer, Joel},\n  title     = {Lopsided {L}ov{\\'a}sz Local Lemma and {L}atin Transversals},\n  journal   = {Discrete Applied Mathematics},\n  volume    = {30},\n  number    = {2--3},\n  pages     = {151--154},\n  year      = {1991}\n}\n\n@article{MoserTardos2010,\n  author    = {Moser, Robin A. and Tardos, G{\\'a}bor},\n  title     = {A Constructive Proof of the General {L}ov{\\'a}sz Local Lemma},\n  journal   = {Journal of the ACM},\n  volume    = {57},\n  number    = {2},\n  pages     = {11:1--11:15},\n  year      = {2010},\n  doi       = {10.1145/1667053.1667060}\n}",
-       "lease":
-       {"token": {"value": "fefe7f2b24a3954069242211e73cb1cb"},
-        "holder":
-        {"session": {"value": "0d4e04fa36522a13475c8af7f7944f7d"},
-         "agent": {"value": "worker-sable-prob"}},
-        "expires": 1792403368},
-       "branch": "work/probability-toolkit/worker-sable-prob",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-prob"}},
-      "summary":
-      "Milestone 1 (Chernoff, k-wise, LLL). PMF.pi, scores in [0,1], mean:=sum_i sum_a (p i a).toReal*score i a: pi_sum_ge_one_add_mul_le_exp: mean<=mu, 0<=d -> Pr[(1+d)mu<=X]<=exp(mu(d-(1+d)log(1+d))); pi_sum_ge_one_add_mul: <=exp(-(d^2 mu/(2+d))); _of_le_one: <=exp(-(d^2 mu/3)); pi_sum_le_one_sub_mul: mu<=mean -> Pr[X<=(1-d)mu]<=exp(-(d^2 mu/2)); pi_abs_sum_sub_mean_ge_mul (2exp(-d^2 mean/3), d<=1); BitString.card_filter_one_add_mul_le_weight / card_filter_weight_le_one_sub_mul (2^n exp(-d^2 n/(2(2+d))), 2^n exp(-d^2 n/4)). IsKWiseIndependentHash k h (#T<=k -> dens{i | T.restrict (h i)=y}=(|Y|^#T)^-1); expect_restrict, expect_prod, isPairwiseIndependentHash (2<=k), isKWiseIndependentHash_of_surjective, expect_sum_pow_le, dens_filter_le_abs_sum_sub_expect: (2m)-wise -> dens{a<=|sum_S(g-E g)|}<=(m^2 #S/a^2)^m; isKWiseIndependentHash_polynomialHash k. LLL: prod_one_sub_le_measureReal_iInter_compl (lopsided asymmetric, Measure), pow_le_/measureReal_iInter_compl_pos (e q(d+1)<=1), PMF.toOuterMeasure_pi_inter_eq_mul, PMF.prod_one_sub_le_pi_iInter_compl, PMF.pi_iInter_compl_pos. Checks: run-gates, all six ok at fc182c17. Source: original; reuses Mathlib mgf/Chernoff/iIndepFun/Lagrange. Contributors: worker-sable-prob only. Limits: k-wise constant m^2 (cruder than Bellare-Rompel); LLL nonconstructive. Continuation: milestone 2 = Divergence/Pinsker/Shearer, MinEntropy, McDiarmid. Bib: MitzenmacherUpfal2017, Vadhan2012, BellareRompel1994, ErdosLovasz1975, ErdosSpencer1991, MoserTardos2010 (BibTeX in board note).",
-      "snapshot":
-      {"head": {"value": "fc182c17bb1bc31d99e48c38ab30df619d76b22e"},
-       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792389421,
-          "snapshot":
-          {"head": {"value": "fc182c17bb1bc31d99e48c38ab30df619d76b22e"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
-           "agent": {"value": "reviewer-sable-cor2"}},
-          "note":
-          "Correctness review of exact head fc182c17 (base 0d8ef4bf) by reviewer-sable-cor2; independent (sole author worker-sable-prob). Built Chernoff, KWiseIndependent(+Polynomial), LocalLemma, ComplexityTests.ProbabilityToolkit with --wfail --iofail: ok. No sorry/native_decide/axiom/set_option in diff; #print axioms of 18 headlines = propext, Classical.choice, Quot.sound. Math: upper tails (mean<=mu, delta>=0) sharp/(2+delta)/delta<=1 forms and lower tail (mu<=mean) exp(-delta^2 mu/2), two-sided 2exp(-delta^2 mean/3) for delta<=1 match Mitzenmacher-Upfal Thm 4.4/4.5/Cor 4.6; bitstring forms are mu=n/2 specialisations. k-wise def implies distinct-points form (probe); 2m-moment tail (m^2|S|/a^2)^m correct; polynomial degree<k family standard (Lagrange). LLL lopsided hypothesis and asymmetric/symmetric (e q (d+1)<=1) forms correct; product versions use Disjoint coordinate sets via toOuterMeasure_pi_inter_eq_mul. Probes (all compile): Chernoff on non-identical Bernoulli coins with mu strictly above/below mean, negative probe that upper tail fails without mean<=mu, k-wise tail <0.03 for 4-wise poly hash over F_101, LLL d=1 symmetric and asymmetric on overlapping 3-clauses. Blocking: none. Nits: axiom guards omit a few secondary headlines; k-th moment only for even k; at-most-k convention stronger than distinct-points when |X|<k. Not checked: API, six gates. Evidence: .lake/codex-validation/probability-toolkit-correctness/review.json sha256 3b3c0b36eb5cf03ff0c2264ff6aea07e72da913866feee9011df32457f354635"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "changes",
-          "time": 1792389634,
-          "snapshot":
-          {"head": {"value": "fc182c17bb1bc31d99e48c38ab30df619d76b22e"},
-           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-          "reviewer":
-          {"session": {"value": "33380288772710be7744d177c8f66871"},
-           "agent": {"value": "reviewer-sable-api2"}},
-          "note":
-          "API review by reviewer-sable-api2 (independent; worker-sable-prob sole contributor) of exact fc182c17. Built 4 touched modules + ComplexityTests.ProbabilityToolkit niced --wfail --iofail: OK; hygiene clean; 28 new names grepped: no clashes; no LLL/k-wise in Mathlib/cslib. BLOCKING: B1 LocalLemma.lean:258-279 toOuterMeasure_pi_inter_eq_mul duplicates ProbabilityTheory.indepSet_pi_of_dependsOn (Foundations/Probability/SecondMoment.lean:156) and re-encodes Mathlib DependsOn as ad hoc hE/hF/hA (also :286,:309,:333); restate with DependsOn and derive (probe C). B2 KWiseIndependent.lean:141 only k-wise(k>=2)->pairwise; add IsKWiseIndependentHash 2 h <-> IsPairwiseIndependentHash h and Nonempty seed so affine/Toeplitz families reach the k-wise API (probe B proves converse). B3 Chernoff.lean:305-332 bit-string counting forms strictly weaker than existing BitString.card_filter_le_card_filter_sub_half_le (Hoeffding.lean:81, exp(-d^2 n/2) both tails; probe A); drop or derive from Hoeffding (goal endpoint itself dominated; coordinator may re-scope). Nits: sharp vs simplified Chernoff names; abs_sum vs sum_abs order; extra axiom guards. Mean convention OK. Follow-ups: LLL hypothesis from Mathlib independence; mean-dependent k-wise tail. Central: bib keys MitzenmacherUpfal2017 Vadhan2012 BellareRompel1994 ErdosLovasz1975 ErdosSpencer1991 MoserTardos2010 missing. Not run: six gates, lint. Evidence .lake/codex-validation/probability-toolkit-api/review.json sha256 1b53d6975f20f634d321a0ca10c157047d96e0f29d85f08ae6e789b7d0a635a1"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "API review (reviewer-sable-api2) requested changes: reuse ProbabilityTheory.indepSet_pi_of_dependsOn and Mathlib DependsOn in LocalLemma; prove the k-wise(2) <-> pairwise converse; drop or derive the bit-string counting forms that are weaker than the existing Hoeffding bound. Correctness approved.",
+      "lease": null,
+      "branch": "work/probability-toolkit/worker-sable-prob",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-prob"}}}},
    "paths":
    ["Complexity/Probability/Chernoff.lean",
     "Complexity/Probability/KWiseIndependent.lean",
