@@ -2469,15 +2469,18 @@
           "expires": 1792404877},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "e34fe70e9999d30364f3bcbdc5f3ed4c"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390819,
+          "snapshot":
+          {"head": {"value": "8a05720a1f07660e4d0e27e808dedbbc16322c3b"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "33380288772710be7744d177c8f66871"},
            "agent": {"value": "reviewer-sable-api2"}},
-          "expires": 1792404864},
-         "blocked": false}}}}}},
+          "note":
+          "Delta API review fc182c17..8a05720a by reviewer-sable-api2 (independent; author worker-sable-prob). Build of Chernoff, KWiseIndependent(.Polynomial), LocalLemma, ComplexityTests.ProbabilityToolkit under nice --wfail --iofail: OK, 0 warnings. B1 resolved: toOuterMeasure_pi_inter_eq_mul takes S T : Set V with Mathlib DependsOn and is derived from indepSet_pi_of_dependsOn + toMeasure_pi; LLL hA are DependsOn; SecondMoment imported proof-only. B2 resolved: isKWiseIndependentHash_two_iff (KWiseIndependent.lean:182), used on affineHash in tests. B3 resolved: BitString counting forms and Weight import dropped, Chernoff docstring points to card_filter_le_card_filter_sub_half_le. Renames done (pi_sum_ge_one_add_mul_le_exp_log, pi_sum_abs_sub_mean_ge_mul), no stale references. Axiom guards added for 6 decls. No new duplication (grep of Complexity, cslib, Mathlib); all 30 docstring names resolve (probe). Nits: guards still omit toOuterMeasure_pi_inter_eq_mul and IsKWiseIndependentHash.isPairwiseIndependentHash (clean; global audit covers). Central: references.bib lacks MitzenmacherUpfal2017, Vadhan2012, BellareRompel1994, ErdosLovasz1975, ErdosSpencer1991, MoserTardos2010; confirm endpoint (1) re-scope to Hoeffding. Not checked: six gates, lint, rendered docs. Evidence .lake/codex-validation/probability-toolkit-api/review.json sha256 0249b9b2b76f89e509cf48c1646a25ee320d60f117a3d423d3f89048bcbfb879"}}}}}}},
    "paths":
    ["Complexity/Probability/Chernoff.lean",
     "Complexity/Probability/KWiseIndependent.lean",
