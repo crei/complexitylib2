@@ -3110,19 +3110,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "1a8994b8a07d9ca62c77050c35c38ae8"},
-       "holder":
-       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-        "agent": {"value": "coordinator-sable"}},
-       "expires": 1792405063},
-      "branch": "work/docs-bibliography-2/coordinator-sable",
-      "blocked": false,
-      "assignee": {"value": "coordinator-sable"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "1a8994b8a07d9ca62c77050c35c38ae8"},
+        "holder":
+        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+         "agent": {"value": "coordinator-sable"}},
+        "expires": 1792405063},
+       "branch": "work/docs-bibliography-2/coordinator-sable",
+       "blocked": false,
+       "assignee": {"value": "coordinator-sable"}},
+      "summary":
+      "Docs-only: 15 references.bib entries cited by submitted epics: Turing1936, Rice1953 (undecidability); NisanSzegedy1994, Huang2019, GotsmanLinial1992, BealsBuhrmanCleveMoscaDeWolf2001 (query-complexity); MitzenmacherUpfal2017, Vadhan2012, BellareRompel1994, ErdosLovasz1975, ErdosSpencer1991, MoserTardos2010 (probability-toolkit); RazborovRudich1997 (natural-proofs); MehlhornSchmidt1982, LovaszSaks1988 (communication-complexity). Every DOI resolves through the DOI handle API and its Crossref title, venue, pages and volume match (ErdosLovasz1975 and MitzenmacherUpfal2017 have no DOI). check_docs --config-only passes, including the duplicate-key guard. Author: coordinator-sable.",
+      "snapshot":
+      {"head": {"value": "f8c3d3cc04f65411b03ea5bb5ba908288d3efc58"},
+       "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths": ["references.bib"],
    "id": {"value": "docs-bibliography-2"},
    "goal":
