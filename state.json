@@ -1940,15 +1940,18 @@
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "bcaa90bc4c21a834bf6f5ceed259d80d"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792385050,
+          "snapshot":
+          {"head": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"},
+           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+          "reviewer":
           {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
            "agent": {"value": "reviewer-sable-cor1"}},
-          "expires": 1792399436},
-         "blocked": false}},
+          "note":
+          "Delta correctness review 881b9c0..2bf2b21 by an independent reviewer (no authorship). Prior blocker fixed: the new duplicate Cutland1980/KatzLindell2020 entries are removed. 176 entries, 176 distinct keys, no case-insensitive duplicates. The existing entries at references.bib:599/:448 are untouched. base..head is append-only (97 insertions, 0 deletions), and the docbuild copy is still the symlink. Ore1933 doi 10.1090/S0002-9947-1933-1501703-0 is confirmed: Crossref gives Ore, On a special class of polynomials, Trans. AMS 35(3):559-584, 1933, and doi.org resolves to ams.org. MishraSanthanam2026 @techreport (institution ECCC, number TR26-260, 2026, url) matches the ECCC page re-fetched now, in the same style as the three existing ECCC techreports. The FGHK change only braces {$3n$}; the text is unchanged and matches Crossref. The other seven entries are identical to 881b9c0, whose fields were verified last round (Crossref/doi.org, OpenLibrary, ECCC PDFs). No blocking findings. Limits: DBLP unreachable (429); doc-gen4 render not run; MS numbering checked against ECCC rev 0. Evidence: .lake/codex-validation/docs-bibliography-correctness/delta-2bf2b21/review.json sha256 38a0e4273db842f9147445352ddff70360049e05dc3c7d20d96e91353a66664e"}}},
        "api":
        {"active":
         {"report": "",
