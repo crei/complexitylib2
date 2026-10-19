@@ -2551,7 +2551,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/communication-complexity/worker-sable-graphs",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-graphs"}}}},
    "paths":
    ["Complexity/Computability/Communication/Rectangle.lean",
     "Complexity/Computability/Communication/FoolingSet.lean",
