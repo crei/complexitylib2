@@ -706,15 +706,18 @@
           "expires": 1792391268},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "97d1a1d03e2eb13849889cfa8dfe5e5c"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792376873,
+          "snapshot":
+          {"head": {"value": "ac19679d7f3941179c7340f8f220a093713b1dca"},
+           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+          "reviewer":
           {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
            "agent": {"value": "reviewer-sable-api5"}},
-          "expires": 1792391144},
-         "blocked": false}}}}}},
+          "note":
+          "API review d42eefc..ac19679 (reviewer-sable-api5; independent of worker-karn, subagents, worker-inference). Read Formula.lean diff, entry, Defs/Eval/MatrixEval/Affine/Determinant/Executable/CyclotomicGrid/BlockDivision/QuantumSeries/QuantumMatrices/SmallExpansion, decl lists of all modules, tests; Authors match v1. Built all changed modules + test + 6 Formula dependents --wfail --iofail OK; runLinter (Rational, Formula), lint-style, mk_all OK. Probes: Rational.Formula = Circuits.Formula ratSignature by rfl, no second inductive/bridge; Formula.decidableEq constructive (propext, Quot.sound), decide works for other signatures; Formula.lean change minimal; scoped HahnSeries CharZero does not leak; global instances keyed on local defs; Schur lemmas justified (Mathlib CommRing-only); Bird bridges re-prove Mathlib module-private lemmas. No blocking findings. Should-fix: QuantumSeries.lean:133-222 near-verbatim copy of Mathlib SummableFamily.powers generalized to Ring, no Mathlib credit (inherited from v1). Nits: Determinant.lean:91-129 provenance; Eval.lean:151 matMul alias; Mathlib-candidate lemmas in Rational.*; opaque source names; Bool admissible?/nonzero? use ?; unqualified Main names. Central: bib keys missing, Axioms guards, ROADMAP, test Authors. Limits: not every proof read; no lake test/full lint/docs. Evidence .lake/codex-validation/rational-hitting-api/review.json sha256 1aabb79163cae76f6077d64cbd1fe97d23c8f8a5168240942a74ef646506b6eb"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
     "Complexity/Computability/Circuit/Rational",
