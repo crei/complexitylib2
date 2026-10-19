@@ -1723,7 +1723,16 @@
        "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor5"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api5"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "2562ac475617f2b1f3cccf36523bc537"},
+          "holder":
+          {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
+           "agent": {"value": "reviewer-sable-api5"}},
+          "expires": 1792401063},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Ladner.lean",
     "Complexity/Computability/Complexity/Classes/Ladner",
