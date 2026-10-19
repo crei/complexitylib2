@@ -2245,7 +2245,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "bcad1ef7f3c26c8b0c1d5ccc8c129bba"},
+       "holder":
+       {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
+        "agent": {"value": "worker-sable-disperser"}},
+       "expires": 1792402838},
       "branch": "work/explicit-affine-disperser-2/worker-sable-disperser",
       "blocked": false,
       "assignee": {"value": "worker-sable-disperser"}}}},
@@ -2259,7 +2264,7 @@
    "goal":
    "Continuation of explicit-affine-disperser (M2 and M3). M2: the explicit composite-degree field (n = product of distinct primes in (L, 4L], L about 0.3 log2 N; brute-force irreducibles of each prime degree; tensor basis) so the proper-subfield bound s <= n/L holds; the bit-string function f_N; nonconstancy of f_N on every affine subspace of dimension >= d(N), d(N) = O(N / log N), from exists_traceSym_ne; the bridge to Cslib.BitString.IsAffineDisperser (from b2-lower-bound; no second disperser notion). M3: native polynomial-time certificate charging every field operation. Then the corollary with b2-lower-bound: an explicit function in P needing B2 circuits of size 3.5N - O(N/log N), stated honestly as weaker than the source (Li, O(log n)). Tests and axiom guards; six gates; frozen submission per milestone.",
    "dependencies": [{"value": "explicit-affine-disperser"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-disperser"}]},
   {"resume": null,
    "report": "",
    "phase":
