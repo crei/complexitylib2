@@ -2691,19 +2691,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "ed6961eec24538d8a6fd532ec7d4531d"},
-       "holder":
-       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-        "agent": {"value": "coordinator-sable"}},
-       "expires": 1792402846},
-      "branch": "work/docs-roadmap-refresh/coordinator-sable",
-      "blocked": false,
-      "assignee": {"value": "coordinator-sable"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "ed6961eec24538d8a6fd532ec7d4531d"},
+        "holder":
+        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+         "agent": {"value": "coordinator-sable"}},
+        "expires": 1792402846},
+       "branch": "work/docs-roadmap-refresh/coordinator-sable",
+       "blocked": false,
+       "assignee": {"value": "coordinator-sable"}},
+      "summary":
+      "Docs-only refresh at 6b954f70 on 0d8ef4bf. ROADMAP: canon-table rows for space/alternation and logic now build on landed NPSPACE = PSPACE, TQBF, NL in P and Fagin; new Coverage priorities section (ten ranked developments plus further priorities, from the weighted citation audit); iterated functions record the landed fixed-power theorem; the finished Fagin item is removed; rational hitting becomes its runtime certificate; machine-class milestones now list the space hierarchy, NL = coNL and PH in PSPACE as remaining. README selected developments: structural complexity (Ladner, BGS, time hierarchy and P strictly in EXP, Savitch, TQBF, NL in P, Sipser-Gacs-Lautemann, BPP in P/poly), IP (NP in IP, GNI), NP-complete problems, Fagin (stated as definable iff isomorphism-closed and in NP, matching definable_iff_isoClosed_and_queryLanguage_mem_NP). UPSTREAM: #767 alignment of local L/PSPACE/DTIME/EXP; Probabilistic/IterateWhile private helpers. Checks: check_docs --config-only; every local link resolves. No Lean changes. Author: coordinator-sable.",
+      "snapshot":
+      {"head": {"value": "6b954f709393d2324dc1dfe0a44ab7b84a2877a6"},
+       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths": ["ROADMAP.md", "README.md", "UPSTREAM.md"],
    "id": {"value": "docs-roadmap-refresh"},
    "goal":
