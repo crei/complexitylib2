@@ -776,7 +776,16 @@
       {"head": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"},
        "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor2"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "066d209a702d31554cb5726e81357b2a"},
+          "holder":
+          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
+           "agent": {"value": "reviewer-sable-cor2"}},
+          "expires": 1792387163},
+         "blocked": false}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Universal/Decode.lean",
