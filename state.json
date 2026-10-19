@@ -2339,7 +2339,19 @@
    "goal":
    "Coverage epic 6: query complexity measures and their relations, on cslib QueryComplexity/Measures, DecisionTree/* and Foundations/BooleanAnalysis/{Fourier, LowDegree} (reuse; no parallel decision-tree model). Endpoints: real degree deg f linked to LowDegree and approximate degree adeg_eps; Nisan-Szegedy bs <= 2 deg^2 and bs <= 6 adeg^2; Nisan C <= s * bs and D <= C * bs <= bs^3; symmetrization and adeg(OR) = Omega(sqrt n) (Chebyshev upper bound via Mathlib Polynomial.Chebyshev if feasible); Huang sensitivity theorem s(f) >= sqrt(deg f) (a proof avoiding Cauchy interlacing if Mathlib lacks it); randomized query complexity with Yao principle. Tests on concrete functions (OR, AND, parity, majority, address), axiom guards, six gates, frozen submissions per milestone; cite BuhrmanDeWolf2002, Huang2019, NisanSzegedy1994 (propose entries).",
    "dependencies": [],
-   "authors": [{"value": "worker-sable-query"}]}],
+   "authors": [{"value": "worker-sable-query"}]},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/Hierarchy/Space.lean",
+    "Complexity/Computability/Complexity/Classes/Hierarchy/SpaceUniversal.lean",
+    "ComplexityTests/SpaceHierarchy.lean"],
+   "id": {"value": "space-hierarchy"},
+   "goal":
+   "Continuation of hierarchy-theorems: the deterministic space hierarchy theorem on the native machines. DSPACE (encoded analogue of cslib PR #767 conventions, consistent with Classes/Space and logspace-nl), SpaceConstructible, a space-budgeted variant of the in-place universal run (no second universal machine), the configuration-counting bound on running time of space-bounded deciders, DSPACE(f) strictly inside DSPACE(g) with the universal machine overhead stated honestly, and L strictly inside PSPACE as a corollary. Tests, axiom guards, six gates, frozen submission.",
+   "dependencies": [{"value": "hierarchy-theorems"}],
+   "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
