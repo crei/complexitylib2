@@ -2858,15 +2858,18 @@
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "2b67f6a8609e571a89edb12825651076"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792393313,
+          "snapshot":
+          {"head": {"value": "e10d94f4bca690c2e32b741ad287bbdb50f46784"},
+           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+          "reviewer":
           {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
            "agent": {"value": "reviewer-sable-cor7"}},
-          "expires": 1792407644},
-         "blocked": false}},
+          "note":
+          "Independent correctness review (reviewer-sable-cor7, no contribution) of exact e10d94f over 4274652; HEAD and ancestry verified. Built 6 touched modules + ComplexityTests.KarpLipton under nice with --wfail --iofail (exit 0) and re-elaborated each file from source. Diff has no sorry/native_decide/set_option/axiom; #print axioms of 18 headlines within propext/Classical.choice/Quot.sound. Verified: ofCode_code; isSome_ofCode_iff matches a direct decision on 11 codes (self/forward reference, arity, spurious const arg, output at n+size, output count, n=0); evalCode_code plus exhaustive maj3 agreement; CVP in P under encPair (encCircuit 1) encBits; CircuitSAT single-output, SAT reduction checked by kernel evaluation of the decoded circuit (unsat, tautology, 64-input exhaustive vs first-occurrence assignment), hardness via CookLevin.SAT_npHard. MCSP: pre-existing definition, binary threshold; cap min s (2^n(2n+3)+1) justified by proved complexity_le_two_pow_mul_add_one (via le_min), certificates <= 40(L+1)^4, content O(T^2 log^2 T); probes at threshold 10^30, AND/XOR/OR, budget rejection, out-of-range output, n=0 yes/no. No blocking findings. Follow-ups: add Ladner1975 bib entry (worker entry verified on Crossref); MCSP file placement is API/continuation. Not checked: fun_prop calculus soundness, six gates, API. Evidence .lake/codex-validation/circuits-karp-lipton-correctness/review.json SHA256 808518c270da1a3c36f435502537ad9359d590f0dac732536eda0834df99661e."}}},
        "api":
        {"finished":
         {"review":
