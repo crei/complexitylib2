@@ -3075,7 +3075,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/communication-complexity-2/worker-sable-graphs",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-graphs"}}}},
    "paths":
    ["Complexity/Computability/Communication/Randomized.lean",
     "Complexity/Computability/Communication/Randomized",
