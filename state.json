@@ -1915,7 +1915,15 @@
    "authors": [{"value": "worker-sable-disperser"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/docs-bibliography/coordinator-sable",
+      "blocked": false,
+      "assignee": {"value": "coordinator-sable"}}}},
    "paths": ["references.bib", "docbuild/docs/references.bib"],
    "id": {"value": "docs-bibliography"},
    "goal":
