@@ -1692,15 +1692,18 @@
           "expires": 1792405160},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "efe0e3798e0a390f6de846691d50864f"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390928,
+          "snapshot":
+          {"head": {"value": "619bc0b59c3217fe8e9cb7ea1ddf1697444ede60"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "6028cd701670813461915b10a3d32c60"},
            "agent": {"value": "reviewer-sable-api3"}},
-          "expires": 1792405164},
-         "blocked": false}}}}}},
+          "note":
+          "Delta API review (reviewer-sable-api3, independent) of aed5f718..619bc0b5; merge 619bc0b5 touches no Halting file. B1 fixed: Universal.length_applyTapes and space_le_space_of_halted deleted, callers use length_applyTapes_eq and runsInSpace_of_halted. N1 fixed: helpers moved into Universal.Redirect, Universal.Hardwire and Universal.Dispatch; Universal root keeps only hardwire, dispatch, Desc.*, find?_desc, SCfg.key_eq_key_toCfg and the SMN field lemmas (196 public decls listed in delta/decls.tsv). length_step_workTapes renamed Redirect.length_workTapes_step. N4 docstring lists the five notions, each with .isComputable. N7: Rice.lean:256,260 and Hardwire.lean:776 are now simp only, and no non-terminal bare simp remains. behaviour renamed behavior (0 grep hits); Mathlib analogy reworded, rice2 cited. No new duplication: not_isDecidable_halts, Hardwire.computableTidilyInPolyTime_redirect and Redirect.read_blank have no counterpart in Complexity/, cslib or Mathlib Computability, and the loop/halt descs are private. All 86 docstring names resolve; git diff --check ok. Nits: Redirect.read_blank and eBit_false/true are global simp lemmas on vendored defs, kept in a feature namespace. N2, N3, N5, N6 and N9 carry over (nonblocking or central). Build: one build at this SHA, run in reviewer-sable-cor3, exit 0. Not run: gates, lint. Evidence: .lake/codex-validation/undecidability-api/review.json sha256 f4db2b5bc7bf866fc1abdaea8bd445f6facb211d921e5fedbb373294c3992d9c"}}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Halting.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Halting",
