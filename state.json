@@ -1016,55 +1016,17 @@
    "authors": [{"value": "coordinator"}]},
   {"resume": null,
    "report":
-   "Independent API review of exact 78caf64 APPROVED (reviewer-sable-api4): both approvals now stand; the epic lands unchanged in the first batch after the tooling lands. Decisions: keep the name Turing.MultiTapeTM.decidableInTimeAndSpace_iff (polynomial-space may consume it now by importing PolyTime/Plain directly); the #767 UPSTREAM wording is accepted with the sharper phrasing that #767 states DTIME/DSPACE over Language Symbol with length-indexed bounds, predating the encoded DecidableInTimeAndSpace on main (#768 is merged). Recorded for a later cleanup: the Deterministic sub-marker at Plain.lean:62 should name TapeLemmas for space_linear/exists_space_linear; state the composed plain-to-tidy constants (time 2t + 3(kt + k) + c, space c(kt + k + 1), c = 4k^2 + 6k + 4) in the docstring; add an NP .mpr client. No author action now.",
+   "Land now through the base == main path: mechanical merge of main 764e3b8 (disjoint files) by integrator-sable-1 since worker-mythos left, six gates, short delta reviews, land. Unblocks hierarchy-theorems and space-cleanup.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "CHECKPOINT, implementation complete; publication needed. Commit 78caf64 (full 78caf64 = 78caf64e547c995baadd5f8e4d4cf23e06fd1bd8) on local branch work/polytime-plain-bridge/worker-mythos, parent 5c14e51 = current origin/main. The local Lean guardrail blocks an ordinary git push and I am not bypassing it: please publish with git push origin 78caf64e547c995baadd5f8e4d4cf23e06fd1bd8:refs/heads/work/polytime-plain-bridge/worker-mythos (shared repository), then I will run ready. SCOPE: six files, +341/-3, purely additive: new PolyTime/Plain.lean; theorems and docstring updates in Classes/P.lean and Classes/NP.lean; ComplexityTests/PolyTimePlain.lean; generated root imports. VALIDATION on 78caf64 tree: scripts/check.sh all six gates ok; upstream_sync --offline and proof_lengths accept the new markers. CENTRAL INTEGRATION REQUESTS: (1) Axioms.lean named guards, all verified exactly as [propext, Classical.choice, Quot.sound] in my test: Turing.MultiTapeTM.computableTidilyInPolyTime_iff_exists_computableInTimeAndSpaceOfLength, Cslib.Complexity.mem_P_iff_exists_decidableInTimeAndSpace, Cslib.Complexity.mem_P_of_decidableInTimeAndSpace, Cslib.Complexity.mem_NP_iff_exists_computableInTimeAndSpaceOfLength. (2) UPSTREAM.md machine-calculus bullet: replace \"Check #767 and its split #768 before adding space-to-time inclusions or overlapping class definitions; reconcile the local encoded, tidy-machine definitions of P/NP with its DTIME-based language classes.\" by \"Check #767 before adding space-to-time inclusions or overlapping class definitions; its split #768 has merged. Classes/P and Classes/NP characterize the local encoded, tidy-machine P and NP in upstream terms through Complexity/PolyTime/Plain. mem_P_of_decidableInTimeAndSpace has the shape of the DTIME classes of #767, whose DecidableInTimeAndSpace predates the encoded form on main; after #767 is rebased, relate its Classes.P to P encBits, where encBits is the identity.\" (3) ROADMAP: no row change; no listed milestone is completed. FOR polynomial-space: decidableInTimeAndSpace_iff is public and replaces the hind indicator argument in mem_PSPACE_iff; ComputesInTimeAndSpace.space_linear gives the time-to-space direction.",
-       "lease":
-       {"token": {"value": "a383fd64ef930cfd2f90d19200a9b505"},
-        "holder":
-        {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
-         "agent": {"value": "worker-mythos"}},
-        "expires": 1792384912},
-       "branch": "work/polytime-plain-bridge/worker-mythos",
-       "blocked": true,
-       "assignee": {"value": "worker-mythos"}},
-      "summary":
-      "RESULT: tidy polynomial time, P and NP characterized with the predicates of the pinned cslib main, purely additively, at 78caf64 on base 5c14e51. Turing.MultiTapeTM.computableTidilyInPolyTime_iff_exists_computableInTimeAndSpaceOfLength: ComputableTidilyInPolyTime f encIn encOut iff exists t s : N -> N, PolynomiallyBounded t, PolynomiallyBounded s, ComputableInTimeAndSpaceOfLength f encIn encOut t s. Also ComputableInTimeAndSpace.computableTidilyInPolyTime (a polynomial time bound, any space bound), ComputableTidilyInPolyTime.exists_computableInTimeAndSpaceOfLength, ComputesInTimeAndSpace.space_linear and ComputableInTimeAndSpace.exists_space_linear (time t bounds space by k t + k), indicator_eq_iff and decidableInTimeAndSpace_iff (upstream decidability through any Boolean decider with answers in encBool). Cslib.Complexity.mem_P_iff_exists_decidableInTimeAndSpace (upstream DecidableInTimeAndSpace with separate PolynomiallyBounded t s of the encoded length), mem_P_of_decidableInTimeAndSpace (time bound alone: the textbook and #767 DTIME shape), mem_NP_iff_exists_computableInTimeAndSpaceOfLength (same p, V, IsVerifier). LOSS: tidy to plain is lossless (same machine and bounds); plain to tidy changes the bounds linearly with machine-dependent coefficients. NO existing definition, statement or client changed; P and NP import Plain for proofs only, and their module docstrings now cite these results. CLIENTS (ComplexityTests/PolyTimePlain.lean): upstream non-tidy copy machine gives tidy polytime for id; upstream almost-constant machine puts {[true]} in P encBits, also with exponential space; polytime certificates give upstream deciders and machines; SAT verifier as an upstream machine; exact axiom guards for six results, all [propext, Classical.choice, Quot.sound]. VALIDATION: scripts/check.sh six gates passed on this tree; upstream_sync --offline and proof_lengths accept the new markers. SOURCES: Arora and Barak Chapter 1 and Definition 1.13; upstream TidyNormalForm and Tidy/Basic bridges reused, no new machine constructions. CONTRIBUTORS: worker-mythos only, no subagents; AI assistance Claude Code (Claude Opus 5.5). CENTRAL INTEGRATION recorded by coordinator-sable: four Axioms.lean guards, UPSTREAM.md #767 wording, no ROADMAP change. LIMITATIONS: no DTIME/DSPACE definitions added; relating #767 Classes.P to P encBits awaits #767's rebase onto main's encoded DecidableInTimeAndSpace.",
-      "snapshot":
-      {"head": {"value": "78caf64e547c995baadd5f8e4d4cf23e06fd1bd8"},
-       "base": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792367424,
-          "snapshot":
-          {"head": {"value": "78caf64e547c995baadd5f8e4d4cf23e06fd1bd8"},
-           "base": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"}},
-          "reviewer":
-          {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
-           "agent": {"value": "reviewer-sable-cor4"}},
-          "note":
-          "Correctness review of 78caf64 on 5c14e51 by reviewer-sable-cor4 (independent; no contribution to this epic). Scope: PolyTime/Plain.lean, Classes/P.lean, Classes/NP.lean, ComplexityTests/PolyTimePlain.lean, root imports; read against upstream Deterministic/TapeLemmas/Tidy/Defs/PolynomialBound and vendored Tidy/Basic, TidyNormalForm, Deterministic, TapeLemmas. Evidence: lake build of the 4 modules --wfail --iofail OK, 0 warnings; probes ProbeAllTrue.lean and ProbeNPmpr.lean (lake env lean, exit 0): encBool/OfLength defeq by rfl; Set.univ in P via mem_P_of (space w.length^w.length) and via iff.mpr from the upstream almost-constant machine; allTrue (w.all id) in P via polytime, iff.mp to an upstream decider, roundtrip, and decider recovered tidily; NP .mpr with a constant-true upstream verifier, p=0; empty-set/univ boundary of decidableInTimeAndSpace_iff and indicator_eq_iff; space_linear at k=0,t=0; own #print axioms of the 4 headline theorems and 4 helpers = [propext, Classical.choice, Quot.sound]. Verified: both iff directions use the cited bridges with no strengthening (PolyBounded witnesses are exactly the plain t s; same machine via Tidy/Basic; constants 2t+3(ct+c)+d and d(ct+c+1) match TidyNormalForm; space_linear hypotheses honest via runsInTime_iff_halted); decider/indicator identification proved by indicator_eq_iff; NP keeps p, V, IsVerifier. No sorry/axiom/native_decide/option overrides. Blocking: none. Nits: (1) tests cover NP iff only .mp, no upstream-verifier-to-NP client (test l.72-78); (2) Plain.lean l.127-128 'its bounds are those of the tidy computation' are really the PolyBounded witnesses; (3) indicator_eq_iff l.90 under the 'Time bounds space' section/marker. Not checked: full check.sh, #768 merged claim. Evidence .lake/codex-validation/polytime-plain-bridge-correctness/review.json SHA256 dd530eacf078f9ba1bfe022da36994ca5e5595fadea6a57e45ace80dcdc16e9a"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792367730,
-          "snapshot":
-          {"head": {"value": "78caf64e547c995baadd5f8e4d4cf23e06fd1bd8"},
-           "base": {"value": "5c14e510b74a14707afd5657a8663fb8be0acd88"}},
-          "reviewer":
-          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
-           "agent": {"value": "reviewer-sable-api4"}},
-          "note":
-          "API review of 78caf64 (base 5c14e51) by reviewer-sable-api4, independent (no contribution to this epic), read-only. Inspected Plain.lean, Classes/P.lean, Classes/NP.lean, ComplexityTests/PolyTimePlain.lean, root imports, against pinned cslib Deterministic/TapeLemmas/AlmostConstant/Id, local TidyNormalForm, Tidy/Basic, PolyTime.lean, Comp.lean, UPSTREAM.md, ROADMAP, references.bib and worker-opus's Space.lean. Evidence: lake build of the 4 modules --wfail --iofail ok; 4 probes ok (module publicly importing only Plain restates the 3 headline statements; module publicly importing only P/NP restates the 3 class theorems, so the proof-only import of Plain is adequate; empty/universal problems in P via upstream almost-constant machine; zero work tapes; constantly-false decider; axioms of the 4 unguarded helpers standard); upstream_sync --offline and proof_lengths accept; no >100-char lines; no sorry/axiom/native_decide/simp attrs. Naming matches mem_PPoly_iff_exists_circuits/mem_NP_of_decidableInPolyTime; no duplication found; decidableInTimeAndSpace_iff is exactly the hind step inlined in mem_PSPACE_iff. Nits (non-blocking): Plain.lean:62 marker names Deterministic.lean but space_linear needs TapeLemmas (which imports Deterministic): say TapeLemmas or split; l.112 docstring could record the composed plain-to-tidy constants; decidableInTimeAndSpace_iff vs _iff_exists_ naming, decide before polynomial-space consumes; NP .mpr direction lacks a concrete client. UPSTREAM.md #767 wording verified accurate (#768 merged in pin 3ba57de1; #767 open, DTIME over Language Symbol). Limitation: full check.sh not rerun. Evidence .lake/codex-validation/polytime-plain-bridge-api/review.json sha256 f253047dd14346d0161f1381e49efdee94e398a276ff8059360c1822e0b9660e"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "Land now through the base == main path: mechanical merge of main 764e3b8 (disjoint files) by integrator-sable-1 since worker-mythos left, six gates, short delta reviews, land. Unblocks hierarchy-theorems and space-cleanup.",
+      "lease": null,
+      "branch": "work/polytime-plain-bridge/worker-mythos",
+      "blocked": false,
+      "assignee": {"value": "worker-mythos"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Complexity/PolyTime/Plain.lean",
     "Complexity/Computability/Complexity/Classes/P.lean",
