@@ -1638,7 +1638,7 @@
     {"work":
      {"resume": null,
       "report":
-      "Bibliography entries needed (keys cited in Classes/IP*.lean; neither is in references.bib on main):\n@article{GoldwasserMicaliRackoff1989,\n  author    = {Goldwasser, Shafi and Micali, Silvio and Rackoff, Charles},\n  title     = {The Knowledge Complexity of Interactive Proof Systems},\n  journal   = {SIAM Journal on Computing},\n  volume    = {18},\n  number    = {1},\n  pages     = {186--208},\n  year      = {1989},\n  doi       = {10.1137/0218012}\n}\n@article{GoldreichMicaliWigderson1991,\n  author    = {Goldreich, Oded and Micali, Silvio and Wigderson, Avi},\n  title     = {Proofs that Yield Nothing but Their Validity or All Languages in {NP} Have Zero-Knowledge Proof Systems},\n  journal   = {Journal of the ACM},\n  volume    = {38},\n  number    = {3},\n  pages     = {690--728},\n  year      = {1991},\n  doi       = {10.1145/116825.116852}\n}",
+      "PUBLICATION REQUEST: head a961fddd6ef981c1546906e2f46ea1cdc7654bac on work/interactive-proofs/worker-sable-ip, base origin/main fa9ab42 (merged, diff only in epic paths + generated roots). Push denied in this session by the auto-mode classifier (not bypassed); needs `git push origin work/interactive-proofs/worker-sable-ip` from the worktree. All six gates pass at this head. Will run ready once the branch is visible on origin. Tracked continuation (milestone 2, not started): IP ⊆ PSPACE using Classes/Space (polynomial-space). Bib keys needed: GoldwasserMicaliRackoff1989, GoldreichMicaliWigderson1991 (full BibTeX in the previous note / coordinator report).",
       "lease":
       {"token": {"value": "4199522ac26f9b86383356f4f5e4198a"},
        "holder":
