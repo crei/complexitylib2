@@ -1268,7 +1268,7 @@
       {"head": {"value": "4bf009418a4038ae957fd81c9d458134cbd26831"},
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor1"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api1"}}}}}}},
    "paths": ["scripts/coordination", "CONTRIBUTING.md", "AGENTS.md"],
    "id": {"value": "merge-queue-landing"},
