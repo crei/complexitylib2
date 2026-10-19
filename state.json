@@ -1089,7 +1089,15 @@
    "authors": [{"value": "worker-mythos"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/hamming-geometry/worker-mythos",
+      "blocked": false,
+      "assignee": {"value": "worker-mythos"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Pointwise.lean",
     "Complexity/Computability/Circuit/Boolean/Hamming.lean",
