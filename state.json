@@ -716,7 +716,7 @@
        "holder":
        {"session": {"value": "284b607582cb0e7bf0d45e8fbc04e81a"},
         "agent": {"value": "integrator-sable-3"}},
-       "expires": 1792389030},
+       "expires": 1792389260},
       "branch": "work/sipser-lautemann/integrator-sable-3",
       "blocked": false,
       "assignee": {"value": "integrator-sable-3"}}}},
@@ -1873,7 +1873,7 @@
     "agent": {"value": "worker-sable-stretch"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792389030,
+   "expires": 1792389260,
    "actor":
    {"session": {"value": "284b607582cb0e7bf0d45e8fbc04e81a"},
     "agent": {"value": "integrator-sable-3"}}},
