@@ -2090,7 +2090,7 @@
       {"head": {"value": "7713dab891f6189e31a4d968405650308f91c5eb"},
        "base": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor3"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
