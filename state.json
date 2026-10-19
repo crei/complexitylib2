@@ -3396,6 +3396,21 @@
    "goal":
    "Milestone 2 of hardness-amplification (M1 landed: hard-core lemma, XOR lemma): hardness versus randomness, nonuniform circuits throughout. First the average-case endpoint: if some function in E is (1/2 - 1/s)-hard for circuits of size s(n) = 2^(eps n), then P = BPP, via the landed Nisan-Wigderson generator (Crypto/Primitives/PRG/NisanWigderson, Design.polynomial) and seed enumeration for BPP verifiers, using DTIME/E from Classes/Time and Classes/EXP; then worst-case to average-case amplification (Impagliazzo-Wigderson or Sudan-Trevisan-Vadhan via local list decoding of Reed-Muller codes once coding-theory lands, else XOR-lemma/direct-product route) giving E not in SIZE(2^(eps n)) implies P = BPP, and the BFNW endpoint EXP not in P/poly implies BPP within the intersection of DTIME(2^(n^eps)). NW assumes strict < where the XOR lemma gives <=: add slack explicitly. Cite ImpagliazzoWigderson1997, BabaiFortnowNisanWigderson1993, NisanWigderson1994 (propose entries). Tests, named axiom guards, run-gates, frozen submission per milestone.",
    "dependencies": [],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Foundations/Combinatorics/AffineDisperser",
+    "Complexity/Foundations/Combinatorics/AffineDisperser.lean",
+    "Complexity/Computability/Complexity/AffineDisperser.lean",
+    "Complexity/Computability/Complexity/AffineDisperser",
+    "ComplexityTests/AffineDisperser.lean",
+    "ComplexityTests/AffineDisperserRuntime.lean"],
+   "id": {"value": "explicit-affine-disperser-3"},
+   "goal":
+   "Milestone 3 of the explicit affine disperser (after explicit-affine-disperser-2 lands): a native ComputableTidilyInPolyTime certificate for explicitDisperser N charging every field operation (irreducibility test by trial division for the least-code polynomials, multiplication in the tensor representation, elementary symmetric polynomial by dynamic programming, trace), first proving that the computed function equals explicitDisperser (independence of the root choice binaryRoot, or a definition through an explicit quotient ring); then, once b2-lower-bound lands, the bridge from AffineSubspace nonconstancy to Cslib.BitString.IsAffineDisperser and the corollary: an explicit function in P whose B2 circuits need 3.5N - O(N/log N) gates, stated honestly as weaker than Li's dispersers. Fold in the M2 review nits (Threshold.lean helpers private, namespace for fieldDegree/numBlocks, docstring wording). Tests, named axiom guards, run-gates.",
+   "dependencies": [{"value": "explicit-affine-disperser-2"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
