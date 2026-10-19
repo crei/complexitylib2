@@ -1664,15 +1664,18 @@
           "note":
           "Correctness review by reviewer-sable-cor3 (independent; no contribution) of exact aed5f71 (base 59b6ece ancestor ok). Built 8 Halting modules + ComplexityTests.Halting --wfail --iofail under nice: clean (3768 jobs). Own probes (lake env lean, exit 0): deciding conditions of halting/acceptance (pair and self forms) satisfied by the classical indicator, so the negations are about computability; IsComputable satisfiable; behaviour is extensional (two distinct words, equal behaviour; singleton set not behaviour-respecting); rice implies the classical language form and E_TM; fixed-input halting (Mathlib form) for every x follows from rice; s-m-n boundaries; recursion theorem with non-constant verdict. #print axioms on 20 headlines: propext/Classical.choice/Quot.sound only. No sorry/native_decide/axiom/set_option. Rice quantifies over every set of behaviours (finest extensional notion on bit inputs; implies the language form). computes_hardwire holds for all d, p, bit x, o; polytime claim is ComputableTidilyInPolyTime. No blocking findings. Nits: Rice.lean:577 exists_behaviour_eq is the two-outcome special case of Kleene, cited as Sipser Thm 6.3 without saying so; Halting.lean:44-48 overstates the match with Mathlib fixed-input halting_problem; Halting.lean:29 cites a decl from an unimported module; bit-input limit disclosed. Not run: six gates. Evidence .lake/codex-validation/undecidability-correctness/review.json sha256 ee1ba5dce4404a30fed54151fe2967a7af2c54ed9624f4d2556129a26a3316f6"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "e3676bc58f717552d23217fad24088cc"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792389280,
+          "snapshot":
+          {"head": {"value": "aed5f718eec901dc94d11ad292916187c9070d3b"},
+           "base": {"value": "59b6eced334cffb786e5500118f136f3e1cbe94a"}},
+          "reviewer":
           {"session": {"value": "6028cd701670813461915b10a3d32c60"},
            "agent": {"value": "reviewer-sable-api3"}},
-          "expires": 1792403555},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api3 (independent; no contribution) of exact base 59b6ece / head aed5f71, read-only. Evidence: lake build Halting.Rice closure + ComplexityTests.Halting --wfail --iofail exit 0; mk_all --check, diff --check ok; #lint (15 linters incl. simpNF, docBlame) on 195 Halting decls 0 errors; reuse probes. BLOCKING B1: duplicates of public vendored API in the import closure: Hardwire.lean:261 length_applyTapes = Universal.length_applyTapes_eq (Bound.lean:158; rfl probe), and it shares its name with a private lemma of another statement (Universal/Complexity.lean:258); Basic.lean:91 space_le_space_of_halted re-derives space_mono/space_eq_of_halt, and its use at :107 is runsInSpace_of_halted hu le_rfl. Delete both. Nits: N1 generic public names in Universal (marker, bitSyms, vcells, wtape, writeEntries, copyEntries, outAct, dstate, applyTapes_nil, length_step_workTapes = private Space.lean:122, eBit_false/true, Hardwire.read_blank); use subnamespaces. N2 SMN.lean:142 eBit fun_prop lemma duplicates Ladner/PolyTime.lean:508. N3 option_map belongs in PolyTime/Option. N4 Computable.lean:29 'every resource-bounded notion' overclaims. N5 no PolyTimeReducible->MappingReducible lemma. N6 IsComputable/IsDecidable under Halting/. N7 non-terminal simp Rice:249,253, Hardwire:756. N8 behaviour spelling. N9 central: add Turing1936, Rice1953 bib. Template, citations, 22 axiom guards, tests ok. Not checked: proofs, six gates. Evidence .lake/codex-validation/undecidability-api/review.json sha256 bad2a0ec712d9c3ae16db3eef1630432e3695d5cb52a5f5fba10c19f166b366e"}}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Halting.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Halting",
