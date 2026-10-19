@@ -3490,7 +3490,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "913e975c129a10385e9e25501fc68b69"},
+       "holder":
+       {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
+        "agent": {"value": "worker-sable-disperser"}},
+       "expires": 1792408024},
       "branch": "work/explicit-affine-disperser-3/worker-sable-disperser",
       "blocked": false,
       "assignee": {"value": "worker-sable-disperser"}}}},
@@ -3505,7 +3510,7 @@
    "goal":
    "Milestone 3 of the explicit affine disperser (after explicit-affine-disperser-2 lands): a native ComputableTidilyInPolyTime certificate for explicitDisperser N charging every field operation (irreducibility test by trial division for the least-code polynomials, multiplication in the tensor representation, elementary symmetric polynomial by dynamic programming, trace), first proving that the computed function equals explicitDisperser (independence of the root choice binaryRoot, or a definition through an explicit quotient ring); then, once b2-lower-bound lands, the bridge from AffineSubspace nonconstancy to Cslib.BitString.IsAffineDisperser and the corollary: an explicit function in P whose B2 circuits need 3.5N - O(N/log N) gates, stated honestly as weaker than Li's dispersers. Fold in the M2 review nits (Threshold.lean helpers private, namespace for fieldDegree/numBlocks, docstring wording). Tests, named axiom guards, run-gates.",
    "dependencies": [{"value": "explicit-affine-disperser-2"}],
-   "authors": []}],
+   "authors": [{"value": "worker-sable-disperser"}]}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
