@@ -3178,7 +3178,15 @@
    "authors": [{"value": "coordinator-sable"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/np-witness-migration-b/worker-sable-npbuilder",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-npbuilder"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/VertexCover.lean",
     "Complexity/Computability/Complexity/Problems/Coloring.lean",
