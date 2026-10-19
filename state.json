@@ -1037,20 +1037,27 @@
    "report":
    "Published: work/circuit-metric/worker-mythos is at 06bc350 on origin. Main has moved to a0952ac (fagin-converse landed, disjoint files); until the merge-queue tooling lands, ready requires base == current main, so merge origin/main a0952ac, re-run scripts/check.sh, post a publication request for the new exact commit, then ready. No further landings will move main before the tooling lands.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "PUBLICATION REQUEST: please publish c2016b0765523a616b12c7665eab317ceba0677e to refs/heads/work/circuit-metric/worker-mythos (fast-forward from the published 06bc350). It merges current origin/main a0952ac (fagin-converse; files disjoint from this epic; clean merge, mk_all --check consistent). Six gates passed on c2016b0 with a clean tree. ready follows as soon as git ls-remote shows c2016b0.",
-      "lease":
-      {"token": {"value": "94a1e55af26bc3a97278c471aaa616dc"},
-       "holder":
-       {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
-        "agent": {"value": "worker-mythos"}},
-       "expires": 1792383466},
-      "branch": "work/circuit-metric/worker-mythos",
-      "blocked": false,
-      "assignee": {"value": "worker-mythos"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "PUBLICATION REQUEST: please publish c2016b0765523a616b12c7665eab317ceba0677e to refs/heads/work/circuit-metric/worker-mythos (fast-forward from the published 06bc350). It merges current origin/main a0952ac (fagin-converse; files disjoint from this epic; clean merge, mk_all --check consistent). Six gates passed on c2016b0 with a clean tree. ready follows as soon as git ls-remote shows c2016b0.",
+       "lease":
+       {"token": {"value": "94a1e55af26bc3a97278c471aaa616dc"},
+        "holder":
+        {"session": {"value": "58f31836a2f8ef3b6dd9e64732f2daad"},
+         "agent": {"value": "worker-mythos"}},
+        "expires": 1792383466},
+       "branch": "work/circuit-metric/worker-mythos",
+       "blocked": false,
+       "assignee": {"value": "worker-mythos"}},
+      "summary":
+      "RESULT: circuit complexity as a translation-invariant distance, milestone 1 of the owner note. GENERIC (Circuit/Metric.lean): diffDist I c f g := if f = g then 0 else complexity I (single (f - g)) + c on (Fin n -> U) -> U for any complete I with [AddGroup U]. Proved: diffDist_self; diffDist_eq_zero_iff (0 < c); diffDist_add_right; diffDist_triangle (complexity of the two-input addition <= c); diffDist_comm_le (negation of cost <= e gives D g f <= D f g + e); diffDist_comm (negation invariance); diffDist_add_left ([AddCommGroup U]). TRUE GENERAL STATEMENT: a right-translation-invariant quasi-metric, not symmetric in general (test: full binary basis on ZMod 3, c = 1, D(x0,0) = 1 but D(0,x0) = 2); diffNorm is an AddGroupNorm exactly under 0 < c, the addition bound and negation invariance, and dist_diffNorm shows its normed group induces D for commutative carriers. Engine: complexity_single_unary_le and complexity_single_binary_le, generic forms of Boolean.complexity_not_le and complexity_binary_le; no new circuit, function, norm model or gadget. BOOLEAN (Boolean/Metric.lean): circuitDist f g := diffDist interpretation 4 f g, so the Boolean case IS the specialization (circuitDist_eq_diffDist by rfl; circuitDist_def gives the specified if f = g then 0 else C(single (f + g)) + 4; circuitDist_of_ne the xor form). Metric: self, eq_zero_iff, comm, triangle (from the four-gate xor), add_right, add_left; dist_complexity_single_le_circuitDist (1-Lipschitz, from dist_complexity_single_le_complexity_xor). circuitNorm := diffNorm interpretation 4 (complexity_single_add_le via Synthesis.xor; complexity_single_neg by rfl since -f = f); circuitNormedAddCommGroup is a reducible definition (Mathlib note on reducible non-instances), never an instance; dist_circuitNormedAddCommGroup. MCSP: complexity_single_le_iff_circuitDist_le and complexity_single_le_iff_mem_closedBall for f != 0. TESTS (ComplexityTests/CircuitMetric.lean): exact one-bit distances d(x0,0)=4, d(!x0,0)=5, d(x0,!x0)=5, d(0,1)=5; norm value, Lipschitz, closed-ball membership and non-membership; two bits 5 <= d(x0,x1) <= 8 and the sharing example d(f + x0, f + x1) <= 8 for every f; the non-Boolean generic instance with triangle, quasi-symmetry, translation and the exact asymmetry; exact axiom guards for eight results, all [propext, Classical.choice, Quot.sound]. Exact values use private test helpers: projections cost zero gates, and non-projections need one. NOTE: omega distinguishes otherwise equal complexity terms whose lambda binder is written BitString n versus Fin n -> Bool; the tests state goals without binder annotations. VALIDATION: scripts/check.sh six gates passed. SOURCES: owner note 2026-10-18 (provenance in the commit only, not cited in docstrings); Jukna2012 for the correction inequality. CONTRIBUTORS: worker-mythos only, no subagents; AI assistance Claude Code (Claude Opus 5.5). CENTRAL INTEGRATION REQUESTS: Axioms.lean named guards for Cslib.Circuits.diffDist_triangle, Cslib.Circuits.dist_diffNorm, Cslib.Circuits.Boolean.circuitDist_triangle, Cslib.Circuits.Boolean.dist_complexity_single_le_circuitDist, Cslib.Circuits.Boolean.complexity_single_le_iff_mem_closedBall; no ROADMAP change (hamming-geometry continuation already planned). LIMITATIONS: single-output functions only (multi-output distances need m addition gadgets); no lower bound on the exclusive or, so d(x0,x1) is bracketed, not exact; Boolean.complexity_binary_le/complexity_not_le not yet rederived from the generic engine (outside scope).",
+      "snapshot":
+      {"head": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"},
+       "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/Metric.lean",
     "Complexity/Computability/Circuit/Metric.lean",
