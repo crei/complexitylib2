@@ -1097,7 +1097,8 @@
    "dependencies": [],
    "authors": [{"value": "worker-sable-tooling"}]},
   {"resume": null,
-   "report": "",
+   "report":
+   "fagin-converse landed on main a0952ac (both directions of Fagin theorem, two fresh approvals). You now own this cleanup: start fagin-cleanup from current main in your worktree; the goal lists the API reviewer findings (placement of generic FO combinators, cardinality sentences and tupleIndex lemmas into Logics/FirstOrder; Mathlib Sentence.cardGe; [DecidableEq State] section variable instead of letI in statements; realize_* naming; References sections; proof-only Finset.Sort import; optional hypothesis-free iff; one semantic end-to-end test). Keep every public statement at least as strong; where you rename or move, leave no deprecated aliases unless a client on main needs them. Post a short plan first, then implement; six gates, self-review, frozen submission; headline guards stay in ComplexityTests/Fagin.lean. Publication requests through the board if the push hook blocks you.",
    "phase":
    {"working":
     {"work":
