@@ -3373,15 +3373,18 @@
        "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "007941390e8ae606591dc84ace39d877"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792392861,
+          "snapshot":
+          {"head": {"value": "ef44eae9d72fc56e92c44013a0514dbb65bf7e55"},
+           "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+          "reviewer":
           {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
            "agent": {"value": "reviewer-sable-cor3"}},
-          "expires": 1792407209},
-         "blocked": false}},
+          "note":
+          "Correctness review by reviewer-sable-cor3 (independent; no contribution) of exact head ef44eae9 over base 06c5f534; references.bib +4 entries. Crossref: Impagliazzo1995 (10.1109/SFCS.1995.492584, 36th FOCS, 538-545) and Yao1982 (10.1109/SFCS.1982.45, 23rd FOCS, 80-91, Nov 1982) match; keys match HardCore.lean:31,71 and XorLemma.lean:25,30,57,58,203 on main. Chebyshev1852 matches Numdam JMPA_1852_1_17__366_0 (Tchebichef, J. Math. Pures Appl. ser. 1, 17, 1852, 366-390); key matches Primes.lean:43 on explicit-affine-disperser-2 (783c51e2), right source for the prime-product bounds. BLOCKING: Ladner1975 is the JACM paper On the Structure of Polynomial Time Reducibility (22(1):155-171, 10.1145/321864.321877; metadata correct), but its only citing site, CircuitValue.lean:27/:42 on circuits-karp-lipton (e10d94f4), cites it for log-space P-completeness of CVP and names The circuit value problem is log space complete for P = SIGACT News 7(1):18-20, 1975, DOI 10.1145/990518.990519 (Crossref-verified), the entry the worker proposed. Fix: use that entry for Ladner1975; add JACM under another key if wanted. Nit: XorLemma.lean:57 says applications (title singular). Limits: zbMATH 502/timeout, used Numdam. Evidence .lake/codex-validation/docs-bibliography-3-correctness/review.json sha256 5dc5aa79e7f9af7f826f0e58987635613e780fc007237e76a52ff9c146c2e44d"}}},
        "api":
        {"finished":
         {"review":
