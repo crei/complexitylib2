@@ -2455,7 +2455,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "47afa9bc3dccaabe05432a9940c18ce4"},
+       "holder":
+       {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
+        "agent": {"value": "worker-sable-ladner"}},
+       "expires": 1792402832},
       "branch": "work/natural-proofs/worker-sable-ladner",
       "blocked": false,
       "assignee": {"value": "worker-sable-ladner"}}}},
@@ -2468,7 +2473,7 @@
    "goal":
    "Coverage epic 4: the natural proofs barrier. NaturalProperty (largeness: density at least 2^-O(n) of truth tables; constructivity: decided in time polynomial in the truth table or by 2^O(n)-size circuits; usefulness against SIZE(s)); Razborov-Rudich: a natural property useful against SIZE(s) yields a distinguisher for every function family in SIZE(s); with a nonuniform concrete-security GGM bound (Crypto/Computational/GGM), no P/poly-natural property is useful against P/poly assuming PRGs secure against 2^(n^eps)-size circuits; demonstrations that Hastad and Razborov-Smolensky properties are natural if cheap. Reuse MCSP/Basic truth tables, Circuit/Boolean/Hierarchy, GGM, PRG/Game. Cite RazborovRudich1997 (propose entry). Tests, axiom guards, six gates.",
    "dependencies": [],
-   "authors": []},
+   "authors": [{"value": "worker-sable-ladner"}]},
   {"resume": null,
    "report":
    "Superseded by machine-classes-consolidation (scope overlapped fagin-polish and np-witness-builder). Do not assign; the remaining QBF and P_subset_NP items move with fagin-polish completion and resource-class-spine.",
