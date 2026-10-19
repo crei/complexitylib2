@@ -787,15 +787,18 @@
           "note":
           "Independent correctness review (reviewer-sable-cor7, no contribution) of exact head 8e63eac, base 0d8ef4b verified ancestor. Built 6 touched modules + 4 RationalHitting tests with nice --wfail --iofail: success, 0 warnings. Own probes (all pass; negative controls rejected): encIntBin injective, length natAbs.size+1 brute-forced on -20..20, [false] unique zero code and [true] not a code; borrow-fold sub = truncated Nat sub for all a,b<24 plus edges; signMagnitude drops sign of zero; intBin_add case program = + on -7..7^2; elaborated statements of intBin_add/sub/mul/neg/toNat/sign/pow and binary_sub/pow are the intended functions; size lemmas attained at witnesses (add_max, mul, pow k=0, sum, Int on negatives). #print axioms of 24 representative decls: propext, Classical.choice, Quot.sound only. No sorry/native_decide/axiom/set_option in touched files. No overclaim: only Parameters claims poly time (unary params); nothing about rational formula bit complexity. Blocking: none. Nits/follow-ups: Runtime/Determinant.lean:182 intBits duplicates (encIntBin z).length with no bridge lemma (M1 needs it); Determinant.lean:24-26 says every partial sum and product is bounded but individual product terms are not stated separately; size_pow_le +1 slack for k>=1; liftBits loose (53 vs 4654 bits at n=s=0, documented, polynomial). Not checked: six gates, pre-existing PolyTime/fold framework, API/placement, citations. Evidence .lake/codex-validation/rational-hitting-runtime-correctness/review.json sha256 73f593a1236f8e23531970d661ae0cd49c44f5c733d452294739f0612905c0b4."}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "11d169ea0e7417295a06d82be076fb19"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792391047,
+          "snapshot":
+          {"head": {"value": "8e63eaca4cc31a99e9df7d9f0a60120fc9aa8ed3"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
            "agent": {"value": "reviewer-sable-api7"}},
-          "expires": 1792405400},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api7 (independent; no contribution). Scope: 0d8ef4b..8e63eac, 12 files. Evidence: nice lake build of the 6 touched modules + 4 RationalHitting tests --wfail --iofail exit 0; own probe: 354 constants of the touched modules within propext/Classical.choice/Quot.sound, composed intBin fun_prop clients elaborate. No Int binary encoding exists in cslib/Mathlib/Complexity (only unary encInt); integer ops are ordinary functional programs, no new machines; docstrings honest (Runtime Determinant/Lift claim no poly-time). BLOCKING: Runtime/Parameters.lean:104-205 names 13 public certificates *_polytime; library convention is computableTidilyInPolyTime_<f> (163 at base, 0 *_polytime), and the M1-M5 plan would propagate it. Rename, and use namespace Cslib.Circuits.Rational like Determinant/Lift (or justify Runtime). NON-BLOCKING: Nat/Binary.lean:397 binary_foldr_bit duplicates ofBits/Decoder.nat now on main (Encodings/Decoder.lean), so reconcile at the main merge; Determinant.lean:182 intBits duplicates (encIntBin z).length / natAbs.size, so add a bridge before M1; move the IntBinary tests out of RationalHitting/; BinarySub->NatSub (crei NatAdd/NatMul); generic lemmas public in Rational namespace; tabulateRows lemmas belong in Determinant; intBin_neg vs unary int_neg; AroraBarak09 cite. Not run: six gates, dependents of Nat/Binary. Evidence .lake/codex-validation/rational-hitting-runtime-api/review.json sha256 db6e7e1c1e760529855cdc18dfe96679dfe09fef76f88b6941fe8cd0b92aac71"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
     "Complexity/Computability/Circuit/Rational",
