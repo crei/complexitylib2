@@ -1916,19 +1916,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "1434775c4ca9297a91b90925a7db0d59"},
-       "holder":
-       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-        "agent": {"value": "coordinator-sable"}},
-       "expires": 1792398495},
-      "branch": "work/docs-bibliography/coordinator-sable",
-      "blocked": false,
-      "assignee": {"value": "coordinator-sable"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "1434775c4ca9297a91b90925a7db0d59"},
+        "holder":
+        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+         "agent": {"value": "coordinator-sable"}},
+        "expires": 1792398495},
+       "branch": "work/docs-bibliography/coordinator-sable",
+       "blocked": false,
+       "assignee": {"value": "coordinator-sable"}},
+      "summary":
+      "Docs-only: eleven bibliography entries appended to references.bib (docbuild/docs/references.bib is a symlink to it): Cutland1980 and KatzLindell2020 (cited on main without entries), BakerGillSolovay1975, GoldwasserMicaliRackoff1989, GoldreichMicaliWigderson1991, GareyJohnson1979, BenSassonKopparty2012, Ore1933, Bourgain2007, MishraSanthanam2026, FindGolovnevHirschKulikov2016 (cited by the finished relativization, interactive-proofs, np-complete-graphs, explicit-affine-disperser and b2-lower-bound branches). No other file changes. 178 keys, none duplicated, braces balanced; six gates and check_docs --config-only pass. Reviewers: verify every field against the publisher record (DOIs, volumes, pages, author names).",
+      "snapshot":
+      {"head": {"value": "881b9c0d619b066ea8d577e7097e821d0cfdc3f1"},
+       "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths": ["references.bib", "docbuild/docs/references.bib"],
    "id": {"value": "docs-bibliography"},
    "goal":
