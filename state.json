@@ -1594,15 +1594,18 @@
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "9ea9413f25bfb415ace971a44d186922"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792374719,
+          "snapshot":
+          {"head": {"value": "e22e74ff563d3bc79758e445aa71f714035811a7"},
+           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+          "reviewer":
           {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
            "agent": {"value": "reviewer-sable-cor4"}},
-          "expires": 1792389074},
-         "blocked": false}},
+          "note":
+          "Correctness review of e22e74f on 764e3b8 by reviewer-sable-cor4 (independent; not an author). Scope: Stretch, Streaming, Quantitative, tests PRGStretch+Quantitative. Build of the 5 modules --wfail --iofail OK, 0 warnings. Statement diff: no Stretch statement changed (additions only); renamed getLast?_toList_bits / bitsGetLast?ToList keep identical statements (4n+8, zero space), old names unused. pseudorandomGenerator back on polyTime_stretch. iterate_unary_stream_sum: cumulative sum of actual round costs, input length absorbed honestly, workspace Q+B independent of k. forwardIterate_captured k-independent; shared reversal helper charges n+k via comp (5|mid|). streamState_replicate correctly generalizes; forwardIterate_eq true (decide-checked). length_bits correct (map_bits along encUnary). Zero-round test is through the stretch certificate (Q=0, vacuous hspace). Probe ProbeCleanup.lean (exit 0): nonconstant captured capRev through forward/iterate captured certs, zero rounds collapse to c*(|a|+n+1), non-PRG core client (map not); axioms clean on all new/renamed public theorems. Blocking: none. Nits: no axiom guards for streamState_replicate/forwardIterate_eq; old names dropped without deprecation (API call). Note: main moved to d42eefc. Not run: check.sh. Evidence .lake/codex-validation/stretch-cleanup-correctness/review.json SHA256 0a8f19f838bd00ec7f2ae6078a2a2eebf48599440c6280c1fcbaf1d0868cef56"}}},
        "api":
        {"active":
         {"report": "",
