@@ -3052,7 +3052,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/probability-toolkit-2/worker-sable-prob",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-prob"}}}},
    "paths":
    ["Complexity/Probability/Divergence.lean",
     "Complexity/Probability/Divergence",
