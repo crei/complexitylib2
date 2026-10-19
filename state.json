@@ -3230,15 +3230,18 @@
        "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "968207417ff01bd8f8df198b557892e6"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792391194,
+          "snapshot":
+          {"head": {"value": "f8c3d3cc04f65411b03ea5bb5ba908288d3efc58"},
+           "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+          "reviewer":
           {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
            "agent": {"value": "reviewer-sable-cor1"}},
-          "expires": 1792405331},
-         "blocked": false}},
+          "note":
+          "Correctness, reviewer-sable-cor1 (independent; did not contribute). Scope: 15 references.bib entries at f8c3d3cc on 4274652a. Evidence: all 13 DOIs fetched from api.crossref.org; authors, title, venue, volume, issue, pages and year match for each, ignoring case and diacritics. ErdosLovasz1975 matches zbMATH Zbl 0315.05117 and MitzenmacherUpfal2017 (2nd ed., CUP 2017) matches Zbl 1368.60002; DBLP blocked automated access. All 15 keys are cited by the five submitted branches at their recorded heads; every citation key in those branches resolves at head; no duplicates. Blocking: none. Nits: Turing1936 Crossref issued 1937 (parts appeared Nov-Dec 1936; 1936 is conventional); MehlhornSchmidt1982 omits the \"(Extended Abstract)\" title suffix; LovaszSaks1988 IEEE title reads \"mobius/communications\" (entry uses the standard form); ErdosLovasz1975 omits editors and Vol. II. Out of scope: probability-toolkit LocalLemma.lean:68-69 splits the MoserTardos2010 reference link across a line. Evidence: .lake/codex-validation/docs-bibliography-2-correctness/review.json sha256 d1b2c3ed5a9efdba38cb046149a9b0320690f5aeb2188b9bf7b7f970d8672683"}}},
        "api":
        {"active":
         {"report": "",
