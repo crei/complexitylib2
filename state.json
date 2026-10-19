@@ -1520,6 +1520,21 @@
    [{"value": "polynomial-space"},
     {"value": "native-exponential-separation"},
     {"value": "polytime-plain-bridge"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Circuit/Continuity.lean",
+    "Complexity/Computability/Circuit/Approximation/Hamming.lean",
+    "Complexity/Foundations/BooleanAnalysis/HammingFourier.lean",
+    "ComplexityTests/CircuitHamming/Parseval.lean",
+    "ComplexityTests/CircuitHamming/Approximation.lean",
+    "ComplexityTests/CircuitHamming/Continuity.lean"],
+   "id": {"value": "hamming-geometry-2"},
+   "goal":
+   "Milestones 3-5 of the owner note at /private/tmp/claude-501/-Users-samuelschlesinger-projects-lean-complexitylib2/9cf6f77b-20cc-4eed-936f-41f6ea96294a/scratchpad/hamming-geometry-note.md, continuing the landed hamming-geometry milestones 1-2 (Circuit/Pointwise, BitString/Hamming, Circuit/Boolean/Hamming). (3) Parseval: d_H(f,g) = (1/4) sum_S (chi_f(S) - chi_g(S))^2 from the existing Plancherel/Parseval/correlation lemmas, and the noise distances D_rho via noiseOp and fourierCoeff_noiseOp with sqrt(D_rho) a metric through the EuclideanSpace norm, only as far as the existing Fourier/noise API supports without duplication. (4) Metric approximation: package Circuit/Approximation.lean per-gate exception sets as d_H(f, f~) <= sum of local gate errors (corollary of card_failures_le_cost), the lower-bound principle C_I(f) >= epsilon/delta, and weighted sample distributions via a union bound from program_correct; state in prose that this reformulates the classical approximation method and that known limitations apply (no citation until the owner supplies the Pich 2024 reference). (5) Modulus of continuity omega_{I,n}(r) = max over d_H(f,g) <= r of |C_I f - C_I g| in the natural numbers for complete interpretations, in Circuit/Continuity.lean, with the SparseSynthesis square-root bound restated as an upper bound for the De Morgan basis. Reuse existing APIs; no new distance or circuit model; per-milestone tests under ComplexityTests/CircuitHamming/ with axiom guards; six gates; one frozen submission per milestone is fine.",
+   "dependencies": [{"value": "hamming-geometry"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
