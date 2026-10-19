@@ -1715,6 +1715,22 @@
    "goal":
    "Small follow-up from the fagin-cleanup reviews (both approved 8941c6c); no statement weakening; six gates; two reviews. (1) Remove the unused FO.eqOfPred/realize_eqOfPred or give it a use and a test. (2) Restore a public unfolding lemma for isStrictLinearOrderSentence (irreflexive, transitive, trichotomous, any N) under a descriptive name, beside the finite-domain characterization realize_isStrictLinearOrderSentence. (3) Import Mathlib.ModelTheory.Semantics instead of Mathlib.ModelTheory.Complexity in Logics/FirstOrder/Basic.lean if sufficient; write closeEx via Formula.iExs mirroring closeAll. (4) Rename getElem?_frame_eq_of_realize_frameChunkSentence after its full conjunction or split it. (5) Add the Fagin1974/Immerman1999 citations to the hypothesis-free iff docstring; reword the ComplexityTests/Fagin.lean semantic-test docstring to say it exercises decoding and the Definable statement, not the construction. (6) Move the general frame/List lemmas in Fagin/Layout.lean (getElem?_frame_two_mul*, forall_getElem?_frame_iff, forall_getElem?_append_iff) beside Turing.MultiTapeTM.frame or into a List foundations file. (7) Use the bound r in Tableau.lean's hlt.",
    "dependencies": [{"value": "fagin-cleanup"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/NP/Witness.lean",
+    "Complexity/Computability/Complexity/Problems/SAT.lean",
+    "Complexity/Computability/Complexity/Problems/SAT",
+    "Complexity/Computability/Complexity/Problems/ThreeSAT.lean",
+    "Complexity/Computability/Complexity/Problems/Clique.lean",
+    "Complexity/Computability/Complexity/Problems/IndependentSet.lean",
+    "ComplexityTests/NPWitness.lean"],
+   "id": {"value": "np-witness-builder"},
+   "goal":
+   "Consolidation: one shared builder for NP membership from a polynomial-time checkable witness relation, replacing the hand-rolled verifier / isVerifier / polynomial-time certificate stack each NP problem repeats (today in Problems/SAT.lean, SAT/PolyTime.lean, ThreeSAT.lean, Clique.lean, IndependentSet.lean and Fagin/Verifier.lean; the NP-complete graph and number epics are adding more). First read Classes/NP.lean (IsVerifier with exact certificate length p.eval |enc a|, NP, mem_NP), Classes/NP/GuessVerify.lean and Classes/NP/Nondeterministic.lean, and IndependentSet.lean's verifySubset/isVerifier_verifySubset (an existing partial abstraction for subset witnesses) to reuse what exists. Deliver in Classes/NP/Witness.lean: given an instance encoding enc, a witness type with an encoding encW, a witness relation R with a polynomial bound on witness encoding length and a polynomial-time Boolean check of R (stated with ComputableTidilyInPolyTime on encPair enc encW), conclude {a | exists b, R a b} in NP enc, with the exact-length certificate convention handled once inside the builder (padding/parsing of a fixed-length certificate into a witness, malformed certificates rejected); plus a variant for subset witnesses over a vertex list that subsumes verifySubset; plus closure helpers if cheap (NP membership transported along polynomial-time reductions already exists in Reduction.lean: reuse, do not duplicate). Migrate SAT, ThreeSAT, Clique and IndependentSet to the builder: their public statements (mem_NP, *_npHard, *_npComplete and every theorem used outside the file) stay byte-identical; private or file-local verifier internals may be replaced, and public verifier declarations used elsewhere stay available (derived from the builder) unless provably unused (grep the whole tree and all remote work branches of active epics, e.g. np-complete-graphs and np-complete-numbers, which use the current pattern: do not break them). Fagin/Verifier.lean is out of scope until fagin-cleanup lands; the new NP-complete problems migrate in a follow-up after their epics land. Report helper-inclusive before/after line counts. Tests in ComplexityTests/NPWitness.lean: a toy witness relation through the builder (in and out), a malformed-certificate boundary, and the migrated problems' headline axiom guards unchanged; six gates; two reviews.",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
