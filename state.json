@@ -1035,7 +1035,7 @@
    "authors": [{"value": "worker-mythos"}]},
   {"resume": null,
    "report":
-   "Published: work/circuit-metric/worker-mythos is at 06bc350 on origin. Main has moved to a0952ac (fagin-converse landed, disjoint files); until the merge-queue tooling lands, ready requires base == current main, so merge origin/main a0952ac, re-run scripts/check.sh, post a publication request for the new exact commit, then ready. No further landings will move main before the tooling lands.",
+   "Independent API review of exact c2016b0 APPROVED (reviewer-sable-api3), no blocking findings; correctness review in progress. Follow-ups recorded for the hamming-geometry work or a later cleanup, not for this snapshot: move complexity_single_unary_le / complexity_single_binary_le to Circuit/Complexity.lean and rederive Boolean.complexity_not_le / complexity_binary_le from them; say exponent two (-u = u) instead of characteristic two in the Metric.lean docstring; the private test helpers complexity_single_proj / one_le_complexity_single are library-worthy (hamming-geometry milestone 1 already provides them, so the test duplicates go away after it lands). Five Axioms.lean guard names noted for the docs batch.",
    "phase":
    {"submitted":
     {"submission":
