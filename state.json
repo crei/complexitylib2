@@ -1336,6 +1336,18 @@
    "goal":
    "The textbook NP-complete number problems on the existing Karp-reduction machinery (Problems/ThreeSAT.lean, Reduction.lean, PolyTime/Nat and PolyTime/List certificates). Endpoints, each with NP membership via a polynomial-time verifier, a polynomial-time Karp reduction, NPHard and NPComplete: (1) SubsetSum from ThreeSAT by the digit construction (Sipser2013 Theorem 7.56), with binary-encoded natural numbers and the reduction's output size and time honestly bounded (numbers have O(n + m) digits); (2) Partition from SubsetSum; (3) 0-1 Knapsack decision from SubsetSum; (4) zero-one integer programming feasibility from ThreeSAT if a short reduction fits. Encodings: lists of natural numbers with the existing encNat/encList (binary or unary as the library's encNat provides; state which, and do not claim strong NP-hardness for a unary encoding). Boundaries: empty multisets, target 0, duplicates. Tests with concrete instances in and out of each language and #print axioms guards for every NPComplete theorem in the epic's own test module. Cite Karp1972, Sipser2013, AroraBarak09. Six gates; self-review; frozen submission.",
    "dependencies": [],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Machines/Turing/MultiTape/Halting.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Halting",
+    "ComplexityTests/Halting.lean"],
+   "id": {"value": "undecidability"},
+   "goal":
+   "Undecidability on the library's own machine model. Using the native universal interpreter and the total raw-word decoder from native-exponential-separation (Encodings/Decoder.lean, Universal decodeDesc, padded self-description), prove: (1) the halting problem for native finite binary MultiTapeTM descriptions is not decidable by any native machine (no total machine outputs [halts] exactly), by diagonalization through the universal machine, with both the decision-on-encoded-pairs form and the self-application form; (2) acceptance (halted output [true]) is undecidable; (3) computable many-one (mapping) reductions between languages on bit words, defined via native ComputableInTimeAndSpace or the native computability predicate the library already has, with transitivity and transfer of undecidability; (4) Rice's theorem for nontrivial semantic properties of native machine descriptions; (5) relate to Mathlib ComputablePred.halting_problem only if a clean bridge exists, otherwise state the relationship in the docstring. No new machine model, no second universal machine; reuse Universal correctness and the decoder. Tests: concrete machines that halt and loop, the diagonal machine, a nontrivial property for Rice. #print axioms guards in the epic test module. Cite Sipser2013 Chapter 4-5, Turing1936 (propose bibliography entries if missing). Six gates; frozen submission.",
+   "dependencies": [{"value": "native-exponential-separation"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
