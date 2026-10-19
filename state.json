@@ -1881,7 +1881,9 @@
       "snapshot":
       {"head": {"value": "2b3f6de7e95735056f0e6f61bed05329732cd9da"},
        "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api7"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Complexity.lean",
     "Complexity/Computability/Circuit/Pointwise.lean",
