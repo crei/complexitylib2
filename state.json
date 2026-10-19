@@ -1683,7 +1683,16 @@
        "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor7"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api7"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "c4af9fedc7d618ce7b28230fa8becad5"},
+          "holder":
+          {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
+           "agent": {"value": "reviewer-sable-api7"}},
+          "expires": 1792401805},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Hierarchy/Time.lean",
     "Complexity/Computability/Complexity/Classes/Hierarchy/Space.lean",
