@@ -1145,7 +1145,7 @@
        "holder":
        {"session": {"value": "c2a2464e315d85c0a64cfb5108d1ea0e"},
         "agent": {"value": "worker-sable-tooling"}},
-       "expires": 1792383961},
+       "expires": 1792384100},
       "branch": "work/merge-queue-landing/worker-sable-tooling",
       "blocked": false,
       "assignee": {"value": "worker-sable-tooling"}}}},
@@ -1352,7 +1352,7 @@
     "agent": {"value": "reviewer-sable-cor4"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792383961,
+   "expires": 1792384100,
    "actor":
    {"session": {"value": "c2a2464e315d85c0a64cfb5108d1ea0e"},
     "agent": {"value": "worker-sable-tooling"}}},
