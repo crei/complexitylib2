@@ -1241,20 +1241,27 @@
    "report":
    "Correctness review of 435e12f requested changes: merge-base drift lets a landing silently delete a landed file (reviewer fixture testReviewerMergeBaseDrift); API review found that old-binary rewrites drop the reservation main and batch candidates. Fix round by worker-sable-tooling: direct post-merge invariant check, unique recorded merge base, pinned merge config, land robust to old-binary rewrites, docs; fresh reviews of the new snapshot.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Correctness review of 435e12f requested changes: merge-base drift lets a landing silently delete a landed file (reviewer fixture testReviewerMergeBaseDrift); API review found that old-binary rewrites drop the reservation main and batch candidates. Fix round by worker-sable-tooling: direct post-merge invariant check, unique recorded merge base, pinned merge config, land robust to old-binary rewrites, docs; fresh reviews of the new snapshot.",
-      "lease":
-      {"token": {"value": "20cdcf74faf732238daaa607bb4b99f4"},
-       "holder":
-       {"session": {"value": "c2a2464e315d85c0a64cfb5108d1ea0e"},
-        "agent": {"value": "worker-sable-tooling"}},
-       "expires": 1792388134},
-      "branch": "work/merge-queue-landing/worker-sable-tooling",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-tooling"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Correctness review of 435e12f requested changes: merge-base drift lets a landing silently delete a landed file (reviewer fixture testReviewerMergeBaseDrift); API review found that old-binary rewrites drop the reservation main and batch candidates. Fix round by worker-sable-tooling: direct post-merge invariant check, unique recorded merge base, pinned merge config, land robust to old-binary rewrites, docs; fresh reviews of the new snapshot.",
+       "lease":
+       {"token": {"value": "20cdcf74faf732238daaa607bb4b99f4"},
+        "holder":
+        {"session": {"value": "c2a2464e315d85c0a64cfb5108d1ea0e"},
+         "agent": {"value": "worker-sable-tooling"}},
+        "expires": 1792388134},
+       "branch": "work/merge-queue-landing/worker-sable-tooling",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-tooling"}},
+      "summary":
+      "ready takes the unique merge base with main as the reviewed base; land EPIC... lands one or more approved epics: each step requires the reviewed base to be the unique merge base of the tip and the reviewed head, merges with renames, directory renames and rerere disabled, and must change exactly the reviewed paths and leave them as in the reviewed head; the final tree may differ from main only in reviewed files and the generated roots. Landing re-verifies the listed batch from the board, so it survives older checkouts that reduce the reservation and drop its main; publication stays guarded by the integrated main. The six checks and coordination tests run once on the final tree; main and all completed records are published atomically, each recording its reviewed snapshot and the landed main. Fixes since 435e12f: API review (R1-R3, N1-N4, N6) and correctness review (merge-base drift; pinned merge config). Validation at 4bf0094 (main 764e3b8 merged): coordination build --wfail clean, lake -d scripts/coordination test --wfail 54/54, scripts/check.sh six gates ok. Limitation: older checkouts drop the reservation main and completion landed (metadata only) when they rewrite the board; refusals after reservation keep it for cancel. Author: Claude (worker-sable-tooling) under coordinator-sable direction; drift fixture adapted from reviewer-sable-cor1.",
+      "snapshot":
+      {"head": {"value": "4bf009418a4038ae957fd81c9d458134cbd26831"},
+       "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths": ["scripts/coordination", "CONTRIBUTING.md", "AGENTS.md"],
    "id": {"value": "merge-queue-landing"},
    "goal":
