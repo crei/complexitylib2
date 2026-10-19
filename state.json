@@ -1811,7 +1811,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "bd467318b8210427a7235dcddbf27444"},
+       "holder":
+       {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
+        "agent": {"value": "worker-sable-disperser"}},
+       "expires": 1792390112},
       "branch": "work/explicit-affine-disperser/worker-sable-disperser",
       "blocked": false,
       "assignee": {"value": "worker-sable-disperser"}}}},
@@ -1823,7 +1828,7 @@
    "goal":
    "Companion to b2-lower-bound (top priority, owner request 2026-10-18): an explicit affine disperser over F2 computable in polynomial time on the native machines, for some dimension d(n) = o(n), so that b2-lower-bound's Theorem 4.1 yields the paper's Theorem 1.1 (an explicit Boolean function in P requiring B2 circuits of size 3.5n - o(n)). First survey and choose the simplest construction that is provable here: candidates include Ben-Sasson and Kopparty, Affine dispersers from subspace polynomials (dimension about 6n^(4/5), algebraic over F_(2^n)), Shaltiel's construction, Li's dimension O(log n) disperser (the paper's choice, very involved), or any other explicit construction with sublinear dimension; post the choice with its exact statement and dependency map before implementing. Use the affine-disperser definition from b2-lower-bound (Foundations/Data/BitString/AffineDisperser.lean; coordinate through the coordinator and read its branch work/b2-lower-bound/worker-sable-b2 once pushed; do not define a second notion) and Mathlib finite fields (GaloisField, trace, Frobenius) or existing library algebra. Deliver the construction, its disperser property for the stated dimension, and a native ComputableTidilyInPolyTime certificate (charging field arithmetic honestly). The final corollary combining both epics is a separate small follow-up. Cite the chosen source; propose bibliography entries. Tests and axiom guards in ComplexityTests/AffineDisperser.lean; six gates.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "worker-sable-disperser"}]}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
