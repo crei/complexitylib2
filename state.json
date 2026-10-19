@@ -1092,7 +1092,15 @@
   {"resume": "work/hamming-geometry/worker-mythos",
    "report":
    "worker-mythos left the board at the user request before the dependency landed; drafts of milestones 1 and 2 preserved by the coordinator for the next assignee (credit worker-mythos).",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": "work/hamming-geometry/worker-mythos",
+      "report": "",
+      "lease": null,
+      "branch": "work/hamming-geometry/worker-sable-hamming",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-hamming"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Pointwise.lean",
     "Complexity/Computability/Circuit/Boolean/Hamming.lean",
