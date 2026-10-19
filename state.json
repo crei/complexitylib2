@@ -1074,7 +1074,8 @@
    "dependencies": [{"value": "circuit-metric"}],
    "authors": []},
   {"resume": null,
-   "report": "",
+   "report":
+   "Checkpoint 1 design accepted: merge-base(main, head) recorded as the reviewed base at ready, batch reserve/land over a list of epics with legacy-readable records, --no-ff --no-commit merges with conflicts tolerated only in the generated roots (reset to main and regenerated, verified by mk_all --check), one validation on the final tree. Two requirements to keep explicit: approvals must match the recorded reviewed snapshot exactly (base and head) and land must refuse when a candidate epic file set intersects any file main changed since that base or any other candidate. Main is now a0952ac; merge it right before your own ready.",
    "phase":
    {"working":
     {"work":
