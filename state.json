@@ -2683,7 +2683,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "M1 progress: Circuit/Boolean/Encoding (codes, decoding, encCircuit), EvaluationTime (evalCode + polytime certs), CVP in P, CircuitSAT NP-complete (SAT reduction) all compile. Next: fixed-width circuit certificates (Encoding/Certificate.lean) and MCSP in NP. Path request (non-blocking): add Complexity/Computability/MCSP/NP.lean for MCSP in NP (else I will place it under Circuit/Boolean/Encoding/). Later for M2: PH collapse lemma (Sigma2=Pi2 -> PH=Sigma2) would best live in Classes/PH/Collapse.lean; currently I plan to keep it in Classes/PH/KarpLipton.lean.",
       "lease":
       {"token": {"value": "864bb1ee6b5fd7169a30e137e35e435d"},
        "holder":
