@@ -1699,15 +1699,18 @@
        "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "1097366fb5ece5973edcbee4bc9458d4"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792387633,
+          "snapshot":
+          {"head": {"value": "a985c34e8b51810236373caa8dc7435233308a49"},
+           "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
+          "reviewer":
           {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
            "agent": {"value": "reviewer-sable-cor7"}},
-          "expires": 1792401960},
-         "blocked": false}},
+          "note":
+          "Independent correctness review (reviewer-sable-cor7, no contribution), milestone 1, exact head a985c34 over ec48c1a. Built Hierarchy.Time, Classes.EXP, ComplexityTests.HierarchyTheorems --wfail --iofail: exit 0. Iff.rfl/rfl probes: DTIME enc t = upstream DecidableInTimeAndSpace within c1*t|enc a|+c2, any space; TimeConstructible = one binary finite-state machine maps every x to encNat(t|x|) in c*t|x|+c steps (AB style, omits T(n)>=n: more permissive, harmless since DTIME_ssubset_DTIME assumes n<=f n); EXP = U_k DTIME(2^(n^k)); P is the library P and mem_P_iff_exists_mem_DTIME gives U_k DTIME(n^k). Diagonal checked: arbitrary k/State/tm/c1/c2/s, padded own description short and past clock threshold, universal_desc gives the negated verdict; ite charges only the test off short inputs; decoder degree bounded by cA*2^L<=cA(n+1). Headline arithmetic checked. Independent instances compile: DTIME((n+1)^3) strictly in DTIME(2^n), the (f n+1)^11 gap corollary, P encBits != EXP encBits. Axiom scan of all 124 constants in both modules: only propext/Classical.choice/Quot.sound; no sorry/native_decide/axiom/set_option. Blocking: none. Nits: note the omitted T(n)>=n in TimeConstructible docstring; encBits only; space hierarchy deferred. Limitations: lint gates/full build not run. Evidence .lake/codex-validation/hierarchy-theorems-correctness/review.json sha256 4d7f2f0ef249428dada49519a37eac86fda32d700bf34822ec416ea66c67f700"}}},
        "api":
        {"active":
         {"report": "",
