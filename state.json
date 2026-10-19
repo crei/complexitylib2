@@ -300,15 +300,18 @@
           "note":
           "Correctness review of exact base 764e3b8 / head 3eb6238 by reviewer-sable-cor3 (independent: no contribution; read-only in own worktree). Criteria: goal plus plan/revise/instruct journal entries. Evidence: 12 library modules and both tests built --wfail --iofail, no warnings; no sorry/axiom/native_decide/set_option; library files only gain lines. Verified: IsTidyOraclePPTOn = ComputesTidily, exact joint result/external-state law for every stateful handler and arbitrary answer tapes, empty query buffers at both boundaries; finiteRunFrom_take_runOracle is a program equality with no reply-length hypothesis (answer head reset on receive, one cell per step); runOracle realized by a clock-round interpreter with query_take at limit = clock, so requests, order and counts coincide; cond/ite/finite_cases run only the selected branch (forced by exactness for counting handlers); bind/pair/map/preprocess charge intermediate words; iterate rules quantify over ProbOracleComp.support (all handlers), constant growth rules out doubling; ofClosed/runOracle_ofClosed faithful; iterateWhile bound proved; closed APIs untouched. Own probes pass: two-query client with both branches querying (fun_prop), counting handler with arbitrarily long replies gives exactly 2 calls, also for the certified native machine; logging handler shows the exact request sequence; two-bit growth loop; doubled storage feeding a one-bit query refuted by query_bounds. 34 axiom prints standard. Nit: test boundaries refute only via output length; add a short-output request-length boundary. Limitation: machine transition proofs checked by compilation and statements; check.sh not re-run. Evidence: .lake/codex-validation/open-oracle-composition-correctness/review.json SHA256 7af01830b3d7491a7fc1578e2b2089370a5a23be1802af25864ffe5db4774ffb"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "1e9645eb673a8db8364f30cfa4c65769"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792374189,
+          "snapshot":
+          {"head": {"value": "3eb6238592bd11415db970f1e3756c3b8eeb4e2d"},
+           "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
+          "reviewer":
           {"session": {"value": "6028cd701670813461915b10a3d32c60"},
            "agent": {"value": "reviewer-sable-api3"}},
-          "expires": 1792388540},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api3 (independent; no contribution) of exact base 764e3b8 / head 3eb6238, read-only in own worktree; statements, definitions, headers, attributes and diffs reviewed, proof bodies not line by line. Evidence: lake build of 12 modules + both tests --wfail --iofail exit 0, 0 warnings; mk_all clean; fun_prop probe at maxHeartbeats 40000: closed IsPPTOn clients 22.8/10.0/2.8/5.7 ms without vs 18.5/8.9/2.5/4.0 ms with the oracle stack imported, adaptive oracle client certified, full reply rejected; axioms of 16 unguarded results within the standard three. Small core (IsTidyOraclePPTOn rules + isOraclePPTOn_iff_isTidyOraclePPTOn) with one-line client wrappers, not a parallel framework; machines composed from outputToTape/inputFromTape/extendTapes/seq/ofDeterministic; fun_prop rules only on existing IsOraclePPTOn plus IsPPTOn transition, core unregistered; closed PPT and worker-opus APIs unchanged (modified files only add); crei attribution correct; no set_option. No blocking findings. Nits: Probabilistic/IterateWhile.lean:57-160 restates ~81 lines of crei tape helpers that are private in the vendored file but public here: keep the copy, make it private, record in UPSTREAM.md for deletion when crei exposes them; QueryTake/Support lack References (QueryTake should cite crei tidy notions); redundant PTM suffix on appendPTM/queryTakePTM; generic Machine/ loop later. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/open-oracle-composition-api/review.json SHA256 0b1600ec2c1a3b158a468ff909ac0e68e9a87a32e21eb2eef8843b7c32ab82c9"}}}}}}},
    "paths":
    ["Complexity/Computability/Probabilistic",
     "Complexity/Languages/Probabilistic",
