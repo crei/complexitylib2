@@ -988,15 +988,18 @@
           "note":
           "Correctness review by reviewer-sable-cor2 (independent, no contribution; exact 976400b, base a0952ac ancestor verified; board tool sources equal current main). Inspected all 11 Lean files plus upstream RunsInSpace/ComputationPath/ComputableInTimeAndSpace and local Accepts/iterate rule. Built every changed module and the 3 test modules with --wfail --iofail: clean. Own #print axioms on NPSPACE_eq_PSPACE, NPSPACE_subset_PSPACE, PSPACE_subset_NPSPACE, P_subset_PSPACE, savitchDecide_eq_true_iff, exists_polyBounded_space_savitchDecide, computableTidilyInO_savitch, savitch_iff and the view/decoder lemmas: standard only. Verified: PSPACE is plain upstream ComputableInTimeAndSpace into encBool, poly space, any time; NPSPACE is upstream RunsInSpace over every prefix, Accepts = some path halted with output exactly [true], no time or all-branches requirement; equality unconditional. outputClass is an append congruence, view acceptance iff is exact, view size bound has no path length; codes in 2^(2W+2) words, depth 2W+2 via two_pow_succ_iff; malformed codes harmless; certificate is for the same step function and charges stack, counter, register, parameter and worst-case edge space; time exponential; no O(s^2) claim; decoder total, inverse, real polytime. Probes: input-dependent language whose non-members only loop forever, through NPSPACE_subset_PSPACE, decider true/false incl. empty input; oscillating one-tape machine within 2 cells; malformed codes. No blocking findings. Nits: codeWidth redundancy remark; say exactly [true] in NPSPACE docstring. Central: axiom guards, ROADMAP, UPSTREAM #767 note; main moved (no epic paths). Not run: full check.sh. Evidence .lake/codex-validation/polynomial-space-correctness/review.json sha256 1575f17add10dc4b8dabbde32b96319b3dd8e7a9797781182c866075787f14bf"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "5e56946f9232cf65025fb275d10e99fe"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792372351,
+          "snapshot":
+          {"head": {"value": "976400b8ca9601e1f476041f12aa857b95f2c49a"},
+           "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
+          "reviewer":
           {"session": {"value": "33380288772710be7744d177c8f66871"},
            "agent": {"value": "reviewer-sable-api2"}},
-          "expires": 1792386742},
-         "blocked": false}}}}}},
+          "note":
+          "Independent API review of exact 976400b (base a0952ac, ancestry ok; coordinate tooling tree identical to main); no contribution. Read all 13 files plus upstream Space/TapeLemmas/ConfigBound, local NTM/FiniteCfg/PolyTime/BitString/RelatesWithinSteps, Decoder@4de95cd, bridge@78caf64, PR #767 Classes. Evidence: lake build 8 lib + 3 test modules --wfail --iofail clean (6390 jobs); mk_all --check, lint-style, runLinter (Decode, Machine.Space, Space.Reachability), diff --check clean; probes clean. No blocking findings; no duplication of APIs on main (upstream storage_fitsIn/inWindow_of_space_le are deterministic-only; NTM FitsIn follows in 3 lines). Should-fix after landings: Decode cell/stack decoders = frames+Decoder.list/option+cons fold (probe), add Decoder.bool/finite, move dropFrame_iterate_encList, scope cellBits/contentBits/pushContent/stackStep/cellsTransducer/decodeCell/decodeState; mem_PSPACE_iff via bridge decidableInTimeAndSpace_iff plus length-indexed variant (P/#767 parity). Nits: PSPACE/NPSPACE alpha:Type (Type* works); proof-only public imports Space/Savitch:12, Machine/Space:13; Kolmogorov import for a word count; #767 wording; Decode placement; Algorithms namespace vs Cslib.Algorithms; test namespaces. Central: Axioms guards, ROADMAP, UPSTREAM #767 + placement rows. Not run: lake test/full lint/checkInitImports. Evidence .lake/codex-validation/polynomial-space-api/review.json SHA256 54707df87fd4a2a456d50079eafa3fed9839d9a8cdd58d69055495e8ab9976d8"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space.lean",
     "Complexity/Computability/Complexity/Classes/Space",
