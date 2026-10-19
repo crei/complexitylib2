@@ -1981,19 +1981,26 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "6fec4d7abe0694d295b7cff36b7f7138"},
-       "holder":
-       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-        "agent": {"value": "coordinator-sable"}},
-       "expires": 1792399415},
-      "branch": "work/docs-check-bibkeys/coordinator-sable",
-      "blocked": false,
-      "assignee": {"value": "coordinator-sable"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "6fec4d7abe0694d295b7cff36b7f7138"},
+        "holder":
+        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+         "agent": {"value": "coordinator-sable"}},
+        "expires": 1792399415},
+       "branch": "work/docs-check-bibkeys/coordinator-sable",
+       "blocked": false,
+       "assignee": {"value": "coordinator-sable"}},
+      "summary":
+      "Tooling: scripts/check_docs.py --config-only now rejects duplicate BibTeX keys in references.bib (case-insensitive; tolerates the whitespace-padded keys cslib uses), listing the duplicates. Verified: passes on main and on this branch; rejects the reviewed-and-rejected docs-bibliography head 881b9c0 with \"Duplicate bibliography keys: cutland1980, katzlindell2020\"; rejects an injected padded duplicate. Six gates pass. No other behaviour change.",
+      "snapshot":
+      {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
+       "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths": ["scripts/check_docs.py"],
    "id": {"value": "docs-check-bibkeys"},
    "goal":
