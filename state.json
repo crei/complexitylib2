@@ -2807,7 +2807,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "Scope note: the formalized sparsification lemma is existential (classical chooseBranch; no running time). The hard direction \"ETH => no 2^(o(m)) 3SAT algorithm\" (also what M2 needs) requires computing the sparsified family in time 2^(eps n)*poly on the machine: a computable heavy-heart choice, a list-level step proved polytime, a BFS over the branching tree, and the leaf bounds for an arbitrary valid choice function. That needs (a) generalising Sparsification/Tree.lean and Bounds.exists_leaves from chooseBranch to any choice function satisfying Choice (outside my paths) and (b) a few thousand lines in FineGrained/. Proposal: M1 = definitions (ETH, SETH, exponents s_k with brute-force s_k <= 1 and monotonicity, OVH), the easy direction (no 2^(o(m)) algorithm => ETH), and SETH => OVH (Williams split-and-list with streamed output; the poly(d) form of OVH needs no sparsification). M1b = algorithmic sparsification and the hard direction, with paths extended to Logics/Propositional/ClauseSet/Sparsification/{Tree,Bounds}.lean. Proceeding with M1 as proposed; please confirm or redirect.",
       "lease":
       {"token": {"value": "a6d34670df64b749017392e73c05071c"},
        "holder":
