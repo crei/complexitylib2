@@ -2386,7 +2386,8 @@
    "dependencies": [],
    "authors": []},
   {"resume": null,
-   "report": "",
+   "report":
+   "Superseded by machine-classes-consolidation (scope overlapped fagin-polish and np-witness-builder). Do not assign; the remaining QBF and P_subset_NP items move with fagin-polish completion and resource-class-spine.",
    "phase": "unassigned",
    "paths":
    ["Complexity/Computability/Complexity/Reduction.lean",
