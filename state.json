@@ -1391,7 +1391,7 @@
     {"work":
      {"resume": null,
       "report":
-      "Resumed after restart. Base fa9ab42 == origin/main (nothing to merge). Audit: no sorry/admit/native_decide in inherited WIP. M1 (Problems/TQBF, Space/TQBF/Evaluation, Membership: TQBF_mem_PSPACE : TQBF ∈ PSPACE encQBF) builds clean. M2 state: Formula (midpoint/savitchFormula, eval + closed) and Reduction (reduce, reduce_mem_TQBF_iff) compile with lint warnings only; PolyTime of reduce is the open piece. Plan: tests + polish M1, then PolyTime via token-list certificates (flatMapWithInput/range), PSPACEHard/PSPACEComplete defined in Space/TQBF.lean (Reduction.lean is out of scope), TQBF_pspaceHard via PSPACE_subset_NPSPACE + savitch view. Time-boxed; fall back to M1-only submission if M2 runs long.",
+      "M1-M3 complete and validated at local head 1a31f4f (merge of origin/main f489429; diff vs main limited to epic paths + generated roots). All six scripts/check.sh gates pass. Headlines: TQBF_mem_PSPACE, TQBF_pspaceHard : PSPACEHard encQBF TQBF, TQBF_pspaceComplete. The push of work/tqbf-pspace-complete/worker-sable-tqbf was denied by the permission classifier, so the branch is NOT pushed and ready is not yet run; the user needs to push it (! git push origin work/tqbf-pspace-complete/worker-sable-tqbf), then ready can follow.",
       "lease":
       {"token": {"value": "6b3189f96b6434471433fa62550f0e97"},
        "holder":
@@ -1399,7 +1399,7 @@
         "agent": {"value": "worker-sable-tqbf"}},
        "expires": 1792395292},
       "branch": "work/tqbf-pspace-complete/worker-sable-tqbf",
-      "blocked": false,
+      "blocked": true,
       "assignee": {"value": "worker-sable-tqbf"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space/TQBF.lean",
