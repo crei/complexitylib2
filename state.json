@@ -1640,7 +1640,7 @@
     {"work":
      {"resume": null,
       "report":
-      "PUBLICATION REQUEST: 86fa9faa8f39db6c883726107f80c597dd69f148 on work/interactive-proofs/worker-sable-ip (git push blocked by the local lean4 guardrail; not bypassed). Head = merge of origin/main eba426b over a823aa5 (merge of published open-oracle-composition head 3eb6238) over ba7acf7 (the single feature commit). scripts/check.sh at this head: all six gates ok (build --wfail --iofail, mk_all --check, test --wfail --iofail, lint, lint-style, checkInitImports). Will run ready once the branch is visible on origin.",
+      "Bibliography entries needed (keys cited in Classes/IP*.lean; neither is in references.bib on main):\n@article{GoldwasserMicaliRackoff1989,\n  author    = {Goldwasser, Shafi and Micali, Silvio and Rackoff, Charles},\n  title     = {The Knowledge Complexity of Interactive Proof Systems},\n  journal   = {SIAM Journal on Computing},\n  volume    = {18},\n  number    = {1},\n  pages     = {186--208},\n  year      = {1989},\n  doi       = {10.1137/0218012}\n}\n@article{GoldreichMicaliWigderson1991,\n  author    = {Goldreich, Oded and Micali, Silvio and Wigderson, Avi},\n  title     = {Proofs that Yield Nothing but Their Validity or All Languages in {NP} Have Zero-Knowledge Proof Systems},\n  journal   = {Journal of the ACM},\n  volume    = {38},\n  number    = {3},\n  pages     = {690--728},\n  year      = {1991},\n  doi       = {10.1145/116825.116852}\n}",
       "lease":
       {"token": {"value": "4199522ac26f9b86383356f4f5e4198a"},
        "holder":
