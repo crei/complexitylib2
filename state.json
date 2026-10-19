@@ -2840,15 +2840,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "cc4f4f083a1641ab99951b9e45a32091"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792389258,
+          "snapshot":
+          {"head": {"value": "6b954f709393d2324dc1dfe0a44ab7b84a2877a6"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
            "agent": {"value": "reviewer-sable-cor6"}},
-          "expires": 1792403600},
-         "blocked": false}},
+          "note":
+          "Correctness, docs-only, independent (author coordinator-sable). Checked every claim in the diff against Lean at head. BLOCKING: (1) UPSTREAM.md:28-30 says local PSPACE uses #767's shape, but Classes/Space.lean:22-25 says #767 defines PSPACE as a union of DSPACE(n^k) and that comparison is not formalized; local PSPACE (Space.lean:67-69) uses a per-instance PolyBounded bound. Only L (mem_L_iff), DTIME and EXP match. (2) ROADMAP.md:189-190 'encoded and record forms': no record form exists; Record*.lean are construction internals. The landed forms are encoded/burn-in, optimized square-root and permutation/periodicity. ROADMAP.md:183 still lists square-root fixed-power bounds as to port, but fixed_power_optimized has landed. NITS: README.md:46 Hamiltonian link has only mem_NP (HamCycle_npComplete is in Hamiltonian/Undirected.lean:592); README.md:36 time hierarchy is polynomial-gap, encBits; README.md:43 GNI is in IP/GraphNonIsomorphism.lean; ROADMAP.md:74 lists DTIME though it has landed; ROADMAP.md:252 the space hierarchy does not build on the time hierarchy. VERIFIED: 17 links and the anchor resolve; Fagin, BGS, P_ssubset_EXP, Savitch, TQBF, NL_subset_P, SGL, PPoly.of_mem_BPP, NP_subset_IP, GNI.mem_IP and the NP-completeness statements are as described; rational runtime is still open; the listed remaining items have not landed. Axioms clean for 9 headlines; the rest are unprobed because the .lake is stale (no build). Evidence .lake/codex-validation/docs-roadmap-refresh-correctness/review.json sha256 bada152f971994fe64cf4f2613172cacfc9fa2f637c3aaaadcce562270c1cf3b"}}},
        "api":
        {"active":
         {"report": "",
