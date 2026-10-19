@@ -1957,7 +1957,7 @@
        "holder":
        {"session": {"value": "79c04d2e099c5b1c2a7c8053cf47acf5"},
         "agent": {"value": "worker-sable-hamming"}},
-       "expires": 1792407145},
+       "expires": 1792407322},
       "branch": "work/hamming-geometry-2/worker-sable-hamming",
       "blocked": false,
       "assignee": {"value": "worker-sable-hamming"}}}},
@@ -3638,7 +3638,7 @@
     "agent": {"value": "worker-sable-loop"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792407137,
+   "expires": 1792407322,
    "actor":
    {"session": {"value": "79c04d2e099c5b1c2a7c8053cf47acf5"},
     "agent": {"value": "worker-sable-hamming"}}},
