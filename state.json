@@ -3366,6 +3366,22 @@
    "goal":
    "Milestones 2-3 of resource-class-spine (after M1 lands): M2 first the PH collapse lemmas in Classes/PH/Collapse.lean (one level, PH = SigmaP k from PiP k within SigmaP k, NP = coNP implies PH = NP, P = NP implies P = PH; circuits-karp-lipton-2 imports these), then RP within BPP, class-level error reduction for BPP and RP (exponentially small error, reusing MajorityVote and the probability toolkit's Chernoff), padding with a generic translation lemma (P = NP implies EXP = NEXP); M3 ACC0 as the union of AC0 with MOD-q gates and P-uniform NC within P where the uniform classes exist, else tracked. Place the M1 private count/probability helpers (uniformList_map_apply, two_thirds_le_div_iff, map_apply_of_injective, card_filter_take_drop, card_filter_ofFn_succ) in their natural Probability/BitString homes if in paths. Tests, named axiom guards, run-gates, frozen submission per milestone.",
    "dependencies": [{"value": "resource-class-spine"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/ParityP.lean",
+    "Complexity/Computability/Complexity/Classes/Operators.lean",
+    "Complexity/Computability/Complexity/Classes/Toda.lean",
+    "Complexity/Computability/Complexity/Classes/Toda",
+    "Complexity/Computability/Complexity/Classes/ApproximateCounting.lean",
+    "Complexity/Computability/Complexity/Classes/Oracle/Randomized.lean",
+    "ComplexityTests/Toda.lean"],
+   "id": {"value": "isolation-counting-2"},
+   "goal":
+   "Milestones 2-3 of isolation-counting (after M1 lands): M2 ParityP, the BP and parity class operators, Toda's theorem PH within BP.ParityP within P^SharpP on the native classes (reuse Classes/SharpP, Classes/PH, the M1 oracle classes and Valiant-Vazirani); M3 Stockmeyer approximate counting of SharpP in BPP^NP as the class form of Probability/ApproximateCounting. Relocate the M1 oracle classes (RPWithOracle, RPWithPromiseOracle, queryAny) to Classes/Oracle if in paths. Cite Toda1991 (propose entry). Tests, named axiom guards, run-gates, frozen submission per milestone.",
+   "dependencies": [{"value": "isolation-counting"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
