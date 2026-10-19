@@ -1248,20 +1248,27 @@
    "report":
    "Both round-2 reviews of 4bf0094 approved. Reopened for the merge of main d42eefc (required by the current base == main landing rule), the reviewer-suggested content-exact final-tree guard and two doc nits; fresh delta reviews by the same reviewers, then land by fast-forward.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Both round-2 reviews of 4bf0094 approved. Reopened for the merge of main d42eefc (required by the current base == main landing rule), the reviewer-suggested content-exact final-tree guard and two doc nits; fresh delta reviews by the same reviewers, then land by fast-forward.",
-      "lease":
-      {"token": {"value": "e39c5219e7298c925c596a7bfa5aa375"},
-       "holder":
-       {"session": {"value": "c2a2464e315d85c0a64cfb5108d1ea0e"},
-        "agent": {"value": "worker-sable-tooling"}},
-       "expires": 1792389470},
-      "branch": "work/merge-queue-landing/worker-sable-tooling",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-tooling"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Both round-2 reviews of 4bf0094 approved. Reopened for the merge of main d42eefc (required by the current base == main landing rule), the reviewer-suggested content-exact final-tree guard and two doc nits; fresh delta reviews by the same reviewers, then land by fast-forward.",
+       "lease":
+       {"token": {"value": "e39c5219e7298c925c596a7bfa5aa375"},
+        "holder":
+        {"session": {"value": "c2a2464e315d85c0a64cfb5108d1ea0e"},
+         "agent": {"value": "worker-sable-tooling"}},
+        "expires": 1792389470},
+       "branch": "work/merge-queue-landing/worker-sable-tooling",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-tooling"}},
+      "summary":
+      "Approved 4bf0094 (round-2 API and correctness approvals), plus merge of main d42eefc, plus eba426b: content-exact final-tree guard (land refuses when any reviewed non-root path differs between a reviewed head and the landed commit, so a hand-made land that alters a reviewed file after integration is refused) and review nits A1 (whole reservation compared while it records its main, first candidate only once reduced, matching reserve), A2 (test heartbeat of an older checkout clears Completion.landed), A3 (CONTRIBUTING land paragraph reflow). Validation at eba426b: coordination build --wfail clean, lake -d scripts/coordination test --wfail 55/55, scripts/check.sh six gates ok. Limitation unchanged: older checkouts drop the reservation main and completion landed (metadata only) when they rewrite the board; refusals after reservation keep it for cancel. Author: Claude (worker-sable-tooling) under coordinator-sable direction; tampered-landing fixture idea from reviewer-sable-cor1.",
+      "snapshot":
+      {"head": {"value": "eba426bc0b9c6cedd743aa72051099827767ae82"},
+       "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths": ["scripts/coordination", "CONTRIBUTING.md", "AGENTS.md"],
    "id": {"value": "merge-queue-landing"},
    "goal":
