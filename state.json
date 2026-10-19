@@ -2827,7 +2827,16 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor6"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api6"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "f430861eaeb6f1ccf4a32197c3bc4e9c"},
+          "holder":
+          {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
+           "agent": {"value": "reviewer-sable-api6"}},
+          "expires": 1792403835},
+         "blocked": false}}}}}},
    "paths": ["ROADMAP.md", "README.md", "UPSTREAM.md"],
    "id": {"value": "docs-roadmap-refresh"},
    "goal":
