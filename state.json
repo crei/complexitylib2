@@ -3114,7 +3114,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "1a8994b8a07d9ca62c77050c35c38ae8"},
+       "holder":
+       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+        "agent": {"value": "coordinator-sable"}},
+       "expires": 1792405063},
       "branch": "work/docs-bibliography-2/coordinator-sable",
       "blocked": false,
       "assignee": {"value": "coordinator-sable"}}}},
@@ -3123,7 +3128,7 @@
    "goal":
    "Docs-only: add the bibliography entries cited by submitted epics (undecidability, query-complexity, probability-toolkit, natural-proofs, communication-complexity) to references.bib in cslib's format, each verified against Crossref/DOI metadata. No Lean changes. check_docs --config-only (duplicate-key guard), two reviews.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "coordinator-sable"}]}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
