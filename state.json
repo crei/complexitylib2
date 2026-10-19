@@ -18,6 +18,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792356843,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792356674,
@@ -75,6 +76,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792357641,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792357482,
@@ -128,6 +130,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792355755,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792355217,
@@ -177,6 +180,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792353277,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792353139,
@@ -222,6 +226,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358231,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358092,
@@ -342,6 +347,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364044,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792363911,
@@ -402,6 +408,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792368712,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792368575,
@@ -453,6 +460,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792361676,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792361403,
@@ -510,6 +518,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792371880,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792371576,
@@ -564,6 +573,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358627,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358495,
@@ -632,6 +642,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792359269,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792359175,
@@ -790,6 +801,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792360547,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792360283,
@@ -838,6 +850,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792373030,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792372858,
@@ -971,6 +984,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792367280,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792367120,
@@ -1024,6 +1038,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792374035,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792373854,
@@ -1078,6 +1093,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364773,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792364624,
@@ -1184,6 +1200,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792370838,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792369636,
@@ -1297,6 +1314,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376022,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792375751,
@@ -1479,20 +1497,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "PUBLICATION REQUEST: 92aeab0e755f407e092b7cd28d3242117e0e1d5a on work/np-complete-numbers/worker-sable-numbers (\"refactor: place binary natural-number certificates beside PolyTime/Nat\", on top of a8ce045 = 0035afc + merge of origin/main d42eefc; main still d42eefc). Binary certificates moved to Machines/Turing/MultiTape/Complexity/PolyTime/Nat/Binary.lean, namespaces unchanged, docstring places it beside the unary PolyTime/Nat certificates, imports and roots updated. scripts/check.sh: all six gates ok on this exact head. Clean tree.",
-      "lease":
-      {"token": {"value": "7fc66c278e99124ab7c38af88a05ff35"},
-       "holder":
-       {"session": {"value": "842267643c344d7a79017588bcfc8a39"},
-        "agent": {"value": "worker-sable-numbers"}},
-       "expires": 1792390228},
-      "branch": "work/np-complete-numbers/worker-sable-numbers",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-numbers"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "PUBLICATION REQUEST: 92aeab0e755f407e092b7cd28d3242117e0e1d5a on work/np-complete-numbers/worker-sable-numbers (\"refactor: place binary natural-number certificates beside PolyTime/Nat\", on top of a8ce045 = 0035afc + merge of origin/main d42eefc; main still d42eefc). Binary certificates moved to Machines/Turing/MultiTape/Complexity/PolyTime/Nat/Binary.lean, namespaces unchanged, docstring places it beside the unary PolyTime/Nat certificates, imports and roots updated. scripts/check.sh: all six gates ok on this exact head. Clean tree.",
+       "lease":
+       {"token": {"value": "7fc66c278e99124ab7c38af88a05ff35"},
+        "holder":
+        {"session": {"value": "842267643c344d7a79017588bcfc8a39"},
+         "agent": {"value": "worker-sable-numbers"}},
+        "expires": 1792390228},
+       "branch": "work/np-complete-numbers/worker-sable-numbers",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-numbers"}},
+      "summary":
+      "Endpoints delivered (all numbers binary via encNat = Nat.bits, LSB first; hardness is for this encoding, not strong NP-hardness; stated in docstrings). (1) SubsetSum : Set (List N x N) := {x | exists s <= (x.1 : Multiset N), s.sum = x.2}; mask verifier (maskSelect, binary sum + equality) with isVerifier/mem_NP; Sipser 2013 Thm 7.56 digit construction ThreeSAT.toSubsetSum in base 8 (any base > 5 works; 3-bit digits) over distinctVars (variables by first occurrence, nodup), wide clauses mapped to ([], 1); ThreeSAT.toSubsetSum_mem_iff via digit_mem_SubsetSum_iff_counts (no-carry lemma sum_sum_pow_eq_iff) and counts_iff_satisfiable; size bounds lt_of_mem_digitNumbers / digitTarget_lt (< 8^(n+m)); computableTidilyInPolyTime_toSubsetSum; polyTimeReducible_ThreeSAT_SubsetSum, SubsetSum_npHard, SubsetSum_npComplete : NPComplete (encPair (encList encNat) encNat) SubsetSum. (2) Partition : Set (List N) := {l | exists s t : Multiset N, s + t = l and s.sum = t.sum}; mem_Partition_iff(_sublist), mem_NP, SubsetSum.toPartition x = x.1 ++ [x.1.sum + 1, 2 x.2 + 1] (no subtraction, all targets), toPartition_mem_iff, Partition_npHard, Partition_npComplete : NPComplete (encList encNat) Partition. (3) Knapsack : Set (List (N x N) x N x N) (items (weight,value), capacity, goal; weight sum <= capacity and goal <= value sum); verifier with binary comparisons, mem_NP, SubsetSum.toKnapsack (diagonal items, capacity = goal = t), Knapsack_npHard, Knapsack_npComplete : NPComplete encKnapsack Knapsack. (4) ZeroOneIP : Set (List (List N x N)) (equality form, natural coefficients; Karp's integer/inequality form noted as the general version): mem_NP, SubsetSum.toZeroOneIP (single equation), polyTimeReducible_ThreeSAT_ZeroOneIP by composition, ZeroOneIP_npHard, ZeroOneIP_npComplete. Supporting: Problems/SubsetSum/Mask.lean (maskSelect, exists_le_coe_iff_exists_sublist, exists_le_iff_exists_maskSelect), Digits.lean (Nat.sum_range_mul_pow_inj/_lt, sum_sum_pow_eq_iff), and Machines/Turing/MultiTape/Complexity/PolyTime/Nat/Binary.lean beside the unary PolyTime/Nat certificates (binary_add/mul/sum/two_pow/lt/le + primed composition rules, Nat.size_add_le, Nat.lt_iff_exists_testBit; placement approved by the coordinator, moved in the refactor commit). Tests ComplexityTests/NPCompleteNumbers.lean: in/out instances for all four languages decided by sublist enumeration, boundaries (empty list/system, target 0, repeated numbers, 2^100-size numbers in binary, wide/empty clauses, repeated and complementary literals, 2^80 variable labels), reductions on small inputs, fun_prop synthesis, #print axioms guards for all four NPComplete theorems, toSubsetSum_mem_iff and binary_le (propext, Classical.choice, Quot.sound). Validation: scripts/check.sh six gates pass on the exact head 92aeab0e755f407e092b7cd28d3242117e0e1d5a (base main d42eefc; commits 0035afc feature, a8ce045 main merge, 92aeab0 placement refactor). Sources: Sipser2013 Thm 7.56, Karp1972; original formalization. Contributors: worker-sable-numbers only. Bibliography proposal: GareyJohnson1979 (Computers and Intractability) for Partition/Knapsack, noted by the coordinator for the docs batch. Limitations/continuation: ComplexityTests/Axioms.lean named checks and ROADMAP entry not added (outside scope); Karp's integer-coefficient inequality form of 0-1 IP would need binary integer arithmetic (encInt is unary). Placement: binary natural-number certificates at Complexity/Computability/Machines/Turing/MultiTape/Complexity/PolyTime/Nat/Binary.lean (scope addition approved by coordinator-sable; moved by refactor commit 92aeab0, namespaces unchanged). Branch merge base with main is d42eefc; main eba426b only changes scripts/coordination.",
+      "snapshot":
+      {"head": {"value": "92aeab0e755f407e092b7cd28d3242117e0e1d5a"},
+       "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/SubsetSum.lean",
     "Complexity/Computability/Complexity/Problems/SubsetSum",
