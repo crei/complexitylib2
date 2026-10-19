@@ -2825,6 +2825,24 @@
    "goal":
    "Follow-up of np-witness-builder: migrate the remaining hand-rolled NP-membership proofs onto Classes/NP/Witness (mem_NP_of_witness, mem_NP_of_subsetWitness, IsVerifier.of_padding/guard): VertexCover, Coloring, Hamiltonian (directed and undirected), TSP, GraphIsomorphism, SubsetSum, Partition, Knapsack, ZeroOneIP, and Ladner's private SAT padding lemma; then define Graph.selectVertices as selectMask. Share the duplicated countP_range_lt / length_vertices_le / distinct-declared-vertices helpers of the graph problems in one place, and move listGetD_binary from TSP.lean to PolyTime/Nat/Binary.lean. No statement weakened; public names kept (deprecated aliases only if needed); report the line delta. Six gates via run-gates; two reviews.",
    "dependencies": [{"value": "np-witness-builder"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/QueryComplexity/ApproximateDegree.lean",
+    "Complexity/Computability/QueryComplexity/ApproximateDegree",
+    "Complexity/Computability/QueryComplexity/Symmetrization.lean",
+    "Complexity/Computability/QueryComplexity/NisanSzegedy.lean",
+    "Complexity/Computability/QueryComplexity/Randomized.lean",
+    "Complexity/Computability/QueryComplexity/Randomized",
+    "Complexity/Foundations/Analysis/MarkovInequality.lean",
+    "ComplexityTests/QueryComplexity/Approximate.lean",
+    "ComplexityTests/QueryComplexity/Randomized.lean"],
+   "id": {"value": "query-complexity-2"},
+   "goal":
+   "Milestone 2 of query-complexity (after M1 lands): approximate degree adeg_eps; Minsky-Papert symmetrization; the Markov brothers' inequality for real polynomials on an interval (prove it in Foundations if Mathlib lacks it; the Ehlich-Zeller / Coppersmith-Rivlin discrete form if that is what the proofs need), hence Nisan-Szegedy bs <= 2 deg^2 and bs <= 6 adeg^2, s >= sqrt(bs)-style corollaries such as bs <= 2 s^4, and adeg(OR) = Theta(sqrt n) with the Chebyshev upper bound from Mathlib Polynomial.Chebyshev; randomized query complexity with bounded error and Yao's minimax principle (finite LP duality or Mathlib Sion). Exact constants where the proofs give them. Reuse M1's degree API and cslib QueryComplexity measures. Cite NisanSzegedy1994, MinskyPapert1969, Yao1977 (propose entries). Tests, named axiom guards, run-gates, frozen submission per milestone.",
+   "dependencies": [{"value": "query-complexity"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
