@@ -1967,7 +1967,15 @@
    "authors": [{"value": "coordinator-sable"}]},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/docs-check-bibkeys/coordinator-sable",
+      "blocked": false,
+      "assignee": {"value": "coordinator-sable"}}}},
    "paths": ["scripts/check_docs.py"],
    "id": {"value": "docs-check-bibkeys"},
    "goal":
