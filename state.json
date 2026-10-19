@@ -652,15 +652,18 @@
           "note":
           "Independent correctness review (reviewer-sable-cor6, no contribution). Scoped build of 15 touched modules + OracleComposition, OracleComposition.Substitution, OraclePPT, RandomOracle tests --wfail --iofail: OK (IterateWhile importers rebuilt). Open theorem: conclusion is IsOraclePPTOn of the substituted run, i.e. equality of the joint law of (result, handler state) and external state for every external oracle; run_interpret_run_interpret makes the joint handler explicit. Hypotheses honest: handler certificate over all external oracles/reply lengths; invariant over support bounds handler reply and additive state growth by poly-time resources(caller,request); no external reply bound. Satisfiable: cache client + exact counting law; my own witness (forwarding handler, unary call counter) discharges all hypotheses. Closed statements textually identical to base (script), now External:=Empty corollaries. Boundaries genuine: free reply copying breaks the clock (copy handler itself uncertified, my probe); per-call-PPT doubling handler + PPT client gives 2^n state, refuting substitution without growth allowance. 22 axiom probes std only; no sorry/native_decide/axiom/set_option. Blocking: none. Nit: test comment that copyReply has no certificate is unproved there. Limits: no full gates. Evidence .lake/codex-validation/open-oracle-substitution-correctness/review.json sha256 99457b7ec82ace321ed9d1face88d8540984ece62c927158bd3bdf894ffd2b3c"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "2f6d5dd24b106b19e32e300641941b8b"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792387636,
+          "snapshot":
+          {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
+           "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
+          "reviewer":
           {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
            "agent": {"value": "reviewer-sable-api6"}},
-          "expires": 1792402022},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api6 (independent; author worker-sable-oracle). Scope ec48c1a..5e88dee, 19 files in epic paths. Evidence: 36 targets built --wfail --iofail, 0 warnings (touched modules, both tests, 15 direct importers, closed-substitution users Normalization, Boosting.Program, PRF.RandomOracle, RandomOracle test). Closed statements unchanged: signatures of IsOraclePPTOn/IsOraclePPT.run_interpret_preprocess, query_bounds, OracleSimulation.{step,step_eq_run_interpret,isPPTOn_step,isPPTOn_run} textually identical at base and head; downstream compiles; now corollaries via External := Empty, IsOraclePPTOn.isPPTOn, sample_run_interpret, old proofs removed. Only removed public API: IterateWhile helpers, unused outside the file. No second language or machine model: OracleComp.interpret/handler/StateT/FreeM, MultiTapePTM+FiniteConfig. Naming/placement consistent (OpenOracleSimulation mirrors OracleSimulation; iff_encoded matches Tidy). Axioms standard (two lemmas use only propext, Quot.sound). Tests: two-level cache client, exact 2-call counting law, copy/doubling refutations, long-request boundary, 5 guards. No blocking findings. Nits: Oracle/Memoize.lean:126-131 re-proves private lookup_eq_map_find (Probabilistic/Memoize.lean:48); runOracle_eq_sample_runClosed repeats last step of runOracle_ofClosed; memoize_call_size_le name in two namespaces; [Nonempty Value] on IsOraclePPTOn.memoize; test namespace vs path. Evidence .lake/codex-validation/open-oracle-substitution-api/review.json sha256 01065f1ee1673980d4e02641f9c7e90dcadec1f8a13a548bd98584ea51053705"}}}}}}},
    "paths":
    ["Complexity/Computability/Probabilistic",
     "Complexity/Languages/Probabilistic",
