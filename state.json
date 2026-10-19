@@ -984,7 +984,16 @@
            "agent": {"value": "reviewer-sable-cor2"}},
           "expires": 1792385847},
          "blocked": false}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "5e56946f9232cf65025fb275d10e99fe"},
+          "holder":
+          {"session": {"value": "33380288772710be7744d177c8f66871"},
+           "agent": {"value": "reviewer-sable-api2"}},
+          "expires": 1792385855},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space.lean",
     "Complexity/Computability/Complexity/Classes/Space",
