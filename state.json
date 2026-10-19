@@ -2462,15 +2462,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "3010def81ceae21e1fdb8d906f3d6a04"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390834,
+          "snapshot":
+          {"head": {"value": "8a05720a1f07660e4d0e27e808dedbbc16322c3b"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
            "agent": {"value": "reviewer-sable-cor2"}},
-          "expires": 1792404877},
-         "blocked": false}},
+          "note":
+          "Delta correctness review fc182c17..8a05720a by reviewer-sable-cor2 (independent; author worker-sable-prob). Build of Chernoff, KWiseIndependent(.Polynomial), LocalLemma, ComplexityTests.ProbabilityToolkit under nice --wfail --iofail: OK, 0 warnings. Retained statements unchanged apart from renames (old Chernoff statements copied verbatim are proved by the renamed constants); dropped only the two Hoeffding-dominated BitString corollaries. Probes: old one-directional determinacy <-> DependsOn (both directions); old fc182c17 signatures of toOuterMeasure_pi_inter_eq_mul (Finset S T), prod_one_sub_le_pi_iInter_compl and pi_iInter_compl_pos proved from the new ones, so the DependsOn hypotheses are equivalent (Set vs Finset is cosmetic, V finite). New iff isKWiseIndependentHash_two_iff checked: Nonempty conjunct necessary (X = iota = Empty counterexample), forward on polynomialHash 2, backward on affineHash then expect_prod. LLL with DependsOn on overlapping 3-clauses over 5 coins: asymmetric and symmetric d=1 fire. #print axioms of 16 changed/headline decls and wrappers = [propext, Classical.choice, Quot.sound]; no sorry/native_decide/set_option/axiom added. Nit: test guards omit toOuterMeasure_pi_inter_eq_mul and isPairwiseIndependentHash (clean). Not checked: API, six gates, bib. Evidence .lake/codex-validation/probability-toolkit-correctness/review.json sha256 cfa3920beed1e290fb5094a0d14a5e29c48c53130dcea1fa1fe10fa2b4743daa"}}},
        "api":
        {"finished":
         {"review":
