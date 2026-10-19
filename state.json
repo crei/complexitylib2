@@ -3064,6 +3064,19 @@
    "goal":
    "Milestones 2-3 of communication-complexity (after M1 lands), on the M1 rectangle/rank API and Protocol: M2 randomized protocols (public coins as finite distributions over deterministic protocols, private coins as uniform per-player bit strings) with error eps, Newman's theorem via the library's general Hoeffding (Probability.Concentration.pi_sum_ge_mean_add) with the exact extra cost, the discrepancy bound 2*gamma <= 2^c * disc and R(IP) = Omega(n) via the Lindsey lemma; M3 distributional complexity and Yao's minimax (finite LP duality or Mathlib Sion), the corruption bound and Razborov's R(DISJ) = Omega(n) if the API supports it, else tracked. Move Protocol.aliceSend to Protocol.lean. Cite Newman1991, Yao1977, Razborov1992, KalyanasundaramSchnitger1992 (propose entries). Tests, named axiom guards, run-gates, frozen submission per milestone.",
    "dependencies": [{"value": "communication-complexity"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Crypto/Computational/GGM/Circuit.lean",
+    "Complexity/Computability/Circuit/Boolean/NaturalProof.lean",
+    "Complexity/Computability/Circuit/Boolean/NaturalProof",
+    "ComplexityTests/NaturalProofs2.lean"],
+   "id": {"value": "natural-proofs-2"},
+   "goal":
+   "Continuation of natural-proofs (after M1 lands): (1) nonuniform concrete-security GGM: from a length-doubling PRG secure against circuits of size 2^(k^eps) with advantage 2^(-k^eps), the GGM family is a PRF family secure against circuits (hybrid argument with explicit size and advantage loss), in Crypto/Computational/GGM/Circuit.lean, reusing the landed GGM construction and hybrid lemmas; then instantiate not_isUseful_PPoly_of_isNatural to: if such PRGs exist, no P/poly-natural property is useful against P/poly. (2) Naturalness demonstrations: the Hastad (parity not in AC0) and Razborov-Smolensky properties are large and constructive, stated against the landed Hastad/Smolensky developments. State all assumptions explicitly. Tests, named axiom guards, run-gates.",
+   "dependencies": [{"value": "natural-proofs"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
