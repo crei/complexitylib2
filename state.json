@@ -1,21 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "1a31f4f1ee8ba4a0daad2cea655c4b75f8a059be"},
-   "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-  "main": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"},
-  "lease":
-  {"token": {"value": "e9b61ad780b44affb8b25981da77bd46"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792400719},
-  "epic": {"value": "tqbf-pspace-complete"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "1a31f4f1ee8ba4a0daad2cea655c4b75f8a059be"},
-     "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-    "epic": {"value": "tqbf-pspace-complete"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -1414,53 +1398,42 @@
    "report":
    "Owner recorded: assigned to a local worker as soon as polynomial-space lands (its Classes/Space and Algorithms/Reachability scopes currently overlap this plan). polynomial-space has both reviews in progress and lands in the next batch.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "M1-M3 complete and validated at local head 1a31f4f (merge of origin/main f489429; diff vs main limited to epic paths + generated roots). All six scripts/check.sh gates pass. Headlines: TQBF_mem_PSPACE, TQBF_pspaceHard : PSPACEHard encQBF TQBF, TQBF_pspaceComplete. The push of work/tqbf-pspace-complete/worker-sable-tqbf was denied by the permission classifier, so the branch is NOT pushed and ready is not yet run; the user needs to push it (! git push origin work/tqbf-pspace-complete/worker-sable-tqbf), then ready can follow.",
-       "lease":
-       {"token": {"value": "6b3189f96b6434471433fa62550f0e97"},
-        "holder":
-        {"session": {"value": "a0e20ed2f18f79a2430412c297824d94"},
-         "agent": {"value": "worker-sable-tqbf"}},
-        "expires": 1792399620},
-       "branch": "work/tqbf-pspace-complete/worker-sable-tqbf",
-       "blocked": true,
-       "assignee": {"value": "worker-sable-tqbf"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "TQBF is PSPACE-complete (M1-M3), base f489429 head 1a31f4f. M1: TQBF_mem_PSPACE : TQBF ∈ PSPACE encQBF; explicit-stack evaluator, TQBF.evaluate_eq_true_iff, TQBF.exists_computableTidilyInO_evaluate : ∃ e, ComputableTidilyInO evaluate encQBF encBool (2^L*(L+1)^e) ((L+1)^e), L=|encQBF φ|, input/frames/2^L counter/copies charged via iterate. M2: TQBF_pspaceHard : PSPACEHard encQBF TQBF; reduce = Savitch formula on view codes (width=depth=2W+2, O(w^2) tokens) with Cook-Levin tableau of the edge test at level 0; TQBF.reduce_mem_TQBF_iff, computableTidilyInPolyTime_reduce, computableTidilyInPolyTime_edgeTest. M3: TQBF_pspaceComplete : PSPACEComplete encQBF TQBF. Checks: scripts/check.sh all six gates pass on 1a31f4f; ComplexityTests/TQBF.lean: concrete formulas, full evaluator runs, Savitch formula true/false/width 0, reductions from P/NPSPACE, 12 #print axioms guards (standard only). Credit: Sipser2013 Thm 8.9, AroraBarak09 Thm 4.13; no v1 source. Contributors: worker-sable-tqbf (both sessions); AI assistance: Claude. Limitations/notes: PSPACEHard, PSPACEComplete, PSPACEHard.trans defined in Classes/Space/TQBF.lean, could move beside NPHard in Reduction.lean; derived QBF connectives (Formula.lean) and CookLevin.exists_eval_tableau_iff (Reduction.lean) could move to Logics/Propositional/QBF and CookLevin/Correctness; QBF.lean doc saying completeness is not proved is now stale; inherited wip-prefixed commits not rewritten. Continuation: AP = PSPACE. Bibliography: none needed.",
       "snapshot":
       {"head": {"value": "1a31f4f1ee8ba4a0daad2cea655c4b75f8a059be"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792385950,
-          "snapshot":
-          {"head": {"value": "1a31f4f1ee8ba4a0daad2cea655c4b75f8a059be"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
-           "agent": {"value": "reviewer-sable-cor4"}},
-          "note":
-          "Correctness review by reviewer-sable-cor4 (independent; no contribution) of exact 1a31f4f (base f489429 ancestor ok). Built 7 epic modules + ComplexityTests.TQBF --wfail --iofail: clean (6466 jobs). Hygiene grep clean (no sorry/native_decide/axiom/set_option). Membership: evaluate = step^[2^L] of a total explicit-stack machine; evaluate_eq = Closed && eval; callSteps<4^n<=2^L. Library ComputableTidilyInO.iterate charges counter |encNat 2^L|=L+1, init copy, step space, states <=16(L+1)^2 (<=L frames each with token+suffix copy; Good invariant); input tape read-only. Stated 2^L*(L+1)^e / (L+1)^e is exactly the proved bound; TQBF_mem_PSPACE lands in Classes/Space PSPACE. Hardness: reduce = Savitch formula at width=depth=2W+2 over viewCode/acceptCode (formula form of approved savitchDecide), level 0 = Cook-Levin tableau of edgeTest machine, odd vars; reduce_mem_TQBF_iff via closed/eval_savitchFormula, savitch_eq, savitchDecide_eq_true_iff; tableau time matches tidy run; polytime cert real for same function. PSPACEHard/Complete unfold by Iff.rfl to textbook Karp form (as NPHard). Own probes: TQBF in P -> PSPACE subset P; kernel-run evaluate on top/bot; open/shadowing/sibling-scope cases; encQBF injective; width>=2; 15 #print axioms standard only. Nits: QBF.lean says completeness unproved; ex/all v (var v) claims lack lemmas; private pow_le_pow_of_le dup. Not run: full check.sh. Evidence .lake/codex-validation/tqbf-pspace-complete-correctness/review.json sha256 7a675983f6886ffe8a8df43a39d78fb22625d0280b8d31a808d0bcee91da8ece"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792385976,
-          "snapshot":
-          {"head": {"value": "1a31f4f1ee8ba4a0daad2cea655c4b75f8a059be"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
-           "agent": {"value": "reviewer-sable-api4"}},
-          "note":
-          "API review of exact 1a31f4f (base f489429 ancestor) by reviewer-sable-api4; no contribution. Evidence: lake build of 7 epic modules + ComplexityTests.TQBF --wfail --iofail clean (6466 jobs); mk_all --check, diff --check, lint-style clean; template/markers/docstrings ok; all 81 docstring names resolve; no [simp] on step fns; no sorry/axiom/native_decide; 12 axiom guards incl. headlines standard-only; probe: PSPACEHard/Complete mirror NPHard/Complete. No duplicated or contradictory definitions: PSPACEHard, QBF connectives, tokens/encQBF are new; exists_eval_tableau_iff refines tableau_satisfiable_iff. Blocking: none. Follow-ups: F1 PSPACEHard/Complete/.trans (Classes/Space/TQBF.lean:72-85) beside NPHard or in Classes/Space; F2 QBF connectives (TQBF/Formula.lean:68-241) to Logics/Propositional/QBF, tokens_* beside tokens; F3 CookLevin.exists_eval_tableau_iff (TQBF/Reduction.lean:63-88) to CookLevin/Correctness; F4 QBF.lean:25-26 stale 'not proved here'; F5 five wip(TQBF) subjects, main has none: squash or tree-identical reword at landing. Nits: Problems/TQBF.lean:186 generic root name three_mul_length_tokens_le; QBF fun_prop lemmas in TQBF ns (PolyTime.lean:76-183); names Good/Nested/State.top/isBlock; Membership.lean:326 redundant private pow lemma; Classes/Space/TQBF.lean:27-29 wording; headline entries not in Axioms.lean. Not run: lake test/lint/checkInitImports. Evidence .lake/codex-validation/tqbf-pspace-complete-api/review.json sha256 42eed41477dcf73532a84305f9ae0af77edd027d0b2c5df73b72a1b7e88347fb"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792386321,
+      "landed": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792385950,
+       "snapshot":
+       {"head": {"value": "1a31f4f1ee8ba4a0daad2cea655c4b75f8a059be"},
+        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+       "reviewer":
+       {"session": {"value": "41c6f9a7513ae3add2e251d30961cefd"},
+        "agent": {"value": "reviewer-sable-cor4"}},
+       "note":
+       "Correctness review by reviewer-sable-cor4 (independent; no contribution) of exact 1a31f4f (base f489429 ancestor ok). Built 7 epic modules + ComplexityTests.TQBF --wfail --iofail: clean (6466 jobs). Hygiene grep clean (no sorry/native_decide/axiom/set_option). Membership: evaluate = step^[2^L] of a total explicit-stack machine; evaluate_eq = Closed && eval; callSteps<4^n<=2^L. Library ComputableTidilyInO.iterate charges counter |encNat 2^L|=L+1, init copy, step space, states <=16(L+1)^2 (<=L frames each with token+suffix copy; Good invariant); input tape read-only. Stated 2^L*(L+1)^e / (L+1)^e is exactly the proved bound; TQBF_mem_PSPACE lands in Classes/Space PSPACE. Hardness: reduce = Savitch formula at width=depth=2W+2 over viewCode/acceptCode (formula form of approved savitchDecide), level 0 = Cook-Levin tableau of edgeTest machine, odd vars; reduce_mem_TQBF_iff via closed/eval_savitchFormula, savitch_eq, savitchDecide_eq_true_iff; tableau time matches tidy run; polytime cert real for same function. PSPACEHard/Complete unfold by Iff.rfl to textbook Karp form (as NPHard). Own probes: TQBF in P -> PSPACE subset P; kernel-run evaluate on top/bot; open/shadowing/sibling-scope cases; encQBF injective; width>=2; 15 #print axioms standard only. Nits: QBF.lean says completeness unproved; ex/all v (var v) claims lack lemmas; private pow_le_pow_of_le dup. Not run: full check.sh. Evidence .lake/codex-validation/tqbf-pspace-complete-correctness/review.json sha256 7a675983f6886ffe8a8df43a39d78fb22625d0280b8d31a808d0bcee91da8ece"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792385976,
+       "snapshot":
+       {"head": {"value": "1a31f4f1ee8ba4a0daad2cea655c4b75f8a059be"},
+        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+       "reviewer":
+       {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+        "agent": {"value": "reviewer-sable-api4"}},
+       "note":
+       "API review of exact 1a31f4f (base f489429 ancestor) by reviewer-sable-api4; no contribution. Evidence: lake build of 7 epic modules + ComplexityTests.TQBF --wfail --iofail clean (6466 jobs); mk_all --check, diff --check, lint-style clean; template/markers/docstrings ok; all 81 docstring names resolve; no [simp] on step fns; no sorry/axiom/native_decide; 12 axiom guards incl. headlines standard-only; probe: PSPACEHard/Complete mirror NPHard/Complete. No duplicated or contradictory definitions: PSPACEHard, QBF connectives, tokens/encQBF are new; exists_eval_tableau_iff refines tableau_satisfiable_iff. Blocking: none. Follow-ups: F1 PSPACEHard/Complete/.trans (Classes/Space/TQBF.lean:72-85) beside NPHard or in Classes/Space; F2 QBF connectives (TQBF/Formula.lean:68-241) to Logics/Propositional/QBF, tokens_* beside tokens; F3 CookLevin.exists_eval_tableau_iff (TQBF/Reduction.lean:63-88) to CookLevin/Correctness; F4 QBF.lean:25-26 stale 'not proved here'; F5 five wip(TQBF) subjects, main has none: squash or tree-identical reword at landing. Nits: Problems/TQBF.lean:186 generic root name three_mul_length_tokens_le; QBF fun_prop lemmas in TQBF ns (PolyTime.lean:76-183); names Good/Nested/State.top/isBlock; Membership.lean:326 redundant private pow lemma; Classes/Space/TQBF.lean:27-29 wording; headline entries not in Axioms.lean. Not run: lake test/lint/checkInitImports. Evidence .lake/codex-validation/tqbf-pspace-complete-api/review.json sha256 42eed41477dcf73532a84305f9ae0af77edd027d0b2c5df73b72a1b7e88347fb"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Space/TQBF.lean",
     "Complexity/Computability/Complexity/Classes/Space/TQBF",
