@@ -1029,7 +1029,7 @@
        "holder":
        {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
         "agent": {"value": "integrator-sable-1"}},
-       "expires": 1792387861},
+       "expires": 1792387952},
       "branch": "work/polytime-plain-bridge/integrator-sable-1",
       "blocked": false,
       "assignee": {"value": "integrator-sable-1"}}}},
@@ -1656,7 +1656,7 @@
     "agent": {"value": "worker-sable-tooling"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792387861,
+   "expires": 1792387952,
    "actor":
    {"session": {"value": "06beea7bc3832c6ae4d37824a399806e"},
     "agent": {"value": "integrator-sable-1"}}},
