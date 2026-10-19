@@ -876,15 +876,18 @@
           "expires": 1792386138},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "eb2cf46c5f99eb331f7259b447143d64"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792371803,
+          "snapshot":
+          {"head": {"value": "d722dfa81615ac554d4d328538577f2fc0da6e60"},
+           "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
+          "reviewer":
           {"session": {"value": "6028cd701670813461915b10a3d32c60"},
            "agent": {"value": "reviewer-sable-api3"}},
-          "expires": 1792386133},
-         "blocked": false}}}}}},
+          "note":
+          "API review by reviewer-sable-api3 (independent; no contribution) of exact base a0952ac / head d722dfa, read-only in own worktree; scripts/ unchanged vs main so the board binary is main's. Scope: Word.lean, Boolean/Iteration.lean + 8 submodules, FunctionalGraph lemma, ComplexityTests/Iteration.lean, root imports. Evidence: lake build of all 11 modules + test --wfail --iofail exit 0, 0 warnings; mk_all clean; probe_api.lean exit 0: word_add at w=0 on arbitrary s, empty table and BitVec 0 index for selectBits, headline theorems as clients (image after fixed_power burn-in, encoded Fin 3, encoded swap inverse, Bound wrappers), axioms of 25 more results within the standard three. Word.lean generic with exact counts, cslib Synthesis.* naming; no duplicate of Equality (equalBits reused), CompareSwap (lexLt differs), Synthesis.xor (reused) or BitVec API (no core ofFn). Sorting via native bitonicSortCircuit, no scheduler import; orbit/steps/circuit/exists_checkpoints reused. Template, citations, simp hygiene, no set_option. No blocking findings. Nits: RecordCircuit wires/synthesis_bits_eq/bits_mux/ite are generic, belong in Word.lean per addendum (bits_mux parallels word_mux); Word.lean:272 hlit = Synthesis.literal; Selection collision lemmas and exists_le_three_mul_add_sqrt are pure facts in Boolean.Iteration; Record.initial_wires_subset sits in the headline file; n explicit only in fixed_power_on/fixed_power; bare docstrings Optimization:120,132, Encoded:56 wording. Not run: lake test/lint/lint-style/checkInitImports. Evidence .lake/codex-validation/iteration-fixed-power-api/review.json SHA256 6bdaa02411db88ef2779787f679e799f4ee5d7e1c80882fa4edcdb424a89f82c"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
     "Complexity/Computability/Circuit/Boolean/Iteration.lean",
