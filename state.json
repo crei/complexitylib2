@@ -1,5 +1,37 @@
 {"version": 1,
- "integration": null,
+ "integration":
+ {"snapshot":
+  {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
+   "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
+  "main": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"},
+  "lease":
+  {"token": {"value": "8b5f3d122672c5405a087eafaaf12465"},
+   "holder":
+   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+    "agent": {"value": "coordinator-sable"}},
+   "expires": 1792401310},
+  "epic": {"value": "ladner"},
+  "candidates":
+  [{"snapshot":
+    {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
+     "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
+    "epic": {"value": "ladner"}},
+   {"snapshot":
+    {"head": {"value": "7b2a2619cc5d6756dfc2c1ff64daf525f301ba26"},
+     "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+    "epic": {"value": "np-complete-graphs"}},
+   {"snapshot":
+    {"head": {"value": "94febccdd66679be8a2a30e4d0637099fbeb0d57"},
+     "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
+    "epic": {"value": "logspace-nl"}},
+   {"snapshot":
+    {"head": {"value": "9db80c1c477a0fab1594ab5e697456283044e6f3"},
+     "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+    "epic": {"value": "interactive-proofs"}},
+   {"snapshot":
+    {"head": {"value": "2b3f6de7e95735056f0e6f61bed05329732cd9da"},
+     "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
+    "epic": {"value": "circuit-complexity-consolidation"}}]},
  "epics":
  [{"resume": null,
    "report":
