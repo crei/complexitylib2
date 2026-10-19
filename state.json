@@ -1607,7 +1607,7 @@
     {"work":
      {"resume": null,
       "report":
-      "CHECKPOINT (local, unpushed) 9c406b0: compiled Classes/IP.lean (Prover, Prover.run, acceptProb, IsInteractiveProof, IP, exists_queryBounds_of_mem_IP, NP_subset_IP with completeness 1/soundness 0, BPP_subset_IP), Classes/IP/Repetition.lean (sequentialRepeat: soundness eps^k vs every prover, completeness c^k, isOraclePPTOn for constant k), Problems/GraphIsomorphism.lean (distinctVertices, induced, GraphIsomorphism/GraphNonIsomorphism via SimpleGraph.Iso of induced graphs, mem_GraphIsomorphism_iff, GraphIsomorphism.mem_NP). Branch contains merge of open-oracle-composition 21ba29a (dependency, see design note). Next: GNI protocol (random-key relabeling round, closeness/collision bound, sequential repetition) and tests.",
+      "CHECKPOINT (local) 9808e85: GraphNonIsomorphism.mem_IP compiled. New Classes/IP/Guessing.lean (guessingRound: delta-close message laws => soundness (1+delta)/2 vs every prover; disjoint supports => honest prover accepted w.p. 1; isOraclePPTOn) and Classes/IP/GraphNonIsomorphism.lean (random-key relabeling, ranks tie-broken by position; exact law equality on distinct keys; birthday bound <= 1/16 with 2^keyWidth >= 16n^2; per-round completeness 1 / soundness 17/32; verifier = 2 sequential rounds, soundness (17/32)^2 < 1/3; strict oracle PPT certificate via the composition calculus). Next: tests, mk_all, six gates, self-review.",
       "lease":
       {"token": {"value": "4199522ac26f9b86383356f4f5e4198a"},
        "holder":
