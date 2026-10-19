@@ -1,5 +1,15 @@
 {"version": 1,
- "integration": null,
+ "integration":
+ {"snapshot":
+  {"head": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"},
+   "base": {"value": "a0952ac9f9440fb788460a47093fc3b84029914d"}},
+  "lease":
+  {"token": {"value": "1c0e52cd75421b6d56fcb6b61b294f0f"},
+   "holder":
+   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+    "agent": {"value": "coordinator-sable"}},
+   "expires": 1792385150},
+  "epic": {"value": "circuit-metric"}},
  "epics":
  [{"resume": null,
    "report":
@@ -18,7 +28,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792356843,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792356674,
@@ -76,7 +85,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792357641,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792357482,
@@ -130,7 +138,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792355755,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792355217,
@@ -180,7 +187,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792353277,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792353139,
@@ -226,7 +232,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358231,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358092,
@@ -314,7 +319,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364044,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792363911,
@@ -375,7 +379,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792368712,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792368575,
@@ -427,7 +430,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792361676,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792361403,
@@ -518,7 +520,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358627,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358495,
@@ -586,7 +587,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792359269,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792359175,
@@ -709,7 +709,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792360547,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792360283,
@@ -877,7 +876,6 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792367280,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792367120,
@@ -964,7 +962,6 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364773,
-      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792364624,
