@@ -1932,20 +1932,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "M1 COMPLETE locally at 48291a1 (branch work/explicit-affine-disperser/worker-sable-disperser, merged origin/main 81305c8), sorry-free, six gates ok at 48291a1. Push was refused by the auto-mode permission classifier, so ready is not yet run; the user needs to run: git push origin work/explicit-affine-disperser/worker-sable-disperser. BIB ENTRIES NEEDED for M1 (cslib format; not added by me, references.bib is coordinator-owned):\n@article{BenSassonKopparty2012,\n  author = {Ben-Sasson, Eli and Kopparty, Swastik},\n  title = {Affine Dispersers from Subspace Polynomials},\n  journal = {SIAM Journal on Computing},\n  volume = {41},\n  number = {4},\n  year = {2012},\n  note = {Theorem numbers follow the ECCC report TR10-044 (2010)},\n  url = {https://eccc.weizmann.ac.il/report/2010/044/}\n}\n@article{Ore1933,\n  author = {Ore, Oystein},\n  title = {On a Special Class of Polynomials},\n  journal = {Transactions of the American Mathematical Society},\n  volume = {35},\n  number = {3},\n  pages = {559--584},\n  year = {1933}\n}\n@article{Bourgain2007,\n  author = {Bourgain, Jean},\n  title = {On the Construction of Affine Extractors},\n  journal = {Geometric and Functional Analysis},\n  volume = {17},\n  number = {1},\n  pages = {33--57},\n  year = {2007}\n}",
-      "lease":
-      {"token": {"value": "bd467318b8210427a7235dcddbf27444"},
-       "holder":
-       {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
-        "agent": {"value": "worker-sable-disperser"}},
-       "expires": 1792397831},
-      "branch": "work/explicit-affine-disperser/worker-sable-disperser",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-disperser"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "M1 COMPLETE locally at 48291a1 (branch work/explicit-affine-disperser/worker-sable-disperser, merged origin/main 81305c8), sorry-free, six gates ok at 48291a1. Push was refused by the auto-mode permission classifier, so ready is not yet run; the user needs to run: git push origin work/explicit-affine-disperser/worker-sable-disperser. BIB ENTRIES NEEDED for M1 (cslib format; not added by me, references.bib is coordinator-owned):\n@article{BenSassonKopparty2012,\n  author = {Ben-Sasson, Eli and Kopparty, Swastik},\n  title = {Affine Dispersers from Subspace Polynomials},\n  journal = {SIAM Journal on Computing},\n  volume = {41},\n  number = {4},\n  year = {2012},\n  note = {Theorem numbers follow the ECCC report TR10-044 (2010)},\n  url = {https://eccc.weizmann.ac.il/report/2010/044/}\n}\n@article{Ore1933,\n  author = {Ore, Oystein},\n  title = {On a Special Class of Polynomials},\n  journal = {Transactions of the American Mathematical Society},\n  volume = {35},\n  number = {3},\n  pages = {559--584},\n  year = {1933}\n}\n@article{Bourgain2007,\n  author = {Bourgain, Jean},\n  title = {On the Construction of Affine Extractors},\n  journal = {Geometric and Functional Analysis},\n  volume = {17},\n  number = {1},\n  pages = {33--57},\n  year = {2007}\n}",
+       "lease":
+       {"token": {"value": "bd467318b8210427a7235dcddbf27444"},
+        "holder":
+        {"session": {"value": "cee1085f5289d69eb6e73bf1dd75bb2b"},
+         "agent": {"value": "worker-sable-disperser"}},
+        "expires": 1792397831},
+       "branch": "work/explicit-affine-disperser/worker-sable-disperser",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-disperser"}},
+      "summary":
+      "M1 (algebraic core) of explicit-affine-disperser, sorry-free. Headline: Cslib.AffineDisperser.exists_traceSym_ne (hn : finrank (ZMod 2) F = n) (hs : ∀ K : Subfield F, K ≠ ⊤ → Nat.card K ≤ 2 ^ s) (hμ : μ ≠ 0) (ht : 0 < t) (A : AffineSubspace (ZMod 2) (Fin r → F)) (hA : r * max (r + 1) s + r * (r + 1) + n * t + n * r / t < finrank (ZMod 2) A.direction) : ∃ x ∈ A, ∃ y ∈ A, traceSym μ r t x ≠ traceSym μ r t y, traceSym μ r t x = Tr(μ ∑_{|I|=t} ∏_{i∈I} x i ^ (2^(r+1-i) - 1)) [BK Thm 7.3, subfield-bound adaptation]. Core: exists_trace_mul_prod_det_mooreMatrix_ne_zero [BK Thm 6.1 with dim > s]. Reusable: subspacePoly, exists_isLinearized_range_eq (L3.7), exists_coeffPattern (L3.10), mooreMatrix, sum_cube_pow_eq_det_mooreMatrix, permanent_mooreMatrix_linearizedEval (L3.13), Cslib.sum_cube_prod_affine(_eq_zero/_eq_permanent), pivotSpace (L7.1), eq_of_covering (Claim 7.4), card_subfield_le. Checks: six gates ok at 48291a1; tests incl. GF(2^400)^100 non-vacuity and 8 axiom guards. Source: Ben-Sasson–Kopparty ECCC TR10-044, proofs re-derived (cube sums replace reduction mod X^q-X). Contributors: worker-sable-disperser (both holders). Continuation: M2 explicit composite-degree field (s ≤ n/L), bit-string function, d(N) = O(N/log N), bridge to Cslib.BitString.IsAffineDisperser; M3 poly-time certificate. Bib: BenSassonKopparty2012, Ore1933, Bourgain2007 (entries in board note).",
+      "snapshot":
+      {"head": {"value": "48291a11dcb757bb1c02a8984f35191d0da5883b"},
+       "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
     "Complexity/Foundations/Combinatorics/AffineDisperser.lean",
