@@ -2092,15 +2092,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "25fc61b87d5a46395a89fd7c117cdb75"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390056,
+          "snapshot":
+          {"head": {"value": "f1c1d3021f2538a9118b06052e4a4bf9047fbb5b"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
            "agent": {"value": "reviewer-sable-cor7"}},
-          "expires": 1792404385},
-         "blocked": false}},
+          "note":
+          "Delta review 0d58b554..f1c1d302 by reviewer-sable-cor7 (independent, read-only; prior head approved). Scripted cross-file statement comparison (delta/compare_delta.py, 9 files): 0d58b554->head modulo selectMask->selectDistinct 125/125 identical, 0 removed/changed; of_padding and guard same statements, moved Witness.lean->NP.lean (block byte-identical, equal section variables); base->head only the previously reviewed verifySubset binder move and anonymous instance relocation. DeltaProbe.lean restates the old statements verbatim with old binders and closes them with the head declarations; selectDistinct body equals reviewed body by rfl; maskSelect/selectDistinct docstring contrast checked by decide. 28 #print axioms (all Witness/NP padding theorems, SAT/ThreeSAT isVerifier, mem_NP and NPComplete of SAT, 3SAT, IndependentSet, Clique) within propext, Classical.choice, Quot.sound. No sorry/native_decide/axiom/set_option. Build: 32 targets (touched modules, all direct importers, ComplexityTests.NPWitness), nice -n 10, --wfail --iofail, rc=0, 0 warnings. Earlier paraphrase nit resolved (NP.lean:53-55). Not checked: six gates, remote branches. Evidence .lake/codex-validation/np-witness-builder-correctness/review.json sha256 3844b6dd50486d5fa1967ec58db153c2b076e499792a56ae4139224aabf15afa"}}},
        "api":
        {"finished":
         {"review":
