@@ -2523,7 +2523,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "Question (not blocking other items): NPComplete.P_eq_NP_of_mem_P needs P ⊆ NP. P_subset_NP is excluded and sits in Ladner.lean, which imports CookLevin.Completeness, so the lemma cannot go beside SAT_npComplete without moving P_subset_NP. Default unless told otherwise: put the general NPComplete.P_eq_NP_of_mem_P in Ladner.lean right after P_subset_NP, derive the Ladner corollaries, and leave the move beside SAT_npComplete to resource-class-spine. Alternative if you prefer: allow me to move P_subset_NP into Reduction.lean (which will import Classes.P for PolyTimeReducible.mem_P). Also: the CNF decoder cannot go to Encodings/Decoder.lean without importing Problems.SAT (Classes.NP) into the Encodings layer; default is to move Decoder.nat/Decoder.bool there and keep cnfDecoder := .list (.list (.pair .nat .bool)) in Ladner/PolyTime pending a home beside encCNF (outside paths).",
       "lease":
       {"token": {"value": "08d2f86fbbb14be3d31fc575e4974f36"},
        "holder":
