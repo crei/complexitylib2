@@ -1928,7 +1928,8 @@
    {"working":
     {"work":
      {"resume": "work/b2-lower-bound/coordinator-sable",
-      "report": "",
+      "report":
+      "SCOPE REQUEST (concept-named relocation; working inside B2/ meanwhile). Proposed new paths: (1) Complexity/Computability/Circuit/Boolean/SemiCircuit.lean (fair semi-circuits: Arg/Lit/Gate/Equation, consistency, rerouting, affine solutions; from B2/SemiCircuit.lean); (2) Complexity/Computability/Circuit/Boolean/AffineDisperser.lean (root) plus directory Complexity/Computability/Circuit/Boolean/AffineDisperser/ with State.lean, Operations.lean, Reduction.lean (accounting API, absorbs Chain+Potential), Normal.lean (preliminary reductions + Normal structure), MinimalAnd.lean (restructuring and elimination of the minimal AND), Step.lean (Lemma 4.2), LowerBound.lean (Theorem 4.1). Tests stay at ComplexityTests/B2LowerBound.lean. B2/ is removed and B2.lean never created. Namespace stays Cslib.Circuits.Boolean.B2 (circuits over the full binary basis), so the headline full name Cslib.Circuits.Boolean.B2.seven_mul_le_two_mul_size_add and its statement are unchanged. Affine*.lean under Foundations/Data/BitString unchanged (IsAffineDisperser API kept stable for explicit-affine-disperser).",
       "lease":
       {"token": {"value": "f5ea434d3ee9c83c103d41bc1cd30798"},
        "holder":
@@ -1936,7 +1937,7 @@
         "agent": {"value": "worker-sable-b2"}},
        "expires": 1792399698},
       "branch": "work/b2-lower-bound/worker-sable-b2",
-      "blocked": false,
+      "blocked": true,
       "assignee": {"value": "worker-sable-b2"}}}},
    "paths":
    ["Complexity/Foundations/Data/BitString/Affine.lean",
