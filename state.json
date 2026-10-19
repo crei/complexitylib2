@@ -2103,20 +2103,27 @@
    "report":
    "Reassigned to worker-sable-b2 to finish and redesign. Resume from work/b2-lower-bound/coordinator-sable at ca4c0bf (coordinator-sable wrote all current code). Follow the design in the coordinator brief: one reduction-accounting theorem, a Normal-form structure, concept-named files and lemmas instead of paper case numbers, then the shared-second-child, fix-input and bottleneck cases, non-vacuity and tests. Headline Theorem 4.1 name and statement stay.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": "work/b2-lower-bound/coordinator-sable",
-      "report":
-      "Theorem 4.1 sorry-free at 68760f6 (pushed): Normal structure + step_or_normal; MinimalAnd.lean proves step_of_sharedSecondChild (Case 7), step_fixInput (Case 8), step_of_bottleneck (Cases 9 AND and 10 XOR via step_quad), step_of_minimalAnd. #print axioms seven_mul_le_two_mul_size_add: propext, Classical.choice, Quot.sound. Next: non-vacuity (dispersers exist by counting), tests, quality pass, gates.",
-      "lease":
-      {"token": {"value": "f5ea434d3ee9c83c103d41bc1cd30798"},
-       "holder":
-       {"session": {"value": "abc254b86ea9eef6d4f1c5836328aaff"},
-        "agent": {"value": "worker-sable-b2"}},
-       "expires": 1792404136},
-      "branch": "work/b2-lower-bound/worker-sable-b2",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-b2"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": "work/b2-lower-bound/coordinator-sable",
+       "report":
+       "Theorem 4.1 sorry-free at 68760f6 (pushed): Normal structure + step_or_normal; MinimalAnd.lean proves step_of_sharedSecondChild (Case 7), step_fixInput (Case 8), step_of_bottleneck (Cases 9 AND and 10 XOR via step_quad), step_of_minimalAnd. #print axioms seven_mul_le_two_mul_size_add: propext, Classical.choice, Quot.sound. Next: non-vacuity (dispersers exist by counting), tests, quality pass, gates.",
+       "lease":
+       {"token": {"value": "f5ea434d3ee9c83c103d41bc1cd30798"},
+        "holder":
+        {"session": {"value": "abc254b86ea9eef6d4f1c5836328aaff"},
+         "agent": {"value": "worker-sable-b2"}},
+        "expires": 1792404136},
+       "branch": "work/b2-lower-bound/worker-sable-b2",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-b2"}},
+      "summary":
+      "Mishra-Santhanam (ECCC TR26-260) Theorem 4.1, sorry-free. Cslib.Circuits.Boolean.AffineDisperser.seven_mul_le_two_mul_size_add (hf : IsAffineDisperser f d) (C : Circuit (fullSignature 2 Bool) n 1) (hC : C.Computes fullInterpretation (single f)) : 7*n ≤ 2*C.size + 14*d. Lemma 4.2: State.Valid.exists_step : S.Valid f → IsAffineDisperser f d → d < S.a → ∃ S', Step f S S' (m+s drops, Δa ∈ {0,-1,-2}, ΔW ≤ 14Δa). Prop 2.2: State.Valid.exists_affine_embedding; Lemma 2.3: State.Valid.out_not_affine. Non-vacuity: Cslib.BitString.exists_isAffineDisperser : n*(d+1)+1 < 2^d → ∃ f, IsAffineDisperser f d (counting); test: a function on 100 bits needs ≥273 gates. Design: SemiCircuit.lean + AffineDisperser/{State,Operations,Reduction,Normal,MinimalAnd,Step,LowerBound}; one accounting API (State.Reduction) for all cases; State.Normal. Checks: six gates via run-gates, axiom guards (propext, Classical.choice, Quot.sound). Credit: [MishraSanthanam2026], semi-circuits after [FindGolovnevHirschKulikov2016]. Contributors: coordinator-sable (model, operations, Prop 2.2, Lemma 2.3, Cases 1-6 and Lemma 4.2 drafts to ca4c0bf), worker-sable-b2 (redesign, reductions, Normal, Cases 7-10, relocation, non-vacuity, tests). Limitations: existence proof, not an algorithm; Φ kept by the affinity property used, not form (1); parametric dispersers, no AffineSubspace bridge; Theorem 1.1 is a follow-up. Bibliography: none needed.",
+      "snapshot":
+      {"head": {"value": "023751e650614dd93e3193dc925234b66fb3b20a"},
+       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Foundations/Data/BitString/Affine.lean",
     "Complexity/Foundations/Data/BitString/AffineDisperser.lean",
