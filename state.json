@@ -2130,15 +2130,18 @@
        "base": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "5d244d6dec841cadb723233f12a83ba2"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792387526,
+          "snapshot":
+          {"head": {"value": "7713dab891f6189e31a4d968405650308f91c5eb"},
+           "base": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"}},
+          "reviewer":
           {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
            "agent": {"value": "reviewer-sable-cor3"}},
-          "expires": 1792401867},
-         "blocked": false}},
+          "note":
+          "Delta correctness, independent (reviewer-sable-cor3); prior approve of 48291a1. Delta = 20505e61 API refactor + merge 7713dab (touches no epic file). Built 6 epic modules + test --wfail --iofail exit 0; each file re-elaborated from source, no diagnostics; no sorry/native_decide/axiom/set_option. Headlines exists_traceSym_ne and exists_trace_mul_prod_det_mooreMatrix_ne_zero: #check output identical to 48291a1 modulo Cslib.FiniteField->Cslib.AffineDisperser, and fully spelled-out statements typecheck against the new constants. Replacement proofs sound: Mathlib charP_of_injective_algebraMap', Submodule.exists_fun_fin_finrank_span_eq with finrank(span W)=finrank W rewrites, inlined two_eq_zero, hW now derived from s<d (exists_coeffPattern strictly more general). traceSym_eq_esymm true, cross-checked by own probe against MvPolynomial.aeval of esymm (Fin r) (ZMod 2) t. New tests meaningful: covering hypotheses satisfiable; second example uses eq_of_covering to exclude J={0,2} vs I={1,2}, where slot counting (4 vs 3) does not (decide, not native_decide). Own probe: 19 #print axioms = propext, Classical.choice, Quot.sound; earlier prime-regime (n=101,s=1: 859<1010 on top and proper subspace) and n(t-1) sanity probes still pass. Blocking: none. Limits: no six gates/global Axioms/lint. Evidence .lake/codex-validation/explicit-affine-disperser-correctness/delta-7713dab/review.json sha256 21adf63cfdfa6cbffc690adddad14721a1fb221f0aeccc9a771bcbe0dc98f6d3"}}},
        "api":
        {"finished":
         {"review":
