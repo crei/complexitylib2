@@ -1234,15 +1234,18 @@
           "expires": 1792385724},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "db646f1d59784d1ff24c5e58eae9bd80"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792371650,
+          "snapshot":
+          {"head": {"value": "435e12f3c659780e0e6e16605828d50704a78189"},
+           "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
+          "reviewer":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792386030},
-         "blocked": false}}}}}},
+          "note":
+          "API review 435e12f (base c2016b0); independent of author worker-sable-tooling; read-only; board commands via main binary only. Inspected Protocol, Runtime, Main, Tests, Tests/Runtime, CONTRIBUTING, AGENTS (+Git.lean, mk_all). Evidence: coordination build --wfail clean; test --wfail 47/47; diff --check clean; scope ok; ProbeCompat.lean. Separation kept: all refusals decided in Protocol.apply from observed ancestry/diffs; Runtime only observes and does Git work (merge conflicts, mk_all failure are IO-inherent). Records, CLI land EPIC..., docs match code and goal. No blocking findings. F1 (significant, operational): checkouts predating this change rewrite the board on any heartbeat, dropping Completion.landed from every completed record (probe-confirmed; not in the ready summary) and Integration.main/candidates; one old heartbeat during the check.sh window makes the final land refuse, and renewal does not help while old writers remain. Fails safe. Recommend every active worktree merge main right after landing; optionally accept main=none in land (ancestry + atomic push already guard main) or bump State.version. Nits: N1 Completion.landed docstring wrong for batches; N2 conflict refusal keeps the reservation but its message omits cancel, CONTRIBUTING too; N3 AGENTS rule 7 still says add bib entries; N4 Diff name, Landing base/head names, LegacyIntegration duplicated in tests, no legacy Completion decode test; N5 real mk_all path untested; N6 merge-base empty on unrelated history. Not run: scripts/check.sh. Evidence .lake/codex-validation/merge-queue-landing-api/review.json sha256 f4cc1597ae34421cee9b9e55b78c34588fe9cac815579c8860647a210aaed05a"}}}}}}},
    "paths": ["scripts/coordination", "CONTRIBUTING.md", "AGENTS.md"],
    "id": {"value": "merge-queue-landing"},
    "goal":
