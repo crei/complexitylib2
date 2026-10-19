@@ -2083,7 +2083,7 @@
           "holder":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792399574},
+          "expires": 1792399671},
          "blocked": false}}}}}},
    "paths": ["scripts/check_docs.py"],
    "id": {"value": "docs-check-bibkeys"},
@@ -2184,7 +2184,7 @@
     "agent": {"value": "coordinator-sable"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792399446,
+   "expires": 1792399671,
    "actor":
    {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
     "agent": {"value": "reviewer-sable-api1"}}},
