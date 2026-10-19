@@ -1227,15 +1227,18 @@
        "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "60561bea4ed6f553c64c60aae48bb1ef"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "changes",
+          "time": 1792372395,
+          "snapshot":
+          {"head": {"value": "435e12f3c659780e0e6e16605828d50704a78189"},
+           "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
+          "reviewer":
           {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
            "agent": {"value": "reviewer-sable-cor1"}},
-          "expires": 1792386745},
-         "blocked": false}},
+          "note":
+          "Independent correctness review (reviewer-sable-cor1, no contribution) of base c2016b0 / head 435e12f; all board commands via main's binary. Read Protocol/Runtime/Main/tests/docs diffs and unchanged Git.lean. lake -d scripts/coordination test --wfail 47/47; tooling build --wfail ok. BLOCKING: the overlap rule uses the recorded base but git merges against the actual merge base. If a head contains another epic's commits that later land (worker merged an unlanded branch, then backed it out), merge-base(main, head) at land differs from the base. My runtime fixture: second's reviewed diff is [Complexity.lean, other/d.txt]; feature (adds allowed/c.txt) lands; landing second passes the rule and publishes a main WITHOUT allowed/c.txt, a landed reviewed file silently deleted. The old base==main rule refused this, so exact-commit review guarantees are not preserved. Fix: before each merge commit, check the merged index changed exactly the candidate's reviewed non-root paths, with head contents; or require merge-base --all HEAD head == [base], plus a fixture. Verified OK: --no-renames paths, D/F abort, roots via mk_all (both libs), atomic push guarded by reserved main, retry rechecks, exact approvals, refusals, and real old-binary interop on a fixture (reads board; its rewrite fails closed). Nits: pin merge.directoryRenames/rerere; ready merge-base without --all; old rewrite drops landed; no in-repo test for main-less reservation; note semantic interaction. Evidence .lake/codex-validation/merge-queue-landing-correctness/review.json SHA256 9492933dbe8e9dae20dc3be6a6ae2edf5f7c5aedb5fe1adad83fc523c698d83c"}}},
        "api":
        {"finished":
         {"review":
