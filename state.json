@@ -3214,7 +3214,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "Scope question: Graph.selectVertices is defined in Problems/IndependentSet.lean (not in this epic's paths; Problems/Graph.lean does not exist). Defining it as selectDistinct needs IndependentSet.lean added via revise. Proceeding with everything else meanwhile; shared graph helpers go to a new Problems/Graph.lean importing IndependentSet.",
       "lease":
       {"token": {"value": "1c7a8a76a8e5f9e656ed7c06e53625f9"},
        "holder":
