@@ -2433,7 +2433,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/natural-proofs/worker-sable-ladner",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-ladner"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/NaturalProof.lean",
     "Complexity/Computability/Circuit/Boolean/NaturalProof",
