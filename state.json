@@ -269,7 +269,12 @@
     {"work":
      {"resume": "work/open-oracle-composition/worker-nova",
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "a320c179b5bafcaa2cb3683d7072e0ae"},
+       "holder":
+       {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
+        "agent": {"value": "worker-sable-oracle"}},
+       "expires": 1792382475},
       "branch": "work/open-oracle-composition/worker-sable-oracle",
       "blocked": false,
       "assignee": {"value": "worker-sable-oracle"}}}},
@@ -285,7 +290,7 @@
    "goal":
    "First open-oracle milestone: establish compositional IsOraclePPTOn rules and an efficient bounded-prefix functional query primitive, backed by the existing native machine and FreeM/OracleComp semantics. Normalize arbitrary strict oracle-PPT witnesses to suitable clean/halting realizations only with a proved finite-observation bound and an exact joint result/external-state equality; each query must call the external handler exactly as the original adaptive execution does. Replies are arbitrarily long and external handlers are stateful: no free copying/return of a full reply, speculative execution of unselected branches, or lost oracle state. Reuse existing generic Machine/{Sequential,Clock,InputFromTape,OutputToTape} and probabilistic compilers rather than duplicating them; coordinate any missing Machine primitive with worker-opus. Provide the primitive query_take, closed-program lifting, bind/preprocess/map/conditionals and bounded iteration rules genuinely needed by clients, deriving conveniences from a small shared core. Replace the handwritten readHead transition table in ComplexityTests/OraclePPT.lean with a recognizable functional query client and short compositional certificate. Include nonvacuous concrete examples, adaptive branch/state tests, reply-length and storage-growth failure boundaries, helper-inclusive burden measurements, standard-axiom checks and all six gates plus independent API/correctness reviews. Keep existing closed PPT APIs stable. The complete open stateful handler-substitution theorem and two-level cache client remain explicitly tracked in open-oracle-substitution for worker-atlas next. Own substantial implementation and delegation; every editing contributor uses an isolated worktree and independent cache, and report all authors.",
    "dependencies": [],
-   "authors": [{"value": "worker-atlas"}]},
+   "authors": [{"value": "worker-atlas"}, {"value": "worker-sable-oracle"}]},
   {"resume": null,
    "report":
    "Full original correctness review approves; API requests routine covering reuse, generic synthesis/point placement and exact divisor prose. Coordinator now applies these limited central fixes, preserving the mathematical contracts and obtaining fresh delta reviews.",
