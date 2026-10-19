@@ -9,7 +9,7 @@
    "holder":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}},
-   "expires": 1792404630},
+   "expires": 1792404658},
   "epic": {"value": "machine-classes-consolidation"},
   "candidates":
   [{"snapshot":
@@ -2877,7 +2877,7 @@
         "holder":
         {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
          "agent": {"value": "coordinator-sable"}},
-        "expires": 1792404630},
+        "expires": 1792404658},
        "branch": "work/docs-roadmap-refresh/coordinator-sable",
        "blocked": false,
        "assignee": {"value": "coordinator-sable"}},
@@ -2981,7 +2981,7 @@
   "holder":
   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
    "agent": {"value": "coordinator-sable"}},
-  "expires": 1792404630},
+  "expires": 1792404658},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
@@ -3063,7 +3063,7 @@
     "agent": {"value": "worker-mythos"}}},
   {"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792404630,
+   "expires": 1792404658,
    "actor":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}}},
