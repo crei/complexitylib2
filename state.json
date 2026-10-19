@@ -2078,7 +2078,7 @@
     {"work":
      {"resume": "work/b2-lower-bound/coordinator-sable",
       "report":
-      "CHECKPOINT f595824 (local, unpushed): B2/Reduction.lean adds State.Reduction f S S' F D T (restrict F, delete list D; only T may reroute to parameters) with trans/mono, elementary builders (reduction_restrict, reduction_fixConst, reduction_deleteGate/Eqn, exists_reduction_deleteAll) and one-time accounting: m_add, s_add, q_add, a_add, mem_unpaired_iff, wt_le_weight, wt_eq_zero_of_subset, wt_le_of_exclusive, W_le (pointwise loss/gain to potential), step. Ported Case 3 (100 -> 61 lines) and Case 6 (191 -> 92 lines). Full B2 chain still builds through LowerBound (3 sorries unchanged). Scope request above still pending.",
+      "Relocated (46376ba, pushed): SemiCircuit.lean (Cslib.Circuits.Boolean.SemiCircuit) and AffineDisperser/{State,Operations,Reduction,Normal,MinimalAnd,Step,LowerBound}.lean (Cslib.Circuits.Boolean.AffineDisperser); B2/ removed. All six preliminary reductions now on the Reduction API with descriptive names; Step records Delta a in {0,-1,-2}. Next: Normal structure, then the minimal-AND cases.",
       "lease":
       {"token": {"value": "f5ea434d3ee9c83c103d41bc1cd30798"},
        "holder":
@@ -2086,7 +2086,7 @@
         "agent": {"value": "worker-sable-b2"}},
        "expires": 1792401633},
       "branch": "work/b2-lower-bound/worker-sable-b2",
-      "blocked": true,
+      "blocked": false,
       "assignee": {"value": "worker-sable-b2"}}}},
    "paths":
    ["Complexity/Foundations/Data/BitString/Affine.lean",
