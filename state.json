@@ -3472,7 +3472,7 @@
     "agent": {"value": "worker-sable-npbuilder"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792404136,
+   "expires": 1792405426,
    "actor":
    {"session": {"value": "abc254b86ea9eef6d4f1c5836328aaff"},
     "agent": {"value": "worker-sable-b2"}}},
