@@ -2325,7 +2325,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "Scope note (non-blocking): M2 adds general algebra under AffineDisperser/ in the Cslib.AffineDisperser namespace: TensorBasis.lean (prodPowBasis, monomial basis of coprime-degree composita), bitEquiv : ZMod 2 ≃+* Bool (Bits.lean), primesIoc/selectBelow (Primes.lean). Proposed homes: Foundations/Algebra (or FieldTheory) for TensorBasis with the M1 Moore/cube-sum lemmas, Foundations/Data/BitString for bitEquiv. Bridge to IsAffineDisperser and the 3.5N corollary wait for b2-lower-bound.",
       "lease":
       {"token": {"value": "bcad1ef7f3c26c8b0c1d5ccc8c129bba"},
        "holder":
