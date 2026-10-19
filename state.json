@@ -1767,4 +1767,10 @@
    "expires": 1792387818,
    "actor":
    {"session": {"value": "96c57dfb40db0a4654e519b0c7249d36"},
-    "agent": {"value": "worker-sable-ip"}}}]}
+    "agent": {"value": "worker-sable-ip"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792388039,
+   "actor":
+   {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
+    "agent": {"value": "reviewer-sable-api5"}}}]}
