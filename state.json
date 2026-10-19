@@ -2068,4 +2068,10 @@
    "expires": 1792389520,
    "actor":
    {"session": {"value": "9b318203e8a9985d589db0583a2bb7af"},
-    "agent": {"value": "worker-sable-npbuilder"}}}]}
+    "agent": {"value": "worker-sable-npbuilder"}}},
+  {"role": "worker",
+   "leaseSeconds": 14400,
+   "expires": 1792389824,
+   "actor":
+   {"session": {"value": "abc254b86ea9eef6d4f1c5836328aaff"},
+    "agent": {"value": "worker-sable-b2"}}}]}
