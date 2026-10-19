@@ -1418,7 +1418,7 @@
     {"work":
      {"resume": null,
       "report":
-      "Checkpoint (local WIP commit, not pushed): SubsetSum_npComplete compiles with axioms [propext, Classical.choice, Quot.sound]. SubsetSum (List N x N, sub-multiset semantics), mask verifier + mem_NP, Sipser digit construction in base 8 over distinct variables (first-occurrence order) with column-count correctness, polynomial-time reduction. Binary arithmetic certificates (binary_add/mul/sum/two_pow/lt/le) currently live in the requested new file PolyTime/Nat/Binary.lean; still awaiting a scope decision for that path (fallback: move to Problems/SubsetSum/Binary.lean). Next: Partition, Knapsack, tests.",
+      "Scope: no decision recorded for PolyTime/Nat/Binary.lean, so per the brief I moved the binary arithmetic certificates (namespace unchanged: Turing.MultiTapeTM.ComputableTidilyInPolyTime.binary_add/mul/sum/two_pow/lt/le, Nat.size_add_le, Nat.lt_iff_exists_testBit) to the in-scope fallback Problems/SubsetSum/Binary.lean. Their natural upstream home is Machines/Turing/MultiTape/Complexity/PolyTime/Nat/Binary.lean beside the unary arithmetic; relocating is a one-file git mv plus import rewrite if you approve. All four endpoints (SubsetSum, Partition, Knapsack, ZeroOneIP) compile; running final gates.",
       "lease":
       {"token": {"value": "7fc66c278e99124ab7c38af88a05ff35"},
        "holder":
