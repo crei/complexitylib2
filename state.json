@@ -3302,6 +3302,15 @@
    "goal":
    "Milestones 2-3 of circuits-karp-lipton (after M1 lands): M2 search-to-decision self-reduction for SAT and Karp-Lipton (NP within P/poly implies PH = SigmaP 2) on the M1 certificate format and Classes/PH, importing the PH collapse lemmas from resource-class-spine's Classes/PH/Collapse.lean (do not duplicate them; if that has not landed when needed, post a note); M3 Kannan (for every k, SigmaP 2 not within SIZE(n^k)) and Meyer (EXP within P/poly implies EXP = SigmaP 2). Move MCSP in NP from Circuit/Boolean/Encoding/MCSP.lean to MCSP/NP.lean. Drafts are in worker-sable-numbers' .lake/drafts. Cite KarpLipton1980, Kannan1982 (propose entries). Tests, named axiom guards, run-gates, frozen submission per milestone.",
    "dependencies": [{"value": "circuits-karp-lipton"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths": ["references.bib"],
+   "id": {"value": "docs-bibliography-3"},
+   "goal":
+   "Docs-only: references.bib entries cited by landed or approved epics (hardness-amplification: Impagliazzo1995, Yao1982; explicit-affine-disperser-2: Chebyshev1852; circuits-karp-lipton: Ladner1975), verified against Crossref/DOI metadata. No Lean changes. check_docs --config-only, two reviews.",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
