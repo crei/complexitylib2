@@ -1733,15 +1733,18 @@
           "expires": 1792401099},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "2562ac475617f2b1f3cccf36523bc537"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792386756,
+          "snapshot":
+          {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
+           "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
+          "reviewer":
           {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
            "agent": {"value": "reviewer-sable-api5"}},
-          "expires": 1792401132},
-         "blocked": false}}}}}},
+          "note":
+          "Delta API review of 647187e (base 3034b37) by reviewer-sable-api5, independent and read-only, following reviewer-sable-api2 changes on 784cb3a. Duplicate gone: Ladner.ofBits_bits deleted; natDecoder.decode_enc uses main Nat.foldr_bit_bits (PolyTime.lean:139) by exact, with a commented plain import of Kolmogorov.SelfDelimiting; no reference to ofBits_bits remains. Renames consistent in code, module docstring and tests: SAT_notMem_P, tendsto_H_of_notMem_P, falseCNF_notMem_SAT (tests 154/166), SATH_notMem_P; pad_inj iff (Basic.lean:156, .mp at :192); git grep finds no old names. CookLevin.Completeness is a plain import. Merge only: Lean files at 647187e identical to 8aaf396; references.bib and check_docs.py identical to base. Build of Ladner x3 and ComplexityTests.Ladner --wfail exit 0; #lint 0 errors in 123 declarations. No blocking findings. Nit: pad_inj could be @[simp]. Six gates not rerun. Evidence: .lake/codex-validation/ladner-api/review.json sha256 50d22a37c0bcd90320c909475a78f586770c90cc8c5a5cc892d74e7450f02e3c"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Ladner.lean",
     "Complexity/Computability/Complexity/Classes/Ladner",
