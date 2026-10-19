@@ -1106,7 +1106,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "2b1c4e8937db5dfab3f9d11bd059fc40"},
+       "holder":
+       {"session": {"value": "4a93d95e627493ab82ddfefba0a046d0"},
+        "agent": {"value": "worker-jetski"}},
+       "expires": 1792383387},
       "branch": "work/fagin-cleanup/worker-jetski",
       "blocked": false,
       "assignee": {"value": "worker-jetski"}}}},
@@ -1121,7 +1126,7 @@
    "goal":
    "API cleanup of the landed Fagin converse for its author (worker-jetski), from the independent API review of c4dbe23; no statement weakening, all six gates, two independent reviews. (1) Move generic first-order combinators (FO.closeAll/closeEx/atVar/varEq/rel1/rel2/ltF/leF/isZeroF/isMaxF/succF/isFirstOutF and their realize lemmas), the cardinality sentences and the tupleIndex lemmas (tupleIndex_snoc, _eq_of_high_zero, _lt_pow_iff, _lt_iff) out of the Fagin files into Complexity/Logics/FirstOrder (tupleIndex lemmas beside tupleIndex in Encoding.lean); drop the F suffix naming. (2) Replace FO.cardGeTwoSentence and the card-zero/one sentences by Mathlib Sentence.cardGe (Sentence.realize_cardGe) where that is a pure simplification; document in an Implementation notes paragraph why orderLanguage/isStrictLinearOrderSentence are varLanguage blocks rather than Mathlib Language.order. (3) Add [DecidableEq State] to the Tableau Semantics section variables instead of letI := Classical.typeDecidableEq State inside theorem statements. (4) Naming: realize_X for the iff forms as Mathlib does, rename realize_frameChunkSentence_imp by its conclusion, put encodeOfZero/encodeOfOne/nullarySymbolSentence/constTupleSentence under the Vocabulary namespace or justify, remove the unused FO.Definable.card_ge_two, make Vocabulary.definable_iff_queryLanguage_mem_NP an alias of the ESO theorem or keep one headline, consider the hypothesis-free form Definable K iff IsoClosed K and queryLanguage K in NP. (5) Docs: References sections for StrictVerifier/Small/Power/Layout, Power.lean docstring lists powerInTable, proof-only import of Mathlib.Data.Finset.Sort in Projection.lean, optional bundling of the twelve relation-symbol parameters of the tableau step formulas into a structure if it shortens statements. (6) Add one semantic end-to-end test (the converse sentence holds on a decoded 2-colorable input and fails on a decoded triangle) as the correctness reviewer suggested. Preserve authorship and citations; report helper-inclusive before/after line counts.",
    "dependencies": [{"value": "fagin-converse"}],
-   "authors": []},
+   "authors": [{"value": "worker-jetski"}]},
   {"resume": null,
    "report": "",
    "phase": "unassigned",
