@@ -474,7 +474,7 @@
        "holder":
        {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
         "agent": {"value": "worker-sable-stretch"}},
-       "expires": 1792382968},
+       "expires": 1792383697},
       "branch": "work/quantitative-stretch/worker-sable-stretch",
       "blocked": false,
       "assignee": {"value": "worker-sable-stretch"}}}},
@@ -1346,7 +1346,7 @@
     "agent": {"value": "worker-sable-oracle"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792382968,
+   "expires": 1792383697,
    "actor":
    {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
     "agent": {"value": "worker-sable-stretch"}}},
