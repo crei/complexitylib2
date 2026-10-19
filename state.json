@@ -1310,7 +1310,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/np-complete-graphs/worker-sable-graphs",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-graphs"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/VertexCover.lean",
     "Complexity/Computability/Complexity/Problems/Coloring.lean",
