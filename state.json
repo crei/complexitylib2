@@ -2594,20 +2594,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Unblocked: merged main 06c5f534, renamed the two test uses, six gates pass at aa3bd309; pushed; submitting M1.",
-      "lease":
-      {"token": {"value": "f2bc825304723cc80a042b30f59cd335"},
-       "holder":
-       {"session": {"value": "0bac3bc8aa5546f3a00854a39d54904d"},
-        "agent": {"value": "worker-sable-hier"}},
-       "expires": 1792406704},
-      "branch": "work/resource-class-spine/worker-sable-hier",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-hier"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Unblocked: merged main 06c5f534, renamed the two test uses, six gates pass at aa3bd309; pushed; submitting M1.",
+       "lease":
+       {"token": {"value": "f2bc825304723cc80a042b30f59cd335"},
+        "holder":
+        {"session": {"value": "0bac3bc8aa5546f3a00854a39d54904d"},
+         "agent": {"value": "worker-sable-hier"}},
+        "expires": 1792406704},
+       "branch": "work/resource-class-spine/worker-sable-hier",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-hier"}},
+      "summary":
+      "M1 (resource-class-spine). Follow-ups: diagonal := clockedDiagonal (2^.), lengthUnary from length_bits (linear), notMem renames + deprecated aliases (uses in TimeHierarchy and Relativization tests updated), TimeConstructible doc. New Classes/Time: DTIME (moved), NTIME, BPTIME (fair-coin machine halting within c1*t n+c2, Pr[right]>=2/3); mem_P_iff_exists_mem_DTIME, mem_NP_iff_exists_mem_NTIME, mem_BPP_iff_exists_mem_BPTIME : A in C enc <-> exists k, A in XTIME enc (.^k); DTIME_subset_NTIME. EXP.lean: E, NE, NEXP; P_subset_E, E_subset_EXP, NP_subset_NE, NE_subset_NEXP, E_subset_NE, EXP_subset_NEXP. ZPP.lean: ZPP (zero error, abstains on <=1/2), ZPP_eq_RP_inter_coRP, compl_mem_ZPP. Inclusions.lean: P_subset_BPP, NP_subset_PP, compl_mem_PP, RunsInTime.runsInSpace, NP_subset_PSPACE, PSPACE_subset_EXP (Savitch time bound), compl_mem_PSPACE, PolyTimeReducible.mem_PSPACE, setOf_exists_mem_PSPACE, PH_subset_PSPACE. Checks: all six gates ok via run-gates at aa3bd309 (main 06c5f534 merged). Credit: v1 Containments (Bolton Bailey) consulted for the PH/PSPACE closure plan; new proofs on the native calculus. Contributors: worker-sable-hier only. Limitations: RP_subset_BPP and error reduction, padding, PH collapse, ACC0/NC continue in M2. Private helpers to centralise: uniformList_map_apply, two_thirds_le_div_iff, map_apply_of_injective (Time), card_filter_take_drop/take/drop (ZPP), card_filter_ofFn_succ (Inclusions). Bib: none new (AroraBarak09, Sipser2013, Gill1977, Stockmeyer1976).",
+      "snapshot":
+      {"head": {"value": "aa3bd309550398f3442839c6c9ce2b59b0b29ff0"},
+       "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Time.lean",
     "Complexity/Computability/Complexity/Classes/Exponential.lean",
