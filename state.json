@@ -1964,7 +1964,16 @@
    "goal":
    "Docs-only (coordinator batch): add the bibliography entries cited by main and by the five finished worker epics, in cslib format, to references.bib and its required copy docbuild/docs/references.bib: Cutland1980 and KatzLindell2020 (already cited on main), BakerGillSolovay1975 (relativization), GoldwasserMicaliRackoff1989 and GoldreichMicaliWigderson1991 (interactive-proofs), GareyJohnson1979 (np-complete-graphs), BenSassonKopparty2012, Ore1933 and Bourgain2007 (explicit-affine-disperser), MishraSanthanam2026 and FindGolovnevHirschKulikov2016 (b2-lower-bound). Every entry checked against the publisher record (authors, title, venue, volume, pages, year, DOI); no other edits. Gates: the six plus scripts/check_docs.py --config-only.",
    "dependencies": [],
-   "authors": [{"value": "coordinator-sable"}]}],
+   "authors": [{"value": "coordinator-sable"}]},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths": ["scripts/check_docs.py"],
+   "id": {"value": "docs-check-bibkeys"},
+   "goal":
+   "Tooling (coordinator): make scripts/check_docs.py --config-only reject duplicate BibTeX keys in references.bib (case-insensitive, allowing the whitespace-padded keys cslib uses), the error class that slipped through docs-bibliography. Message lists the duplicated keys. No other behaviour change.",
+   "dependencies": [],
+   "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
