@@ -1538,7 +1538,16 @@
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor1"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api1"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "bd6bf82e311e7ead91131a45f0ba9828"},
+          "holder":
+          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
+           "agent": {"value": "reviewer-sable-api1"}},
+          "expires": 1792400476},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/VertexCover.lean",
     "Complexity/Computability/Complexity/Problems/Coloring.lean",
