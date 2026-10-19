@@ -754,15 +754,18 @@
        "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "718e6d25a220da7030b3c21bed037c40"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792368736,
+          "snapshot":
+          {"head": {"value": "4de95cdc57bdd489c7bc60aeb3c209ebeb2ffb06"},
+           "base": {"value": "94dcd9d45d7a8f5f384ac4bd772603470f23a151"}},
+          "reviewer":
           {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
            "agent": {"value": "reviewer-sable-cor2"}},
-          "expires": 1792383044},
-         "blocked": false}},
+          "note":
+          "Fresh delta correctness review by reviewer-sable-cor2 (independent; no contribution; exact 4de95cd on base 94dcd9d = current main, ancestry verified). Scope: relies on the recorded full correctness audit of 7e4cdca (reviewer-integration: total decoder with malformed-input degree bounds, binary clock, universal run on the padded input, halted-singleton-true verdict, padded polynomial-vs-exponential contradiction for tidy P and plain machines) and re-checks the integration delta. Evidence: main did not touch the epic paths between a5cb5821 and 94dcd9d; git diff --name-status 94dcd9d 4de95cd is only the 9 epic files; git diff -M 7e4cdca 4de95cd on those paths is exactly: R100 Universal/Decode/Basic -> Encodings/Decoder, Decode.lean import/docstring path, renames doubled/encDoubled/doubleT/doubleT_run -> trueDoubled/encTrueDoubled/trueDoubleT/trueDoubleT_run with identical bodies, exists_le_mul_two_pow moved verbatim (statement+proof) to Cslib.PolynomiallyBounded in PolynomialBound/Exponential.lean with a proof-only BigOperators import and call site updated, Main results/crossref docstring lines, two UPSTREAM.md rows. No hunk touches computableTidilyInO_diagonal, diagonal_not_mem_P, not_computableInTimeAndSpace_diagonal, diagonal_desc or not_forall_halted_diagonal; TimeHierarchy.lean and NatPower.lean unchanged; old names absent from the tree. Rebuilt Classes.Hierarchy, Encodings.Decoder, Encodings.NatPower, Universal.Decode, PolynomialBound.Exponential, ComplexityTests.TimeHierarchy --wfail --iofail: clean. Own #print axioms on the three headlines, diagonal_desc, not_forall_halted_diagonal and the moved lemma: propext/Classical.choice/Quot.sound only. Probe (lake env lean, clean): diagonal on the padded description of a one-step answering machine with three pads gives !b (problem nonempty and proper), moved lemma on n^3+5n+7 via fun_prop, renamed transducer values, separation at 3(n+1)^2. No findings. Nit: Exponential.lean upstream marker targets PolynomialBound.lean, which will need the Finset big-operator import upstream. Not run: full check.sh; prior note text not in current state.json (reopen), used coordinator summary. Evidence .lake/codex-validation/native-exponential-separation-correctness/review.json sha256 2dc4975b3ef1bf8617925b4d61b60188ad782afcba5c77a8992e23bbe3df6181"}}},
        "api":
        {"finished":
         {"review":
