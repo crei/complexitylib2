@@ -1,37 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
-   "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
-  "main": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"},
-  "lease":
-  {"token": {"value": "8b5f3d122672c5405a087eafaaf12465"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792401605},
-  "epic": {"value": "ladner"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
-     "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
-    "epic": {"value": "ladner"}},
-   {"snapshot":
-    {"head": {"value": "7b2a2619cc5d6756dfc2c1ff64daf525f301ba26"},
-     "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-    "epic": {"value": "np-complete-graphs"}},
-   {"snapshot":
-    {"head": {"value": "94febccdd66679be8a2a30e4d0637099fbeb0d57"},
-     "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
-    "epic": {"value": "logspace-nl"}},
-   {"snapshot":
-    {"head": {"value": "9db80c1c477a0fab1594ab5e697456283044e6f3"},
-     "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-    "epic": {"value": "interactive-proofs"}},
-   {"snapshot":
-    {"head": {"value": "2b3f6de7e95735056f0e6f61bed05329732cd9da"},
-     "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
-    "epic": {"value": "circuit-complexity-consolidation"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -1487,53 +1455,42 @@
    "report":
    "Owner recorded: assigned to a local worker as soon as polynomial-space lands (its Classes/Space and Algorithms/Reachability scopes currently overlap this plan). polynomial-space has both reviews in progress and lands in the next batch.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "BLOCKED ON SCOPE (re-posted: the convention note cleared the flag). Milestone 1 builds on current main (branch head 796003c holds only in-scope files; the rest is uncommitted until approved). Please revise logspace-nl to add: (1) Complexity/Computability/Machines/Turing/MultiTape/Complexity/LogSpace.lean (ComputableInLogSpace, haltsAt_le_card, ComputableInLogSpace.comp via crei comp_space, exists_polyBounded_time, computableTidilyInPolyTime; machine level, mirroring MultiTape/Complexity/Space.lean beside Classes/Space.lean); (2) Complexity/Computability/Machines/Turing/MultiTape/Complexity/LogSpace (dir: Configurations.lean coreCode/length_le_of_nodup_reachable; Reachability.lean viewSucc/searchAccepts/searchAccepts_iff and the BFS polynomial-time certificates); (3) Complexity/Computability/Machines/Turing/MultiTape/Complexity/Nondeterministic.lean (+22 lines: MultiTapeNTM.DecidesInSpace, .mono; space-cleanup F8); (4) Complexity/Algorithms/Reachability/BreadthFirst.lean (generic Cslib.Reachability.expand/search/mem_search_iff beside Savitch.lean, replacing the planned Algorithms/Reachability/LogSpace.lean, which I will not create); optional (5) Complexity/Computability/Machines/Turing/MultiTape/Machine/Space.lean (F4: hoist the per-tape bound spaceUsed_workTapes_le and reuse it in length_encFiniteCfg_le, removing a duplicate). Fallback if declined: move (1)-(3) under Classes/LogSpace/ and the BFS to Algorithms/Reachability/LogSpace.lean. CONVENTION: native machines; read-only input and append-only output uncharged; space = upstream RunPath.space (distinct work-tape cells visited, summed over work tapes) bounded on every computation prefix by RunsInSpace; logarithmic bound c * (Nat.log2 n + 1), n = (enc a).length; L via ComputableInLogSpace to encBool (halting, time existential); NL via DecidesInSpace (no time bound, branches need not halt); mem_L_iff gives the #767 DSPACE(log2) shape c1 * log2 n + c2.",
-       "lease":
-       {"token": {"value": "6a2c0cf7eb2a0a96faddf5fe7ded401a"},
-        "holder":
-        {"session": {"value": "1c9857ba8b9709bb8b7bbe793f95b513"},
-         "agent": {"value": "worker-sable-logspace"}},
-        "expires": 1792400120},
-       "branch": "work/logspace-nl/worker-sable-logspace",
-       "blocked": true,
-       "assignee": {"value": "worker-sable-logspace"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Milestone 1 (base 2bf2b21, head 94febcc). Space = upstream RunPath.space on every prefix (input, output uncharged); bound c*(log2 n+1). Proved: NL_subset_P : NL enc ⊆ P enc (BFS over views coded without input, coreCode O(log n+s); searchAccepts_iff, exists_computableTidilyInPolyTime_searchAccepts); L_subset_NL, L_subset_P, L_subset_PSPACE, NL_subset_NPSPACE, compl_mem_L; mem_L_iff : A ∈ L enc ↔ ∃ c₁ c₂ t, DecidableInTimeAndSpace A enc t (c₁*log2 n+c₂) (#767 shape); ComputableInLogSpace.comp, unconditional, by recomputation (crei comp_space); haltsAt_le_card : u ≤ (n+2)*storageBound s; LogSpaceReducible refl/trans/mem_L/compl/polyTimeReducible; MultiTapeNTM.DecidesInSpace; Reachability.mem_search_iff. Tests: ComplexityTests/LogSpace (parity in L, composition, reduction, looping NTM in NL and P, coreCode needs input hypothesis, BFS graphs, 14 axiom guards). Gates: all six pass. Contributors: worker-sable-logspace (two sessions). Sources: Sipser2013 Ch. 8, AroraBarak09 Ch. 4. Limitations: NL lets branches run forever (looser than Sipser Def. 8.1; upper bounds transfer, converse clock argument unformalized); spaceUsed_workTapes_le duplicates length_encFiniteCfg_le's step (F4 stays in space-cleanup). Continuations: sharper Savitch bound for sublinear space (O(s+log n) codes), NL = coNL (milestone 3). Bibliography: none now; Immerman1988/Szelepcsenyi1988 for milestone 3.",
       "snapshot":
       {"head": {"value": "94febccdd66679be8a2a30e4d0637099fbeb0d57"},
        "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792386350,
-          "snapshot":
-          {"head": {"value": "94febccdd66679be8a2a30e4d0637099fbeb0d57"},
-           "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
-          "reviewer":
-          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
-           "agent": {"value": "reviewer-sable-cor2"}},
-          "note":
-          "Independent correctness review (reviewer-sable-cor2; no contribution), milestone 1 at 94febcc. Build of the 7 epic modules + ComplexityTests.LogSpace, --wfail --iofail: exit 0. L/NL are textbook: upstream RunPath.space counts distinct work-tape cells only, input head read-only, output append-only, bound c*(log2 n+1) on every computation prefix; L needs a halting deterministic finite binary machine. Halting convention: stated honestly in NL, DecidesInSpace and module docs, converse marked unformalized; probe shows textbook NL (all branches halt) is in NL, hence in P and NPSPACE, and L is in textbook NL, so no headline depends on it. NL_subset_P is real BFS over viewSucc with nodup/closure after 2^(2*coreLengthBound+1) rounds, coreCode O(log n+s), polytime via iterate; uses only the space bound. comp: only hg, hf (comp_space has no extra hypotheses). haltsAt_le_card, mem_L_iff, LogSpaceReducible refl/trans/mem_L/compl/polyTimeReducible hold as stated (re-ascribed in probe; haltsAt instantiated non-vacuously). No sorry/native_decide/axiom/set_option; #print axioms of 17 decls + probes: propext, Classical.choice, Quot.sound. Nits: NPSPACE is likewise loose (pre-existing); spaceUsed_workTapes_le duplication disclosed. Not run: Axioms test, six gates. Evidence: .lake/codex-validation/logspace-nl-correctness/review.json sha256 a2fca96a5098a8379bf1e5466120a99732b80e72a3d21ed0cfa03cbc436be9f4"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792386486,
-          "snapshot":
-          {"head": {"value": "94febccdd66679be8a2a30e4d0637099fbeb0d57"},
-           "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
-          "reviewer":
-          {"session": {"value": "33380288772710be7744d177c8f66871"},
-           "agent": {"value": "reviewer-sable-api2"}},
-          "note":
-          "API review M1, exact 94febcc on 2bf2b21 (independent; author worker-sable-logspace). Built 7 epic modules + ComplexityTests.LogSpace --wfail --iofail: OK. No blocking findings; no declaration duplicates main, pinned cslib or Mathlib. #767: mem_L_iff (Classes/LogSpace.lean:107) matches its DSPACE(log2) shape; haltsAt_le_card/of_card (MultiTape LogSpace.lean:99,128) parallel open #767 truncate, documented at :41-42 (follow-up: adopt upstream when merged). Fix at integration: Reachability.lean:44 cites nonexistent Turing.MultiTapeNTM.computableTidilyInPolyTime_expand (actual Turing.MultiTapeTM.ComputableTidilyInPolyTime.expand :154). Follow-ups: L_subset_NL (Classes/LogSpace.lean:120-135) copies PSPACE_subset_NPSPACE body (Space.lean:101-116), factor a DecidesInSpace lemma; Configurations.lean:62-72,112-129 copy length_encFiniteCfg_le steps (F4); BreadthFirst mem_search_iff re-proves InductiveCounting reachableWithin closure with a list bound, not encard; restate NPSPACE via DecidesInSpace. Nits: proof-only public imports LogSpace.lean:11, Configurations.lean:11-12; ComputableTidilyInPolyTime.insertNew/.expand naming; Nat.two_pow_log2_succ_le, polyBounded_log placement. Template, naming, simp hygiene, tests, 14 guards OK. Evidence .lake/codex-validation/logspace-nl-api/review.json sha256 5d5ef6b0491d7fbfee484e8e358b0a23583055adb9b6675454e9118a9d5c2bad"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792387207,
+      "landed": {"value": "4c8d00c133ca1b2983a938b9889ff78593502e09"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792386350,
+       "snapshot":
+       {"head": {"value": "94febccdd66679be8a2a30e4d0637099fbeb0d57"},
+        "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
+       "reviewer":
+       {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
+        "agent": {"value": "reviewer-sable-cor2"}},
+       "note":
+       "Independent correctness review (reviewer-sable-cor2; no contribution), milestone 1 at 94febcc. Build of the 7 epic modules + ComplexityTests.LogSpace, --wfail --iofail: exit 0. L/NL are textbook: upstream RunPath.space counts distinct work-tape cells only, input head read-only, output append-only, bound c*(log2 n+1) on every computation prefix; L needs a halting deterministic finite binary machine. Halting convention: stated honestly in NL, DecidesInSpace and module docs, converse marked unformalized; probe shows textbook NL (all branches halt) is in NL, hence in P and NPSPACE, and L is in textbook NL, so no headline depends on it. NL_subset_P is real BFS over viewSucc with nodup/closure after 2^(2*coreLengthBound+1) rounds, coreCode O(log n+s), polytime via iterate; uses only the space bound. comp: only hg, hf (comp_space has no extra hypotheses). haltsAt_le_card, mem_L_iff, LogSpaceReducible refl/trans/mem_L/compl/polyTimeReducible hold as stated (re-ascribed in probe; haltsAt instantiated non-vacuously). No sorry/native_decide/axiom/set_option; #print axioms of 17 decls + probes: propext, Classical.choice, Quot.sound. Nits: NPSPACE is likewise loose (pre-existing); spaceUsed_workTapes_le duplication disclosed. Not run: Axioms test, six gates. Evidence: .lake/codex-validation/logspace-nl-correctness/review.json sha256 a2fca96a5098a8379bf1e5466120a99732b80e72a3d21ed0cfa03cbc436be9f4"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792386486,
+       "snapshot":
+       {"head": {"value": "94febccdd66679be8a2a30e4d0637099fbeb0d57"},
+        "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
+       "reviewer":
+       {"session": {"value": "33380288772710be7744d177c8f66871"},
+        "agent": {"value": "reviewer-sable-api2"}},
+       "note":
+       "API review M1, exact 94febcc on 2bf2b21 (independent; author worker-sable-logspace). Built 7 epic modules + ComplexityTests.LogSpace --wfail --iofail: OK. No blocking findings; no declaration duplicates main, pinned cslib or Mathlib. #767: mem_L_iff (Classes/LogSpace.lean:107) matches its DSPACE(log2) shape; haltsAt_le_card/of_card (MultiTape LogSpace.lean:99,128) parallel open #767 truncate, documented at :41-42 (follow-up: adopt upstream when merged). Fix at integration: Reachability.lean:44 cites nonexistent Turing.MultiTapeNTM.computableTidilyInPolyTime_expand (actual Turing.MultiTapeTM.ComputableTidilyInPolyTime.expand :154). Follow-ups: L_subset_NL (Classes/LogSpace.lean:120-135) copies PSPACE_subset_NPSPACE body (Space.lean:101-116), factor a DecidesInSpace lemma; Configurations.lean:62-72,112-129 copy length_encFiniteCfg_le steps (F4); BreadthFirst mem_search_iff re-proves InductiveCounting reachableWithin closure with a list bound, not encard; restate NPSPACE via DecidesInSpace. Nits: proof-only public imports LogSpace.lean:11, Configurations.lean:11-12; ComputableTidilyInPolyTime.insertNew/.expand naming; Nat.two_pow_log2_succ_le, polyBounded_log placement. Template, naming, simp hygiene, tests, 14 guards OK. Evidence .lake/codex-validation/logspace-nl-api/review.json sha256 5d5ef6b0491d7fbfee484e8e358b0a23583055adb9b6675454e9118a9d5c2bad"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/LogSpace.lean",
     "Complexity/Computability/Complexity/Classes/LogSpace",
@@ -1552,53 +1509,42 @@
    "report":
    "Answer to the scope question: do NOT write a separate binary comparison certificate. np-complete-numbers already has binary_lt/binary_le/binary_add/binary_sum certificates for encNat and is moving them now to Machines/Turing/MultiTape/Complexity/PolyTime/Nat/Binary.lean; it lands in the next batch. Order your work so TSP NP membership comes last and imports that module after numbers lands (merge main then); if the rest is ready first, submit VertexCover, 3-coloring and the Hamiltonian problems as milestone 1 and TSP as milestone 2. Also: a shared NP witness builder (epic np-witness-builder, Classes/NP/Witness.lean) is in progress; keep the current verifier pattern for now; your problems migrate in a follow-up.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Complete and validated locally: head 7b2a261 (base f489429), six gates pass, TSP.mem_NP and TSP_npComplete via shared PolyTime/Nat/Binary certificates. Push of work/np-complete-graphs/worker-sable-graphs is blocked for this agent (auto-mode classifier denies LEAN4_GUARDRAILS_BYPASS; lean4 guardrail blocks plain push). Needs the user to run: git push origin work/np-complete-graphs/worker-sable-graphs ; then ready can be submitted.",
-       "lease":
-       {"token": {"value": "791beb8e91346bcfbf88b3534d144528"},
-        "holder":
-        {"session": {"value": "15d3a3e432be6927c6de5db959e3458a"},
-         "agent": {"value": "worker-sable-graphs"}},
-        "expires": 1792399611},
-       "branch": "work/np-complete-graphs/worker-sable-graphs",
-       "blocked": true,
-       "assignee": {"value": "worker-sable-graphs"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "np-complete-graphs, both milestones. Base f489429, head 7b2a261. On Graph/encGraph: VertexCover_npComplete : NPComplete (encPair encGraph encNat) VertexCover (exact-size covers; mem_VertexCover_iff_exists_card_le gives the <=k form for k <= n); KColoring.mem_NP k; ThreeColoring_npComplete; KColoring_npComplete (3 <= k); DirHamPath_npComplete, DirHamCycle_npComplete (Sipser 7.46 diamonds); HamPath_npComplete, HamCycle_npComplete (vertex splitting); TSP_npHard; TSP.mem_NP : TSP ∈ NP encTSP (Graph.verifyOrdering, X^2 certificates, shared binary_sum/binary_le); TSP_npComplete : NPComplete encTSP TSP. Checks: scripts/check.sh six gates pass at head; ComplexityTests/NPCompleteGraphs*: graphs in/out of each language, empty-graph and k = 0 boundaries, gadget checks, axiom guards for all 8 NPComplete theorems. Sources: Karp1972, Sipser2013 Thm 7.46/7.55, Papadimitriou94 9.3; original formalization. Contributors: worker-sable-graphs (both holders); helpers sable-graphs-verify (Hamiltonian verifiers), sable-graphs-split (Undirected.lean), sable-graphs-tsp (TSP reduction, via 4e5cad3). Limitations: verifiers migrate in np-witness-builder; private binary-index lookup in TSP.lean could move to PolyTime/Nat/Binary. Bib: @book{GareyJohnson1979, author = {Garey, Michael R. and Johnson, David S.}, title = {Computers and Intractability: A Guide to the Theory of {NP}-Completeness}, publisher = {W. H. Freeman}, address = {San Francisco}, year = {1979}}",
       "snapshot":
       {"head": {"value": "7b2a2619cc5d6756dfc2c1ff64daf525f301ba26"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792386455,
-          "snapshot":
-          {"head": {"value": "7b2a2619cc5d6756dfc2c1ff64daf525f301ba26"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
-           "agent": {"value": "reviewer-sable-cor1"}},
-          "note":
-          "Independent correctness review of 7b2a261 (no authorship). Build: the 6 epic modules plus the 4 NPCompleteGraphs test modules, under nice, --wfail --iofail: OK. Diff contains no sorry/native_decide/axiom/set_option/extern. Own probe .lake/.../Probe.lean: all 8 NPComplete headlines restated with exact encodings (encNat = Nat.bits binary, encTSP binary); KColoring k>=3 instantiated at 3 and 17. All gadget lemmas are two-sided iffs (3-coloring OR-chain, Sipser 7.46 diamonds, vertex splitting, HamCycle to TSP, IS to VC). 18 #print axioms (headlines, gadget iffs, mem_VertexCover_iff_exists_card_le) give only propext, Classical.choice, Quot.sound. Semantics probed. VC: repeated vertices count once, reverse edge must be covered, out-of-range edge ignored, empty graph only k=0, k>n rejected (Sipser exactly-k, GJ K<=|V|). Coloring: K4 not 3-colourable but 4-colourable; KColoring 0 = no declared vertices. Ham: self-loop gives a 1-vertex DirHamCycle; DirHamPath directional, HamPath not; undeclared s rejected; triangle in HamCycle, edge not. TSP: empty yes, diagonal for one city, asymmetric 1+7 tour; toTSP triangle evaluated. TSP NP: shared decodeVertexList/verifyOrdering, X^2 bit certificates, binary sum/compare. No blocking findings. Nits (documented): undirected readings ignore self-loops; TSP ragged rows read 0. Evidence: .lake/codex-validation/np-complete-graphs-correctness/review.json sha256 495215cb3821b0bfd646b0f70e51cb7ebb2f59cd82524bd7a6cd9d24a6d2fd19"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792386477,
-          "snapshot":
-          {"head": {"value": "7b2a2619cc5d6756dfc2c1ff64daf525f301ba26"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
-           "agent": {"value": "reviewer-sable-api1"}},
-          "note":
-          "API review of 7b2a261 (independent, read-only). Build: the 6 modules and 4 tests, --wfail --iofail, rc=0, no warnings. Probe: all 8 NPComplete and the key reductions use only propext/Classical.choice/Quot.sound; k>=3 instantiated; boundaries hold (empty TSP matrix, KColoring 0, one-vertex HamCycle). Reuse: no parallel graph model; Graph/encGraph/adjBool/selectVertices reused; Mathlib induce+IsVertexCover, Colorable, Walk.IsHamiltonian(Cycle); directed problems use arc lists (Digraph has no walks, documented). Template, docstrings, boundary statements and simp hygiene OK; guards for all 8 NPComplete in NPCompleteGraphs.lean. No blocking findings. Follow-ups: TSP.lean:132 private listGetD_binary has no counterpart in PolyTime/Nat/Binary.lean (not a duplicate); move it there and share its min step with VertexCover.lean:166. Duplicate private helpers: countP_range_lt (Coloring:120, Hamiltonian:380), length_vertices_le (Coloring:128 = Hamiltonian:549), distinct-vertex selectVertices proof x3 (VertexCover:143, Hamiltonian:501, TSP:249). Nits: _root_ Cycle lemma (Hamiltonian:125); generic SAT.* gadget names (Directed:81-92, Coloring:225-232); undocumented public lemmas (Directed:132-221). Integration: [GareyJohnson1979] has no entry here; land docs-bibliography 2bf2b21 first or together. Not run: the six gates. Evidence: .lake/codex-validation/np-complete-graphs-api/review.json sha256 c2ab910db50276f5e8f10ef1d98f25de35f1b9def2edc15f38d82f7bf7b58925"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792387207,
+      "landed": {"value": "4c8d00c133ca1b2983a938b9889ff78593502e09"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792386455,
+       "snapshot":
+       {"head": {"value": "7b2a2619cc5d6756dfc2c1ff64daf525f301ba26"},
+        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+       "reviewer":
+       {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
+        "agent": {"value": "reviewer-sable-cor1"}},
+       "note":
+       "Independent correctness review of 7b2a261 (no authorship). Build: the 6 epic modules plus the 4 NPCompleteGraphs test modules, under nice, --wfail --iofail: OK. Diff contains no sorry/native_decide/axiom/set_option/extern. Own probe .lake/.../Probe.lean: all 8 NPComplete headlines restated with exact encodings (encNat = Nat.bits binary, encTSP binary); KColoring k>=3 instantiated at 3 and 17. All gadget lemmas are two-sided iffs (3-coloring OR-chain, Sipser 7.46 diamonds, vertex splitting, HamCycle to TSP, IS to VC). 18 #print axioms (headlines, gadget iffs, mem_VertexCover_iff_exists_card_le) give only propext, Classical.choice, Quot.sound. Semantics probed. VC: repeated vertices count once, reverse edge must be covered, out-of-range edge ignored, empty graph only k=0, k>n rejected (Sipser exactly-k, GJ K<=|V|). Coloring: K4 not 3-colourable but 4-colourable; KColoring 0 = no declared vertices. Ham: self-loop gives a 1-vertex DirHamCycle; DirHamPath directional, HamPath not; undeclared s rejected; triangle in HamCycle, edge not. TSP: empty yes, diagonal for one city, asymmetric 1+7 tour; toTSP triangle evaluated. TSP NP: shared decodeVertexList/verifyOrdering, X^2 bit certificates, binary sum/compare. No blocking findings. Nits (documented): undirected readings ignore self-loops; TSP ragged rows read 0. Evidence: .lake/codex-validation/np-complete-graphs-correctness/review.json sha256 495215cb3821b0bfd646b0f70e51cb7ebb2f59cd82524bd7a6cd9d24a6d2fd19"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792386477,
+       "snapshot":
+       {"head": {"value": "7b2a2619cc5d6756dfc2c1ff64daf525f301ba26"},
+        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+       "reviewer":
+       {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
+        "agent": {"value": "reviewer-sable-api1"}},
+       "note":
+       "API review of 7b2a261 (independent, read-only). Build: the 6 modules and 4 tests, --wfail --iofail, rc=0, no warnings. Probe: all 8 NPComplete and the key reductions use only propext/Classical.choice/Quot.sound; k>=3 instantiated; boundaries hold (empty TSP matrix, KColoring 0, one-vertex HamCycle). Reuse: no parallel graph model; Graph/encGraph/adjBool/selectVertices reused; Mathlib induce+IsVertexCover, Colorable, Walk.IsHamiltonian(Cycle); directed problems use arc lists (Digraph has no walks, documented). Template, docstrings, boundary statements and simp hygiene OK; guards for all 8 NPComplete in NPCompleteGraphs.lean. No blocking findings. Follow-ups: TSP.lean:132 private listGetD_binary has no counterpart in PolyTime/Nat/Binary.lean (not a duplicate); move it there and share its min step with VertexCover.lean:166. Duplicate private helpers: countP_range_lt (Coloring:120, Hamiltonian:380), length_vertices_le (Coloring:128 = Hamiltonian:549), distinct-vertex selectVertices proof x3 (VertexCover:143, Hamiltonian:501, TSP:249). Nits: _root_ Cycle lemma (Hamiltonian:125); generic SAT.* gadget names (Directed:81-92, Coloring:225-232); undocumented public lemmas (Directed:132-221). Integration: [GareyJohnson1979] has no entry here; land docs-bibliography 2bf2b21 first or together. Not run: the six gates. Evidence: .lake/codex-validation/np-complete-graphs-api/review.json sha256 c2ab910db50276f5e8f10ef1d98f25de35f1b9def2edc15f38d82f7bf7b58925"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/VertexCover.lean",
     "Complexity/Computability/Complexity/Problems/Coloring.lean",
@@ -1732,52 +1678,42 @@
    "report":
    "API review (reviewer-sable-api2): Ladner.ofBits_bits duplicates main Nat.foldr_bit_bits (Kolmogorov/SelfDelimiting.lean); use it and delete the copy. Cheap nits: notMem naming, plain import of CookLevin.Completeness. Placement follow-ups recorded separately.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report": "",
-       "lease":
-       {"token": {"value": "9a642a9a3a489c59c2c96bda3b3cbf4f"},
-        "holder":
-        {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
-         "agent": {"value": "worker-sable-ladner"}},
-        "expires": 1792400636},
-       "branch": "work/ladner/worker-sable-ladner",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-ladner"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Ladner API-review delta, head 647187e on base 3034b37 (main). Prior submission 784cb3a; delta 8aaf396 plus a clean merge of main (references.bib, scripts/check_docs.py only). Changes: deleted the copy Ladner.ofBits_bits; natDecoder.decode_enc now uses main's Nat.foldr_bit_bits via a plain import of Kolmogorov.SelfDelimiting (a tactic proof `by exact`, since a term in the exposed def would need a public import; commented). Renamed not_mem to notMem: SAT_notMem_P, tendsto_H_of_notMem_P, falseCNF_notMem_SAT, SATH_notMem_P. pad_injective is now pad_inj : pad u k = pad u' k' ↔ u = u' ∧ k = k'. CookLevin.Completeness is a plain import (proof-only). Headline statements unchanged: exists_NP_not_P_not_NPComplete, SATH_mem_NP, SAT_mem_P_of_SATH_mem_P, SAT_mem_P_of_NPHard_SATH, P_eq_NP_of_SATH_mem_P, P_eq_NP_of_NPComplete_SATH. Checks: scripts/check.sh, all six gates pass; axiom guards unchanged (propext, Classical.choice, Quot.sound). Contributors: worker-sable-ladner (earlier holder and current). AI: Claude. Placement follow-ups recorded centrally; nothing moved outside epic paths. Bibliography: none new.",
       "snapshot":
       {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
        "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792386783,
-          "snapshot":
-          {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
-           "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
-          "reviewer":
-          {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
-           "agent": {"value": "reviewer-sable-cor5"}},
-          "note":
-          "Delta correctness review by reviewer-sable-cor5 (no contribution; author worker-sable-ladner) of exact 647187e over board base 3034b37, relative to the approved 784cb3a (reviewer-sable-cor2). Delta: 8aaf396 (ofBits_bits deleted for main Nat.foldr_bit_bits via proof-only Kolmogorov.SelfDelimiting import; notMem renames; pad_injective -> pad_inj iff; CookLevin.Completeness plain import) plus a main merge touching only references.bib and scripts/check_docs.py. Built Ladner.Basic, Ladner.PolyTime, Ladner, ComplexityTests.Ladner with --wfail --iofail: pass. Probe: the headline exists_NP_not_P_not_NPComplete and SATH_mem_NP, SAT_mem_P_of_SATH_mem_P, SAT_mem_P_of_NPHard_SATH, P_eq_NP_of_SATH_mem_P, P_eq_NP_of_NPComplete_SATH, copied verbatim from 784cb3a, typecheck against HEAD; the four renamed lemmas keep their statements; pad_inj re-proved independently from unpad_pad, with concrete separating instances; natDecoder.decode_enc holds. Axiom audit of all 242 constants in the three Ladner modules: only propext/Classical.choice/Quot.sound; no stale old names remain. Blocking: none. Nits: none. Limitation: delta-only, unchanged content relies on the prior review. Note: the coordinator-quoted base 3034b372dd70b6a0... does not exist; used the board snapshot base. Evidence .lake/codex-validation/ladner-correctness/review.json sha256 ef6c3451...182e21e"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792386756,
-          "snapshot":
-          {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
-           "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
-          "reviewer":
-          {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
-           "agent": {"value": "reviewer-sable-api5"}},
-          "note":
-          "Delta API review of 647187e (base 3034b37) by reviewer-sable-api5, independent and read-only, following reviewer-sable-api2 changes on 784cb3a. Duplicate gone: Ladner.ofBits_bits deleted; natDecoder.decode_enc uses main Nat.foldr_bit_bits (PolyTime.lean:139) by exact, with a commented plain import of Kolmogorov.SelfDelimiting; no reference to ofBits_bits remains. Renames consistent in code, module docstring and tests: SAT_notMem_P, tendsto_H_of_notMem_P, falseCNF_notMem_SAT (tests 154/166), SATH_notMem_P; pad_inj iff (Basic.lean:156, .mp at :192); git grep finds no old names. CookLevin.Completeness is a plain import. Merge only: Lean files at 647187e identical to 8aaf396; references.bib and check_docs.py identical to base. Build of Ladner x3 and ComplexityTests.Ladner --wfail exit 0; #lint 0 errors in 123 declarations. No blocking findings. Nit: pad_inj could be @[simp]. Six gates not rerun. Evidence: .lake/codex-validation/ladner-api/review.json sha256 50d22a37c0bcd90320c909475a78f586770c90cc8c5a5cc892d74e7450f02e3c"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792387207,
+      "landed": {"value": "4c8d00c133ca1b2983a938b9889ff78593502e09"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792386783,
+       "snapshot":
+       {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
+        "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
+       "reviewer":
+       {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
+        "agent": {"value": "reviewer-sable-cor5"}},
+       "note":
+       "Delta correctness review by reviewer-sable-cor5 (no contribution; author worker-sable-ladner) of exact 647187e over board base 3034b37, relative to the approved 784cb3a (reviewer-sable-cor2). Delta: 8aaf396 (ofBits_bits deleted for main Nat.foldr_bit_bits via proof-only Kolmogorov.SelfDelimiting import; notMem renames; pad_injective -> pad_inj iff; CookLevin.Completeness plain import) plus a main merge touching only references.bib and scripts/check_docs.py. Built Ladner.Basic, Ladner.PolyTime, Ladner, ComplexityTests.Ladner with --wfail --iofail: pass. Probe: the headline exists_NP_not_P_not_NPComplete and SATH_mem_NP, SAT_mem_P_of_SATH_mem_P, SAT_mem_P_of_NPHard_SATH, P_eq_NP_of_SATH_mem_P, P_eq_NP_of_NPComplete_SATH, copied verbatim from 784cb3a, typecheck against HEAD; the four renamed lemmas keep their statements; pad_inj re-proved independently from unpad_pad, with concrete separating instances; natDecoder.decode_enc holds. Axiom audit of all 242 constants in the three Ladner modules: only propext/Classical.choice/Quot.sound; no stale old names remain. Blocking: none. Nits: none. Limitation: delta-only, unchanged content relies on the prior review. Note: the coordinator-quoted base 3034b372dd70b6a0... does not exist; used the board snapshot base. Evidence .lake/codex-validation/ladner-correctness/review.json sha256 ef6c3451...182e21e"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792386756,
+       "snapshot":
+       {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
+        "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
+       "reviewer":
+       {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
+        "agent": {"value": "reviewer-sable-api5"}},
+       "note":
+       "Delta API review of 647187e (base 3034b37) by reviewer-sable-api5, independent and read-only, following reviewer-sable-api2 changes on 784cb3a. Duplicate gone: Ladner.ofBits_bits deleted; natDecoder.decode_enc uses main Nat.foldr_bit_bits (PolyTime.lean:139) by exact, with a commented plain import of Kolmogorov.SelfDelimiting; no reference to ofBits_bits remains. Renames consistent in code, module docstring and tests: SAT_notMem_P, tendsto_H_of_notMem_P, falseCNF_notMem_SAT (tests 154/166), SATH_notMem_P; pad_inj iff (Basic.lean:156, .mp at :192); git grep finds no old names. CookLevin.Completeness is a plain import. Merge only: Lean files at 647187e identical to 8aaf396; references.bib and check_docs.py identical to base. Build of Ladner x3 and ComplexityTests.Ladner --wfail exit 0; #lint 0 errors in 123 declarations. No blocking findings. Nit: pad_inj could be @[simp]. Six gates not rerun. Evidence: .lake/codex-validation/ladner-api/review.json sha256 50d22a37c0bcd90320c909475a78f586770c90cc8c5a5cc892d74e7450f02e3c"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Ladner.lean",
     "Complexity/Computability/Complexity/Classes/Ladner",
@@ -1838,53 +1774,42 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "PUBLICATION REQUEST: head a961fddd6ef981c1546906e2f46ea1cdc7654bac on work/interactive-proofs/worker-sable-ip, base origin/main fa9ab42 (merged, diff only in epic paths + generated roots). Push denied in this session by the auto-mode classifier (not bypassed); needs `git push origin work/interactive-proofs/worker-sable-ip` from the worktree. All six gates pass at this head. Will run ready once the branch is visible on origin. Tracked continuation (milestone 2, not started): IP ⊆ PSPACE using Classes/Space (polynomial-space). Bib keys needed: GoldwasserMicaliRackoff1989, GoldreichMicaliWigderson1991 (full BibTeX in the previous note / coordinator report).",
-       "lease":
-       {"token": {"value": "4199522ac26f9b86383356f4f5e4198a"},
-        "holder":
-        {"session": {"value": "96c57dfb40db0a4654e519b0c7249d36"},
-         "agent": {"value": "worker-sable-ip"}},
-        "expires": 1792399833},
-       "branch": "work/interactive-proofs/worker-sable-ip",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-ip"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Milestone 1 (Cslib.Complexity). Prover: State : Type, init, respond : Op × List Bool → StateT State PMF (List Bool), unbounded. IP enc = {A | ∃ V, IsOraclePPTOn enc encBool V ∧ IsInteractiveProof V A (2/3) (1/3)}; exists_queryBounds_of_mem_IP (poly many messages, poly length). NP_subset_IP : NP enc ⊆ IP enc; BPP_subset_IP : BPP enc ⊆ IP enc. GraphIsomorphism.mem_NP : GraphIsomorphism ∈ NP (encPair encGraph encGraph). acceptProb_guessingRound_le_half (equal message laws ⇒ ≤ 1/2); GraphNonIsomorphism.isInteractiveProof_round : IsInteractiveProof round GraphNonIsomorphism 1 (17/32); acceptProb_sequentialRepeat_le (ε^k); GraphNonIsomorphism.mem_IP : GraphNonIsomorphism ∈ IP (encPair encGraph encGraph), completeness 1. Limits: fair coins can't sample uniform permutations, so random keys ⇒ 17/32 per round (1/2 + collisions ≤ 1/16), 2 sequential rounds = 289/1024 < 1/3; constant-k sequential repetition only. Checks: six gates at 9db80c1; tests: path/triangle/relabeled path, honest prover = 1, cheating prover = 1/2 per round and ≤ (17/32)^2; 13 axiom guards. Source: AroraBarak09 Ch. 8, GMR89, GMW91; original code. Contributors: worker-sable-ip (both holders); merged open-oracle-composition commits are on main. Continuation: milestone 2 IP ⊆ PSPACE via Classes/Space. Bib: GoldwasserMicaliRackoff1989, GoldreichMicaliWigderson1991 landed on main (881b9c0); none further.",
       "snapshot":
       {"head": {"value": "9db80c1c477a0fab1594ab5e697456283044e6f3"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792386433,
-          "snapshot":
-          {"head": {"value": "9db80c1c477a0fab1594ab5e697456283044e6f3"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
-           "agent": {"value": "reviewer-sable-cor6"}},
-          "note":
-          "Independent correctness review (reviewer-sable-cor6, no contribution). Scoped build of 5 epic modules + ComplexityTests.InteractiveProofs --wfail --iofail: OK. Own probes compile: acceptProb equals the IsOraclePPTOn machine law against any prover (same handler); stateful adaptive prover fools a two-query verifier w.p.1, constant provers w.p.0; (17/32)^2<1/3; P4 vs star non-isomorphic, self-loops/dup edges ignored, no GI certificate accepted on (P4,star); GNI completeness 1 on (P4,star). IP: unbounded randomized stateful private-coin prover, IsOraclePPTOn verifier, poly calls/request length, 2/3-1/3. NP/BPP in IP real. GNI: guessing-round bound (1+d)/2, le_half hypothesis eval-equality correct, random-key coupling R->R o sigma on injective keys, birthday n^2/D<=1/16, 17/32/round, seq repetition eps^k adaptive, k=2. GI in NP via isVerifier both directions. 31 axiom probes std only; no sorry/native_decide/axiom/set_option. Blocking: none. Nits: Guessing.lean:23 module doc says differ by at most d though hypothesis is one-sided; summary says 13 guards (14). Limits: no full six gates; board snapshot base f4894296 used (assigned a961fdd rejected by protocol; also an ancestor). Evidence .lake/codex-validation/interactive-proofs-correctness/review.json sha256 c6646537c98c5bf55dcab2cd1590d3012337451c4f033c7f6cdcc20964d212ec"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792386519,
-          "snapshot":
-          {"head": {"value": "9db80c1c477a0fab1594ab5e697456283044e6f3"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
-           "agent": {"value": "reviewer-sable-api6"}},
-          "note":
-          "API review by reviewer-sable-api6 (independent; author worker-sable-ip). Scope: f489429..9db80c1 (board base; assigned a961fdd also an ancestor), IP.lean, IP/{Guessing,Repetition,GraphNonIsomorphism}.lean, Problems/GraphIsomorphism.lean, tests. Evidence: epic modules+test built --wfail --iofail, 0 warnings; probes: (rankPerm k).symm = Tuple.sort k; binaryValue_lt from public uniformList_binaryValue; extra axiom checks clean. Reuse OK: WordOracleComp verifiers, IsOraclePPTOn efficiency, Prover.respond = the oracle type of IsOraclePPTOn, Prover.run = same handler; BPP reused; no second machine model; no edits outside epic paths. 17/32 honestly documented (GNI.lean:34-45,530). Template, namespaces, placement, simp hygiene OK; 14 axiom guards (summary says 13). No blocking findings. Follow-ups: keyRank/rankPerm (GNI:85-146) duplicate Mathlib Tuple.sort; private binaryValue_lt/injective (GNI:291-315) -> public in BitString/List/Binary.lean; private uniformList_map_apply (IP:262) duplicates uniformList_acceptCount; tsum_map_mul, natCast_div_le_natCast_div generic. Nits: GNI:29-32 textbook 1/2 in present tense, GNI:35-37 \"exactly when\" reads as iff; no docstrings on isInteractiveProof_round/_verifier; {P with init := s} in public statements; distinctVertices-length polytime repeated 3x. Integration: GMR89/GMW91 bib keys absent at head, on origin/main (881b9c0). Evidence .lake/codex-validation/interactive-proofs-api/review.json sha256 47f122d5864717d43df75e6ca4ee533719d1b98602bd125c728f5118e408188d"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792387207,
+      "landed": {"value": "4c8d00c133ca1b2983a938b9889ff78593502e09"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792386433,
+       "snapshot":
+       {"head": {"value": "9db80c1c477a0fab1594ab5e697456283044e6f3"},
+        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+       "reviewer":
+       {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
+        "agent": {"value": "reviewer-sable-cor6"}},
+       "note":
+       "Independent correctness review (reviewer-sable-cor6, no contribution). Scoped build of 5 epic modules + ComplexityTests.InteractiveProofs --wfail --iofail: OK. Own probes compile: acceptProb equals the IsOraclePPTOn machine law against any prover (same handler); stateful adaptive prover fools a two-query verifier w.p.1, constant provers w.p.0; (17/32)^2<1/3; P4 vs star non-isomorphic, self-loops/dup edges ignored, no GI certificate accepted on (P4,star); GNI completeness 1 on (P4,star). IP: unbounded randomized stateful private-coin prover, IsOraclePPTOn verifier, poly calls/request length, 2/3-1/3. NP/BPP in IP real. GNI: guessing-round bound (1+d)/2, le_half hypothesis eval-equality correct, random-key coupling R->R o sigma on injective keys, birthday n^2/D<=1/16, 17/32/round, seq repetition eps^k adaptive, k=2. GI in NP via isVerifier both directions. 31 axiom probes std only; no sorry/native_decide/axiom/set_option. Blocking: none. Nits: Guessing.lean:23 module doc says differ by at most d though hypothesis is one-sided; summary says 13 guards (14). Limits: no full six gates; board snapshot base f4894296 used (assigned a961fdd rejected by protocol; also an ancestor). Evidence .lake/codex-validation/interactive-proofs-correctness/review.json sha256 c6646537c98c5bf55dcab2cd1590d3012337451c4f033c7f6cdcc20964d212ec"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792386519,
+       "snapshot":
+       {"head": {"value": "9db80c1c477a0fab1594ab5e697456283044e6f3"},
+        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+       "reviewer":
+       {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
+        "agent": {"value": "reviewer-sable-api6"}},
+       "note":
+       "API review by reviewer-sable-api6 (independent; author worker-sable-ip). Scope: f489429..9db80c1 (board base; assigned a961fdd also an ancestor), IP.lean, IP/{Guessing,Repetition,GraphNonIsomorphism}.lean, Problems/GraphIsomorphism.lean, tests. Evidence: epic modules+test built --wfail --iofail, 0 warnings; probes: (rankPerm k).symm = Tuple.sort k; binaryValue_lt from public uniformList_binaryValue; extra axiom checks clean. Reuse OK: WordOracleComp verifiers, IsOraclePPTOn efficiency, Prover.respond = the oracle type of IsOraclePPTOn, Prover.run = same handler; BPP reused; no second machine model; no edits outside epic paths. 17/32 honestly documented (GNI.lean:34-45,530). Template, namespaces, placement, simp hygiene OK; 14 axiom guards (summary says 13). No blocking findings. Follow-ups: keyRank/rankPerm (GNI:85-146) duplicate Mathlib Tuple.sort; private binaryValue_lt/injective (GNI:291-315) -> public in BitString/List/Binary.lean; private uniformList_map_apply (IP:262) duplicates uniformList_acceptCount; tsum_map_mul, natCast_div_le_natCast_div generic. Nits: GNI:29-32 textbook 1/2 in present tense, GNI:35-37 \"exactly when\" reads as iff; no docstrings on isInteractiveProof_round/_verifier; {P with init := s} in public statements; distinctVertices-length polytime repeated 3x. Integration: GMR89/GMW91 bib keys absent at head, on origin/main (881b9c0). Evidence .lake/codex-validation/interactive-proofs-api/review.json sha256 47f122d5864717d43df75e6ca4ee533719d1b98602bd125c728f5118e408188d"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/IP.lean",
     "Complexity/Computability/Complexity/Classes/IP",
@@ -2002,52 +1927,42 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report": "",
-       "lease":
-       {"token": {"value": "40a939084b6ee1062eeca8130e15b4c8"},
-        "holder":
-        {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
-         "agent": {"value": "worker-sable-stretch"}},
-        "expires": 1792399867},
-       "branch": "work/circuit-complexity-consolidation/worker-sable-stretch",
-       "blocked": false,
-       "assignee": {"value": "worker-sable-stretch"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "No statement weakened; names kept except the goal's rename. (1) Circuit/Complexity (additions to cslib Circuit/Complexity) holds complexity_single_proj : complexity I (single fun x => x i) = 0, one_le_complexity_single (hf : ∀ i, f ≠ fun x => x i) : 1 ≤ complexity I (single f), complexity_single_unary_le, complexity_single_binary_le, moved unchanged; Boolean.complexity_not_le/complexity_binary_le rederived from them; private test copies deleted. (2) BitString/Hamming: two_mul_hammingDist_parityOn (h : S ≠ T) : 2 * hammingDist (parityOn S) (parityOn T) = 2 ^ card ι, elementary symmDiff proof (private parityOn_symmDiff); two_mul_hammingDist_proj derived; Linearity drops the Fourier proof and public-imports Hamming. (3) Smolensky fst_trace_pair uses pointwise/trace_pointwise_apply. (4) median_median -> median_median_distrib (no alias); lattice-median docstring; Metric 'exponent two'; Gates distance-zero uses circuitDist_self; Boolean/Hamming imports BitString/Hamming, drops unused Pointwise. Tests: parity distances, axioms guard. Checks: six gates pass at 7077d8c (build, mk_all --check, test, lint, lint-style, checkInitImports); then merged docs-only main. Source: library's own code. Contributors: worker-sable-stretch (earlier holder: no commits). Follow-up: move parityOn_symmDiff public into BitString/Parity (outside paths). Bibliography: none.",
       "snapshot":
       {"head": {"value": "2b3f6de7e95735056f0e6f61bed05329732cd9da"},
        "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792386393,
-          "snapshot":
-          {"head": {"value": "2b3f6de7e95735056f0e6f61bed05329732cd9da"},
-           "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
-          "reviewer":
-          {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
-           "agent": {"value": "reviewer-sable-cor7"}},
-          "note":
-          "Independent correctness review (reviewer-sable-cor7, no contribution) of exact head 2b3f6de over base 2bf2b21. Built 14 targets (touched modules, CircuitMetric/CircuitHamming.Gates/CircuitHamming.Pointwise tests, Hadamard, Smolensky, Boolean.Metric) --wfail --iofail: exit 0. Probes restate every BASE statement verbatim in its BASE binder context and prove it by the HEAD lemma: complexity_single_proj, one_le_complexity_single, complexity_single_unary_le/binary_le, Boolean.complexity_not_le/binary_le, two_mul_hammingDist_parityOn, two_mul_hammingDist_proj, median_median(->median_median_distrib); statement text identical, no weakening; fst_trace_pair statement untouched. New elementary proof sound (S∆T=(S∪T)\\(S∩T), x+x=0; disagreement set = parity on nonempty S∆T, card 2^(|ι|-1)); decide cross-checks on Fin 3 of parityOn_symmDiff and the distance equation, boundary S=T fails. Axioms of 15 decls within propext/Classical.choice/Quot.sound. No sorry/native_decide/axiom/set_option. Blocking: none. Nits: implicit binder order changed (σ U n I -> σ U I n; [IsComplete] now after n), no @-uses; rename without deprecated alias. Limitations: did not build all downstream importers of Synthesis (new simp lemma now in scope there) nor run lint gates; relies on worker six gates at 7077d8c (later commits add only references.bib). Evidence .lake/codex-validation/circuit-complexity-consolidation-correctness/review.json sha256 c2a51af806a77746a8419734eb7ddcd343cd37de053c9159f5d8f2413dd68d39"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792386543,
-          "snapshot":
-          {"head": {"value": "2b3f6de7e95735056f0e6f61bed05329732cd9da"},
-           "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
-          "reviewer":
-          {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
-           "agent": {"value": "reviewer-sable-api7"}},
-          "note":
-          "API review by reviewer-sable-api7 (independent; no contribution). Scope: exact head 2b3f6de over base 2bf2b21. Evidence: nice lake build of touched modules + Hadamard + tests CircuitMetric, CircuitHamming.Gates, CircuitHamming.Pointwise --wfail --iofail OK; #lint over touched import closure 0 errors; lint-style and mk_all --check OK; probes show moved lemmas keep identical explicit statements (only implicit binder order shifts), simp attr kept, axioms std three; name diff base->head: only median_median -> median_median_distrib (no uses elsewhere on main 3034b37/ec48c1a or 15 active branch refs), private test copies dropped, private parityOn_symmDiff added. Markers correct (Circuit/Complexity additions marker; inline Pointwise marker removed with block). Placement per goal. Blocking: none. Nits: Circuit/Complexity.lean:71,80 decl docstrings omit argument complexities; Synthesis.lean:12 public import only proof/doc-used (keeps CircuitHamming/Pointwise test compiling); Hamming.lean:138 parityOn_symmDiff should go public to BitString/Parity (follow-up); CircuitHamming/Pointwise test still hosts guards for lemmas now in Circuit/Complexity. Integration: Pointwise no longer provides complexity lemmas and Boolean/Hamming no longer re-exports Pointwise; hamming-geometry-2 must import directly. Skipped: full-repo gates, other Synthesis importers. Evidence .lake/codex-validation/circuit-complexity-consolidation-api/review.json sha256 2758b78ab6a31a816a49fac0c6003d1e313a93084c8746293f1c706c5cd4ebad"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792387207,
+      "landed": {"value": "4c8d00c133ca1b2983a938b9889ff78593502e09"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792386393,
+       "snapshot":
+       {"head": {"value": "2b3f6de7e95735056f0e6f61bed05329732cd9da"},
+        "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
+       "reviewer":
+       {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
+        "agent": {"value": "reviewer-sable-cor7"}},
+       "note":
+       "Independent correctness review (reviewer-sable-cor7, no contribution) of exact head 2b3f6de over base 2bf2b21. Built 14 targets (touched modules, CircuitMetric/CircuitHamming.Gates/CircuitHamming.Pointwise tests, Hadamard, Smolensky, Boolean.Metric) --wfail --iofail: exit 0. Probes restate every BASE statement verbatim in its BASE binder context and prove it by the HEAD lemma: complexity_single_proj, one_le_complexity_single, complexity_single_unary_le/binary_le, Boolean.complexity_not_le/binary_le, two_mul_hammingDist_parityOn, two_mul_hammingDist_proj, median_median(->median_median_distrib); statement text identical, no weakening; fst_trace_pair statement untouched. New elementary proof sound (S∆T=(S∪T)\\(S∩T), x+x=0; disagreement set = parity on nonempty S∆T, card 2^(|ι|-1)); decide cross-checks on Fin 3 of parityOn_symmDiff and the distance equation, boundary S=T fails. Axioms of 15 decls within propext/Classical.choice/Quot.sound. No sorry/native_decide/axiom/set_option. Blocking: none. Nits: implicit binder order changed (σ U n I -> σ U I n; [IsComplete] now after n), no @-uses; rename without deprecated alias. Limitations: did not build all downstream importers of Synthesis (new simp lemma now in scope there) nor run lint gates; relies on worker six gates at 7077d8c (later commits add only references.bib). Evidence .lake/codex-validation/circuit-complexity-consolidation-correctness/review.json sha256 c2a51af806a77746a8419734eb7ddcd343cd37de053c9159f5d8f2413dd68d39"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792386543,
+       "snapshot":
+       {"head": {"value": "2b3f6de7e95735056f0e6f61bed05329732cd9da"},
+        "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
+       "reviewer":
+       {"session": {"value": "1746d4ef891a33d854dab552af6d207c"},
+        "agent": {"value": "reviewer-sable-api7"}},
+       "note":
+       "API review by reviewer-sable-api7 (independent; no contribution). Scope: exact head 2b3f6de over base 2bf2b21. Evidence: nice lake build of touched modules + Hadamard + tests CircuitMetric, CircuitHamming.Gates, CircuitHamming.Pointwise --wfail --iofail OK; #lint over touched import closure 0 errors; lint-style and mk_all --check OK; probes show moved lemmas keep identical explicit statements (only implicit binder order shifts), simp attr kept, axioms std three; name diff base->head: only median_median -> median_median_distrib (no uses elsewhere on main 3034b37/ec48c1a or 15 active branch refs), private test copies dropped, private parityOn_symmDiff added. Markers correct (Circuit/Complexity additions marker; inline Pointwise marker removed with block). Placement per goal. Blocking: none. Nits: Circuit/Complexity.lean:71,80 decl docstrings omit argument complexities; Synthesis.lean:12 public import only proof/doc-used (keeps CircuitHamming/Pointwise test compiling); Hamming.lean:138 parityOn_symmDiff should go public to BitString/Parity (follow-up); CircuitHamming/Pointwise test still hosts guards for lemmas now in Circuit/Complexity. Integration: Pointwise no longer provides complexity lemmas and Boolean/Hamming no longer re-exports Pointwise; hamming-geometry-2 must import directly. Skipped: full-repo gates, other Synthesis importers. Evidence .lake/codex-validation/circuit-complexity-consolidation-api/review.json sha256 2758b78ab6a31a816a49fac0c6003d1e313a93084c8746293f1c706c5cd4ebad"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Complexity.lean",
     "Complexity/Computability/Circuit/Pointwise.lean",
