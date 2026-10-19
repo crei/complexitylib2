@@ -1353,7 +1353,7 @@
        "holder":
        {"session": {"value": "842267643c344d7a79017588bcfc8a39"},
         "agent": {"value": "worker-sable-numbers"}},
-       "expires": 1792386386},
+       "expires": 1792386599},
       "branch": "work/np-complete-numbers/worker-sable-numbers",
       "blocked": false,
       "assignee": {"value": "worker-sable-numbers"}}}},
@@ -1688,7 +1688,7 @@
     "agent": {"value": "worker-sable-graphs"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792386055,
+   "expires": 1792386599,
    "actor":
    {"session": {"value": "842267643c344d7a79017588bcfc8a39"},
     "agent": {"value": "worker-sable-numbers"}}},
