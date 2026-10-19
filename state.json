@@ -1629,20 +1629,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Classical Rice proved (Turing.MultiTapeTM.rice) via polytime s-m-n (computableTidilyInPolyTime_hardwire), Desc-level dispatch and a recursion theorem (exists_behaviour_eq). Now docs, tests, gates.",
-      "lease":
-      {"token": {"value": "f6fe835348be59c882fc08e25d10d6b4"},
-       "holder":
-       {"session": {"value": "7781632cd73663d87f4e864c19b303a8"},
-        "agent": {"value": "worker-sable-undecid"}},
-       "expires": 1792402729},
-      "branch": "work/undecidability/worker-sable-undecid",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-undecid"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Classical Rice proved (Turing.MultiTapeTM.rice) via polytime s-m-n (computableTidilyInPolyTime_hardwire), Desc-level dispatch and a recursion theorem (exists_behaviour_eq). Now docs, tests, gates.",
+       "lease":
+       {"token": {"value": "f6fe835348be59c882fc08e25d10d6b4"},
+        "holder":
+        {"session": {"value": "7781632cd73663d87f4e864c19b303a8"},
+         "agent": {"value": "worker-sable-undecid"}},
+        "expires": 1792402729},
+       "branch": "work/undecidability/worker-sable-undecid",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-undecid"}},
+      "summary":
+      "Native undecidability, base 59b6eced head aed5f718. halting_problem(_self), acceptance_problem(_self): no computable f decides halting/acceptance on eDesc (desc eS eBit tm), pair/self forms; not_isDecidable_{halting,selfHalting,acceptance,selfAcceptance}Problem. MappingReducible refl/trans/compl, .not_isDecidable. s-m-n: Desc.computes_hardwire: (hardwire d p).Computes (x.map eBit) o ↔ d.Computes ((p++x).map eBit) o, polytime (computableTidilyInPolyTime_hardwire). Desc.computes_dispatch. Recursion: exists_behaviour_eq: IsComputable f encBits encBool → ∃ e, ∀ x o, (decodeDesc e).Computes (x.map eBit) o ↔ (d (f e)).Computes (x.map eBit) o. Rice: behaviour w₀ ∉ C → behaviour w₁ ∈ C → ¬IsDecidable {w | behaviour w ∈ C} encBits; not_isDecidable_of_behaviour. Mathlib bridge: docstring only. Checks: six gates ok at head; axiom guards in ComplexityTests/Halting.lean. Contributors: worker-sable-undecid (2 sessions; Claude). Limit: bit inputs. Bib: @article{Turing1936, author={Turing, Alan M.}, title={On Computable Numbers, with an Application to the {E}ntscheidungsproblem}, journal={Proceedings of the London Mathematical Society}, volume={s2-42}, number={1}, pages={230--265}, year={1936}, doi={10.1112/plms/s2-42.1.230}} @article{Rice1953, author={Rice, Henry Gordon}, title={Classes of Recursively Enumerable Sets and Their Decision Problems}, journal={Transactions of the American Mathematical Society}, volume={74}, number={2}, pages={358--366}, year={1953}, doi={10.1090/S0002-9947-1953-0053041-6}}",
+      "snapshot":
+      {"head": {"value": "aed5f718eec901dc94d11ad292916187c9070d3b"},
+       "base": {"value": "59b6eced334cffb786e5500118f136f3e1cbe94a"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Halting.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Halting",
