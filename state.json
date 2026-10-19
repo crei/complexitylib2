@@ -2259,7 +2259,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/probability-toolkit/worker-sable-prob",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-prob"}}}},
    "paths":
    ["Complexity/Probability/Chernoff.lean",
     "Complexity/Probability/KWiseIndependent.lean",
