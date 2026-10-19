@@ -1532,7 +1532,16 @@
            "agent": {"value": "reviewer-sable-cor4"}},
           "expires": 1792391563},
          "blocked": false}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "63b512c5cb414f707d8966dacb8967e7"},
+          "holder":
+          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+           "agent": {"value": "reviewer-sable-api4"}},
+          "expires": 1792391577},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Problems/SubsetSum.lean",
     "Complexity/Computability/Complexity/Problems/SubsetSum",
