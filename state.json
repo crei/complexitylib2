@@ -1302,7 +1302,7 @@
           "holder":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792388316},
+          "expires": 1792388347},
          "blocked": false}}}}}},
    "paths": ["scripts/coordination", "CONTRIBUTING.md", "AGENTS.md"],
    "id": {"value": "merge-queue-landing"},
@@ -1762,7 +1762,7 @@
     "agent": {"value": "coordinator-sable"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792388316,
+   "expires": 1792388347,
    "actor":
    {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
     "agent": {"value": "reviewer-sable-api1"}}},
