@@ -1,5 +1,25 @@
 {"version": 1,
- "integration": null,
+ "integration":
+ {"snapshot":
+  {"head": {"value": "783c51e2f3c92f958790d4d8768ecd45c24fca3e"},
+   "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+  "main": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"},
+  "lease":
+  {"token": {"value": "f7f98a03321fb5d6f390e568c1c19bfa"},
+   "holder":
+   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+    "agent": {"value": "coordinator-sable"}},
+   "expires": 1792407446},
+  "epic": {"value": "explicit-affine-disperser-2"},
+  "candidates":
+  [{"snapshot":
+    {"head": {"value": "783c51e2f3c92f958790d4d8768ecd45c24fca3e"},
+     "base": {"value": "4274652a2c30cb651091e125c9c2fb000b045b0f"}},
+    "epic": {"value": "explicit-affine-disperser-2"}},
+   {"snapshot":
+    {"head": {"value": "5b33f3346aac949ec4f6541220f5ef69e05fd391"},
+     "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+    "epic": {"value": "docs-bibliography-3"}}]},
  "epics":
  [{"resume": null,
    "report":
