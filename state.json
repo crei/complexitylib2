@@ -2608,20 +2608,27 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Question (not blocking other items): NPComplete.P_eq_NP_of_mem_P needs P ⊆ NP. P_subset_NP is excluded and sits in Ladner.lean, which imports CookLevin.Completeness, so the lemma cannot go beside SAT_npComplete without moving P_subset_NP. Default unless told otherwise: put the general NPComplete.P_eq_NP_of_mem_P in Ladner.lean right after P_subset_NP, derive the Ladner corollaries, and leave the move beside SAT_npComplete to resource-class-spine. Alternative if you prefer: allow me to move P_subset_NP into Reduction.lean (which will import Classes.P for PolyTimeReducible.mem_P). Also: the CNF decoder cannot go to Encodings/Decoder.lean without importing Problems.SAT (Classes.NP) into the Encodings layer; default is to move Decoder.nat/Decoder.bool there and keep cnfDecoder := .list (.list (.pair .nat .bool)) in Ladner/PolyTime pending a home beside encCNF (outside paths).",
-      "lease":
-      {"token": {"value": "08d2f86fbbb14be3d31fc575e4974f36"},
-       "holder":
-       {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
-        "agent": {"value": "worker-sable-stretch"}},
-       "expires": 1792403381},
-      "branch": "work/machine-classes-consolidation/worker-sable-stretch",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-stretch"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Question (not blocking other items): NPComplete.P_eq_NP_of_mem_P needs P ⊆ NP. P_subset_NP is excluded and sits in Ladner.lean, which imports CookLevin.Completeness, so the lemma cannot go beside SAT_npComplete without moving P_subset_NP. Default unless told otherwise: put the general NPComplete.P_eq_NP_of_mem_P in Ladner.lean right after P_subset_NP, derive the Ladner corollaries, and leave the move beside SAT_npComplete to resource-class-spine. Alternative if you prefer: allow me to move P_subset_NP into Reduction.lean (which will import Classes.P for PolyTimeReducible.mem_P). Also: the CNF decoder cannot go to Encodings/Decoder.lean without importing Problems.SAT (Classes.NP) into the Encodings layer; default is to move Decoder.nat/Decoder.bool there and keep cnfDecoder := .list (.list (.pair .nat .bool)) in Ladner/PolyTime pending a home beside encCNF (outside paths).",
+       "lease":
+       {"token": {"value": "08d2f86fbbb14be3d31fc575e4974f36"},
+        "holder":
+        {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
+         "agent": {"value": "worker-sable-stretch"}},
+        "expires": 1792403381},
+       "branch": "work/machine-classes-consolidation/worker-sable-stretch",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-stretch"}},
+      "summary":
+      "No statement weakened. PolyTimeReducible.mem_P -> Reduction. New NPComplete.P_eq_NP_of_mem_P (hB : NPComplete encB B) (h : B ∈ P encB) (enc) : P enc = NP enc; Ladner.P_eq_NP_of_SAT_mem_P/SAT_notMem_P derived. It sits in Ladner beside P_subset_NP (excluded; Ladner imports CookLevin) until that moves (see note). Decoder.nat/.bool (+ofBits, bits_ofBits) in Encodings/Decoder; cnfDecoder := .list (.list (.pair .nat .bool)) stays in Ladner/PolyTime (encCNF's home is outside paths). New Universal/PolyTime: runBound_mono, universal_bounds_unary, computableTidilyInPolyTime_universal (proof-only import of Classes.Hierarchy for Diagonal.universal_bounds_le). PSPACEHard/Complete/.trans -> Classes/Space; NPSPACE via DecidesInSpace (defeq). Shared step ComputableInTimeAndSpace.exists_decidesInSpace used by L_subset_NL, PSPACE_subset_NPSPACE. exists_eval_tableau_iff -> CookLevin/Correctness, tableau_satisfiable_iff derived. Nat.two_pow_log2_succ_le -> Foundations Nat/Log; polynomiallyBounded_mul_log2_add_one gives polyBounded_log; parityOn_symmDiff public in Parity; Reachability docstring fixed. Repo-internal renames, no aliases: Ladner.{natDecoder,boolDecoder,ofBits,bits_ofBits,dropFalsesT*,runBound_mono,universal_bounds_unary,computableTidilyInPolyTime_universal} -> Turing.MultiTapeTM(.Universal/.Decoder); rdropWhile_append, bits_eq_nil_iff now private. Tests: ComplexityTests/Consolidation. Six gates pass at d0299eac. Contributors: worker-sable-stretch. Not in goal, left: capPow/find? homes, BreadthFirst. Bibliography: none.",
+      "snapshot":
+      {"head": {"value": "d0299eace631cd0e7fc0f4bc69103989ef7cf3a2"},
+       "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Reduction.lean",
     "Complexity/Computability/Complexity/Classes/Ladner.lean",
