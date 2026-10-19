@@ -1652,7 +1652,7 @@
     "agent": {"value": "worker-sable-oracle"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792385434,
+   "expires": 1792386512,
    "actor":
    {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
     "agent": {"value": "worker-sable-stretch"}}},
