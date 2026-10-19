@@ -1218,7 +1218,7 @@
       {"head": {"value": "8941c6c66290bb389c6f324d1076c9a2ecd1f277"},
        "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor5"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api5"}}}}}}},
    "paths":
    ["Complexity/Logics",
