@@ -774,15 +774,18 @@
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "dc5840c27060c1c3a90814859c589ba3"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390893,
+          "snapshot":
+          {"head": {"value": "8e63eaca4cc31a99e9df7d9f0a60120fc9aa8ed3"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "dfe68133490462904b3696ebac720ef0"},
            "agent": {"value": "reviewer-sable-cor7"}},
-          "expires": 1792405263},
-         "blocked": false}},
+          "note":
+          "Independent correctness review (reviewer-sable-cor7, no contribution) of exact head 8e63eac, base 0d8ef4b verified ancestor. Built 6 touched modules + 4 RationalHitting tests with nice --wfail --iofail: success, 0 warnings. Own probes (all pass; negative controls rejected): encIntBin injective, length natAbs.size+1 brute-forced on -20..20, [false] unique zero code and [true] not a code; borrow-fold sub = truncated Nat sub for all a,b<24 plus edges; signMagnitude drops sign of zero; intBin_add case program = + on -7..7^2; elaborated statements of intBin_add/sub/mul/neg/toNat/sign/pow and binary_sub/pow are the intended functions; size lemmas attained at witnesses (add_max, mul, pow k=0, sum, Int on negatives). #print axioms of 24 representative decls: propext, Classical.choice, Quot.sound only. No sorry/native_decide/axiom/set_option in touched files. No overclaim: only Parameters claims poly time (unary params); nothing about rational formula bit complexity. Blocking: none. Nits/follow-ups: Runtime/Determinant.lean:182 intBits duplicates (encIntBin z).length with no bridge lemma (M1 needs it); Determinant.lean:24-26 says every partial sum and product is bounded but individual product terms are not stated separately; size_pow_le +1 slack for k>=1; liftBits loose (53 vs 4654 bits at n=s=0, documented, polynomial). Not checked: six gates, pre-existing PolyTime/fold framework, API/placement, citations. Evidence .lake/codex-validation/rational-hitting-runtime-correctness/review.json sha256 73f593a1236f8e23531970d661ae0cd49c44f5c733d452294739f0612905c0b4."}}},
        "api":
        {"active":
         {"report": "",
