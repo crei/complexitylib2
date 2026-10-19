@@ -2048,7 +2048,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "cc32b63cfdda7525d709a8b35ae0fc75"},
+       "holder":
+       {"session": {"value": "9b318203e8a9985d589db0583a2bb7af"},
+        "agent": {"value": "worker-sable-npbuilder"}},
+       "expires": 1792401840},
       "branch": "work/np-witness-builder/worker-sable-npbuilder",
       "blocked": false,
       "assignee": {"value": "worker-sable-npbuilder"}}}},
