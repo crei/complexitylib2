@@ -1718,7 +1718,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/np-witness-builder/worker-sable-npbuilder",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-npbuilder"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/NP/Witness.lean",
     "Complexity/Computability/Complexity/Problems/SAT.lean",
