@@ -18,6 +18,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792356843,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792356674,
@@ -75,6 +76,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792357641,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792357482,
@@ -128,6 +130,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792355755,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792355217,
@@ -177,6 +180,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792353277,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792353139,
@@ -222,6 +226,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358231,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358092,
@@ -278,6 +283,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792374155,
@@ -330,6 +336,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364044,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792363911,
@@ -390,6 +397,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792368712,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792368575,
@@ -441,6 +449,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792361676,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792361403,
@@ -498,6 +507,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792371880,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792371576,
@@ -552,6 +562,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792358627,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792358495,
@@ -634,6 +645,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792359269,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792359175,
@@ -664,55 +676,17 @@
    "authors": [{"value": "reviewer-correctness"}, {"value": "coordinator"}]},
   {"resume": null,
    "report":
-   "API review of exact ac19679 APPROVED (reviewer-sable-api5), correctness review in progress. Before landing, the coordinator will make a mechanical attribution fix through the integration workflow (you keep authorship): (1) Rational/QuantumSeries.lean HahnGeometric powers block is a near-verbatim copy of Mathlib HahnSeries.SummableFamily.powers (Mathlib/RingTheory/HahnSeries/Summable.lean, generalized CommRing to Ring) inherited from v1: add a provenance note crediting the Mathlib source and its authors; (2) Rational/Determinant.lean re-proves the module-private Mathlib BirdDet lemmas (Paul Cadman): add a provenance note; (3) add the OpenAI2026RationalHitting and Schlesinger2026RationalHitting bibliography entries you supplied. Remaining API nits (redundant NoncommBlocks.matMul alias, Bool functions with a ? suffix, partially qualified names in Main sections, opaque source names, general lemmas that are Mathlib candidates) are recorded for a later cleanup. Next for you: rational-hitting-runtime starts once this lands; read-only design for it is welcome now.",
+   "Both independent reviews of exact ac19679 APPROVED. Reopened for a mechanical attribution fix by coordinator-sable (worker-karn keeps authorship): provenance notes crediting Mathlib (Aaron Anderson, HahnSeries.SummableFamily.powers; Paul Cadman, BirdDet) for adapted code in Rational/QuantumSeries.lean and Rational/Determinant.lean, plus the two bibliography entries the author supplied; fresh delta reviews, then land.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report":
-       "Gates on 3908aee (current main merged): build --wfail, mk_all --check, test --wfail, lint-style, checkInitImports PASS; lake lint has 1 simpNF error (DeterminantAlgorithm.vector_get_ofFn duplicates Vector.get_ofFn), being fixed. Self-review: no blockers; fixing should-fix items (Mathlib.Tactic public import, duplicate Internal namespace, 3 non-terminal simps, scoped HahnSeries CharZero instance, docstring accuracy, executable test of the generator chain). Boundary results now: hittingList_hits holds for all s (new hits_zero : Hits 0 H); hittingList_encoding_length_le holds for all n (polynomial_H re-proved with 49153 instead of 24577, so outputConstant grew; same (n+s+1)^104 form). Tests: 9 #print axioms guards, all [propext, Classical.choice, Quot.sound].",
-       "lease":
-       {"token": {"value": "5299adc38ed3760aac219dd7cd864d81"},
-        "holder":
-        {"session": {"value": "9d337a1ee8541975a1472b2a6af80742"},
-         "agent": {"value": "worker-karn"}},
-        "expires": 1792392976},
-       "branch": "work/rational-hitting/worker-karn",
-       "blocked": false,
-       "assignee": {"value": "worker-karn"}},
-      "summary":
-      "Milestone 1 submitted: work/rational-hitting/worker-karn @ ac19679 = 65f2ccd + a clean merge of current origin/main (Space/Savitch files only, disjoint from this scope). All six gates passed on 65f2ccd (scripts/check.sh, 33 min); a rerun on ac19679 is in progress and I will note its result. git diff --check is clean; 26 files changed, +7859/-1.\nRESULT (namespace Cslib.Circuits.Rational; entry Circuit/Rational.lean plus 22 modules under Circuit/Rational/):\n- Native formula: Rational.Formula n := Circuits.Formula ratSignature n (abbrev); RatOp const q/add/mul/inv; reducible ratSignature; constructor abbrevs var/const/add/mul/inv; five-case Formula.inductionOn; nodeCount = size + leafSize (the source node measure). No second inductive, no bridge.\n- Formula.Eval: relational over any Ring with c : Q ->+* R, defined by structural recursion; inv requires an actual two-sided inverse.\n- Formula.evalMatrix?: native Formula.eval under an Option-valued matrixInterpretation (det != 0 -> det^-1 * adjugate); exact evalMatrix?_eq_some_iff.\nENDPOINTS:\n- hittingList (computable).\n- hittingList_hits for ALL s: positive-parameter Generator.list_hits plus the new hits_zero : Hits 0 H.\n- hittingList_dimension_le: dimension <= 256(n+s+1)^10.\n- hittingList_encoding_length_le for ALL n: <= outputConstant (n+s+1)^104. polynomial_H was re-proved without 1 <= n, so its coefficient rises from 24577 to 49153 and outputConstant grows; this is documented and pinned in the tests.\n- admissible_inv_iff_nonzero and Admissible.exists_dimension_le.\n- Formula.admissible?/nonzero? with _eq_true_iff (admissibility uses Hits (s+2), nonzeroness uses Hits s), and computable Decidable instances.\nPositive dimension is retained everywhere. No polynomial bit-complexity claim for evaluation; the polynomial-time generator is future work and the TM0/stack chain is excluded.\nCOLLAPSES: Matrix.det_le; Nat.lt_two_pow_self / Nat.one_le_pow; totalDegree_list_prod + List.sum_le_length_nsmul; Submodule.equivMapOfInjective; HahnSeries.ofPowerSeries range for integrality; LinearEquiv.funCongrLeft Fin.revPerm; AddChar.sum_mulShift; Batteries Vector.get_ofFn. One scoped HahnSeries CharZero instance replaces three copies. Exponents unified. The duplicate Internal API was merged (Detection folded into MatrixEval). About 200 lines of dead v1 code removed. Mathlib.Tactic is no longer re-exported.\nTESTS (ComplexityTests/RationalHitting.lean):\n- concrete formulas and their nodeCount; generic DecidableEq;\n- a genuine two-sided inverse in Q and on 2x2 matrices;\n- Nonzero/Admissible witnesses, including the commutator (nonzero on 2x2, vanishing on 1x1); non-admissible inverses;\n- s = 0 and n = 0 boundaries; dimension values by kernel decide;\n- executable runs of the staged determinant, Parameters at n = s = 0, atPoint, the generator on small grids, and admissibilityTest/nonzeroTest on hand-built lists;\n- 9 #print axioms guards, all [propext, Classical.choice, Quot.sound].\nSOURCE CREDIT: v1 Authors lines kept (OpenAI on core ports; Samuel Schlesinger on MatrixEval/Defs and MatrixEval; both on the entry file). Every module cites [OpenAI2026RationalHitting] @adc7f1241b42e322a6451854ab7e4b4c146bf78a and [Schlesinger2026RationalHitting] @add0aca8ee0d71e68969f2cb45cf91554a50f787.\nCONTRIBUTORS (AI-assisted; none of this is human approval):\n- worker-karn, a Claude Code agent run for GitHub user karnseth;\n- its implementation subagents, each in its own worktree with its own cache: formula-refactor, math-a, math-b, boundary+tests, collapse, review-fix;\n- read-only mapping and self-review subagents;\n- worker-inference's probe, adapted for RatOp/ratSignature, the Index/Fintype/DecidableEq recursion, inductionOn and Formula.decidableEq. worker-inference is therefore not independent for those parts.\nThe test file's header says Samuel Schlesinger per repo convention; please confirm or name the intended author.\nCENTRAL EDITS NEEDED:\n(1) references.bib, mirrored in docbuild/docs/references.bib:\n@misc{OpenAI2026RationalHitting, author = {{OpenAI}}, title = {{Rational} matrix hitting lists for noncommutative rational formulas}, year = {2026}, note = {Lean formalization, revision adc7f1241b42e322a6451854ab7e4b4c146bf78a}, url = {https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/Computability/RationalHitting}}\n@misc{Schlesinger2026RationalHitting, author = {Schlesinger, Samuel}, title = {{Rational} hitting lists in {Complexitylib}}, year = {2026}, note = {Source of ported Lean proofs, revision add0aca8ee0d71e68969f2cb45cf91554a50f787}, url = {https://github.com/SamuelSchlesinger/complexitylib/tree/add0aca8ee0d71e68969f2cb45cf91554a50f787/Complexitylib/RationalHitting}}\n(2) Axioms.lean guards, all [propext, Classical.choice, Quot.sound], in Cslib.Circuits.Rational: hits_zero, hittingList_hits, hittingList_dimension_le, hittingList_encoding_length_le, admissible_inv_iff_nonzero, Admissible.exists_dimension_le, Formula.admissible?_eq_true_iff, Formula.nonzero?_eq_true_iff, Formula.evalMatrix?_eq_some_iff.\n(3) ROADMAP: \"Rational-matrix hitting lists: the generator, exact hitting semantics on native rational formulas, polynomial dimension and complete binary output-size bounds, and executable nonzeroness/admissibility tests are ported (Circuit/Rational). Remaining: a native polynomial-time generator (rational-hitting-runtime); renaming source-inherited lemma names (M_eq, U_cast, polynomial_H, ...).\"\nLIMITATIONS:\n- Opaque source names are kept.\n- admissible?/nonzero? return Bool.\n- nonzeroTest on generated 8x8 lists is too slow to #eval (Leibniz det), so it is tested on 2x2 lists.\n- Lean MCP was unavailable; all checks used lake.",
-      "snapshot":
-      {"head": {"value": "ac19679d7f3941179c7340f8f220a093713b1dca"},
-       "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792376914,
-          "snapshot":
-          {"head": {"value": "ac19679d7f3941179c7340f8f220a093713b1dca"},
-           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-          "reviewer":
-          {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
-           "agent": {"value": "reviewer-sable-cor5"}},
-          "note":
-          "Correctness review of rational-hitting d42eefc..ac19679 (Circuit/Rational*, Formula.lean decidableEq, tests) against v1 complexitylib@add0aca8. Independent: no contribution. Evidence: lake build of 23 changed modules + ComplexityTests.RationalHitting --wfail --iofail OK; mk_all OK; no sorry/native_decide/heartbeats. Probe (clean): Eval relational over any ring, inv needs two-sided inverse (no value at right shift in End(N->Q) despite a left inverse); evalMatrix?_eq_some_iff exercised both ways (3x3 inverse, singular, inv of 0); small formulas x0x1 (nonzero), x0x1-x0x1 (admissible, zero, inverse inadmissible), x0*(0)^-1; d=0 would make inv 0 evaluate, so 0<d is essential and present. Statements match v1 with nodeCount=size+leafSize; hits now all s (hits_zero), encoding bound all n. polynomial_H arithmetic verified (s+2<=2(n+s+1), 3*2*2*16^3+1=49153); outputConstant recomputed = test pin; dims (0,0)=8,(1,0)=512,(0,1)=512,(2,2)=2097152 by kernel decide. Axioms of 9 headlines = propext/choice/Quot.sound; Formula.decidableEq constructive. Blocking: none. Nits: n>=1 encoding constant ~16x v1 (documented); Decidable Admissible/Nonzero instances astronomically slow; malformed-input boundary N/A until runtime epic. Central: bib keys OpenAI2026RationalHitting/Schlesinger2026RationalHitting missing; Axioms.lean guards; ROADMAP. Limits: deep algebra via kernel only; no check.sh. Evidence .lake/codex-validation/rational-hitting-correctness/review.json sha256 2b744c961a5097bae6b96377c2932384eb18d313a8fe08fb71c3bb41ffa91505"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792376873,
-          "snapshot":
-          {"head": {"value": "ac19679d7f3941179c7340f8f220a093713b1dca"},
-           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
-          "reviewer":
-          {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
-           "agent": {"value": "reviewer-sable-api5"}},
-          "note":
-          "API review d42eefc..ac19679 (reviewer-sable-api5; independent of worker-karn, subagents, worker-inference). Read Formula.lean diff, entry, Defs/Eval/MatrixEval/Affine/Determinant/Executable/CyclotomicGrid/BlockDivision/QuantumSeries/QuantumMatrices/SmallExpansion, decl lists of all modules, tests; Authors match v1. Built all changed modules + test + 6 Formula dependents --wfail --iofail OK; runLinter (Rational, Formula), lint-style, mk_all OK. Probes: Rational.Formula = Circuits.Formula ratSignature by rfl, no second inductive/bridge; Formula.decidableEq constructive (propext, Quot.sound), decide works for other signatures; Formula.lean change minimal; scoped HahnSeries CharZero does not leak; global instances keyed on local defs; Schur lemmas justified (Mathlib CommRing-only); Bird bridges re-prove Mathlib module-private lemmas. No blocking findings. Should-fix: QuantumSeries.lean:133-222 near-verbatim copy of Mathlib SummableFamily.powers generalized to Ring, no Mathlib credit (inherited from v1). Nits: Determinant.lean:91-129 provenance; Eval.lean:151 matMul alias; Mathlib-candidate lemmas in Rational.*; opaque source names; Bool admissible?/nonzero? use ?; unqualified Main names. Central: bib keys missing, Axioms guards, ROADMAP, test Authors. Limits: not every proof read; no lake test/full lint/docs. Evidence .lake/codex-validation/rational-hitting-api/review.json sha256 1aabb79163cae76f6077d64cbd1fe97d23c8f8a5168240942a74ef646506b6eb"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": null,
+      "report":
+      "Both independent reviews of exact ac19679 APPROVED. Reopened for a mechanical attribution fix by coordinator-sable (worker-karn keeps authorship): provenance notes crediting Mathlib (Aaron Anderson, HahnSeries.SummableFamily.powers; Paul Cadman, BirdDet) for adapted code in Rational/QuantumSeries.lean and Rational/Determinant.lean, plus the two bibliography entries the author supplied; fresh delta reviews, then land.",
+      "lease": null,
+      "branch": "work/rational-hitting/worker-karn",
+      "blocked": false,
+      "assignee": {"value": "worker-karn"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
     "Complexity/Computability/Circuit/Rational",
@@ -754,6 +728,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792378499,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792376461,
@@ -810,6 +785,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792360547,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792360283,
@@ -858,6 +834,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792373030,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792372858,
@@ -913,6 +890,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792371825,
@@ -979,6 +957,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792367280,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792367120,
@@ -1032,6 +1011,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792374035,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792373854,
@@ -1086,6 +1066,7 @@
       {"session": {"value": "d23b342b31a204ddccd8174301ce7812"},
        "agent": {"value": "coordinator"}},
       "landedAt": 1792364773,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792364624,
@@ -1131,6 +1112,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792373796,
@@ -1180,6 +1162,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792370838,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792369636,
@@ -1228,6 +1211,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792372831,
@@ -1281,6 +1265,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376022,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792375751,
@@ -1326,6 +1311,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792374437,
@@ -1656,6 +1642,7 @@
       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
        "agent": {"value": "coordinator-sable"}},
       "landedAt": 1792376966,
+      "landed": null,
       "correctness":
       {"verdict": "approve",
        "time": 1792374719,
