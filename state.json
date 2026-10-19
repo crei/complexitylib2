@@ -2140,15 +2140,18 @@
           "expires": 1792401867},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "0a5a0f2479ba9907058b9d536334d079"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792387496,
+          "snapshot":
+          {"head": {"value": "7713dab891f6189e31a4d968405650308f91c5eb"},
+           "base": {"value": "d130901eff0d5caa6de3a7f8a9c44ff9e3d2e1a5"}},
+          "reviewer":
           {"session": {"value": "6028cd701670813461915b10a3d32c60"},
            "agent": {"value": "reviewer-sable-api3"}},
-          "expires": 1792401790},
-         "blocked": false}}}}}},
+          "note":
+          "Delta API review (reviewer-sable-api3, independent, read-only) of 7713dab vs d130901; prior verdict changes at 48291a1. Delta = 20505e6 + merge of main; epic diff touches only its 6 modules, tests, Complexity.lean, ComplexityTests.lean. Build of 6 modules + ComplexityTests.AffineDisperser --wfail ok; headline and traceSym_eq_esymm axioms std. BLOCKING RESOLVED: B1 Cslib.two_eq_zero removed (local h2), CubeSum helpers private; probe: open Cslib CharTwo; two_eq_zero is unambiguous. B2 charP_two replaced by charP_of_injective_algebraMap' everywhere. B3 exists_span_range_eq replaced by Submodule.exists_fun_fin_finrank_span_eq + span_eq. Nits fixed: namespace Cslib.AffineDisperser (no Cslib.FiniteField left), monic_subspacePoly, hW dropped, traceSym_eq_esymm bridge, 'analogue of L3.13', Thm 6.1 threshold noted, covering tests now real ({0,2} cannot cover {1,2}). No new Mathlib duplication: new public decls are only the esymm bridge and a test lemma; meta probe finds no name collisions for 61 public decls vs root/Polynomial/Matrix/Finset/Module/FiniteField/CharTwo etc. Bib keys present at head. Non-blocking: general-algebra placement (accepted follow-up); IsLinearized/mooreMatrix fix q=2. Skipped: six gates, lint. Evidence .lake/codex-validation/explicit-affine-disperser-api/review-delta.json sha256 e8efaef5fc98180cd91522439e19837d7e8503fc97bf66f97dc28f25cd86b780"}}}}}}},
    "paths":
    ["Complexity/Foundations/Combinatorics/AffineDisperser",
     "Complexity/Foundations/Combinatorics/AffineDisperser.lean",
