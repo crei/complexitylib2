@@ -1862,17 +1862,12 @@
    "phase":
    {"working":
     {"work":
-     {"resume": "work/b2-lower-bound/worker-sable-b2",
+     {"resume": "work/b2-lower-bound/coordinator-sable",
       "report": "",
-      "lease":
-      {"token": {"value": "8ab1a32a4fe5db2e39f16d385948d6c6"},
-       "holder":
-       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-        "agent": {"value": "coordinator-sable"}},
-       "expires": 1792394544},
-      "branch": "work/b2-lower-bound/coordinator-sable",
+      "lease": null,
+      "branch": "work/b2-lower-bound/worker-sable-b2",
       "blocked": false,
-      "assignee": {"value": "coordinator-sable"}}}},
+      "assignee": {"value": "worker-sable-b2"}}}},
    "paths":
    ["Complexity/Foundations/Data/BitString/Affine.lean",
     "Complexity/Foundations/Data/BitString/AffineDisperser.lean",
