@@ -765,7 +765,16 @@
       {"head": {"value": "f30b20385743d53d0f046e35e8ad47d6ea500bae"},
        "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
       "reviews":
-      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor2"}}},
+      {"correctness":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "267eba830547d4778bc045b3459e32c3"},
+          "holder":
+          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
+           "agent": {"value": "reviewer-sable-cor2"}},
+          "expires": 1792390514},
+         "blocked": false}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api2"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/BPP.lean",
