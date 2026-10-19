@@ -3010,7 +3010,9 @@
     "Complexity/Computability/Complexity/Problems/USAT.lean",
     "Complexity/Probability/Isolation.lean",
     "ComplexityTests/Isolation.lean",
-    "ComplexityTests/Isolation"],
+    "ComplexityTests/Isolation",
+    "Complexity/Foundations/Data/BitString/List/Binary.lean",
+    "Complexity/Computability/Complexity/Classes/IP/GraphNonIsomorphism.lean"],
    "id": {"value": "isolation-counting"},
    "goal":
    "Coverage epic 9: isolation and counting at class level. M1: PromiseUSAT; Valiant-Vazirani as a randomized polynomial-time reduction from SAT to unique SAT succeeding with probability Omega(1/n), from Probability/PairwiseIndependentHash's three_sixteenths_le_dens_filter_card_filter_eq_one, hence NP within RP^PromiseUSAT on the native oracle classes; the Mulmuley-Vazirani-Vazirani isolation lemma. M2: ParityP and the BP and parity operators, Toda's theorem PH within BP.ParityP within P^SharpP. M3: Stockmeyer approximate counting of SharpP in BPP^NP as the class form of the existing ApproximateCounting estimates. Reuse Classes/SharpP, Classes/PH, Classes/Oracle, PPT and Probability; no second oracle model. Cite ValiantVazirani1986, MulmuleyVaziraniVazirani1987, Toda1991, Stockmeyer1983 (propose entries). Tests, named axiom guards, six gates, one frozen submission per milestone.",
