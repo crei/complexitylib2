@@ -1701,19 +1701,26 @@
    "report":
    "API review (reviewer-sable-api2): Ladner.ofBits_bits duplicates main Nat.foldr_bit_bits (Kolmogorov/SelfDelimiting.lean); use it and delete the copy. Cheap nits: notMem naming, plain import of CookLevin.Completeness. Placement follow-ups recorded separately.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report": "",
-      "lease":
-      {"token": {"value": "9a642a9a3a489c59c2c96bda3b3cbf4f"},
-       "holder":
-       {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
-        "agent": {"value": "worker-sable-ladner"}},
-       "expires": 1792400636},
-      "branch": "work/ladner/worker-sable-ladner",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-ladner"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report": "",
+       "lease":
+       {"token": {"value": "9a642a9a3a489c59c2c96bda3b3cbf4f"},
+        "holder":
+        {"session": {"value": "649fe37fb4d44da4f9a80d8410e69d58"},
+         "agent": {"value": "worker-sable-ladner"}},
+        "expires": 1792400636},
+       "branch": "work/ladner/worker-sable-ladner",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-ladner"}},
+      "summary":
+      "Ladner API-review delta, head 647187e on base 3034b37 (main). Prior submission 784cb3a; delta 8aaf396 plus a clean merge of main (references.bib, scripts/check_docs.py only). Changes: deleted the copy Ladner.ofBits_bits; natDecoder.decode_enc now uses main's Nat.foldr_bit_bits via a plain import of Kolmogorov.SelfDelimiting (a tactic proof `by exact`, since a term in the exposed def would need a public import; commented). Renamed not_mem to notMem: SAT_notMem_P, tendsto_H_of_notMem_P, falseCNF_notMem_SAT, SATH_notMem_P. pad_injective is now pad_inj : pad u k = pad u' k' ↔ u = u' ∧ k = k'. CookLevin.Completeness is a plain import (proof-only). Headline statements unchanged: exists_NP_not_P_not_NPComplete, SATH_mem_NP, SAT_mem_P_of_SATH_mem_P, SAT_mem_P_of_NPHard_SATH, P_eq_NP_of_SATH_mem_P, P_eq_NP_of_NPComplete_SATH. Checks: scripts/check.sh, all six gates pass; axiom guards unchanged (propext, Classical.choice, Quot.sound). Contributors: worker-sable-ladner (earlier holder and current). AI: Claude. Placement follow-ups recorded centrally; nothing moved outside epic paths. Bibliography: none new.",
+      "snapshot":
+      {"head": {"value": "647187e994e57c2aa2ebf779e8ee5c04e5a6a9cd"},
+       "base": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Ladner.lean",
     "Complexity/Computability/Complexity/Classes/Ladner",
