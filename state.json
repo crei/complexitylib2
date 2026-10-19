@@ -1483,15 +1483,18 @@
           "note":
           "Independent correctness review (reviewer-sable-cor2; no contribution), milestone 1 at 94febcc. Build of the 7 epic modules + ComplexityTests.LogSpace, --wfail --iofail: exit 0. L/NL are textbook: upstream RunPath.space counts distinct work-tape cells only, input head read-only, output append-only, bound c*(log2 n+1) on every computation prefix; L needs a halting deterministic finite binary machine. Halting convention: stated honestly in NL, DecidesInSpace and module docs, converse marked unformalized; probe shows textbook NL (all branches halt) is in NL, hence in P and NPSPACE, and L is in textbook NL, so no headline depends on it. NL_subset_P is real BFS over viewSucc with nodup/closure after 2^(2*coreLengthBound+1) rounds, coreCode O(log n+s), polytime via iterate; uses only the space bound. comp: only hg, hf (comp_space has no extra hypotheses). haltsAt_le_card, mem_L_iff, LogSpaceReducible refl/trans/mem_L/compl/polyTimeReducible hold as stated (re-ascribed in probe; haltsAt instantiated non-vacuously). No sorry/native_decide/axiom/set_option; #print axioms of 17 decls + probes: propext, Classical.choice, Quot.sound. Nits: NPSPACE is likewise loose (pre-existing); spaceUsed_workTapes_le duplication disclosed. Not run: Axioms test, six gates. Evidence: .lake/codex-validation/logspace-nl-correctness/review.json sha256 a2fca96a5098a8379bf1e5466120a99732b80e72a3d21ed0cfa03cbc436be9f4"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "6ad3d33bd30ebaafcc33ddab4b5ef3ea"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792386486,
+          "snapshot":
+          {"head": {"value": "94febccdd66679be8a2a30e4d0637099fbeb0d57"},
+           "base": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"}},
+          "reviewer":
           {"session": {"value": "33380288772710be7744d177c8f66871"},
            "agent": {"value": "reviewer-sable-api2"}},
-          "expires": 1792400820},
-         "blocked": false}}}}}},
+          "note":
+          "API review M1, exact 94febcc on 2bf2b21 (independent; author worker-sable-logspace). Built 7 epic modules + ComplexityTests.LogSpace --wfail --iofail: OK. No blocking findings; no declaration duplicates main, pinned cslib or Mathlib. #767: mem_L_iff (Classes/LogSpace.lean:107) matches its DSPACE(log2) shape; haltsAt_le_card/of_card (MultiTape LogSpace.lean:99,128) parallel open #767 truncate, documented at :41-42 (follow-up: adopt upstream when merged). Fix at integration: Reachability.lean:44 cites nonexistent Turing.MultiTapeNTM.computableTidilyInPolyTime_expand (actual Turing.MultiTapeTM.ComputableTidilyInPolyTime.expand :154). Follow-ups: L_subset_NL (Classes/LogSpace.lean:120-135) copies PSPACE_subset_NPSPACE body (Space.lean:101-116), factor a DecidesInSpace lemma; Configurations.lean:62-72,112-129 copy length_encFiniteCfg_le steps (F4); BreadthFirst mem_search_iff re-proves InductiveCounting reachableWithin closure with a list bound, not encard; restate NPSPACE via DecidesInSpace. Nits: proof-only public imports LogSpace.lean:11, Configurations.lean:11-12; ComputableTidilyInPolyTime.insertNew/.expand naming; Nat.two_pow_log2_succ_le, polyBounded_log placement. Template, naming, simp hygiene, tests, 14 guards OK. Evidence .lake/codex-validation/logspace-nl-api/review.json sha256 5d5ef6b0491d7fbfee484e8e358b0a23583055adb9b6675454e9118a9d5c2bad"}}}}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/LogSpace.lean",
     "Complexity/Computability/Complexity/Classes/LogSpace",
