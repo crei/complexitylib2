@@ -1279,15 +1279,18 @@
        "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "bf4aeea3aa9268685824081dbe24e6b4"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792375751,
+          "snapshot":
+          {"head": {"value": "eba426bc0b9c6cedd743aa72051099827767ae82"},
+           "base": {"value": "d42eefce5dc55c62f5c59fb7ff13b867a3e2cdcd"}},
+          "reviewer":
           {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
            "agent": {"value": "reviewer-sable-cor1"}},
-          "expires": 1792389591},
-         "blocked": false}},
+          "note":
+          "Delta correctness review (reviewer-sable-cor1, no contribution) of base d42eefc / head eba426b; board commands via main's binary. Builds on my approve of 4bf0094 (r2 review.json SHA256 eb151a569538483c6a6fd40b69bd77cbae589a242b2ecad9cd727ec7bc98e250). Merge 30855b5 touches no epic path and equals main d42eefc outside them; merge-base --all(main, head) = base. eba426b: land now checks, per candidate, that its reviewed non-root paths are identical between its reviewed head and the landed commit (skipped when head == landed); with the existing path guard, the protocol enforces landed = main + each reviewed head on its reviewed paths + roots. The guard ranges over that candidate's own reviewed paths only, so a disjoint batch cannot trip it. A1 restores full-list equality while the reservation records main. lake -d scripts/coordination test --wfail 55/55; tooling build ok. Scratch: all 6 reviewer fixtures pass on eba426b (61/61): my tampered-landing probe is now refused; a batch onto a moved main with the second candidate's file tampered is refused, then the untampered batch lands on the same reservation; drift, batch drift, hostile-config rename and real old-binary interop still pass. No blocking findings. Nits: CONTRIBUTING could say landed files equal their reviewed heads; root contents rely on mk_all --check (by design). Not run: check.sh. Evidence .lake/codex-validation/merge-queue-landing-correctness-r3/review.json SHA256 1b52650c20c61fac72d194875eae570a7940a73919fb88d8227ce6275af9ea6c"}}},
        "api":
        {"finished":
         {"review":
