@@ -2084,6 +2084,19 @@
    "goal":
    "Continuation of explicit-affine-disperser (M2 and M3). M2: the explicit composite-degree field (n = product of distinct primes in (L, 4L], L about 0.3 log2 N; brute-force irreducibles of each prime degree; tensor basis) so the proper-subfield bound s <= n/L holds; the bit-string function f_N; nonconstancy of f_N on every affine subspace of dimension >= d(N), d(N) = O(N / log N), from exists_traceSym_ne; the bridge to Cslib.BitString.IsAffineDisperser (from b2-lower-bound; no second disperser notion). M3: native polynomial-time certificate charging every field operation. Then the corollary with b2-lower-bound: an explicit function in P needing B2 circuits of size 3.5N - O(N/log N), stated honestly as weaker than the source (Li, O(log n)). Tests and axiom guards; six gates; frozen submission per milestone.",
    "dependencies": [{"value": "explicit-affine-disperser"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Complexity/Classes/Oracle.lean",
+    "Complexity/Computability/Complexity/Classes/Oracle",
+    "ComplexityTests/Relativization.lean"],
+   "id": {"value": "relativization-2"},
+   "goal":
+   "Milestone 2 of relativization: an oracle A with P^A = NP^A, using TQBF (PSPACE-complete, from tqbf-pspace-complete): NP^TQBF within NPSPACE = PSPACE within P^TQBF, on the native oracle classes of relativization. Also oracle monotonicity A <=p B implies P^A within P^B once open-oracle-substitution provides open substitution. Cite BakerGillSolovay1975. Tests, axiom guards, six gates, frozen submission.",
+   "dependencies":
+   [{"value": "relativization"}, {"value": "tqbf-pspace-complete"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
