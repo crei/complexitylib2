@@ -1,21 +1,5 @@
 {"version": 1,
- "integration":
- {"snapshot":
-  {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
-   "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-  "main": {"value": "2bf2b21469123c8c9f20ca27835112da6d0f7edc"},
-  "lease":
-  {"token": {"value": "aea2ae0c5e33e6d17c1050d9f6e2929c"},
-   "holder":
-   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-    "agent": {"value": "coordinator-sable"}},
-   "expires": 1792400153},
-  "epic": {"value": "docs-check-bibkeys"},
-  "candidates":
-  [{"snapshot":
-    {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
-     "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-    "epic": {"value": "docs-check-bibkeys"}}]},
+ "integration": null,
  "epics":
  [{"resume": null,
    "report":
@@ -2126,52 +2110,42 @@
   {"resume": null,
    "report": "",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": null,
-       "report": "",
-       "lease":
-       {"token": {"value": "6fec4d7abe0694d295b7cff36b7f7138"},
-        "holder":
-        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
-         "agent": {"value": "coordinator-sable"}},
-        "expires": 1792400153},
-       "branch": "work/docs-check-bibkeys/coordinator-sable",
-       "blocked": false,
-       "assignee": {"value": "coordinator-sable"}},
+   {"merged":
+    {"completion":
+     {"validation":
+      "scripts/check.sh: six gates passed; coordination tests: passed",
       "summary":
       "Tooling: scripts/check_docs.py --config-only now rejects duplicate BibTeX keys in references.bib (case-insensitive; tolerates the whitespace-padded keys cslib uses), listing the duplicates. Verified: passes on main and on this branch; rejects the reviewed-and-rejected docs-bibliography head 881b9c0 with \"Duplicate bibliography keys: cutland1980, katzlindell2020\"; rejects an injected padded duplicate. Six gates pass. No other behaviour change.",
       "snapshot":
       {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792385337,
-          "snapshot":
-          {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
-           "agent": {"value": "reviewer-sable-cor1"}},
-          "note":
-          "Independent correctness review of 99abd78 (no authorship): check_bibliography_keys in scripts/check_docs.py, called from check_config, which runs in docs.yml. I tested 12 bibliographies: base, head, main 9b1b683, bad 881b9c0, fixed 2bf2b21 and seven worktree heads. Entry forms present: padded keys, compact @type{Key, and mixed-case types; there are no @string/@comment/@preamble, paren-delimited, indented or BOM entries. On all 12, the regex key sequence equals an independent BibTeX-rules scanner. Real bibtex with citation{*} finds 2 Repeated entry (Cutland1980 l.1802, KatzLindell2020 l.1810) in 881b9c0 and none elsewhere; .bbl counts equal the regex counts (head 167, main 165, 2bf2b21 176). CLI: head --config-only rc=0. Temp roots: 881b9c0 rc=1 (Duplicate bibliography keys: cutland1980, katzlindell2020); main, 2bf2b21 and head rc=0. Synthetic cases handled: padded vs compact, case-differing keys, upper-case type, whitespace or newline after type, key on next line, newline before comma, CRLF, duplicate @string/@preamble. Non-blocking nits (none occur in any current file): misses indented entries, @type(key, and a BOM-prefixed first entry; false positive on a duplicated @string{x=\"a,b\"} or @comment{a,b}, or a field line starting @type{key,. Evidence: .lake/codex-validation/docs-check-bibkeys-correctness/review.json sha256 4cecc365ba3ee3b4a6ac86bcf66d4e5ae673c6f335bf2b7e142c0aba8258010a"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792385284,
-          "snapshot":
-          {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
-           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
-          "reviewer":
-          {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
-           "agent": {"value": "reviewer-sable-api1"}},
-          "note":
-          "API review of 99abd78 (independent, read-only). Scope: only scripts/check_docs.py changes (+10). Style matches the script: imports in order, require/ValueError path, f-string message, read_text, at most 100 columns. CI: check_config() calls it, so both docs.yml steps (--config-only and the full check) and the README commands run it. docs.yml is workflow_dispatch-only, which predates this change. Tests: I copied the head checker into git-archive trees. main 9b1b683, head, base, and docs-bibliography 2bf2b21 pass (rc=0). docs-bibliography 881b9c0 fails (rc=1): \"Duplicate bibliography keys: cutland1980, katzlindell2020\", which is the real padded-vs-plain regression. In place on head it passes, also under LC_ALL=C. Synthetic cases, 11/11 as expected: exact duplicate, padded vs plain, case differs, padded+case+entry type, space after the type, key on the next line and two groups (sorted) are all caught; distinct keys and @string pass. The regex counts as many keys as there are entry openers on all four real bibs. Ran with python3 -I -B; no __pycache__ left. No blocking findings. Nits: line 52 reports lowercased keys, which a case-sensitive grep will not find, so printing the spellings as written would be clearer; the regex skips an indented @ and @type( entries (neither occurs); keys.count is quadratic (harmless). Evidence: .lake/codex-validation/docs-check-bibkeys-api/review.json sha256 b92ba7c898ace1acc9a527f0a93e7127e2d361ef46e1f3950d0da2a7586274f6"}}}}}}},
+      "landedBy":
+      {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+       "agent": {"value": "coordinator-sable"}},
+      "landedAt": 1792385756,
+      "landed": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"},
+      "correctness":
+      {"verdict": "approve",
+       "time": 1792385337,
+       "snapshot":
+       {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
+        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+       "reviewer":
+       {"session": {"value": "9acb09fcbabe87e73d2e66c137b57596"},
+        "agent": {"value": "reviewer-sable-cor1"}},
+       "note":
+       "Independent correctness review of 99abd78 (no authorship): check_bibliography_keys in scripts/check_docs.py, called from check_config, which runs in docs.yml. I tested 12 bibliographies: base, head, main 9b1b683, bad 881b9c0, fixed 2bf2b21 and seven worktree heads. Entry forms present: padded keys, compact @type{Key, and mixed-case types; there are no @string/@comment/@preamble, paren-delimited, indented or BOM entries. On all 12, the regex key sequence equals an independent BibTeX-rules scanner. Real bibtex with citation{*} finds 2 Repeated entry (Cutland1980 l.1802, KatzLindell2020 l.1810) in 881b9c0 and none elsewhere; .bbl counts equal the regex counts (head 167, main 165, 2bf2b21 176). CLI: head --config-only rc=0. Temp roots: 881b9c0 rc=1 (Duplicate bibliography keys: cutland1980, katzlindell2020); main, 2bf2b21 and head rc=0. Synthetic cases handled: padded vs compact, case-differing keys, upper-case type, whitespace or newline after type, key on next line, newline before comma, CRLF, duplicate @string/@preamble. Non-blocking nits (none occur in any current file): misses indented entries, @type(key, and a BOM-prefixed first entry; false positive on a duplicated @string{x=\"a,b\"} or @comment{a,b}, or a field line starting @type{key,. Evidence: .lake/codex-validation/docs-check-bibkeys-correctness/review.json sha256 4cecc365ba3ee3b4a6ac86bcf66d4e5ae673c6f335bf2b7e142c0aba8258010a"},
+      "api":
+      {"verdict": "approve",
+       "time": 1792385284,
+       "snapshot":
+       {"head": {"value": "99abd781b3840d4ab65c0ac2deecbfa460e11128"},
+        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+       "reviewer":
+       {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
+        "agent": {"value": "reviewer-sable-api1"}},
+       "note":
+       "API review of 99abd78 (independent, read-only). Scope: only scripts/check_docs.py changes (+10). Style matches the script: imports in order, require/ValueError path, f-string message, read_text, at most 100 columns. CI: check_config() calls it, so both docs.yml steps (--config-only and the full check) and the README commands run it. docs.yml is workflow_dispatch-only, which predates this change. Tests: I copied the head checker into git-archive trees. main 9b1b683, head, base, and docs-bibliography 2bf2b21 pass (rc=0). docs-bibliography 881b9c0 fails (rc=1): \"Duplicate bibliography keys: cutland1980, katzlindell2020\", which is the real padded-vs-plain regression. In place on head it passes, also under LC_ALL=C. Synthetic cases, 11/11 as expected: exact duplicate, padded vs plain, case differs, padded+case+entry type, space after the type, key on the next line and two groups (sorted) are all caught; distinct keys and @string pass. The regex counts as many keys as there are entry openers on all four real bibs. Ran with python3 -I -B; no __pycache__ left. No blocking findings. Nits: line 52 reports lowercased keys, which a case-sensitive grep will not find, so printing the spellings as written would be clearer; the regex skips an indented @ and @type( entries (neither occurs); keys.count is quadratic (harmless). Evidence: .lake/codex-validation/docs-check-bibkeys-api/review.json sha256 b92ba7c898ace1acc9a527f0a93e7127e2d361ef46e1f3950d0da2a7586274f6"}}}},
    "paths": ["scripts/check_docs.py"],
    "id": {"value": "docs-check-bibkeys"},
    "goal":
