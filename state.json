@@ -639,15 +639,18 @@
        "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "7d8d88a04affa544281487a1bf305316"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792387635,
+          "snapshot":
+          {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
+           "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
+          "reviewer":
           {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
            "agent": {"value": "reviewer-sable-cor6"}},
-          "expires": 1792402017},
-         "blocked": false}},
+          "note":
+          "Independent correctness review (reviewer-sable-cor6, no contribution). Scoped build of 15 touched modules + OracleComposition, OracleComposition.Substitution, OraclePPT, RandomOracle tests --wfail --iofail: OK (IterateWhile importers rebuilt). Open theorem: conclusion is IsOraclePPTOn of the substituted run, i.e. equality of the joint law of (result, handler state) and external state for every external oracle; run_interpret_run_interpret makes the joint handler explicit. Hypotheses honest: handler certificate over all external oracles/reply lengths; invariant over support bounds handler reply and additive state growth by poly-time resources(caller,request); no external reply bound. Satisfiable: cache client + exact counting law; my own witness (forwarding handler, unary call counter) discharges all hypotheses. Closed statements textually identical to base (script), now External:=Empty corollaries. Boundaries genuine: free reply copying breaks the clock (copy handler itself uncertified, my probe); per-call-PPT doubling handler + PPT client gives 2^n state, refuting substitution without growth allowance. 22 axiom probes std only; no sorry/native_decide/axiom/set_option. Blocking: none. Nit: test comment that copyReply has no certificate is unproved there. Limits: no full gates. Evidence .lake/codex-validation/open-oracle-substitution-correctness/review.json sha256 99457b7ec82ace321ed9d1face88d8540984ece62c927158bd3bdf894ffd2b3c"}}},
        "api":
        {"active":
         {"report": "",
