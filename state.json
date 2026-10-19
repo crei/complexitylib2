@@ -2566,15 +2566,18 @@
           "expires": 1792405203},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "dc7e45978251af0b96a0b0f1a41287f1"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792390847,
+          "snapshot":
+          {"head": {"value": "ec271bcb5ddcddd0085ae9ec76f37a569c6f15cf"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "fbf1d8fc36ee3f1bdfb4d2c0a07dc290"},
            "agent": {"value": "reviewer-sable-api1"}},
-          "expires": 1792405200},
-         "blocked": false}}}}}},
+          "note":
+          "API delta review a411ecce..ec271bcb (reviewer-sable-api1, independent; sole contributor worker-sable-query). Prior blocker resolved: Relations.lean:18 credits only C<=s*bs to Nisan; :26-28, :270-273, :310, :318-319 cite BealsBuhrmanCleveMoscaDeWolf2001 for D<=bs0*C1, D<=C*bs, D<=bs^3 (BdW Thm 11 / Cor 1 checked against survey text). Renames done (mem_lowDegree_iff_fourierCoeff_eq_zero, totalDegree_le_iff_fourierCoeff_eq_zero, degree_threshold_one_right), no old-name residue. Hypercube.lean:11 uses Mathlib.Analysis.Real.Sqrt. Huang credit accurate (Hypercube.lean:24-27, Huang.lean:17-20; Mathlib has no interlacing; Archive S=univ not importable). No new duplication (only a private test lemma). Build of 4 modules + test --wfail --iofail: exit 0, 0 warnings. REQUIRED CENTRAL FIX (non-blocking, one line): ComplexityTests/QueryComplexity/Measures.lean:108 still says \"Nisan's bounds\" for D<=bs0*C1, and :11 \"Nisan's relations\". Nits: Knuth/Archive could be credited for the dimension-count route; bib entries BealsBuhrmanCleveMoscaDeWolf2001, NisanSzegedy1994, Huang2019, GotsmanLinial1992 missing from references.bib; prior central items (comp_piecewise duplicate of private Certificate lemma, placement) remain. Not checked: full six gates. Evidence .lake/codex-validation/query-complexity-api/review.json sha256 8ed40be924d632cc942c03a6bb27ec69d4c5eb63470d29073d9391af8fde7715"}}}}}}},
    "paths":
    ["Complexity/Computability/QueryComplexity/Degree.lean",
     "Complexity/Computability/QueryComplexity/ApproximateDegree.lean",
