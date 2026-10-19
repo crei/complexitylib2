@@ -1,5 +1,25 @@
 {"version": 1,
- "integration": null,
+ "integration":
+ {"snapshot":
+  {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
+   "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
+  "main": {"value": "59b6eced334cffb786e5500118f136f3e1cbe94a"},
+  "lease":
+  {"token": {"value": "5e9ffb8e4b3215cdaaee68b557d3af60"},
+   "holder":
+   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+    "agent": {"value": "coordinator-sable"}},
+   "expires": 1792402209},
+  "epic": {"value": "open-oracle-substitution"},
+  "candidates":
+  [{"snapshot":
+    {"head": {"value": "5e88dee03277ff2391714d8e9345c4912ccd07e5"},
+     "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
+    "epic": {"value": "open-oracle-substitution"}},
+   {"snapshot":
+    {"head": {"value": "a985c34e8b51810236373caa8dc7435233308a49"},
+     "base": {"value": "ec48c1ac0932b678e4281cb89c996c8ea123845e"}},
+    "epic": {"value": "hierarchy-theorems"}}]},
  "epics":
  [{"resume": null,
    "report":
