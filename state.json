@@ -1721,7 +1721,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/hamming-geometry-2/worker-sable-hamming",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-hamming"}}}},
    "paths":
    ["Complexity/Computability/Circuit/Continuity.lean",
     "Complexity/Computability/Circuit/Approximation/Hamming.lean",
