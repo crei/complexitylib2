@@ -1390,7 +1390,7 @@
     {"work":
      {"resume": null,
       "report":
-      "CHECKPOINT 1378dee (local WIP, not pushed): milestone-1 core compiles with standard axioms only: Problems/TQBF.lean (QBF.Kind, QBF.tokens prefix tokens, tokens_append_inj, encQBF, TQBF := Closed /\\ eval (fun _ => false) = true, boundary lemmas); Classes/Space/TQBF/Evaluation.lean (explicit-stack streaming evaluator: frames token/first/rest, quantifier rewind, unbound-variable flag; exists_iterate_step_call; callSteps < 4^tokens; evaluate_eq : evaluate phi = (decide Closed && eval); Good invariant with nested suffixes, stack depth <= tokens); Classes/Space/TQBF/Membership.lean (step polytime via finite_cases, length_encState_le 16(L+1)^2, exists_computableTidilyInO_evaluate time 2^L*(L+1)^e space (L+1)^e via ComputableTidilyInO.iterate, TQBF_mem_PSPACE). Next: tests, then hardness (midpoint formula + Cook-Levin base).",
+      "Resumed after restart. Base fa9ab42 == origin/main (nothing to merge). Audit: no sorry/admit/native_decide in inherited WIP. M1 (Problems/TQBF, Space/TQBF/Evaluation, Membership: TQBF_mem_PSPACE : TQBF ∈ PSPACE encQBF) builds clean. M2 state: Formula (midpoint/savitchFormula, eval + closed) and Reduction (reduce, reduce_mem_TQBF_iff) compile with lint warnings only; PolyTime of reduce is the open piece. Plan: tests + polish M1, then PolyTime via token-list certificates (flatMapWithInput/range), PSPACEHard/PSPACEComplete defined in Space/TQBF.lean (Reduction.lean is out of scope), TQBF_pspaceHard via PSPACE_subset_NPSPACE + savitch view. Time-boxed; fall back to M1-only submission if M2 runs long.",
       "lease":
       {"token": {"value": "6b3189f96b6434471433fa62550f0e97"},
        "holder":
