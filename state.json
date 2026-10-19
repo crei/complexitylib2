@@ -1464,6 +1464,20 @@
    "goal":
    "A first look at interactive proofs on the native probabilistic machinery. Define private-coin interactive proof systems: an efficient verifier given as a native probabilistic program (reuse the existing OracleComp / IsOraclePPT / BPP machinery in the probabilistic modules; model the prover as an arbitrary, unbounded, stateful message function, i.e. an oracle the verifier queries; do not edit the probabilistic directories owned by open-oracle-composition and post a note if a missing primitive is needed), polynomially many rounds, completeness and soundness thresholds, and the class IP. Prove: (1) NP inside IP and BPP inside IP; (2) graph non-isomorphism in IP via the classic two-message private-coin protocol on the existing Graph encoding (Problems/IndependentSet.lean), with completeness 1 and soundness 1/2 per round, and amplification by parallel or sequential repetition to the class thresholds; define GraphIsomorphism and GraphNonIsomorphism as problems with GI in NP. Milestone 2 (tracked): IP inside PSPACE using polynomial-space once landed; IP = PSPACE is out of scope. Tests with concrete small graphs, the honest prover, a cheating prover's acceptance bound; axiom guards in the epic test module. Cite AroraBarak09 Chapter 8 and GoldwasserMicaliRackoff / GoldreichMicaliWigderson1991 (propose bibliography entries). Six gates; frozen submission.",
    "dependencies": [],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Crypto/Computational/Stretch.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Complexity/Streaming.lean",
+    "Complexity/Computability/Machines/Turing/MultiTape/Complexity/Quantitative.lean",
+    "ComplexityTests/PRGStretch.lean",
+    "ComplexityTests/Quantitative.lean"],
+   "id": {"value": "stretch-cleanup"},
+   "goal":
+   "Follow-up cleanup of the landed quantitative-stretch work from its independent API review (reviewer-sable-api4) and correctness review (reviewer-sable-cor4); no statement weakening, six gates, two reviews. (1) Make one captured forwardIterate streaming certificate the core of Crypto/Computational/Stretch.lean and derive computableTidilyInTimeAndSpace_forwardIterate, _iterate_pair and _iterate_captured from it (or factor the shared callback setup and final reversal), reusing streamState_replicate_eq_seedAt instead of the local hstate_eq; report helper-inclusive before/after line counts. (2) Name the getLast?.toList certificates accurately (Streaming getLast_bits, Quantitative bitsGetLast) and share the common transducer of getLast_bits/getLast?_bits. (3) Expose the inline linear List.length certificate used by computableTidilyInTimeAndSpace_stretch as a reusable primitive beside reverse_bits. (4) Revert pseudorandomGenerator's proof to polyTime_stretch if the streaming dependency buys nothing. (5) Add a zero-round test through a quantitative certificate. Keep vendored statements byte-identical and markers correct; candidate additions only.",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
