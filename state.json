@@ -2295,6 +2295,23 @@
    "goal":
    "Coverage epic 7: algebraic coding theory, reusing Foundations/Data/{Hamming, HammingBound, ListDecoding}.lean, BooleanAnalysis/Hadamard.lean, Foundations/Combinatorics/LineCode and Mathlib polynomial roots and MvPolynomial.schwartz_zippel_totalDegree; check Mathlib (Mathlib.InformationTheory.Hamming, any linear-code API) before defining anything. Endpoints: linear codes and the Singleton bound; Reed-Solomon codes with distance n - k + 1; Reed-Muller codes with distance via Schwartz-Zippel; Berlekamp-Welch unique decoding (correctness; an efficient-algorithm claim only with a certificate); the Johnson bound; Sudan list decoding of RS (interpolation plus root containment); concatenation and an explicit asymptotically good binary code; local decoding of RM along lines connecting LineCode. Tests, axiom guards, six gates, frozen submissions per milestone; cite Guruswami-Rudra-Sudan or MacWilliamsSloane (propose entries).",
    "dependencies": [],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/QueryComplexity/Degree.lean",
+    "Complexity/Computability/QueryComplexity/ApproximateDegree.lean",
+    "Complexity/Computability/QueryComplexity/Relations.lean",
+    "Complexity/Computability/QueryComplexity/Huang.lean",
+    "Complexity/Computability/QueryComplexity/Randomized.lean",
+    "Complexity/Computability/QueryComplexity/Sensitivity",
+    "ComplexityTests/QueryComplexity.lean",
+    "ComplexityTests/QueryComplexity"],
+   "id": {"value": "query-complexity"},
+   "goal":
+   "Coverage epic 6: query complexity measures and their relations, on cslib QueryComplexity/Measures, DecisionTree/* and Foundations/BooleanAnalysis/{Fourier, LowDegree} (reuse; no parallel decision-tree model). Endpoints: real degree deg f linked to LowDegree and approximate degree adeg_eps; Nisan-Szegedy bs <= 2 deg^2 and bs <= 6 adeg^2; Nisan C <= s * bs and D <= C * bs <= bs^3; symmetrization and adeg(OR) = Omega(sqrt n) (Chebyshev upper bound via Mathlib Polynomial.Chebyshev if feasible); Huang sensitivity theorem s(f) >= sqrt(deg f) (a proof avoiding Cauchy interlacing if Mathlib lacks it); randomized query complexity with Yao principle. Tests on concrete functions (OR, AND, parity, majority, address), axiom guards, six gates, frozen submissions per milestone; cite BuhrmanDeWolf2002, Huang2019, NisanSzegedy1994 (propose entries).",
+   "dependencies": [],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
