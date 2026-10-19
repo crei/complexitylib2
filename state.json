@@ -1968,15 +1968,18 @@
        "base": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "3d685c51c235d57138104b6395763faf"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792392703,
+          "snapshot":
+          {"head": {"value": "8ebbd2862a60625725dd51674d7a394e60f87b59"},
+           "base": {"value": "e93fa0ea3e91a5085eba7c22a3b6d42eaef63e13"}},
+          "reviewer":
           {"session": {"value": "ad2882d1b8b3c2e81e5c21d203d08fcb"},
            "agent": {"value": "reviewer-sable-cor6"}},
-          "expires": 1792407089},
-         "blocked": false}},
+          "note":
+          "Correctness review by reviewer-sable-cor6 (independent; no contribution). Exact head 8ebbd286 over base e93fa0ea (ancestor verified). Scope: HammingFourier, Approximation/Hamming, Continuity + 3 CircuitHamming tests. Evidence: nice lake build of the 6 modules --wfail --iofail OK; own probes compile: 1-junta scheme on 2 bits (errorCost 1) gives C(XOR)>=2 in Hamming, counting (eps=2>delta=1) and weighted (mu=1/4) forms, so hypotheses are satisfiable and non-trivial; D_{-1}=d_H/2^n via mono both ways; 1/4 constant checked against decide count; strict D_{1/2}<D_1; omega_{0,1}(1)=0. #print axioms on 29 headlines + probes: propext/Classical.choice/Quot.sound only; no sorry/native_decide/set_option. Statements match goal: d_H/2^n=1/4 sum(F^-G^)^2; D_rho with rho^(2|S|), =d_H/2^n at 1, mono in |rho|, <= at |rho|<=1, Euclidean dist, triangle, separation rho!=0; d_H<=sum errorCost; eps<=delta*C(f) three forms; modulus attained (Nonempty U), mono, 0, subadditive; De Morgan bounds forall eps>0 exists p0 forall p>=p0 explicit, lower bound exact for p>=4. Blocking: none. Nits: Continuity.lean:28-37 docstring 'all large p' also heads exact p>=4 bullet; :199-201 m<=2p weaker than source (documented); M4 tests have delta>eps, consider a delta<eps instance. Not checked: six gates, API. Evidence .lake/codex-validation/hamming-geometry-2-correctness/review.json sha256 584b89d9afe4575fb62de88d55a87b380bfdfba445ead6bd1000943ca199ac9c"}}},
        "api":
        {"finished":
         {"review":
