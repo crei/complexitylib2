@@ -675,7 +675,7 @@
        "holder":
        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
         "agent": {"value": "coordinator-sable"}},
-       "expires": 1792393017},
+       "expires": 1792393252},
       "branch": "work/rational-hitting/coordinator-sable",
       "blocked": false,
       "assignee": {"value": "coordinator-sable"}}}},
@@ -1812,7 +1812,7 @@
        "holder":
        {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
         "agent": {"value": "coordinator-sable"}},
-       "expires": 1792392936},
+       "expires": 1792393252},
       "branch": "work/b2-lower-bound/coordinator-sable",
       "blocked": false,
       "assignee": {"value": "coordinator-sable"}}}},
@@ -1859,7 +1859,7 @@
   "holder":
   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
    "agent": {"value": "coordinator-sable"}},
-  "expires": 1792392930},
+  "expires": 1792393252},
  "agents":
  [{"role": "coordinator",
    "leaseSeconds": 14400,
@@ -1941,7 +1941,7 @@
     "agent": {"value": "worker-mythos"}}},
   {"role": "coordinator",
    "leaseSeconds": 14400,
-   "expires": 1792392930,
+   "expires": 1792393252,
    "actor":
    {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
     "agent": {"value": "coordinator-sable"}}},
