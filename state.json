@@ -682,7 +682,12 @@
     {"work":
      {"resume": "work/rational-hitting/worker-karn",
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "15cd185a48453397344dc43344d06415"},
+       "holder":
+       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+        "agent": {"value": "coordinator-sable"}},
+       "expires": 1792393017},
       "branch": "work/rational-hitting/coordinator-sable",
       "blocked": false,
       "assignee": {"value": "coordinator-sable"}}}},
@@ -697,7 +702,7 @@
    "goal":
    "Port the rational-matrix hitting-list development as a substantial native CSLib theorem family. First milestone: the mathematical/executable generator, its exact hitting semantics for noncommutative rational formulas, polynomial dimension and complete output-size bounds, and the derived nonzeroness/admissibility tests. Source V1 dev @add0aca8ee0d71e68969f2cb45cf91554a50f787 Complexitylib/RationalHitting* credits OpenAI source @adc7f1241b42e322a6451854ab7e4b4c146bf78a; retain original Authors lines and source credit, audit exact hypotheses and domain conventions. Full native polynomial-time generation is explicitly tracked in rational-hitting-runtime; do not claim polynomial bit complexity of evaluating formulas from mere functional correctness. Avoid mechanically porting the large TM0/stack compiler: existing functional encodings and native parametric-machine certificates must supply the eventual runtime layer. First report a dependency map, exact public endpoints, opportunities to collapse source internals using Mathlib/CSLib, and scope additions before editing outside assigned paths. Integrate with native circuit/formula signatures/evaluation where suitable, including partial inversion with actual two-sided inverse and positive dimension; do not add parallel basic matrix/formula theories without checking upstream and UPSTREAM.md. Preserve zero variables/size behavior and malformed-input boundaries separately from positive-parameter results. Include nonvacuous executable examples and axiom guards; self-review, all six checks, coherent frozen branch; architect owns independent review/integration. Own design and subagent delegation in separate worktrees and record all contributors. Central bibliography/axiom/roadmap changes remain coordinated. Do not edit active Boolean circuit, Fagin, machine-model, oracle or streaming scopes. Native-primary design is now checked and selected: specialize the existing Cslib.Circuits.Formula using a reducible rational signature, constructor/induction helpers and native size + leafSize; use Option interpretations for concrete partial inversion while preserving generic relational two-sided-inverse semantics. Formula.lean is added only for the shared constructive DecidableEq instance and tightly related generic lemmas with demonstrated need. No second rational-formula inductive/roundtrip bridge is needed absent a newly demonstrated blocker. Integration addendum: provenance notes credit Mathlib for code adapted from HahnSeries.SummableFamily.powers (Aaron Anderson) and the BirdDet determinant lemmas (Paul Cadman); references.bib gains OpenAI2026RationalHitting and Schlesinger2026RationalHitting.",
    "dependencies": [],
-   "authors": [{"value": "worker-karn"}]},
+   "authors": [{"value": "worker-karn"}, {"value": "coordinator-sable"}]},
   {"resume": null,
    "report": "",
    "phase": "unassigned",
