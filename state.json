@@ -1297,7 +1297,8 @@
    "dependencies": [{"value": "polynomial-space"}],
    "authors": []},
   {"resume": null,
-   "report": "",
+   "report":
+   "Owner recorded: assigned to a local worker as soon as polynomial-space lands (its Classes/Space and Algorithms/Reachability scopes currently overlap this plan). polynomial-space has both reviews in progress and lands in the next batch.",
    "phase": "unassigned",
    "paths":
    ["Complexity/Computability/Complexity/Classes/LogSpace.lean",
