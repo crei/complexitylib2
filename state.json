@@ -2964,7 +2964,12 @@
      {"resume": null,
       "report":
       "API review (reviewer-sable-api2) requested changes: two_pow_le_two_mul_card_exists_row and one_sub_pow_le re-prove Foundations/Data/Finset/Sampling lemmas; binaryValue_lt_two_pow duplicates the private GNI lemma and belongs in BitString/List/Binary. Correctness approved.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "8bdcf9b7f31f6234056da6f1db9d23da"},
+       "holder":
+       {"session": {"value": "5c1061da5749b3da82fd66d7bf0b4bd2"},
+        "agent": {"value": "worker-sable-oracle"}},
+       "expires": 1792407883},
       "branch": "work/isolation-counting/worker-sable-oracle",
       "blocked": false,
       "assignee": {"value": "worker-sable-oracle"}}}},
