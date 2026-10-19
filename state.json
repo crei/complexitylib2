@@ -2423,7 +2423,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/machine-classes-consolidation/worker-sable-stretch",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-stretch"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Reduction.lean",
     "Complexity/Computability/Complexity/Classes/Ladner.lean",
