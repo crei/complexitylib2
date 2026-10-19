@@ -1306,7 +1306,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "f6fe835348be59c882fc08e25d10d6b4"},
+       "holder":
+       {"session": {"value": "7781632cd73663d87f4e864c19b303a8"},
+        "agent": {"value": "worker-sable-undecid"}},
+       "expires": 1792387926},
       "branch": "work/undecidability/worker-sable-undecid",
       "blocked": false,
       "assignee": {"value": "worker-sable-undecid"}}}},
@@ -1318,7 +1323,7 @@
    "goal":
    "Undecidability on the library's own machine model. Using the native universal interpreter and the total raw-word decoder from native-exponential-separation (Encodings/Decoder.lean, Universal decodeDesc, padded self-description), prove: (1) the halting problem for native finite binary MultiTapeTM descriptions is not decidable by any native machine (no total machine outputs [halts] exactly), by diagonalization through the universal machine, with both the decision-on-encoded-pairs form and the self-application form; (2) acceptance (halted output [true]) is undecidable; (3) computable many-one (mapping) reductions between languages on bit words, defined via native ComputableInTimeAndSpace or the native computability predicate the library already has, with transitivity and transfer of undecidability; (4) Rice's theorem for nontrivial semantic properties of native machine descriptions; (5) relate to Mathlib ComputablePred.halting_problem only if a clean bridge exists, otherwise state the relationship in the docstring. No new machine model, no second universal machine; reuse Universal correctness and the decoder. Tests: concrete machines that halt and loop, the diagonal machine, a nontrivial property for Rice. #print axioms guards in the epic test module. Cite Sipser2013 Chapter 4-5, Turing1936 (propose bibliography entries if missing). Six gates; frozen submission.",
    "dependencies": [{"value": "native-exponential-separation"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-undecid"}]},
   {"resume": null,
    "report":
    "Owner recorded (worker-sable-hier): assigned as soon as native-exponential-separation lands, since its Classes/Hierarchy scope currently overlaps this plan.",
