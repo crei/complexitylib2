@@ -499,15 +499,18 @@
           "note":
           "Correctness review of 26253c9 on c2016b0 by reviewer-sable-cor4 (independent; not an author). Scope: Stretch, Reverse, Combinators+Encodings/StreamFold, Streaming, Quantitative, tests PRGStretch+Quantitative. Evidence: 6 library + 2 test modules build --wfail --iofail, 0 warnings; whitespace-normalised statement diff: every main declaration unchanged (iterate/stretch/polyTime_iterate/security; vendored streamLoop/streamTM/streamLoop_encoded/streamFold_sum/streamFold now empty-prefix derivations). Time charges init, both generator calls per round on actual seeds, copying/control, finish and the final n+k reversal via comp; state only the seed, no suffix copying. Workspace via TimeAndSpace (not InO): forwardIterate O(Q+n+1) k-independent, reversal buffer charged. streamFold_sum_after init contract discharged by two in-tree clients. Probe ProbeStretch.lean (exit 0): nonconstant revCons through forward/iterate/stretch/degree/polytime certs; zero rounds (bounds collapse, stretch count 0 = id); empty seed; empty frame; shiftIn order test confirmed genuine; 17 axiom checks clean. Blocking: none. Nits: streamFold_pair_sum is new API vs main, not vendored (Encodings/StreamFold:583); pseudorandomGenerator proof needlessly switched to polyTime_stretch_of_length_eq (Stretch:1069); no quantitative zero-round test. Not run: check.sh. Evidence .lake/codex-validation/quantitative-stretch-correctness/review.json SHA256 e18a95d7a62debb41fa6c5611af02e023d07ae4876091ec6215655ec2646c306"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "38fd01dfc044a1ea7e5808b0e25e6355"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792371701,
+          "snapshot":
+          {"head": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"},
+           "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
+          "reviewer":
           {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
            "agent": {"value": "reviewer-sable-api4"}},
-          "expires": 1792385953},
-         "blocked": false}}}}}},
+          "note":
+          "API review of 26253c9 (base c2016b0) by reviewer-sable-api4, independent, read-only. Scope: the 9 epic files plus PolyTime/List, Primitives/Lists, UPSTREAM.md and reviewer-api's 0c62545 evidence. Evidence: 6 library + 2 test modules build --wfail --iofail ok. Every vendored docstring and statement in both StreamFold files is byte-identical to main (scripted); vendored def bodies untouched; 49 base statements in Stretch/Streaming/Quantitative/tests unchanged. Consolidation verified: one loop induction (_after, 58) with a 1-line vendored wrapper; one cleanup (_after, 25) with a 3-line wrapper; streamFold_sum_after core 133 with clients 28/26; nonconstant shiftIn ordering test; burden 637->1330 reproduced. Probes ok: fun_prop positive/negative with the new rules, reverseInput on [], rawFrameReader on the empty frame, standard axioms. No blocking findings. Nits: Stretch.lean:586 iterate_captured (169 lines) re-derives forwardIterate's streaming and reversal instead of sharing; UPSTREAM.md:70 row stale (owner is now streamFold_sum_after; Combinators/StreamFold vendored loop now derived); getLast_bits/bitsGetLast name a getLast?.toList; unaryAdd vs unary_*; duplicated transducer in getLast/getLast?; inlined linear length certificate. Limitation: check.sh not rerun. Evidence .lake/codex-validation/quantitative-stretch-api/review.json sha256 5f607539f9df13c7ed32e39b7db2aef66e53c1b3fc9ea7dfed946c3f62efce30"}}}}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Crypto/Computational/Stretch",
