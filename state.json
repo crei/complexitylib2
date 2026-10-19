@@ -1623,7 +1623,16 @@
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
       "reviews":
       {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor4"}}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "17bfd3a5391a982322ce1dd33d2ce7e5"},
+          "holder":
+          {"session": {"value": "2535cfe6daade84da4b64f1163c983fe"},
+           "agent": {"value": "reviewer-sable-api4"}},
+          "expires": 1792388820},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Complexity/Streaming.lean",
