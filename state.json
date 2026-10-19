@@ -1952,7 +1952,12 @@
      {"resume": null,
       "report":
       "API review (reviewer-sable-api6) requested changes: the generic Circuit/Continuity.lean imports Boolean modules and declares Cslib.Circuits.Boolean names; move the De Morgan section to Circuit/Boolean/Continuity.lean (generic + Boolean pattern). Correctness approved.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "b347af7a432e6af7b88fc1fe0cbe445f"},
+       "holder":
+       {"session": {"value": "79c04d2e099c5b1c2a7c8053cf47acf5"},
+        "agent": {"value": "worker-sable-hamming"}},
+       "expires": 1792407145},
       "branch": "work/hamming-geometry-2/worker-sable-hamming",
       "blocked": false,
       "assignee": {"value": "worker-sable-hamming"}}}},
