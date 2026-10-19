@@ -1,5 +1,21 @@
 {"version": 1,
- "integration": null,
+ "integration":
+ {"snapshot":
+  {"head": {"value": "1a31f4f1ee8ba4a0daad2cea655c4b75f8a059be"},
+   "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+  "main": {"value": "3034b372dd703c4e6fe32b2c061669a7faf45aa1"},
+  "lease":
+  {"token": {"value": "e9b61ad780b44affb8b25981da77bd46"},
+   "holder":
+   {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+    "agent": {"value": "coordinator-sable"}},
+   "expires": 1792400456},
+  "epic": {"value": "tqbf-pspace-complete"},
+  "candidates":
+  [{"snapshot":
+    {"head": {"value": "1a31f4f1ee8ba4a0daad2cea655c4b75f8a059be"},
+     "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+    "epic": {"value": "tqbf-pspace-complete"}}]},
  "epics":
  [{"resume": null,
    "report":
