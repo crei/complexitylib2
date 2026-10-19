@@ -3358,7 +3358,12 @@
      {"resume": null,
       "report":
       "Correctness review: Ladner1975 must be the SIGACT News CVP paper (10.1145/990518.990519), not the JACM reducibility paper.",
-      "lease": null,
+      "lease":
+      {"token": {"value": "a04701ed5687b06b5e4cba9ae24019ba"},
+       "holder":
+       {"session": {"value": "e08d59bb9b074a1dc7fa851ab6ab1963"},
+        "agent": {"value": "coordinator-sable"}},
+       "expires": 1792407290},
       "branch": "work/docs-bibliography-3/coordinator-sable",
       "blocked": false,
       "assignee": {"value": "coordinator-sable"}}}},
