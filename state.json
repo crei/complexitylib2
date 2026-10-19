@@ -1337,15 +1337,18 @@
           "note":
           "Correctness review of fagin-cleanup 26253c9..8941c6c (Converse/Layout/Power/Small/StrictVerifier/Tableau, FO/Basic, FO/Encoding, ESO/Projection, tests). Independent: no contribution to fagin-converse/cleanup. Evidence: lake build of 9 changed modules + ComplexityTests.Fagin --wfail --iofail OK; mk_all --check OK; no sorry/native_decide/heartbeats. Probe (lake env lean, clean): headline statements identical to base, base forms restated verbatim and closed; new hypothesis-free iff re-derived from Definable.isoClosed and shown equivalent to landed iff, applied to 2-colorable graphs and card>=2 / empty-with-nullary classes; cardGe/cardEqSentence checked on Fin 0/1/2/5, 0|1|>=2 partition, infinite boundary shows [Finite M] needed, nullary decode on Fin 0; TableauRels: base realize_tableauESOSentence/npPowerSentence/initSentence restated and closed, canonical fields rfl to base symbols; removed letI Classical was dead (step RHS take no DecidableEq), headline has no extra params; axioms of all headlines = propext/choice/Quot.sound. Blocking: none. Nits: Fagin test docstring overstates (Phi is the Definable witness; checks characterization on decoded edge/triangle, not the construction); realize_isStrictLinearOrderSentence name repurposed and unconditional unfolding lemma made private; new iff docstring lacks citations; getElem?_frame_eq... names only half its conclusion. Limits: no full check.sh. Evidence .lake/codex-validation/fagin-cleanup-correctness/review.json sha256 527e4ad35c31617b8c0c6100fb96be0f3c7438a37b827b5d8e895ef1a1cef572"}}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "3754d7918d9a7e2e1e8786633783bcb4"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792374450,
+          "snapshot":
+          {"head": {"value": "8941c6c66290bb389c6f324d1076c9a2ecd1f277"},
+           "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
+          "reviewer":
           {"session": {"value": "47d65cb3c470971bcab8267b3fe660fe"},
            "agent": {"value": "reviewer-sable-api5"}},
-          "expires": 1792388802},
-         "blocked": false}}}}}},
+          "note":
+          "API review of 26253c9..8941c6c (reviewer-sable-api5, independent: no contribution to fagin-converse/cleanup). Inspected Logics/FirstOrder/{Basic,Encoding}, SecondOrder/Projection, Fagin/{Converse,Layout,Power,Small,StrictVerifier,Tableau}, ComplexityTests/Fagin. All six goal items done. Built changed+dependent Logics/Fagin modules and ComplexityTests.{Fagin,FaginEncoding,FaginNP} --wfail --iofail OK; lint-style, mk_all --check OK. Probe: headline statements unchanged; Vocabulary alias rfl-equal and dot-usable; hypothesis-free iff recovers old iff, instantiated on colorability; removed letI was a no-op (outStepRHS has no DecidableEq arg); realize lemmas same content modulo renames/TableauRels; simp works on bundled fields; cardGe/cardEq and B=1 boundaries; axioms standard. No dangling refs or deprecated aliases; no Mathlib/cslib duplication. No blocking findings. Nits: Basic.lean:130 FO.eqOfPred/realize_eqOfPred new and unused (remove or test); Projection.lean:198 old public unfold lemma now private _aux; Basic.lean:11 ModelTheory.Semantics suffices; closeEx could use Formula.iExs; Layout.lean:213 name covers one conjunct; Converse.lean:288 docstring lacks citations; test docstring overclaims witness; Tableau.lean:922 r.lt. Limits: no full check.sh/lake lint/test. Evidence .lake/codex-validation/fagin-cleanup-api/review.json sha256 a560ba95aa4a82f57474477bd105eedb8b1955db39f3bb068f40b7702aafcdcd"}}}}}}},
    "paths":
    ["Complexity/Logics",
     "Complexity/Computability/Complexity/Fagin",
