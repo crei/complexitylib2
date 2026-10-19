@@ -1649,7 +1649,9 @@
       "snapshot":
       {"head": {"value": "aed5f718eec901dc94d11ad292916187c9070d3b"},
        "base": {"value": "59b6eced334cffb786e5500118f136f3e1cbe94a"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Halting.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Halting",
