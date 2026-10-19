@@ -1389,7 +1389,15 @@
   {"resume": null,
    "report":
    "Owner recorded (worker-sable-hier): assigned as soon as native-exponential-separation lands, since its Classes/Hierarchy scope currently overlaps this plan.",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/hierarchy-theorems/worker-sable-hier",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-hier"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/Hierarchy/Time.lean",
     "Complexity/Computability/Complexity/Classes/Hierarchy/Space.lean",
