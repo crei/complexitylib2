@@ -1360,7 +1360,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/undecidability/worker-sable-undecid",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-undecid"}}}},
    "paths":
    ["Complexity/Computability/Machines/Turing/MultiTape/Halting.lean",
     "Complexity/Computability/Machines/Turing/MultiTape/Halting",
