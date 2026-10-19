@@ -3385,7 +3385,15 @@
    "authors": []},
   {"resume": null,
    "report": "",
-   "phase": "unassigned",
+   "phase":
+   {"working":
+    {"work":
+     {"resume": null,
+      "report": "",
+      "lease": null,
+      "branch": "work/hardness-amplification-2/worker-sable-loop",
+      "blocked": false,
+      "assignee": {"value": "worker-sable-loop"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/BPP/Derandomization.lean",
     "Complexity/Computability/Complexity/Classes/BPP/Derandomization",
