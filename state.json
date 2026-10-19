@@ -1347,7 +1347,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "Dependency map. encNat is BINARY (Nat.bits, LSB first; Encodings/Nat.lean), so the digit construction is polynomial and no new encoding is needed. Reuse: encList/encPair/encNat, ComputableTidilyInPolyTime calculus (PolyTime/List: zipIdx, filterWithInput, mapWithInput, range, replicate, bitsGetDWithInput, anyWithInput/allWithInput; PolyTime/Fold: foldlWith_of_bounded_growth), Arith.computableTidilyInDegree_add (binary add, degree form only), computableTidilyInPolyTime_succ, ThreeSAT/ThreeSAT_npHard, PolyTimeReducible/NPHard/NPComplete, CNF.vars/eval, Mathlib Nat.lt_of_testBit, List.Sublist.exists_perm_append, List.sublist_map_iff. Missing (generic binary arithmetic): PolyTime wrappers for binary addition, sum of a list of binary naturals, 2^k from a unary k, and binary comparison decide (a <= b) (needed by the Knapsack verifier; via the testBit characterization). SCOPE QUESTION: these belong in a new file Complexity/Computability/Machines/Turing/MultiTape/Complexity/PolyTime/Nat/Binary.lean (no existing file touched); please add that path to the epic, otherwise I will place them in Problems/SubsetSum/ as a fallback. Endpoints planned: SubsetSum (instances List N x N, sub-multiset semantics) with mask verifier, mem_NP, Sipser digit reduction from ThreeSAT in base 8 (any base above the column bound 5 works; 3-bit digits), SubsetSum_npComplete; Partition (List N, s + t = l with equal sums) from SubsetSum via l ++ [sum l + 1, 2t + 1]; Knapsack (items (weight,value), capacity, goal) from SubsetSum via diagonal items; ZOIP only if time permits.",
       "lease":
       {"token": {"value": "7fc66c278e99124ab7c38af88a05ff35"},
        "holder":
