@@ -2832,15 +2832,18 @@
           "expires": 1792403843},
          "blocked": false}},
        "api":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "f430861eaeb6f1ccf4a32197c3bc4e9c"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792389602,
+          "snapshot":
+          {"head": {"value": "65d016ba57621f8d924763578b51a707cb5cc1d7"},
+           "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
+          "reviewer":
           {"session": {"value": "4843f18e797c8cb8eb4162be052d5bc3"},
            "agent": {"value": "reviewer-sable-api6"}},
-          "expires": 1792403988},
-         "blocked": false}}}}}},
+          "note":
+          "API re-review of fix delta 6b954f70..65d016ba by reviewer-sable-api6 (did not contribute). Prior blocking finding resolved: the Coverage priorities section and its Further priorities paragraph are removed from ROADMAP.md; no dangling references; remaining anchors resolve. check_docs.py --config-only passes. README links now target the theorem modules; #767 note scoped to L, DTIME, EXP with an actionable PSPACE carve-out; fixed-power and machine-class edits are in-place updates. Residual non-blocking nit: README.md:46 (114 chars), :51 (114) and :53 (106) still carry prose after a link past column 100 (move the trailing prose to the next line); no codified wrap rule, so not blocking. New cosmetic nit: UPSTREAM.md:31-32 ragged wrap after the PSPACE sentence. Limitations: docs-only, no Lean build. Evidence: .lake/codex-validation/docs-roadmap-refresh-api/review.json sha256 2c9f9b1be0f70ba1d443fd359a3a46cea4690aee45325069eaed3300fa0e158d"}}}}}}},
    "paths": ["ROADMAP.md", "README.md", "UPSTREAM.md"],
    "id": {"value": "docs-roadmap-refresh"},
    "goal":
