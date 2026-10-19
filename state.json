@@ -2556,7 +2556,9 @@
       "snapshot":
       {"head": {"value": "2397f41ec42c3ee4710e6776f1f1e1a9b49ac54a"},
        "base": {"value": "0d8ef4bfd2a2c1136c7cf563e4c95f6d2e8d8d66"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Boolean/NaturalProof.lean",
     "Complexity/Computability/Circuit/Boolean/NaturalProof",
