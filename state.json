@@ -615,55 +615,17 @@
    "authors": []},
   {"resume": null,
    "report":
-   "Landing plan update: after the merge-queue-landing tooling lands, this epic lands unchanged in the first batch (base a5cb582 is an ancestor of main and its files are disjoint from what landed since), with the correctness approval of exact 800b146 and the API verdict now in progress; no reopen, merge or re-review. The docstring sentence on the malformed-string contract, the Sipser1983 bibliography entry and the ROADMAP line go into the docs batch after landing.",
+   "API review of exact 800b146 returned changes: blocking duplication (seed/shift list views re-implement BitString.ofList/block/blocksEquiv/listRow; completeness and soundness re-prove Foundations/Combinatorics/Lautemann.lean lemmas). Coordinator-directed refactor by integrator-sable-3 with no public theorem statement changes; both reviews are then refreshed on the final snapshot.",
    "phase":
-   {"submitted":
-    {"submission":
-     {"work":
-      {"resume": "work/sipser-lautemann/worker-nova",
-       "report":
-       "Merged main a5cb582 while preserving worker-nova 156fda3 history. Implemented both requested API cleanups in the owned PH/SipserLautemann source and tests: shared BitString certificate import replaces private conversions/local rule; pointwise + and Equiv.addLeft replace seed-specific XOR/translation API. Full source and test MCP diagnostics clean. Native matrix definitions and verifier_polyTime proof unchanged. Helper-inclusive delta: -49 physical lines, -39 code lines, -19 named theorem-body lines; no new helper. All six gates running in this isolated cache. Correct V1 source is Complexitylib/Classes/PH/SipserLautemann.lean at add0aca8; Bolton Bailey and Samuel Schlesinger credit retained. I am now a contributor and cannot independently review this batch.",
-       "lease":
-       {"token": {"value": "57757ab42c7deb47b8e1d47ca8404a48"},
-        "holder":
-        {"session": {"value": "0f0d44b7daba594d8fff92d1b2e47b87"},
-         "agent": {"value": "reviewer-correctness"}},
-        "expires": 1792378451},
-       "branch": "work/sipser-lautemann/reviewer-correctness",
-       "blocked": false,
-       "assignee": {"value": "reviewer-correctness"}},
-      "summary":
-      "Full native BPP enc subset SigmaP 2 enc intersect PiP 2 enc and BPP enc subset PH enc, with the unconditional matrix polytime certificate, now integrates main a5cb582 and both requested API fixes. Head 800b146d3dc213fa964bd5dde76bb32ecc1cb041 preserves worker-nova 156fda3 history. Existing PolyTime.BitString certificates replace the private conversion/map duplicates; pointwise + and Equiv.addLeft replace the seed-specific XOR/translation API. Functional matrix definitions, exact lengths, constants and verifier_polyTime proof are unchanged; 27 retained theorem bodies byte-identical. Delta removes 49 physical /39 code /19 named proof-body lines with no new helper. Full source/tests MCP clean and all six project gates passed in 141.066s; 20 examples, six named test theorems and ten exact axiom guards remain checked. Correct V1 source: Complexitylib/Classes/PH/SipserLautemann.lean and subdirectory at add0aca8ee0d71e68969f2cb45cf91554a50f787; Bolton Bailey and Samuel Schlesinger credit retained. Contributor identities: worker-nova and reviewer-correctness; final independent reviews remain coordinator-owned. Central extra guards/ROADMAP edits intentionally left to coordinator. Evidence in reviewer-correctness/.lake/codex-validation/sipser-lautemann-integration/ (source manifest b805df9022497503885fb089bc9465f32ae19cbe4ac525564b256f6fd23938f1; gates.json, self-review.json, metrics.json, mcp-diagnostics.json).",
-      "snapshot":
-      {"head": {"value": "800b146d3dc213fa964bd5dde76bb32ecc1cb041"},
-       "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
-      "reviews":
-      {"correctness":
-       {"finished":
-        {"review":
-         {"verdict": "approve",
-          "time": 1792366817,
-          "snapshot":
-          {"head": {"value": "800b146d3dc213fa964bd5dde76bb32ecc1cb041"},
-           "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
-          "reviewer":
-          {"session": {"value": "44d426442458b4f21d0b63fd7c5e308a"},
-           "agent": {"value": "reviewer-sable-cor2"}},
-          "note":
-          "Correctness review by reviewer-sable-cor2 (independent: no contribution to this epic; exact commit 800b146d, base a5cb5821 ancestor verified). Inspected PH/SipserLautemann.lean, BPP.lean (+complement closure), MajorityVote.lean, FiniteCover/PH definitions, ComplexityTests/SipserLautemann.lean, roots, and v1 source at add0aca8 (~/projects/lean/complexitylib, Authors: Bolton Bailey; credit retained). Built the 4 changed modules with --wfail --iofail: exit 0, no warnings. Independent #print axioms on all headlines and reused lemmas: propext/Classical.choice/Quot.sound only. Statements use the existing verifier-based BPP/SigmaP/PiP/PH with no extra premise. Checked amplification (2*2^m<=3*good matches card_filter_card_filter_le_le), the cover (2^m*8^R<9^R via two_pow_mul_eight_pow_lt (m+7)) and union-bound (shifts m<=2^(m+7)) arithmetic, block lengths [witnessLen m, seedLen m] vs shiftsToList/seedToList, strict-majority tie, p=0 / m=0 boundary, malformed strings (getD false, trailing bits ignored), XOR/Equiv.addLeft shifts, Pi2 via compl_mem_BPP (no second construction), and that verifier_polyTime certifies the very verifier used, via fun_prop. Probes: concrete BPP members (p=0 deciders, one-sided 3-bit verifier) through all headlines; tie at m=2; decide +kernel on malformed certificates. No blocking findings. Nits: trialSeed/verifier docstrings omit the getD-false malformed contract; no Sipser1983 bib key; even-runs parameters differ from v1 (both fine). Central: add 10 Axioms.lean guards, drop ROADMAP.md:156 gap. Not run: full check.sh. Evidence .lake/codex-validation/sipser-lautemann-correctness/review.json sha256 4e4e418022c27526233b4876ebc160c22dbae87a3377bfc5cfd9b811946eee1f"}}},
-       "api":
-       {"finished":
-        {"review":
-         {"verdict": "changes",
-          "time": 1792367935,
-          "snapshot":
-          {"head": {"value": "800b146d3dc213fa964bd5dde76bb32ecc1cb041"},
-           "base": {"value": "a5cb5821ce03730dbfbf6d48ffc3fe14689a4e18"}},
-          "reviewer":
-          {"session": {"value": "33380288772710be7744d177c8f66871"},
-           "agent": {"value": "reviewer-sable-api2"}},
-          "note":
-          "API review by reviewer-sable-api2 (independent; exact 800b146d on a5cb5821, ancestor verified). Inspected the 6 changed files, PH/FiniteCover/Lautemann/BitString modules, PolyTime rules, Axioms.lean, references.bib, v1 add0aca8. MajorityVote change: private->public + docstring, statement and sole client unchanged. Built 4 modules --wfail --iofail: exit 0. Probes A/B/C (lake env lean) pass: template, placement, naming, implicit enc, simp/fun_prop, axioms fine. BLOCKING (reuse; AGENTS rules 5/6; goal: no duplicate covering arguments): (1) lines 271-346 listToSeed/seedToList/listToShifts/shiftsToList, round trips and index helpers re-implement Cslib.BitString.ofList/block/blocksEquiv/ofList_ofFn, and trialSeed is zipWith xor of two BitString.listRow; Probe B proves each identity. (2) lines 189-269 re-derive both directions of the Lautemann covering lemma (addLeft bijection; hand-rolled biUnion union bound) that Foundations/Combinatorics/Lautemann.lean (in tree since 10-15, no clients) provides as exists_forall_exists_add_mem_of_card_mul_card_compl_pow_lt / exists_forall_add_notMem_of_mul_card_lt; Probe A re-proves both statements via them. No public statement changes. Nits: trialSeed takes L,T free; Seed inner type BitString m; unused runs_pos:139; add Sipser1983 bib key; malformed-string docstring. Central: 11 Axioms guards, ROADMAP:156. Not run: full check.sh. Evidence .lake/codex-validation/sipser-lautemann-api/review.json sha256 c4f201c7d42c5b1d49d5ec4db71d3e2aafea82fd1cec4bd1f967d9f5d41940c7"}}}}}}},
+   {"working":
+    {"work":
+     {"resume": "work/sipser-lautemann/worker-nova",
+      "report":
+      "API review of exact 800b146 returned changes: blocking duplication (seed/shift list views re-implement BitString.ofList/block/blocksEquiv/listRow; completeness and soundness re-prove Foundations/Combinatorics/Lautemann.lean lemmas). Coordinator-directed refactor by integrator-sable-3 with no public theorem statement changes; both reviews are then refreshed on the final snapshot.",
+      "lease": null,
+      "branch": "work/sipser-lautemann/reviewer-correctness",
+      "blocked": false,
+      "assignee": {"value": "reviewer-correctness"}}}},
    "paths":
    ["Complexity/Computability/Complexity/Classes/BPP.lean",
     "Complexity/Computability/Complexity/Classes/BPP",
