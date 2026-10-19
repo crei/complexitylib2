@@ -1472,7 +1472,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "72a550e18875ba4e0f509ff106f356d0"},
+       "holder":
+       {"session": {"value": "2213743d8d7568c201a27f23b24b23ae"},
+        "agent": {"value": "worker-sable-stretch"}},
+       "expires": 1792386527},
       "branch": "work/stretch-cleanup/worker-sable-stretch",
       "blocked": false,
       "assignee": {"value": "worker-sable-stretch"}}}},
@@ -1486,7 +1491,7 @@
    "goal":
    "Follow-up cleanup of the landed quantitative-stretch work from its independent API review (reviewer-sable-api4) and correctness review (reviewer-sable-cor4); no statement weakening, six gates, two reviews. (1) Make one captured forwardIterate streaming certificate the core of Crypto/Computational/Stretch.lean and derive computableTidilyInTimeAndSpace_forwardIterate, _iterate_pair and _iterate_captured from it (or factor the shared callback setup and final reversal), reusing streamState_replicate_eq_seedAt instead of the local hstate_eq; report helper-inclusive before/after line counts. (2) Name the getLast?.toList certificates accurately (Streaming getLast_bits, Quantitative bitsGetLast) and share the common transducer of getLast_bits/getLast?_bits. (3) Expose the inline linear List.length certificate used by computableTidilyInTimeAndSpace_stretch as a reusable primitive beside reverse_bits. (4) Revert pseudorandomGenerator's proof to polyTime_stretch if the streaming dependency buys nothing. (5) Add a zero-round test through a quantitative certificate. Keep vendored statements byte-identical and markers correct; candidate additions only.",
    "dependencies": [],
-   "authors": []}],
+   "authors": [{"value": "worker-sable-stretch"}]}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
   "holder":
