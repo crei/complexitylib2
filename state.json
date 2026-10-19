@@ -3070,20 +3070,27 @@
    "report":
    "Coordinator: confirmed. M1 = definitions (ETH, SETH with exponents s_k, OVH), the easy direction (no 2^o(m) algorithm implies ETH), and SETH implies OVH. Submit M1 when gated. M1b (algorithmic sparsification and the hard direction) is a separate milestone; the Sparsification Tree/Bounds paths will be added when you start it.",
    "phase":
-   {"working":
-    {"work":
-     {"resume": null,
-      "report":
-      "Scope note: the formalized sparsification lemma is existential (classical chooseBranch; no running time). The hard direction \"ETH => no 2^(o(m)) 3SAT algorithm\" (also what M2 needs) requires computing the sparsified family in time 2^(eps n)*poly on the machine: a computable heavy-heart choice, a list-level step proved polytime, a BFS over the branching tree, and the leaf bounds for an arbitrary valid choice function. That needs (a) generalising Sparsification/Tree.lean and Bounds.exists_leaves from chooseBranch to any choice function satisfying Choice (outside my paths) and (b) a few thousand lines in FineGrained/. Proposal: M1 = definitions (ETH, SETH, exponents s_k with brute-force s_k <= 1 and monotonicity, OVH), the easy direction (no 2^(o(m)) algorithm => ETH), and SETH => OVH (Williams split-and-list with streamed output; the poly(d) form of OVH needs no sparsification). M1b = algorithmic sparsification and the hard direction, with paths extended to Logics/Propositional/ClauseSet/Sparsification/{Tree,Bounds}.lean. Proceeding with M1 as proposed; please confirm or redirect.",
-      "lease":
-      {"token": {"value": "a6d34670df64b749017392e73c05071c"},
-       "holder":
-       {"session": {"value": "a0e20ed2f18f79a2430412c297824d94"},
-        "agent": {"value": "worker-sable-tqbf"}},
-       "expires": 1792407510},
-      "branch": "work/fine-grained/worker-sable-tqbf",
-      "blocked": false,
-      "assignee": {"value": "worker-sable-tqbf"}}}},
+   {"submitted":
+    {"submission":
+     {"work":
+      {"resume": null,
+       "report":
+       "Scope note: the formalized sparsification lemma is existential (classical chooseBranch; no running time). The hard direction \"ETH => no 2^(o(m)) 3SAT algorithm\" (also what M2 needs) requires computing the sparsified family in time 2^(eps n)*poly on the machine: a computable heavy-heart choice, a list-level step proved polytime, a BFS over the branching tree, and the leaf bounds for an arbitrary valid choice function. That needs (a) generalising Sparsification/Tree.lean and Bounds.exists_leaves from chooseBranch to any choice function satisfying Choice (outside my paths) and (b) a few thousand lines in FineGrained/. Proposal: M1 = definitions (ETH, SETH, exponents s_k with brute-force s_k <= 1 and monotonicity, OVH), the easy direction (no 2^(o(m)) algorithm => ETH), and SETH => OVH (Williams split-and-list with streamed output; the poly(d) form of OVH needs no sparsification). M1b = algorithmic sparsification and the hard direction, with paths extended to Logics/Propositional/ClauseSet/Sparsification/{Tree,Bounds}.lean. Proceeding with M1 as proposed; please confirm or redirect.",
+       "lease":
+       {"token": {"value": "a6d34670df64b749017392e73c05071c"},
+        "holder":
+        {"session": {"value": "a0e20ed2f18f79a2430412c297824d94"},
+         "agent": {"value": "worker-sable-tqbf"}},
+        "expires": 1792407510},
+       "branch": "work/fine-grained/worker-sable-tqbf",
+       "blocked": false,
+       "assignee": {"value": "worker-sable-tqbf"}},
+      "summary":
+      "M1 @0abc08a2 (base 06c5f534). Defs: DecidableInTimeO A enc T (time O(T a)), mem_DTIME_iff_decidableInTimeO; DecidableInExpTime A enc μ δ (2^(δμa)(L+1)^e); DecidableInSubexpTime; CNF.numVars; KSAT k; satExponent k=s_k; ETH:=∃δ>0,¬DecidableInExpTime ThreeSAT encCNF numVars δ; SETH:=∀ε>0,∃k,¬…(KSAT k)…(1-ε); OV, encOV, OVH:=∀ε>0 ∀e,¬DecidableInTimeO OV encOV (N^(2-ε)(d+1)^e). Results: KSAT_decidableInExpTime_one (exhaustive search, 2^n·poly); satExponent_nonneg/_le_one/_mono; ETH_iff_satExponent_pos; SETH_iff_tendsto (s_k→1); ETH_of_not_decidableInSubexpTime_length; toOV_mem_OV_iff, exists_computableTidilyInO_toOV (streamed, 2^⌈n/2⌉·poly); DecidableInExpTime.SAT_of_OV; OVH_of_SETH. Checks: run-gates, six ok; ComplexityTests/FineGrained.lean (instances, non-vacuity, 12 axiom guards). New; reuses ThreeSAT.distinctVars, crei streaming. Contributors: worker-sable-tqbf. Open: ETH⇒no 2^o(m) (M1b, timed sparsification); OVH only poly(d) form; M2, M3. Bib:\n@article{ImpagliazzoPaturi2001, author={Impagliazzo, Russell and Paturi, Ramamohan}, title={On the Complexity of k-{SAT}}, journal={Journal of Computer and System Sciences}, volume={62}, number={2}, pages={367--375}, year={2001}, doi={10.1006/jcss.2000.1727}}\n@article{Williams2005, author={Williams, Ryan}, title={A New Algorithm for Optimal 2-Constraint Satisfaction and Its Implications}, journal={Theoretical Computer Science}, volume={348}, number={2--3}, pages={357--365}, year={2005}, doi={10.1016/j.tcs.2005.09.023}}",
+      "snapshot":
+      {"head": {"value": "0abc08a2f02da311c0c34e50af577348fb0da117"},
+       "base": {"value": "06c5f53478b81d01ad4ecb9cea9cda08eb5c0fb9"}},
+      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
    "paths":
    ["Complexity/Computability/Complexity/FineGrained.lean",
     "Complexity/Computability/Complexity/FineGrained",
