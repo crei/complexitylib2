@@ -3170,7 +3170,8 @@
    {"working":
     {"work":
      {"resume": null,
-      "report": "",
+      "report":
+      "Bib for M2a (missing from references.bib): @book{CoverThomas2006, author = {Cover, Thomas M. and Thomas, Joy A.}, title = {Elements of Information Theory}, edition = {2}, publisher = {Wiley-Interscience}, year = {2006}, doi = {10.1002/047174882X}} @article{ChungGrahamFranklShearer1986, author = {Chung, Fan R. K. and Graham, Ronald L. and Frankl, Peter and Shearer, James B.}, title = {Some Intersection Theorems for Ordered Sets and Graphs}, journal = {Journal of Combinatorial Theory, Series A}, volume = {43}, number = {1}, pages = {23--37}, year = {1986}, doi = {10.1016/0097-3165(86)90019-1}}. McDiarmid plan for M2b: Mathlib Azuma-Hoeffding (measure_sum_ge_le_of_hasCondSubgaussianMGF) exists at the pin, but Mathlib has no conditional Hoeffding lemma nor a finite-product condExpKernel identification to discharge HasCondSubgaussianMGF for Doob differences; M2b will instead prove HasSubgaussianMGF (f - E f) (sum (c_i/2)^2) by induction over coordinates (the Doob martingale made explicit by the product structure) from Mathlib Hoeffding lemma, then use HasSubgaussianMGF.measure_ge_le.",
       "lease":
       {"token": {"value": "911c80cfeebbfc270c5bd434a3dbed13"},
        "holder":
