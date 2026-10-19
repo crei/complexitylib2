@@ -1435,7 +1435,7 @@
        "holder":
        {"session": {"value": "96c57dfb40db0a4654e519b0c7249d36"},
         "agent": {"value": "worker-sable-ip"}},
-       "expires": 1792387818},
+       "expires": 1792388061},
       "branch": "work/interactive-proofs/worker-sable-ip",
       "blocked": false,
       "assignee": {"value": "worker-sable-ip"}}}},
@@ -1773,7 +1773,7 @@
     "agent": {"value": "worker-sable-relativ"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792387818,
+   "expires": 1792388061,
    "actor":
    {"session": {"value": "96c57dfb40db0a4654e519b0c7249d36"},
     "agent": {"value": "worker-sable-ip"}}},
