@@ -484,7 +484,9 @@
       "snapshot":
       {"head": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"},
        "base": {"value": "c2016b0765523a616b12c7665eab317ceba0677e"}},
-      "reviews": {"correctness": "unassigned", "api": "unassigned"}}}},
+      "reviews":
+      {"correctness": "unassigned",
+       "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
     "Complexity/Crypto/Computational/Stretch",
