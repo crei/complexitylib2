@@ -1585,7 +1585,7 @@
       {"head": {"value": "e22e74ff563d3bc79758e445aa71f714035811a7"},
        "base": {"value": "764e3b859b495b441073f0018387ac67ae2403c7"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor4"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api4"}}}}}}},
    "paths":
    ["Complexity/Crypto/Computational/Stretch.lean",
