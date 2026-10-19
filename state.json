@@ -699,7 +699,7 @@
       {"head": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"},
        "base": {"value": "fa9ab425853b7269b74ba22374583c026e548006"}},
       "reviews":
-      {"correctness": "unassigned",
+      {"correctness": {"assigned": {"agent": {"value": "reviewer-sable-cor5"}}},
        "api": {"assigned": {"agent": {"value": "reviewer-sable-api5"}}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Rational.lean",
