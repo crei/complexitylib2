@@ -1535,6 +1535,26 @@
    "goal":
    "Milestones 3-5 of the owner note at /private/tmp/claude-501/-Users-samuelschlesinger-projects-lean-complexitylib2/9cf6f77b-20cc-4eed-936f-41f6ea96294a/scratchpad/hamming-geometry-note.md, continuing the landed hamming-geometry milestones 1-2 (Circuit/Pointwise, BitString/Hamming, Circuit/Boolean/Hamming). (3) Parseval: d_H(f,g) = (1/4) sum_S (chi_f(S) - chi_g(S))^2 from the existing Plancherel/Parseval/correlation lemmas, and the noise distances D_rho via noiseOp and fourierCoeff_noiseOp with sqrt(D_rho) a metric through the EuclideanSpace norm, only as far as the existing Fourier/noise API supports without duplication. (4) Metric approximation: package Circuit/Approximation.lean per-gate exception sets as d_H(f, f~) <= sum of local gate errors (corollary of card_failures_le_cost), the lower-bound principle C_I(f) >= epsilon/delta, and weighted sample distributions via a union bound from program_correct; state in prose that this reformulates the classical approximation method and that known limitations apply (no citation until the owner supplies the Pich 2024 reference). (5) Modulus of continuity omega_{I,n}(r) = max over d_H(f,g) <= r of |C_I f - C_I g| in the natural numbers for complete interpretations, in Circuit/Continuity.lean, with the SparseSynthesis square-root bound restated as an upper bound for the De Morgan basis. Reuse existing APIs; no new distance or circuit model; per-milestone tests under ComplexityTests/CircuitHamming/ with axiom guards; six gates; one frozen submission per milestone is fine.",
    "dependencies": [{"value": "hamming-geometry"}],
+   "authors": []},
+  {"resume": null,
+   "report": "",
+   "phase": "unassigned",
+   "paths":
+   ["Complexity/Computability/Circuit/Complexity.lean",
+    "Complexity/Computability/Circuit/Pointwise.lean",
+    "Complexity/Computability/Circuit/Metric.lean",
+    "Complexity/Computability/Circuit/Boolean/Metric.lean",
+    "Complexity/Computability/Circuit/Boolean/Hamming.lean",
+    "Complexity/Computability/Circuit/Boolean/Synthesis.lean",
+    "Complexity/Computability/Circuit/Boolean/Smolensky/Approximation.lean",
+    "Complexity/Foundations/Data/BitString/Hamming.lean",
+    "Complexity/Foundations/BooleanAnalysis/Linearity.lean",
+    "ComplexityTests/CircuitMetric.lean",
+    "ComplexityTests/CircuitHamming/Gates.lean"],
+   "id": {"value": "circuit-complexity-consolidation"},
+   "goal":
+   "Consolidation follow-up from the circuit-metric and hamming-geometry reviews; no statement weakening; six gates; two reviews. (1) Move complexity_single_proj and one_le_complexity_single (Circuit/Pointwise.lean marked block) and complexity_single_unary_le / complexity_single_binary_le (Circuit/Metric.lean) into Complexity/Computability/Circuit/Complexity.lean (marked as additions to cslib Circuit/Complexity), rederive Boolean.complexity_not_le and complexity_binary_le from them, and delete the private copies in ComplexityTests/CircuitMetric.lean. (2) Generalize: move two_mul_hammingDist_parityOn (BooleanAnalysis/Linearity.lean) into Foundations/Data/BitString/Hamming.lean with the elementary symmetric-difference proof, derive two_mul_hammingDist_proj from it, and replace the Fourier proof in Linearity by the new lemma. (3) Smolensky/Approximation.lean uses Interpretation.pointwise/evalAt instead of its local let. (4) Naming/docs: median_median → median_median_distrib (or a documented equivalent), median docstring notes it is the lattice median, Metric.lean says exponent two (-u = u) instead of characteristic two, Gates.lean distance-zero comment uses circuitDist_self, Boolean/Hamming.lean imports or stops citing two_mul_hammingDist_add_proj.",
+   "dependencies": [{"value": "hamming-geometry"}],
    "authors": []}],
  "coordinator":
  {"token": {"value": "309a1208b713b721f4dbd16e089d49b3"},
