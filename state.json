@@ -2420,7 +2420,12 @@
     {"work":
      {"resume": null,
       "report": "",
-      "lease": null,
+      "lease":
+      {"token": {"value": "f2bc825304723cc80a042b30f59cd335"},
+       "holder":
+       {"session": {"value": "0bac3bc8aa5546f3a00854a39d54904d"},
+        "agent": {"value": "worker-sable-hier"}},
+       "expires": 1792402818},
       "branch": "work/resource-class-spine/worker-sable-hier",
       "blocked": false,
       "assignee": {"value": "worker-sable-hier"}}}},
@@ -2442,7 +2447,7 @@
    "goal":
    "Coverage epic 2 (see scratchpad coverage-audit.md): the structural spine papers cite in preliminaries, building on the DTIME/EXP of hierarchy-theorems (one definition only): NTIME, BPTIME, E, NE, NEXP, ZPP with ZPP = RP inter coRP; inclusions P within NP within PSPACE within EXP, PH within PSPACE, P within BPP, RP within BPP, NP within PP and PP closed under complement where missing; class-level error reduction for BPP and RP (exponentially small error); padding (P = NP implies EXP = NEXP) with a generic translation lemma; PH collapse lemmas (SigmaP k = PiP k implies PH = SigmaP k, P = NP implies P = PH, NP = coNP implies PH = NP); ACC0 as the union of AC0 with MOD-q gates and NC within P where the uniform classes exist. Reuse Classes/*, Hierarchy, Savitch, MajorityVote, DepthClasses. Tests, axiom guards, six gates, milestones. Also fold in the hierarchy-theorems review follow-ups (author's own files): derive ComputableTidilyInO.lengthUnary from ComputableTidilyInTimeAndSpace.length_bits via ComputableTidilyInO.of_bounds (linear) or drop it; define Hierarchy.lean's diagonal as clockedDiagonal (2 ^ .) to remove the copy; rename setOf_timeDiagonal_not_mem_DTIME and diagonal_not_mem_P to notMem (deprecated aliases); mention the omitted T(n) >= n condition in the TimeConstructible docstring. E, NE and NEXP go beside EXP in Classes/EXP.lean unless a separate Exponential file is clearly better.",
    "dependencies": [{"value": "hierarchy-theorems"}],
-   "authors": []},
+   "authors": [{"value": "worker-sable-hier"}]},
   {"resume": null,
    "report": "",
    "phase":
