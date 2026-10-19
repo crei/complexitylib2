@@ -859,7 +859,16 @@
            "agent": {"value": "reviewer-sable-cor3"}},
           "expires": 1792385826},
          "blocked": false}},
-       "api": {"assigned": {"agent": {"value": "reviewer-sable-api3"}}}}}}},
+       "api":
+       {"active":
+        {"report": "",
+         "lease":
+         {"token": {"value": "eb2cf46c5f99eb331f7259b447143d64"},
+          "holder":
+          {"session": {"value": "6028cd701670813461915b10a3d32c60"},
+           "agent": {"value": "reviewer-sable-api3"}},
+          "expires": 1792385838},
+         "blocked": false}}}}}},
    "paths":
    ["Complexity/Computability/Circuit/Iteration.lean",
     "Complexity/Computability/Circuit/Boolean/Iteration.lean",
