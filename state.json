@@ -1156,7 +1156,7 @@
        "holder":
        {"session": {"value": "4a93d95e627493ab82ddfefba0a046d0"},
         "agent": {"value": "worker-jetski"}},
-       "expires": 1792383657},
+       "expires": 1792384044},
       "branch": "work/fagin-cleanup/worker-jetski",
       "blocked": false,
       "assignee": {"value": "worker-jetski"}}}},
@@ -1213,7 +1213,7 @@
     "agent": {"value": "coordinator"}}},
   {"role": "worker",
    "leaseSeconds": 14400,
-   "expires": 1792383657,
+   "expires": 1792384044,
    "actor":
    {"session": {"value": "4a93d95e627493ab82ddfefba0a046d0"},
     "agent": {"value": "worker-jetski"}}},
