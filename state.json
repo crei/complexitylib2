@@ -1748,15 +1748,18 @@
        "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "b8051933065ea1614414ce568d7f6e6c"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792386113,
+          "snapshot":
+          {"head": {"value": "b4b556921d48d533f0019c15959883b167cdc1a4"},
+           "base": {"value": "f4894296452224d0639777dccfb5df7f64dfc57e"}},
+          "reviewer":
           {"session": {"value": "a7188785435a24143fa27d6231e36c31"},
            "agent": {"value": "reviewer-sable-cor5"}},
-          "expires": 1792400400},
-         "blocked": false}},
+          "note":
+          "Independent correctness review by reviewer-sable-cor5 (no contribution; author worker-sable-relativ) of exact b4b5569 over f489429. Built 5 Oracle modules + ComplexityTests.Relativization (--wfail --iofail): pass. Hygiene: no sorry/native_decide/axiom/option overrides in diff; meta audit of all 103 constants in the epic modules: only propext/Classical.choice/Quot.sound. Headline exists_PWithOracle_ssubset_NPWithOracle is meaningful: P^A = one Unit-channel FreeM program certified by IsOraclePPTOn (one finite machine, poly clock, all stateful handlers; each query symbol and submission cost an instruction); probe queries_polynomial derives concrete poly bounds on request count and length vs languageOracle A. NP^A = exact-length certificates + oracle-poly verifier. Diagonalization (AB Thm 3.7) ranges over all Fin-control tables with clocks c(n+1)^d via exists_fin_run_pure_false; stage argument checked. Non-vacuity probes: P in P^A; unaryLanguage empty in P^empty; for every B some language lies outside NP^B (countability+Cantor), so neither class is full. Test claim diagonal in P^itself, not in P: holds and meaningful. Blocking: none. Nits: Oracle.lean:34 cites IsOraclePPTOn.query_bounds not imported by the module; oracle monotonicity A<=pB => P^A sub P^B deferred to relativization-2 (tracked). Evidence .lake/codex-validation/relativization-correctness/review.json sha256 2fb78028...13d6"}}},
        "api":
        {"active":
         {"report": "",
