@@ -1189,15 +1189,18 @@
        "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
       "reviews":
       {"correctness":
-       {"active":
-        {"report": "",
-         "lease":
-         {"token": {"value": "c051444717deb43f2e59e2726e63cf1b"},
-          "holder":
+       {"finished":
+        {"review":
+         {"verdict": "approve",
+          "time": 1792372831,
+          "snapshot":
+          {"head": {"value": "6af7e40639228bc0a83e1114d4209eccc5c1cd65"},
+           "base": {"value": "26253c93eed5bfed0f4cffe337328b549d96cd18"}},
+          "reviewer":
           {"session": {"value": "9fe471554f44e623fc70af185684d9d6"},
            "agent": {"value": "reviewer-sable-cor3"}},
-          "expires": 1792387169},
-         "blocked": false}},
+          "note":
+          "Correctness review of exact base 26253c9 / head 6af7e40 by reviewer-sable-cor3 (independent: no contribution; read-only in own worktree). Scope: Circuit/Pointwise.lean, BitString/Hamming.lean, Circuit/Boolean/Hamming.lean, ComplexityTests/CircuitHamming/{Pointwise,Gates}.lean. Evidence: all five modules built --wfail --iofail, no warnings; no sorry/axiom/native_decide/set_option/instances. Verified: pointwise lift and evalAt (a genuine cslib Homomorphism), trace/eval pointwise from map_trace/map_eval, wires and outputs at the projections are truth tables, computes iff lifted outputs are the truth tables; cube identities for any Fintype index (sorting, geodesics, Lipschitz, XOR both sides and NOT isometries); median = pointwise majority 3; median algebra laws, betweenness, minimality; projections half apart via parityOn {i,j}; 1/2 in char-zero semifields; complexity_add_projs_le bounds one m-output circuit computing f once (G o F), +4 per output; circuitDist of shifts in [5,8], lower bound needs i != j. Own probes pass: 5-gate majority circuit whose lifted output is majority 3 (C <= 5); 3-input identities with majority/parity/projections checked by theorem and decide; 1/2 in Q>=0; joint shifts of majority <= 17, non-injective family <= 21; i = j distance 0; n = 0, m = 0. 33 axiom prints standard (median laws Quot.sound only; evalAt none). Nits: Gates.lean:197-198 says distance zero but proves <= 8; public projection lemmas duplicate private copies in ComplexityTests/CircuitMetric.lean. Limitation: check.sh not re-run; milestones 3-5 out of scope. Evidence: .lake/codex-validation/hamming-geometry-correctness/review.json SHA256 e82f6cce46b922445782f09eb9d4b8a67d41c3ac3d04dfa5f129101ad1de5246"}}},
        "api":
        {"active":
         {"report": "",
